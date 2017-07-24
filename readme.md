@@ -1,4 +1,4 @@
-Cloudbreak on the Azure Marketplace Docs
+Cloudbreak Docs
 ===
 
 REQUIREMENTS:
