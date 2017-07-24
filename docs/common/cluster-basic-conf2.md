@@ -1,0 +1,2 @@
+| Send Email When Cluster is Ready | (Optional) Check this to receive an email each time the cluster status changes. |
+| Public In Account | (Optional) If this option is checked, all the users belonging to your account will be able to use this cluster, but they cannot delete it. | 

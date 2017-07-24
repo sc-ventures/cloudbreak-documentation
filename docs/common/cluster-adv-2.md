@@ -1,0 +1,2 @@
+| Enable Lifetime Management | Check this option if you would like your cluster to be automatically terminated after a specific amount of time (defined as "Time to Live" in minuter) has passed. |
+| Flex Subscription | This option will appear if you have configured your deployment for a [Flex Subscription](get-help.md#flex-subscription). |
