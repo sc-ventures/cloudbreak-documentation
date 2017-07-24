@@ -8,7 +8,7 @@
 
 >>>> TO-DO: Which info is common for all cloud providers and which is per platform.
 
-#### Cloudbreak Service
+#### Cloudbreak
 
 | Component | Details |
 |:---|:---|

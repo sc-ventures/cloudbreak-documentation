@@ -13,8 +13,7 @@ The following versions of the [Red Hat Distribution of OpenStack](https://www.rd
 * Kilo
 * Liberty
 * Mitaka
-
->>>>TO-DO: What is the current list? 
+ 
 
 #### Standard Modules 
 
@@ -140,8 +139,7 @@ export PUBLIC_IP=34.212.141.253</pre>
 ### Perform Optional Configurations
 
 > These configurations are optional. 
-
->>>>TO-DO: Are these just available fro OpenStack or also for other cloud providers?  
+ 
 
 #### Configuring a Self-Signed Certificate 
 
@@ -178,6 +176,7 @@ The following is an example of `openstack-zone.json` containing two regions and 
 
 >>>>TO-DO: Restart of what is needed? 
 >>>>TO-DO: Can this be done later after cbd start? 
+
 
 ### Launch Cloudbreak Deployer 
 
@@ -222,7 +221,6 @@ The following is an example of `openstack-zone.json` containing two regions and 
 
 
 ### Create Cloudbreak Credential
-
 
 Cloudbreak works by connecting your OpenStack account through this credential, and then uses it to create resources on your behalf. Before you can start provisioning cluster using Cloudbreak, you must create a Cloudbreak credential.
 

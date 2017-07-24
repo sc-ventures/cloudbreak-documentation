@@ -21,8 +21,8 @@ Once you have the service account that you want to use for Cloudbreak, make sure
 * The "Editor" role is enabled for your service account, or
 * The following APIs are enabled for your service account:
 
-    >>>>TO-DO: Need an updated list. I don't have access to these IAM settings. 
-
+    >>>>TO-DO: Need an updated list. 
+    
 A user with an "Owner" role can assign roles or access rules to service accounts from **IAM & Admin** > **IAM**. 
 
 #### VPC Network 
@@ -166,13 +166,11 @@ Cloudbreak works by connecting your GCP account through this credential, and the
 | Name | Enter a name for your credential. |
 | Description | (Optional) Enter a description. | 
 | Project Id | Enter the project ID. You can obtain it from your GCP account by clicking on the name of your project at the top of the page and copying the **ID**. |
-| Service Account Email Address | ???? |
+| Service Account Email Address | "Service account ID" value for your service account created in prerequisites. You can find it on GCP at **IAM & Admin** > **Service accounts**. |
 | Service Account Private (p12) Key | Paste the P12 key that you created in the prerequisites when creating a service account. |
 | SSH Public Key | Paste your SSH public key. |
 | Select Platform | (Optional) Select a platform (if previously configured). |
 | Public In Account | (Optional) If you check this, other users added to your Cloudbreak instance will be able to use this credential to create clusters. |
-
-    >>>>TO-DO: Is "Service Account Email Address" the same as the "Service account ID" value for my service account under IAM & Admin > Service accounts? 
  
 4. Click **+create credential**.
 
