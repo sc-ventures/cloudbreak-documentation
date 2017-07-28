@@ -56,31 +56,6 @@ iptables --flush FORWARD && \
 service iptables save
 </pre>
 
-#### Docker Service
-
-Configure a custom Docker repository for installing the correct version of Docker:
-
-<pre>
-cat > /etc/yum.repos.d/docker.repo <<"EOF"
-[dockerrepo]
-name=Docker Repository
-baseurl=https://yum.dockerproject.org/repo/main/centos/7
-enabled=1
-gpgcheck=1
-gpgkey=https://yum.dockerproject.org/gpg
-EOF
-</pre>
-
-Next, install the Docker service:
-
-<pre>
-yum install -y docker-engine-1.9.1 docker-engine-selinux-1.9.1  
-systemctl start docker  
-systemctl enable docker
-</pre>
-
->>>>TO-DO: Docker is already mentioned in System requirements. But it looks like these commands install docker?
-
 
 ### Install Cloudbreak on Your Own VM
 
@@ -92,7 +67,6 @@ Install Cloudbreak using the following steps"
 curl -Ls s3.amazonaws.com/public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer_1.16.1_$(uname)_x86_64.tgz | sudo tar -xz -C /bin cbd
 cbd --version</pre>
 
-    >>>>TO-DO: I think the content above is generated automativally.
 
     Once the Cloudbreak Deployer is installed, you can set up the Cloudbreak application.
 
@@ -141,11 +115,9 @@ cbd start</pre>
 
 #### Cbd Cannot Get VM's Public IP 
 
-By default the `cbd` tool tries to get the VM's public IP to bind Cloudbreak UI to it. But if `cbd` cannot get the IP address during the initialization, set the appropriate value in the `Profile` file using the `PUBLIC_IP` variable. For example: 
+By default the `cbd` tool tries to get the VM's public IP to bind Cloudbreak UI to it. But if `cbd` cannot get the IP address during the initialization, you must set it manually. Check your `Profile` and if `PUBLIC_IP` is not set, add the `PUBLIC_IP` variable and set it to the public IP of the VM. For example: 
 
 <pre>export PUBLIC_IP=192.134.23.10</pre>
-
->>>>TO-DO: How would I know that cbd cannot get the public IP? 
 
 
 #### Permission or Connection Problems 
@@ -158,7 +130,6 @@ If you face permission or connection issues, disable SELinux:
 
     <presetenforce 0 && sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/ selinux/config</pre>
     
->>>>TO-DO: Can this be an issue when using pre-built images?
 
 
 ### Next Steps 

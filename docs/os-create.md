@@ -5,7 +5,6 @@
 | **Connector Variant** | Select "HEAT" or "NATIVE".|
 {!docs/common/cluster-basic-conf2.md!}
 
-    >>>>TO-DO: what is Connector Variant?
 
 {!docs/common/cluster-basic-net&blue.md!}
 {!docs/common/cluster-basic-review.md!}

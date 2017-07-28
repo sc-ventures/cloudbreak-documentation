@@ -14,10 +14,7 @@ Cloudbreak deployer includes the following components:
 | **Sultans** | This is Cloudbreak's user management system. | 
 | **Periscope** | This is Cloudbreak's autoscaling application, which is responsible for automatically increasing or decreasing the capacity of the cluster when your pre-defined conditions are met. |
 
-
->>>>TO-DO: Is this correct? Are there any other components of Cloudbreak which are not listed here? 
-
-These component names are used in Cloudbreak logs, so for troubleshooting purposes it is useful to know what they refer to.
+> These component names are used in Cloudbreak logs, so for troubleshooting purposes it is useful to know what they refer to.
 
 #### System Level Containers
 
@@ -27,8 +24,8 @@ Cloudbreak deployer includes the following system-level containers:
 
 * Consul: Cloudbreak service registry  
 * Registrator: automatically registers/unregisters containers with consul 
-
->>>>TO-DO: Is this correct? 
+* Database: Database container for cloudbreak, autoscaling, and UAA  
+* Traefik: Proxy container 
  
 
 ### Cloudbreak Application Architecture 

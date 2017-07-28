@@ -17,9 +17,7 @@
 
 
 {!docs/common/cluster-adv-3.md!} 
-| **Instance Profile** | <p>The following options are available:<ul><li>Disable Instance Profile attaching by default</li><li>Create Instance Profile and attach to the instance</li><li>Define existing Instance Profile and attach to the instances</li></ul></p> |
-
->>>>TO-DO: What do the Instance Profile options do?
+| **Instance Profile** | This option allows you to optionally create or reuse an existing instance profile for your cluster VMs. An instance profile is a container for an IAM role that you can use to pass role information to an EC2 instance when the instance starts. The following options are available:<ul><li>Disable Instance Profile attaching by default</li><li>Create Instance Profile and attach to the instance</li><li>Define existing Instance Profile and attach to the instances</li></ul> For more information about instance profile, refer to [AWS documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html). |
 
 {!docs/common/cluster-adv-4.md!}
 

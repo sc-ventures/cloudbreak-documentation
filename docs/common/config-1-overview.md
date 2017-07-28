@@ -7,9 +7,7 @@ The **infrastructure templates** for resources such as **networks**, **security 
 
 Similarly, **blueprints** are saved to Cloudbreak's database and can be reused with multiple clusters to describe the cluster components.
 
-This is illustrated in the following image: 
-
-<a href="../images/templates-and-blueprints.png" target="_blank" title="click to enlarge"><img src="../images/templates-and-blueprints.png" width="550" title="How Cloudbreak uses templates and blueprints"></a> 
+This is illustrated and further explained in the [Architecture](architecture.md#cloudbreak-application-architecture) documentation.
 
 We recommend that you review the default infrastructure  templates for networks, security groups, and VMs and storage, as well as default blueprints to check if they meet your requirements. You can do this by expanding  their corresponding panes in the Cloudbreak web UI (shown in the screenshot) or by reading the documentation below. 
 

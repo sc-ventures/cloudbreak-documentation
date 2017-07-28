@@ -14,10 +14,10 @@ The goal with the Cloudbreak Shell is to provide an interactive command line too
 There are three ways to install and run Cloudbreak Shell:
 
 * From the Cloudbreak VM (Recommended) 
-* From the Docker Image
-* Build From Source
+* From the Docker Image  
+* Build From Source  
 
->>>>TO-DO: What are the advantages of the other two methods (using prepared docker image and building from the source)?
+> The latter two methods allow you to run the CLI your local machine.
 
 #### From the Cloudbreak VM
 
@@ -35,7 +35,7 @@ If you would like to use Cloudbreak Shell from your local machine:
 
 #### From the Docker Image
 
-You can find the docker image and its documentation [here](https://github.com/sequenceiq/docker-cb-shell).
+You can find the docker image and its documentation [here](https://github.com/hortonworks/docker-cloudbreak-shell).
 
 >>>>TO-DO: Add from the github doc? Is this still valid? 
 
@@ -43,7 +43,7 @@ You can find the docker image and its documentation [here](https://github.com/se
 
 >>>>TO-DO: Add from the old doc. Is this still valid? 
 
->>>>TO-DO: Include documentation from:
+>>>>TO-DO: Include documentation from: (the repository url change because the project is now under hwx)
 
 * [Cloudbreak docs](http://sequenceiq.com/cloudbreak-docs/latest/shell/) 
 * [Cloudbreak Shell](https://github.com/sequenceiq/cloudbreak/tree/master/shell) 
