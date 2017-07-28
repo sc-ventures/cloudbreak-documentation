@@ -11,10 +11,10 @@
 ### Advanced Options
 
 {!docs/common/cluster-adv-1.md!}
-| **Use dedicated instances** | ???? |
+| **Use dedicated instances** | Select this to use dedicated instances (i.e. EC2 instances that run in a virtual private cloud (VPC) on hardware that's dedicated to a single customer). For more information about dedicated instances, refer to [AWS documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-instance.html). |
 {!docs/common/cluster-adv-2.md!}
 
->>>>TO-DO: What are dedicated instances?
+
 
 {!docs/common/cluster-adv-3.md!} 
 | **Instance Profile** | <p>The following options are available:<ul><li>Disable Instance Profile attaching by default</li><li>Create Instance Profile and attach to the instance</li><li>Define existing Instance Profile and attach to the instances</li></ul></p> |
