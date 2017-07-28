@@ -20,7 +20,7 @@ You have three options:
 * **Create a new virtual network and a new subnet**: Every time a cluster is created with this kind of network setup a new virtual network and a new subnet with the specified IP range will be created for the instances on Azure.          
 * **Use an existing subnet in an existing virtual network**: Use this option if you have an existing virtual network with one or more subnets on Azure and you'd like to start the instances of a cluster in one of those subnets.
 
-> If you are using an existing subnet, please ensure that you have opened all the additional ports required for accessing your cluster in the security group of your subnet.
+> If you are using an existing subnet, ensure that you have opened all the additional ports required for accessing your cluster in the security group of your subnet.
 
 #### Default Network
 

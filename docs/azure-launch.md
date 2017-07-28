@@ -64,7 +64,7 @@ You have two options to launch Cloudbreak on Azure:
 | Admin Username | Create an admin login that you will use to log in to the Cloudbreak UI. Must be a valid email address. |
 | Admin User Password | Password for the admin login. Must be at least 8 characters containing letters, numbers, and symbols. |
 | Username | Enter an admin username for the virtual machine. You will use it to SSH to the VM. |
-| SmartSense | Select  whether you want to use SmartSense telemetry. Default is "false" (not using SmartSense telemetry). |
+| SmartSense | Select whether you want to use SmartSense telemetry. Default is "false" (not using SmartSense telemetry). |
 | Remote Location | <p>Allow connections from this address range. Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or enter `INTERNET`. For example: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>INTERNET will allow access from all.</li><li>VIRTUAL_NETWORK and LOAD_BALANCER are currently not supported.</li></ul></p>  |
 | Ssh Key| <p>Paste your SSH public key.</p><p>You can use `pbcopy` to quickly copy it. For example: `pbcopy < /Users/homedir/.ssh/id_rsa.pub`</p> |
 
@@ -114,7 +114,7 @@ You have two options to launch Cloudbreak on Azure:
 |---|---|
 | Controller Instance Type | Select virtual machine instance type to use for the Cloudbreak controller. The minimum instance type suitable for Cloudbreak is *D2*. For more information about instance types on Azure refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general). |
 | Allow connections to the cloud controller from this address range or [default tag](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg#default-tags) |<p>Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or enter `INTERNET`. For example: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>INTERNET will allow access from all.</li><li>VIRTUAL_NETWORK and LOAD_BALANCER are currently not supported.</li></ul></p> |
-| Enable SmartSense | (Optional) Select whether to enable SmartSense telemetry. Default is "I have read and opt-in to SmartSense telemetry. For more information about SmartSense, refer to [documentation](https://hortonworks.com/services/support/smartsense/). |
+| Enable SmartSense | (Optional) Select whether to enable SmartSense telemetry. Default is "I have read and opt-in to SmartSense telemetry. For more information about SmartSense, refer to the [Hortonworks website](https://hortonworks.com/services/support/smartsense/). |
 | Enter your existing SmartSenseID (if available). You must also opt-in to SmartSense telemetry above | (Optional) Enter your existing SmartSenseID. | 
 | Virtual network | Create a new Vnet (default) or select an existing Vnet. |
 | Subnets | If you created a new Vnet, create subnets within it. If selected an existing Vnet, select exiting subnets. |

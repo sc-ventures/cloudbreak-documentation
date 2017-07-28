@@ -9,7 +9,7 @@
 
     * *Local HDFS*: No external storage outside of HDFS will be used
     * *Windows Azure Data Lake Storage*: If you select this option, you must provide *Data Lake Store account name*.  
-    > You have to configure access control for Cloudbreak's service principal manually after cluster installation, it's id is presented in the UI. For additional information, refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-access-control).  
+    > You must configure access control for Cloudbreak's service principal manually after cluster installation. You can obtain the service principal ID from the Cloudbreak UI. For more information, refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-access-control).  
     * *Windows Azure Blob Storage*: If you select this option, you must provide:
 
         | Parameter | Description |
