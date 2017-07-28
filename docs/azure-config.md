@@ -20,10 +20,7 @@ You have three options:
 * **Create a new virtual network and a new subnet**: Every time a cluster is created with this kind of network setup a new virtual network and a new subnet with the specified IP range will be created for the instances on Azure.          
 * **Use an existing subnet in an existing virtual network**: Use this option if you have an existing virtual network with one or more subnets on Azure and you'd like to start the instances of a cluster in one of those subnets.
 
-> If using existing subnet in an existing network, make sure that you have enough room within your network space for the new instances. If the CIDR that you specified already exists within the VPC, the provided subnet CIDR range will be ignored and the existing subnet's CIDR range will be used. The security group behavior will be changed in this case: the selected security group will only be applied to the selected Ambari Server node due to the lack of capability to attach multiple security groups to an existing subnet. If you'd like to open ports for Hadoop, you will have to do it on your existing security group.
-
->>>>TO-DO: Clarify the statement above: "If you'd like to open **additional??** ports for Hadoop, you will have to do it **manually??** on your existing security group."
-
+> If you are using an existing subnet, please ensure that you have opened all the additional ports required for accessing your cluster in the security group of your subnet.
 
 #### Default Network
 
@@ -94,11 +91,6 @@ You have two options:
 * **Add your own custom security group configuration**: You can define your own security group by adding the ports, protocols, and CIDR ranges that you'd like to use. The rules defined here don't need to contain the internal rules (these are automatically added by Cloudbreak to the security group on Azure). 
 
 You can define different security group configurations for different nodes of your cluster.
-
-> If using existing subnet in an existing network, the selected security group will only be applied to the selected Ambari Server node due to the lack of capability to attach multiple security groups to an existing subnet. If you'd like to open ports for Hadoop, you will have to do it on your existing security group.
- 
->>>>TO-DO: Clarify the statement above: "If you'd like to open **additional??** ports for Hadoop, you will have to do it **manually??** on your existing security group."
-
 
 #### Default Security Group
 
