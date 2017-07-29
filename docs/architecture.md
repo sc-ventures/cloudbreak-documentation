@@ -1,5 +1,6 @@
 ## Architecture  
 
+**Cloudbreak deployer** installs Cloudbreak components on your AWS VM. Once these components are deployed, you can use **Cloudbreak application** to create, manage, and monitor clusters. 
 
 ### Cloudbreak Deployer Architecture
 
@@ -23,7 +24,7 @@ Cloudbreak deployer utilizes **containerization** - also known as container-base
 Cloudbreak deployer includes the following system-level containers:
 
 * Consul: Cloudbreak service registry  
-* Registrator: automatically registers/unregisters containers with consul 
+* Registrator: Automatically registers/unregisters containers with consul 
 * Database: Database container for cloudbreak, autoscaling, and UAA  
 * Traefik: Proxy container 
  
@@ -45,25 +46,25 @@ Cloudbreak application is built on the foundation of cloud provider APIs and Apa
 The use of blueprints and templates is illustrated in the following image:
 
 <a href="../images/templates-and-blueprints2.png" target="_blank" title="click to enlarge"><img src="../images/templates-and-blueprints2.png" width="550" title="How Cloudbreak uses templates and blueprints"></a> 
+ 
 
->>>>TO-DO: Is this correct?  
+#### SaltStack 
 
->>>>TO-DO: What is the role of Salt and how is it related to Cloudbreak application? 
-
->>>>"Salt manages complex systems at scale. Salt can be used for data-driven orchestration, remote execution for any infrastructure, configuration management for any app stack, and more."
+Under the hood, Cloudbreak uses SaltStack to manage nodes of the cluster, install packages, change configuration files, and execute recipes. 
+By default Salt master is installed on the same node where Ambari server is installed.  
 
 
 ### Cloud Resources Used 
 
 Cloubbreak and clusters deployed by it run in your cloud infrastructure. In general, Cloudbreak uses the following types of cloud resources provisioned on your cloud account:
 
-| Category | Description | AWS | Azure | GCP |
-|---|---|---|---|---|
-| *VMs and Storage* | Cloudbreak and cluster nodes created by it run on **VMs**. | [Amazon EC2](https://aws.amazon.com/documentation/ec2/) | [Virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-azure-overview?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) | [Compute Engine](https://cloud.google.com/compute/docs/) | 
-| *Network and Security* | VMs run within a **virtual network** and **subnets**. An **Internet gateway** is used to enable outbound access to the Internet from the Cloudbreak instance and the cluster instances, and a route table is used to connect the subnet to the Internet gateway. **Security groups** control the inbound and outbound traffic to and from the VMs. | [Amazon VPC](https://aws.amazon.com/documentation/vpc/) | [Virtual network](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) | [Virtual Private Cloud](https://cloud.google.com/compute/docs/vpc/) |
-| *Access Control* |  | AWS IAM | Active Directory | IAM |
-| *Resource Management* | Cloudbreak uses a designated cloud service to create and manage a collection of related AWS resources. | AWS CloudFormation | Resource Groups | ???? |
-| *Cloud Storage* |  | Amazon S3 | ADLS and [WASB](https://docs.microsoft.com/en-us/azure/storage/storage-introduction) | Google Cloud Storage |
+| Category | Description | AWS | Azure | GCP | OpenStack |
+|---|---|---|---|---|---|
+| *VMs and Storage* | Cloudbreak and cluster nodes created by it run on **VMs**. | [Amazon EC2](https://aws.amazon.com/documentation/ec2/) | [Virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-azure-overview?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) | [Compute Engine](https://cloud.google.com/compute/docs/) | ???? |
+| *Network and Security* | VMs run within a **virtual network** and **subnets**. An **Internet gateway** is used to enable outbound access to the Internet from the Cloudbreak instance and the cluster instances, and a route table is used to connect the subnet to the Internet gateway. **Security groups** control the inbound and outbound traffic to and from the VMs. | [Amazon VPC](https://aws.amazon.com/documentation/vpc/) | [Virtual network](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) | [Virtual Private Cloud](https://cloud.google.com/compute/docs/vpc/) | ???? |
+| *Access Control* |  | AWS IAM | Active Directory | IAM | ???? |
+| *Resource Management* | Cloudbreak uses a designated cloud service to create and manage a collection of related AWS resources. | AWS CloudFormation | Resource Groups | ???? | ???? |
+| *Cloud Storage* |  | Amazon S3 | ADLS and [WASB](https://docs.microsoft.com/en-us/azure/storage/storage-introduction) | Google Cloud Storage | ???? |
 
 
 >>>>TO-DO: Need to get this reviewed. Is there anything else that I should mention here? 

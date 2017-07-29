@@ -80,7 +80,7 @@ You can define reusable network configurations for your clusters in the **manage
 | Description | (Optional) Enter a description. |
 | VPC Identifier | Paste the "VPC ID" of your existing VPC as it appears in your VPC Dashboard on AWS. The "VPC ID" should be in the format "vpc-12345678".  |
 | Internet Gateway Identifier | Paste the "ID" of the Internet Gateway associated with the chosen VPC as it appears in your VPC Dashboard on AWS. The "ID" should be in the format "igw-12345678". |
-| Subnet (CIDR) | Enter a [CIDR](http://www.ipaddressguide.com/cidr) for the new subnet that will be created within the VPC. |
+| Subnet (CIDR) | Enter a valid [CIDR](http://www.ipaddressguide.com/cidr) for a new subnet that will be created within the VPC. For example `10.0.0.0/24`. |
 | Public In Account | (Optional) If this option is checked, all the users belonging to your account will be able to use this network template to create clusters, but they cannot delete it. |
 | Select Platform | (Optional) Select a previously created platform. |
 

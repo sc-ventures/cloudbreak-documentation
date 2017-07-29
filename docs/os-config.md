@@ -9,9 +9,7 @@ The **infrastructure templates** for resources such as **networks**, **security 
 
 Similarly, **blueprints** are saved to Cloudbreak's database and can be reused with multiple clusters to describe the cluster components.
 
-This is illustrated in the following image: 
-
-<a href="../images/templates-and-blueprints.png" target="_blank" title="click to enlarge"><img src="../images/templates-and-blueprints.png" width="550" title="How Cloudbreak uses templates and blueprints"></a> 
+This is illustrated and further explained in the [Architecture](architecture.md#cloudbreak-application-architecture) documentation.
 
 You can add infrastructure templates and blueprints after expanding their corresponding panes in the Cloudbreak web UI (shown in the screenshot) as described in the documentation below.  
 
@@ -51,7 +49,7 @@ You can define reusable network configurations for your clusters in the **manage
 |---|---|
 | Name | Enter a name for your configuration. |
 | Description | (Optional) Enter a description. |
-| Subnet (CIDR) | A valid CIDR notation e.g. 10.0.0.0/24. Define the IP address space usable by your VMs within the cluster. Cloudbreak supports the private address space defined in [RFC1918](https://tools.ietf.org/html/rfc1918). |
+| Subnet (CIDR) | Enter a valid [CIDR](http://www.ipaddressguide.com/cidr) for a new subnet that will be created within the VPC. For example `10.0.0.0/24`. This defines the IP address space usable by your VMs within the cluster. Cloudbreak supports the private address space defined in [RFC1918](https://tools.ietf.org/html/rfc1918). |
 | Floating Pool ID |  Floating IPs are not automatically allocated to instances by default, they needs to be attached to instances after creation. The Floating IPs are used to provide access to your VMs running on OpenStack. You can figure out the available network pools and their IDs by using the nova floating-ip-pool-list and neutron net-external-list or copy-pasting it from OpenStack Horizon UI. Such networks have the External Network field set to Yes. If you are unable to find the ID then just consult with your OpenStack network administrator. Please note that if you do not set this field then your cluster might not be accessible. |
 | Public In Account | (Optional) If this option is checked, all the users belonging to your account will be able to use this network template to create clusters, but they cannot delete it. |
 | Select Platform | (Optional) Select a previously created platform. |
@@ -76,7 +74,7 @@ You can define reusable network configurations for your clusters in the **manage
 |---|---|
 | Name | Enter a name for your configuration. |
 | Description | (Optional) Enter a description. |
-| Subnet (CIDR) | A valid CIDR notation e.g. 10.0.0.0/24 |
+| Subnet (CIDR) | Enter a valid [CIDR](http://www.ipaddressguide.com/cidr) for a new subnet that will be created within the VPC. For example `10.0.0.0/24`. |
 | Floating Pool ID | Floating IPs are not automatically allocated to instances by default, they needs to be attached to instances after creation. The Floating IPs are used to provide access to your VMs running on OpenStack. You can figure out the available network pools and their IDs by using the nova floating-ip-pool-list and neutron net-external-list or copy-pasting it from OpenStack Horizon UI. Such networks have the External Network field set to Yes. If you are unable to find the ID then just consult with your OpenStack network administrator. Please note that if you do not set this field then your cluster might not be accessible. |
 | Virtual Network Identifier | This is the ID of an existing virtual network on OpenStack where you would like to launch the cluster. |
 | Router Identifier | Specify the router ID that shall interconnect your existing Network with the Subnet which will be created by CLoudbreak. |

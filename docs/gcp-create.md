@@ -15,9 +15,9 @@
 |---|---|  
 | Project Id | The project ID registered when creating a credential should be pre-populated. |
 | Service Account Email Address | The email address registered when creating a credential should be pre-populated. |
-| Default Bucket Name | ???? |
+| Default Bucket Name | ????  For more information about the [GCS file system](https://cloud.google.com/storage/docs/gcs-fuse) and [bucket naming](https://cloud.google.com/storage/docs/naming#requirements), refer to  GCP documentation. |
 
-    >>>>TO-DO: Regarding "Default Bucket Name", is this an existing bucket? 
+    >>>>TO-DO: Regarding "Default Bucket Name", is this an existing bucket or will a new bucket be created? How exactly will it be used "by default?"
 
 {!docs/common/cluster-basic-review.md!}
 

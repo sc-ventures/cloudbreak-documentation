@@ -68,7 +68,7 @@ For example the following property should be used for a storage account called "
 
 You can obtain your access key from the Access keys in your storage account settings.
 
-Alternatively, it is possible to configure `fs.defaultFS` to use a wasb or wasbs URL. This causes all bare paths, such as /testDir/testFile to resolve automatically to that file system.
+Alternatively, it is possible, although not recommended or supported, to configure `fs.defaultFS` to use a wasb or wasbs URL. This causes all bare paths, such as /testDir/testFile to resolve automatically to that file system.
 
 #### Access Path
 
@@ -83,6 +83,17 @@ For example, to access a file called "testfile" located in a directory called "t
 You can also use "wasbs" prefix to utilize SSL-encrypted HTTPS access:
 
 <pre>wasbs://<container_name>@<storage_account_name>.blob.core.windows.net/dir/file</pre>
+
+The following Hadoop FileSystem shell commands demonstrate access to a storage account named "myaccount" and a container named "mycontainer":
+
+<pre>hadoop fs -ls wasb://mycontainer@myaccount.blob.core.windows.net/
+
+hadoop fs -mkdir wasb://mycontainer@myaccount.blob.core.windows.net/testDir
+
+hadoop fs -put testFile wasb://mycontainer@myaccount.blob.core.windows.net/testDir/testFile
+
+hadoop fs -cat wasb://mycontainer@myaccount.blob.core.windows.net/testDir/testFile
+test file content</pre>
 
 ### Learn More
 
