@@ -17,7 +17,7 @@ There are three ways to install and run Cloudbreak Shell:
 * From the Docker Image  
 * Build From Source  
 
-> The latter two methods allow you to run the CLI your local machine.
+> The latter two methods run the CLI on your local machine.
 
 #### From the Cloudbreak VM
 
