@@ -17,7 +17,7 @@ Cloudbreak deployer includes the following components:
 
 > These component names are used in Cloudbreak logs, so for troubleshooting purposes it is useful to know what they refer to.
 
-#### System Level Containers
+### System Level Containers
 
 Cloudbreak deployer utilizes **containerization** - also known as container-based virtualization or application containerization - which is an OS-level virtualization method for deploying and running distributed applications. 
 
@@ -48,7 +48,7 @@ The use of blueprints and templates is illustrated in the following image:
 <a href="../images/templates-and-blueprints2.png" target="_blank" title="click to enlarge"><img src="../images/templates-and-blueprints2.png" width="550" title="How Cloudbreak uses templates and blueprints"></a> 
  
 
-#### SaltStack 
+### SaltStack 
 
 Under the hood, Cloudbreak uses SaltStack to manage nodes of the cluster, install packages, change configuration files, and execute recipes. 
 By default Salt master is installed on the same node where Ambari server is installed.  
