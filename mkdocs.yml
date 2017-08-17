@@ -20,23 +20,27 @@ pages:
     - AWS:
       - Launch on AWS: aws-launch.md
       - Define Infrastructure Templates: aws-config.md
+      - Define Cluster Blueprints: aws-blueprints.md
       - Create a Cluster: aws-create.md
       - Manage and Monitor Clusters: aws-cb-ui.md
       - Access Data on S3: aws-data.md
     - Azure:
       - Launch on Azure: azure-launch.md
       - Define Infrastructure Templates: azure-config.md
+      - Define Cluster Blueprints: azure-blueprints.md
       - Create a Cluster: azure-create.md
       - Manage and Monitor Clusters: azure-cb-ui.md
       - Access Data on Azure: azure-data.md
     - GCP:
       - Launch on GCP: gcp-launch.md
       - Define Infrastructure Templates: gcp-config.md
+      - Define Cluster Blueprints: gcp-blueprints.md
       - Create a Cluster: gcp-create.md
       - Manage and Monitor Clusters: gcp-cb-ui.md
     - OpenStack:
       - Launch on Open Stack: os-launch.md
       - Define Infrastructure Templates: os-config.md
+      - Define Cluster Blueprints: os-blueprints.md
       - Create a Cluster: os-create.md
       - Manage and Monitor Clusters: os-cb-ui.md
     - Config & Admin:

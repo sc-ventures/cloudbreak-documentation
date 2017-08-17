@@ -1,4 +1,4 @@
-## Define Infrastructure Templates and Blueprints 
+## Define Infrastructure Templates
 
 {!docs/common/config-1-overview.md!}    
 
@@ -8,7 +8,6 @@
 | [Networks](#networks) |(Required) Virtual networks provide the networking infrastructure (network, subnet, Internet gateway, and so on) in which your clusters run. You can create new virtual networks or reuse existing virtual networks for your clusters. Virtual networks on Azure are called Azure Virtual Networks (VNets). For basic information about VNets, refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview). | You can select the network configuration for your clusters in the **Create Cluster** wizard > **Set up Network and Security** page. If no custom network is selected, default is used. | 
 | [Security Groups](#security-groups) | (Required) Security groups include rules which define inbound traffic allowed to the instances in your cluster. You can define different security group configurations for different nodes of your cluster. For basic information about security groups on Azure, refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg). | You can select the security group configurations for each host group in the **Create Cluster** wizard > **Choose Blueprint** page. If no custom security groups are selected, default is used. | 
 | [VMs and Storage](#vms-and-storage) | (Required) "Templates" define the Azure infrastructure for the instances on which your cluster runs. You can select the VM types and their attached storage, including storage type, size, and count. You can reuse the same template for different cluster host groups or create different templates for different host groups. | You can select infrastructure templates for each host group in the **Create Cluster** wizard > **Choose Blueprint** page. If no custom templates are selected, default is used. | 
-| [Blueprints](#blueprints) | (Required) Blueprints are your declarative definition of a Hadoop cluster, defining the host groups and which components to install on which host group. Ambari uses them as a base for your clusters. | You can select a blueprint for your cluster in the **Create Cluster** wizard > **Choose Blueprint** page. A few default blueprints are available. |  
 
 
 
@@ -144,12 +143,6 @@ You can define reusable cluster templates in the **manage templates** tab:
 3. Click on **+create template**.
 
     No resources will be created until you create a cluster using this configuration.
-
-
-### Blueprints 
-
-{!docs/common/blueprints.md!}  
-
 
 
 

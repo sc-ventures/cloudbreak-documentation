@@ -1,17 +1,13 @@
-## Define Infrastructure Templates and Blueprints 
+## Define Infrastructure Templates
 
-After you've logged in to Cloudbreak and created a Cloudbreak credential, you must:
-
-* Define infrastructure templates for certain cluster resources  
-* Define cluster blueprints or reuse default bluepritnts  
+After you've logged in to Cloudbreak and created a Cloudbreak credential, you must define infrastructure templates for certain cluster resources.  
 
 The **infrastructure templates** for resources such as **networks**, **security groups**, and **VMs and storage** are saved to Cloudbreak's database and can be reused with multiple clusters to describe the infrastructure. When you add these resources in Cloudbreak web UI, Cloudbreak does not make any requests to your cloud provider account. Resources are only created on your cloud provider account after the create cluster button has been pushed. 
 
-Similarly, **blueprints** are saved to Cloudbreak's database and can be reused with multiple clusters to describe the cluster components.
 
 This is illustrated and further explained in the [Architecture](architecture.md#cloudbreak-application-architecture) documentation.
 
-You can add infrastructure templates and blueprints after expanding their corresponding panes in the Cloudbreak web UI (shown in the screenshot) as described in the documentation below.  
+You can add infrastructure templates after expanding their corresponding panes in the Cloudbreak web UI (shown in the screenshot) as described in the documentation below.  
 
 <a href="../images/cb-reusable-configs.png" target="_blank" title="click to enlarge"><img src="../images/cb-reusable-configs.png" width="650" title="Azure Portal"></a> 
 
@@ -24,7 +20,6 @@ The following table describes the basic configurations for which you must create
 | [Networks](#networks) |(Required) Virtual networks provide the networking infrastructure (network, subnet, Internet gateway, and so on) in which your clusters run. You can create new virtual networks or reuse existing virtual networks for your clusters. | You can select the network configuration for your clusters in the **Create Cluster** wizard > **Set up Network and Security** page. | No |
 | [Security Groups](#security-groups) | (Required) Security groups include rules which define inbound traffic allowed to the instances in your cluster. You can define different security group configurations for different nodes of your cluster. | You can select the security group configurations for each host group in the **Create Cluster** wizard > **Choose Blueprint** page. If no custom security groups are selected, default is used. | Yes | 
 | [VMs and Storage](#vms-and-storage) | (Required) "Templates" define the infrastructure for your clusters: the instances on which your clusters run and their attached storage type, size, and count. You can reuse the same template for different cluster host groups or create different templates for different host groups. | You can select infrastructure templates for each host group in the **Create Cluster** wizard > **Choose Blueprint** page. | No |
-| [Blueprints](#blueprints) | (Required) Blueprints are your declarative definition of a Hadoop cluster, defining the host groups and which components to install on which host group. Ambari uses them as a base for your clusters. | You can select a blueprint for your cluster in the **Create Cluster** wizard > **Choose Blueprint** page. A few default blueprints are available. | Yes | 
 
 The "Preconfigured" column indicates whether a default template is available, indicating that templates are available for security groups and blueprints. 
 
@@ -154,12 +149,8 @@ You can define reusable cluster templates in the **manage templates** tab:
     No resources will be created until you create a cluster using this configuration.
  
 
-### Blueprints 
-
-{!docs/common/blueprints.md!}  
-
 
 
 <div class="next">
-<a href="../os-create/index.html">Next: Create a Cluster</a>
+<a href="../os-blueprints/index.html">Next: Create a Cluster</a>
 </div>

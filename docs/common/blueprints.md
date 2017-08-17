@@ -1,9 +1,14 @@
+**Cluster blueprints** are your declarative definition of a Hadoop cluster, defining the host groups and which components to install on which host group. Ambari uses them as a base for your clusters. 
 
-You have two options:
+You have three options:
 
 * Use one of the pre-defined blueprints.  
 * Copy and edit one of the pre-defined blueprints.   
-* Add your custom blueprint by uploading a JSON file or pasting the JSON text.  
+* Add your custom blueprint by uploading a JSON file or pasting the JSON text. 
+
+We recommend that you review the default blueprints to check if they meet your requirements. You can do this by expanding  the **manage bluerints** pane in the Cloudbreak web UI (shown in the screenshot) or by reading the documentation below.  
+
+<a href="../images/cb-blueprints.png" target="_blank" title="click to enlarge"><img src="../images/cb-blueprints.png" width="650" title="Azure Portal"></a> 
 
 [Here](https://raw.githubusercontent.com/sequenceiq/cloudbreak/master/integration-test/src/main/resources/blueprint/multi-node-hdfs-yarn.bp) is an example of a blueprint. 
 
@@ -13,7 +18,7 @@ A blueprint can be modified later from the Ambari UI.
 
 A blueprint can be exported from a running Ambari cluster and can be reused in Cloudbreak after slight modifications. When a blueprint is exported, some configurations are hardcoded for example domain names, memory configurations, and so on, that won't be applicable to the Cloudbreak cluster. There is no automatic way to modify an exported blueprint and make it instantly usable in Cloudbreak, the modifications have to be done manually.
 
-#### Default Blueprints 
+### Default Blueprints 
 
 Cloudbreak includes three default HDP cluster blueprints:
 
@@ -25,12 +30,12 @@ Cloudbreak includes three default HDP cluster blueprints:
 | hdp-spark-cluster | Launch a multi-node HDP 2.4 cluster optimized for Spark analytic jobs. | HDFS, YARN, MAPREDUCE2, SPARK, ZEPPELIN, KNOX, HBASE, HIVE, HCATALOG, WEBHCAT, SLIDER, OOZIE, PIG, SQOOP, METRICS, TEZ, FALCON, ZOOKEEPER | [hdp-spark-cluster.bp](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-spark-cluster.bp) |
 
 
-#### Copy and Edit Existing Blueprint 
+### Copy and Edit Existing Blueprint 
 
 You can modify default or previously added blueprints in the **manage blueprints** tab. To do that, expand the entry in the Cloudbreak UI and then click **copy & edit**. 
 
 
-#### Add Custom Blueprint
+### Add Custom Blueprint
 
 You can define reusable blueprints for your clusters in the **manage blueprints** tab. To add your own blueprint, click **+create blueprint** and enter the following parameters:
 

@@ -1,4 +1,4 @@
-## Define Infrastructure Templates and Blueprints  
+## Define Infrastructure Templates 
 
 {!docs/common/config-1-overview.md!}  
 
@@ -8,7 +8,6 @@
 | [Networks](#networks) |(Required) Virtual networks provide the networking infrastructure (network, subnet, Internet gateway, and so on) in which your clusters run. A virtual network on AWS is called Amazon Virtual Private Cloud (Amazon VPC). You can create new virtual networks or reuse existing virtual networks for your clusters. For basic information about VPCs and subnets on AWS, refer to [AWS documentation](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html). | You can select the network configuration for your clusters in the **Create Cluster** wizard > **Set up Network and Security** page. | 
 | [Security Groups](#security-groups) | (Required) Security groups include rules which define inbound traffic allowed to the instances in your cluster. You can define different security group configurations for different nodes of your cluster. For basic information about security groups on AWS, refer to [AWS documentation](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html). | You can select the security group configurations for each host group in the **Create Cluster** wizard > **Choose Blueprint** page. If no custom security groups are selected, default is used. | 
 | [VMs and Storage](#vms-and-storage) | (Required) "Templates" define the AWS infrastructure for the instances on which your cluster runs. You can select the EC2 instance types and their attached storage, including storage type, size, count, and encryption settings. You can reuse the same template for different cluster host groups or create different templates for different host groups. | You can select a template for each host group in the **Create Cluster** wizard > **Choose Blueprint** page. If no custom templates are selected, default is used. | 
-| [Blueprints](#blueprints) | (Required) Blueprints are your declarative definition of a Hadoop cluster, defining the host groups and which components to install on which host group. Ambari uses them as a base for your clusters. | You can select a blueprint for your cluster in the **Create Cluster** wizard > **Choose Blueprint** page. A few default blueprints are available. |   
 
 
 ### Networks
@@ -203,13 +202,6 @@ You can define reusable configurations in the **manage templates** tab:
     
 
 
-### Blueprints 
-
-{!docs/common/blueprints.md!}  
-
-
-
-
 <div class="next">
-<a href="../aws-create/index.html">Next: Create a Cluster</a>
+<a href="../aws-blueprints/index.html">Next: Create a Cluster</a>
 </div>
