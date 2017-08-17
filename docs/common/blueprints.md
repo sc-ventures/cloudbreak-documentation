@@ -65,7 +65,11 @@ You can modify default or previously added blueprints in the **manage blueprints
 
 ### Add Custom Blueprint
 
-You can define reusable blueprints for your clusters in the **manage blueprints** tab. To add your own blueprint, click **+create blueprint** and enter the following parameters:
+For correct blueprint layout, refer to the [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) page.
+
+You can define reusable blueprints for your clusters in the **manage blueprints** tab. 
+
+To add your own blueprint, click **+create blueprint** and enter the following parameters:
 
 | Parameter | Value |
 |---|---|
