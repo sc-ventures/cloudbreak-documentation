@@ -68,7 +68,12 @@ pages:
       - Cloudbreak Shell: cb-shell.md
       - Profile File: profile.md
       - FAQ: faq.md 
-      - Troubleshooting: trouble.md
+      - Troubleshooting: 
+        - General Troubleshooting: trouble-cb.md
+        - Troubleshooting AWS: trouble-aws.md
+        - Troubleshooting Azure: trouble-azure.md
+        - Troubleshooting GCP: trouble-gcp.md
+        - Troubleshooting OpenStack: trouble-os.md
       - Getting Help: get-help.md
       - Developer Docs:
         - API: api.md
