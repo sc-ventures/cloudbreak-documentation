@@ -35,6 +35,26 @@ Cloudbreak includes three default HDP cluster blueprints:
 | EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br> Spark 2.1 | This cluster configuration includes Hive and Spark 2.1. |
 | BI | <span><i class="fa fa-warning" style="color: orange"></i> Druid 0.9.2</span> | This cluster configuration includes a Technical Preview of Druid. |
 
+The following services are included in these configurations: 
+
+| Service | Data Science<br>(Spark 1.6) | Data Science<br>(Spark 2.1) | EDW-ETL<br>(Spark 1.6) | EDW-ETL<br>(Spark 2.1) | EDW-Analytics | BI-Druid |
+|---|---|---|---|---|---|---|
+| HDFS 		 		| x | x | x | x | x | x |
+| YARN 			 	| x | x | x | x | x | x |
+| MapReduce2  		| x | x | x | x | x | x |
+| Tez 					| x | x | x | x | x | x |
+| Hive 1.2.1 	 		| x | x | x | x |   |   |
+| Hive 2 LLAP 		|   |   |   |   | x |   |
+| Druid 		 		|   |   |   |   |   | x |
+| Pig  			 	| x | x | x | x | x |   |
+| Sqoop 				| x | x | x |   |   | x |
+| ZooKeeper 			| x | x | x | x | x | x |
+| Ambari Metrics 	| x | x | x | x | x | x |
+| Spark 1.6 			| x |   | x |   | x |   |
+| Spark 2.1 			|   | x |   | x |   |   |
+| Zeppelin 0.7.0 	| x | x |   |   | x |   |
+| Slider 				|   |   |   |   | x |   |
+
 #### HDP Version: **HDP 2.5**
 
 | Cluster Type  | Services | Description  |
@@ -43,6 +63,26 @@ Cloudbreak includes three default HDP cluster blueprints:
 | EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | This cluster configuration includes Hive and Spark 1.6. |
 | EDW - ETL | <i class="fa fa-warning" style="color: orange"></i> Hive 1.2.1,<br> Spark 2.0 | This cluster configuration includes a Technical Preview of Spark 2.0. |
 | EDW - Analytics | <span><i class="fa fa-warning" style="color: orange"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.6.0 | This cluster configuration includes a Technical Preview of Hive 2 LLAP. |
+
+The following services are included in these configurations: 
+
+| Service | Data Science | EDW-ETL (Spark 1.6) | EDW-ETL (Spark 2.0) | EDW-Analytics |
+|---|---|---|---|---|
+| HDFS 				| x | x | x | x |
+| YARN 				| x | x | x | x |
+| MapReduce2  		| x | x | x | x |
+| Tez 					| x | x | x | x |
+| Hive 1.2.1 			| x | x | x |   | 
+| Hive 2 LLAP 		|   |   |   | x | 
+| Pig  				| x | x | x | x |
+| Sqoop 				| x | x |   |   |
+| ZooKeeper 			| x | x | x | x |
+| Ambari Metrics 	| x | x | x | x |
+| Spark 1.6 			| x | x |   | x |
+| Spark 2.0 			|   |   | x |   |
+| Zeppelin 0.6.0 	| x |   |   | x |
+| Slider 				|   |   |   | x |
+
 
 <div class="note">
     <p class="first admonition-title">Choosing Your Configuration</p>
@@ -65,11 +105,9 @@ You can modify default or previously added blueprints in the **manage blueprints
 
 ### Add Custom Blueprint
 
-For correct blueprint layout, refer to the [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) page.
+This option allows you to save your custom blueprints. For correct blueprint layout and other useful information about Ambari blueprints, refer to the [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) page.
 
-You can define reusable blueprints for your clusters in the **manage blueprints** tab. 
-
-To add your own blueprint, click **+create blueprint** and enter the following parameters:
+Once you have your blueprints ready, you can save them in the **manage blueprints** tab. To add your own blueprint, click **+create blueprint** and enter the following parameters:
 
 | Parameter | Value |
 |---|---|
