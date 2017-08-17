@@ -53,7 +53,7 @@ You have two options to launch Cloudbreak on Azure:
     | Parameter | Description |
 |---|---|
 | Subscription | Select which existing subscription you want to use. |
-| Resource group | Select **Create new** if you would like to create a new resource group and enter a name for your new resource group. Alternatively, you can select an existing empty resource group. Cloudbreak resources will later be accessible in that chosen resource group. |
+| Resource group | Only **Create new** is supported. Select **Create new** to create a new resource group and enter a name for your new resource group. Cloudbreak resources will later be accessible in that chosen resource group. |
 | Location | Select an Azure region in which you want to deploy Cloudbreak. |
 
     **SETTINGS**
@@ -103,7 +103,7 @@ You have two options to launch Cloudbreak on Azure:
 | VM Username | Enter an admin username for the virtual machine. You will use it to SSH to the VM. |
 | VM SSH public key| <p>Paste your SSH public key.</p><p>You can use `pbcopy` to quickly copy it. For example: `pbcopy < /Users/homedir/.ssh/id_rsa.pub`</p> |
 | Subscription | Select which existing subscription you want to use. |
-| Resource group | Select **Create new** if you would like to create a new resource group and enter a name for your new resource group. Alternatively, you can select an existing empty resource group. Cloudbreak resources will later be accessible in that chosen resource group. |
+| Resource group | Only **Create new** is supported. Select **Create new** to create a new resource group and enter a name for your new resource group. Cloudbreak resources will later be accessible in that chosen resource group. |
 | Location | Select an Azure region in which you want to deploy Cloudbreak. |
 
 7. Once done, click **OK**.
