@@ -132,9 +132,11 @@ Cloudbreak always tries to validate that a blueprint not to include multiple mas
 
 In the blueprint, only the major and minor HDP version should be defined (for example, "2.6"). If wrong version number is provided, the following error can be found in the logs:
 
-```5/15/2017 12:23:19 PM testcluster26 - create failed: Cannot use the specified Ambari stack: HDPRepo
+```
+5/15/2017 12:23:19 PM testcluster26 - create failed: Cannot use the specified Ambari stack: HDPRepo
 {stack='null'; utils='null'}
-. Error: org.apache.ambari.server.controller.spi.NoSuchResourceException: The specified resource doesn't exist: Stack data, Stack HDP 2.6.0.3 is not found in Ambari metainfo```
+. Error: org.apache.ambari.server.controller.spi.NoSuchResourceException: The specified resource doesn't exist: Stack data, Stack HDP 2.6.0.3 is not found in Ambari metainfo
+```
 
 For correct blueprint layout, refer to the [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) page.
   
@@ -145,11 +147,13 @@ If the scripts are taking too much time to execute, the processes will time out,
 
 >>>>TO-DO: 15 minutes for all scripts or for each script?
 
-```export CB_JAVA_OPTS=” -Dcb.max.salt.recipe.execution.retry=90”``` 
+```
+export CB_JAVA_OPTS=” -Dcb.max.salt.recipe.execution.retry=90”
+``` 
 
 This property indicates the number of tries for checking if the scripts have finished with a sleep time of 10 seconds. The default value is 90. To increase the threshold provide a number greater than 90. You must restart Cloudbreak after changing properties in the Profile file.
 
->>>>TO-DO: you mean "slip time of 10 seconds"?
+>>>>TO-DO: Do you mean "slip time of 10 seconds"?
 
 #### Recipes: Recipe Execution Fails
 
@@ -190,5 +194,6 @@ In Cloudbreak versions earlier than 1.14 it is not possible to change the passwo
 Cloudbreak 1.14 and later creates a new admin user in Ambari, so it’s safe to change the credentials of the admin user. This credential can also be changed in the cluster installation wizard.
 
 >>>>TO-DO: Can you clarify this? In the first paragraph (Cloudbreak < 1.14) you talk about users being unable to change password and then changing credentials. Do you just mean password or also admin user name? 
+
 >>>>TO-DO: In the second paragraph (Cloudbreak >=1.14), are we talking about the password or also user name? 
 
