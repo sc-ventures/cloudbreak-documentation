@@ -23,7 +23,6 @@ A blueprint can be exported from a running Ambari cluster and can be reused in C
 Cloudbreak includes three default HDP cluster blueprints:
 
 
-
 #### HDP Version: **HDP 2.6**
 
 | Cluster Type  | Services | Description  |
@@ -35,7 +34,35 @@ Cloudbreak includes three default HDP cluster blueprints:
 | EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br> Spark 2.1 | This cluster configuration includes Hive and Spark 2.1. |
 | BI | <span><i class="fa fa-warning" style="color: orange"></i> Druid 0.9.2</span> | This cluster configuration includes a Technical Preview of Druid. |
 
-The following services are included in these configurations: 
+
+#### HDP Version: **HDP 2.5**
+
+| Cluster Type  | Services | Description  |
+|:------------- |:---|:-------------|
+| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 1.6,<br>Zeppelin 0.6.0 | This cluster configuration includes Spark 1.6 and Zeppelin. |
+| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | This cluster configuration includes Hive and Spark 1.6. |
+| EDW - ETL | <i class="fa fa-warning" style="color: orange"></i> Hive 1.2.1,<br> Spark 2.0 | This cluster configuration includes a Technical Preview of Spark 2.0. |
+| EDW - Analytics | <span><i class="fa fa-warning" style="color: orange"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.6.0 | This cluster configuration includes a Technical Preview of Hive 2 LLAP. |
+
+
+<div class="note">
+    <p class="first admonition-title">Choosing Your Configuration</p>
+    <p class="last">
+When creating a cluster, you can choose a more stable cluster configuration for a predicable experience.
+Alternatively, you can try the latest capabilities by choosing a cluster configuration
+that is much more experimental. The following configuration classification applies:
+<ul>
+<li><i class="fa fa-check" style="color: green"></i> Stable configurations are the best choice if you want to avoid issues and other problems with launching and using clusters.</li>
+<li><i class="fa fa-warning" style="color: orange"></i> If you want to use a Technical Preview version of a component in a release of HDP, use these configurations.</li>
+<li><i class="fa fa-warning" style="color: red"></i> These are the most cutting edge of the configurations, including Technical Preview components in a Technical Preview HDP release.</li>
+</ul>
+</p>
+</div>
+
+
+The following services are included in the respective blueprints:
+
+**HDP 2.6**
 
 | Service | Data Science<br>(Spark 1.6) | Data Science<br>(Spark 2.1) | EDW-ETL<br>(Spark 1.6) | EDW-ETL<br>(Spark 2.1) | EDW-Analytics | BI-Druid |
 |---|---|---|---|---|---|---|
@@ -55,16 +82,7 @@ The following services are included in these configurations:
 | Zeppelin 0.7.0 	| x | x |   |   | x |   |
 | Slider 				|   |   |   |   | x |   |
 
-#### HDP Version: **HDP 2.5**
-
-| Cluster Type  | Services | Description  |
-|:------------- |:---|:-------------|
-| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 1.6,<br>Zeppelin 0.6.0 | This cluster configuration includes Spark 1.6 and Zeppelin. |
-| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | This cluster configuration includes Hive and Spark 1.6. |
-| EDW - ETL | <i class="fa fa-warning" style="color: orange"></i> Hive 1.2.1,<br> Spark 2.0 | This cluster configuration includes a Technical Preview of Spark 2.0. |
-| EDW - Analytics | <span><i class="fa fa-warning" style="color: orange"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.6.0 | This cluster configuration includes a Technical Preview of Hive 2 LLAP. |
-
-The following services are included in these configurations: 
+**HDP 2.5**
 
 | Service | Data Science | EDW-ETL (Spark 1.6) | EDW-ETL (Spark 2.0) | EDW-Analytics |
 |---|---|---|---|---|
@@ -84,19 +102,6 @@ The following services are included in these configurations:
 | Slider 				|   |   |   | x |
 
 
-<div class="note">
-    <p class="first admonition-title">Choosing Your Configuration</p>
-    <p class="last">
-When creating a cluster, you can choose a more stable cluster configuration for a predicable experience.
-Alternatively, you can try the latest capabilities by choosing a cluster configuration
-that is much more experimental. The following configuration classification applies:
-<ul>
-<li><i class="fa fa-check" style="color: green"></i> Stable configurations are the best choice if you want to avoid issues and other problems with launching and using clusters.</li>
-<li><i class="fa fa-warning" style="color: orange"></i> If you want to use a Technical Preview version of a component in a release of HDP, use these configurations.</li>
-<li><i class="fa fa-warning" style="color: red"></i> These are the most cutting edge of the configurations, including Technical Preview components in a Technical Preview HDP release.</li>
-</ul>
-</p>
-</div>
 
 ### Copy and Edit Existing Blueprint 
 
