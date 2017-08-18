@@ -27,7 +27,10 @@ Clusters created via Cloudbreak can be in the same or different region as Cloudb
 
 #### SSH Key Pair
 
-When launching Cloudbreak, you will be required to provide your public SSH key. If needed, you can generate a new SSH keypair using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+When launching Cloudbreak, you will be required to provide your public SSH key. If needed, you can generate a new SSH keypair:
+
+* On MacOS and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
+* On Windows using [puttgen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
 
 
 ### Launch Cloudbreak 
@@ -65,8 +68,7 @@ You have two options to launch Cloudbreak on Azure:
 | Admin User Password | Password for the admin login. Must be at least 8 characters containing letters, numbers, and symbols. |
 | Username | Enter an admin username for the virtual machine. You will use it to SSH to the VM. |
 | SmartSense | Select whether you want to use SmartSense telemetry. Default is "false" (not using SmartSense telemetry). |
-| Remote Location | <p>Allow connections from this address range. Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or enter `INTERNET`. For example: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>INTERNET will allow access from all.</li><li>VIRTUAL_NETWORK and LOAD_BALANCER are currently not supported.</li></ul></p>  |
-| Ssh Key| <p>Paste your SSH public key.</p><p>You can use `pbcopy` to quickly copy it. For example: `pbcopy < /Users/homedir/.ssh/id_rsa.pub`</p> |
+| Remote Location |<p>Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or use one of the default tags such as  `Internet`. For example: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>'Internet' will allow access from all. This is not a secure option but you can use it it you are just getting started and are not planning to have the instance on for a longer period. </li><li>(Advanced) 'VirtualNetwork' will allow access from the address space of the Virtual Network.</li><li> (Advanced) 'AzureLoadBalancer' will allow access from the address space of the load balancer.</li></ul></p><p>For more information, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg#default-tags).</p> |
 
 4. Review terms of use and check "I agree to the terms and conditions stated above". 
 
@@ -113,9 +115,9 @@ You have two options to launch Cloudbreak on Azure:
     | Parameter | Description |
 |---|---|
 | Controller Instance Type | Select virtual machine instance type to use for the Cloudbreak controller. The minimum instance type suitable for Cloudbreak is *D2*. For more information about instance types on Azure refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general). |
-| Allow connections to the cloud controller from this address range or [default tag](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg#default-tags) |<p>Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or enter `Internet`. For example: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>'Internet' will allow access from all.</li><li>(Advanced) 'VirtualNetwork' will allow access from the address space of the Virtual Network.</li><li> (Advanced) 'AzureLoadBalancer' will allow access from the address space of the load balancer.</li></ul></p><p>For more information, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg#default-tags).</p> |
-| Enable SmartSense | (Optional) Select whether to enable SmartSense telemetry. Default is "I have read and opt-in to SmartSense telemetry. For more information about SmartSense, refer to the [Hortonworks website](https://hortonworks.com/services/support/smartsense/). |
-| Enter your existing SmartSenseID (if available). You must also opt-in to SmartSense telemetry above | (Optional) Enter your existing SmartSenseID. | 
+| Allow connections to the cloud controller from this address range or [default tag](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg#default-tags) |<p>Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or use one of the default tags such as  `Internet`. For example: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>'Internet' will allow access from all. This is not a secure option but you can use it it you are just getting started and are not planning to have the instance on for a longer period. </li><li>(Advanced) 'VirtualNetwork' will allow access from the address space of the Virtual Network.</li><li> (Advanced) 'AzureLoadBalancer' will allow access from the address space of the load balancer.</li></ul></p><p>For more information, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg#default-tags).</p> |
+| Enable SmartSense | (Optional) Select whether to enable SmartSense telemetry. Default is "I have read and opt-in to SmartSense telemetry. SmartSense provides product telemetry and usage information to Hortonworks. For more information, refer to the [Hortonworks website](https://hortonworks.com/services/support/smartsense/). |
+| Enter your existing SmartSenseID (if available). You must also opt-in to SmartSense telemetry above | (Optional) Enter your existing SmartSenseID. Use this option if you would like to use your Flex Support Subscription. For more information, refer to [Enterprise Support SUbscriptions](https://hortonworks.com/services/support/enterprise/). | 
 | Virtual network | Create a new Vnet (default) or select an existing Vnet. |
 | Subnets | If you created a new Vnet, create subnets within it. If selected an existing Vnet, select exiting subnets. |
 
@@ -162,13 +164,19 @@ While the deployment is in progress, you can optionally navigate to the newly cr
 
 1. When your deployment succeeds, you will receive a notification in the top-right corner. Click on the notification to navigate to the deployed resource. 
 
+    > This only works right after deployment. At other times, you can find your resource group by selecting **Resource Groups** from the service menu and then finding your resource group by name.
+
+2. Once you've navigated to your resource group, click on **Deployments** and then click on **hortonworks.cloudbreal-for-hortonworks-data-platf-...**:
+
+    <a href="../images/resource-find.png" target="_blank" title="click to enlarge"><img src="../images/resource-find.png" width="650" title="Azure Portal"></a> 
+
 3. From **Outputs**, you can copy the link by clicking on the <img src="../images/copy-icon.png" width="30" title="Icon"> icon:
 
     <a href="../images/cb-outputs.png" target="_blank" title="click to enlarge"><img src="../images/cb-outputs.png" width="650" title="Azure Portal"></a>   
 
 2. Paste the link in your browser's address bar.
 
-    The first time you access Cloudbreak UI, Cloudbreak will automatically generate a self-signed certificate, due to which your browser will warn you about an untrusted connection and will ask you to confirm a security exception.
+    The first time you access Cloudbreak UI, Cloudbreak will automatically generate a self-signed certificate, due to which your browser will warn you about an untrusted connection and will ask you to confirm a security exception. You can safely proceed to the website. 
 
     | Browser | Steps |
 |---|---|
@@ -211,7 +219,7 @@ Before you can start provisioning cluster using Cloudbreak, you must create a Cl
 | Description | (Optional) Enter a description. | 
 | SSH Public Key | The SSH key that you provided when launching Cloudbreak should be pre-entered. |
 | Select Azure role type | <p>You have the following options:<ul><li>"Use existing Contributor role" (default): If you select this option, Cloudbreak will use the "[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor)" role to create resources. This requires no further input.</li><li>"Reuse existing custom role": If you select this option and enter the name of an existing role, Cloudbreak will use this role to create resources.</li><li>"Let Cloudbreak create a custom role": If you select this option and enter a name for the new role, the role will be created. When choosing role name, make sure that there is no existing role with the name chosen. For information on creating custom roles, refer to [Azure](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles) documentation. </li></ul></p><p>If using a custom role, make sure that it includes the necessary Action set for Cloudbreak to be able to manage clusters: `Microsoft.Compute/*`, `Microsoft.Network/*`, `Microsoft.Storage/*`, `Microsoft.Resources/*`.</p> |
-| Select Platform | (Optional) Select a platform (if previously configured). |
+| Select Platform | (Optional advanced option) Select a platform (if previously configured). |
 | Public In Account | (Optional) If you check this, other users added to your Cloudbreak instance will be able to use this credential to create clusters. |
     
 
@@ -235,11 +243,11 @@ Before you can start provisioning cluster using Cloudbreak, you must create a Cl
      
 #### Create an App Based Credential
 
-1. On Azure Portal, navigate to the **Azure Active Directory** and register a new application:
+1. On Azure Portal, navigate to the **Azure Active Directory** > **App Registrations** and register a new application:
 
      <a href="../images/azure-appbased01.png" target="_blank" title="click to enlarge"><img src="../images/azure-appbased01.png" width="650" title="Azure Portal"></a>
 
-1. Navigate to the **Subscriptions** and assign the "Contributor" role to your newly created application:
+1. Navigate to the **Subscriptions**, choose **Access control (IAM)**. Click **Add** and then assign the "Contributor" role to your newly created application by selecting "Contributor" under **Role** and your app name under **Select**:
 
      <a href="../images/azure-appbased03.png" target="_blank" title="click to enlarge"><img src="../images/azure-appbased03.png" width="650" title="Azure Portal"></a>   
 
@@ -257,13 +265,15 @@ Before you can start provisioning cluster using Cloudbreak, you must create a Cl
 | Name | Enter a name for your credential. |
 | Description | (Optional) Enter a description. | 
 | Subscription Id | Copy and paste the Subscription ID from your **Subscriptions**. |
-| App Id | Copy and paste the Application ID from your **Azure Active Directory** app registration's **Settings** > **Properties**. |
-| Password | This is your application key. You can obtain it from your from your **Azure Active Directory** app registration's **Settings** > **Keys**. |
-| App Owner Tenant Id | Paste your App Owner Tenant Id. There are multiple ways to obtain it. For example, you can find it in the *PortalDiagnostics.json* file, which can be downloaded by clicking on <img src="../images/question-icon.png" width="30" title="Icon"> in the top-right corner and then selecting **Show Diagnostics**.  |
+| App Id | Copy and paste the Application ID from your **Azure Active Directory** > **App Registrations** > your app registration's **Settings** > **Properties**. |
+| Password | This is your application key. You can generate it from your from your **Azure Active Directory** app registration's **Settings** > **Keys**. |
+| App Owner Tenant Id | Copy and paste your Directory ID from your **Active Directory** > **Properties**. |
 | SSH Public Key | The SSH key that you provided when launching Cloudbreak should be pre-entered. |
 | Select Azure role type | <p>You have the following options:<ul><li>"Use existing Contributor role" (default): If you select this option, Cloudbreak will use the "[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor)" role to create resources. This requires no further input.</li><li>"Reuse existing custom role": If you select this option and enter the name of an existing role, Cloudbreak will use this role to create resources.</li><li>"Let Cloudbreak create a custom role": If you select this option and enter a name for the new role, the role will be created. When choosing role name, make sure that there is no existing role with the name chosen. For information on creating custom roles, refer to [Azure](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles) documentation. </li></ul></p><p>If using a custom role, make sure that it includes the necessary Action set for Cloudbreak to be able to manage clusters: `Microsoft.Compute/*`, `Microsoft.Network/*`, `Microsoft.Storage/*`, `Microsoft.Resources/*`.</p> |
-| Select Platform | (Optional) Select a platform (if previously configured). |
+| Select Platform | (Optional advanced option) Select a platform (if previously configured). |
 | Public In Account | (Optional) If you check this, other users added to your Cloudbreak instance will be able to use this credential to create clusters. |
+
+    > If you are having trouble locating the parameters, refer to this [Azure](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal) documentation. 
 
 1. Click **Next** and then **Finish**.
 
