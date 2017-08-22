@@ -11,7 +11,7 @@ Cloudbreak deployer includes the following components:
 | **Cloudbreak Application** | Cloudbreak application is built on the foundation of cloud provider APIs and Apache Ambari. | 
 | **Uluwatu** | This is Cloudbreak web UI, which can be used to create, manage, and monitor clusters. |
 | **Cloudbreak Shell** | This is Cloudbreak's command line tool, which can be used to create, manage, and monitor clusters. | 
-| **UAA** | This is Cloudbreak's OAuth identity server implementation, which utilizes UAA. |
+| **Identity** | This is Cloudbreak's OAuth identity server implementation, which utilizes UAA. |
 | **Sultans** | This is Cloudbreak's user management system. | 
 | **Periscope** | This is Cloudbreak's autoscaling application, which is responsible for automatically increasing or decreasing the capacity of the cluster when your pre-defined conditions are met. |
 

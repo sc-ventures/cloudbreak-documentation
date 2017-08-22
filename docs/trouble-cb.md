@@ -31,8 +31,6 @@ To check individual service logs, use the following commands:
 
 `cbd logs identity` shows Identity logs. Identity is responsible for authentication and authorization.
 
->>>>TO-DO: Wasn't this previously called UAA? In teh Architecture section we call this component "UAA". Should I just call it "Identity" everywhere? 
-
 `cbd logs periscope` shows Periscope logs. Periscope is responsible for triggering autoscaling rules.
 
 **Docker Logs**
@@ -41,9 +39,7 @@ The same logs can be accessed via Docker commands:
 
 `docker logs cbreak_cloudbreak_1` shows the same logs as `cbd logs cloudbreak`.
 
-Cloudbreak logs are also rotated and can be accessed later from the Cloudbreak deployment folder. 
-
->>>>TO-DO: I don't understand hat the sentence above means. Can you rephrase? 
+Cloudbreak logs are rotated and can be accessed later from the Cloudbreak deployment folder. Each time you restart the application via cbd restart a new log file is created with a timestamp in the name (for example, cbreak-20170821-105900.log). 
 
 > There is a symlink called `cbreak.log` which points to the latest log file. Sharing this symlink does not share the log itself.
  
@@ -63,7 +59,7 @@ Cloudbreak uses Ambari to orchestrate the installation of the different HDP comp
 
 **Ambari Server Logs**
 
-Ambari server logs can be found in the following locations:
+Ambari server logs can be found on the nodes where Ambari server is installed in the following locations:
 
 `/var/log/ambari-server/ambari-server.log`
 
@@ -73,19 +69,16 @@ Both files contain important information about the root cause of a certain issue
 
 **Ambari Agent Logs**
 
-Ambari agent logs can be found in the following locations:
+Ambari agent logs can be found on the nodes where Ambari agent is installed in the following locations:
 
 `/var/log/ambari-agent/ambari-agent.log`
 
 
 #### Recipe Logs
 
-Cloudbreak supports "recipes" - user-provided customization scripts that can be run prior to or after cluster installtion. It is the user’s responsibility to provide an idempotent well tested script. However, if the execution fails, the recipe logs can be found at `/var/log/recipes`.
+Cloudbreak supports "recipes" - user-provided customization scripts that can be run prior to or after cluster installtion. It is the user’s responsibility to provide an idempotent well tested script. If the execution fails, the recipe logs can be found at `/var/log/recipes` on the nodes on which the recipes were executed.
 
 It is advised, but not required to have an advanced logging mechanism in the script, as Cloudbreak always logs every script that are run. Recipes are often the sources of installation failures as users might try to remove necessary packages or reconfigure services.
-
-
->>>>TO-DO: Which of these logs are on the Cloudbreak node and which on the cluster nodes (and which specific nodes)?
 
 
 ### Common Errors
@@ -124,9 +117,8 @@ There are some cases when Ambari cannot validate your blueprint beforehand. In t
 
 #### Blueprints: High Availability
 
-Cloudbreak always tries to validate that a blueprint not to include multiple master services into different host groups. However, this exact setup is required for HA clusters. To overcome this, you can disable blueprint validation in the UI, but you must include the necessary configurations.
+Cloudbreak always tries to validate that a blueprint not to include multiple master services into different host groups. However, this exact setup is required for HA clusters. To overcome this, you can disable blueprint validation in the UI (using an advanced option in the Create Cluster wizard > Choose Blueprint), but you must include the necessary configurations.
 
->>>>TO-DO: Where can you disable that in the UI? 
 
 #### Blueprints: Wrong HDP Version
 
@@ -143,17 +135,16 @@ For correct blueprint layout, refer to the [Ambari cwiki](https://cwiki.apache.o
 
 #### Recipes: Recipe Execution Times Out
 
-If the scripts are taking too much time to execute, the processes will time out, as the threshold for this is set to 15 minutes. To change this threashold, you must override the default value by adding the following to the cbd Profile file:
+If the scripts are taking too much time to execute, the processes will time out, as the threshold for all recipes is set to 15 minutes. To change this threshold, you must override the default value by adding the following to the cbd Profile file:
 
->>>>TO-DO: 15 minutes for all scripts or for each script?
 
 ```
 export CB_JAVA_OPTS=” -Dcb.max.salt.recipe.execution.retry=90”
 ``` 
 
-This property indicates the number of tries for checking if the scripts have finished with a sleep time of 10 seconds. The default value is 90. To increase the threshold provide a number greater than 90. You must restart Cloudbreak after changing properties in the Profile file.
+This property indicates the number of tries for checking if the scripts have finished with a sleep time (i.e. the wait time between two polling attempts) of 10 seconds. The default value is 90. To increase the threshold, provide a number greater than 90. You must restart Cloudbreak after changing properties in the Profile file.
 
->>>>TO-DO: Do you mean "slip time of 10 seconds"?
+
 
 #### Recipes: Recipe Execution Fails
 
@@ -175,13 +166,11 @@ There are many properties that can be changed in the Cloudbreak application. The
 
 After changing a property, you must regenerate the config file and restart the application. There are two ways to do this:
 
-In newer versions of the cbd command line, you can regenerate the config file and restart the application with a single command:
+In version 1.4.0 and newer of the cbd command line, you can regenerate the config file and restart the application with a single command:
 
 `cbd restart` - same as cbd regenerate/kill/start.
 
->>>>TO-DO: Starting with which version of cbd? 
-
-In older versions of the cbd command line, you must run the following three commands:
+In versions earlier than 1.4.0, you must run the following three commands:
 
 `cbd regenerate` regenerates the Docker compose file
 `cbd kill` removes all Docker containers (there is no stop command for this).
@@ -189,11 +178,9 @@ In older versions of the cbd command line, you must run the following three comm
 
 #### Changing Amari Credentials
 
-In Cloudbreak versions earlier than 1.14 it is not possible to change the password in the Ambari UI. That is, if you change the admin credentials in the Ambari UI, Cloudbreak is no longer able to orchestrate Ambari. To change the password, you must use the Cloudbreak UI. 
+In Cloudbreak 1.14 and later, Cloudbreak creates a new admin user in Ambari, so you can change the credentials of the admin user in the Ambari web UI. You can also set the admin user credentials in the cluster installation wizard in the Cloudbreak UI.
 
-Cloudbreak 1.14 and later creates a new admin user in Ambari, so it’s safe to change the credentials of the admin user. This credential can also be changed in the cluster installation wizard.
+In Cloudbreak versions earlier than 1.14 it is not possible to change the password in the Ambari UI.  If you change the admin credentials in the Ambari UI, Cloudbreak will no longer be able to orchestrate Ambari. To change the password, you must use the option available on the cluster details page in the Cloudbreak UI.
 
->>>>TO-DO: Can you clarify this? In the first paragraph (Cloudbreak < 1.14) you talk about users being unable to change password and then changing credentials. Do you just mean password or also admin user name? 
 
->>>>TO-DO: In the second paragraph (Cloudbreak >=1.14), are we talking about the password or also user name? 
 
