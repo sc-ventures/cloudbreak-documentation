@@ -1,6 +1,6 @@
 ## Manage and Monitor Clusters  
 
-You can manage monitor your clusters from the Cloudbreak UI. To do that, click on the title representing the cluster that you want to access: 
+You can manage monitor your clusters from the Cloudbreak UI. To do that, click on the tile representing the cluster that you want to access: 
 
 <a href="../images/cb-ui3.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui3.png" width="650" title="Azure Portal"></a> 
 
