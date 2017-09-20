@@ -1,6 +1,8 @@
 ## Accessing Data on Azure 
 
-HDP 2.6 supports reading and writing both block blobs and page blobs from/to Windows Azure Storage Blob (WASB) object store, as well as reading and writing files stored in an Azure Data Lake Storage (ADLS) account. This allows you to:
+Hortonworks Data Platform (HDP) supports reading and writing both block blobs and page blobs
+from/to *Windows Azure Storage Blob (WASB)* object store, as well as reading and writing files stored in an
+*Azure Data Lake Storage (ADLS)* account. This allows you to:
 
 * Persist data using cloud storage services beyond the lifetime of your HDP clusters.  
 * Load data in Hadoop ecosystem applications directly from Azure storage services, without first importing or uploading data from external resources to HDFS.  
@@ -16,15 +18,25 @@ HDP 2.6 supports reading and writing both block blobs and page blobs from/to Win
 
 #### Prerequisites
 
-If you want to use [Azure Data Lake Store](https://azure.microsoft.com/en-in/services/data-lake-store/) to store your data, you must: 
-
-1. Enable Azure subscription for Data Lake Store, and then create an Azure Data Lake Store [storage account](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal) in the same subscription as you use for launching Cloudbreak controller and clusters.  
- 
-2. Next, in the cluster creation phase, specify the created account name only, and access to the Azure Data Lake Store will be configured automatically. For further instructions, refer to Microsoft Azure [documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal).
+If you want to use [Azure Data Lake Store](https://azure.microsoft.com/en-in/services/data-lake-store/) to store your data, you must enable Azure subscription for Data Lake Store, and then create an Azure Data Lake Store [storage account](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal).
 
 #### Configuring Access to ADLS 
 
-ADLS is not supported as a default file system, but access to data in ADLS is automatically configured if you select ADLS during [cluster creation](azure-create.md), on the **Add File System** page.
+ADLS is not supported as a default file system, but access to data in ADLS is automatically configured if you select ADLS during [cluster creation](azure-create.md), on the **Add File System** page. After the [cluster is deployed](azure-create.md), you must:
+
+1. *Define which parts of the ADLS store this cluster will have access by adding the client credentials for the cluster to the data access control for the ADLS account.* 
+
+    Cloudbreak automated the configuration of the cluster with ADLS with the exception of this last step. This last configuration option should not be automated, since you need to select which files in ADLS the cluster should access. For more information, review the [documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-secure-data#filepermissions) on the Microsoft Azure Portal. 
+    
+    1. In the Cloudbreak UI, navigate to the **Manage Credentials** section, select the credential used to deploy your cluster, and copy the "App Id” associated with it.   
+    2. Navigate to the Azure Portal > **Data Lake Store** and select your account.
+    3. Select the **Data Explorer** tab at the top and select the folder that you want the cluster to access. Select the root folder for full access. 
+    4. Select the **Access** tab at the top and then click **Add**.
+    5. Click **+Add** and paste the App Id (copied in step 1) in the search box to find client certificate name for the cluster.  (Alternatively, you can look up the App Name in the **Azure Active Directory** > **App Registrations**).
+    6. Choose the appropriate permissions. Note that if you do select the root folder, you need to provide “execute” access to all parent directories. For more information, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-secure-data#filepermissions). 
+
+2. *Test access to ADLS.* Review the next sections for information on how to access data in ADLS from the cluster once it is deployed, for example from the command line of the cluster name node.
+
 
 #### Access Path
 

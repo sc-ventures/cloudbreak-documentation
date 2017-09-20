@@ -72,11 +72,10 @@ In general, the steps include:
 
 1. Meet the prerequisites  
 1. Launch Cloudbreak   
-1. Create Cloudbreak credential  
-1. Define infrastructure templates or use defaults 
-1. Define cluster blueprints or use defaults  
-1. Create clusters  
-1. Manage and monitor clusters  
+1. Create Cloudbreak credential 
+
+After performing these steps, you can create a cluster based on one of the default blueprints or upload your own blueprint and then create a cluster. 
+
 
 <div class="note">
     <p class="first admonition-title">Note</p>

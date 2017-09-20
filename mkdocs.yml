@@ -75,6 +75,7 @@ pages:
         - Troubleshooting GCP: trouble-gcp.md
         - Troubleshooting OpenStack: trouble-os.md
       - Getting Help: get-help.md
+      - SmartSense: smartsense.md
       - Developer Docs:
         - API: api.md
         - SPI: spi.md
