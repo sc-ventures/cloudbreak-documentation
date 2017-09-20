@@ -17,7 +17,7 @@ Cloudbreak deployer includes the following components:
 
 > These component names are used in Cloudbreak logs, so for troubleshooting purposes it is useful to know what they refer to.
 
-### System Level Containers
+#### System Level Containers
 
 Cloudbreak deployer utilizes **containerization** - also known as container-based virtualization or application containerization - which is an OS-level virtualization method for deploying and running distributed applications. 
 
@@ -37,37 +37,42 @@ Cloudbreak application is built on the foundation of cloud provider APIs and Apa
 
 * Cloudbreak uses **Apache Ambari** to provision, manage, and monitor HDP clusters. 
 
-    Ambari **blueprints** are used as a declarative definition of a cluster. With a blueprint, you can specify stack, component layout, and configurations to materialize an HDP cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard. 
+    Ambari **blueprints** are a declarative definition of a cluster. With a blueprint, you can specify stack, component layout, and configurations to materialize an HDP cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard. 
     
 * Cloudbreak uses **cloud provider APIs** to create cloud resources required for the HDP clusters. 
 
-    You can define these resources via **templates** for networks, security groups, and VMs and storage in the Cloudbreak web UI. Resources are only provisioned once you create a cluster using the templates.  
+    You can define these resources (networks, security groups, VMs and storage, and so on) in the create a cluster wizard in the Cloudbreak web UI. Resources are only provisioned once you create the cluster.  
     
 The use of blueprints and templates is illustrated in the following image:
 
-<a href="../images/templates-and-blueprints2.png" target="_blank" title="click to enlarge"><img src="../images/templates-and-blueprints2.png" width="550" title="How Cloudbreak uses templates and blueprints"></a> 
- 
+<a href="../images/templates-and-blueprints2.png" target="_blank" title="click to enlarge"><img src="../images/templates-and-blueprints2.png" width="650" title="How Cloudbreak uses templates and blueprints"></a> 
 
-### SaltStack 
+#### SaltStack 
 
 Under the hood, Cloudbreak uses SaltStack to manage nodes of the cluster, install packages, change configuration files, and execute recipes. 
-By default Salt master is installed on the same node where Ambari server is installed.  
+By default Salt master is installed on the same node where Ambari server is installed. 
 
+### Core Concepts
 
-### Cloud Resources Used 
+#### Ambari Blueprints
 
-Cloubbreak and clusters deployed by it run in your cloud infrastructure. In general, Cloudbreak uses the following types of cloud resources provisioned on your cloud account:
+**Ambari blueprints** are a declarative definition of a cluster. With a blueprint, you can specify stack, component layout, and configurations to materialize an HDP cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard. 
 
-| Category | Description | AWS | Azure | GCP | OpenStack |
+To learn more about Ambari blueprints, refer to [Apach e documentation](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints).
+
+#### Cloud Infrastructure
+
+**Cloud infrastructure** consists of the virtual networks, virtual machines, storage, and other resources on which your clusters run. When creating a cluster, you define cloud these infrastructure components that will be provisioned:
+
+| Configuration | Description	 | AWS | Azure | GCP | OpenStack |
 |---|---|---|---|---|---|
-| *VMs and Storage* | Cloudbreak and cluster nodes created by it run on **VMs**. | [Amazon EC2](https://aws.amazon.com/documentation/ec2/) | [Virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-azure-overview?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) | [Compute Engine](https://cloud.google.com/compute/docs/) | ???? |
-| *Network and Security* | VMs run within a **virtual network** and **subnets**. An **Internet gateway** is used to enable outbound access to the Internet from the Cloudbreak instance and the cluster instances, and a route table is used to connect the subnet to the Internet gateway. **Security groups** control the inbound and outbound traffic to and from the VMs. | [Amazon VPC](https://aws.amazon.com/documentation/vpc/) | [Virtual network](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) | [Virtual Private Cloud](https://cloud.google.com/compute/docs/vpc/) | ???? |
-| *Access Control* |  | AWS IAM | Active Directory | IAM | ???? |
-| *Resource Management* | Cloudbreak uses a designated cloud service to create and manage a collection of related AWS resources. | AWS CloudFormation | Resource Groups | ???? | ???? |
-| *Cloud Storage* |  | Amazon S3 | ADLS and [WASB](https://docs.microsoft.com/en-us/azure/storage/storage-introduction) | Google Cloud Storage | ???? |
+| Networks | **Virtual networks** provide the networking infrastructure (network, subnet, Internet gateway, and so on) in which your clusters run. You can create new virtual networks or reuse existing virtual networks for your clusters. <p>In addition, **security groups** include rules which define inbound traffic allowed to the instances in your cluster.</p> | [Amazon VPC](https://aws.amazon.com/documentation/vpc/) | [Virtual network](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) | [Virtual Private Cloud](https://cloud.google.com/compute/docs/vpc/) | Networks |
+| VMs and Storage | You can select VM types and their attached storage, including storage type, size, count, and encryption settings. | [Amazon EC2](https://aws.amazon.com/documentation/ec2/) | [Virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-azure-overview?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) | [Compute Engine](https://cloud.google.com/compute/docs/) | Instances |
 
+#### Cloudbreak Credential
 
->>>>TO-DO: Need to get this reviewed. Is there anything else that I should mention here? 
+**Cloudbreak credential** allows Cloudbreak to authenticate with the cloud provider and create resources on your behalf. This is typically done via assigning a specific IAM role to Cloudbreak which allows Cloudbreak to perform certain actions.
 
+After launching Cloudbreak, you must create a Cloudbreak credntial and only after you complete that step you can start creating clusters.
 
 

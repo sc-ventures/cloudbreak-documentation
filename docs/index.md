@@ -31,12 +31,12 @@ Refer to [Architecture](architecture.md).
 
 To get started with Cloudbreak:
 
-1. Select the [cloud platform](#cloud-platforms) on which you would like to launch Cloudbreak.   
-1. Select the [deployment option](#deployment-options) that you would like to use. 
+1. Select the [cloud platform](#select-cloud-platforms) on which you would like to launch Cloudbreak.   
+1. Select the [deployment option](#select-deployment-options) that you would like to use. 
 1. [Launch Cloudbreak](#launch-cloudbreak). 
 
 
-### Cloud Platforms 
+### Select Cloud Platform 
 
 You can deploy and use Cloudbreak on the following cloud platforms:
 
@@ -46,7 +46,7 @@ You can deploy and use Cloudbreak on the following cloud platforms:
 * OpenStack
 
 
-### Deployment Options
+### Select Deployment Option
 
 There are two basic deployment options:
 
@@ -54,7 +54,6 @@ There are two basic deployment options:
 |---|---|
 | Instantiate one of the pre-built cloud images | <p>This is the recommended basic deployment option.</p><p> The cloud images include Cloudbreak Deployer pre-installed on a CentOS VM.</p>  |
 | Install the Cloudbreak Deployer on your own VM | <p>This is an advanced deployment option.</p> <p>Select this option if you have custom VM requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).</p> |
-
 
 
 ### Launch Cloudbreak 
