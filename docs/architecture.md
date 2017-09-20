@@ -43,16 +43,10 @@ Cloudbreak application is built on the foundation of cloud provider APIs and Apa
 
     You can define these resources (networks, security groups, VMs and storage, and so on) in the create a cluster wizard in the Cloudbreak web UI. Resources are only provisioned once you create the cluster.  
     
-The use of blueprints and templates is illustrated in the following image:
+The use of blueprints is illustrated in the following image:
 
 <a href="../images/templates-and-blueprints2.png" target="_blank" title="click to enlarge"><img src="../images/templates-and-blueprints2.png" width="650" title="How Cloudbreak uses templates and blueprints"></a> 
 
-#### SaltStack 
-
-Under the hood, Cloudbreak uses SaltStack to manage nodes of the cluster, install packages, change configuration files, and execute recipes. 
-By default Salt master is installed on the same node where Ambari server is installed. 
-
-### Core Concepts
 
 #### Ambari Blueprints
 
@@ -75,4 +69,8 @@ To learn more about Ambari blueprints, refer to [Apach e documentation](https://
 
 After launching Cloudbreak, you must create a Cloudbreak credntial and only after you complete that step you can start creating clusters.
 
+#### SaltStack 
+
+Under the hood, Cloudbreak uses SaltStack to manage nodes of the cluster, install packages, change configuration files, and execute recipes. 
+By default Salt master is installed on the same node where Ambari server is installed. 
 
