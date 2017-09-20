@@ -25,10 +25,6 @@ Decide in which Azure region you would like to launch Cloudbreak. You can launch
 
 Clusters created via Cloudbreak can be in the same or different region as Cloudbreak; when you launch a cluster, you select the region in which to launch it.
 
-#### Azure Infrastructure and Cloudbreak Templates
-
-The default cluster infrastructure templates provided by Cloudbreak specify the [Standard D4 virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-general#d-series).
-Review the [Default Template](azure-config.md#default-template) section of [Define Infrastructure Templates](azure-config.md) for more information about how to determine what types of virtual machines your Azure subscription supports or create a custom template.
 
 #### SSH Key Pair
 

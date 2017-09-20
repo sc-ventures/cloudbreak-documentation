@@ -1,4 +1,6 @@
-**Cluster blueprints** are your declarative definition of a Hadoop cluster, defining the host groups and which components to install on which host group. Ambari uses them as a base for your clusters. 
+### Blueprints
+
+**Ambari blueprints** are your declarative definition of a Hadoop cluster, defining the host groups and which components to install on which host group. Ambari uses them as a base for your clusters. 
 
 You have three options:
 

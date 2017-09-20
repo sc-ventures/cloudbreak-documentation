@@ -20,5 +20,5 @@
 {!docs/common/cluster-adv-4.md!} 
 
 <div class="next">
-<a href="../os-cb-ui/index.html">Next: Manage & Monitor Clusters</a>
+<a href="../os-create/index.html">Next: Create a Cluster</a>
 </div>

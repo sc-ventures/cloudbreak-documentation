@@ -183,5 +183,5 @@ Cloudbreak works by connecting your GCP account through this credential, and the
 
 
 <div class="next">
-<a href="../gcp-config/index.html">Next: Define Infrastructure Templates</a>
+<a href="../gcp-create/index.html">Next: Create a Cluster</a>
 </div>

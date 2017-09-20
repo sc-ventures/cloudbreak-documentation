@@ -320,5 +320,5 @@ To perform these steps, you must know the **IAM Role ARN** corresponding to the 
       
 
 <div class="next">
-<a href="../aws-config/index.html">Next: Define Infrastructure Templates</a>
+<a href="../aws-create/index.html">Next: Create a Cluster</a>
 </div>
