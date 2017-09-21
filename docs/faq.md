@@ -4,7 +4,7 @@
 How to...
 
 
-### Generate a New SSH Key Pair 
+#### Generate a New SSH Key Pair 
 
 All the instances created by Cloudbreak are configured to allow key-based SSH, so you'll need to provide an SSH public key that can be used later to SSH onto the instances in the clusters you'll create with Cloudbreak. You can use one of your existing keys or you can generate a new one.
 
@@ -30,18 +30,18 @@ After you enter (or not) a passphrase, the key pair is generated. The output sho
 Later you'll need to pass the content of the `.pub` file to Cloudbreak and use the private key file to SSH to the instances. 
 
 
-### Recover My Public SSH Key 
+#### Recover My Public SSH Key 
 
 The `-y` option of `ssh-keygen` outputs the public key. For example:
 
 <pre>ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub</pre>
 
-### SSH to the Hosts 
+#### SSH to the Hosts 
 
 
-### Access Cloudbreak Logs
+#### Access Cloudbreak Logs
 
 
-### Check Cloudbreak Version 
+#### Check Cloudbreak Version 
 
 

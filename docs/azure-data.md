@@ -111,3 +111,6 @@ test file content</pre>
 
 For more information about configuring the ADLS and WASB connectors and working with data stored in ADLS and WASB, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.1/bk_cloud-data-access/content/about.html) documentation.
 
+<div class="next">
+<a href="../clusters-manage/index.html">Next: Manage and Monitor Clusters</a>
+</div>

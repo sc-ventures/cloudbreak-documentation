@@ -30,5 +30,5 @@
 {!docs/common/cluster-adv-4.md!}
 
 <div class="next">
-<a href="../gcp-cb-ui/index.html">Next: Manage & Monitor Clusters</a>
+<a href="../clusters-manage/index.html">Next: Manage & Monitor Clusters</a>
 </div>

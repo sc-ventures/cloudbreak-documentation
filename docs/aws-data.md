@@ -15,7 +15,7 @@ Amazon S3 is not supported as a default file system, but access to data in S3 fr
 
 Amazon S3 access path syntax is:
 
-<pre>s3a://<bucket>/<dir>/<file></pre>
+<pre>s3a://bucket/dir/file</pre>
 
 For example, to access a file called "mytestfile" in a directory called "mytestdir", which is stored in a bucket called "mytestbucket", the URL is:
 
@@ -37,3 +37,6 @@ test file content</pre>
 
 For more information about configuring the S3 connector and working with data stored on S3, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.1/bk_cloud-data-access/content/about.html) documentation.
 
+<div class="next">
+<a href="../clusters-manage/index.html">Next: Manage & Monitor Clusters</a>
+</div>

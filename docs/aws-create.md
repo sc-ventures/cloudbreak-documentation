@@ -22,5 +22,5 @@
 {!docs/common/cluster-adv-4.md!}
 
 <div class="next">
-<a href="../aws-cb-ui/index.html">Next: Manage & Monitor Clusters</a>
+<a href="../aws-data/index.html">Next: Access Cloud Data</a>
 </div>
