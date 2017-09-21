@@ -38,5 +38,5 @@ test file content</pre>
 For more information about configuring the S3 connector and working with data stored on S3, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.1/bk_cloud-data-access/content/about.html) documentation.
 
 <div class="next">
-<a href="../clusters-manage/index.html">Next: Manage & Monitor Clusters</a>
+<a href="../clusters-access/index.html">Next: Access Cluster</a>
 </div>

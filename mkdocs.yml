@@ -32,7 +32,7 @@ pages:
       - Launch on Open Stack: os-launch.md
       - Create a Cluster: os-create.md
     - Config & Admin:
-      - Access Cluster: clusters-acces.md
+      - Access Cluster: clusters-access.md
       - Manage and Monitor Cluster: clusters-manage.md
       - Configure Cluster:
         - Blueprints: blueprints.md
@@ -43,7 +43,7 @@ pages:
         - Ambari Database (TP): ambari-db.md
         - Cloudbreak Database: cb-db.md
       - Manage Cloudbreak:
-        - Cloudbreak Credentials: credentials.md  
+        - Manage Cloudbreak Credentials: credentials.md  
         - Manage Your Account: cb-account.md
         - Upgrade Clodbreak: upgrade.md
         - Delete Cloudbreak: delete.md 

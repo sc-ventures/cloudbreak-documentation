@@ -19,6 +19,7 @@
 
 {!docs/common/cluster-adv-4.md!} 
 
+
 <div class="next">
-<a href="../clusters-manage/index.html">Next: Manage and Monitor Clusters</a>
+<a href="../clusters-access/index.html">Next: Access Cluster</a>
 </div>
