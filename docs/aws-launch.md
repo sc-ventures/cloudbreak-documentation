@@ -1,5 +1,6 @@
 ## Launch Cloudbreak on AWS
 
+Before launching Cloudbreak on AWS, review and meet the prerequisites. Next, launch a VM using a Cloudbreak Amazon Machine Image (AMI), SSH to the VM, and start Cloudbreak. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential. 
 
 ### Meet the Prerequisites
 

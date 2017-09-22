@@ -1,5 +1,6 @@
 ## Launch Cloudbreak on Azure
 
+Before launching Cloudbreak on Azure, review and meet the prerequisites. Next, launch Cloudbreak using one of the two available methods. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential. 
 
 ### Meet the Prerequisites 
 

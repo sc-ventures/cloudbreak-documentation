@@ -1,5 +1,6 @@
 ## Launch Cloudbreak on GCP
 
+Before launching Cloudbreak on Google Cloud, review and meet the prerequisites. Next, import Cloudbreak image, launch a VM, SSH to the VM, and start Cloudbreak. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential. 
 
 ### Meet the Prerequisites
 
