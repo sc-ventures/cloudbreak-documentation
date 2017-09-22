@@ -1,5 +1,5 @@
 
-## FAQ
+## FAQs
 
 How to...
 
