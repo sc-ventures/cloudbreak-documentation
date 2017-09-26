@@ -1,4 +1,4 @@
-## Launch Cloudbreak on Azure
+## Launching Cloudbreak on Azure
 
 Before launching Cloudbreak on Azure, review and meet the prerequisites. Next, launch Cloudbreak using one of the two available methods. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential. 
 
@@ -64,25 +64,35 @@ You have two options to launch Cloudbreak on Azure:
     <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsequenceiq%2Fazure-cbd-quickstart%2F1.16.1%2FmainTemplate.json" target="_blank"> ![deploy on azure](http://azuredeploy.net/deploybutton.png)</a>
     
 3. The template for installing Cloudbreak will appear. On the **Basics** page, provide the following basic parameters:   
+   
 
     **BASICS**
 
     | Parameter | Description |
 |---|---|
-| Subscription | Select which existing subscription you want to use. |
-| Resource group | Only **Create new** is supported. Select **Create new** to create a new resource group and enter a name for your new resource group. Cloudbreak resources will later be accessible in that chosen resource group. |
-| Location | Select an Azure region in which you want to deploy Cloudbreak. |
+| Subscription | (Required) Select which existing subscription you want to use. |
+| Resource group | (Required) Select an existing resource group or create a new one by selecting **Create new** and entering a name for your new resource group. Cloudbreak resources will later be accessible in that chosen resource group. |
+| Location | (Required) Select an Azure region in which you want to deploy Cloudbreak. |
 
     **SETTINGS**
 
     | Parameter | Description |
 |---|---|
+| Base Url | This is the URL to the page where the template is stored. |
+| Location | This is an internal parameter. Do not change it.|
 | VM Size | Select virtual machine instance type to use for the Cloudbreak controller. The minimum instance type suitable for Cloudbreak is *D2*. |
 | Admin Username | Create an admin login that you will use to log in to the Cloudbreak UI. Must be a valid email address. |
-| Admin User Password | Password for the admin login. Must be at least 8 characters containing letters, numbers, and symbols. |
+| Admin User Password | (Required) Password for the admin login. Must be at least 8 characters containing letters, numbers, and symbols. |
 | Username | Enter an admin username for the virtual machine. You will use it to SSH to the VM. |
 | SmartSense | Select whether you want to use SmartSense telemetry. Default is "false" (not using SmartSense telemetry). |
-| Remote Location |<p>Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or use one of the default tags such as  `Internet`. For example: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>'Internet' will allow access from all. This is not a secure option but you can use it it you are just getting started and are not planning to have the instance on for a longer period. </li><li>(Advanced) 'VirtualNetwork' will allow access from the address space of the Virtual Network.</li><li> (Advanced) 'AzureLoadBalancer' will allow access from the address space of the load balancer.</li></ul></p><p>For more information, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg#default-tags).</p> |
+| Remote Location |<p>Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or use one of the default tags. Default value is `Internet` which allows access from all IP addresses. Examples: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>'Internet' will allow access from all. This is not a secure option but you can use it it you are just getting started and are not planning to have the instance on for a longer period. </li><li>(Advanced) 'VirtualNetwork' will allow access from the address space of the Virtual Network.</li><li> (Advanced) 'AzureLoadBalancer' will allow access from the address space of the load balancer.</li></ul></p><p>For more information, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg#default-tags).</p> |
+| Ssh Key| <p>(Required) Paste your SSH public key.</p><p>You can use `pbcopy` to quickly copy it. For example: `pbcopy < /Users/homedir/.ssh/id_rsa.pub`</p> |
+| Vnet New Or Existing | By default, Cloudbreak is launched in a new VNet called `cbdeployerVnet` and a new subnet called `cbdeployerSubnet`; if needed, you can customize the settings for the new VNet using available VNet and Subnet parameters. |
+| Vnet Name | Provide the name for a new Vnet. Default is ``cbdeployerVnet`. |
+| Vnet Subnet Name | Provide a name for a new subnet. Default is `cbdeployerSubnet`. |
+| Vnet Address Prefix | CIDR for the virtual network. |
+| Vnet Subnet Address Prefix | CIDR for the subnet.|
+| Vnet RG Name | The name of the resource group in which the Vnet is located. If creating a new Vnet, enter the same resource group name as provided in the `Resource group` field earlier. |
 
 4. Review terms of use and check "I agree to the terms and conditions stated above". 
 

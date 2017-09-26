@@ -1,4 +1,4 @@
-## Launch Cloudbreak on AWS
+## Launching Cloudbreak on AWS
 
 Before launching Cloudbreak on AWS, review and meet the prerequisites. Next, launch a VM using a Cloudbreak Amazon Machine Image (AMI), SSH to the VM, and start Cloudbreak. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential. 
 
@@ -224,15 +224,15 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 
     | Region | Image Name |
 |---|---|
-| eu-west-1 | ami-711d0317 |
-| sa-east-1 |	 ami-bd365dd1 |
-| us-east-1 |	 ami-10a78606 |
-| us-west-1 |	 ami-01735e61 |
-| us-west-2 |	 ami-6ccbc015 |
-| eu-central-1 |	ami-d116b2be | 
-| ap-northeast-1 | ami-97c4ccf0 |
-| ap-southeast-1 | ami-d162e0b2 | 
-| ap-southeast-2 | ami-a7dacbc4 |
+| eu-west-1 | ami-79c63f00 |
+| sa-east-1 |	 ami-1af18176 |
+| us-east-1 |	 ami-e9bdbc92 |
+| us-west-1 |	 ami-2dd1e44d |
+| us-west-2 |	 ami-ae6c85d6 |
+| eu-central-1 |	ami-bc18b3d3 | 
+| ap-northeast-1 | ami-f2fb0494 |
+| ap-southeast-1 | ami-47036324 | 
+| ap-southeast-2 | ami-370b1154 |
 
     >>>>TO-DO: This table should be automatically generated.
 

@@ -1,4 +1,4 @@
-## Launch Cloudbreak on OpenStack
+## Launching Cloudbreak on OpenStack
 
 Before launching Cloudbreak on OpenStack, review and meet the prerequisites. Next, import Cloudbreak image, launch a VM, SSH to the VM, and start Cloudbreak. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential. 
 
@@ -49,11 +49,11 @@ An OpenStack administrator must perform these steps to add the Cloudbreak deploy
 
 1. Download the latest Cloudbreak deployer image to your local machine: 
 
-    <pre>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer-1161-2017-06-15.img</pre>
+    <pre>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer-1164-2017-08-25.img</pre>
     
 2. Set the following environment variables for the OpenStack image import: 
 
-    <pre>export CBD_LATEST_IMAGE=cloudbreak-deployer-1161-2017-06-15.img
+    <pre>export CBD_LATEST_IMAGE=cloudbreak-deployer-1164-2017-08-25.img
 export OS_IMAGE_NAME=cloudbreak-deployer-1161-2017-06-15.img
 export OS_USERNAME=your_os_user_name
 export OS_AUTH_URL=your_authentication_url
@@ -73,12 +73,11 @@ After performing the import, you should be able to see the Cloudbreak deployer i
     
 1. Download the latest HDP image to your local machine: 
 
-    <pre>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/hdc-hdp--1705081316.img
-</pre>
+    <pre>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/hdc-hdp--1706141444.img</pre>
 
 2. Set the following environment variables for the OpenStack image import: 
 
-    <pre>export CB_LATEST_IMAGE=hdc-hdp--1705081316.img
+    <pre>export CB_LATEST_IMAGE=hdc-hdp--1706141444.img 
 export CB_LATEST_IMAGE_NAME=hdc-hdp--1705081316.img
 export OS_USERNAME=your_os_user_name
 export OS_AUTH_URL=your_authentication_url
