@@ -85,25 +85,7 @@ You can create these roles in the **IAM console**, on the **Roles** page via the
     
 5. Click **Select** next to "Create Your Own Policy".
 
-    <a href="../images/aws_role-12.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-12.png" width="650" title="IAM Console"></a> 
-    
-5. Copy the following "AssumeRole" policy definition: 
-
-    <pre>{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "Stmt1400068149000",
-      "Effect": "Allow",
-      "Action": [
-        "sts:AssumeRole"
-      ],
-      "Resource": [
-        "*"
-      ]
-    }
-  ]
-}</pre>    
+    <a href="../images/aws_role-12.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-12.png" width="650" title="IAM Console"></a>  
 
 6. In the **Policy Name** field, enter "AssumeRole" and in the **Policy Document** paste the policy declaration as provided in the previous step.
 
@@ -148,9 +130,49 @@ You can create these roles in the **IAM console**, on the **Roles** page via the
 
     <a href="../images/aws_role3.png" target="_blank" title="click to enlarge"><img src="../images/aws_role3.png" width="650" title="IAM Console"></a> 
     
-5. Copy the following "cb-policy" policy definition: 
+5. Copy the "cb-policy" policy definition (see below).   
+    
+6. In the **Policy Name** field, enter "cb-policy" and in the **Policy Document** paste the policy declaration as provided below.
 
-    <pre>{
+    <a href="../images/aws_role4.png" target="_blank" title="click to enlarge"><img src="../images/aws_role4.png" width="650" title="IAM Console"></a>  
+    
+7. When done, click **Create Policy**.
+
+8. Click **Refresh**. Next, find the "cb-policy" that you just created and select it by checking the box.
+
+    <a href="../images/aws_role5.png" target="_blank" title="click to enlarge"><img src="../images/aws_role5.png" width="650" title="IAM Console"></a> 
+    
+9. When done, click **Next: Review**.
+    
+10. In the **Roles name** field, enter "CredentialRole". 
+
+    <a href="../images/aws_role6.png" target="_blank" title="click to enlarge"><img src="../images/aws_role6.png" width="650" title="IAM Console"></a> 
+    
+11. When done, click **Create role** to finish the role creation process.
+
+**Policy Definitions**
+
+The "AssumeRole" policy definition: 
+
+<pre>{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1400068149000",
+      "Effect": "Allow",
+      "Action": [
+        "sts:AssumeRole"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}</pre>   
+
+The "cb-policy" policy definition: 
+
+<pre>{
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -174,27 +196,8 @@ You can create these roles in the **IAM console**, on the **Roles** page via the
       "Resource": [ "*" ]
     }
   ]
-}</pre>    
-    
-6. In the **Policy Name** field, enter "cb-policy" and in the **Policy Document** paste the policy declaration as provided below.
+}</pre>
 
-    <a href="../images/aws_role4.png" target="_blank" title="click to enlarge"><img src="../images/aws_role4.png" width="650" title="IAM Console"></a>  
-    
-7. When done, click **Create Policy**.
-
-8. Click **Refresh**. Next, find the "cb-policy" that you just created and select it by checking the box.
-
-    <a href="../images/aws_role5.png" target="_blank" title="click to enlarge"><img src="../images/aws_role5.png" width="650" title="IAM Console"></a> 
-    
-9. When done, click **Next: Review**.
-    
-10. In the **Roles name** field, enter "CredentialRole". 
-
-    <a href="../images/aws_role6.png" target="_blank" title="click to enlarge"><img src="../images/aws_role6.png" width="650" title="IAM Console"></a> 
-    
-11. When done, click **Create role** to finish the role creation process.
-   
-    
     
 For more information about IAM, refer to <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html" target="_blank">Using Instance Profiles</a> and <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html" target="_blank">Using an IAM Role to Grant Permissions to Applications Running on Amazon EC2 Instances</a>.    
 
@@ -398,3 +401,4 @@ To perform these steps, you must know the **IAM Role ARN** corresponding to the 
 <div class="next">
 <a href="../aws-create/index.html">Next: Create a Cluster</a>
 </div>
+
