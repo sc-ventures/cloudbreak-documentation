@@ -90,9 +90,9 @@ You have two options to launch Cloudbreak on Azure:
 | Vnet New Or Existing | By default, Cloudbreak is launched in a new VNet called `cbdeployerVnet` and a new subnet called `cbdeployerSubnet`; if needed, you can customize the settings for the new VNet using available VNet and Subnet parameters. |
 | Vnet Name | Provide the name for a new Vnet. Default is ``cbdeployerVnet`. |
 | Vnet Subnet Name | Provide a name for a new subnet. Default is `cbdeployerSubnet`. |
-| Vnet Address Prefix | CIDR for the virtual network. |
-| Vnet Subnet Address Prefix | CIDR for the subnet.|
-| Vnet RG Name | The name of the resource group in which the Vnet is located. If creating a new Vnet, enter the same resource group name as provided in the `Resource group` field earlier. |
+| Vnet Address Prefix | Provide a CIDR for the virtual network. Default is `10.0.0.0/16`. |
+| Vnet Subnet Address Prefix | Provide a CIDR for the subnet. Default is `10.0.0.0/24`. |
+| Vnet RG Name | The name of the resource group in which the Vnet is located. If creating a new Vnet, enter the same resource group name as provided in the `Resource group` field in the **BASICS** section. |
 
 4. Review terms of use and check "I agree to the terms and conditions stated above". 
 
