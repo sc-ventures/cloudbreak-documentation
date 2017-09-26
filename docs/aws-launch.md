@@ -66,7 +66,42 @@ This requires that you create two IAM roles: one to grant Cloudbreak access to a
 
 **Create CloudbreakRole**
 
->>>>TO-DO: Add exact steps with screenshots.
+1. Navigate to the **IAM console** > **Roles** and click **Create Role**.
+
+    <a href="../images/aws_role-00.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-00.png" width="650" title="IAM Console"></a> 
+    
+2. In the "Create Role" wizard, select **AWS service** role type and then select any service. 
+
+    <a href="../images/aws_role-10.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-10.png" width="650" title="IAM Console"></a> 
+
+3. When done, click **Next: Permissions** to navigate to the next page in the wizard.
+    
+4. Click **Create policy**.
+
+    <a href="../images/aws_role-11.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-11.png" width="650" title="IAM Console"></a>
+    
+5. Click **Select** next to "Create Your Own Policy".
+
+    <a href="../images/aws_role-12.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-12.png" width="650" title="IAM Console"></a> 
+    
+6. In the **Policy Name** field, enter "AssumeRole" and in the **Policy Document** paste the policy declaration as provided below.
+
+    <a href="../images/aws_role-13.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-13.png" width="650" title="IAM Console"></a>  
+    
+7. When done, click **Create Policy**.
+
+8. Click **Refresh**. Next, find the "AsumeRole" policy that you just created and select it by checking the box.
+
+    <a href="../images/aws_role-14.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-14.png" width="650" title="IAM Console"></a> 
+    
+9. When done, click **Next: Review**.
+    
+9. In the **Roles name** field, enter "CloudbreakRole". 
+
+    <a href="../images/aws_role-15.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-15.png" width="650" title="IAM Console"></a> 
+    
+10. When done, click **Create role** to finish the role creation process.
+    
 
 The "AssumeRole" policy definition: 
 
@@ -98,9 +133,9 @@ The "AssumeRole" policy definition:
     * Under **Options**, check **Require external ID**.
     * In the **External ID**, enter "provision-ambari".
 
-3. When done, click **Next: Permissions** to navigate to the next page in the wizard.
-
     <a href="../images/aws_role1.png" target="_blank" title="click to enlarge"><img src="../images/aws_role1.png" width="650" title="IAM Console"></a> 
+    
+3. When done, click **Next: Permissions** to navigate to the next page in the wizard.
     
 4. Click **Create policy**.
 
@@ -110,23 +145,23 @@ The "AssumeRole" policy definition:
 
     <a href="../images/aws_role3.png" target="_blank" title="click to enlarge"><img src="../images/aws_role3.png" width="650" title="IAM Console"></a> 
     
-6. In the **Policy Name** field, enter "cb-policy" and in the **Policy Document** paste the policy declaration as provided above.
-
-7. When done, click **Create Policy**.
+6. In the **Policy Name** field, enter "cb-policy" and in the **Policy Document** paste the policy declaration as provided below.
 
     <a href="../images/aws_role4.png" target="_blank" title="click to enlarge"><img src="../images/aws_role4.png" width="650" title="IAM Console"></a>  
+    
+7. When done, click **Create Policy**.
 
 8. Click **Refresh**. Next, find the "cb-policy" that you just created and select it by checking the box.
 
-9. When done, click **Next: Review**.
-
     <a href="../images/aws_role5.png" target="_blank" title="click to enlarge"><img src="../images/aws_role5.png" width="650" title="IAM Console"></a> 
     
-9. In the **Roles name** field, enter "CredentialRole". 
-
-10. When done, click **Create role**.
+9. When done, click **Next: Review**.
+    
+10. In the **Roles name** field, enter "CredentialRole". 
 
     <a href="../images/aws_role6.png" target="_blank" title="click to enlarge"><img src="../images/aws_role6.png" width="650" title="IAM Console"></a> 
+    
+11. When done, click **Create role** to finish the role creation process.
     
 
 The "cb-policy" policy definition: 
