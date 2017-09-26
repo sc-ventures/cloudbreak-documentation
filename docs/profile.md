@@ -5,7 +5,7 @@ During startup, Cloudbreak deployer tries to determine the underlying infrastruc
 
 ### Setting Provfle Variables
 
->>>>To-DO: How to set them? 
+>>>>TO-DO: How to set them? 
 
 ### Cloudbreak Variables
 
@@ -117,7 +117,7 @@ During startup, Cloudbreak deployer tries to determine the underlying infrastruc
 | UAA_DEFAULT_SECRET | | Default secret for all the scopes and encryptions |
 | UAA_DEFAULT_USER_EMAIL | admin@example.com | Email address of default admin user |
 | UAA_DEFAULT_USER_FIRSTNAME | Joe | First name of default admin user |
-| UAA_DEFAULT_USER_GROUPS | See [here](#default-value-for-uaa_default_user_groups) | Default user groups of the users |
+| UAA_DEFAULT_USER_GROUPS | See [here](#uaa_default_user_groups) | Default user groups of the users |
 | UAA_DEFAULT_USER_LASTNAME | Admin | Last name of default admin user |
 | UAA_DEFAULT_USER_PW | | Password of default admin user |
 | UAA_FLEX_USAGE_CLIENT_ID | flex_usage_client | Identity of the Flex usage generator scope in Identity |
@@ -200,6 +200,8 @@ During startup, Cloudbreak deployer tries to determine the underlying infrastruc
 
 ### More
 
-####Default value for UAA_DEFAULT_USER_GROUPS
+####UAA_DEFAULT_USER_GROUPS
+
+Default value fro `UAA_DEFAULT_USER_GROUPS` is:
 
 <pre>"openid,cloudbreak.networks,cloudbreak.securitygroups,cloudbreak.templates,cloudbreak.blueprints,cloudbreak.credentials,cloudbreak.stacks,sequenceiq.cloudbreak.admin,sequenceiq.cloudbreak.user,sequenceiq.account.${UAA_DEFAULT_ACCOUNT},cloudbreak.events,cloudbreak.usages.global,cloudbreak.usages.account,cloudbreak.usages.user,periscope.cluster,cloudbreak.recipes,cloudbreak.blueprints.read,cloudbreak.templates.read,cloudbreak.credentials.read,cloudbreak.recipes.read,cloudbreak.networks.read,cloudbreak.securitygroups.read,cloudbreak.stacks.read,cloudbreak.sssdconfigs,cloudbreak.sssdconfigs.read,cloudbreak.platforms,cloudbreak.platforms.read"</pre>
