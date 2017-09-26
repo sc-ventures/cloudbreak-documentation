@@ -68,7 +68,8 @@ pages:
       - Getting Help: get-help.md
       - SmartSense: smartsense.md
       - Developer Docs:
-        - API: api.md
-        - SPI: spi.md
-        - Flows: flows.md 
+        - Local Development: dev-local-dev.md
+        - API: dev-api.md
+        - SPI: dev-spi.md
+        - Flows: dev-flows.md 
 

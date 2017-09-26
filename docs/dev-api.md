@@ -8,3 +8,7 @@ Cloudbreak is a RESTful application development platform whose goal is to help d
 The Cloudbreak API documentation is available [here](https://app.swaggerhub.com/apis/Cloudbreak/Cloudbreak/1.16.1). 
 
 > This documentation was generated from the code using [Swagger](https://swagger.io/).
+
+>>>> TO-DO: The link above points to 1.16.1 (rather than 1.16.4).
+
+>>>> TO-DO: The API doc also needs an edit.
