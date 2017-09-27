@@ -1,19 +1,17 @@
 
 ## Local Development 
 
-The following documentation will help you set up your local development environment for [Cloudbreak application](#cloudbreak-application) and [Cloudbreak Deployer](#cloudbreak-deployer).
+The following documentation will help you set up your local development environment.
 
-### Cloudbreak Application
+>>>>TO-DO: I'm not clear on why we divide this into two second-level sections http://hortonworks.github.io/cloudbreak-docs/release-1.16.4/development/, "Cloudbreak application" and "Cloudbreak deployer". Specifically, I don't understand why we would divide these steps in such a way. They seem to be continuous rather than related to Cb deployer or Cb application. Is this a mistake? 
 
-The following steps will help you set up your local development environment for Cloudbreak application.
-
-#### Set up Local Development 
+>>>> This doc also contains "Local Development Setup" instructions https://github.com/hortonworks/cloudbreak/blob/master/docs/index.md. Which doc in more up-to-date? 
 
 **Prerequisites**   
 To use this development environment on Mac OS X, you need to have Docker and Boot2docker installed.
 
-**Steps**  
-
+### Set up Cloudbreak 
+ 
 1. The simplest way to prepare the working environment is to start the Cloudbreak application on your local machine using [Cloudbreak deployer](https://github.com/hortonworks/cloudbreak-deployer).
 
     >>>>TO-DO: What exactly do I need to do in the step above? Am I supposed to clone this repo? How do I "start" the Cloudbreak applicaton?
@@ -47,11 +45,9 @@ export CB_SCHEMA_SCRIPTS_LOCATION=/Users/myusername/prj/cloudbreak/core/src/main
 cbd util local-dev</pre>
    
 
-#### Set up IDEA
+### Set up IDEA
 
 The following steps will help you set up IDEA for the local development environment of Cloudbreak application.
-
-**Steps**
 
 1. Import Cloudbreak into IDEA as gradle project. Once done, import the proper code formatter by using the **File > Import Settings...** menu and selecting the `idea_settings.jar` located in the `config` directory in Cloudbreak git repository.
 
@@ -71,11 +67,9 @@ The following steps will help you set up IDEA for the local development environm
 -Dserver.port=9091</pre>
 
 
-#### Set up Command line
+### Set up Command Line
 
 The following steps will help you set up the command line for the local development environment of Cloudbreak application..
-
-**Steps**
 
 1. To run Cloudbreak from command line, create a property file, for example "application.properties", with the content below
     <pre>
@@ -93,7 +87,7 @@ server.port=9091</pre>
     >>>>TO-DO: Do you mean "at the project's root directory" or "as the root user"? 
 
 
-#### Set up Database Development
+### Set up Database Development
 
 If schema change is required in Cloudbreak database (cbdb), then the developer needs to write SQL scripts to migrate the database accordingly. In Cloudbreak, the schema migration is managed by the [MYBATIS Migrations](https://github.com/mybatis/migrations), for which the cbd tool provides an easy-to-use wrapper. The syntax for using the migration commands is 
 
@@ -103,8 +97,6 @@ For example:
 
 ```cbd migrate migrate status```
 
-
-**Steps**
 
 1. Create a SQL template for schema changes:
 
@@ -129,7 +121,6 @@ cbd migrate cbdb new "CLOUD-123 schema change for new feature"
 cbd migrate cbdb up
 </pre>
 
-**Optional Steps**
 
 If you would like to rollback the last SQL file, use the `down` command:
 
@@ -155,7 +146,7 @@ ID             Applied At          Description
 ------------------------------------------------------------------------
 ```
 
-#### Building
+### Building
 
 Cloudbreak uses Gradle for build and dependency management. Gradle wrapper is added to Cloudbreak git repository, therefore you build by using the following command:
 
@@ -163,11 +154,8 @@ Cloudbreak uses Gradle for build and dependency management. Gradle wrapper is ad
 ./gradlew clean build
 </pre>
 
-### Cloudbreak Deployer
 
-The following steps will help you set up your local development environment for Cloudbreak deployer.
-
-#### Contributing
+### Contributing
 
 When developing, work on separate branches and then open a pull request.
 
@@ -203,7 +191,7 @@ To test the binary CircleCI build from your branch named `fix-something`, to val
 cbd update fix-something
 </pre>
 
-#### Taking Snapshots
+### Taking Snapshots
 
 We recommend to always use the latest release.
 
@@ -225,7 +213,7 @@ Instead of overwriting the released version, download it to a local directory an
 ./cbd --version
 </pre>
 
-#### Testing
+### Testing
 
 Shell scripts shouldn’t raise exceptions when it comes to unit testing. 
 
@@ -240,7 +228,7 @@ Cover your bash functions with unit tests and run tests using:
 make tests
 </pre>
 
-#### Clodbreak Deployer Release Process 
+### Release Process 
 
 The master branch is always built on [CircleCI](https://circleci.com/gh/hortonworks/cloudbreak-deployer).
 
@@ -260,7 +248,7 @@ This performs the following steps:
     * Creates a new branch with a name like `release-0.5.x`. This branch should be the same as `origin/master`.
     * Creates a pull request to the `release` branch.
 
-#### Acceptance
+### Acceptance
 
 You can get the release by using `cbd update release-x.y.z`. 
 Test it and when done, comment using "LGTM" (Looking Good To Me).
@@ -270,3 +258,4 @@ Once the PR is merged, CircleCI will:
 * Create a new release on [GitHub releases tab](https://github.com/hortonworks/cloudbreak-deployer/releases), with the
  help of [gh-release](https://github.com/progrium/gh-release)
 * Create the git tag with `v` prefix such as `v0.0.3`
+
