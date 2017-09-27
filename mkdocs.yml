@@ -42,17 +42,17 @@ pages:
         - Custom Cloud Images (TP): images.md
         - Ambari Database (TP): ambari-db.md
         - Cloudbreak Database: cb-db.md
+      - Configure Security: 
+        - Network and Security: security.md
+        - Secure Cloudbreak after Launch: security-cb.md
+        - Enable LDAP/AD for Cloudbreak: security-ldap.md
+        - Enable Kerberos for Your Cluster: security-kerberos.md
       - Manage Cloudbreak:
         - Manage Cloudbreak Credentials: credentials.md  
         - Manage Your Account: cb-account.md
         - Upgrade Clodbreak: upgrade.md
         - Delete Cloudbreak: delete.md 
         - Install on Your Own VM: vm-launch.md
-    - Security: 
-      - Network and Security: security.md
-      - Securing Cloudbreak After Launch: security-cb.md
-      - Configuring LDAP/AD: security-ldap.md
-      - Configuring Kerberos: security-kerberos.md
     - Reference:
       - Release Notes: releasenotes.md
       - Cloudbreak Shell: cb-shell.md
