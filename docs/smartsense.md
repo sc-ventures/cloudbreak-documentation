@@ -6,8 +6,6 @@ Help us make a better product by opt'ing in to automatically send information to
 Hortonworks SmartSense and sending performance and usage info. As you use the product,
 SmartSense measures and collects information and then sends these information bundles to Hortonworks.
 
-{!docs/common/smartsense.md!}
-
 ### How to Disable
 
 #### Disable Bundle Upload for the Cloud Controller and New Clusters
