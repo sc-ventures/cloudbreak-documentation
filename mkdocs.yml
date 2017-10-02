@@ -36,6 +36,11 @@ pages:
       - Manage and Monitor Cluster: clusters-manage.md
       - Configure Cluster:
         - Blueprints: blueprints.md
+        - Templates:
+          - Templates for AWS: templates-aws.md
+          - Templates for Azure: templates-azure.md
+          - Templates for GCP: templates-gcp.md
+          - Templates for OpenStack: templates-os.md 
         - Recipes: recipes.md
         - Resource Tagging: tags.md 
         - Auto Scaling: autoscaling.md
