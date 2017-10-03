@@ -1,4 +1,3 @@
-To create a cluster via CLoudbreak UI:
 
 1. Log in to the Cloudbreak UI.
     
