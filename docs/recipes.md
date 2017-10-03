@@ -1,7 +1,9 @@
 
-## Recipes (Custom Scripts) 
+## Recipes
 
-When creating a cluster, you can optionally upload one or more recipes (i.e. scripts) and they will be executed on specific host group before or after the cluster installation. You can use recipes for tasks such as installing additional software or performing advanced cluster configuration. 
+When creating a cluster, you can optionally upload one or more "recipes" (custom scripts) and they will be executed on specific host group before or after the cluster installation. You can use recipes for tasks such as installing additional software or performing advanced cluster configuration.  For example, you can use a recipe to put a JAR file on the Hadoop classpath.
+
+
 
 ### Writing Recipes
 
@@ -12,6 +14,15 @@ When using recipes, consider the following:
 * In order to be executed, your script must be in a network location which is accessible from the cloud controller and cluster instances VPC.  
 * Make sure to follow Linux best practices when creating your scripts. For example, don't forget to script "Yes" auto-answers where needed.  
 * Do not execute yum update –y since it may update other components on the instances (such as salt), which can create unintended or unstable behavior.  
+
+#### Sample Recipe for Yum Proxy Setting
+
+```
+#!/bin/bash
+cat >> /etc/yum.conf <<ENDOF
+proxy=http://10.0.0.133:3128
+ENDOF
+```
 
 ### Adding Node Recipes
 
@@ -42,13 +53,6 @@ You can delete previously defined items using the **delete** option.
 
 The scripts will be executed as root. The recipe output is written to `/var/log/recipes` on each node on which it was executed.
  
-
-### Sample Recipe for Yum Proxy Setting
-
-<pre>#!/bin/bash
-cat >> /etc/yum.conf <<ENDOF
-proxy=http://10.0.0.133:3128
-ENDOF</pre>
 
 
 >>>>TO-DO: Move Shell commands to the Cb Shell doc. 
