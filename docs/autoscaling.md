@@ -15,7 +15,7 @@ You can enable auto scaling for your cluster either when creating a cluster or o
 
 Choose **enable** to enable auto-scaling and then:
 
-1. Create either a [metric-based alert](#create-a-metric-based-alert) or [time-based alert](#create-a-time-based-alert).  
+1. Create either [a metric-based alert](#create-a-metric-based-alert) or [a time-based alert](#create-a-time-based-alert).  
 2. [Create a scaling policy](#create-a-scaling-policy).    
 3. [Configure Auto Scaling](#configure-auto-scaling).  
 
@@ -43,6 +43,8 @@ You can change default threshold for an Ambari metric in the Ambari web UI by us
 4. In the Configuration panel, click **Edit**.  
 5. Now you can modify the values in the **Threshold** section.
 
+<a href="../images/ambari_threshold.png" target="_blank" title="click to enlarge"><img src="../images/ambari_threshold.png" width="650" title="Ambari web UI"></a> 
+
 
 #### Create a Time-based Alert
 
@@ -55,12 +57,6 @@ To create a new Cloudbreak time-based alert in the Cloudbreak UI:
 3. Select a **time zone** for the new alert.    
 4. Provide the **cron expression** to define the time-based job scheduler (cron expression) for this alert.
 
-
-### Enable Auto Scaling
-
-You can enable auto scaling for your cluster either when creating a cluster or once the cluster is running, from the cluster details page. 
-
-Choose **enable** to enable auto-scaling and then [create a scaling policy](#create-a-scaling-policy) and [Configure Auto Scaling](#configure-auto-scaling).
 
 #### Create a Scaling Policy 
 
