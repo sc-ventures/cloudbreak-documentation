@@ -5,7 +5,7 @@
 
 To upgrade Cloudbreak to the newest version, perform the following steps:
 
-1. On the VM where Cloudbreak ir running, navigate to the directory where your Profile file is located:
+1. On the VM where Cloudbreak is running, navigate to the directory where your Profile file is located:
 
     <pre>cd /var/lib/cloudbreak-deployment/</pre>
 

@@ -2,7 +2,7 @@
 
 You can manage your Cloudbreak account from the Cloudbreak UI by clicking **account** in the top right corner.
 
-### Get Azure Usage Report
+### Get Usage Report
 
 You can generate a usage report for all cluster resources related to your Cloudbreak instance. To generate a report:
 
@@ -62,3 +62,5 @@ To deactivate an existing user:
 1. Click on the name of the user.
 2. Click **deactivate**. 
 
+>>>>TO-DO: The old docs had something about "Security Scopes". Not sure if this will exist in the new UI? 
+ 
