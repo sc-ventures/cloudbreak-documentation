@@ -349,6 +349,8 @@ To perform these steps, you must know your access and secret key as well as your
 
 2. Click **+create credential**. 
 
+3. Select the AWS cloud provider.
+
 3. Provide the following information:
 
     | Parameter | Description |
@@ -378,6 +380,8 @@ To perform these steps, you must know the **IAM Role ARN** corresponding to the 
 1. In the Cloudbreak web UI, open the **manage credentials** pane. 
 
 2. Click **+create credential**. 
+
+3. Select the AWS cloud provider.
 
 3. Provide the following information:
 

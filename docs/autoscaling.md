@@ -9,15 +9,21 @@ The auto scaling capability is based on [Ambari Metrics](https://cwiki.apache.or
 
 ### Enable Auto Scaling
 
-You can enable auto scaling for your cluster either when creating a cluster or once the cluster is running, from the cluster details page. 
+Auto scaling is disabled by default. You can enable it for your cluster once the cluster is running, from the cluster details page. 
 
->>>>TO-DO: Where do I find this button? 
+1. Click on the cluster tile to navigate to cluster **details** page.
+2. Click **autoscaling SLA policies**.
+2. Click **enable** to enable auto-scaling for the cluster.
 
-Choose **enable** to enable auto-scaling and then:
+Example: 
+
+<a href="../images/autoscaling-enable.png" target="_blank" title="click to enlarge"><img src="../images/autoscaling-enable.png" width="650" title="Cloudbreak web UI"></a> 
+
+After you have enabled auto scaling, perform these steps:
 
 1. Create either [a metric-based alert](#create-a-metric-based-alert) or [a time-based alert](#create-a-time-based-alert).  
 2. [Create a scaling policy](#create-a-scaling-policy).    
-3. [Configure Auto Scaling](#configure-auto-scaling).  
+3. [Configure Auto Scaling](#configure-auto-scaling) if needed. 
 
 
 #### Create a Metric-based Alert
@@ -26,7 +32,8 @@ Metric-based alerts use Ambari metrics. These metrics have a default threshold v
 
 To create a new metric-based alert in the Cloudbreak UI:
 
-1. Enable auto scaling by clicking **enable**.  
+1. Enable auto scaling by clicking **enable**. 
+2. Select **metric based**. 
 1. Enter **alert name**. Only alphanumeric characters (min 5, max 100 characters) are allowed.  
 1. (Optional) Enter a **description** for the new alert.  
 1. Select a metric, and then its **desired state**. The Ambari metrics available are based on installed services and their state is based on the Ambari threshold value:  
@@ -35,6 +42,10 @@ To create a new metric-based alert in the Cloudbreak UI:
     * CRITICAL  
 1. Enter the **period** (in minutes) to define the metric state endurance after the alert has been triggered. Only numeric characters are allowed.
 
+Example:
+
+<a href="../images/autoscaling-alert1.png" target="_blank" title="click to enlarge"><img src="../images/autoscaling-alert1.png" width="650" title="Cloudbreak web UI"></a> 
+
 You can change default threshold for an Ambari metric in the Ambari web UI by using the following steps:
 
 1. Log in to Ambari web UI.  
@@ -42,6 +53,8 @@ You can change default threshold for an Ambari metric in the Ambari web UI by us
 3. Select an alert from the list.  
 4. In the Configuration panel, click **Edit**.  
 5. Now you can modify the values in the **Threshold** section.
+
+Example:
 
 <a href="../images/ambari_threshold.png" target="_blank" title="click to enlarge"><img src="../images/ambari_threshold.png" width="650" title="Ambari web UI"></a> 
 
@@ -53,10 +66,15 @@ Time-based alerts are based on cron expressions, allowing alerts to be triggered
 To create a new time-based alert in the Cloudbreak UI:
 
 1. Enable auto scaling by clicking **enable**.  
+2. Select **time based**. 
 1. Enter **alert name**. Only alphanumeric characters (min 5, max 100 characters) are allowed.  
 2. (Optional) Enter **description** for the new alert.   
 3. Select a **time zone** for the new alert.    
 4. Provide the **cron expression** to define the time-based job scheduler (cron expression) for this alert.
+
+Example:
+
+<a href="../images/autoscaling-alert2.png" target="_blank" title="click to enlarge"><img src="../images/autoscaling-alert2.png" width="650" title="Cloudbreak web UI"></a> 
 
 
 #### Create a Scaling Policy 
@@ -69,7 +87,11 @@ To create a new scaling policy:
     * **percentage** - computed percentage adjustment based on the cluster size
     * **exact** - specific target size of the cluster
 3. Select the Ambari host group where the cluster is to be scaled.  
-3. Select the previously created Cloudbreak alert to apply the scaling policy to it.  
+3. Select the previously created Cloudbreak alert to apply the scaling policy to it. 
+
+Example: 
+
+<a href="../images/autoscaling-addpolicy.png" target="_blank" title="click to enlarge"><img src="../images/autoscaling-addpolicy.png" width="650" title="Cloudbreak web UI"></a> 
 
 A scaling policy may contain multiple alerts. When an alert is triggered, a scaling adjustment is applied.
 
@@ -85,6 +107,8 @@ You can configure cluster scaling by adjusting the following parameters:
 | Cooldown Time | After an auto scaling event occurs, the amount of time to wait before enforcing another scaling policy.	| 30 minutes |
 | Cluster Size Limit |	The minimum and maximum size allowed for the cluster despite scaling adjustments. Auto scaling policies cannot scale the cluster above or below this size.	 | Min 3 nodes, max 100 nodes | 
 
+<a href="../images/autoscaling-config.png" target="_blank" title="click to enlarge"><img src="../images/autoscaling-config.png" width="650" title="Cloudbreak web UI"></a> 
+
 >>>>TO-DO: Is this min 3 nodes including or excluding master node? 
 
 To make sure the scaling adjustments don't oversize or undersize your cluster, you can keep the cluster size within defined boundaries using **cluster size min.** and **cluster size max.**.
@@ -96,3 +120,19 @@ To keep your cluster healthy, Cloudbreak auto scaling runs several background ch
 * Cloudbreak never removes application master nodes from a cluster. In order to make sure that the node running Ambari Metrics is not removed, Cloudbreak has to be able to access the YARN Resource Manager. When creating a cluster using the default secure network template, make sure that the RM's port is open on that node.  
 * In order to keep a healthy HDFS during downscale, Cloudbreak always keeps the replication factor configured and makes sure that there is enough space on HDFS to rebalance data.  
 * During downscale, in order to minimize the rebalancing, replication, and HDFS storms, Cloudbreak checks block locations and computes the least costly operations.  
+
+### Disable Auto Scaling
+
+Auto scaling is disabled by default.
+
+If you have previously enabled it for a given cluster and you would like to disable it, you can do it from the cluster details page: 
+
+1. Click on the cluster tile to navigate to cluster **details** page.
+2. Click **autoscaling SLA policies**.
+2. Click **disable** to enable auto-scaling for the cluster.
+
+The alert definitions and policy definitions will be preserved so that you can use them when you enable auto scaling in the future.
+
+>>>>TO-DO: Will this delete policies and alerts? Or will they be available if I click "enable" again?
+
+>>>>TO-DO: Can I edit and delete policies and alerts?  

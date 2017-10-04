@@ -160,6 +160,8 @@ Cloudbreak works by connecting your GCP account through this credential, and the
 
 1. In the Cloudbreak web UI, open the **manage credentials** pane. 
 
+3. Select the GCP cloud provider.
+
 2. Click **+create credential**. 
 
 3. Provide the following information:

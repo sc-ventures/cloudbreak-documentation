@@ -229,6 +229,8 @@ Before you can start provisioning cluster using Cloudbreak, you must create a Cl
 1. Open the **manage credentials** pane:
 
      <a href="../images/cb-ui2.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui2.png" width="650" title="Azure Portal"></a>
+     
+1. (Perform this step only if you launched Cloudbreak from the resource manager template) Select the GCP cloud provider and then click **+create credential**. 
 
 2. Click **Next**.
 3. On the **Configure credentials** page, provide the following parameters:
@@ -274,6 +276,8 @@ Before you can start provisioning cluster using Cloudbreak, you must create a Cl
 1. In the Cloudbreak web UI, open the **manage credentials** pane:
 
      <a href="../images/cb-ui2.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui2.png" width="650" title="Azure Portal"></a>
+
+1. (Perform this step only if you launched Cloudbreak from the resource manager template) Select the GCP cloud provider and then click **+create credential**. 
 
 1. Click **Next**.
 

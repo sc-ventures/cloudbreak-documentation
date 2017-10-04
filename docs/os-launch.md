@@ -225,6 +225,8 @@ Cloudbreak works by connecting your OpenStack account through this credential, a
 
 1. In the Cloudbreak web UI, open the **manage credentials** pane. 
 
+3. Select the GCP cloud provider.
+
 2. Click **+create credential**. 
 
 3. Provide the following information:
