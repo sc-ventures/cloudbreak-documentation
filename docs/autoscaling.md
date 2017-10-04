@@ -2,8 +2,6 @@
 
 >>>>TO-DO: I'm not sure if the auto scaling options in the new UI will be similar to auto scaling in HDCloud or the auto scaling in the old Cloudbreak. 
 
->>>> TO-DO: In the new UI, auto scaling is part of the create cluster process. My guess is that it will also be available from the cluster details page.
-
 For each cluster you can optionally enable auto scaling, which allows you to define one or more **scaling policies** to automatically increase or decrease the capacity of the cluster or an application running on it based on an **alert** and according to the policy definition. Scaling granularity is at the host group level; Thus you have an option to scale services or components only, not the whole cluster.
 
 The auto scaling capability is based on [Ambari Metrics](https://cwiki.apache.org/confluence/display/AMBARI/Metrics) and [Ambari Alerts](https://cwiki.apache.org/confluence/display/AMBARI/Alerts). Based on the blueprint used and the services running, Cloudbreak accesses all available metrics from the subsystem and defines alerts based on these metrics.
@@ -12,6 +10,8 @@ The auto scaling capability is based on [Ambari Metrics](https://cwiki.apache.or
 ### Enable Auto Scaling
 
 You can enable auto scaling for your cluster either when creating a cluster or once the cluster is running, from the cluster details page. 
+
+>>>>TO-DO: Where do I find this button? 
 
 Choose **enable** to enable auto-scaling and then:
 
@@ -24,7 +24,7 @@ Choose **enable** to enable auto-scaling and then:
 
 Metric-based alerts use Ambari metrics. These metrics have a default threshold value configured in Ambari, which you can modify in Ambari web UI.
 
-To create a new Cloudbreak metric-based alert in the Cloudbreak UI:
+To create a new metric-based alert in the Cloudbreak UI:
 
 1. Enable auto scaling by clicking **enable**.  
 1. Enter **alert name**. Only alphanumeric characters (min 5, max 100 characters) are allowed.  
@@ -50,8 +50,9 @@ You can change default threshold for an Ambari metric in the Ambari web UI by us
 
 Time-based alerts are based on cron expressions, allowing alerts to be triggered based on time.
 
-To create a new Cloudbreak time-based alert in the Cloudbreak UI:
+To create a new time-based alert in the Cloudbreak UI:
 
+1. Enable auto scaling by clicking **enable**.  
 1. Enter **alert name**. Only alphanumeric characters (min 5, max 100 characters) are allowed.  
 2. (Optional) Enter **description** for the new alert.   
 3. Select a **time zone** for the new alert.    
@@ -60,7 +61,7 @@ To create a new Cloudbreak time-based alert in the Cloudbreak UI:
 
 #### Create a Scaling Policy 
 
-To create a new Cloudbreak scaling policy:
+To create a new scaling policy:
 
 1. Enter the **policy name**. Only alphanumeric characters (min 5, max 100 characters) are allowed.
 2. Select a type first (node count, percentage, or exact), and then enter a value for the **scaling adjustment**:
@@ -77,8 +78,7 @@ In a scaling policy, the triggered rules are applied in order.
 
 #### Configure Auto Scaling 
 
-You can configure cluster scaling by 
-
+You can configure cluster scaling by adjusting the following parameters:
 
 | Setting	| Description |	Default Value |
 |---|---|---|
