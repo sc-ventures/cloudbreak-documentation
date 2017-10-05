@@ -5,19 +5,19 @@ By default, Cloudbreak launches clusters from an image that includes default con
 
 In some cases, these default images might not fit the requirements of users: for example when they need custom OS hardening, libraries, tooling, and so on. In such cases, the user would like to start their clusters from their own custom image.
 
-### Build Custom Images
+### Building Custom Images
 
 Refer to [Custom Images for Cloudbreak](https://github.com/hortonworks/cloudbreak-images). This repository includes instructions and scripts to help you build custom images. Once you have the images, refer to the documentation below for information on how to register and use these images with Cloudbreak.
 
-### Register Custom Images
+### Registering Custom Images
 
 Register your custom image(s) in Cloudbreak by placing `yml` files that declare your custom images in the `/var/lib/cloudbreak-deployment/etc` directory on the Cloudbreak host. The `etc` directory does not exist by default, so you need to create it.
 
 The format of the `yml` files is cloud provider specific and described in the following sections.  
 
-> Important: If you register images after Cloudbreak has been started, you need to restart Cloudbreak after updating the images.
+> If you register the images after Cloudbreak has been started, you need to restart Cloudbreak after updating the images.
 
-#### AWS
+#### Register Images for AWS
 
 To override the default images, create the following file: `/var/lib/cloudbreak-deployment/etc/aws-images.yml` and update its content by replacing the images listed with your custom image for each region that you want to use. The default content of the `yml` file is:
 
@@ -35,7 +35,7 @@ aws:
   us-west-2: ami-d541bbb5
 </pre>
 
-#### Azure
+#### Register Images for Azure
 
 To override the default images, create the following file: `/var/lib/cloudbreak-deployment/etc/arm-images.yml` and update its content by replacing the images listed with your custom image for each region that you want to use. The default content of the `yml` file is:
 
@@ -56,7 +56,7 @@ azure_rm:
   Brazil South: https://sequenceiqbrazilsouth2.blob.core.windows.net/images/cb-2016-06-14-03-27.vhd
 ```
 
-#### GCP
+#### Register Images for GCP
 
 To override the default images, create the following file: `/var/lib/cloudbreak-deployment/etc/gcp-images.yml` and update its content by replacing the images listed with your custom image for each region that you want to use. It is not required to have an image in every region, as the `default` is used everywhere. The default content of the `yml` file is:
 
@@ -65,7 +65,7 @@ gcp:
   default: sequenceiqimage/cb-2016-06-14-03-27.tar.gz
 </pre>
 
-#### OpenStack
+#### Register Images for OpenStack
 
 To override the default images, create the following file: `/var/lib/cloudbreak-deployment/etc/os-images.yml` and update its content by replacing the images listed with your custom image for each region that you want to use. It is not required to have an image in every region, as the `default` is used everywhere. The default content of the `yml` file is:
 
