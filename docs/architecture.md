@@ -41,6 +41,10 @@ The use of blueprints is illustrated in the following image:
 
 **Ambari blueprints** are a declarative definition of a cluster. With a blueprint, you can specify stack, component layout, and configurations to materialize an HDP cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard. 
 
+Ambari blueprints are specified in the JSON format. After you provide the blueprint to Cloudbreak, the host groups in the JSON will be mapped to a set of instances when starting the cluster, and the specified services and components will be installed on the corresponding nodes.
+
+Cloudbreak includes a few default blueprints and allows you to upload your own blueprints.
+
 To learn more about Ambari blueprints, refer to [Apache documentation](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints).
 
 #### Cloud Infrastructure

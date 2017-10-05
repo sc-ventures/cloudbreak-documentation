@@ -1,31 +1,26 @@
-### Blueprints
+## Blueprints
 
 **Ambari blueprints** are your declarative definition of a Hadoop cluster, defining the host groups and which components to install on which host group. Ambari uses them as a base for your clusters. 
 
-You have three options:
+You have three options concerning using blueprints with Cloudbreak:
 
-* Use one of the pre-defined blueprints.  
-* Copy and edit one of the pre-defined blueprints.   
+* Use one of the pre-defined blueprints.    
 * Add your custom blueprint by uploading a JSON file or pasting the JSON text. 
+* Copy and edit one of the pre-defined blueprints. 
 
-We recommend that you review the default blueprints to check if they meet your requirements. You can do this by expanding  the **manage bluerints** pane in the Cloudbreak web UI (shown in the screenshot) or by reading the documentation below.  
+We recommend that you review the default blueprints to check if they meet your requirements. You can do this by expanding  the **manage bluerints** pane in the Cloudbreak web UI or by reading the documentation below.
+  
 
-<a href="../images/cb-blueprints.png" target="_blank" title="click to enlarge"><img src="../images/cb-blueprints.png" width="650" title="Azure Portal"></a> 
+### Use Default Blueprints 
 
-[Here](https://raw.githubusercontent.com/sequenceiq/cloudbreak/master/integration-test/src/main/resources/blueprint/multi-node-hdfs-yarn.bp) is an example of a blueprint. 
+To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**.  
 
-The host groups in the JSON will be mapped to a set of instances when starting the cluster, and the specified services and components will be installed on the corresponding nodes. It is not necessary to define a complete configuration in the blueprint. If a configuration is missing, Ambari will fill that with a default value. 
+#### Default Blueprints 
 
-A blueprint can be modified later from the Ambari UI.
-
-A blueprint can be exported from a running Ambari cluster and can be reused in Cloudbreak after slight modifications. When a blueprint is exported, some configurations are hardcoded for example domain names, memory configurations, and so on, that won't be applicable to the Cloudbreak cluster. There is no automatic way to modify an exported blueprint and make it instantly usable in Cloudbreak, the modifications have to be done manually.
-
-### Default Blueprints 
-
-Cloudbreak includes three default HDP cluster blueprints:
+Cloudbreak includes the following default HDP cluster blueprints:
 
 
-#### HDP Version: **HDP 2.6**
+##### HDP Version: **HDP 2.6**
 
 | Cluster Type  | Services | Description  |
 |:------------- |:---|:-------------|
@@ -37,7 +32,7 @@ Cloudbreak includes three default HDP cluster blueprints:
 | BI | <span><i class="fa fa-warning" style="color: orange"></i> Druid 0.9.2</span> | This cluster configuration includes a Technical Preview of Druid. |
 
 
-#### HDP Version: **HDP 2.5**
+##### HDP Version: **HDP 2.5**
 
 | Cluster Type  | Services | Description  |
 |:------------- |:---|:-------------|
@@ -64,7 +59,7 @@ that is much more experimental. The following configuration classification appli
 
 The following services are included in the respective blueprints:
 
-**HDP 2.6**
+##### HDP Version: **HDP 2.6**
 
 | Service | Data Science<br>(Spark 1.6) | Data Science<br>(Spark 2.1) | EDW-ETL<br>(Spark 1.6) | EDW-ETL<br>(Spark 2.1) | EDW-Analytics | BI-Druid |
 |---|---|---|---|---|---|---|
@@ -84,7 +79,7 @@ The following services are included in the respective blueprints:
 | Zeppelin 0.7.0 	| x | x |   |   | x |   |
 | Slider 				|   |   |   |   | x |   |
 
-**HDP 2.5**
+##### HDP Version: **HDP 2.5**
 
 | Service | Data Science | EDW-ETL (Spark 1.6) | EDW-ETL (Spark 2.0) | EDW-Analytics |
 |---|---|---|---|---|
@@ -104,22 +99,56 @@ The following services are included in the respective blueprints:
 | Slider 				|   |   |   | x |
 
 
-
-### Copy and Edit Existing Blueprint 
-
-You can modify default or previously added blueprints in the **manage blueprints** tab. To do that, expand the entry in the Cloudbreak UI and then click **copy & edit**. 
-
-
 ### Add Custom Blueprint
 
 This option allows you to save your custom blueprints. For correct blueprint layout and other useful information about Ambari blueprints, refer to the [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) page.
 
-Once you have your blueprints ready, you can save them in the **manage blueprints** tab. To add your own blueprint, click **+create blueprint** and enter the following parameters:
+#### Example Blueprint
 
-| Parameter | Value |
+[Here](https://raw.githubusercontent.com/sequenceiq/cloudbreak/master/integration-test/src/main/resources/blueprint/multi-node-hdfs-yarn.bp) is an example of a blueprint. 
+
+#### Creating a Blueprint
+
+Ambari blueprints are specified in the JSON format. After you provide the blueprint to Cloudbreak, the host groups in the JSON will be mapped to a set of instances when starting the cluster, and the specified services and components will be installed on the corresponding nodes. It is not necessary to define a complete configuration in the blueprint. If a configuration is missing, Ambari will fill that with a default value. 
+Furthermore, a blueprint can be modified later from the Ambari UI.
+
+A blueprint can be exported from a running Ambari cluster and can be reused in Cloudbreak after slight modifications. When a blueprint is exported, some configurations are hardcoded for example domain names, memory configurations, and so on, that won't be applicable to the Cloudbreak cluster. There is no automatic way to modify an exported blueprint and make it instantly usable in Cloudbreak, the modifications have to be done manually.
+
+#### Upload a Blueprint 
+
+Once you have your blueprint ready:
+
+1. Navigate to the **manage blueprints** tab. To add your own blueprint, click **+create blueprint** and enter the following parameters:
+
+    | Parameter | Value |
 |---|---|
 | Name | Enter a name for your blueprint. |
 | Description | (Optional) Enter a description for your blueprint.|
 | Blueprint Source| <p>Select one of: <ul><li>**Text**: Paste blueprint in JSON format.</li><li> **File**: Upload a file that contains the blueprint.</li><li> **URL**: Specify the URL for your blueprint.</li></ul> |
 | Public In Account | (Optional) If this option is checked, all the users belonging to your account will be able to use this blueprint to create clusters, but they cannot delete it. | 
 
+2. To use the uploaded blueprints, simply select it when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. 
+
+
+### Copy and Edit Existing Blueprint 
+
+You can reuse default and previously added blueprints by using the **copy & edit** option, which allows you to clone and edit an existing blueprint without changing or deleting the original blueprint. To do this: 
+
+1. Navigate to the **manage blueprints** tab, expand the blueprint entry, and then click **copy & edit**.
+
+2. Make updates in your blueprint and save them as a new blueprint.
+
+### Modify Existing Blueprint
+
+To modify existing an blueprint without keeping the original:
+
+* If you pasted or uploaded your blueprint in the Cloudbreak UI, in order to modify it you must delete the entry and add the blueprint again in a new entry.     
+* If you provided a URL to the location where the blueprint is stored, in order to modify the blueprint simply update it in the location to which the URL is pointing. 
+
+You can also [copy and edit an existing blueprint](#copy-and-edit-existing-blueprint).
+
+### Delete Blueprint
+
+You can delete previously added items by selecting and item and using the **delete** option. 
+
+>>>>TO-DO: Is it possible to delete default blueprints? 
