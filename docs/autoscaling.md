@@ -2,14 +2,27 @@
 
 >>>>TO-DO: I'm not sure if the auto scaling options in the new UI will be similar to auto scaling in HDCloud or the auto scaling in the old Cloudbreak. 
 
-For each cluster you can optionally enable auto scaling, which allows you to define one or more **scaling policies** to automatically increase or decrease the capacity of the cluster or an application running on it based on an **alert** and according to the policy definition. Scaling granularity is at the host group level; Thus you have an option to scale services or components only, not the whole cluster.
-
 The auto scaling capability is based on [Ambari Metrics](https://cwiki.apache.org/confluence/display/AMBARI/Metrics) and [Ambari Alerts](https://cwiki.apache.org/confluence/display/AMBARI/Alerts). Based on the blueprint used and the services running, Cloudbreak accesses all available metrics from the subsystem and defines alerts based on these metrics.
+
+For each cluster you can optionally enable auto scaling, which allows you to define one or more scaling policies to automatically increase or decrease the capacity of the cluster or an application running on it based on an alert and according to the policy definition. Scaling granularity is at the host group level; thus you have an option to scale services or components only, not the whole cluster.
+
+In other words:
+
+* An **alert** triggers a scaling policy.  
+* A **scaling policy** adds or removes a set number of worker or compute nodes based on a scaling metric definition.
+
+The following table includes examples of scaling policies and alerts attached to them:
+
+| Alert |	Scaling Policy |
+|---|---|
+| If CPU usage is more than 70% for 5 minutes (averaged across all cluster nodes).| Add 3 compute nodes |
+| If HDFS usage is less than 10% for 15 minutes. | Remove 5 worker nodes |
+| If Memory usage is more than 50% for 10 minutes (averaged across all cluster nodes).	| Add 3 compute nodes |
 
 
 ### Enable Auto Scaling
 
-Auto scaling is disabled by default. You can enable it for your cluster once the cluster is running, from the cluster details page. 
+Auto scaling is disabled by default. Once the cluster is running, you can enable it for the cluster from the cluster's **autoscaling SLA policies** page. 
 
 1. Click on the cluster tile to navigate to cluster **details** page.
 2. Click **autoscaling SLA policies**.
@@ -23,7 +36,7 @@ After you have enabled auto scaling, perform these steps:
 
 1. Create either [a metric-based alert](#create-a-metric-based-alert) or [a time-based alert](#create-a-time-based-alert).  
 2. [Create a scaling policy](#create-a-scaling-policy).    
-3. [Configure Auto Scaling](#configure-auto-scaling) if needed. 
+3. [Configure auto scaling](#configure-auto-scaling) if needed. 
 
 
 #### Create a Metric-based Alert
@@ -86,7 +99,7 @@ To create a new scaling policy:
     * **node count** - number of nodes to be added or removed
     * **percentage** - computed percentage adjustment based on the cluster size
     * **exact** - specific target size of the cluster
-3. Select the Ambari host group where the cluster is to be scaled.  
+3. Select the **host group** to which this scaling policy will be applied.  
 3. Select the previously created Cloudbreak alert to apply the scaling policy to it. 
 
 Example: 
@@ -125,7 +138,7 @@ To keep your cluster healthy, Cloudbreak auto scaling runs several background ch
 
 Auto scaling is disabled by default.
 
-If you have previously enabled it for a given cluster and you would like to disable it, you can do it from the cluster details page: 
+If you have previously enabled it for a given cluster and you would like to disable it, you can do it from the cluster's **autoscaling SLA policies** page: 
 
 1. Click on the cluster tile to navigate to cluster **details** page.
 2. Click **autoscaling SLA policies**.
