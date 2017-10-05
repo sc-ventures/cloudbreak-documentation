@@ -61,3 +61,4 @@ cbd util add-default-user
 ### Adding SSL Certificate for Cloudbreak 
 
 
+https://community.hortonworks.com/articles/140915/replace-cloudbreak-mini-knox-self-signed-certifica.html 

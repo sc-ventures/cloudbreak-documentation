@@ -19,8 +19,7 @@ To use one of the default blueprints, simply select them when creating a cluster
 
 Cloudbreak includes the following default HDP cluster blueprints:
 
-
-##### HDP Version: **HDP 2.6**
+HDP Version: **HDP 2.6**
 
 | Cluster Type  | Services | Description  |
 |:------------- |:---|:-------------|
@@ -32,7 +31,7 @@ Cloudbreak includes the following default HDP cluster blueprints:
 | BI | <span><i class="fa fa-warning" style="color: orange"></i> Druid 0.9.2</span> | This cluster configuration includes a Technical Preview of Druid. |
 
 
-##### HDP Version: **HDP 2.5**
+HDP Version: **HDP 2.5**
 
 | Cluster Type  | Services | Description  |
 |:------------- |:---|:-------------|
@@ -59,7 +58,7 @@ that is much more experimental. The following configuration classification appli
 
 The following services are included in the respective blueprints:
 
-##### HDP Version: **HDP 2.6**
+HDP Version: **HDP 2.6**
 
 | Service | Data Science<br>(Spark 1.6) | Data Science<br>(Spark 2.1) | EDW-ETL<br>(Spark 1.6) | EDW-ETL<br>(Spark 2.1) | EDW-Analytics | BI-Druid |
 |---|---|---|---|---|---|---|
@@ -79,7 +78,7 @@ The following services are included in the respective blueprints:
 | Zeppelin 0.7.0 	| x | x |   |   | x |   |
 | Slider 				|   |   |   |   | x |   |
 
-##### HDP Version: **HDP 2.5**
+HDP Version: **HDP 2.5**
 
 | Service | Data Science | EDW-ETL (Spark 1.6) | EDW-ETL (Spark 2.0) | EDW-Analytics |
 |---|---|---|---|---|
@@ -103,16 +102,15 @@ The following services are included in the respective blueprints:
 
 This option allows you to save your custom blueprints. For correct blueprint layout and other useful information about Ambari blueprints, refer to the [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) page.
 
-#### Example Blueprint
-
-[Here](https://raw.githubusercontent.com/sequenceiq/cloudbreak/master/integration-test/src/main/resources/blueprint/multi-node-hdfs-yarn.bp) is an example of a blueprint. 
-
 #### Creating a Blueprint
 
 Ambari blueprints are specified in the JSON format. After you provide the blueprint to Cloudbreak, the host groups in the JSON will be mapped to a set of instances when starting the cluster, and the specified services and components will be installed on the corresponding nodes. It is not necessary to define a complete configuration in the blueprint. If a configuration is missing, Ambari will fill that with a default value. 
 Furthermore, a blueprint can be modified later from the Ambari UI.
 
 A blueprint can be exported from a running Ambari cluster and can be reused in Cloudbreak after slight modifications. When a blueprint is exported, some configurations are hardcoded for example domain names, memory configurations, and so on, that won't be applicable to the Cloudbreak cluster. There is no automatic way to modify an exported blueprint and make it instantly usable in Cloudbreak, the modifications have to be done manually.
+
+Also see [Example Blueprints](#example-blueprints) and [Blueprint Components](#blueprint-components).
+
 
 #### Upload a Blueprint 
 
@@ -151,4 +149,49 @@ You can also [copy and edit an existing blueprint](#copy-and-edit-existing-bluep
 
 You can delete previously added items by selecting and item and using the **delete** option. 
 
->>>>TO-DO: Is it possible to delete default blueprints? 
+>>>>TO-DO: Is it possible to delete default blueprints?
+
+
+### Example Blueprints
+
+Here are blueprint examples:  
+
+* [Smallest Possible HDP 2.4](https://raw.githubusercontent.com/sequenceiq/cloudbreak/master/integration-test/src/main/resources/blueprint/multi-node-hdfs-yarn.bp)
+* [Small HDP 2.4](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-small-default.bp)
+* [Small HDP 2.4 Streaming](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-streaming-cluster.bp)
+* [Small HDP 2.4 Spark](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-spark-cluster.bp)
+
+### Blueprint Components 
+
+Ambari supports the concept of stacks and associated services in a stack definition. By leveraging the stack definition, Ambari has a consistent and defined interface to install, manage, and monitor a set of services, and provides extensibility model for new stacks and services to be introduced.
+
+At a high level, the supported components can be grouped into two main categories: master and slave. The components are bundled together, forming specific services:
+
+| Service | Componets |
+|---|---|
+| HDFS	| DATANODE, HDFS_CLIENT, JOURNALNODE, NAMENODE, SECONDARY_NAMENODE, ZKFC |
+| YARN	| APP_TIMELINE_SERVER, NODEMANAGER, RESOURCEMANAGER, YARN_CLIENT |
+| MAPREDUCE2	| HISTORYSERVER, MAPREDUCE2_CLIENT |
+| HBASE |	HBASE_CLIENT, HBASE_MASTER, HBASE_REGIONSERVER |
+| HIVE	| HIVE_CLIENT, HIVE_METASTORE, HIVE_SERVER, MYSQL_SERVER |
+| HCATALOG |	HCAT |
+| WEBHCAT |	WEBHCAT_SERVER |
+| OOZIE | OOZIE_CLIENT, OOZIE_SERVER |
+| PIG | PIG |
+| SQOOP	| SQOOP |
+| STORM	| DRPC_SERVER, NIMBUS, STORM_REST_API, STORM_UI_SERVER, SUPERVISOR |
+| TEZ	| TEZ_CLIENT |
+| FALCON	| FALCON_CLIENT, FALCON_SERVER |
+| ZOOKEEPER	| ZOOKEEPER_CLIENT, ZOOKEEPER_SERVER |
+| SPARK	| SPARK_JOBHISTORYSERVER, SPARK_CLIENT |
+| RANGER	| RANGER_USERSYNC, RANGER_ADMIN |
+| AMBARI_METRICS	| AMBARI_METRICS, METRICS_COLLECTOR, METRICS_MONITOR |
+| KERBEROS	| KERBEROS_CLIENT |
+| FLUME	| FLUME_HANDLER |
+| KAFKA	| KAFKA_BROKER |
+| KNOX	| KNOX_GATEWAY |
+| ATLAS	| ATLAS |
+| CLOUDBREAK	| CLOUDBREAK |
+
+>>>>TO-DO: Not sure if this list is updated/correct
+ 
