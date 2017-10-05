@@ -13,89 +13,9 @@ We recommend that you review the default blueprints to check if they meet your r
 
 ### Use Default Blueprints 
 
-To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**.  
+To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. 
 
-#### Default Blueprints 
-
-Cloudbreak includes the following default HDP cluster blueprints:
-
-HDP Version: **HDP 2.6**
-
-| Cluster Type  | Services | Description  |
-|:------------- |:---|:-------------|
-| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 1.6,<br>Zeppelin 0.7.0 | This cluster configuration includes Spark 1.6 with Zeppelin. |
-| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 2.1,<br>Zeppelin 0.7.0 | This cluster configuration includes Spark 2.1 with Zeppelin. |
-| EDW - Analytics | <span><i class="fa fa-check" style="color: green"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.7.0 | This cluster configuration includes Hive 2 LLAP. |
-| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | This cluster configuration includes Hive and Spark 1.6. |
-| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br> Spark 2.1 | This cluster configuration includes Hive and Spark 2.1. |
-| BI | <span><i class="fa fa-warning" style="color: orange"></i> Druid 0.9.2</span> | This cluster configuration includes a Technical Preview of Druid. |
-
-
-HDP Version: **HDP 2.5**
-
-| Cluster Type  | Services | Description  |
-|:------------- |:---|:-------------|
-| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 1.6,<br>Zeppelin 0.6.0 | This cluster configuration includes Spark 1.6 and Zeppelin. |
-| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | This cluster configuration includes Hive and Spark 1.6. |
-| EDW - ETL | <i class="fa fa-warning" style="color: orange"></i> Hive 1.2.1,<br> Spark 2.0 | This cluster configuration includes a Technical Preview of Spark 2.0. |
-| EDW - Analytics | <span><i class="fa fa-warning" style="color: orange"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.6.0 | This cluster configuration includes a Technical Preview of Hive 2 LLAP. |
-
-
-<div class="note">
-    <p class="first admonition-title">Choosing Your Configuration</p>
-    <p class="last">
-When creating a cluster, you can choose a more stable cluster configuration for a predicable experience.
-Alternatively, you can try the latest capabilities by choosing a cluster configuration
-that is much more experimental. The following configuration classification applies:
-<ul>
-<li><i class="fa fa-check" style="color: green"></i> Stable configurations are the best choice if you want to avoid issues and other problems with launching and using clusters.</li>
-<li><i class="fa fa-warning" style="color: orange"></i> If you want to use a Technical Preview version of a component in a release of HDP, use these configurations.</li>
-<li><i class="fa fa-warning" style="color: red"></i> These are the most cutting edge of the configurations, including Technical Preview components in a Technical Preview HDP release.</li>
-</ul>
-</p>
-</div>
-
-
-The following services are included in the respective blueprints:
-
-HDP Version: **HDP 2.6**
-
-| Service | Data Science<br>(Spark 1.6) | Data Science<br>(Spark 2.1) | EDW-ETL<br>(Spark 1.6) | EDW-ETL<br>(Spark 2.1) | EDW-Analytics | BI-Druid |
-|---|---|---|---|---|---|---|
-| HDFS 		 		| x | x | x | x | x | x |
-| YARN 			 	| x | x | x | x | x | x |
-| MapReduce2  		| x | x | x | x | x | x |
-| Tez 					| x | x | x | x | x | x |
-| Hive 1.2.1 	 		| x | x | x | x |   |   |
-| Hive 2 LLAP 		|   |   |   |   | x |   |
-| Druid 		 		|   |   |   |   |   | x |
-| Pig  			 	| x | x | x | x | x |   |
-| Sqoop 				| x | x | x |   |   | x |
-| ZooKeeper 			| x | x | x | x | x | x |
-| Ambari Metrics 	| x | x | x | x | x | x |
-| Spark 1.6 			| x |   | x |   | x |   |
-| Spark 2.1 			|   | x |   | x |   |   |
-| Zeppelin 0.7.0 	| x | x |   |   | x |   |
-| Slider 				|   |   |   |   | x |   |
-
-HDP Version: **HDP 2.5**
-
-| Service | Data Science | EDW-ETL (Spark 1.6) | EDW-ETL (Spark 2.0) | EDW-Analytics |
-|---|---|---|---|---|
-| HDFS 				| x | x | x | x |
-| YARN 				| x | x | x | x |
-| MapReduce2  		| x | x | x | x |
-| Tez 					| x | x | x | x |
-| Hive 1.2.1 			| x | x | x |   | 
-| Hive 2 LLAP 		|   |   |   | x | 
-| Pig  				| x | x | x | x |
-| Sqoop 				| x | x |   |   |
-| ZooKeeper 			| x | x | x | x |
-| Ambari Metrics 	| x | x | x | x |
-| Spark 1.6 			| x | x |   | x |
-| Spark 2.0 			|   |   | x |   |
-| Zeppelin 0.6.0 	| x |   |   | x |
-| Slider 				|   |   |   | x |
+To review default blueprints, refer to [Default Blueprints](#default-blueprints). 
 
 
 ### Add Custom Blueprint
@@ -195,3 +115,86 @@ At a high level, the supported components can be grouped into two main categorie
 
 >>>>TO-DO: Not sure if this list is updated/correct
  
+ 
+### Default Blueprints 
+
+Cloudbreak includes the following default HDP cluster blueprints:
+
+HDP Version: **HDP 2.6**
+
+| Cluster Type  | Services | Description  |
+|:------------- |:---|:-------------|
+| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 1.6,<br>Zeppelin 0.7.0 | This cluster configuration includes Spark 1.6 with Zeppelin. |
+| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 2.1,<br>Zeppelin 0.7.0 | This cluster configuration includes Spark 2.1 with Zeppelin. |
+| EDW - Analytics | <span><i class="fa fa-check" style="color: green"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.7.0 | This cluster configuration includes Hive 2 LLAP. |
+| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | This cluster configuration includes Hive and Spark 1.6. |
+| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br> Spark 2.1 | This cluster configuration includes Hive and Spark 2.1. |
+| BI | <span><i class="fa fa-warning" style="color: orange"></i> Druid 0.9.2</span> | This cluster configuration includes a Technical Preview of Druid. |
+
+
+HDP Version: **HDP 2.5**
+
+| Cluster Type  | Services | Description  |
+|:------------- |:---|:-------------|
+| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 1.6,<br>Zeppelin 0.6.0 | This cluster configuration includes Spark 1.6 and Zeppelin. |
+| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | This cluster configuration includes Hive and Spark 1.6. |
+| EDW - ETL | <i class="fa fa-warning" style="color: orange"></i> Hive 1.2.1,<br> Spark 2.0 | This cluster configuration includes a Technical Preview of Spark 2.0. |
+| EDW - Analytics | <span><i class="fa fa-warning" style="color: orange"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.6.0 | This cluster configuration includes a Technical Preview of Hive 2 LLAP. |
+
+
+<div class="note">
+    <p class="first admonition-title">Choosing Your Configuration</p>
+    <p class="last">
+When creating a cluster, you can choose a more stable cluster configuration for a predicable experience.
+Alternatively, you can try the latest capabilities by choosing a cluster configuration
+that is much more experimental. The following configuration classification applies:
+<ul>
+<li><i class="fa fa-check" style="color: green"></i> Stable configurations are the best choice if you want to avoid issues and other problems with launching and using clusters.</li>
+<li><i class="fa fa-warning" style="color: orange"></i> If you want to use a Technical Preview version of a component in a release of HDP, use these configurations.</li>
+<li><i class="fa fa-warning" style="color: red"></i> These are the most cutting edge of the configurations, including Technical Preview components in a Technical Preview HDP release.</li>
+</ul>
+</p>
+</div>
+
+
+The following services are included in the respective blueprints:
+
+HDP Version: **HDP 2.6**
+
+| Service | Data Science<br>(Spark 1.6) | Data Science<br>(Spark 2.1) | EDW-ETL<br>(Spark 1.6) | EDW-ETL<br>(Spark 2.1) | EDW-Analytics | BI-Druid |
+|---|---|---|---|---|---|---|
+| HDFS 		 		| x | x | x | x | x | x |
+| YARN 			 	| x | x | x | x | x | x |
+| MapReduce2  		| x | x | x | x | x | x |
+| Tez 					| x | x | x | x | x | x |
+| Hive 1.2.1 	 		| x | x | x | x |   |   |
+| Hive 2 LLAP 		|   |   |   |   | x |   |
+| Druid 		 		|   |   |   |   |   | x |
+| Pig  			 	| x | x | x | x | x |   |
+| Sqoop 				| x | x | x |   |   | x |
+| ZooKeeper 			| x | x | x | x | x | x |
+| Ambari Metrics 	| x | x | x | x | x | x |
+| Spark 1.6 			| x |   | x |   | x |   |
+| Spark 2.1 			|   | x |   | x |   |   |
+| Zeppelin 0.7.0 	| x | x |   |   | x |   |
+| Slider 				|   |   |   |   | x |   |
+
+HDP Version: **HDP 2.5**
+
+| Service | Data Science | EDW-ETL (Spark 1.6) | EDW-ETL (Spark 2.0) | EDW-Analytics |
+|---|---|---|---|---|
+| HDFS 				| x | x | x | x |
+| YARN 				| x | x | x | x |
+| MapReduce2  		| x | x | x | x |
+| Tez 					| x | x | x | x |
+| Hive 1.2.1 			| x | x | x |   | 
+| Hive 2 LLAP 		|   |   |   | x | 
+| Pig  				| x | x | x | x |
+| Sqoop 				| x | x |   |   |
+| ZooKeeper 			| x | x | x | x |
+| Ambari Metrics 	| x | x | x | x |
+| Spark 1.6 			| x | x |   | x |
+| Spark 2.0 			|   |   | x |   |
+| Zeppelin 0.6.0 	| x |   |   | x |
+| Slider 				|   |   |   | x |
+

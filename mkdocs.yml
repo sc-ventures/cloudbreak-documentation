@@ -44,8 +44,8 @@ pages:
         - Recipes: recipes.md
         - Resource Tagging: tags.md 
         - Auto Scaling: autoscaling.md
-        - Custom Cloud Images (TP): images.md
-        - Ambari Database (TP): ambari-db.md
+        - Custom Images: images.md
+        - Ambari Database: ambari-db.md
         - Cloudbreak Database: cb-db.md
       - Configure Security: 
         - Network and Security: security.md
