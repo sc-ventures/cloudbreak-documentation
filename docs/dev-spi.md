@@ -22,7 +22,7 @@ Cloudbreak's SPI supports both of these methods. It provides a well-defined inte
 
 #### Template Based Deployments
 
-Providers with template-based deployments like [AWS CloudFormation](https://aws.amazon.com/cloudformation/), [Azure ARM](https://azure.microsoft.com/en-us/documentation/articles/resource-group-overview/#) or [OpenStack Heat](https://wiki.openstack.org/wiki/Heat) have the ability to create and manage a collection of related cloud resources, provisioning and updating them in an orderly and predictable fashion. 
+Providers with template-based deployments such as [AWS CloudFormation](https://aws.amazon.com/cloudformation/), [Azure ARM](https://azure.microsoft.com/en-us/documentation/articles/resource-group-overview/#) or [OpenStack Heat](https://wiki.openstack.org/wiki/Heat) have the ability to create and manage a collection of related cloud resources, provisioning and updating them in an orderly and predictable fashion. 
 
 In such scenario, Cloudbreak needs a reference to the template itself because every change in the infrastructure (for example, creating new instance or deleting one) is managed through this templating mechanism.
 

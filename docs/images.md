@@ -1,7 +1,6 @@
-
 ## Custom Images
 
-By default, Cloudbreak launches clusters from an image that includes default configuration and default tooling for provisioning. These are considered the Standard default images and these images.
+By default, Cloudbreak launches clusters from an image that includes default configuration and default tooling for provisioning. These are considered the Standard default images.
 
 In some cases, these default images might not fit the requirements of users: for example when they need custom OS hardening, libraries, tooling, and so on. In such cases, the user would like to start their clusters from their own custom image.
 
@@ -11,7 +10,7 @@ Refer to [Custom Images for Cloudbreak](https://github.com/hortonworks/cloudbrea
 
 ### Registering Custom Images
 
-Register your custom image(s) in Cloudbreak by placing `yml` files that declare your custom images in the `/var/lib/cloudbreak-deployment/etc` directory on the Cloudbreak host. The `etc` directory does not exist by default, so you need to create it.
+Register your custom images in Cloudbreak by placing `yml` files that declare your custom images in the `/var/lib/cloudbreak-deployment/etc` directory on the Cloudbreak host. The `etc` directory does not exist by default, so you need to create it.
 
 The format of the `yml` files is cloud provider specific and described in the following sections.  
 
@@ -19,7 +18,10 @@ The format of the `yml` files is cloud provider specific and described in the fo
 
 #### Register Images for AWS
 
-To override the default images, create the following file: `/var/lib/cloudbreak-deployment/etc/aws-images.yml` and update its content by replacing the images listed with your custom image for each region that you want to use. The default content of the `yml` file is:
+To override the default images:
+
+1. Navigate to the `/var/lib/cloudbreak-deployment/` directory and create a new directory called `etc`.
+2. Navigate to `/var/lib/cloudbreak-deployment/etc/` and create a new file called `aws-images.yml`. Use the content below as base content for `aws-images.yml` but replace the images listed with your custom images for each region that you want to use:
 
 <pre>
 aws:
@@ -37,7 +39,8 @@ aws:
 
 #### Register Images for Azure
 
-To override the default images, create the following file: `/var/lib/cloudbreak-deployment/etc/arm-images.yml` and update its content by replacing the images listed with your custom image for each region that you want to use. The default content of the `yml` file is:
+1. Navigate to the `/var/lib/cloudbreak-deployment/` directory and create a new directory called `etc`.
+2. Navigate to `/var/lib/cloudbreak-deployment/etc/` and create a new file called `arm-images.yml`. Use the content below as base content for `arm-images.yml` but replace the images listed with your custom images for each region that you want to use:
 
 ```
 azure_rm:
@@ -58,7 +61,8 @@ azure_rm:
 
 #### Register Images for GCP
 
-To override the default images, create the following file: `/var/lib/cloudbreak-deployment/etc/gcp-images.yml` and update its content by replacing the images listed with your custom image for each region that you want to use. It is not required to have an image in every region, as the `default` is used everywhere. The default content of the `yml` file is:
+1. Navigate to the `/var/lib/cloudbreak-deployment/` directory and create a new directory called `etc`.
+2. Navigate to `/var/lib/cloudbreak-deployment/etc/` and create a new file called `gcp-images.yml`. Use the content below as base content for `gcp-images.yml` but replace the images listed with your custom images for each region that you want to use:
 
 <pre>
 gcp:
@@ -67,7 +71,8 @@ gcp:
 
 #### Register Images for OpenStack
 
-To override the default images, create the following file: `/var/lib/cloudbreak-deployment/etc/os-images.yml` and update its content by replacing the images listed with your custom image for each region that you want to use. It is not required to have an image in every region, as the `default` is used everywhere. The default content of the `yml` file is:
+1. Navigate to the `/var/lib/cloudbreak-deployment/` directory and create a new directory called `etc`.
+2. Navigate to `/var/lib/cloudbreak-deployment/etc/` and create a new file called `os-images.yml`. Use the content below as base content for `os-images.yml` but replace the images listed with your custom images for each region that you want to use:
 
 <pre>
 openstack:
