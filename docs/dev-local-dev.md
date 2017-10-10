@@ -1,6 +1,8 @@
 
 ## Local Development 
 
+>>>>TO-DO: What are some use cases where someone would want to use this? How are SPI, APIs, and flows related?  
+
 The following documentation will help you set up your local development environment on Mac OS X.
 
 ### Prerequisites

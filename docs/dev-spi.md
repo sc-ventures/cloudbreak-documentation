@@ -2,7 +2,7 @@
 
 Cloudbreak not only supports multiple cloud platforms but also provides an easy way to integrate a new provider trough [Cloudbreak's Service Provider Interface (SPI)](https://github.com/hortonworks/cloudbreak/tree/master/cloud-api), a plugin mechanism that enables seamless integration with any cloud provider. This SPI plugin mechanism has been used to integrate all currently supported providers with Cloudbreak. Consequently, if you use SPI to integrate a new provider, the integration will be seamless.
 
->>>>TO-DO: What exactly are these links pointing to and how are these useful? 
+>>>>TO-DO: What exactly are these links pointing to and how are these useful? Are these example implementations that someone can use as a reference?  
  
  * The [cloud-aws](https://github.com/hortonworks/cloudbreak/tree/master/cloud-aws) module integrates Amazon Web Services
  * The [cloud-arm](https://github.com/hortonworks/cloudbreak/tree/master/cloud-arm) module integrates Microsoft Azure
@@ -11,7 +11,7 @@ Cloudbreak not only supports multiple cloud platforms but also provides an easy 
 
 The SPI interface is event-based, scalable, and decoupled from Cloudbreak. The core of Cloudbreak uses [EventBus](http://projectreactor.io/) to communicate with the providers, but the complexity of event handling is hidden from the provider implementation.
 
-### Resource Management
+### Supported Resource Management Methods
 
 Cloud providers support two kinds of deployment and resource management methods:
 
@@ -78,14 +78,13 @@ dependencies {
 }
 ```
 
-### Variants
+### Support for Modularity 
 
-OpenStack is highly modular. It allows you to install different components, for example for volume storage or networking (Nova networking, Neutron, etc.). Or, in some scenarios, some components such as Heat may not installed at all.
+Cloudbreak uses **variants** to deal with highly modular providers such as OpenStack, which allows you to install different components for volume storage, networking, and so on, or to exclude certain components. For example, Nova or Neutron can be used for networking in OpenStack and some components such as Heat may not installed at all in some deployment scenarios. 
 
-Cloudbreak's SPI interface reflects this flexibility using so called variants. This means that if some part of cloud provider (typically OpenStack) is using different component, you don't need re-implement the complete stack but just use a different variant and re-implement the part that is different.
+Cloudbreak's SPI interface uses variants to support this flexibility: if some part of the cloud provider is using a different component, you don't need to re-implement the complete stack, but just use a different variant and re-implement the part that is different.
 
-The reference implementation for this feature can be found in  [cloud-openstack](https://github.com/hortonworks/cloudbreak/tree/master/cloud-openstack) module which support a HEAT and NATIVE variants. The HEAT variant utilizes the Heat templating to launch a stack, but the NATIVE variant starts the cluster by using a sequence of API calls without Heat to achieve the same result, although both of them are using the same authentication and credential management.
+>>>>TO-DO: What do you mean by reference implementation? Do you mean example/model implementation? 
 
-### Development
+The reference implementation for this feature can be found in the [cloud-openstack](https://github.com/hortonworks/cloudbreak/tree/master/cloud-openstack) module which supports a HEAT and NATIVE variants. While the HEAT variant utilizes the Heat templating to launch a stack, the NATIVE variant starts the cluster by using a sequence of API calls without Heat to achieve the same result. Both of them use the same authentication and credential management.
 
-For instructions to set up your development environment, see [Local Development Setup](dev-local-dev.md).

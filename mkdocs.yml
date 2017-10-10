@@ -69,9 +69,9 @@ pages:
         - Troubleshooting OpenStack: trouble-os.md
       - Developer Docs:
         - Cloudbreak Shell: cb-shell.md
+        - Cloudbreak SPI: dev-spi.md
         - Local Development: dev-local-dev.md
-        - API: dev-api.md
-        - SPI: dev-spi.md
+        - Cloudbreak APIs: dev-api.md
         - Flows: dev-flows.md 
       - FAQ: faq.md 
       - Getting Help: get-help.md
