@@ -17,6 +17,7 @@ pages:
     - Get Started:
       - Introduction: index.md
       - Architecture: architecture.md
+      - Release Notes: releasenotes.md
     - AWS:
       - Launch on AWS: aws-launch.md
       - Create a Cluster: aws-create.md
@@ -52,28 +53,28 @@ pages:
         - Secure Cloudbreak after Launch: security-cb.md
         - Enable LDAP/AD for Cloudbreak: security-ldap.md
         - Enable Kerberos for Your Cluster: security-kerberos.md
+      - Customize Profile File: profile.md
       - Manage Cloudbreak:
         - Manage Cloudbreak Credentials: credentials.md  
         - Manage Your Account: cb-account.md
         - Upgrade Clodbreak: upgrade.md
         - Delete Cloudbreak: delete.md 
         - Install on Your Own VM: vm-launch.md
-    - Reference:
-      - Release Notes: releasenotes.md
-      - Cloudbreak Shell: cb-shell.md
-      - Profile File: profile.md
-      - FAQs: faq.md 
+    - More:
       - Troubleshooting: 
         - General Troubleshooting: trouble-cb.md
         - Troubleshooting AWS: trouble-aws.md
         - Troubleshooting Azure: trouble-azure.md
         - Troubleshooting GCP: trouble-gcp.md
         - Troubleshooting OpenStack: trouble-os.md
-      - Getting Help: get-help.md
-      - SmartSense: smartsense.md
       - Developer Docs:
+        - Cloudbreak Shell: cb-shell.md
         - Local Development: dev-local-dev.md
         - API: dev-api.md
         - SPI: dev-spi.md
         - Flows: dev-flows.md 
+      - FAQ: faq.md 
+      - Getting Help: get-help.md
+      - SmartSense: smartsense.md
+
 
