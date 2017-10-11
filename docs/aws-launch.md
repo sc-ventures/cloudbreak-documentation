@@ -69,6 +69,10 @@ You can create these roles in the **IAM console**, on the **Roles** page via the
 
 **Create CloudbreakRole**
 
+Use these steps to create CloudbreakRole.
+
+**Steps**
+
 1. Navigate to the **IAM console** > **Roles** and click **Create Role**.
 
     <a href="../images/aws_role-00.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-00.png" width="650" title="IAM Console"></a> 
@@ -107,6 +111,10 @@ You can create these roles in the **IAM console**, on the **Roles** page via the
     
 
 **Create CredentialRole**
+
+Use these steps to create CredentialRole.
+
+**Steps**
 
 1. Navigate to the **IAM console** > **Roles** and click **Create Role**.
 
@@ -206,6 +214,8 @@ For more information about IAM, refer to <a href="http://docs.aws.amazon.com/IAM
 
 Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM available as a Community AMI.
 
+**Steps**
+
 1. In the AWS Management Console, navigate to the EC2 Console.  
 
 2. In the top right corner, select the region in which you want to launch Cloudbreak.  
@@ -273,7 +283,9 @@ Now that your VM is ready, access it via SSH:
 
 ### Launch Cloudbreak Deployer 
 
-After accessing the VM via SSH: 
+After accessing the VM via SSH, launch Cloudbreak deployer using the following steps.
+
+**Steps** 
 
 1. Navigate to the cloudbreak-deployment directory:
 
@@ -319,6 +331,10 @@ export UAA_DEFAULT_USER_PW=MySecurePassword123</pre>
 
 ### Access Cloudbreak UI
 
+Log in to the Cloudbreak UI using the following steps.
+
+**Steps**
+
 1. You can log into the Cloudbreak application at `https://IPv4_Public_IP>/` or `https://Public_DNS`. For example `https://34.212.141.253` or `https://ec2-34-212-141-253.us-west-2.compute.amazonaws.com`. 
 
 2. Confirm the security exception to proceed to the Cloudbreak web UI.
@@ -332,8 +348,8 @@ export UAA_DEFAULT_USER_PW=MySecurePassword123</pre>
 
     <a href="../images/cloudbreak-ui.png" target="_blank" title="click to enlarge"><img src="../images/cloudbreak-ui.png" width="650" title="Cloudbreak web UI"></a>  
 
-### Create Cloudbreak Credential
 
+### Create Cloudbreak Credential
 
 As part of the prerequisites, you had two options to [authorize Cloudbreak](#authorization-for-cloudbreak) to create resources on your behalf: key-based or role-based authorization. 
 
@@ -341,9 +357,11 @@ Depending on your earlier choice, you must configure a key-based or role-based c
 
 #### Create Key-Based Credential
 
-To perform these steps, you must know your access and secret key as well as your public SSH key. If needed, you can generate new access and secret keys from the **IAM Console** > **Users**. Next, select a user and click on the **Security credentials** tab. 
+To perform these steps, you must know your access and secret key as well as your public SSH key. If needed, you can generate new access and secret keys from the **IAM Console** > **Users** > select a user > **Security credentials**. 
  
 <a href="../images/aws-cred-key.png" target="_blank" title="click to enlarge"><img src="../images/aws-cred-key.png" width="650" title="Cloudbreak web UI"></a>  
+
+**Steps**
 
 1. In the Cloudbreak web UI, open the **manage credentials** pane. 
 
@@ -376,6 +394,8 @@ To perform these steps, you must know your access and secret key as well as your
 To perform these steps, you must know the **IAM Role ARN** corresponding to the "CredentialRole" (configured as a [prerequisite](#authorization-for-cloudbreak)). You must also have your public SSH key. 
 
 <a href="../images/aws-cred-role.png" target="_blank" title="click to enlarge"><img src="../images/aws-cred-role.png" width="650" title="Cloudbreak web UI"></a>  
+
+**Steps**
 
 1. In the Cloudbreak web UI, open the **manage credentials** pane. 
 

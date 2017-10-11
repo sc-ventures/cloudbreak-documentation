@@ -22,7 +22,9 @@ If you want to use [Azure Data Lake Store](https://azure.microsoft.com/en-in/ser
 
 #### Configuring Access to ADLS 
 
-ADLS is not supported as a default file system, but access to data in ADLS is automatically configured if you select ADLS during [cluster creation](azure-create.md), on the **Add File System** page. After the [cluster is deployed](azure-create.md), you must:
+ADLS is not supported as a default file system, but access to data in ADLS is automatically configured if you select ADLS during [cluster creation](azure-create.md), on the **Add File System** page. After the [cluster is deployed](azure-create.md), you must perform the following steps.
+
+**Steps**
 
 1. *Define which parts of the ADLS store this cluster will have access by adding the client credentials for the cluster to the data access control for the ADLS account.* 
 

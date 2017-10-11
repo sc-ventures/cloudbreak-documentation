@@ -44,7 +44,9 @@ To terminate your cluster, click **terminate**. All cluster-related resources wi
 
 From the navigation menu in the Cloudbreak UI, you can access the History page that allows you to generate a report showing basic information related to the clusters that were running within the specified range of dates.
 
-To generate a report:
+To generate a report, follow these steps.
+
+**Steps**
 
 1. From the Cloudbreak UI navigation menu, select **History**.
 

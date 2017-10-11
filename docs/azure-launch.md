@@ -57,6 +57,10 @@ You have two options to launch Cloudbreak on Azure:
 
 #### (Option 1) Launch via Azure Resource Manager Template
 
+Launch Cloudbreak deployer using the following steps.
+
+**Steps**
+
 1. Log in to your [Azure Portal](https://portal.azure.com).
 
 2. Click here to get started with Cloudbreak installation using the Azure Resource Manager template:
@@ -103,7 +107,11 @@ You have two options to launch Cloudbreak on Azure:
 
 #### (Option 2) Launch from Azure Marketplace 
 
+Launch Cloudbreak deployer using the following steps.
+
 > This feature is Technical Preview.  
+
+**Steps**
 
 1. Log in to your [Azure Portal](https://portal.azure.com).
 
@@ -160,6 +168,8 @@ You have two options to launch Cloudbreak on Azure:
 
 While the deployment is in progress, you can optionally navigate to the newly created resource group and see what Azure resources are being created.
 
+**Steps**
+
 1. From the left pane, select <img src="../images/resource-icon.png" width="150" title="Icon">.
 
 2. Find the the resource group that you just created and select it to view details.
@@ -183,6 +193,10 @@ While the deployment is in progress, you can optionally navigate to the newly cr
     
 
 ### Access Cloudbreak UI
+
+Log in to the Cloudbreak UI using the following steps.
+
+**Steps**
 
 1. When your deployment succeeds, you will receive a notification in the top-right corner. You can click on the link provided to navigate to the resource group created earlier.
 
@@ -226,6 +240,8 @@ Before you can start provisioning cluster using Cloudbreak, you must create a Cl
 
 #### Create an Interactive Credential
 
+**Steps**
+
 1. Open the **manage credentials** pane:
 
      <a href="../images/cb-ui2.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui2.png" width="650" title="Azure Portal"></a>
@@ -264,6 +280,8 @@ Before you can start provisioning cluster using Cloudbreak, you must create a Cl
 
 
 #### Create an App Based Credential
+
+**Steps**
 
 1. On Azure Portal, navigate to the **Active Directory** > **App Registrations** and register a new application. For more information, refer to [Create an Azure AD Application](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 

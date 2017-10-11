@@ -18,7 +18,9 @@ The format of the `yml` files is cloud provider specific and described in the fo
 
 #### Register Images for AWS
 
-To override the default images:
+To override the default images, perform these steps.
+
+**Steps**
 
 1. Navigate to the `/var/lib/cloudbreak-deployment/` directory and create a new directory called `etc`.
 2. Navigate to `/var/lib/cloudbreak-deployment/etc/` and create a new file called `aws-images.yml`. Use the content below as base content for `aws-images.yml` but replace the images listed with your custom images for each region that you want to use:
@@ -38,6 +40,10 @@ aws:
 </pre>
 
 #### Register Images for Azure
+
+To override the default images, perform these steps.
+
+**Steps**
 
 1. Navigate to the `/var/lib/cloudbreak-deployment/` directory and create a new directory called `etc`.
 2. Navigate to `/var/lib/cloudbreak-deployment/etc/` and create a new file called `arm-images.yml`. Use the content below as base content for `arm-images.yml` but replace the images listed with your custom images for each region that you want to use:
@@ -61,6 +67,10 @@ azure_rm:
 
 #### Register Images for GCP
 
+To override the default images, perform these steps.
+
+**Steps**
+
 1. Navigate to the `/var/lib/cloudbreak-deployment/` directory and create a new directory called `etc`.
 2. Navigate to `/var/lib/cloudbreak-deployment/etc/` and create a new file called `gcp-images.yml`. Use the content below as base content for `gcp-images.yml` but replace the images listed with your custom images for each region that you want to use:
 
@@ -70,6 +80,10 @@ gcp:
 </pre>
 
 #### Register Images for OpenStack
+
+To override the default images, perform these steps.
+
+**Steps**
 
 1. Navigate to the `/var/lib/cloudbreak-deployment/` directory and create a new directory called `etc`.
 2. Navigate to `/var/lib/cloudbreak-deployment/etc/` and create a new file called `os-images.yml`. Use the content below as base content for `os-images.yml` but replace the images listed with your custom images for each region that you want to use:

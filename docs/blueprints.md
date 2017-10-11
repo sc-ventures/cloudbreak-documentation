@@ -34,7 +34,9 @@ Also see [Example Blueprints](#example-blueprints) and [Blueprint Components](#b
 
 #### Upload a Blueprint 
 
-Once you have your blueprint ready:
+Once you have your blueprint ready, perform these steps.
+
+**Steps**
 
 1. Navigate to the **manage blueprints** tab. To add your own blueprint, click **+create blueprint** and enter the following parameters:
 
@@ -50,7 +52,9 @@ Once you have your blueprint ready:
 
 ### Copy and Edit Existing Blueprint 
 
-You can reuse default and previously added blueprints by using the **copy & edit** option, which allows you to clone and edit an existing blueprint without changing or deleting the original blueprint. To do this: 
+You can reuse default and previously added blueprints by using the **copy & edit** option, which allows you to clone and edit an existing blueprint without changing or deleting the original blueprint. 
+
+**Steps**
 
 1. Navigate to the **manage blueprints** tab, expand the blueprint entry, and then click **copy & edit**.
 

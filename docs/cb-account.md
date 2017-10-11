@@ -4,7 +4,9 @@ You can manage your Cloudbreak account from the Cloudbreak UI by clicking **acco
 
 ### Get Usage Report
 
-You can generate a usage report for all cluster resources related to your Cloudbreak instance. To generate a report:
+You can generate a usage report for all cluster resources related to your Cloudbreak instance. To generate a report, perform these steps.
+
+**Steps**
 
 1. From the Cloudbreak dashboard, click on **account** in the top right corner.  
 2. Navigate to the **usage report** tab.  
@@ -32,7 +34,9 @@ You can manage existing users (activate and deactivate) and invite new users to 
     <p class="last">SMTP is not supported by Azure, so in order to use this feature you have to configure an external email service using the steps described in the <a href="http://sequenceiq.com/cloudbreak-docs/latest/configuration/#smtp"> Cloudbreak</a> documentation.</p>
 </div>
 
-To invite a new user:
+To invite a new user, perform these steps.
+
+**Steps**
 
 1. From the Cloudbreak dashboard, click on **account** in the top right corner.  
 2. Navigate to the **manage users** tab.   
@@ -45,7 +49,9 @@ To invite a new user:
 
 #### Activate an Existing User
 
-To activate an existing user:
+To activate an existing user, perform these steps.
+
+**Steps**
 
 1. From the Cloudbreak dashboard, click on **account** in the top right corner.  
 2. Navigate to the **manage users** tab. 
@@ -55,7 +61,9 @@ To activate an existing user:
 
 #### Deactivate an Existing User
 
-To deactivate an existing user:
+To deactivate an existing user, perform these steps.
+
+**Steps**
 
 1. From the Cloudbreak dashboard, click on **account** in the top right corner.  
 2. Navigate to the **manage users** tab. 

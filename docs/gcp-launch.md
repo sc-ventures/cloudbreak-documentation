@@ -43,6 +43,8 @@ Clusters created via Cloudbreak can be in the same or different region as Cloudb
 
 ### Launch the VM  
 
+**Steps**
+
 1. Log in to Google Cloud Platform.
 
 1. Open the **Google Cloud Shell** by clicking on the  <img src="../images/gcp-icon.png" width="25" title="Icon"> icon in the top-right corner:
@@ -94,7 +96,9 @@ Now that your VM is ready, access it via SSH:
 
 ### Launch Cloudbreak Deployer
 
-After accessing the VM via SSH: 
+After accessing the VM via SSH, launch Cloudbreak deployer using the following steps.
+
+**Steps** 
 
 1. Navigate to the cloudbreak-deployment directory:
 
@@ -140,6 +144,10 @@ export UAA_DEFAULT_USER_PW=MySecurePassword123</pre>
 
 ### Access Cloudbreak UI
 
+Log in to the Cloudbreak UI using the following steps.
+
+**Steps**
+
 1. You can log into the Cloudbreak application at  `https://IP_Address`. For example `https://34.212.141.253`.  You can obtain the VM's IP address from **Compute Engine** > **VM Instances**, the **External IP** column.
 
 2. Confirm the security exception to proceed to the Cloudbreak web UI.
@@ -155,8 +163,9 @@ export UAA_DEFAULT_USER_PW=MySecurePassword123</pre>
 
 ### Create Cloudbreak Credential
 
-
 Cloudbreak works by connecting your GCP account through this credential, and then uses it to create resources on your behalf. Before you can start provisioning cluster using Cloudbreak, you must create a Cloudbreak credential.
+
+**Steps**
 
 1. In the Cloudbreak web UI, open the **manage credentials** pane. 
 

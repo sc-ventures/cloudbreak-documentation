@@ -59,7 +59,9 @@ service iptables save
 
 ### Install Cloudbreak on Your Own VM
 
-Install Cloudbreak using the following steps"
+Install Cloudbreak using the following steps.
+
+**Steps**
 
 1. Install the Cloudbreak deployer and unzip the platform-specific single binary to your PATH. For example:
 

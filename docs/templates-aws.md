@@ -46,7 +46,9 @@ With this default configuration, a new VPC with a 10.0.0.0/16 subnet will be cre
 
 #### Add New VPC and Subnet 
 
-You can define reusable network configurations for your clusters in the **manage networks** tab:
+You can define reusable network configurations for your clusters in the **manage networks** tab.
+
+**Steps**
 
 1. Click on **Create a new VPC and a new subnet**.
 
@@ -67,7 +69,9 @@ You can define reusable network configurations for your clusters in the **manage
 
 #### Add New Subnet in Existing VPC
 
-You can define reusable network configurations for your clusters in the **manage networks** tab:
+You can define reusable network configurations for your clusters in the **manage networks** tab.
+
+**Steps**
 
 1. Click on **Create a new subnet in an existing VPC**.
 
@@ -90,7 +94,9 @@ You can define reusable network configurations for your clusters in the **manage
 
 #### Use Existing VPC and Subnet  
 
-You can define reusable network configurations for your clusters in the **manage networks** tab:
+You can define reusable network configurations for your clusters in the **manage networks** tab.
+
+**Steps**
 
 1. Click on **Use an existing subnet in an existing VPC**. 
 
@@ -131,7 +137,9 @@ Cloudbreak includes one pre-defined security group configuration called *default
 
 #### Use Existing Security Group  
 
-You can copy rules of an existing security group by using the **Use an existing security group** option available in the **manage security groups** tab: 
+You can copy rules of an existing security group by using the **Use an existing security group** option available in the **manage security groups** tab.
+
+**Steps** 
 
 1. Click on **Use an existing security group**.
 
@@ -177,7 +185,9 @@ Cloudbreak includes one pre-defined template called *minviable-aws*, which is us
 
 #### Add Custom Template 
 
-You can define reusable configurations in the **manage templates** tab: 
+You can define reusable configurations in the **manage templates** tab.
+
+**Steps** 
 
 1. Click on **+create template**.
 

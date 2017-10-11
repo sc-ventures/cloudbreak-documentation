@@ -27,7 +27,9 @@ The easiest way to install and start Cloudbreak Shell is from the VM on which yo
 
 <pre>cbd util cloudbreak-shell</pre>
 
-If you would like to use Cloudbreak Shell from your local machine:
+If you would like to use Cloudbreak Shell from your local machine, follow these steps.
+
+**Steps**
 
 1. Execute `cbd util cloudbreak-shell-remote` on the VM where Cloudbreak is running.
 

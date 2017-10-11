@@ -47,6 +47,10 @@ An OpenStack administrator must perform these steps to add the Cloudbreak deploy
 
 #### Import Cloudbreak Deployer Image 
 
+Import Cloudbreak deployer image using the following steps.
+
+**Steps**
+
 1. Download the latest Cloudbreak deployer image to your local machine: 
 
     <pre>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer-1164-2017-08-25.img</pre>
@@ -70,6 +74,10 @@ After performing the import, you should be able to see the Cloudbreak deployer i
     
     
 #### Import HDP Image
+
+Import HDP image using the following steps.
+
+**Steps**
     
 1. Download the latest HDP image to your local machine: 
 
@@ -113,7 +121,9 @@ Now that your VM is ready, access it via SSH:
 
 ### Initialize Your Profile 
 
-After accessing the VM via SSH: 
+After accessing the VM via SSH, you must initialize your Profile.
+
+**Steps** 
 
 1. Navigate to the cloudbreak-deployment directory:
 
@@ -145,7 +155,9 @@ export PUBLIC_IP=34.212.141.253</pre>
 
 If your OpenStack is secured with a self-signed certificate, you need to import that certificate into Cloudbreak, or else Cloudbreak won't be able to communicate with your OpenStack. 
 
-To import the certificate, place the certificate file in the `/certs/trusted/` directory:
+To import the certificate, place the certificate file in the `/certs/trusted/` directory, follow these steps.
+
+**Steps**
 
 1. Navigate to the `certs` directory (automatically generated).
 2. Create the `trusted` directory.
@@ -179,6 +191,10 @@ The following is an example of `openstack-zone.json` containing two regions and 
 
 ### Launch Cloudbreak Deployer 
 
+Launch Cloudbreak deployer using the following steps.
+
+**Steps**
+
 1. Start the Cloudbreak application by using the following command:
 
     <pre>cbd start</pre>
@@ -205,6 +221,10 @@ The following is an example of `openstack-zone.json` containing two regions and 
 
 ### Access Cloudbreak UI
 
+Log in to the Cloudbreak UI using the following steps.
+
+**Steps**
+
 1. You can log into the Cloudbreak application at `https://IP_Address` where "IP_Address" if the public IP of your OpenStack VM. For example `https://34.212.141.253`.
 
 2. Confirm the security exception to proceed to the Cloudbreak web UI.
@@ -222,6 +242,8 @@ The following is an example of `openstack-zone.json` containing two regions and 
 ### Create Cloudbreak Credential
 
 Cloudbreak works by connecting your OpenStack account through this credential, and then uses it to create resources on your behalf. Before you can start provisioning cluster using Cloudbreak, you must create a Cloudbreak credential.
+
+**Steps**
 
 1. In the Cloudbreak web UI, open the **manage credentials** pane. 
 

@@ -24,6 +24,8 @@ The following table includes examples of scaling policies and alerts attached to
 
 Auto scaling is disabled by default. Once the cluster is running, you can enable it for the cluster from the cluster's **autoscaling SLA policies** page. 
 
+**Steps**
+
 1. Click on the cluster tile to navigate to cluster **details** page.
 2. Click **autoscaling SLA policies**.
 2. Click **enable** to enable auto-scaling for the cluster.
@@ -31,6 +33,8 @@ Auto scaling is disabled by default. Once the cluster is running, you can enable
 Example: 
 
 <a href="../images/autoscaling-enable.png" target="_blank" title="click to enlarge"><img src="../images/autoscaling-enable.png" width="650" title="Cloudbreak web UI"></a> 
+
+**Next Steps**
 
 After you have enabled auto scaling, perform these steps:
 
@@ -43,7 +47,9 @@ After you have enabled auto scaling, perform these steps:
 
 Metric-based alerts use Ambari metrics. These metrics have a default threshold value configured in Ambari, which you can modify in Ambari web UI.
 
-To create a new metric-based alert in the Cloudbreak UI:
+To create a new metric-based alert in the Cloudbreak UI, use the following steps.
+
+**Steps**
 
 1. Enable auto scaling by clicking **enable**. 
 2. Select **metric based**. 
@@ -76,7 +82,9 @@ Example:
 
 Time-based alerts are based on cron expressions, allowing alerts to be triggered based on time.
 
-To create a new time-based alert in the Cloudbreak UI:
+To create a new time-based alert in the Cloudbreak UI, use the following steps.
+
+**Steps**
 
 1. Enable auto scaling by clicking **enable**.  
 2. Select **time based**. 
@@ -92,7 +100,9 @@ Example:
 
 #### Create a Scaling Policy 
 
-To create a new scaling policy:
+To create a new scaling policy, use the following steps.
+
+**Steps**
 
 1. Enter the **policy name**. Only alphanumeric characters (min 5, max 100 characters) are allowed.
 2. Select a type first (node count, percentage, or exact), and then enter a value for the **scaling adjustment**:
@@ -138,7 +148,9 @@ To keep your cluster healthy, Cloudbreak auto scaling runs several background ch
 
 Auto scaling is disabled by default.
 
-If you have previously enabled it for a given cluster and you would like to disable it, you can do it from the cluster's **autoscaling SLA policies** page: 
+If you have previously enabled it for a given cluster and you would like to disable it, you can do it from the cluster's **autoscaling SLA policies** page.
+
+**Steps** 
 
 1. Click on the cluster tile to navigate to cluster **details** page.
 2. Click **autoscaling SLA policies**.

@@ -2,7 +2,9 @@
 
 ### Delete Cloudbreak Controller
 
-To delete Cloudbreak Controller, delete the whole related resource group:
+To delete Cloudbreak Controller, delete the whole related resource group.
+
+**Steps**
 
 1. From the Microsoft Azure Portal dashboard, select <img src="../images/resource-icon.png" width="150" title="Icon">.
 2. Find the resource group that you want to delete, click on **...** and select **Delete**:

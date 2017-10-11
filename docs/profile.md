@@ -238,6 +238,40 @@ Default value fro `UAA_DEFAULT_USER_GROUPS` is:
 <pre>"openid,cloudbreak.networks,cloudbreak.securitygroups,cloudbreak.templates,cloudbreak.blueprints,cloudbreak.credentials,cloudbreak.stacks,sequenceiq.cloudbreak.admin,sequenceiq.cloudbreak.user,sequenceiq.account.${UAA_DEFAULT_ACCOUNT},cloudbreak.events,cloudbreak.usages.global,cloudbreak.usages.account,cloudbreak.usages.user,periscope.cluster,cloudbreak.recipes,cloudbreak.blueprints.read,cloudbreak.templates.read,cloudbreak.credentials.read,cloudbreak.recipes.read,cloudbreak.networks.read,cloudbreak.securitygroups.read,cloudbreak.stacks.read,cloudbreak.sssdconfigs,cloudbreak.sssdconfigs.read,cloudbreak.platforms,cloudbreak.platforms.read"</pre>
 
 
+### Change SMTP Parameters
+
+If you want to change SMTP parameters, add them your `Profile`.
+
+The default values of the SMTP parameters are:
+
+```
+export CLOUDBREAK_SMTP_SENDER_USERNAME=
+export CLOUDBREAK_SMTP_SENDER_PASSWORD=
+export CLOUDBREAK_SMTP_SENDER_HOST=
+export CLOUDBREAK_SMTP_SENDER_PORT=25
+export CLOUDBREAK_SMTP_SENDER_FROM=
+export CLOUDBREAK_SMTP_AUTH=true
+export CLOUDBREAK_SMTP_STARTTLS_ENABLE=true
+export CLOUDBREAK_SMTP_TYPE=smtp
+```
+
+If your SMTP server uses SMTPS, you must set the protocol in your `Profile` to smtps:
+
+```
+export CLOUDBREAK_SMTP_TYPE=smtps
+```
+
+### Configure Consul 
+
+Cloudbreak uses [Consul](https://www.consul.io/) for DNS resolution. All Cloudbreak related services are registered as someservice.service.consul.
+
+Consul’s built-in DNS server is able to fallback on another DNS server. This option is called `-recursor`. Clodbreak Deployer first tries to discover the DNS settings of the host by looking for nameserver entry in the `/etc/resolv.conf` file. If it finds one, consul will use it as a recursor. Otherwise, it will use `8.8.8.8`.
+
+For a full list of available consul config options, refer to [Consul documentation](https://www.consul.io/docs/agent/options.html).
+
+To pass any additional Consul configuration, define the `DOCKER_CONSUL_OPTIONS` variable in the Profile file.
+
+
 ### Create Environment Specific Profiles
 
 If you would like to use a different versions of Cloudbreak for prod and qa profile, you must create two environment specific configurations that can be sourced. For example:

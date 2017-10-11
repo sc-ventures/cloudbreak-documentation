@@ -122,8 +122,5 @@ HTTP/1.1 200 OK
 
 #### Where are Data Volumes Mounted 
 
-The disks that are attached to the instances serving as cluster nodes are automatically mounted to `/hadoopfs/fs1`, `/hadoopfs/fs2`, ... , `/hadoopfs/fsN` respectively.
-
-
-
+The disks that are attached to the instances serving as cluster nodes are automatically mounted to `/hadoopfs/fs1`, `/hadoopfs/fs2`, ... , `/hadoopfs/fsN` respectively. 
 

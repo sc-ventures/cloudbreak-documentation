@@ -34,7 +34,9 @@ Your clusters can be created in new networks or in one of your existing networks
 
 #### Add New Network and Subnet
 
-You can define reusable network configurations for your clusters in the **manage networks** tab:
+You can define reusable network configurations for your clusters in the **manage networks** tab.
+
+**Steps**
 
 1. Click on **Create a new virtual network and a new subnet**.
 
@@ -56,7 +58,9 @@ You can define reusable network configurations for your clusters in the **manage
 
 #### Add New Subnet in an Existing Network
 
-You can define reusable network configurations for your clusters in the **manage networks** tab:
+You can define reusable network configurations for your clusters in the **manage networks** tab.
+
+**Steps**
 
 1. Click on **Create a new subnet in an existing virtual network**.
 
@@ -84,7 +88,9 @@ You can define reusable network configurations for your clusters in the **manage
 
 #### Use Existing Network and Subnet
 
-You can define reusable network configurations for your clusters in the **manage networks** tab:
+You can define reusable network configurations for your clusters in the **manage networks** tab.
+
+**Steps**
 
 1. Click on **Use an existing subnet in an existing virtual network**. 
 
@@ -130,7 +136,9 @@ Before you can start using CLoubreak, you must define at least one custom templa
 
 #### Add Custom Template
 
-You can define reusable cluster templates in the **manage templates** tab: 
+You can define reusable cluster templates in the **manage templates** tab.
+
+**Steps** 
 
 1. Click on **+create template**.
 

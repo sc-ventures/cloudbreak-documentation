@@ -1,3 +1,4 @@
+Use the steps to create a cluster.
 
 1. Log in to the Cloudbreak UI.
     

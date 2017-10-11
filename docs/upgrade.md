@@ -3,7 +3,9 @@
 
 ### Update Cloudbreak Deployer 
 
-To upgrade Cloudbreak to the newest version, perform the following steps:
+To upgrade Cloudbreak to the newest version, perform the following steps.
+
+**Steps**
 
 1. On the VM where Cloudbreak is running, navigate to the directory where your Profile file is located:
 
@@ -43,7 +45,9 @@ In addition, if you have any clusters running, you must update them using the fo
 
 Upgrading from version 1.4.0 to the newest version does not require any manual modification from the users.
 
-Upgrading from version 1.3.0 to the newest version requires that you update existing clusters. To update existing clusters, run the following commands on the `cbgateway` node of the cluster:
+Upgrading from version 1.3.0 to the newest version requires that you update existing clusters. To update existing clusters, run the following commands on the `cbgateway` node of the cluster.
+
+**Steps**
 
 1. Update the version of the Salt-Bootsrap tool on the nodes:
     <pre>salt '*' cmd.run 'curl -Ls https://github.com/sequenceiq/salt-bootstrap/releases/download/v0.1.2/salt-bootstrap_0.1.2_Linux_x86_64.tgz | tar -zx -C /usr/sbin/ salt-bootstrap'</pre>

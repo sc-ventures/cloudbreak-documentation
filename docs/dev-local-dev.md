@@ -1,5 +1,5 @@
 
-## Set up Local Dev Environment
+## Set up Local Environment
 
 >>>>TO-DO: What are some use cases where someone would want to use this? How are SPI, APIs, and flows related?  
 
@@ -38,6 +38,8 @@ brew cask install virtualbox
 ### Set up Cloudbreak Deployer 
  
 The simplest way to prepare the working environment is to start the Cloudbreak application on your local machine using [Cloudbreak deployer](https://github.com/hortonworks/cloudbreak-deployer).
+
+**Steps**
 
 1. Create a directory which will store the necessary configuration files and dependencies of the Cloudbreak deployer. This directory must be created outside of the cloned Cloudbreak deployer git repository:
 
@@ -132,6 +134,8 @@ cbd util local-dev
 Go to https://github.com/hortonworks/cloudbreak, and clone or download the repo. If you want to use SSH, see [https://help.github.com/articles/connecting-to-github-with-ssh/](https://help.github.com/articles/connecting-to-github-with-ssh/). 
 
 #### Update Project Settings in IDEA
+
+**Steps**
 
 1. In IDEA, set your SDK to your Java version under **Configure > Project Defaults > Project Structure > Project SDK**.
 

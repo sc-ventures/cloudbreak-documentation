@@ -41,7 +41,9 @@ With this default configuration, a new virtual network with a 10.0.0.0/16 subnet
 
 #### Add New Network and Subnet 
 
-You can define reusable network configurations for your clusters in the **manage networks** tab:
+You can define reusable network configurations for your clusters in the **manage networks** tab.
+
+**Steps**
 
 1. Click on **Create a new virtual network and a new subnet**.
 
@@ -61,7 +63,9 @@ You can define reusable network configurations for your clusters in the **manage
 
 #### Add New Subnet in Existing Network
 
-You can define reusable network configurations for your clusters in the **manage networks** tab:
+You can define reusable network configurations for your clusters in the **manage networks** tab.
+
+**Steps**
 
 1. Click on **Create a new subnet in an existing virtual network**. 
 
@@ -85,7 +89,9 @@ You can define reusable network configurations for your clusters in the **manage
 
 #### Use Existing Network and Subnet 
 
-You can define reusable network configurations for your clusters in the **manage networks** tab:
+You can define reusable network configurations for your clusters in the **manage networks** tab.
+
+**Steps**
 
 1. Click on **Use an existing subnet in an existing virtual network**. 
 
@@ -108,7 +114,9 @@ You can define reusable network configurations for your clusters in the **manage
 
 #### Use Legacy Network Without Subnets
 
-You can define reusable network configurations for your clusters in the **manage networks** tab:
+You can define reusable network configurations for your clusters in the **manage networks** tab.
+
+**Steps**
 
 1. Click on **Use a legacy network without subnets**. 
 
@@ -169,7 +177,9 @@ Cloudbreak includes one pre-defined infrastructure template called *minviable-gc
 
 #### Add Custom Template 
 
-You can define reusable cluster templates in the **manage templates** tab: 
+You can define reusable cluster templates in the **manage templates** tab.
+
+**Steps** 
 
 1. Click on **+create template**.
 

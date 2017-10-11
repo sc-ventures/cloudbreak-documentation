@@ -47,12 +47,11 @@ pages:
         - Auto Scaling: autoscaling.md
         - Custom Images: images.md
         - Ambari Database: ambari-db.md
-        - Cloudbreak Database: cb-db.md
       - Configure Security: 
         - Network and Security: security.md
         - Secure Cloudbreak after Launch: security-cb.md
-        - Enable LDAP/AD for Cloudbreak: security-ldap.md
-        - Enable Kerberos for Your Cluster: security-kerberos.md
+        - Use LDAP/AD for Cloudbreak: security-ldap.md
+        - Use Kerberos for Your Cluster: security-kerberos.md
       - Manage Cloudbreak:
         - Install on Your Own VM: vm-launch.md
         - Manage Cloudbreak Credentials: credentials.md  
@@ -60,6 +59,7 @@ pages:
         - Upgrade Clodbreak: upgrade.md
         - Delete Cloudbreak: delete.md 
         - Configure Profile Variables: profile.md
+        - Manage Cloudbreak Database: cb-db.md
     - More:
       - Troubleshooting: 
         - General Troubleshooting: trouble-cb.md
@@ -69,10 +69,10 @@ pages:
         - Troubleshooting OpenStack: trouble-os.md
       - Cloudbreak Shell: cb-shell.md
       - Developer:
-        - Set up Local Dev Environment: dev-local-dev.md
+        - Set up Local Environment: dev-local-dev.md
         - Cloudbreak SPI: dev-spi.md
         - Cloudbreak APIs: dev-api.md
-        - Flows: dev-flows.md 
+        - Flow Diagrams: dev-flows.md 
       - FAQs: faq.md 
       - Getting Help: get-help.md
       - SmartSense: smartsense.md

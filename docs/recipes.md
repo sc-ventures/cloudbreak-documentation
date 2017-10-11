@@ -31,7 +31,9 @@ ENDOF
 
 ### Adding Recipes
 
-To add a recipe:
+To add a recipe, perform these steps.
+
+**Steps**
 
 1. Place your script in a network location accessible from Cloudbreak and cluster instances virtual network. 
   
