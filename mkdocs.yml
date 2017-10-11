@@ -53,13 +53,13 @@ pages:
         - Secure Cloudbreak after Launch: security-cb.md
         - Enable LDAP/AD for Cloudbreak: security-ldap.md
         - Enable Kerberos for Your Cluster: security-kerberos.md
-      - Customize Profile File: profile.md
       - Manage Cloudbreak:
+        - Install on Your Own VM: vm-launch.md
         - Manage Cloudbreak Credentials: credentials.md  
         - Manage Your Account: cb-account.md
         - Upgrade Clodbreak: upgrade.md
         - Delete Cloudbreak: delete.md 
-        - Install on Your Own VM: vm-launch.md
+        - Configure Profile Variables: profile.md
     - More:
       - Troubleshooting: 
         - General Troubleshooting: trouble-cb.md
@@ -67,13 +67,13 @@ pages:
         - Troubleshooting Azure: trouble-azure.md
         - Troubleshooting GCP: trouble-gcp.md
         - Troubleshooting OpenStack: trouble-os.md
-      - Developer Docs:
-        - Cloudbreak Shell: cb-shell.md
+      - Cloudbreak Shell: cb-shell.md
+      - Developer:
+        - Set up Local Dev Environment: dev-local-dev.md
         - Cloudbreak SPI: dev-spi.md
-        - Local Development: dev-local-dev.md
         - Cloudbreak APIs: dev-api.md
         - Flows: dev-flows.md 
-      - FAQ: faq.md 
+      - FAQs: faq.md 
       - Getting Help: get-help.md
       - SmartSense: smartsense.md
 

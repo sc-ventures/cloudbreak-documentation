@@ -1,13 +1,45 @@
 
-## Profile Variables
+## Configure Profile Variables
 
-During startup, Cloudbreak deployer tries to determine the underlying infrastructure and then sets required environment variables with appropriate default values. If these environment variables are not sufficient for your use case, you can set additional environment variables in your `Profile` file. Refer to the list below for available custom environment variables. The variables are listed with their default values. If default is unset, no value is listed. 
+Cloudbreak deployer configuration is based on environment variables.  
 
-### Setting Provfle Variables
+During startup, Cloudbreak deployer tries to determine the underlying infrastructure and then sets required environment variables with appropriate default values. If these environment variables are not sufficient for your use case, you can set additional environment variables in your `Profile` file. 
 
->>>>TO-DO: How to set them? 
+Cloudbreak deployer always opens a new bash subprocess without inheriting environment variables. Only the following environment variables are inherited:
 
-### Cloudbreak Variables
+* `HOME`  
+* `DEBUG`  
+* `TRACE`  
+* `CBD_DEFAULT_PROFILE`  
+* all `DOCKER_XXX` 
+
+>>>>TO-DO: What do you mean by "Cloudbreak deployer **always** opens a new bash subprocess without inheriting environment variables?" Do you mean during startup or when? Without inheriting from where?
+
+
+### Set Profile Variables
+
+To set environment variables relevant for Cloudbreak Deployer, add them to a file called `Profile` located in the Cloudbreak deployment directory (typically `/var/lib/cloudbreak-deployment`).
+
+The `Profile` file is sourced, so you can use the usual syntax to set configuration values:
+
+```
+export MY_VAR=some_value
+export MY_OTHER_VAR=another_value 
+```
+
+### Check Available Profile Variables
+
+To see all available environment variables with their default values, use:
+
+```
+cbd env show
+```
+
+### Profile Variables
+
+#### Cloudbreak Variables
+
+Refer to this list for available environment variables. The variables are listed with their default values. If default is unset, no value is listed. 
 
 | Variable Name | Default Value | Description |
 |---|---|---|
@@ -171,7 +203,7 @@ During startup, Cloudbreak deployer tries to determine the underlying infrastruc
 | CB_GCP_HOSTKEY_VERIFY | "false" | When set to "true", enables host fingerprint verification on GCP |
 
 
-### Local Development Variables
+#### Local Development Variables
 
 | Variable Name | Default Value | Description |
 |---|---|---|
@@ -186,7 +218,7 @@ During startup, Cloudbreak deployer tries to determine the underlying infrastruc
 | ULUWATU_VOLUME_HOST | /dev/null | Location of the locally developed web UI project |
 
 
-### MacOS Variables
+#### MacOS Variables
 
 | Variable Name | Default Value | Description |
 |---|---|---|
@@ -198,10 +230,30 @@ During startup, Cloudbreak deployer tries to determine the underlying infrastruc
 | MACHINE_OPTS | "--xhyve-virtio-9p" | Extra options for Docker Machine instance |
 | MACHINE_STORAGE_PATH | $HOME/.docker/machine | Docker Machine storage path |
 
-### More
 
 ####UAA_DEFAULT_USER_GROUPS
 
 Default value fro `UAA_DEFAULT_USER_GROUPS` is:
 
 <pre>"openid,cloudbreak.networks,cloudbreak.securitygroups,cloudbreak.templates,cloudbreak.blueprints,cloudbreak.credentials,cloudbreak.stacks,sequenceiq.cloudbreak.admin,sequenceiq.cloudbreak.user,sequenceiq.account.${UAA_DEFAULT_ACCOUNT},cloudbreak.events,cloudbreak.usages.global,cloudbreak.usages.account,cloudbreak.usages.user,periscope.cluster,cloudbreak.recipes,cloudbreak.blueprints.read,cloudbreak.templates.read,cloudbreak.credentials.read,cloudbreak.recipes.read,cloudbreak.networks.read,cloudbreak.securitygroups.read,cloudbreak.stacks.read,cloudbreak.sssdconfigs,cloudbreak.sssdconfigs.read,cloudbreak.platforms,cloudbreak.platforms.read"</pre>
+
+
+### Create Environment Specific Profiles
+
+If you would like to use a different versions of Cloudbreak for prod and qa profile, you must create two environment specific configurations that can be sourced. For example:
+
+* Profile.prod  
+* Profile.qa   
+
+For example, to create and use a prod profile, you need to:
+
+1. Create a file called `Profile.prod`  
+2. Write the environment-specific `export DOCKER_TAG_CLOUDBREAK=0.3.99` into `Profile.prod` to specify Docker image.  
+3. Set the environment variable: `CBD_DEFAULT_PROFILE=prod`  
+
+To use the prod specific profile once, set:  
+
+<pre>CBD_DEFAULT_PROFILE=prod cbd some_commands</pre>
+    
+To permanently use the prod profile, set `export CBD_DEFAULT_PROFILE=prod` in your `.bash_profile`.
+

@@ -1,5 +1,7 @@
-
 ## Troubleshooting Cloudbreak
+
+>>>>TO-DO: How about 'cbd doctor'? I read in the Cloudbreak docs that "The doctor command helps you diagnose problems with your environment, such as common problems with your docker or boot2docker configuration. You can also use it to check cbd versions." 
+
 
 ### Checking the Logs
 
@@ -72,6 +74,11 @@ Both files contain important information about the root cause of a certain issue
 Ambari agent logs can be found on the nodes where Ambari agent is installed in the following locations:
 
 `/var/log/ambari-agent/ambari-agent.log`
+
+>>>>This doc http://hortonworks.github.io/cloudbreak-docs/release-1.16.4/operations/#ambari-server-node mentions more HDP/Ambari logs than these mentioned above. It says:
+>>>>You can access Hadoop logs from the host and from the container in the /hadoopfs/fs1/logs directory.
+>>>>You can access Ambari logs from the host instance in the `/hadoopfs/fs1/logs folder.
+>>>>How are these logs different than these mentioned above?
 
 
 #### Recipe Logs

@@ -1,10 +1,6 @@
-
 ## FAQs
 
-How to...
-
-
-#### Generate a New SSH Key Pair 
+#### How to Generate SSH Key Pair 
 
 All the instances created by Cloudbreak are configured to allow key-based SSH, so you'll need to provide an SSH public key that can be used later to SSH onto the instances in the clusters you'll create with Cloudbreak. You can use one of your existing keys or you can generate a new one.
 
@@ -30,18 +26,104 @@ After you enter (or not) a passphrase, the key pair is generated. The output sho
 Later you'll need to pass the content of the `.pub` file to Cloudbreak and use the private key file to SSH to the instances. 
 
 
-#### Recover My Public SSH Key 
+#### How to Recover Public SSH Key 
 
 The `-y` option of `ssh-keygen` outputs the public key. For example:
 
 <pre>ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub</pre>
 
-#### SSH to the Hosts 
+#### How to SSH to the Hosts 
+
+To connect to a running VM through SSH, you need to know its public IP address and have your private key available. 
+
+The private key that you must use to access the VM is the counterpart of the public key that you specified when creating a Cloudbreak credential.
+
+You can find the IP addresses of all the running VMs in the Cloudbreak UI, on the cluster details page. Only key-based authentication is supported. 
+
+Cloudbreak creates a cloudbreak user which can be used to ssh into the box. This user has passwordless sudo rights.
+
+For example:
+
+```
+ssh -i ~/.ssh/your-private-key.pem cloudbreak@<public-ip>
+```
+
+#### How to Check Cloudbreak Version 
+
+To check Cloudbreak version, navigate to the Cloudbreak home directory and execute the `cbd doctor` command.
 
 
-#### Access Cloudbreak Logs
+#### How to Check Available Environment Variables
+
+To see all available environment variables with their default values, use:
+
+```
+cbd env show
+```
+
+#### How to Access Cloudbreak Logs
+
+Refer to [Troubleshooting](trouble-cb.md#checking-the-logs).
 
 
-#### Check Cloudbreak Version 
+#### How to Debug in Cloudbreak Shell
+
+To get more detailed command prompt output, set the DEBUG environment variable to non-zero:
+
+```
+DEBUG=1 cbd <some_command>
+```
+
+#### How to Configure and Test Proxy Settings
+
+**For cbd**
+
+To configure proxy settings for Cloudbreak Deployer, add the following configs to your Profile:
+
+```
+export http_proxy="http://YOUR_PROXY_ADDRESS:YOUR_PROXY_PORT/"
+export https_proxy="http(s)://YOUR_PROXY_ADDRESS:YOUR_PROXY_PORT/"
+export CB_HTTP_PROXY="http://YOUR_PROXY_ADDRESS:YOUR_PROXY_PORT/"
+export CB_HTTPS_PROXY="http(s)://YOUR_PROXY_ADDRESS:YOUR_PROXY_PORT/"
+export CB_JAVA_OPTS="-Dhttp.proxyHost=YOUR_PROXY_ADDRESS -Dhttp.proxyPort=YOUR_PROXY_PORT -Dhttps.proxyHost=YOUR_PROXY_ADDRESS -Dhttps.proxyPort=YOUR_PROXY_PORT -Dhttp.nonProxyHosts=172.17.0.1|*.service.consul|*.node.dc1.consul"
+```
+
+**For Docker**
+
+To download newer Docker images from the official repository, you need to configure proxy settings for the Docker service. You can do this by configuring the 'HTTP_PROXY' variable in your environment. Next, restart the docker service. For more information, refer to [Docker documentation](https://docs.docker.com/engine/admin/systemd/).
+
+
+**For Provisioned Clusters**
+
+For a cluster to be provisioned to a (virtual) network that is behind a proxy, the yum on the provisioned machines needs to be configured to use that proxy. This is important because the Ambari install needs access to public repositories. You can configure yum proxy settings by using the recipe functionality of Cloudbreak. Use the following bash script to create a 'pre' recipe that will run on all of the nodes before the Ambari install:
+
+```
+#!/bin/bash
+cat >> /etc/yum.conf <<ENDOF
+
+proxy=http://YOUR_PROXY_ADDRESS:YOUR_PROXY_PORT
+
+ENDOF
+```
+
+**Test Your Proxy Settings**
+
+You can use the following CURL command to test your proxy settings:
+
+```
+https_proxy="YOUR_PROXY_ADDRESS:YOUR_PROXY_PORT" curl -X GET -I --insecure https://cloudbreak-api.sequenceiq.com/info
+```
+
+Its output should start with:
+
+```
+HTTP/1.1 200 OK
+```
+
+#### Where are Data Volumes Mounted 
+
+The disks that are attached to the instances serving as cluster nodes are automatically mounted to `/hadoopfs/fs1`, `/hadoopfs/fs2`, ... , `/hadoopfs/fsN` respectively.
+
+
 
 
