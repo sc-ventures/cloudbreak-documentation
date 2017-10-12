@@ -58,24 +58,24 @@ pages:
         - Manage Cloudbreak Database: cb-db.md
         - Upgrade Clodbreak: upgrade.md
         - Delete Cloudbreak: delete.md 
-      - Security: 
+      - Configuring Security: 
         - Security Overview: security.md
         - Basic Security: security-cb.md
         - LDAP/AD: security-ldap.md
         - Kerberos: security-kerberos.md
     - More:
-      - Troubleshooting: 
-        - General Troubleshooting: trouble-cb.md
-        - Troubleshooting AWS: trouble-aws.md
-        - Troubleshooting Azure: trouble-azure.md
-        - Troubleshooting GCP: trouble-gcp.md
-        - Troubleshooting OpenStack: trouble-os.md
       - Cloudbreak Shell: cb-shell.md
       - Developer:
         - Setting up Local Environment: dev-local-dev.md
         - Cloudbreak SPI: dev-spi.md
         - Cloudbreak APIs: dev-api.md
         - Flow Diagrams: dev-flows.md 
+      - Troubleshooting: 
+        - General Troubleshooting: trouble-cb.md
+        - Troubleshooting AWS: trouble-aws.md
+        - Troubleshooting Azure: trouble-azure.md
+        - Troubleshooting GCP: trouble-gcp.md
+        - Troubleshooting OpenStack: trouble-os.md
       - FAQs: faq.md 
       - Getting Help: get-help.md
       - SmartSense: smartsense.md
