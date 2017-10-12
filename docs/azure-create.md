@@ -63,6 +63,7 @@ In Cloudbreak UI, availability sets can be configured during cluster creation:
 
 4. After the deployment is finished, you can check the layout of the VMs inside an availability set on Azure Portal. You will find the "Availability set" resources corresponding to the host groups inside the deployment's resource group. 
 
+
 <div class="next">
-<a href="../azure-data/index.html">Next: Access Cloud Data</a>
+<a href="../clusters-access/index.html">Next: Access Cluster</a>
 </div>

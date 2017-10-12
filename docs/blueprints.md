@@ -60,7 +60,7 @@ You can reuse default and previously added blueprints by using the **copy & edit
 
 2. Make updates in your blueprint and save them as a new blueprint.
 
-### Modify Existing Blueprint
+### Modifying Existing Blueprint
 
 To modify existing an blueprint without keeping the original:
 

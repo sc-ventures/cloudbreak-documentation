@@ -26,8 +26,5 @@ For example:
 
 On Windows, you can SSH using an SSH client such as PuTTY. 
 
-<div class="next">
-<a href="../clusters-manage/index.html">Next: Manage and Monitor Clusters</a>
-</div>
 
 

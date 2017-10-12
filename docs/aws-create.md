@@ -28,6 +28,7 @@ If you are already familiar with Cloudbreak, review the [Blueprints](blueprints.
 
 {!docs/common/cluster-adv-4.md!}
 
+
 <div class="next">
-<a href="../aws-data/index.html">Next: Access Cloud Data</a>
+<a href="../clusters-access/index.html">Next: Access Cluster</a>
 </div>

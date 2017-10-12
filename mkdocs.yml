@@ -21,21 +21,23 @@ pages:
     - AWS:
       - Launch on AWS: aws-launch.md
       - Create a Cluster: aws-create.md
+      - Access Cluster: clusters-access.md
       - Access Data on S3: aws-data.md
     - Azure:
       - Launch on Azure: azure-launch.md
       - Create a Cluster: azure-create.md
+      - Access Cluster: clusters-access.md
       - Access Data on Azure: azure-data.md
     - GCP:
       - Launch on GCP: gcp-launch.md
       - Create a Cluster: gcp-create.md
+      - Access Cluster: clusters-access.md
     - OpenStack:
       - Launch on Open Stack: os-launch.md
       - Create a Cluster: os-create.md
-    - Config & Admin:
       - Access Cluster: clusters-access.md
-      - Manage and Monitor Cluster: clusters-manage.md
-      - Configure Cluster:
+    - Config & Admin:
+      - Cluster Options:
         - Blueprints: blueprints.md
         - Templates:
           - Templates for AWS: templates-aws.md
@@ -47,12 +49,8 @@ pages:
         - Auto Scaling: autoscaling.md
         - Custom Images: images.md
         - Ambari Database: ambari-db.md
-      - Configure Security: 
-        - Network and Security: security.md
-        - Secure Cloudbreak after Launch: security-cb.md
-        - Use LDAP/AD for Cloudbreak: security-ldap.md
-        - Use Kerberos for Your Cluster: security-kerberos.md
-      - Manage Cloudbreak:
+      - Manage and Monitor Clusters: clusters-manage.md
+      - Managing Cloudbreak:
         - Install on Your Own VM: vm-launch.md
         - Manage Cloudbreak Credentials: credentials.md  
         - Manage Your Account: cb-account.md
@@ -60,6 +58,11 @@ pages:
         - Delete Cloudbreak: delete.md 
         - Configure Profile Variables: profile.md
         - Manage Cloudbreak Database: cb-db.md
+      - Security: 
+        - Security Overview: security.md
+        - Basic Security: security-cb.md
+        - LDAP/AD: security-ldap.md
+        - Kerberos: security-kerberos.md
     - More:
       - Troubleshooting: 
         - General Troubleshooting: trouble-cb.md
