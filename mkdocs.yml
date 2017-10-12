@@ -72,7 +72,7 @@ pages:
         - Troubleshooting OpenStack: trouble-os.md
       - Cloudbreak Shell: cb-shell.md
       - Developer:
-        - Set up Local Environment: dev-local-dev.md
+        - Setting up Local Environment: dev-local-dev.md
         - Cloudbreak SPI: dev-spi.md
         - Cloudbreak APIs: dev-api.md
         - Flow Diagrams: dev-flows.md 

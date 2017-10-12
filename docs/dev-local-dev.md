@@ -1,5 +1,5 @@
 
-## Set up Local Environment
+## Setting up Local Environment
 
 >>>>TO-DO: What are some use cases where someone would want to use this? How are SPI, APIs, and flows related?  
 
