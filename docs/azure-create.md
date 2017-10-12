@@ -65,5 +65,5 @@ In Cloudbreak UI, availability sets can be configured during cluster creation:
 
 
 <div class="next">
-<a href="../clusters-access/index.html">Next: Access Cluster</a>
+<a href="../azure-clusters-access/index.html">Next: Access Cluster</a>
 </div>

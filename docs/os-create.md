@@ -27,5 +27,5 @@ If you are just getting started with Cloudbreak, follow the steps below to creat
 
 
 <div class="next">
-<a href="../clusters-access/index.html">Next: Access Cluster</a>
+<a href="../os-clusters-access/index.html">Next: Access Cluster</a>
 </div>

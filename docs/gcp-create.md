@@ -36,6 +36,6 @@ If you are just getting started with Cloudbreak, follow the steps below to creat
 {!docs/common/cluster-adv-4.md!}
 
 <div class="next">
-<a href="../clusters-access/index.html">Next: Access Cluster</a>
+<a href="../gcp-clusters-access/index.html">Next: Access Cluster</a>
 </div>
 

@@ -30,5 +30,5 @@ If you are already familiar with Cloudbreak, review the [Blueprints](blueprints.
 
 
 <div class="next">
-<a href="../clusters-access/index.html">Next: Access Cluster</a>
+<a href="../aws-clusters-access/index.html">Next: Access Cluster</a>
 </div>

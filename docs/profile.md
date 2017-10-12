@@ -1,5 +1,5 @@
 
-## Configure Profile Variables
+## Configure Cloudbreak via Profile Variables
 
 Cloudbreak deployer configuration is based on environment variables.  
 
@@ -45,11 +45,11 @@ Refer to this list for available environment variables. The variables are listed
 |---|---|---|
 | ADDRESS_RESOLVING_TIMEOUT | 120000 | DNS lookup timeout for internal service discovery |
 | CAPTURE_CRON_EXPRESSION  | | SmartSense bundle generation time interval in cron format |
-| CBD_CERT_ROOT_PATH | "${PWD}/certs" | Path where deployer stores Cloudbreak certificates |
+| CBD_CERT_ROOT_PATH | "${PWD}/certs" | Path where deployer stores Cloudbreak certificates. ${PWD} refers to the Cloudbreak deployment directory |
 | CBD_LOG_NAME | cbreak | Name of the Cloudbreak log file |
 | CBD_TRAEFIK_TLS | "/certs/traefik/client.pem,/certs/traefik/client-key.pem" | Path inside of the Traefik container where TLS files are located |
 | CB_BLUEPRINT_DEFAULTS | "hdp-small-default;hdp-spark-cluster;hdp-streaming-cluster" | Comma separated list of the default blueprints that Cloudbreak initializes in its database |
-| CB_BYOS_DFS_DATA_DIR | "/hadoop/hdfs/data" | (Deprecated) Default data directory for BYOP orchestrators |
+| CB_BYOS_DFS_DATA_DIR | "/hadoop/hdfs/data" | (Deprecated) Default data directory for BYOS orchestrators |
 | CB_COMPONENT_CLUSTER_ID | |SmartSense component cluster ID |
 | CB_COMPONENT_ID | | SmartSense component ID |
 | CB_COMPOSE_PROJECT | cbreak | Name of the Docker Compose project; it will appear in container names |
@@ -59,9 +59,9 @@ Refer to this list for available environment variables. The variables are listed
 | CB_DB_ENV_USER | "postgres" | User for the Cloudbreak database authentication |
 | CB_DB_ROOT_PATH | "/var/lib/cloudbreak" | (Deprecated) Location of the database volume on Cloudbreak host |
 | CB_DEFAULT_SUBSCRIPTION_ADDRESS | http://uluwatu.service.consul:3000/notifications | URL of the default subscription for Cloudbreak notifications |
-| CB_ENABLEDPLATFORMS | | Disables Cloudbreak resource called Platform |
+| CB_ENABLEDPLATFORMS | | Set this to disable Cloudbreak resource called Platform |
 | CB_ENABLE_CUSTOM_IMAGE | "false" | Set to "true" to enable custom cloud images |
-| CBD_FORCE_START | | Disables docker-compose.yml and uaa.yml validation |
+| CBD_FORCE_START | | Set this to disable docker-compose.yml and uaa.yml validation |
 | CB_HBM2DDL_STRATEGY | "validate" | Configures hibernate.hbm2ddl.auto in Cloudbreak |
 | CB_HOST_DISCOVERY_CUSTOM_DOMAIN | "" | Custom domain of the provisioned cluster |
 | CB_HTTPS_PROXY | "" | HTTPS proxy URL |
@@ -97,7 +97,7 @@ Refer to this list for available environment variables. The variables are listed
 | COMPOSE_HTTP_TIMEOUT | 120 | Docker Compose execution timeout |
 | DB_DUMP_VOLUME | cbreak_dump | Name of the database dump volume |
 | DB_MIGRATION_LOG | "db_migration.log" | Database migration log file |
-| DEFAULT_INBOUND_ACCESS_IP | "" | Opens default ports on AWS instances for address |
+| DEFAULT_INBOUND_ACCESS_IP | "" | Opens default ports on AWS instances for Cloudbreak |
 | DOCKER_CONSUL_OPTIONS | "" | Extra options for Consul |
 | DOCKER_IMAGE_CBD_SMARTSENSE | hortonworks/cbd-smartsense | SmartSense Docker image name |
 | DOCKER_IMAGE_CLOUDBREAK | hortonworks/cloudbreak | Cloudbreak Docker image name |
@@ -212,7 +212,7 @@ Refer to this list for available environment variables. The variables are listed
 | DOCKER_TAG_AMBASSADOR | 0.5.0 | Ambassador container version for local development |
 | PERISCOPE_SCHEMA_SCRIPTS_LOCATION | "container" |Location of Cloudbreak schema update files |
 | PRIVATE_IP | $BRIDGE_IP | IP address or hostname of the private interface |
-| REMOVE_CONTAINER | "--rm" | Keeps side effect containers for debug purpose |
+| REMOVE_CONTAINER | "--rm" | When set to "--rm" (default), removes side effect containers for debug purpose. Set to " " to keep side effect containers for debug purpose |
 | SULTANS_VOLUME_HOST | /dev/null | Location of the locally developed Authentication service project |
 | UAA_SCHEMA_SCRIPTS_LOCATION | "container" | Location of Identity schema update files |
 | ULUWATU_VOLUME_HOST | /dev/null | Location of the locally developed web UI project |
