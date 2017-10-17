@@ -60,7 +60,7 @@ pages:
         - Delete Cloudbreak: delete.md 
       - Configuring Security: 
         - Security Overview: security.md
-        - Basic Security: security-cb.md
+        - Basics: security-cb.md
         - LDAP/AD: security-ldap.md
         - Kerberos: security-kerberos.md
     - More:
