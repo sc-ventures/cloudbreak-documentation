@@ -1,24 +1,24 @@
-
-## Kerberos
+## Configuring Kerberos
 
 > This feature is `TECHNICAL PREVIEW`.
 
-Cloudbreak supports three ways of provisioning Kerberos-enabled clusters:
+Cloudbreak supports using Kerberos security for its clusters. It supports three ways of provisioning Kerberos-enabled clusters:
 
 * Create new MIT Kerberos at cluster provisioning time  
 * Use your existing MIT Kerberos server with a Cloudbreak provisioned cluster  
 * Use your existing Active Directory with a Cloudbreak provisioned cluster  
 
-### Create new MIT Kerberos at Cluster Provisioning
+### Create New MIT Kerberos at Cluster Provisioning
 
-Cloudbreak supports using Kerberos security on the cluster. When creating a cluster, provide your Kerberos configuration details, and Cloudbreak will install an MIT KDC and enable Kerberos on the cluster.
+When creating a cluster, you can provide your Kerberos configuration details and Cloudbreak will install an MIT KDC and enable Kerberos on the cluster.
 
-#### Enable Kerberos
+To enable Kerberos on a cluster, follow these steps when creating your cluster via Cloudbreak web UI.
 
-To enable Kerberos on a cluster, do the following when creating your cluster via Cloudbreak web UI:
+**Steps**
 
 1. In the **Create cluster** wizard, in the **Setup Network and Security** tab, check the **Enable security** option and select **Create New MIT Kerberos**.
-2. Fill in the following fields:
+
+2. Provide the following information for the KDC:
 
 | Field | Description |
 |---|---|
@@ -26,18 +26,17 @@ To enable Kerberos on a cluster, do the following when creating your cluster via
 | Kerberos admin | The KDC admin username to use for the KDC. |
 | Kerberos password | The KDC admin password to use for the KDC. |
 
-![](/images/kerberosnew.png)
-<sub>*Full size [here](/images/kerberosnew.png).*</sub>
 
-##### Testing Kerberos
+#### Testing Kerberos
 
 To run a job on the cluster, you can use one of the default Hadoop users, like `ambari-qa`.
-Once kerberos is enabled, you need a `ticket` to execute any job on the cluster. 
 
-Here's an example of how to get a ticket:
+Once kerberos is enabled, you need a `ticket` to execute any job on the cluster. Here's an example of how to get a ticket:
+
 ```
 kinit -V -kt /etc/security/keytabs/smokeuser.headless.keytab ambari-qa-sparktest-rec@NODE.DC1.CONSUL
 ```
+
 Here is an example job:
 ```java
 export HADOOP_LIBS=/usr/hdp/current/hadoop-mapreduce-client
@@ -49,11 +48,13 @@ hadoop jar $JAR_EXAMPLES teragen 10000000 /user/ambari-qa/terasort-input
 hadoop jar $JAR_JOBCLIENT mrbench -baseDir /user/ambari-qa/smallJobsBenchmark -numRuns 5 -maps 10 -reduces 5 -inputLines 10 -inputType ascending
 ```
 
-### Use Existing MIT Kerberos Server with a Cloudbreak Provisioned cluster
+### Use Existing MIT Kerberos Server with a Cloudbreak Provisioned Cluster
 
 Cloudbreak supports using Kerberos security on the cluster with an existing MIT Kerberos. When creating a cluster, provide your Kerberos configuration details, and Cloudbreak will automatically extend your blueprint configuration with the defined properties. [Setup an exiting MIT KDC](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/_use_an_exisiting_mit_kdc.html)
 
-To enable Kerberos on a cluster, do the following when creating your cluster via Cloudbreak web UI:
+To enable Kerberos on a cluster, perform the following steps when creating your cluster via Cloudbreak web UI.
+
+**Steps**
 
 1. In the **Create cluster** wizard, in the **Setup Network and Security** tab, check the **Enable security** option and select **Use Existing MIT Kerberos**.
 2. Fill in the following fields:
@@ -65,9 +66,6 @@ To enable Kerberos on a cluster, do the following when creating your cluster via
 | Existing Kerberos URL | The location of your existing MIT KDC. |
 | Use Tcp Connection | The connection type for your existing MIT KDC (default is **UDP**). |
 | Existing Kerberos Realm | The realm in your existing MIT KDC. |
-
-![](/images/kerberosmit.png)
-<sub>*Full size [here](/images/kerberosmit.png).*</sub>
 
 To enable Kerberos on a cluster, do the following when creating your cluster via Cloudbreak shell:
 
@@ -83,9 +81,10 @@ To enable Kerberos on a cluster, do the following when creating your cluster via
 
 Cloudbreak supports using Kerberos security on the cluster with an existing Active Directory. When creating a cluster, provide your Kerberos configuration details, and Cloudbreak will automatically extend your blueprint configuration with the defined properties. [Setup an Active Directory for Kerberos](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/_use_an_existing_active_directory_domain.html)
 
-#### Enable Kerberos
 
 To enable Kerberos on a cluster, do the following when creating your cluster via Cloudbreak web UI:
+
+**Steps**
 
 1. In the **Create cluster** wizard, in the **Setup Network and Security** tab, check the **Enable security** option and select **Use Existing Active Directory**.
 2. Fill in the following fields:
@@ -99,9 +98,6 @@ To enable Kerberos on a cluster, do the following when creating your cluster via
 | Existing Kerberos Realm | The realm in your existing MIT KDC. |
 | Existing Kerberos Ldap AD Url | The url of the existing secure ldap (eg. ldaps://10.1.1.5). |
 | Existing Kerberos AD Container DN | Active Directory User container for principals. For example, "OU=Hadoop,OU=People,dc=apache,dc=org". |
-
-![](/images/kerberosad.png)
-<sub>*Full size [here](/images/kerberosad.png).*</sub>
 
 To enable Kerberos on a cluster, do the following when creating your cluster via Cloudbreak shell:
 
@@ -117,7 +113,7 @@ To enable Kerberos on a cluster, do the following when creating your cluster via
 
 ### Create Hadoop Users
 
-To create Hadoop users, follow the steps below.
+To create Hadoop users, follow these steps.
 
   * Log in via SSH to the node where the Ambari Server is (IP address is the same as the Ambari UI) and run:
 

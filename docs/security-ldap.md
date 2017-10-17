@@ -1,9 +1,7 @@
-
-## LDAP/AD
+## Configuring LDAP/AD
 
 > This feature is `TECHNICAL PREVIEW`.
 
-### LDAP/AD configuration
 
 There are cases where it might be useful to authenticate Cloudbreak users against an existing enterprise LDAP/AD server as it might already have all the users preconfigured. Cloudbreak supports this without the need to modify the existing LDAP schema.
 
@@ -49,7 +47,8 @@ cbd start
 ```
 `Note:` DO NOT use the `cbd restart` command as it regenerates all the yml files so the changes will be lost in uaa.yml.
 
-#### Mapping Oauth2 scopes to LDAP groups
+### Mapping Oauth2 scopes to LDAP groups
+
 In order for the users to have access to Cloudbreak resources and to be able to create clusters the Oauth2 scopes must be mapped to LDAP groups. At the moment Cloudbreak only supports `one LDAP group per user` scenario.
 To see the Oauth2 scopes, execute the following command:
 ```
@@ -79,3 +78,4 @@ docker cp mapping.sql cbreak_commondb_1:/tmp/mapping.sql
 docker exec cbreak_commondb_1 psql -U postgres -d uaadb -f /tmp/mapping.sql
 ```
 After the mapping is successfully done, you can log in with users authenticated against LDAP.  
+
