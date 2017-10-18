@@ -161,3 +161,8 @@ The alert definitions and policy definitions will be preserved so that you can u
 >>>>TO-DO: Will this delete policies and alerts? Or will they be available if I click "enable" again?
 
 >>>>TO-DO: Can I edit and delete policies and alerts?  
+
+
+### Create a Custom Ambari Alert and Use it for Cloudbreak Autoscaling Policies
+
+Refer to the [Create a Custom Ambari Alert and Use it for Cloudbreak Autoscaling Policies](https://community.hortonworks.com/articles/143762/how-to-create-a-custom-ambari-alert-and-use-it-for.html) HCC tutorial.
