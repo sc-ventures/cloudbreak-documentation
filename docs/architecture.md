@@ -47,21 +47,6 @@ Cloudbreak includes a few default blueprints and allows you to upload your own b
 
 To learn more about Ambari blueprints, refer to [Apache documentation](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints).
 
-#### Cloud Infrastructure
-
-Cloudbreak runs on the **cloud infrastructure** within your cloud provider account. Cloud infrastructure consists of the virtual networks, virtual machines, storage, and other resources on which your clusters run. When creating a cluster, you define cloud these infrastructure components that will be provisioned. The exact names for infrastructure elements vary depending on your cloud provider, as presented in the table below:
-
-| Configuration | Description	 | AWS | Azure | GCP | OpenStack |
-|---|---|---|---|---|---|
-| Networks | **Virtual networks** provide the networking infrastructure (network, subnet, Internet gateway, and so on) in which your clusters run. You can create new virtual networks or reuse existing virtual networks for your clusters. <p>In addition, **security groups** include rules which define inbound traffic allowed to the instances in your cluster.</p> | [Amazon VPC](https://aws.amazon.com/documentation/vpc/) | [Virtual network](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) | [Virtual Private Cloud](https://cloud.google.com/compute/docs/vpc/) | Networks |
-| VMs and Storage | You can select VM types and their attached storage, including storage type, size, count, and encryption settings. | [Amazon EC2](https://aws.amazon.com/documentation/ec2/) | [Virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-linux-azure-overview?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) | [Compute Engine](https://cloud.google.com/compute/docs/) | Instances |
-
-
-<div class="note">
-    <p class="first admonition-title">Note</p>
-    <p class="last">The Cloudbreak software runs in your cloud environment. You are responsible for cloud infrastructure related charges while running Cloudbreak and the clusters being managed by Cloudbreak.</p>
-</div>
-
 
 #### Cloudbreak Credential
 

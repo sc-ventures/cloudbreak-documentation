@@ -244,7 +244,7 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 | ap-southeast-1 | ami-47036324 | 
 | ap-southeast-2 | ami-370b1154 |
 
-    >>>>TO-DO: This table should be automatically generated.
+[comment]: <> (TO-DO: This table should be automatically generated.)
 
 7. Click **Select**.  
 
@@ -341,17 +341,19 @@ Log in to the Cloudbreak UI using the following steps.
 
     The first time you access Cloudbreak UI, Cloudbreak will automatically generate a self-signed certificate, due to which your browser will warn you about an untrusted connection and will ask you to confirm a security exception.
 
-3. Log in to the Cloudbreak web UI: 
+3. The login page is displayed:
 
-    * The default username is `admin@example.com` but you should sign up with your own email address.
+    <a href="../images/cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
+    
+4. Log in to the Cloudbreak web UI: 
+
+    * The default username is `admin@example.com` but you should sign up with your own email address.    
     * The password is the value of the `UAA_DEFAULT_USER_PW` variable that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer).
-
-    <a href="../images/cloudbreak-ui.png" target="_blank" title="click to enlarge"><img src="../images/cloudbreak-ui.png" width="650" title="Cloudbreak web UI"></a>  
 
 
 ### Create Cloudbreak Credential
 
-As part of the prerequisites, you had two options to [authorize Cloudbreak](#authorization-for-cloudbreak) to create resources on your behalf: key-based or role-based authorization. 
+As part of the [prerequisites]((#authentication)), you had two options to allow Cloudbreak to authenticate with AWS and create resources on your behalf: key-based or role-based authentication. 
 
 Depending on your earlier choice, you must configure a key-based or role-based credential. Without this credential, you will not be able to create clusters via Cloudbreak. 
 
@@ -363,11 +365,11 @@ To perform these steps, you must know your access and secret key as well as your
 
 **Steps**
 
-1. In the Cloudbreak web UI, open the **manage credentials** pane. 
+1. In the Cloudbreak web UI, select **Credentials** from the left pane. 
 
-2. Click **+create credential**. 
+2. Click **Create Credential**. 
 
-3. Select the AWS cloud provider.
+3. Under **Cloud provider**, select "Amazon Web Services".
 
 3. Provide the following information:
 
@@ -378,15 +380,13 @@ To perform these steps, you must know your access and secret key as well as your
 | Description | (Optional) Enter a description. | 
 | Access Key | Paste your access key. |
 | Secret Access Key | Paste your secret key. |
-| SSH Public Key | Paste your SSH public key. |
-| Select Platform | (Optional) Select a platform (if previously configured). |
-| Public In Account | (Optional) If you check this, other users added to your Cloudbreak instance will be able to use this credential to create clusters. |
  
-4. Click **+create credential**.
+4. Click **Create**.
 
-5. Your credential should now be displayed in the **manage credentials** tab.
+5. Your credential should now be displayed in the **Credentials** pane.
 
-    Congratulations! You've successfully launched and configured Cloudbreak. Now you can use Cloudbreak to [create clusters](aws-create.md). 
+    
+    Congratulations! You've successfully launched Cloudbreak and create a Cloudbreak credential. Now it's time to [create a cluster](aws-create.md). 
  
 
 #### Create Role-Based Credential
@@ -397,29 +397,27 @@ To perform these steps, you must know the **IAM Role ARN** corresponding to the 
 
 **Steps**
 
-1. In the Cloudbreak web UI, open the **manage credentials** pane. 
+1. In the Cloudbreak web UI, select **Credentials** from the left pane. 
 
-2. Click **+create credential**. 
+2. Click **Create Credential**. 
 
-3. Select the AWS cloud provider.
+3. Under **Cloud provider**, select "Amazon Web Services".
 
 3. Provide the following information:
 
     | Parameter | Description |
 |---|---|
-| Select Credential Type | Select **Role Based**. | 
+| Select Credential Type | Select **Role Based** (default value). | 
 | Name | Enter a name for your credential. |
 | Description | (Optional) Enter a description. | 
-| IAM Role ARN | Paste the **IAM Role ARN** corresponding to the "CredentialRole" that you created earlier. For example `arn:aws:iam::315627065446:role/CredentialRole` |
-| SSH Public Key | Paste your SSH public key. |
-| Select Platform | (Optional) Select a platform (if previously configured). |
-| Public In Account | (Optional) If you check this, other users added to your Cloudbreak instance will be able to use this credential to create clusters. |
+| IAM Role ARN | Paste the IAM Role ARN corresponding to the "CredentialRole" that you created earlier. For example `arn:aws:iam::315627065446:role/CredentialRole` is a valid IAM Role ARN. |
 
-4. Click **+create credential**.
 
-5. Your credential should now be displayed in the **manage credentials** tab.
+4. Click **Create**.
 
-    Congratulations! You've successfully launched and configured Cloudbreak.
+5. Your credential should now be displayed in the **Credentials** pane.
+
+    Congratulations! You've successfully launched Cloudbreak and create a Cloudbreak credential. Now it's time to [create a cluster](aws-create.md). 
       
 
 <div class="next">

@@ -16,9 +16,7 @@ Cloudbreak allows you to create, manage, and monitor your clusters on your chose
 
 * Quickly create a cluster using one of the default cluster blueprints and infrastructure settings.  
 * Create a cluster based on the requirements of your workloads and provision infrastructure based on your IT requirements.
-* Secure your cluster by enabling Kerberos and HA. 
 * Automate cluster creation using the Cloudbreak shell.  
-* Develop your application using Cloudbreak API. 
 
 
 ### Architecture

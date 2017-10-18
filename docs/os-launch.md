@@ -231,12 +231,14 @@ Log in to the Cloudbreak UI using the following steps.
 
     The first time you access Cloudbreak UI, Cloudbreak will automatically generate a self-signed certificate, due to which your browser will warn you about an untrusted connection and will ask you to confirm a security exception.
 
-3. Log in to the Cloudbreak web UI:
+3. The login page is displayed:
 
-    * The default username is `admin@example.com` but you should sign up with your own email address.
+    <a href="../images/cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
+    
+4. Log in to the Cloudbreak web UI: 
+
+    * The default username is `admin@example.com` but you should sign up with your own email address.    
     * The password is the value of the `UAA_DEFAULT_USER_PW` variable that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer).
-
-    <a href="../images/cloudbreak-ui.png" target="_blank" title="click to enlarge"><img src="../images/cloudbreak-ui.png" width="650" title="Cloudbreak web UI"></a>  
 
 
 ### Create Cloudbreak Credential
