@@ -2,9 +2,9 @@
 
 ### Optional Prerequisites
 
-If you are just getting started with Cloudbreak, follow the steps below to create a cluster using the default blueprints and infrastructure templates. 
+If you are just getting started with Cloudbreak, follow the steps below to create a cluster using the default blueprints. 
 
-If you are already familiar with Cloudbreak, review the [Blueprints](blueprints.md) and [Templates](templates-aws.md) documentation to customize your blueprints and infrastructure templates.
+If you are already familiar with Cloudbreak and you want to use custom blueprints, refer to the [Blueprints](blueprints.md) documentation to customize your blueprints.
 
 ### Basic Options   
 

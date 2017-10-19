@@ -17,7 +17,9 @@ Cloudbreak allows you to create, manage, and monitor your clusters on your chose
 
 * Quickly create a cluster using one of the default cluster blueprints and infrastructure settings.  
 * Create a cluster based on the requirements of your workloads and provision infrastructure based on your IT requirements.
-* Automate cluster creation using the Cloudbreak shell.  
+* Secure your cluster by enabling Kerberos.
+* Automate cluster creation using the Cloudbreak CLI. 
+* Develop your application using Cloudbreak API.
 
 
 ### Architecture
@@ -63,9 +65,9 @@ There are two basic deployment options:
 * [Launch on GCP](gcp-launch.md)   
 * [Launch on OpenStack](os-launch.md)    
      
-(Option 2) Or you can launch Cloudbreak [on your own VM](vm-launch.md) on one of these cloud platforms. This is an **advanced** deployment option that you should only use if you have custom VM requirements. 
+(Option 2) Or you can launch Cloudbreak [on your own VM](vm-launch.md) on one of these cloud platforms. This is an advanced deployment option that you should only use if you have custom VM requirements. 
 
-In general, the steps include meeting the prerequisites, launching Cloudbreak on a VM, and creating Cloudbreak credential. After performing these steps, you can create a cluster based on one of the default blueprints or upload your own blueprint and then create a cluster. 
+In general, the steps include meeting the prerequisites, launching Cloudbreak on a VM, and creating the Cloudbreak credential. After performing these steps, you can create a cluster based on one of the default blueprints or upload your own blueprint and then create a cluster. 
 
 
 <div class="note">

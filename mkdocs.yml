@@ -39,34 +39,26 @@ pages:
     - Config & Admin:
       - Cluster Options:
         - Blueprints: blueprints.md
-        - Templates:
-          - Templates for AWS: templates-aws.md
-          - Templates for Azure: templates-azure.md
-          - Templates for GCP: templates-gcp.md
-          - Templates for OpenStack: templates-os.md 
         - Recipes: recipes.md
         - Resource Tagging: tags.md 
-        - Auto Scaling: autoscaling.md
         - Custom Images: images.md
         - Ambari Database: ambari-db.md
       - Manage and Monitor Clusters: clusters-manage.md
       - Managing Cloudbreak:
         - Install on Your Own VM: vm-launch.md
-        - Manage Cloudbreak Credentials: credentials.md  
-        - Manage Your Account: cb-account.md
+        - Manage Cloudbreak Credentials: credentials.md 
+        - Upgrade Clodbreak: upgrade.md
+        - Delete Cloudbreak: delete.md  
         - Configure Cloudbreak: profile.md
         - Manage Cloudbreak Database: cb-db.md
-        - Upgrade Clodbreak: upgrade.md
-        - Delete Cloudbreak: delete.md 
-      - Configuring Security: 
+      - Security: 
         - Security Overview: security.md
-        - Basics: security-cb.md
-        - LDAP/AD: security-ldap.md
-        - Kerberos: security-kerberos.md
+        - Configure Basic Security: security-cb.md
+        - Configure Kerberos: security-kerberos.md
     - More:
-      - Cloudbreak Shell: cb-shell.md
+      - CLI: cli.md
       - Developer:
-        - Setting up Local Environment: dev-local-dev.md
+        - Developer Docs: dev.md
         - Cloudbreak SPI: dev-spi.md
         - Cloudbreak APIs: dev-api.md
         - Flow Diagrams: dev-flows.md 
