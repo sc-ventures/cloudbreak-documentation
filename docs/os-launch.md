@@ -280,6 +280,6 @@ Cloudbreak works by connecting your OpenStack account through this credential, a
     Congratulations! You've successfully launched and configured Cloudbreak. Now you can use Cloudbreak to [create clusters](os-create.md). 
 
 <div class="next">
-<a href="../os-config/index.html">Next: Define Infrastructure Templates</a>
+<a href="../os-create/index.html">Next: Create a Cluster</a>
 </div>
 

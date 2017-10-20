@@ -345,6 +345,6 @@ There are two ways to create a Cloudbreak credential:
 
 
 <div class="next">
-<a href="../azure-config/index.html">Next: Define Infrastructure Templates</a>
+<a href="../azure-create/index.html">Next: Create a Cluster</a>
 </div>
 
