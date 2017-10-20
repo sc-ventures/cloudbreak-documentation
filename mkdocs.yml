@@ -37,7 +37,7 @@ pages:
       - Create a Cluster: os-create.md
       - Access Cluster: os-clusters-access.md
     - Config & Admin:
-      - Cluster Options:
+      - Advanced Cluster Options:
         - Blueprints: blueprints.md
         - Recipes: recipes.md
         - Resource Tagging: tags.md 

@@ -15,10 +15,16 @@ If you are already familiar with Cloudbreak and you want to use custom blueprint
 
 7. On the **Add File System** page, select to use one of the following filesystems:
 
-    * *Local HDFS*: No external storage outside of HDFS will be used
-    * *Windows Azure Data Lake Storage*: If you select this option, you must provide *Data Lake Store account name*.  
-    > You must configure access control for Cloudbreak's service principal manually after cluster installation. You can obtain the service principal ID from the Cloudbreak UI. For more information, refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-access-control).  
-    * *Windows Azure Blob Storage*: If you select this option, you must provide:
+    * *Local HDFS*: No external storage outside of HDFS will be used.
+    * *Windows Azure Data Lake Storage*: If you select this option, HDFS will be used as your default file system and access to ADLS will be through the adl connector. You must provide:
+
+        | Parameter | Description |
+|---|---|  
+| Data Lake Store account name | Enter your account name. |
+        
+        **Postrequisites**: After cluster installation, you must perform additional steps described in [Configuring Access to ADLS](azure-data.md#configuring-access-to-adls). 
+        
+    * *Windows Azure Blob Storage*: If you select this option, HDFS will be used as your default file system and access to WASB will be through the wasb connector, unless you select **Use File System As Default**. You must provide:
 
         | Parameter | Description |
 |---|---|  

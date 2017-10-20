@@ -54,3 +54,4 @@ To learn more about Ambari blueprints, refer to [Apache documentation](https://c
 
 After launching Cloudbreak, you must create a Cloudbreak credntial and only after you complete that step you can start creating clusters.
 
+

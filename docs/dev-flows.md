@@ -1,8 +1,7 @@
 
 ## Flow Diagrams 
 
->>>>TO-DO: What is the purpose of this section? 
->>>>TO-DO: I'm not sure how to transfer this info. it points elsewhere. 
->>>> TO-DO: is this up to date?
+[comment]: <> (TO-DO: How exactly is the flow documentation useful to developers?)
+[comment]: <> (TO-DO: I'm not sure how to transfer this info to the new docs?)
 
-[http://hortonworks.github.io/cloudbreak-docs/release-1.16.4/flow/](http://hortonworks.github.io/cloudbreak-docs/release-1.16.4/flow/)
+Refer to [http://hortonworks.github.io/cloudbreak-docs/release-1.16.4/flow/](http://hortonworks.github.io/cloudbreak-docs/release-1.16.4/flow/).

@@ -20,7 +20,7 @@ Cloud providers support two kinds of deployment and resource management methods:
 
 Cloudbreak's SPI supports both of these methods. It provides a well-defined interface, abstract classes, and helper classes, scheduling and polling of resources to aid the integration and to avoid any boilerplate code in the module of cloud provider.
 
->>>>TO-DO: The sentence above is confusing. Does the clause "scheduling and polling of resources to aid the integration and to avoid any boilerplate code in the module of cloud provider" refer to the helper classes? Or should this say "It provides a well-defined interface, abstract classes, helper classes, **and** scheduling and polling of resources to aid the integration and to avoid any boilerplate code in the module of cloud provider."
+[comment]: <> (TO-DO: The sentence above is confusing. Does the clause "scheduling and polling of resources to aid the integration and to avoid any boilerplate code in the module of cloud provider" refer to the helper classes? Or should this say "It provides a well-defined interface, abstract classes, helper classes, **and** scheduling and polling of resources to aid the integration and to avoid any boilerplate code in the module of cloud provider.")
 
 #### Template Based Deployments
 
