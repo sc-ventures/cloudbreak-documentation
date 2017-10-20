@@ -119,6 +119,10 @@ Now that your VM is ready, access it via SSH:
 * The SSH user is called "cloudbreak".
 * You can obtain the VM's IP address from the details of your instance.
 
+On Mac OS, you can SSH to the VM by running the following from the Terminal app: `ssh -i "your-private-key.pem" cloudnreak@instance_IP` where "your-private-key.pem" points to the location of your private key and "instance_IP" is the public IP address of the VM.
+
+On Windows, you can use [PuTTy](http://www.putty.org/).
+
 ### Initialize Your Profile 
 
 After accessing the VM via SSH, you must initialize your Profile.
@@ -247,11 +251,14 @@ Cloudbreak works by connecting your OpenStack account through this credential, a
 
 **Steps**
 
-1. In the Cloudbreak web UI, open the **manage credentials** pane. 
+1. In the Cloudbreak web UI, select **Credentials** from the left pane. 
 
-3. Select the GCP cloud provider.
+2. Click **Create Credential**. 
 
-2. Click **+create credential**. 
+3. Under **Cloud provider**, select "Google Cloud Platform".
+
+    <a href="../images/gcp-cred.png" target="_blank" title="click to enlarge"><img src="../images/gcp-cred.png" width="650" title="Cloudbreak web UI"></a> 
+
 
 3. Provide the following information:
 
@@ -265,13 +272,10 @@ Cloudbreak works by connecting your OpenStack account through this credential, a
 | Tenant Name | Enter the OpenStack tenant name. |
 | Endpoint | Enter the OpenStack endpoint. |
 | API Facing | Select *public* or *private*. | 
-| SSH Public Key | Paste your SSH public key. |
-| Select Platform | (Optional) Select a platform (if previously configured). |
-| Public In Account | (Optional) If you check this, other users added to your Cloudbreak instance will be able to use this credential to create clusters. |
  
-4. Click **+create credential**.
+4. Click **Create**.
 
-5. Your credential should now be displayed at the top of the page and in the **manage credentials** tab.
+5. Your credential should now be displayed in the **Credentials** pane.
 
     Congratulations! You've successfully launched and configured Cloudbreak. Now you can use Cloudbreak to [create clusters](os-create.md). 
 

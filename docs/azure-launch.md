@@ -8,7 +8,7 @@ Before launching Cloudbreak on Azure, you must meet the following prerequisites.
 
 #### Azure Account 
 
-In order to launch Cloubdreak on the Azure Marketplace, log in to your existing Microsoft Azure account. If you don't have an account, you can set it up at [https://azure.microsoft.com](https://azure.microsoft.com).
+In order to launch Cloudbreak on the Azure Marketplace, log in to your existing Microsoft Azure account. If you don't have an account, you can set it up at [https://azure.microsoft.com](https://azure.microsoft.com).
 
 #### Azure Roles 
 
@@ -32,7 +32,7 @@ Clusters created via Cloudbreak can be in the same or different region as Cloudb
 When launching Cloudbreak, you will be required to provide your public SSH key. If needed, you can generate a new SSH keypair:
 
 * On MacOS and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
-* On Windows using [puttgen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
+* On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
 
 #### Azure Data Lake Store (Optional)
 
@@ -43,8 +43,6 @@ configured automatically.
 You may also review the [Microsoft Azure Documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal) for instructions on how these configuration steps
 are manually done from the Azure portal. After the cluster is deployed, you must define which parts of the ADLS store this cluster
 will have access and test access to ADLS. Refer to [Accessing Data](azure-data.md) for more information.
- 
-For further information, refer to [Microsoft Azure documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal).
 
 
 ### Launch Cloudbreak 
@@ -102,7 +100,7 @@ Launch Cloudbreak deployer using the following steps.
 
 5. Click **Purchase**.
 
-6. Proceed to the next step: [Explore Newly Created Resources](#explore-newly-created-resources)
+6. Proceed to the next step: [Explore Newly Created Resources](#explore-newly-created-resources).
 
 
 #### (Option 2) Launch from Azure Marketplace 
@@ -159,7 +157,7 @@ Launch Cloudbreak deployer using the following steps.
 
 11. Review terms of use and click **Purchase**.
 
-12. Proceed to the next step: [Explore Newly Created Resources](#explore-newly-created-resources)
+12. Proceed to the next step: [Explore Newly Created Resources](#explore-newly-created-resources).
 
 
 ### Explore Newly Created Resources
@@ -229,9 +227,9 @@ Log in to the Cloudbreak UI using the following steps.
 
 ### Create Cloudbreak Credential
 
-The first time you log in to the Cloudbreak UI, you should see **manage credentials** tab open, informing you that to use Cloudbreak you first need to create a credential associated with your Azure subscription. Cloudbreak works by connecting your Azure account through this credential, and then uses it to create resources on your behalf.
+Before you can start creating clusters, you must first create a [Cloudbreak credential](architecture.md#cloudbreak-credential). Without this credential, you will not be able to create clusters via Cloudbreak. Cloudbreak works by connecting your Azure account through this credential, and then uses it to create resources on your behalf.
 
-Before you can start provisioning cluster using Cloudbreak, you must create a Cloudbreak credential. There are two ways to do this:
+There are two ways to create a Cloudbreak credential:
 
 * **Interactive**: This is the recommended simpler method. The advantage of using this method is that the app and service principal creation and role assignment is fully automated, so the only input that you need to provide is the name and the SSH key. To configure an interactive credential, refer to [Create an Interactive Credential](#create-an-interactive-credential).  
 
@@ -242,39 +240,50 @@ Before you can start provisioning cluster using Cloudbreak, you must create a Cl
 
 **Steps**
 
-1. Open the **manage credentials** pane:
+1. In the Cloudbreak web UI, select **Credentials** from the left pane. 
 
-     <a href="../images/cb-ui2.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui2.png" width="650" title="Azure Portal"></a>
-     
-1. (Perform this step only if you launched Cloudbreak from the resource manager template) Select the GCP cloud provider and then click **+create credential**. 
+2. Click **Create Credential**. 
 
-2. Click **Next**.
-3. On the **Configure credentials** page, provide the following parameters:
+3. Under **Cloud provider**, select "Microsoft Azure". 
+    
+4. Select **Interactive Login**:
+
+    <a href="../images/azure-cred-inter.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-inter.png" width="650" title="Cloudbreak web UI"></a>     
+
+5. Provide the following information:
 
     | Parameter | Description |
 |---|---|
-| Select Credential Type | The **Interactive** credential type should be pre-selected. |
 | Name | Enter a name for your credential. |
 | Description | (Optional) Enter a description. |
-| SSH Public Key | The SSH key that you provided when launching Cloudbreak should be pre-entered. |
-| Select Azure role type | <p>You have the following options:<ul><li>"Use existing Contributor role" (default): If you select this option, Cloudbreak will use the "[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor)" role to create resources. This requires no further input.</li><li>"Reuse existing custom role": If you select this option and enter the name of an existing role, Cloudbreak will use this role to create resources.</li><li>"Let Cloudbreak create a custom role": If you select this option and enter a name for the new role, the role will be created. When choosing role name, make sure that there is no existing role with the name chosen. For information on creating custom roles, refer to [Azure](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles) documentation. </li></ul></p><p>If using a custom role, make sure that it includes the necessary Action set for Cloudbreak to be able to manage clusters: `Microsoft.Compute/*`, `Microsoft.Network/*`, `Microsoft.Storage/*`, `Microsoft.Resources/*`.</p> |
-| Select Platform | (Optional advanced option) Select a platform (if previously configured). |
-| Public In Account | (Optional) If you check this, other users added to your Cloudbreak instance will be able to use this credential to create clusters. |
+| Subscription Id | Copy and paste the Subscription ID from your **Subscriptions**. |
+| Tenant Id | Copy and paste your Directory ID from your **Active Directory** > **Properties**. |
+| Azure role type | <p>You have the following options:<ul><li>"Use existing Contributor role" (default): If you select this option, Cloudbreak will use the "[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor)" role to create resources. This requires no further input.</li><li>"Reuse existing custom role": If you select this option and enter the name of an existing role, Cloudbreak will use this role to create resources.</li><li>"Let Cloudbreak create a custom role": If you select this option and enter a name for the new role, the role will be created. When choosing role name, make sure that there is no existing role with the name chosen. For information on creating custom roles, refer to [Azure](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles) documentation. </li></ul></p><p>If using a custom role, make sure that it includes the necessary Action set for Cloudbreak to be able to manage clusters: `Microsoft.Compute/*`, `Microsoft.Network/*`, `Microsoft.Storage/*`, `Microsoft.Resources/*`.</p> |
 
-2. Click **Next**.
-3. On the **Finish** page, click on the <img src="../images/copy-icon.png" width="35" title="Icon"> icon next to the randomly generated code to copy it.
+    To obtain the **Subscription Id**: 
+    
+     <a href="../images/azure-cred-subscription.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-subscription.png" width="650" title="Cloudbreak web UI"></a>   
+    
+    To obtain the **Directory Id**: 
+    
+    <a href="../images/azure-cred-directoryid.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-directoryid.png" width="650" title="Cloudbreak web UI"></a>    
 
-4. Click **Azure login** and a new **Device login** page will open in a new browser tab:
+6. After providing the parameters, click **Interactive Login**.
+
+6. Copy the code provided in the UI:
+ 
+    <a href="../images/azure-cred-inter2.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-inter2.png" width="650" title="Cloudbreak web UI"></a>     
+
+7. Click **Azure login** and a new **Device login** page will open in a new browser tab:
 
      <a href="../images/device-login.png" target="_blank" title="click to enlarge"><img src="../images/device-login.png" width="650" title="Azure Portal"></a>  
 
-5. Next, paste the code in field on the  **Device login** page and click **Continue**.
-6. Confirm your account by selecting it:
+8. Next, paste the code in field on the  **Device login** page and click **Continue**.
+9. Confirm your account by selecting it:
 
      <a href="../images/device-login2.png" target="_blank" title="click to enlarge"><img src="../images/device-login2.png" width="650" title="Azure Portal"></a>
 
-7. A confirmation page will appear, confirming that you have signed in to the Microsoft Azure Cross-platform Command Line Interface application on your device. You may now close this window.
-8. Your credential should now be displayed in the **manage credentials** tab.
+10. A confirmation page will appear, confirming that you have signed in to the Microsoft Azure Cross-platform Command Line Interface application on your device. You may now close this window.
 
      Congratulations! You've successfully launched and configured Cloudbreak. Now you can use Cloudbreak to [create clusters](azure-create.md).
 
@@ -285,19 +294,21 @@ Before you can start provisioning cluster using Cloudbreak, you must create a Cl
 
 1. On Azure Portal, navigate to the **Active Directory** > **App Registrations** and register a new application. For more information, refer to [Create an Azure AD Application](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 
-     <a href="../images/azure-appbased01.png" target="_blank" title="click to enlarge"><img src="../images/azure-appbased01.png" width="650" title="Azure Portal"></a>
+    <a href="../images/azure-appbased01.png" target="_blank" title="click to enlarge"><img src="../images/azure-appbased01.png" width="650" title="Cloudbreak web UI"></a>  
 
 1. Navigate to the **Subscriptions**, choose **Access control (IAM)**. Click **Add** and then assign the "Contributor" role to your newly created application by selecting "Contributor" under **Role** and your app name under **Select**:
 
      <a href="../images/azure-appbased03.png" target="_blank" title="click to enlarge"><img src="../images/azure-appbased03.png" width="650" title="Azure Portal"></a>   
 
-1. In the Cloudbreak web UI, open the **manage credentials** pane:
+1. In the Cloudbreak web UI, select **Credentials** from the left pane. 
 
-     <a href="../images/cb-ui2.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui2.png" width="650" title="Azure Portal"></a>
+    <a href="../images/azure-cred-app.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-app.png" width="650" title="Cloudbreak web UI"></a> 
 
-1. (Perform this step only if you launched Cloudbreak from the resource manager template) Select the GCP cloud provider and then click **+create credential**. 
+2. Click **Create Credential**. 
 
-1. Click **Next**.
+3. Under **Cloud provider**, select "Microsoft Azure". 
+    
+4. Select **App based Login**:
 
 1. On the **Configure credential** page, provide the following parameters:
 
@@ -312,14 +323,23 @@ Before you can start provisioning cluster using Cloudbreak, you must create a Cl
 | App Owner Tenant Id | Copy and paste your Directory ID from your **Active Directory** > **Properties**. |
 | SSH Public Key | The SSH key that you provided when launching Cloudbreak should be pre-entered. |
 | Select Azure role type | <p>You have the following options:<ul><li>"Use existing Contributor role" (default): If you select this option, Cloudbreak will use the "[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor)" role to create resources. This requires no further input.</li><li>"Reuse existing custom role": If you select this option and enter the name of an existing role, Cloudbreak will use this role to create resources.</li><li>"Let Cloudbreak create a custom role": If you select this option and enter a name for the new role, the role will be created. When choosing role name, make sure that there is no existing role with the name chosen. For information on creating custom roles, refer to [Azure](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles) documentation. </li></ul></p><p>If using a custom role, make sure that it includes the necessary Action set for Cloudbreak to be able to manage clusters: `Microsoft.Compute/*`, `Microsoft.Network/*`, `Microsoft.Storage/*`, `Microsoft.Resources/*`.</p> |
-| Select Platform | (Optional advanced option) Select a platform (if previously configured). |
-| Public In Account | (Optional) If you check this, other users added to your Cloudbreak instance will be able to use this credential to create clusters. |
 
-    > If you are having trouble locating the parameters, refer to this [Azure](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal) documentation. 
+    To obtain the **Subscription Id** from Subscriptions: 
+    
+     <a href="../images/azure-cred-subscription.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-subscription.png" width="650" title="Cloudbreak web UI"></a>   
+   
+    To obtain the **Application ID** and an application key from Azure Active Directory: 
+     
+     <a href="../images/azure-cred-app11.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-app11.png" width="650" title="Cloudbreak web UI"></a>  
+     
+     <a href="../images/azure-cred-app12.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-app12.png" width="650" title="Cloudbreak web UI"></a>      
+    
+    To obtain the **Directory Id** from Azure Active Directory: 
+    
+    <a href="../images/azure-cred-directoryid.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-directoryid.png" width="650" title="Cloudbreak web UI"></a>  
 
-1. Click **Next** and then **Finish**.
 
-1. Your credential should now be displayed at the top of the page in the **manage credentials** tab.
+1. Click **Create**.
 
      Congratulations! You've successfully launched and configured Cloudbreak. Now you can use Cloudbreak to [create clusters](azure-create.md).
 
