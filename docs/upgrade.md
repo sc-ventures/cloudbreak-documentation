@@ -35,13 +35,13 @@ To upgrade Cloudbreak to the newest version, perform the following steps.
 
     <pre>cbd start</pre>
     
-> Cloudbreak needs to download updated docker images for the new version, so this step may take a while.
+    Cloudbreak needs to download updated docker images for the new version, so this step may take a while.
 
 In addition, if you have any clusters running, you must update them using the folloing steps. 
 
 ### Update Existing Clusters
 
->>>>TO-DO: Maybe the sentence below should say "Upgrading from version 1.4.0 **or newer** to the newest version"??
+[comment]: <> (TO-DO: Maybe the sentence below should say "Upgrading from version 1.4.0 **or newer** to the newest version"??)
 
 Upgrading from version 1.4.0 to the newest version does not require any manual modification from the users.
 

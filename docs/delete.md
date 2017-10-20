@@ -1,8 +1,22 @@
 ## Deleting Resources
 
-### Delete Cloudbreak Controller
+In general, you can delete clusters from the Cloudbreak UI. If needed, you can also delete the cluster resources manually via the cloud provider tools. 
 
-To delete Cloudbreak Controller, delete the whole related resource group.
+### Deleting Resources on AWS
+
+TBD
+
+### Deleting Resources on Azure
+
+#### Deleting Clusters on Azure
+
+You can delete clusters from the Cloudbreak UI. If needed, you can also delete the cluster manually by deleting the whole resource group created when the cluster was deployed. 
+
+The name of the resource group, under which the cluster-related resources are organized always includes the name of the cluster, so you should be able to find the group by searching for that name in the **Resource groups**.
+
+#### Delete Cloudbreak on Azure
+
+To delete Cloudbreak, delete the whole related resource group.
 
 **Steps**
 
@@ -13,8 +27,10 @@ To delete Cloudbreak Controller, delete the whole related resource group.
 
 3. Type the name of the resource group to delete and click **Delete**.
 
-### Deleting Clusters
+### Deleting Resources on GCP
 
-You can delete clusters from the Cloudbreak UI. If needed, you can also delete the cluster manually by deleting the whole resource group created when the cluster was deployed. 
+TBD
 
-The name of the resource group, under which the cluster-related resources are organized always includes the name of the cluster, so you should be able to find the group by searching for that name in the **Resource groups**.
+### Deleting Resources on OpenStack
+
+TBD

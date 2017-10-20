@@ -70,4 +70,5 @@ To modify previously added recipes:
 * If you provided a URL to the location where the recipe is stored, in order to modify the recipe simply update it in the location to which the URL is pointing.       
 
 
->>>>TO-DO: Move Shell commands to the Cb Shell doc. 
+[comment]: <> (TO-DO: Move Shell commands to the Cb Shell doc.) 
+

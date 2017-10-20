@@ -13,7 +13,7 @@ Cloudbreak deployer always opens a new bash subprocess without inheriting enviro
 * `CBD_DEFAULT_PROFILE`  
 * all `DOCKER_XXX` 
 
->>>>TO-DO: What do you mean by "Cloudbreak deployer **always** opens a new bash subprocess without inheriting environment variables?" Do you mean during startup or when? Without inheriting from where?
+[comment]: <> (TO-DO: What do you mean by "Cloudbreak deployer **always** opens a new bash subprocess without inheriting environment variables?" Do you mean during startup or when? Without inheriting from where?)
 
 
 ### Set Profile Variables

@@ -73,7 +73,7 @@ You can also [copy and edit an existing blueprint](#copy-and-edit-existing-bluep
 
 You can delete previously added items by selecting and item and using the **delete** option. 
 
->>>>TO-DO: Is it possible to delete default blueprints?
+[comment]: <> (TO-DO: Is it possible to delete default blueprints?)
 
 
 ### Example Blueprints
@@ -117,7 +117,7 @@ At a high level, the supported components can be grouped into two main categorie
 | ATLAS	| ATLAS |
 | CLOUDBREAK	| CLOUDBREAK |
 
->>>>TO-DO: Not sure if this list is updated/correct
+[comment]: <> (TO-DO: Not sure if this list is updated/correct)
  
  
 ### Default Blueprints 

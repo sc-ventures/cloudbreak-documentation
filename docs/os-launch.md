@@ -70,7 +70,7 @@ export OS_TENANT_NAME=your_os_tenant_name</pre>
 
 After performing the import, you should be able to see the Cloudbreak deployer image among your other OpenStack images. 
 
->>>>TO-DO: Some of this content was automatically generated. 
+[comment]: <> (Some of this content was automatically generated.) 
     
     
 #### Import HDP Image
@@ -97,7 +97,7 @@ export OS_TENANT_NAME=your_os_tenant_name</pre>
 
 After performing the import, you should be able to see the Cloudbreak image among your OpenStack images. 
 
->>>>TO-DO: Some of this content was automatically generated.  
+[comment]: <> (TO-DO: Some of this content was automatically generated.)  
 
 
 ### Launch the VM  

@@ -55,7 +55,7 @@ Clusters created via Cloudbreak can be in the same or different region as Cloudb
 
     <pre>gcloud compute images create cloudbreak-deployer-1164-2017-08-29 --source-uri gs://sequenceiqimage/cloudbreak-deployer-1164-2017-08-29.tar.gz</pre>
 
-    >>>>TO-DO: This should be generated automatically. 
+    [comment]: <> (TO-DO: This should be generated automatically.) 
     
 1. In the GCP UI, from the **Products and services** menu, select **Compute Engine** > **Images**.
 

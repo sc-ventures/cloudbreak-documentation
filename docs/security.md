@@ -1,6 +1,8 @@
 
 ## Network and Security
 
+[comment]: <> (This section is under construction)
+
 ### Virtual Network
 
 Azure uses Virtual network (VNet) service to create virtual networks that resembles a traditional networks. Your Cloudbreak controller and clusters are launched into the virtual network infrastructure, with a new VNet created for each resource (Cloudbreak controller, cluster1, cluster2, and so on).

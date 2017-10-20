@@ -1,4 +1,3 @@
-
 ## Troubleshooting Cloudbreak on Azure 
 
 ### Credential Creation Errors

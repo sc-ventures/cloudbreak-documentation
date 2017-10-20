@@ -81,13 +81,12 @@ To enable Kerberos on a cluster, do the following when creating your cluster via
 
 Cloudbreak supports using Kerberos security on the cluster with an existing Active Directory. When creating a cluster, provide your Kerberos configuration details, and Cloudbreak will automatically extend your blueprint configuration with the defined properties. [Setup an Active Directory for Kerberos](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/_use_an_existing_active_directory_domain.html)
 
-
-To enable Kerberos on a cluster, do the following when creating your cluster via Cloudbreak web UI:
+To enable Kerberos on a cluster, perform these steps when creating your cluster via Cloudbreak UI.
 
 **Steps**
 
 1. In the **Create cluster** wizard, in the **Setup Network and Security** tab, check the **Enable security** option and select **Use Existing Active Directory**.
-2. Fill in the following fields:
+2. Provide the following informstion:
 
 | Field | Description |
 |---|---|
@@ -97,44 +96,35 @@ To enable Kerberos on a cluster, do the following when creating your cluster via
 | Use Tcp Connection | The connection type for your existing MIT KDC (default is **UDP**). |
 | Existing Kerberos Realm | The realm in your existing MIT KDC. |
 | Existing Kerberos Ldap AD Url | The url of the existing secure ldap (eg. ldaps://10.1.1.5). |
-| Existing Kerberos AD Container DN | Active Directory User container for principals. For example, "OU=Hadoop,OU=People,dc=apache,dc=org". |
+| Existing Kerberos AD Container DN | Active Directory User container for principals. For example "OU=Hadoop,OU=People,dc=apache,dc=org". |
 
-To enable Kerberos on a cluster, do the following when creating your cluster via Cloudbreak shell:
-
-| Parameter | Description |
-|---|---|
-| --kerberosPassword | The KDC admin password to use for the KDC. |
-| --kerberosPrincipal | The KDC principal in your existing MIT KDC. |
-| --kerberosUrl | The location of your existing MIT KDC. |
-| --kerberosTcpAllowed | The connection type for your existing MIT KDC (default is **UDP**). |
-| --kerberosRealm | The realm in your existing MIT KDC. |
-| --kerberosLdapUrl | The url of the existing secure ldap (eg. ldaps://10.1.1.5). |
-| --kerberosContainerDn | Active Directory User container for principals. For example, "OU=Hadoop,OU=People,dc=apache,dc=org". |
 
 ### Create Hadoop Users
 
 To create Hadoop users, follow these steps.
 
-  * Log in via SSH to the node where the Ambari Server is (IP address is the same as the Ambari UI) and run:
+**Steps**
 
-```
+* Log in via SSH to the node where the Ambari Server is (IP address is the same as the Ambari UI) and run:
+
+    <pre>
 kadmin -p [admin_user]/[admin_user]@NODE.DC1.CONSUL (type admin password)
 addprinc custom-user (type user password twice)
-```
+</pre>
 
-  * Log in via SSH to all other nodes and, on each node, run:
+* Log in via SSH to all other nodes and, on each node, run:
 
-```
+    <pre>
 useradd custom-user
-```
+</pre>
 
-  * Log in via SSH to one of the nodes and run:
+* Log in via SSH to one of the nodes and run:
 
-```
+    <pre>
 su custom-user
 kinit -p custom-user (type user password)
 hdfs dfs -mkdir input
 hdfs dfs -put /tmp/wait-for-host-number.sh input
 yarn jar $(find /usr/hdp -name hadoop-mapreduce-examples.jar) wordcount input output
 hdfs dfs -cat output/*
-```
+</pre>

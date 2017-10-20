@@ -39,5 +39,5 @@ You can configure Ambari database during cluster creation. The option is availab
 | Password | Enter database password. |
 
 
->>>>TO-DO: The shell info should go to shell doc.
+[comment]: <> (TO-DO: The shell info should go to shell doc.)
 
