@@ -1,5 +1,6 @@
-
 ## Recipes
+
+[comment]: <> (This is from the old UI. Need to rewrite when new UI is ready.)
 
 Although Cloudbreak lets you provision HDP clusters in the cloud based on custom Ambari blueprints, Cloudbreak provisioning options don't consider all possible use cases. For that reason, we introduced recipes. 
 
@@ -37,7 +38,7 @@ To add a recipe, perform these steps.
 
 1. Place your script in a network location accessible from Cloudbreak and cluster instances virtual network. 
   
-2. Define the recipe when creating a cluster using the Cloudbreak UI or Cloudbreak Shell. You must provide:
+2. Select the recipe when creating a cluster using the Cloudbreak UI. You must provide:
 
     | Parameter | Value |
 |---|---|

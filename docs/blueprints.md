@@ -6,7 +6,6 @@ You have three options concerning using blueprints with Cloudbreak:
 
 * Use one of the pre-defined blueprints.    
 * Add your custom blueprint by uploading a JSON file or pasting the JSON text. 
-* Copy and edit one of the pre-defined blueprints. 
 
 We recommend that you review the default blueprints to check if they meet your requirements. You can do this by expanding  the **manage bluerints** pane in the Cloudbreak web UI or by reading the documentation below.
   
@@ -15,7 +14,48 @@ We recommend that you review the default blueprints to check if they meet your r
 
 To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. 
 
-To review default blueprints, refer to [Default Blueprints](#default-blueprints). 
+To review default blueprints, refer to [Default Blueprints](#default-blueprints).
+
+#### Default Blueprints 
+
+Cloudbreak includes the following default HDP cluster blueprints:
+
+HDP Version: **HDP 2.6**
+
+| Cluster Type  | Main Services | List of All Services Included |
+|:------------- |:---|:-------------|
+| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 1.6,<br>Zeppelin 0.7.0 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, Sqoop, ZooKeeper, Ambari Metrics, Spark 1.6, Zeppelin 0.7.0 |
+| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 2.1,<br>Zeppelin 0.7.0 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, Sqoop, ZooKeeper, Ambari Metrics, Spark 2.1, Zeppelin 0.7.0 |
+| EDW - Analytics | <span><i class="fa fa-check" style="color: green"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.7.0 | HDFS, YARN, MapReduce2, Tez, Hive 2 LLAP, Druid, Pig, ZooKeeper, Ambari Metrics, Spark 2.1 |
+| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, Sqoop, ZooKeeper, Ambari Metrics, Spark 1.6 |
+| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br> Spark 2.1 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, ZooKeeper, Ambari Metrics, Spark 2.1 |
+| BI | <span><i class="fa fa-warning" style="color: orange"></i> Druid 0.9.2</span> | HDFS, YARN, MapReduce2, Tez, Druid, Sqoop, ZooKeeper, Ambari Metrics |
+
+
+HDP Version: **HDP 2.5**
+
+| Cluster Type  | Main Services | List of All Services Included  |
+|:------------- |:---|:-------------|
+| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 1.6,<br>Zeppelin 0.6.0 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, Sqoop, ZooKeeper, Ambari Metrics, Spark 1.6, Zeppelin 0.6.0 |
+| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, Sqoop, ZooKeeper, Ambari Metrics, Spark 1.6 |
+| EDW - ETL | <i class="fa fa-warning" style="color: orange"></i> Hive 1.2.1,<br> Spark 2.0 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, ZooKeeper, Ambari Metrics, Spark 2.0 |
+| EDW - Analytics | <span><i class="fa fa-warning" style="color: orange"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.6.0 | HDFS, YARN, MapReduce2, Tez, Hive 2 LLAP, Pig, ZooKeeper, Ambari Metrics, Spark 1.6, Zeppelin 0.6.0, Slider |
+
+
+
+<div class="note">
+    <p class="first admonition-title">Choosing Your Configuration</p>
+    <p class="last">
+When creating a cluster, you can choose a more stable cluster configuration for a predicable experience.
+Alternatively, you can try the latest capabilities by choosing a cluster configuration
+that is much more experimental. The following configuration classification applies:
+<ul>
+<li><i class="fa fa-check" style="color: green"></i> Stable configurations are the best choice if you want to avoid issues and other problems with launching and using clusters.</li>
+<li><i class="fa fa-warning" style="color: orange"></i> If you want to use a Technical Preview version of a component in a release of HDP, use these configurations.</li>
+<li><i class="fa fa-warning" style="color: red"></i> These are the most cutting edge of the configurations, including Technical Preview components in a Technical Preview HDP release.</li>
+</ul>
+</p>
+</div> 
 
 
 ### Add Custom Blueprint
@@ -38,45 +78,20 @@ Once you have your blueprint ready, perform these steps.
 
 **Steps**
 
-1. Navigate to the **manage blueprints** tab. To add your own blueprint, click **+create blueprint** and enter the following parameters:
+1. In the Cloudbreak UI, select **Blueprints** from the left pane. To add your own blueprint, click **Create Blueprint** and enter the following parameters:
 
     | Parameter | Value |
 |---|---|
 | Name | Enter a name for your blueprint. |
 | Description | (Optional) Enter a description for your blueprint.|
 | Blueprint Source| <p>Select one of: <ul><li>**Text**: Paste blueprint in JSON format.</li><li> **File**: Upload a file that contains the blueprint.</li><li> **URL**: Specify the URL for your blueprint.</li></ul> |
-| Public In Account | (Optional) If this option is checked, all the users belonging to your account will be able to use this blueprint to create clusters, but they cannot delete it. | 
 
 2. To use the uploaded blueprints, simply select it when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. 
 
 
-### Copy and Edit Existing Blueprint 
+#### Example Blueprints
 
-You can reuse default and previously added blueprints by using the **copy & edit** option, which allows you to clone and edit an existing blueprint without changing or deleting the original blueprint. 
-
-**Steps**
-
-1. Navigate to the **manage blueprints** tab, expand the blueprint entry, and then click **copy & edit**.
-
-2. Make updates in your blueprint and save them as a new blueprint.
-
-### Modifying Existing Blueprint
-
-To modify existing an blueprint without keeping the original:
-
-* If you pasted or uploaded your blueprint in the Cloudbreak UI, in order to modify it you must delete the entry and add the blueprint again in a new entry.     
-* If you provided a URL to the location where the blueprint is stored, in order to modify the blueprint simply update it in the location to which the URL is pointing. 
-
-You can also [copy and edit an existing blueprint](#copy-and-edit-existing-blueprint).
-
-### Delete Blueprint
-
-You can delete previously added items by selecting and item and using the **delete** option. 
-
-[comment]: <> (TO-DO: Is it possible to delete default blueprints?)
-
-
-### Example Blueprints
+[comment]: <> (TO-DO: Maybe we can find some newer examples?)
 
 Here are blueprint examples:  
 
@@ -85,120 +100,12 @@ Here are blueprint examples:
 * [Small HDP 2.4 Streaming](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-streaming-cluster.bp)
 * [Small HDP 2.4 Spark](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-spark-cluster.bp)
 
-### Blueprint Components 
-
-Ambari supports the concept of stacks and associated services in a stack definition. By leveraging the stack definition, Ambari has a consistent and defined interface to install, manage, and monitor a set of services, and provides extensibility model for new stacks and services to be introduced.
-
-At a high level, the supported components can be grouped into two main categories: master and slave. The components are bundled together, forming specific services:
-
-| Service | Componets |
-|---|---|
-| HDFS	| DATANODE, HDFS_CLIENT, JOURNALNODE, NAMENODE, SECONDARY_NAMENODE, ZKFC |
-| YARN	| APP_TIMELINE_SERVER, NODEMANAGER, RESOURCEMANAGER, YARN_CLIENT |
-| MAPREDUCE2	| HISTORYSERVER, MAPREDUCE2_CLIENT |
-| HBASE |	HBASE_CLIENT, HBASE_MASTER, HBASE_REGIONSERVER |
-| HIVE	| HIVE_CLIENT, HIVE_METASTORE, HIVE_SERVER, MYSQL_SERVER |
-| HCATALOG |	HCAT |
-| WEBHCAT |	WEBHCAT_SERVER |
-| OOZIE | OOZIE_CLIENT, OOZIE_SERVER |
-| PIG | PIG |
-| SQOOP	| SQOOP |
-| STORM	| DRPC_SERVER, NIMBUS, STORM_REST_API, STORM_UI_SERVER, SUPERVISOR |
-| TEZ	| TEZ_CLIENT |
-| FALCON	| FALCON_CLIENT, FALCON_SERVER |
-| ZOOKEEPER	| ZOOKEEPER_CLIENT, ZOOKEEPER_SERVER |
-| SPARK	| SPARK_JOBHISTORYSERVER, SPARK_CLIENT |
-| RANGER	| RANGER_USERSYNC, RANGER_ADMIN |
-| AMBARI_METRICS	| AMBARI_METRICS, METRICS_COLLECTOR, METRICS_MONITOR |
-| KERBEROS	| KERBEROS_CLIENT |
-| FLUME	| FLUME_HANDLER |
-| KAFKA	| KAFKA_BROKER |
-| KNOX	| KNOX_GATEWAY |
-| ATLAS	| ATLAS |
-| CLOUDBREAK	| CLOUDBREAK |
-
-[comment]: <> (TO-DO: Not sure if this list is updated/correct)
  
  
-### Default Blueprints 
+### Delete Blueprint
 
-Cloudbreak includes the following default HDP cluster blueprints:
+You can delete previously added items by selecting and item and using the **delete** option. 
 
-HDP Version: **HDP 2.6**
+[comment]: <> (TO-DO: Is it possible to delete default blueprints?)
 
-| Cluster Type  | Services | Description  |
-|:------------- |:---|:-------------|
-| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 1.6,<br>Zeppelin 0.7.0 | This cluster configuration includes Spark 1.6 with Zeppelin. |
-| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 2.1,<br>Zeppelin 0.7.0 | This cluster configuration includes Spark 2.1 with Zeppelin. |
-| EDW - Analytics | <span><i class="fa fa-check" style="color: green"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.7.0 | This cluster configuration includes Hive 2 LLAP. |
-| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | This cluster configuration includes Hive and Spark 1.6. |
-| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br> Spark 2.1 | This cluster configuration includes Hive and Spark 2.1. |
-| BI | <span><i class="fa fa-warning" style="color: orange"></i> Druid 0.9.2</span> | This cluster configuration includes a Technical Preview of Druid. |
-
-
-HDP Version: **HDP 2.5**
-
-| Cluster Type  | Services | Description  |
-|:------------- |:---|:-------------|
-| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 1.6,<br>Zeppelin 0.6.0 | This cluster configuration includes Spark 1.6 and Zeppelin. |
-| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | This cluster configuration includes Hive and Spark 1.6. |
-| EDW - ETL | <i class="fa fa-warning" style="color: orange"></i> Hive 1.2.1,<br> Spark 2.0 | This cluster configuration includes a Technical Preview of Spark 2.0. |
-| EDW - Analytics | <span><i class="fa fa-warning" style="color: orange"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.6.0 | This cluster configuration includes a Technical Preview of Hive 2 LLAP. |
-
-
-<div class="note">
-    <p class="first admonition-title">Choosing Your Configuration</p>
-    <p class="last">
-When creating a cluster, you can choose a more stable cluster configuration for a predicable experience.
-Alternatively, you can try the latest capabilities by choosing a cluster configuration
-that is much more experimental. The following configuration classification applies:
-<ul>
-<li><i class="fa fa-check" style="color: green"></i> Stable configurations are the best choice if you want to avoid issues and other problems with launching and using clusters.</li>
-<li><i class="fa fa-warning" style="color: orange"></i> If you want to use a Technical Preview version of a component in a release of HDP, use these configurations.</li>
-<li><i class="fa fa-warning" style="color: red"></i> These are the most cutting edge of the configurations, including Technical Preview components in a Technical Preview HDP release.</li>
-</ul>
-</p>
-</div>
-
-
-The following services are included in the respective blueprints:
-
-HDP Version: **HDP 2.6**
-
-| Service | Data Science<br>(Spark 1.6) | Data Science<br>(Spark 2.1) | EDW-ETL<br>(Spark 1.6) | EDW-ETL<br>(Spark 2.1) | EDW-Analytics | BI-Druid |
-|---|---|---|---|---|---|---|
-| HDFS 		 		| x | x | x | x | x | x |
-| YARN 			 	| x | x | x | x | x | x |
-| MapReduce2  		| x | x | x | x | x | x |
-| Tez 					| x | x | x | x | x | x |
-| Hive 1.2.1 	 		| x | x | x | x |   |   |
-| Hive 2 LLAP 		|   |   |   |   | x |   |
-| Druid 		 		|   |   |   |   |   | x |
-| Pig  			 	| x | x | x | x | x |   |
-| Sqoop 				| x | x | x |   |   | x |
-| ZooKeeper 			| x | x | x | x | x | x |
-| Ambari Metrics 	| x | x | x | x | x | x |
-| Spark 1.6 			| x |   | x |   | x |   |
-| Spark 2.1 			|   | x |   | x |   |   |
-| Zeppelin 0.7.0 	| x | x |   |   | x |   |
-| Slider 				|   |   |   |   | x |   |
-
-HDP Version: **HDP 2.5**
-
-| Service | Data Science | EDW-ETL (Spark 1.6) | EDW-ETL (Spark 2.0) | EDW-Analytics |
-|---|---|---|---|---|
-| HDFS 				| x | x | x | x |
-| YARN 				| x | x | x | x |
-| MapReduce2  		| x | x | x | x |
-| Tez 					| x | x | x | x |
-| Hive 1.2.1 			| x | x | x |   | 
-| Hive 2 LLAP 		|   |   |   | x | 
-| Pig  				| x | x | x | x |
-| Sqoop 				| x | x |   |   |
-| ZooKeeper 			| x | x | x | x |
-| Ambari Metrics 	| x | x | x | x |
-| Spark 1.6 			| x | x |   | x |
-| Spark 2.0 			|   |   | x |   |
-| Zeppelin 0.6.0 	| x |   |   | x |
-| Slider 				|   |   |   | x |
 
