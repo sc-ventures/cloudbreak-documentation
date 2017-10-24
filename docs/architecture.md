@@ -55,3 +55,14 @@ To learn more about Ambari blueprints, refer to [Apache documentation](https://c
 After launching Cloudbreak, you must create a Cloudbreak credntial and only after you complete that step you can start creating clusters.
 
 
+### Cluster Architecture 
+
+The two primary components of Cloudbreak are the Cloudbreak application and one or more clusters being managed by it. The  Cloudbreak application and the cluster nodes run on VMs.
+
+The Cloudbreak application is a web application that communicates with the cloud services to create AWS resources on your behalf. Once the cloud resources are in place, the Cloudbreak application uses Apache Ambari to deploy and configure the cluster to the instances (based on your choice of HDP version and cluster configuration). Once your cluster is deployed, you can use the cloud controller to scale the cluster.
+
+A cluster, used for storing and processing data, includes three node types: master, worker, and compute.
+
+* A master node runs the components for managing the cluster (including Ambari), storing data (HDFS), processing tasks, as well as other master components.  
+* A worker node runs the components that are used for executing processing tasks (e.g. NodeManager) and handling storing data in HDFS (e.g. DataNode).  
+* A compute node can optionally be used for running data processing tasks (e.g. NodeManager). Compute nodes can run on standard on-demand instances or on spot instances.  
