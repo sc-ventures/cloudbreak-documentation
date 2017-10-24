@@ -21,7 +21,7 @@ Use these steps to create a cluster.
 | HDP Version | Choose the HDP version to use for this cluster. |
 | Cluster Type | Choose one of default cluster configurations, or, if you have defined your own cluster configuration via Ambari blueprint, you can choose it here. For more information, refer to [Blueprints](blueprints.md). |
 | Enable Lifetime Management | Check this option if you would like your cluster to be automatically terminated after a specific amount of time (defined as "Time to Live" in minutes) has passed. |
-| Tags | (Optional) You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. |
+| Tags | You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. |
 
 4. On the **Hardware and Storage** page, for each host group (master, worker, and compute) provide the following information to define your cluster nodes and attached storage:
     
@@ -41,7 +41,7 @@ Use these steps to create a cluster.
 | Select Network | Select the virtual network in which you would like your cluster to be provisioned. You can select an existing network or create a new network. |
 | Select Subnet | Select the subnet in which you would like your cluster to be provisioned. You must create a new subnet. |
 | Subnet (CIDR)| If you selected to create a new subnet, you must define a valid [CIDR](http://www.ipaddressguide.com/cidr) for the subnet. Default is 10.0.0.0/16. |
-| Security Group | <p>For each host group, select one of the options:<ul><li>Create new security group</li><li>Do not use security group</li><.li>Select an existing security group</li></ul></p> |
+| Security Group | <p>For each host group, select one of the options:<ul><li>Create new security group</li><li>Do not use security group</li><li>Select an existing security group</li></ul></p> |
 
     If you choose to create a new security group, the *New Security Group* wizard will open.
     
@@ -62,7 +62,7 @@ Use these steps to create a cluster.
 | Password | You can log in to the Ambari UI using this password. |
 | Confirm Password | Confirm the password. |
 | SSH Key Pair| Select an existing public key or specify a new public key. You will use the matching private key to access your cluster nodes via SSH. |
-| Enable Kerberos Security | (Optional) Select this option to enable Kerberos for your cluster. You will have an option to create a new kerberos or use an existing one. For more information refer to [Kerberos](security-kerberos.md) documentation. |
+| Enable Kerberos Security | Select this option to enable Kerberos for your cluster. You will have an option to create a new kerberos or use an existing one. For more information refer to [Kerberos](security-kerberos.md) documentation. |
 
 8. Click on **Create Cluster** to create a cluster.
 
