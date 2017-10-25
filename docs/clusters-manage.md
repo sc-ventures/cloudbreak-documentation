@@ -14,20 +14,20 @@ To trigger repair process for your cluster, click **repair**. Faulty nodes will 
 
 TBD
  
- 
-### Cloning Your Cluster
-
-TBD
-
 
 ### Resizing Your Cluster
 
-TBD
+To resize a cluster, follow these steps.
 
+**Steps**
 
-### Auto Scaling
+1. Browse to the cluster details.
 
-TBD
+2. Click **CLUSTER ACTIONS** and select **Resize**. The cluster resize dialog is displayed.
+
+3. Using the +/- control, you can adjust how many worker and compute nodes to add or remove from the cluster. 
+
+4. Click **RESIZE CLUSTER** to initiate the scale-up/scale-down.
 
 
 ### Stopping and Restarting

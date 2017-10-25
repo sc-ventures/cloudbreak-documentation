@@ -2,9 +2,11 @@
 
 ### System Info
 
-Cloudbreak 2.1.0
+Cloudbreak 2.1.0 Technical Preview 
 
 ### New Features
+
+#### TP 2.1.0
 
 First release
 
@@ -14,4 +16,5 @@ First release
 
 ### Known Issues
 
-Coming soon!
+There are no known issues. 
+

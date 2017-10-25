@@ -1,16 +1,16 @@
 ## Architecture  
 
-**Cloudbreak deployer** installs Cloudbreak components on your AWS VM. Once these components are deployed, you can use **Cloudbreak application** to create, manage, and monitor clusters. 
+**Cloudbreak deployer** installs Cloudbreak components on a VM. Once these components are deployed, you can use **Cloudbreak application** or Cloudbreak CLI to create, manage, and monitor clusters. 
 
 ### Cloudbreak Deployer Architecture
 
-Cloudbreak deployer includes the following components:
+**Cloudbreak deployer** installs Cloudbreak components on a VM. It includes the following components:
 
 | Component | Description |
 |---|---|
 | **Cloudbreak Application** | Cloudbreak application is built on the foundation of cloud provider APIs and Apache Ambari. | 
 | **Uluwatu** | This is Cloudbreak web UI, which can be used to create, manage, and monitor clusters. |
-| **Cloudbreak Shell** | This is Cloudbreak's command line tool, which can be used to create, manage, and monitor clusters. | 
+| **Cloudbreak CLI** | This is Cloudbreak's command line tool, which can be used to create, manage, and monitor clusters. | 
 | **Identity** | This is Cloudbreak's OAuth identity server implementation, which utilizes UAA. |
 | **Sultans** | This is Cloudbreak's user management system. | 
 | **Periscope** | This is Cloudbreak's autoscaling application, which is responsible for automatically increasing or decreasing the capacity of the cluster when your pre-defined conditions are met. |
@@ -32,16 +32,13 @@ Cloudbreak application is built on the foundation of cloud provider APIs and Apa
 
     You can define these resources (networks, security groups, VMs and storage, and so on) in the create a cluster wizard in the Cloudbreak web UI. Resources are only provisioned once you create the cluster.  
     
-The use of blueprints is illustrated in the following image:
-
-<a href="../images/templates-and-blueprints2.png" target="_blank" title="click to enlarge"><img src="../images/templates-and-blueprints2.png" width="650" title="How Cloudbreak uses templates and blueprints"></a> 
 
 
 #### Ambari Blueprints
 
-**Ambari blueprints** are a declarative definition of a cluster. With a blueprint, you can specify stack, component layout, and configurations to materialize an HDP cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard. 
+**Ambari blueprints** are a declarative definition of a cluster. With a blueprint, you can specify stack, component layout, and configurations to materialize an HDP cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard.  
 
-Ambari blueprints are specified in the JSON format. After you provide the blueprint to Cloudbreak, the host groups in the JSON will be mapped to a set of instances when starting the cluster, and the specified services and components will be installed on the corresponding nodes.
+Ambari blueprints are specified in JSON format. After you provide the blueprint to Cloudbreak, the host groups in the JSON will be mapped to a set of instances when starting the cluster, and the specified services and components will be installed on the corresponding nodes.
 
 Cloudbreak includes a few default blueprints and allows you to upload your own blueprints.
 
@@ -52,17 +49,5 @@ To learn more about Ambari blueprints, refer to [Apache documentation](https://c
 
 **Cloudbreak credential** allows Cloudbreak to authenticate with the cloud provider and create resources on your behalf. This is typically done via assigning a specific IAM role to Cloudbreak which allows Cloudbreak to perform certain actions within your cloud provider account.
 
-After launching Cloudbreak, you must create a Cloudbreak credntial and only after you complete that step you can start creating clusters.
+After launching Cloudbreak, you must create a Cloudbreak credential. Only after you have completed that step you can start creating clusters.
 
-
-### Cluster Architecture 
-
-The two primary components of Cloudbreak are the Cloudbreak application and one or more clusters being managed by it. The  Cloudbreak application and the cluster nodes run on VMs.
-
-The Cloudbreak application is a web application that communicates with the cloud services to create AWS resources on your behalf. Once the cloud resources are in place, the Cloudbreak application uses Apache Ambari to deploy and configure the cluster to the instances (based on your choice of HDP version and cluster configuration). Once your cluster is deployed, you can use the cloud controller to scale the cluster.
-
-A cluster, used for storing and processing data, includes three node types: master, worker, and compute.
-
-* A master node runs the components for managing the cluster (including Ambari), storing data (HDFS), processing tasks, as well as other master components.  
-* A worker node runs the components that are used for executing processing tasks (e.g. NodeManager) and handling storing data in HDFS (e.g. DataNode).  
-* A compute node can optionally be used for running data processing tasks (e.g. NodeManager). Compute nodes can run on standard on-demand instances or on spot instances.  

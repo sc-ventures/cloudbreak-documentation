@@ -15,7 +15,7 @@ markdown_extensions:
 use_directory_urls: false
 pages:
     - Get Started:
-      - Introduction: index.md
+      - Introduction: getting-started.md
       - Architecture: architecture.md
       - Release Notes: releasenotes.md
     - AWS:
