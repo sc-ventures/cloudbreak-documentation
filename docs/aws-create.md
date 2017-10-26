@@ -71,10 +71,11 @@ Use these steps to create a cluster.
 | Cluster User | You can log in to the Ambari UI using this username. By default, this is set to `admin`. |
 | Password | You can log in to the Ambari UI using this password. |
 | Confirm Password | Confirm the password. |
-| SSH Key Pair| Select an existing public key or specify a new public key. You will use the matching private key to access your cluster nodes via SSH. |
+| SSH Key Pair| Select an existing public key. You will use the matching private key to access your cluster nodes via SSH. |
 
     | Parameter | Description |
 |---|---|
+| Specify new SSH public key pair| Specify a new public key. You will use the matching private key to access your cluster nodes via SSH. |
 | Enable Kerberos Security | Select this option to enable Kerberos for your cluster. You will have an option to create a new kerberos or use an existing one. For more information refer to [Kerberos](security-kerberos.md) documentation. |
 
 8. Click on **Create Cluster** to create a cluster.

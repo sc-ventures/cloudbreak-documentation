@@ -32,16 +32,6 @@ HDP Version: **HDP 2.6**
 | BI | <span><i class="fa fa-warning" style="color: orange"></i> Druid 0.9.2</span> | HDFS, YARN, MapReduce2, Tez, Druid, Sqoop, ZooKeeper, Ambari Metrics |
 
 
-HDP Version: **HDP 2.5**
-
-| Cluster Type  | Main Services | List of All Services Included  |
-|:------------- |:---|:-------------|
-| Data Science | <i class="fa fa-check" style="color: green"></i> Spark 1.6,<br>Zeppelin 0.6.0 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, Sqoop, ZooKeeper, Ambari Metrics, Spark 1.6, Zeppelin 0.6.0 |
-| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, Sqoop, ZooKeeper, Ambari Metrics, Spark 1.6 |
-| EDW - ETL | <i class="fa fa-warning" style="color: orange"></i> Hive 1.2.1,<br> Spark 2.0 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, ZooKeeper, Ambari Metrics, Spark 2.0 |
-| EDW - Analytics | <span><i class="fa fa-warning" style="color: orange"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.6.0 | HDFS, YARN, MapReduce2, Tez, Hive 2 LLAP, Pig, ZooKeeper, Ambari Metrics, Spark 1.6, Zeppelin 0.6.0, Slider |
-
-
 
 <div class="note">
     <p class="first admonition-title">Choosing Your Configuration</p>
