@@ -1,9 +1,9 @@
-## Accessing Your Cluster
+## Access Your Cluster
 
 The following section describes how to access the various services in the cluster.
 
 
-### Finding Cluster Details
+### Finding Cluster Information in the UI
 
 Once your cluster is up and running, click on the tile representing your cluster in the Cloudbreak UI to find information about the cluster. 
 
@@ -39,7 +39,29 @@ This section lists user-defined tags, in the same order as you added them.
 
 The EVENT HISTORY tab shows you events logged for the cluster, with the most recent event at the top. For example, after your cluster has been created, the following messages will be written to the log:
 
-<pre></pre>
+<pre>
+Ambari cluster built; Ambari ip:34.215.103.66
+10/26/2017, 9:41:58 AM
+Building Ambari cluster; Ambari ip:34.215.103.66
+10/26/2017, 9:30:20 AM
+Starting Ambari cluster services
+10/26/2017, 9:27:12 AM
+Setting up infrastructure metadata
+10/26/2017, 9:27:11 AM
+Bootstrapping infrastructure cluster
+10/26/2017, 9:26:38 AM
+Infrastructure successfully provisioned
+10/26/2017, 9:26:37 AM
+Billing started, Infrastructure successfully provisioned
+10/26/2017, 9:26:37 AM
+Infrastructure metadata collection finished
+10/26/2017, 9:25:39 AM
+Infrastructure creation took 194 seconds
+10/26/2017, 9:25:37 AM
+Creating infrastructure
+10/26/2017, 9:22:22 AM
+Setting up HDP image
+10/26/2017, 9:22:21 AM</pre>
 
 
 ### Access Cluster via SSH

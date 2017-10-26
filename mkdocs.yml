@@ -40,7 +40,7 @@ pages:
       - Create a Cluster: os-create.md
       - Access Cluster: os-clusters-access.md
       - Manage and Monitor Clusters: os-clusters-manage.md
-    - Config & Admin:
+    - Using Cloudbreak:
       - Advanced Cluster Options:
         - Blueprints: blueprints.md
         - Recipes: recipes.md

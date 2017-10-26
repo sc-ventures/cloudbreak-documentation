@@ -35,6 +35,26 @@ To see all available environment variables with their default values, use:
 cbd env show
 ```
 
+### Create Environment Specific Profiles
+
+If you would like to use a different versions of Cloudbreak for prod and qa profile, you must create two environment specific configurations that can be sourced. For example:
+
+* Profile.prod  
+* Profile.qa   
+
+For example, to create and use a prod profile, you need to:
+
+1. Create a file called `Profile.prod`  
+2. Write the environment-specific `export DOCKER_TAG_CLOUDBREAK=0.3.99` into `Profile.prod` to specify Docker image.  
+3. Set the environment variable: `CBD_DEFAULT_PROFILE=prod`  
+
+To use the prod specific profile once, set:  
+
+<pre>CBD_DEFAULT_PROFILE=prod cbd some_commands</pre>
+    
+To permanently use the prod profile, set `export CBD_DEFAULT_PROFILE=prod` in your `.bash_profile`.
+
+
 ### Profile Variables
 
 #### Cloudbreak Variables
@@ -272,22 +292,22 @@ For a full list of available consul config options, refer to [Consul documentati
 To pass any additional Consul configuration, define the `DOCKER_CONSUL_OPTIONS` variable in the Profile file.
 
 
-### Create Environment Specific Profiles
+### Add Tags in Profile (AWS)
 
-If you would like to use a different versions of Cloudbreak for prod and qa profile, you must create two environment specific configurations that can be sourced. For example:
+In order to differentiate launched instances, you can optionally define custom tags for your AWS resources deployed by Cloudbreak. 
 
-* Profile.prod  
-* Profile.qa   
+* If you want just one custom tag for your Cloudformation resources, set this variable in the `Profile`:
 
-For example, to create and use a prod profile, you need to:
+    ```export CB_AWS_DEFAULT_CF_TAG=mytagcontent```
 
-1. Create a file called `Profile.prod`  
-2. Write the environment-specific `export DOCKER_TAG_CLOUDBREAK=0.3.99` into `Profile.prod` to specify Docker image.  
-3. Set the environment variable: `CBD_DEFAULT_PROFILE=prod`  
+    In this example, the name of the tag will be `CloudbreakId` and the value will be `mytagcontent`.
 
-To use the prod specific profile once, set:  
+* If you prefer to customize the tag name, set this variable:
 
-<pre>CBD_DEFAULT_PROFILE=prod cbd some_commands</pre>
-    
-To permanently use the prod profile, set `export CBD_DEFAULT_PROFILE=prod` in your `.bash_profile`.
+    ```export CB_AWS_CUSTOM_CF_TAGS=mytagname:mytagvalue```
 
+    In this example the name of the tag will be `mytagname` and the value will be `mytagvalue`. 
+
+* You can specify a list of tags with a comma separated list: 
+
+    ```export CB_AWS_CUSTOM_CF_TAGS=tag1:value1,tag2:value2,tag3:value3```

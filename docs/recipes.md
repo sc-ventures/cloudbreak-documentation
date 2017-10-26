@@ -1,7 +1,5 @@
 ## Recipes
 
-[comment]: <> (This is from the old UI. Need to rewrite when new UI is ready.)
-
 Although Cloudbreak lets you provision HDP clusters in the cloud based on custom Ambari blueprints, Cloudbreak provisioning options don't consider all possible use cases. For that reason, we introduced recipes. 
 
 A recipe is a script that runs on all nodes of a selected node group before or after the Ambari cluster installation. You can use recipes for tasks such as installing additional software or performing advanced cluster configuration. For example, you can use a recipe to put a JAR file on the Hadoop classpath.
@@ -44,26 +42,23 @@ To add a recipe, perform these steps.
 |---|---|
 | Name | Enter a name for your recipe. |
 | Description | (Optional) Enter a description for your recipe.|
-| Execution Type | Select **PRE** or **POST**, depending on whether you want the script to be executed prior to or post Ambari cluster deployment. |
+| Execution Type | Select one of the following options: <ul><li>**PRE**: The script will be executed prior to Ambari cluster deployment.</li><li>**POST**: The script will be executed after Ambari cluster deployment.</li></ul>|
 | Script | <p>Select one of: <ul><li>**Script**: Paste the script.</li><li> **File**: Point to a file on your machine that contains the recipe.</li><li> **URL**: Specify the URL for your recipe.</li></ul> |
-| Public In Account | (Optional) If this option is checked, all the users belonging to your account will be able to use this recipe to create clusters, but they cannot delete it. | 
-
-    Example: 
 
     <a href="../images/recipe-add.png" target="_blank" title="click to enlarge"><img src="../images/recipe-add.png" width="650" title="Cloudbreak web UI"></a> 
     
-3. When creating a cluster, select **Show Advanced Options** > **Choose Blueprint** and specify which recipe you want to execute on which host group. 
-
-    Example: 
+3. When creating a cluster, you can select previously added recipes using the **Recipes** option available in the advanced **General Configuration** section. 
 
     <a href="../images/recipe-select.png" target="_blank" title="click to enlarge"><img src="../images/recipe-select.png" width="650" title="Cloudbreak web UI"></a> 
+    
+    [comment]: <> (Provide more details once the new UI is ready.)
 
 
 ### Deleting Recipes
 
 You can delete previously added items by selecting and item and using the **delete** option. 
 
-### Modifying Recipes 
+### Modifying Existing Recipes 
 
 To modify previously added recipes:
 

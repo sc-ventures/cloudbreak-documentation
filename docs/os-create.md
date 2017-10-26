@@ -25,6 +25,7 @@ Use these steps to create a cluster.
 | Availability Zone | Choose one of the availability zones within the selected region. |
 | Enable Lifetime Management | Check this option if you would like your cluster to be automatically terminated after a specific amount of time (defined as "Time to Live" in minutes) has passed. |
 | Tags | You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. |
+| Recipes | This option allows you to select previously uploaded recipes (scripts that will be run pre- or post- cluster deployment). For more information on default and custom blueprints, refer to [Recipes](recipes.md). |
 
 4. On the **Hardware and Storage** page, for each host group provide the following information to define your cluster nodes and attached storage:
     

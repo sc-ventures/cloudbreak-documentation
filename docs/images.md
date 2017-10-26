@@ -1,7 +1,5 @@
 ## Custom Images
 
-> This feature is `TECHNICAL PREVIEW`.
-
 By default, Cloudbreak launches clusters from an image that includes default configuration and default tooling for provisioning. These are considered the Standard default images.
 
 In some cases, these default images might not fit the requirements of users: for example when they need custom OS hardening, libraries, tooling, and so on. In such cases, the user would like to start their clusters from their own custom image.

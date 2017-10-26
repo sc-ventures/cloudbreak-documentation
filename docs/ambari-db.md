@@ -1,8 +1,6 @@
 
 ## Ambari Database
 
-> Ambari Database support is technical preview and may not be suitable for production use.
-
 By default, Ambari uses an embedded database to store data. Ambari and Cloudbreak don't perform backups of this database, so although this database is sufficient for ephemeral or test clusters, it is not sufficient for long-running production clusters. Therefore, you may need to configure a remote database for Ambari in Cloudbreak.
 
 The overall steps are:  

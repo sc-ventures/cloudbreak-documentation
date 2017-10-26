@@ -16,32 +16,8 @@ Note that:
 
 * It is not possible to add tags after your cluster has been created.  
 * When you clone your cluster, all tags associated with the source cluster will be added to the template of the clone.  
-* When you save a cluster template, all tags will be saved as part of the template, and they will be listed on the cluster template page.  
+* When you save a cluster template, all tags will be saved as part of the template, and they will be listed on the cluster template page.    
 
-
-### Add Tags in Profile (AWS)
-
-In order to differentiate launched instances, you can optionally define custom tags for your AWS resources deployed by Cloudbreak. 
-
-* If you want just one custom tag for your Cloudformation resources, set this variable in the `Profile`:
-
-    ```export CB_AWS_DEFAULT_CF_TAG=mytagcontent```
-
-    In this example, the name of the tag will be `CloudbreakId` and the value will be `mytagcontent`.
-
-* If you prefer to customize the tag name, set this variable:
-
-    ```export CB_AWS_CUSTOM_CF_TAGS=mytagname:mytagvalue```
-
-    In this example the name of the tag will be `mytagname` and the value will be `mytagvalue`. 
-
-* You can specify a list of tags with a comma separated list: 
-
-    ```export CB_AWS_CUSTOM_CF_TAGS=tag1:value1,tag2:value2,tag3:value3```
-    
-
-[comment]: <> (TO-DO: What exactly gets tagged?) 
-[comment]: <> (This configuration is available on AWS only??)
 
 ### Cloud Provider Documentation
 

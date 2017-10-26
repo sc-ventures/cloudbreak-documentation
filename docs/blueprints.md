@@ -14,13 +14,12 @@ We recommend that you review the default blueprints to check if they meet your r
 
 To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. 
 
-To review default blueprints, refer to [Default Blueprints](#default-blueprints).
 
 #### Default Blueprints 
 
 Cloudbreak includes the following default HDP cluster blueprints:
 
-HDP Version: **HDP 2.6**
+Platform Version: **HDP 2.6**
 
 | Cluster Type  | Main Services | List of All Services Included |
 |:------------- |:---|:-------------|
@@ -59,26 +58,6 @@ Furthermore, a blueprint can be modified later from the Ambari UI.
 
 A blueprint can be exported from a running Ambari cluster and can be reused in Cloudbreak after slight modifications. When a blueprint is exported, some configurations are hardcoded for example domain names, memory configurations, and so on, that won't be applicable to the Cloudbreak cluster. There is no automatic way to modify an exported blueprint and make it instantly usable in Cloudbreak, the modifications have to be done manually.
 
-Also see [Example Blueprints](#example-blueprints) and [Blueprint Components](#blueprint-components).
-
-
-#### Upload a Blueprint 
-
-Once you have your blueprint ready, perform these steps.
-
-**Steps**
-
-1. In the Cloudbreak UI, select **Blueprints** from the left pane. To add your own blueprint, click **Create Blueprint** and enter the following parameters:
-
-    | Parameter | Value |
-|---|---|
-| Name | Enter a name for your blueprint. |
-| Description | (Optional) Enter a description for your blueprint.|
-| Blueprint Source| <p>Select one of: <ul><li>**Text**: Paste blueprint in JSON format.</li><li> **File**: Upload a file that contains the blueprint.</li><li> **URL**: Specify the URL for your blueprint.</li></ul> |
-
-2. To use the uploaded blueprints, simply select it when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. 
-
-
 #### Example Blueprints
 
 [comment]: <> (TO-DO: Maybe we can find some newer examples?)
@@ -90,12 +69,41 @@ Here are blueprint examples:
 * [Small HDP 2.4 Streaming](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-streaming-cluster.bp)
 * [Small HDP 2.4 Spark](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-spark-cluster.bp)
 
- 
+
+#### Upload a Blueprint 
+
+Once you have your blueprint ready, perform these steps.
+
+**Steps**
+
+1. In the Cloudbreak UI, select **Blueprints** from the left pane. 
+2. To add your own blueprint, click **Create Blueprint** and enter the following parameters:
+
+    | Parameter | Value |
+|---|---|
+| Name | Enter a name for your blueprint. |
+| Description | (Optional) Enter a description for your blueprint.|
+| Blueprint Source | <p>Select one of: <ul><li>**Text**: Paste blueprint in JSON format.</li><li> **File**: Upload a file that contains the blueprint.</li><li> **URL**: Specify the URL for your blueprint.</li></ul> |
+
+    <a href="../images/blueprint-add.png" target="_blank" title="click to enlarge"><img src="../images/blueprint-add.png" width="650" title="Cloudbreak web UI"></a> 
+
+2. To use the uploaded blueprints, select it when creating a cluster. The option is available on the **General Configuration** page. First select the **Platform Version** and then select your chosen blueprint under **Cluster Type**. 
+
+    <a href="../images/blueprint-select.png" target="_blank" title="click to enlarge"><img src="../images/blueprint-select.png" width="650" title="Cloudbreak web UI"></a> 
+
+
  
 ### Delete Blueprint
 
 You can delete previously added items by selecting and item and using the **delete** option. 
 
 [comment]: <> (TO-DO: Is it possible to delete default blueprints?)
+
+
+### Modifying Existing Blueprints
+
+
+* You cannot directly modify default blueprints.
+* You cannot directly modify the custom blueprints that you have uploaded or pasted. However, If you provided a URL to the location where the blueprint is stored, in order to modify the blueprint simply update it in the location to which the URL is pointing.       
 
 
