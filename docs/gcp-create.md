@@ -112,6 +112,7 @@ Click on **Advanced** to view and enter additional configuration options.
 #### Security 
 
 <div class="next">
-<a href="../gcp-clusters-access/index.html">Next: Access Cluster</a>
+<a href="../gcp-clusters-manage/index.html">Next: Manage and Monitor Clusters</a>
 </div>
+
 

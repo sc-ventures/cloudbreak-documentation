@@ -66,13 +66,11 @@ pages:
         - Troubleshooting GCP: trouble-gcp.md
         - Troubleshooting OpenStack: trouble-os.md
     - More:
+      - FAQs: faq.md 
+      - Getting Help: get-help.md
+      - SmartSense: smartsense.md
       - Developer:
         - Developer Docs: dev.md
         - Cloudbreak SPI: dev-spi.md
         - Cloudbreak APIs: dev-api.md
         - Flow Diagrams: dev-flows.md 
-      - FAQs: faq.md 
-      - Getting Help: get-help.md
-      - SmartSense: smartsense.md
-
-

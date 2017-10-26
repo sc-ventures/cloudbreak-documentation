@@ -6,7 +6,7 @@ Cloudbreak 2.1.0 Technical Preview
 
 ### New Features
 
-#### TP 2.1.0
+#### 2.1.0 TP 
 
 First release
 

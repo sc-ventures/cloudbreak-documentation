@@ -127,5 +127,6 @@ Click on **Advanced** to view and enter additional configuration options.
 
 
 <div class="next">
-<a href="../azure-clusters-access/index.html">Next: Access Cluster</a>
+<a href="../azure-clusters-manage/index.html">Next: Manage and Monitor Clusters</a>
 </div>
+

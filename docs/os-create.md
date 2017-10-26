@@ -102,5 +102,7 @@ Click on **Advanced** to view and enter additional configuration options.
 
 
 <div class="next">
-<a href="../os-clusters-access/index.html">Next: Access Cluster</a>
+<a href="../os-clusters-manage/index.html">Next: Manage and Monitor Clusters</a>
 </div>
+
+
