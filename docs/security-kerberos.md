@@ -1,6 +1,4 @@
-## Configuring Kerberos
-
-> This feature is `TECHNICAL PREVIEW`.
+## Configure Kerberos
 
 Cloudbreak supports using Kerberos security for its clusters. It supports three ways of provisioning Kerberos-enabled clusters:
 

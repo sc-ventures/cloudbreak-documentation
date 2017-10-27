@@ -1,4 +1,4 @@
-## Accessing Data on Azure 
+## Access Data on Azure 
 
 Hortonworks Data Platform (HDP) supports reading and writing both block blobs and page blobs
 from/to *Windows Azure Storage Blob (WASB)* object store, as well as reading and writing files stored in an
@@ -39,7 +39,9 @@ This last configuration option should not be automated, since you need to select
 7. Test access to ADLS. Review the next sections for information on how to access data in ADLS from the cluster once it is deployed, for example from the command line of the cluster name node.
 
 
-#### Access Path
+#### Testing Access to ADLS
+
+To tests access to ADLS, SSH to a cluster node and run a few hadoop fs shell commands against your existing ADLS account.
 
 ADLS access path syntax is:
 
@@ -83,7 +85,9 @@ You can obtain your access key from the Access keys in your storage account sett
 
 Alternatively, it is possible, although not recommended or supported, to configure `fs.defaultFS` to use a wasb or wasbs URL. This causes all bare paths, such as /testDir/testFile to resolve automatically to that file system.
 
-#### Access Path
+#### Testing Access to WASB
+
+To tests access to WASB, SSH to a cluster node and run a few hadoop fs shell commands against your existing WASB account.
 
 WASB access path syntax is:
 
@@ -110,7 +114,7 @@ test file content</pre>
 
 ### Learn More
 
-For more information about configuring the ADLS and WASB connectors and working with data stored in ADLS and WASB, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.1/bk_cloud-data-access/content/about.html) documentation.
+For more information about configuring the ADLS and WASB connectors and working with data stored in ADLS and WASB, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) documentation.
 
 <div class="next">
 <a href="../clusters-access/index.html">Next: Access Cluster</a>

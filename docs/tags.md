@@ -1,4 +1,3 @@
-
 ## Resource Tagging
 
 When you manually create resources (such as VMs) in the cloud, you have an option to add custom tags that help you track these resources. Likewise, when creating clusters, you can instruct Cloudbreak to tag the cloud resources that it creates on your behalf.
@@ -10,13 +9,15 @@ You can use tags to categorize your cloud resources by purpose, owner, and so on
 
 ### Add Tags When Creating a Cluster
 
-You can tag the cloud resources used for a cluster by providing custom tag names and values when creating a cluster via UI or CLI. In the UI, this option is available on the **Configure Cluster** page > **Tags**.
+You can tag the cloud resources used for a cluster by providing custom tag names and values when creating a cluster via UI or CLI. In the Cloudbreak UI, this option is available in the create clusetr wizard, in the advanced **General Configuration** > **Tags** section:
 
-Note that:
+<a href="../images/tags.png" target="_blank" title="click to enlarge"><img src="../images/tags.png" width="650" title="Cloudbreak web UI"></a> 
 
-* It is not possible to add tags after your cluster has been created.  
-* When you clone your cluster, all tags associated with the source cluster will be added to the template of the clone.  
-* When you save a cluster template, all tags will be saved as part of the template, and they will be listed on the cluster template page.    
+It is not possible to add tags after your cluster has been created.  
+
+[comment]: <> (Commenting out the content which does not apply but we may want to add it in the future.)
+[comment]: <> (When you clone your cluster, all tags associated with the source cluster will be added to the template of the clone.)  
+[comment]: <> (When you save a cluster template, all tags will be saved as part of the template, and they will be listed on the cluster template page.)    
 
 
 ### Cloud Provider Documentation

@@ -1,4 +1,4 @@
-## Launching Cloudbreak on AWS
+## Launch Cloudbreak on AWS
 
 Before launching Cloudbreak on AWS, review and meet the prerequisites. Next, launch a VM using a Cloudbreak Amazon Machine Image, access the VM, and then start Cloudbreak. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential. 
 
@@ -179,25 +179,18 @@ Use these steps to create CredentialRole.
 
 **Policy Definitions**
 
-[comment]: <> (There is a problem copying and pasting this role definition to IAM console. Maybe this is due to formatting issues? If this is the reason, then maybe we can put the correct policy definitions for each policy in a JSON file in the docs repo and then link to it.)
-
 The "AssumeRole" policy definition: 
 
 <pre>{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "Stmt1400068149000",
-      "Effect": "Allow",
-      "Action": [
-        "sts:AssumeRole"
-      ],
-      "Resource": [
-        "*"
-      ]
-    }
-  ]
-}</pre>   
+  "Version": "2012-10-17",
+  "Statement": {
+    "Sid": "Stmt1400068149000",
+    "Effect": "Allow",
+    "Action": ["sts:AssumeRole"],
+    "Resource": "*"
+  }
+}
+</pre>   
 
 The "cb-policy" policy definition: 
 

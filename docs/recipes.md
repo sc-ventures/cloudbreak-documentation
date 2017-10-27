@@ -51,7 +51,7 @@ To add a recipe, perform these steps.
 
     <a href="../images/recipe-select.png" target="_blank" title="click to enlarge"><img src="../images/recipe-select.png" width="650" title="Cloudbreak web UI"></a> 
     
-    [comment]: <> (Provide more details once the new UI is ready.)
+[comment]: <> (Provide more details once the new UI is ready.)
 
 
 ### Deleting Recipes
@@ -65,6 +65,4 @@ To modify previously added recipes:
 * If you pasted or uploaded your recipe in the Cloudbreak UI, in order to modify it you must delete the entry and add the recipe again in a new entry.   
 * If you provided a URL to the location where the recipe is stored, in order to modify the recipe simply update it in the location to which the URL is pointing.       
 
-
-[comment]: <> (TO-DO: Move Shell commands to the Cb Shell doc.) 
 

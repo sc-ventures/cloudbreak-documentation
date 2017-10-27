@@ -1,9 +1,11 @@
 
-## Credentials 
+##  Manage Cloudbreak Credentials 
 
-You can manage Cloudbreak credentials in the **manage credentials** tab by clicking on **+create credential** and providing required parameters. You must create at least one credential in order to be able to create a cluster. 
+You can view and manage Cloudbreak credentials in the **Credentials** tab by clicking **Create credential** and providing required parameters. You must create at least one credential in order to be able to create a cluster. 
 
-### Creating Cloudbreak Credental  
+<a href="../images/credentials.png" target="_blank" title="click to enlarge"><img src="../images/credentials.png" width="650" title="Cloudbreak web UI"></a> 
+
+### Create Cloudbreak Credental  
 
 For steps, refer to:
 
@@ -12,11 +14,22 @@ For steps, refer to:
 * [Create Credential on GCP](gcp-launch.md#create-cloudbreak-credential) 
 * [Create Credential on OpenStack](os-launch.md#create-cloudbreak-credential)
 
-### Managing Cloudbrek Credentials
 
-You can manage (add and delete) your credentials from the **manage credentials** tab. 
+### Set a Default Credential
 
-All credentials that was cerated with "Public In Account" unchecked (which is the default behavior) are only visible to the user who created them. 
+If using multiple Cloudbreak credentials, you can select one credential and use it as default for creating clusters. This default credential will be pre-selected in the create cluster wizard.
+ 
+To set a default credential:
 
-All credentials that were cerated with "Public In Account" checked are visible to all users of the Cloudbreak instance, but only the user who created them can delete them. 
+1. In the Cloudbreak UI, select **Credentials** from the left pane.  
+2. Click **Set as default** next to the credential that you would like to set as default.  
+3. Click **Yes** to confirm. 
 
+### Delete a Credential 
+
+To delete a credential:
+
+1. In the Cloudbreak UI, select **Credentials** from the left pane.  
+2. Select one or more credentials by checking their corresponding checkboxes.
+2. Click **Delete**. 
+3. Click **Yes** to confirm. 

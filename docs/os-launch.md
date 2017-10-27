@@ -1,4 +1,4 @@
-## Launching Cloudbreak on OpenStack
+## Launch Cloudbreak on OpenStack
 
 Before launching Cloudbreak on OpenStack, review and meet the prerequisites. Next, import Cloudbreak image, launch a VM, SSH to the VM, and start Cloudbreak. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential. 
 

@@ -5,7 +5,7 @@ The following section describes how to access the various services in the cluste
 
 ### Finding Cluster Information in the UI
 
-Once your cluster is up and running, click on the tile representing your cluster in the Cloudbreak UI to find information about the cluster. 
+Once your cluster is up and running, click on the tile representing your cluster in the Cloudbreak UI to access information related the cluster and access cluster actions. 
 
 <a href="../images/cb-ui-clinfo.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui-clinfo.png" width="650" title="Cluster Information"></a> 
 
@@ -17,17 +17,53 @@ The information presented includes:
 * [Tags](#tags) 
 * [Event History](#event-history) 
 
+<div class="note">
+  <p class="first admonition-title">Tips</p>
+  <p class="last"><ul>
+  <li> Access cluster actions such as resize and sync by clicking on <b>ACTIONS</b>.</li>
+  <li> Access Ambari web UI by clicking on the link in the <b>CLUSTER INFORMATION</b> section.</li>
+<li> View public IP addresses for all cluster instances in the <b>HARDWARE</b> section. Click on the links to view the instances in the cloud console.</li>
+<li> The SSH user that you must use when accessing cluster VMs is "cloudbreak".</li> 
+</ul>
+</p>
+</div>
+
 #### Cluster Summary 
 
+The summary bar includes the following information about your cluster:
+
+| Item | Description |
+|---|---|
+| Cloud Provider | The logo of the cloud provider on which the cluster is running. |
+| Credential | The name of the credential used to create the cluster. |
+| Status | Current status. When a cluster is healthy, the status is *Running*. |
+| Nodes | The current number of cluster nodes, including the master node. |
+| Uptime | The amount of time (HH:MM) that the cluster has been in the running state. |
+| Created | The date when the cluster was created. The date format is Mon DD, YYYY. For exampple: Oct 27, 2017. |
 
 #### Cluster Information 
 
-* Cluster instance public IP addresses
-* UI links 
+| Item | Description |
+|---|---|
+| Network | The name of the network in which the cluster is running. |
+| Subnet | The name of the subnet in which the cluster is running. |
+| Cluster User | The name of the cluster user that you created when creating the cluster. |  
+| SSH Username | The SSH user which you must use when accessing cluster VMs via SSH. The SSH user is always "cloudbreak". |
+| Remote Access | Link to the Ambari web UI. |
+| Region | The region in which the cluster is running in the cloud provider infrastructure. |
+| Availability Zone | The availability zone within the region in which the cluster is running. |
+| Blueprint | The name of the blueprint selected under "Cluster Type" to create this cluster. |
+| Started With | The version of Cloubdreak used to create this cluster. |
+| Ambari Version | The Ambari version which this cluster is currently running. |
+| HDP Version | The HDP version which this cluster is currently running. |
+
+[comment]: <> (Why is the Ambari link labeled "Remote Access"?)
+
+[comment]: <> (Regarding Ambari and HDP version, if I upgrade, should this show the current version or the original version?)
 
 #### Hardware
 
-This section includes information about your cluster nodes: instance names, instance IDs (with links to the EC2 console), public IPs, and SSH connection information (with a copy option).
+This section includes information about your cluster nodes: instance names, instance IDs (with links to the cloud provider console), and public IPs.
 
 
 #### Tags 
@@ -37,7 +73,7 @@ This section lists user-defined tags, in the same order as you added them.
 
 #### Event History 
 
-The EVENT HISTORY tab shows you events logged for the cluster, with the most recent event at the top. For example, after your cluster has been created, the following messages will be written to the log:
+The Event History section shows you events logged for the cluster, with the most recent event at the top. For example, after your cluster has been created, the following messages will be written to the log:
 
 <pre>
 Ambari cluster built; Ambari ip:34.215.103.66
@@ -77,4 +113,6 @@ On Mac OS, you can use the following syntax to SSH to the VM:
 For example:
 <pre>ssh -i "dominika-kp.pem" cloudbreak@p52.25.169.132</pre>
 
-On Windows, you can SSH using an SSH client such as PuTTY. 
+On Windows, you can SSH using an SSH client such as PuTTY.
+
+ 

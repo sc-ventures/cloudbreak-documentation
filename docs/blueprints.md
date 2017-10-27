@@ -62,12 +62,13 @@ A blueprint can be exported from a running Ambari cluster and can be reused in C
 
 [comment]: <> (TO-DO: Maybe we can find some newer examples?)
 
-Here are blueprint examples:  
+Here are some [blueprint examples](https://github.com/hortonworks/cloudbreak/tree/master/core/src/main/resources/defaults/blueprints).  
 
-* [Smallest Possible HDP 2.4](https://raw.githubusercontent.com/sequenceiq/cloudbreak/master/integration-test/src/main/resources/blueprint/multi-node-hdfs-yarn.bp)
-* [Small HDP 2.4](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-small-default.bp)
-* [Small HDP 2.4 Streaming](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-streaming-cluster.bp)
-* [Small HDP 2.4 Spark](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-spark-cluster.bp)
+[comment]: <> ( More blueprints (HDP 2.4) )
+[comment]: <> ( [Smallest Possible HDP 2.4](https://raw.githubusercontent.com/sequenceiq/cloudbreak/master/integration-test/src/main/resources/blueprint/multi-node-hdfs-yarn.bp)
+[comment]: <>  ( [Small HDP 2.4](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-small-default.bp)
+[comment]: <>  ( [Small HDP 2.4 Streaming](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-streaming-cluster.bp)
+[comment]: <>   ( [Small HDP 2.4 Spark](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-spark-cluster.bp)
 
 
 #### Upload a Blueprint 

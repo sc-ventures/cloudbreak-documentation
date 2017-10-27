@@ -1,4 +1,4 @@
-## Deleting Resources
+## Delete Resources
 
 In general, you can delete clusters from the Cloudbreak UI. If needed, you can also delete the cluster resources manually via the cloud provider tools. 
 

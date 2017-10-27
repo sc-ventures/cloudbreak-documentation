@@ -1,4 +1,4 @@
-## Accessing Data on S3  
+## Access Data on S3  
 
 
 #### Prerequisites
@@ -8,10 +8,14 @@ To use S3 storage, you must have one or more S3 buckets on your AWS account. For
 
 #### Configuring Access to S3
 
-Amazon S3 is not supported as a default file system, but access to data in S3 from your cluster VMs can be automatically configured through attaching an instance profile allowing access to S3. You can optionally create or attach an existing instance profile during [cluster creation](aws-create.md#choose-blueprint), on the **Choose Blueprint** page. 
+Amazon S3 is not supported as a default file system, but access to data in S3 from your cluster VMs can be automatically configured through attaching an instance profile allowing access to S3. You can optionally create or attach an existing instance profile during [cluster creation](aws-create.md#choose-blueprint), on the **File System** page. 
+
+[comment]: <> (Not sure if this option is available in the new UI.)
 
 
-#### Access Path
+#### Testing Access to S3
+
+To tests access to S3, SSH to a cluster node and run a few hadoop fs shell commands against your existing S3 bucket.
 
 Amazon S3 access path syntax is:
 
@@ -35,7 +39,7 @@ test file content</pre>
 
 ### Learn More
 
-For more information about configuring the S3 connector and working with data stored on S3, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.1/bk_cloud-data-access/content/about.html) documentation.
+For more information about configuring the S3 connector and working with data stored on S3, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) documentation.
 
 <div class="next">
 <a href="../clusters-access/index.html">Next: Access Cluster</a>
