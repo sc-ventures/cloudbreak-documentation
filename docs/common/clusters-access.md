@@ -49,7 +49,7 @@ The summary bar includes the following information about your cluster:
 | Subnet | The name of the subnet in which the cluster is running. |
 | Cluster User | The name of the cluster user that you created when creating the cluster. |  
 | SSH Username | The SSH user which you must use when accessing cluster VMs via SSH. The SSH user is always "cloudbreak". |
-| Remote Access | Link to the Ambari web UI. |
+| Ambari URL | Link to the Ambari web UI. |
 | Region | The region in which the cluster is running in the cloud provider infrastructure. |
 | Availability Zone | The availability zone within the region in which the cluster is running. |
 | Blueprint | The name of the blueprint selected under "Cluster Type" to create this cluster. |

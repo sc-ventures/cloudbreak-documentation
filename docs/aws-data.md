@@ -1,6 +1,5 @@
 ## Access Data on S3  
 
-
 #### Prerequisites
 
 To use S3 storage, you must have one or more S3 buckets on your AWS account. For instructions on how to create a bucket on S3, refer to [AWS documentation](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html).
@@ -8,9 +7,23 @@ To use S3 storage, you must have one or more S3 buckets on your AWS account. For
 
 #### Configuring Access to S3
 
-Amazon S3 is not supported as a default file system, but access to data in S3 from your cluster VMs can be automatically configured through attaching an instance profile allowing access to S3. You can optionally create or attach an existing instance profile during [cluster creation](aws-create.md#choose-blueprint), on the **File System** page. 
+Amazon S3 is not supported as a default file system, but access to data in Amazon S3 via the s3a connector. To configure access to Amazon S3 from a cluster crated via Cloudbreak, declare your access key and secret key in a configuration file such as `core-site.xml`:
 
-[comment]: <> (Not sure if this option is available in the new UI.)
+```xml
+<property>
+  <name>fs.s3a.access.key</name>
+  <value>ACCESS-KEY</value>
+</property>
+
+<property>
+  <name>fs.s3a.secret.key</name>
+  <value>SECRET-KEY</value>
+</property>
+```
+
+[comment]: <> (Commenting out the following since this option is not available in 2.1 TP)
+
+[comment]: <> (Amazon S3 is not supported as a default file system, but access to data in S3 from your cluster VMs can be automatically configured through attaching an instance profile allowing access to S3. You can optionally create or attach an existing instance profile during [cluster creation](aws-create.md#choose-blueprint), on the **File System** page.) 
 
 
 #### Testing Access to S3

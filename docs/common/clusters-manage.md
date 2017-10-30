@@ -25,26 +25,58 @@ To resize a cluster, follow these steps.
 
 1. Browse to the cluster details.
 
-2. Click **Cluster Actions** and select **Resize**. The cluster resize dialog is displayed.
+2. Click **Actions** and select **Resize**. The cluster resize dialog is displayed.
 
 3. Using the +/- controls, adjust how many nodes to add or remove from each host group.  
 
-4. Click **Yes** to initiate the scale-up/scale-down.
+4. Click **Yes** to confirm the scale-up/scale-down.
 
 
 ### Synchronizing with Cloud Provider
 
-This doesn't seem to work yet.
+If you have just made changes on your cloud provider size (for example, deleted cluster VMs) and you would like to synchronize Cloudbreak with the cloud provider, use the **sync** option. 
+
+[comment]: <> (What are some examples where this option should be used?)
+
+To synchronize your cluster with the cloud provider, follow these steps. 
+
+**Steps**
+
+1. Browse to the cluster details.
+
+2. Click **Actions** and select **Sync**.
+ 
+3. Click **Yes** to confirm.
  
 
 ### Stopping and Restarting
 
-This doesn't seem to work yet.
+Cloudbreak supports stopping and restarting clusters. To stop and restart a cluster managed by Cloudbreak, use the options available from the Coudbreak UI. 
+
+**Steps**
+
+1. Browse to the cluster details.
+ 
+2. Click **Stop** to stop a currently running cluster.  
+
+3. Click **Yes** to confirm.
+
+4. When you are ready to restart the cluster, click **Restart**. This option is only availble when the cluster has been stopped. 
+
+5. Click **Yes** to confirm.
 
 
 ### Terminating Your Cluster 
 
-To terminate your cluster, click **Terminate**. All cluster-related resources will be deleted, unless the network and subnet are used by other VMs in which case they will be preserved. 
+To terminate a cluster managed by Cloudbreak, use the option available from the Coudbreak UI. 
+
+**Steps**
+
+1. Browse to the cluster details.
+ 
+2. Click **Terminate**. 
+
+All cluster-related resources will be deleted, unless the resources (such as networks and subnets) existed prior to cluster creation or are used by other VMs in which case they will be preserved. 
 
 
 ### Viewing Cluster History

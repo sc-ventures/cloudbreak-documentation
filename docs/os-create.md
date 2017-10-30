@@ -20,12 +20,6 @@ Use these steps to create a cluster.
 | Platform Version | Choose the HDP version to use for this cluster. |
 | Cluster Type | Choose one of default cluster configurations, or, if you have defined your own cluster configuration via Ambari blueprint, you can choose it here. For more information, refer to [Blueprints](blueprints.md). |
 
-    | Parameter | Description |
-|---|---|
-| Availability Zone | Choose one of the availability zones within the selected region. |
-| Enable Lifetime Management | Check this option if you would like your cluster to be automatically terminated after a specific amount of time (defined as "Time to Live" in minutes) has passed. |
-| Tags | You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. |
-| Recipes | This option allows you to select previously uploaded recipes (scripts that will be run pre- or post- cluster deployment). For more information on default and custom blueprints, refer to [Recipes](recipes.md). |
 
 4. On the **Hardware and Storage** page, for each host group provide the following information to define your cluster nodes and attached storage:
     
@@ -35,32 +29,14 @@ Use these steps to create a cluster.
 | Instance Count | Enter the number of instances of a given type. Default is 1. |
 | Ambari Server | You must select one node for Ambari Server. The "Group Size" for that host group must be set to "1". | 
 
-    | Parameter | Description |
-|---|---|
-| Storage Type | <p>Select the volume type. The options are:<ul><li>Magnetic</li><li>Ephemeral</li><li>General Purpose (SSD)</li><li>Throughput Optimized HDD</li></ul>For more information about these options refer to <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html" target="_blank">AWS documentation</a>.</p>|
-| Attached Volumes Per Instance | Enter the number of volumes attached per instance. Default is 1. |
-| Volume Size (GB) | Enter the size in GBs for each volume. Default is 100. | 
-
+   
 6. On the **Network** page, provide the following to specify the networking resources that will be used for your cluster:
 
     | Parameter | Description |
 |---|---|
 | Select Network | Select the virtual network in which you would like your cluster to be provisioned. You can select an existing network or create a new network. |
 | Select Subnet | Select the subnet in which you would like your cluster to be provisioned. You must create a new subnet. |
-
-    | Parameter | Description |
-|---|---|
 | Subnet (CIDR)| If you selected to create a new subnet, you must define a valid [CIDR](http://www.ipaddressguide.com/cidr) for the subnet. Default is 10.0.0.0/16. |
-| Security Group | <p>For each host group, select one of the options:<ul><li>Create new security group</li><li>Do not use security group</li><li>Select an existing security group</li></ul></p> |
-
-    If you choose to create a new security group, the *New Security Group* wizard will open.
-    
-    1. TCP ports 22, 443, and 9443 will be open by default.  
-    These ports must be open on every security group; otherwise Cloudbreak will not be able to communicate with your provisioned cluster.
-    
-    2. You may open additional ports by defining the **CIDR**, **Port**, and **Protocol** for each and clicking **Add Rule**. 
-    3. Once done, click **SAVE** to save your security group settings.
-    4. Once you define a custom security group for one host group, you can reuse this definition for other node groups.
 
 
 5. On the **Security** page, provide the following parameters:
@@ -72,34 +48,66 @@ Use these steps to create a cluster.
 | Confirm Password | Confirm the password. |
 | SSH Key Pair| Select an existing public key or specify a new public key. You will use the matching private key to access your cluster nodes via SSH. |
 
-    | Parameter | Description |
-|---|---|
-| Enable Kerberos Security | Select this option to enable Kerberos for your cluster. You will have an option to create a new kerberos or use an existing one. For more information refer to [Kerberos](security-kerberos.md) documentation. |
 
 8. Click on **Create Cluster** to create a cluster.
 
 9. You will be redirected to the Cloudbreak dashboard, and a new tile representing your cluster will appear at the top of the page.
-
-    
+  
     
 
 ### Advanced Options
 
 Click on **Advanced** to view and enter additional configuration options.
 
-#### General Configuration
+
+#### Availability Zone
+
+ Choose one of the availability zones within the selected region. 
+ 
+#### Enable Lifetime Management 
+
+Check this option if you would like your cluster to be automatically terminated after a specific amount of time (defined as "Time to Live" in minutes) has passed. 
+
+#### Tags
+
+You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. refer to [Resource Tagging](resource-tagging.md).
 
 
-#### Hardware and Storage
+#### Storage
+
+You can optionally specify the following storage options for your cluster:
+
+| Parameter | Description |
+|---|---|
+| Storage Type | <p>Select the volume type. The options are:<ul><li>Magnetic</li><li>Ephemeral</li><li>General Purpose (SSD)</li><li>Throughput Optimized HDD</li></ul>For more information about these options refer to <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html" target="_blank">AWS documentation</a>.</p>|
+| Attached Volumes Per Instance | Enter the number of volumes attached per instance. Default is 1. |
+| Volume Size (GB) | Enter the size in GBs for each volume. Default is 100. | 
 
 
-#### FileSystem
+#### Recipes
+
+This option allows you to select previously uploaded recipes (scripts that will be run pre- or post- cluster deployment) for each host group. For more information on default and custom blueprints, refer to [Recipes](recipes.md).
 
 
-#### Network
+#### Security Groups
+
+For each host group, select one of the options:
+
+* Create new security group  
+Do not use security group  
+Select an existing security group
+
+If you choose to create a new security group, the *New Security Group* wizard will open.
+    
+1. TCP ports 22, 443, and 9443 will be open by default. These ports must be open on every security group; otherwise Cloudbreak will not be able to communicate with your provisioned cluster.  
+2. You may open additional ports by defining the **CIDR**, **Port**, and **Protocol** for each and clicking **Add Rule**.  
+3. Once done, click **SAVE** to save your security group settings. 
+4. Once you define a custom security group for one host group, you can reuse this definition for other node groups. 
 
 
-#### Security 
+#### Enable Kerberos Security  
+
+Select this option to enable Kerberos for your cluster. You will have an option to create a new kerberos or use an existing one. For more information refer to [Kerberos](security-kerberos.md) documentation. 
 
 
 <div class="next">
