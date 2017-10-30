@@ -3,7 +3,7 @@
 
 You can view and manage Cloudbreak credentials in the **Credentials** tab by clicking **Create credential** and providing required parameters. You must create at least one credential in order to be able to create a cluster. 
 
-<a href="../images/credentials.png" target="_blank" title="click to enlarge"><img src="../images/credentials.png" width="650" title="Cloudbreak web UI"></a> 
+<a href="../images/cb-credentials.png" target="_blank" title="click to enlarge"><img src="../images/cb-credentials.png" width="650" title="Cloudbreak web UI"></a> 
 
 ### Create Cloudbreak Credental  
 

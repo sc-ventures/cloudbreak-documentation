@@ -17,7 +17,7 @@ You can manage monitor your clusters from the Cloudbreak UI. To do that, click o
 </div>
 
 
-### Resizing Your Cluster
+### Resize Your Cluster
 
 To resize a cluster, follow these steps.
 
@@ -32,7 +32,7 @@ To resize a cluster, follow these steps.
 4. Click **Yes** to confirm the scale-up/scale-down.
 
 
-### Synchronizing with Cloud Provider
+### Synchronize with Cloud Provider
 
 If you have just made changes on your cloud provider size (for example, deleted cluster VMs) and you would like to synchronize Cloudbreak with the cloud provider, use the **sync** option. 
 
@@ -48,8 +48,8 @@ To synchronize your cluster with the cloud provider, follow these steps.
  
 3. Click **Yes** to confirm.
  
-
-### Stopping and Restarting
+ 
+### Stop and Restart
 
 Cloudbreak supports stopping and restarting clusters. To stop and restart a cluster managed by Cloudbreak, use the options available from the Coudbreak UI. 
 
@@ -66,7 +66,7 @@ Cloudbreak supports stopping and restarting clusters. To stop and restart a clus
 5. Click **Yes** to confirm.
 
 
-### Terminating Your Cluster 
+### Terminate Your Cluster 
 
 To terminate a cluster managed by Cloudbreak, use the option available from the Coudbreak UI. 
 
@@ -76,10 +76,27 @@ To terminate a cluster managed by Cloudbreak, use the option available from the 
  
 2. Click **Terminate**. 
 
+3. Click **Yes** to confirm.
+
 All cluster-related resources will be deleted, unless the resources (such as networks and subnets) existed prior to cluster creation or are used by other VMs in which case they will be preserved. 
 
 
-### Viewing Cluster History
+#### Force Terminate
+
+If the deletion fails, try **Terminate** > **Force terminate**.
+
+**Steps**
+
+1. Browse to the cluster details.
+ 
+2. Click **Terminate**. 
+
+3. Check  **Force terminate**.
+
+3. Click **Yes** to confirm.
+
+
+### View Cluster History
 
 From the navigation menu in the Cloudbreak UI, you can access the History page that allows you to generate a report showing basic information related to the clusters that were running within the specified range of dates.
 

@@ -11,7 +11,7 @@ You can use tags to categorize your cloud resources by purpose, owner, and so on
 
 You can tag the cloud resources used for a cluster by providing custom tag names and values when creating a cluster via UI or CLI. In the Cloudbreak UI, this option is available in the create clusetr wizard, in the advanced **General Configuration** > **Tags** section:
 
-<a href="../images/tags.png" target="_blank" title="click to enlarge"><img src="../images/tags.png" width="650" title="Cloudbreak web UI"></a> 
+<a href="../images/cb-tags.png" target="_blank" title="click to enlarge"><img src="../images/cb-tags.png" width="650" title="Cloudbreak web UI"></a> 
 
 It is not possible to add tags after your cluster has been created.  
 

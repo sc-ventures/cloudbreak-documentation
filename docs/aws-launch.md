@@ -368,9 +368,9 @@ Log in to the Cloudbreak UI using the following steps.
     * The default username is `admin@example.com` but you should sign up with your own email address.    
     * The password is the value of the `UAA_DEFAULT_USER_PW` variable that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer).
 
-5. Upon a successful login, you are redirected to the Cluster dashboard:
+5. Upon a successful login, you are redirected to the dashboard:
 
-    <a href="../images/cloudbreak-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cloudbreak-ui1.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
 
 
 ### Create Cloudbreak Credential
@@ -396,7 +396,7 @@ To perform these steps, you must know your access and secret key. If needed, you
 
 3. Under **Cloud provider**, select "Amazon Web Services":
 
-    <a href="../images/aws-cred-key.png" target="_blank" title="click to enlarge"><img src="../images/aws-cred-key.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb-aws-cred-key.png" target="_blank" title="click to enlarge"><img src="../images/cb-aws-cred-key.png" width="650" title="Cloudbreak web UI"></a>  
 
 3. Provide the following information:
 
@@ -428,7 +428,7 @@ To perform these steps, you must know the **IAM Role ARN** corresponding to the 
 
 3. Under **Cloud provider**, select "Amazon Web Services":
 
-    <a href="../images/aws-cred-key.png" target="_blank" title="click to enlarge"><img src="../images/aws-cred-key.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb-aws-cred-key.png" target="_blank" title="click to enlarge"><img src="../images/cb-aws-cred-key.png" width="650" title="Cloudbreak web UI"></a>  
 
 3. Provide the following information:
 

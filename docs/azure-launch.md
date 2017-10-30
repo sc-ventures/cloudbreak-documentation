@@ -206,7 +206,7 @@ Log in to the Cloudbreak UI using the following steps.
 
 3. From **Outputs**, you can copy the link by clicking on the <img src="../images/copy-icon.png" width="30" title="Icon"> icon:
 
-    <a href="../images/cb-outputs.png" target="_blank" title="click to enlarge"><img src="../images/cb-outputs.png" width="650" title="Azure Portal"></a>   
+    <a href="../images/azure-outputs.png" target="_blank" title="click to enlarge"><img src="../images/azure-outputs.png" width="650" title="Azure Portal"></a>   
 
 2. Paste the link in your browser's address bar.
 
@@ -221,8 +221,12 @@ Log in to the Cloudbreak UI using the following steps.
 3. Now you should be able to access Cloudbreak UI and log in with the **Admin email address** and **Admin password** that you created when launching Cloudbreak:
 
      <a href="../images/cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui.png" width="650" title="Azure Portal"></a>
+     
+4. Upon a successful login, you are redirected to the dashboard:
 
-    The last task that you need to perform before you can use Cloudbreak is to [create a cloudbreak credential](#create-cloudbreak-credential).         
+    <a href="../images/cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
+
+The last task that you need to perform before you can use Cloudbreak is to [create a cloudbreak credential](#create-cloudbreak-credential).         
 
 
 ### Create Cloudbreak Credential
@@ -248,7 +252,7 @@ There are two ways to create a Cloudbreak credential:
     
 4. Select **Interactive Login**:
 
-    <a href="../images/azure-cred-inter.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-inter.png" width="650" title="Cloudbreak web UI"></a>     
+    <a href="../images/cb-azure-cred-inter.png" target="_blank" title="click to enlarge"><img src="../images/cb-azure-cred-inter.png" width="650" title="Cloudbreak web UI"></a>     
 
 5. Provide the following information:
 
@@ -272,7 +276,7 @@ There are two ways to create a Cloudbreak credential:
 
 6. Copy the code provided in the UI:
  
-    <a href="../images/azure-cred-inter2.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-inter2.png" width="650" title="Cloudbreak web UI"></a>     
+    <a href="../images/cb-azure-cred-inter2.png" target="_blank" title="click to enlarge"><img src="../images/cb-azure-cred-inter2.png" width="650" title="Cloudbreak web UI"></a>     
 
 7. Click **Azure login** and a new **Device login** page will open in a new browser tab:
 
@@ -302,7 +306,7 @@ There are two ways to create a Cloudbreak credential:
 
 1. In the Cloudbreak web UI, select **Credentials** from the left pane. 
 
-    <a href="../images/azure-cred-app.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-app.png" width="650" title="Cloudbreak web UI"></a> 
+    <a href="../images/cb-azure-cred-app.png" target="_blank" title="click to enlarge"><img src="../images/cb-azure-cred-app.png" width="650" title="Cloudbreak web UI"></a> 
 
 2. Click **Create Credential**. 
 

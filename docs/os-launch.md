@@ -244,6 +244,10 @@ Log in to the Cloudbreak UI using the following steps.
     * The default username is `admin@example.com` but you should sign up with your own email address.    
     * The password is the value of the `UAA_DEFAULT_USER_PW` variable that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer).
 
+5. Upon a successful login, you are redirected to the dashboard:
+
+    <a href="../images/cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
+    
 
 ### Create Cloudbreak Credential
 
@@ -257,7 +261,7 @@ Cloudbreak works by connecting your OpenStack account through this credential, a
 
 3. Under **Cloud provider**, select "Google Cloud Platform".
 
-    <a href="../images/gcp-cred.png" target="_blank" title="click to enlarge"><img src="../images/gcp-cred.png" width="650" title="Cloudbreak web UI"></a> 
+    <a href="../images/cb-gcp-cred.png" target="_blank" title="click to enlarge"><img src="../images/cb-gcp-cred.png" width="650" title="Cloudbreak web UI"></a> 
 
 
 3. Provide the following information:

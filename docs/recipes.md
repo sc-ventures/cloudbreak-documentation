@@ -45,11 +45,11 @@ To add a recipe, perform these steps.
 | Execution Type | Select one of the following options: <ul><li>**PRE**: The script will be executed prior to Ambari cluster deployment.</li><li>**POST**: The script will be executed after Ambari cluster deployment.</li></ul>|
 | Script | <p>Select one of: <ul><li>**Script**: Paste the script.</li><li> **File**: Point to a file on your machine that contains the recipe.</li><li> **URL**: Specify the URL for your recipe.</li></ul> |
 
-    <a href="../images/recipe-add.png" target="_blank" title="click to enlarge"><img src="../images/recipe-add.png" width="650" title="Cloudbreak web UI"></a> 
+    <a href="../images/cb-recipe-add.png" target="_blank" title="click to enlarge"><img src="../images/cb-recipe-add.png" width="650" title="Cloudbreak web UI"></a> 
     
 3. When creating a cluster, you can select previously added recipes using the **Recipes** option available in the advanced **General Configuration** section. 
 
-    <a href="../images/recipe-select.png" target="_blank" title="click to enlarge"><img src="../images/recipe-select.png" width="650" title="Cloudbreak web UI"></a> 
+    <a href="../images/cb-recipe-select.png" target="_blank" title="click to enlarge"><img src="../images/cb-recipe-select.png" width="650" title="Cloudbreak web UI"></a> 
     
 [comment]: <> (Provide more details once the new UI is ready.)
 

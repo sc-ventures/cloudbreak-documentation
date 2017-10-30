@@ -86,11 +86,11 @@ Once you have your blueprint ready, perform these steps.
 | Description | (Optional) Enter a description for your blueprint.|
 | Blueprint Source | <p>Select one of: <ul><li>**Text**: Paste blueprint in JSON format.</li><li> **File**: Upload a file that contains the blueprint.</li><li> **URL**: Specify the URL for your blueprint.</li></ul> |
 
-    <a href="../images/blueprint-add.png" target="_blank" title="click to enlarge"><img src="../images/blueprint-add.png" width="650" title="Cloudbreak web UI"></a> 
+    <a href="../images/cb-blueprint-add.png" target="_blank" title="click to enlarge"><img src="../images/cb-blueprint-add.png" width="650" title="Cloudbreak web UI"></a> 
 
 2. To use the uploaded blueprints, select it when creating a cluster. The option is available on the **General Configuration** page. First select the **Platform Version** and then select your chosen blueprint under **Cluster Type**. 
 
-    <a href="../images/blueprint-select.png" target="_blank" title="click to enlarge"><img src="../images/blueprint-select.png" width="650" title="Cloudbreak web UI"></a> 
+    <a href="../images/cb-blueprint-select.png" target="_blank" title="click to enlarge"><img src="../images/cb-blueprint-select.png" width="650" title="Cloudbreak web UI"></a> 
 
 
  
