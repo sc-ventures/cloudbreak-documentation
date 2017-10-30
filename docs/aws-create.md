@@ -68,7 +68,7 @@ Check this option if you would like your cluster to be automatically terminated 
 
 #### Tags
 
-You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. refer to [Resource Tagging](resource-tagging.md).
+You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. refer to [Resource Tagging](tags.md).
 
 
 #### Storage
