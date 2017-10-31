@@ -34,7 +34,7 @@ Clusters created via Cloudbreak can be in the same or different region as Cloudb
 
 When launching Cloudbreak, you will be required to provide your public SSH key. If needed, you can generate a new SSH keypair:
 
-* On MacOS and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
+* On MacOS X and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
 * On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
 
 
