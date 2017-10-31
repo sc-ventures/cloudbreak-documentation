@@ -37,11 +37,6 @@ When launching Cloudbreak, you will be required to provide your public SSH key. 
 
 ### Launch Cloudbreak 
 
-Follow these steps to launch Cloudbreak on Azure.
-
-
-#### Launch via Azure Resource Manager Template
-
 Launch Cloudbreak deployer using the following steps.
 
 **Steps**

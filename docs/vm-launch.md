@@ -56,6 +56,15 @@ iptables --flush FORWARD && \
 service iptables save
 </pre>
 
+#### More
+
+Additionally, review the following prerequisites: 
+ 
+* [Prerequisites on AWS](aws-launch.md#meet-the-prerequisites)
+* [Prerequisites on Azure](azure-launch.md#meet-the-prerequisites)
+* [Prerequisites on GCP](gcp-launch.md#meet-the-prerequisites)
+* [Prerequisites on OpenStack](os-launch.md#meet-the-prerequisites) 
+
 
 ### Install Cloudbreak on Your Own VM
 
@@ -112,34 +121,14 @@ cbd start</pre>
     
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak normally takes less than a minute to start.
     
-
-### Troubleshooting
-
-#### Cbd Cannot Get VM's Public IP 
-
-By default the `cbd` tool tries to get the VM's public IP to bind Cloudbreak UI to it. But if `cbd` cannot get the IP address during the initialization, you must set it manually. Check your `Profile` and if `PUBLIC_IP` is not set, add the `PUBLIC_IP` variable and set it to the public IP of the VM. For example: 
-
-<pre>export PUBLIC_IP=192.134.23.10</pre>
-
-
-#### Permission or Connection Problems 
-
-If you face permission or connection issues, disable SELinux:
-
-1. Set `SELINUX=disabled` in `/etc/selinux/config`.  
-2. Reboot the machine.  
-3. Ensure the SELinux is not turned on afterwards:
-
-    <presetenforce 0 && sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/ selinux/config</pre>
     
-
 
 ### Next Steps 
 
-Follow the platform-specific instructions. Make sure to review the prerequisites for creating a Cloudbreak credential and then log in to the Cloudbreak web UI and create a credential for Cloubdreak.
+Log in to the Cloudbreak web UI and create a credential for Cloubdreak using the following platform-specific instructions:
  
-* [Launch on AWS](aws-launch.md)
-* [Launch on Azure](azure-launch.md)
-* [Launch on GCP](gcp-launch.md)
-* [Launch on OpenStack](os-launch.md)
+* [Access Cloudbreak UI on AWS](aws-launch.md#access-cloudbreak-ui)
+* [Access Cloudbreak UI on Azure](azure-launch.md#access-cloudbreak-ui)
+* [Access Cloudbreak UI on GCP](gcp-launch.md#access-cloudbreak-ui)
+* [Access Cloudbreak UI on OpenStack](os-launch.md#access-cloudbreak-ui)
 

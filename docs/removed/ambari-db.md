@@ -1,6 +1,8 @@
 
 ## Ambari Database
 
+[comment]: <> (Not sure if this is supported in 2.1 TP?)
+
 By default, Ambari uses an embedded database to store data. Ambari and Cloudbreak don't perform backups of this database, so although this database is sufficient for ephemeral or test clusters, it is not sufficient for long-running production clusters. Therefore, you may need to configure a remote database for Ambari in Cloudbreak.
 
 The overall steps are:  

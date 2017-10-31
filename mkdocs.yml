@@ -17,7 +17,6 @@ pages:
     - Get Started:
       - Introduction: index.md
       - Architecture: architecture.md
-      - Release Notes: releasenotes.md
     - AWS:
       - Launch on AWS: aws-launch.md
       - Create a Cluster: aws-create.md
@@ -46,7 +45,6 @@ pages:
         - Recipes: recipes.md
         - Resource Tagging: tags.md 
         - Custom Images: images.md
-        - Ambari Database: ambari-db.md
       - Managing Cloudbreak:
         - Install on Your Own VM: vm-launch.md
         - Upgrade Clodbreak: upgrade.md
@@ -58,19 +56,23 @@ pages:
         - Security Overview: security.md
         - Configure Basic Security: security-cb.md
         - Configure Kerberos: security-kerberos.md
-      - CLI: cli.md
+      - CLI: 
+        - Install the CLI: cli-install.md
+        - Using the CLI: cli-using.md
       - Troubleshooting: 
         - General Troubleshooting: trouble-cb.md
         - Troubleshooting AWS: trouble-aws.md
         - Troubleshooting Azure: trouble-azure.md
         - Troubleshooting GCP: trouble-gcp.md
         - Troubleshooting OpenStack: trouble-os.md
-    - More:
-      - FAQs: faq.md 
-      - Getting Help: get-help.md
-      - SmartSense: smartsense.md
       - Developer:
         - Developer Docs: dev.md
         - Cloudbreak SPI: dev-spi.md
         - Cloudbreak APIs: dev-api.md
         - Flow Diagrams: dev-flows.md 
+    - More:
+      - Release Notes: releasenotes.md
+      - FAQs: faq.md 
+      - Getting Help: get-help.md
+      - SmartSense: smartsense.md
+

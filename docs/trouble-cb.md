@@ -161,6 +161,26 @@ It often happens that a script cannot be executed successfully because there are
 The `PUBLIC_IP` property must be set in the cbd Profile file or else you won’t be able to log in on the Cloudbreak UI. 
 
 If you are migrating your instance, make sure that after the start the IP remains valid. If you need to edit the `PUBLIC_IP` property in Profile, make sure to restart Cloudbreak using `cbd restart`.
+
+
+#### Cbd Cannot Get VM's Public IP 
+
+By default the `cbd` tool tries to get the VM's public IP to bind Cloudbreak UI to it. But if `cbd` cannot get the IP address during the initialization, you must set it manually. Check your `Profile` and if `PUBLIC_IP` is not set, add the `PUBLIC_IP` variable and set it to the public IP of the VM. For example: 
+
+<pre>export PUBLIC_IP=192.134.23.10</pre>
+
+
+#### Permission or Connection Problems 
+
+[comment]: <> (Not sure what this refers to. It came from the Install on Your Own VM docs.)
+
+If you face permission or connection issues, disable SELinux:
+
+1. Set `SELINUX=disabled` in `/etc/selinux/config`.  
+2. Reboot the machine.  
+3. Ensure the SELinux is not turned on afterwards:
+
+    <presetenforce 0 && sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/ selinux/config</pre>
  
 
 #### Changing Properties in the Cloudbreak Profile File
@@ -180,7 +200,10 @@ In versions earlier than 1.4.0, you must run the following three commands:
 `cbd kill` removes all Docker containers (there is no stop command for this).
 `cbd start` starts the application with the new compose file.
 
+
 #### Changing Amari Credentials
+
+[comment]: <> (I don't see this option in the 2.1 TP UI, just in the CLI.)
 
 In Cloudbreak 1.14 and later, Cloudbreak creates a new admin user in Ambari, so you can change the credentials of the admin user in the Ambari web UI. You can also set the admin user credentials in the cluster installation wizard in the Cloudbreak UI.
 

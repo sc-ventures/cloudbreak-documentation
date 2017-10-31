@@ -6,7 +6,7 @@ The Cloudbreak Command Line Interface (CLI) is a tool to help you manage your Cl
 The CLI is available for Linux, Mac OS X, and Windows. 
 
 
-### Installing 
+### Install 
 
 After you have launched Cloudbreak, the CLI is available for download from that Cloudbreak instance.
 
@@ -21,7 +21,7 @@ After you have launched Cloudbreak, the CLI is available for download from that 
     <pre>cb --version</pre>
 
 
-### Configuring
+### Configure
 
 Once you have installed the CLI, you need to configure the CLI to work with Cloudbreak.
 
@@ -49,7 +49,7 @@ Once you have installed the CLI, you need to configure the CLI to work with Clou
 [comment]: <> (Need to clarify how this works if you have multiple profiles.)
 
 
-### Getting Help
+### Get Help
 
 To get CLI help, you can add help to the end of a command. The following will list help for the CLI at the top-level:
 
@@ -60,12 +60,12 @@ The following will list help for the create-cluster command, including its comma
 <pre>cb create-cluster help</pre>
 
 
-### Debugging
+### Debug
 
 To use debugging mode, pass the `--debug` option. 
 
 
-### Checking CLI Version
+### Check CLI Version
 
 To check CLI version, use `cb --version`.
 
