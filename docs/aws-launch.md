@@ -433,7 +433,7 @@ To perform these steps, you must know the **IAM Role ARN** corresponding to the 
 
 3. Under **Cloud provider**, select "Amazon Web Services":
 
-    <a href="../images/cb-aws-cred-key.png" target="_blank" title="click to enlarge"><img src="../images/cb-aws-cred-key.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb-aws-cred-role.png" target="_blank" title="click to enlarge"><img src="../images/cb-aws-cred-role.png" width="650" title="Cloudbreak web UI"></a>  
 
 3. Provide the following information:
 
