@@ -14,11 +14,14 @@ In order to launch Cloudbreak on the Azure, log in to your existing Microsoft Az
 
 In order to provision clusters on Azure, Cloudbreak must be able to assume a sufficient Azure role ("Owner" or "Contributor") via Cloudbreak credential: 
 
+[comment]: <> (Need to confirm this)
+
 * Your account must have the "[Owner](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#owner)" role in the subscription in order to [create a Cloudbreak credential](#create-cloudbreak-credential) using the interactive credential method. 
 
 * Your account must have the "[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor)" role (or higher) in the subscription in order to [create a Cloudbreak credential](#create-cloudbreak-credential) using the app-based credential method. 
 
-To check the roles that your subscription has, in your Azure account navigate to **Subscriptions**. 
+To check the roles in your subscription, log in to your Azure account and navigate to **Subscriptions**. 
+
 
 #### Azure Region
 
@@ -160,6 +163,8 @@ Before you can start creating clusters, you must first create a [Cloudbreak cred
 
 There are two methods for creating a Cloudbreak credential:
 
+[comment]: <> (Need to confirm the prerequisites.)
+
 | Method | Description | Prerequisite | Steps |
 |---|---|---|---|
 | **Interactive** | The advantage of using this method is that the app and service principal creation and role assignment are fully automated, so the only input that you need to provide is the Subscription ID and Directory ID. During the interactive credential creation, you must log in to your Azure account. | Your account must have the "Owner" role in the subscription. | To configure an interactive credential, refer to [Create an Interactive Credential](#create-an-interactive-credential). | 
@@ -254,11 +259,10 @@ Follow these steps to create an app based Cloudbreak credential.
 | Name | Enter a name for your credential. |
 | Description | (Optional) Enter a description. |
 | Subscription Id | Copy and paste the Subscription ID from your **Subscriptions**. |
+| Tenant Id | Copy and paste your Directory ID from your **Active Directory** > **Properties**. |
 | App Id | Copy and paste the Application ID from your **Azure Active Directory** > **App Registrations** > your app registration's **Settings** > **Properties**. |
 | Password | This is your application key. You can generate it from your from your **Azure Active Directory** app registration's **Settings** > **Keys**. |
-| App Owner Tenant Id | Copy and paste your Directory ID from your **Active Directory** > **Properties**. |
-| SSH Public Key | The SSH key that you provided when launching Cloudbreak should be pre-entered. |
-| Select Azure role type | <p>You have the following options:<ul><li>"Use existing Contributor role" (default): If you select this option, Cloudbreak will use the "[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor)" role to create resources. This requires no further input.</li><li>"Reuse existing custom role": If you select this option and enter the name of an existing role, Cloudbreak will use this role to create resources.</li><li>"Let Cloudbreak create a custom role": If you select this option and enter a name for the new role, the role will be created. When choosing role name, make sure that there is no existing role with the name chosen. For information on creating custom roles, refer to [Azure](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles) documentation. </li></ul></p><p>If using a custom role, make sure that it includes the necessary Action set for Cloudbreak to be able to manage clusters: `Microsoft.Compute/*`, `Microsoft.Network/*`, `Microsoft.Storage/*`, `Microsoft.Resources/*`.</p> |
+
 
     To obtain the **Subscription Id** from Subscriptions: 
     
