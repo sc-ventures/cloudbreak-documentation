@@ -158,14 +158,17 @@ The last task that you need to perform before you can use Cloudbreak is to [crea
 
 Before you can start creating clusters, you must first create a [Cloudbreak credential](architecture.md#cloudbreak-credential). Without this credential, you will not be able to create clusters via Cloudbreak. Cloudbreak works by connecting your Azure account through this credential, and then uses it to create resources on your behalf.
 
-There are two ways to create a Cloudbreak credential:
+There are two methods for creating a Cloudbreak credential:
 
-* **Interactive**: This is the recommended simpler method. The advantage of using this method is that the app and service principal creation and role assignment is fully automated, so the only input that you need to provide is the name and the SSH key. To configure an interactive credential, refer to [Create an Interactive Credential](#create-an-interactive-credential).  
-
-* **App-based**: This is the more complex method. The advantage of the app-based credential creation is that it allows you to create a credential without logging in to the Azure account, as long as you have been given all the information. In addition to providing your `tenant_id` and `subscription_id`, you must provide information for your previously created Azure AD application, including its password. To configure an app based credential, refer to [Create an App Based Credential](#create-an-app-based-credential). Alternatively, when using this method, you use a utility called `azure-cli-tools`. The utility supports app creation and role assignment. It is available at [https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools](https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools).
+| Method | Description | Prerequisite | Steps |
+|---|---|---|---|
+| **Interactive** | The advantage of using this method is that the app and service principal creation and role assignment are fully automated, so the only input that you need to provide is the Subscription ID and Directory ID. During the interactive credential creation, you must log in to your Azure account. | Your account must have the "Owner" role in the subscription. | To configure an interactive credential, refer to [Create an Interactive Credential](#create-an-interactive-credential). | 
+| **App-based** | The advantage of the app-based credential creation is that it allows you to create a credential without logging in to the Azure account, as long as you have been given all the information. In addition to providing your Subscription ID and  Directory ID, you must provide information for your previously created Azure AD application, including its password. | Your account must have the "Contributor" role in the subscription. |  To configure an app based credential, refer to [Create an App Based Credential](#create-an-app-based-credential). | 
 
 
 #### Create an Interactive Credential
+
+Follow these steps to create an interactive Cloudbreak credential.
 
 **Steps**
 
@@ -219,9 +222,13 @@ There are two ways to create a Cloudbreak credential:
 
 #### Create an App Based Credential
 
+Follow these steps to create an app based Cloudbreak credential.
+
 **Steps**
 
 1. On Azure Portal, navigate to the **Active Directory** > **App Registrations** and register a new application. For more information, refer to [Create an Azure AD Application](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+
+    > Aa an alternative to the steps listed below for creating an application registration, you use a utility called `azure-cli-tools`. The utility supports app creation and role assignment. It is available at [https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools](https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools).
 
     <a href="../images/azure-appbased01.png" target="_blank" title="click to enlarge"><img src="../images/azure-appbased01.png" width="650" title="Cloudbreak web UI"></a>  
 
