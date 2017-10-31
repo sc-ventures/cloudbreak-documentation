@@ -76,19 +76,23 @@ The following table provides contextual information about the two roles required
 
 |Role | Purpose | Overview of Steps | Configuration |
 |----|---|---|---|
-| **CloudbreakRole** | Allows Cloudbreak to assume other IAM roles - specifically the CredentialRole. | <p>Create a role called "CloudbreakRole" and attach the "AssumeRole" policy. The "AssumeRole" policy definition is provided below.</p><p>Alternatively, you can generate the "CredentialRole" role later once your VM is running and once you have [configured AWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) on your VM by running the `cbd aws generate-role` command. This command creates a role with the name "cbreak-deployer" (equivalent to the "CredentialRole"). To customize the name of the role, add `export AWS_ROLE_NAME=my-cloudbreak-role-name` (where "my-cloudbreak-role-name" is your custom role name) as a new line to your Profile.</p> | <p>When launching your Cloudbreak VM, during **Step 3: Configure Instance Details** > **IAM**, you will attach the "CloudbreakRole" IAM role to the VM.</p> |
-| **CredentialRole** | Allows Cloudbreak to create AWS resources required for clusters. | <p>Create a new IAM role called "CredentialRole" and attach the "cb-policy" policy to it. The "cb-policy" policy definition is provided below.</p><p> When creating this role using the AWS Console, make sure that that it is a role for cross-account access and that the trust-relation is set up as follows: 'Account ID' is your own 12-digit AWS account ID and 'External ID' is “provision-ambari”.</p> | Once you log in to the Cloudbreak UI and are ready to create clusters, you will use this role to create the Cloudbreak Credential. | 
+| **CloudbreakRole** | Allows Cloudbreak to assume other IAM roles - specifically the CredentialRole. | Create a role called "CloudbreakRole" and attach the "AssumeRole" policy. The "AssumeRole" policy definition and steps for creating the CloudbreakRole are provided below. | <p>When launching your Cloudbreak VM, during **Step 3: Configure Instance Details** > **IAM**, you will attach the "CloudbreakRole" IAM role to the VM.</p> |
+| **CredentialRole** | Allows Cloudbreak to create AWS resources required for clusters. | <p>Create a new IAM role called "CredentialRole" and attach the "cb-policy" policy to it. The "cb-policy" policy definition and steps for creating the CredentialRole are provided below.</p><p> When creating this role using the AWS Console, make sure that that it is a role for cross-account access and that the trust-relation is set up as follows: 'Account ID' is your own 12-digit AWS account ID and 'External ID' is “provision-ambari”. See steps below.</p> | Once you log in to the Cloudbreak UI and are ready to create clusters, you will use this role to create the Cloudbreak credential. | 
 
-You can create these roles in the **IAM console**, on the **Roles** page via the **Create Role** option. Detailed steps are provided below. 
+[comment]: <> (The notes below could be included in the table above as alternative steps, but I'm afraid that showing too many options can be confusing; especially that in order to perform these alternative steps, you must perform advanced configuration. So I am adding them as a side note.)
 
-For more information about IAM, refer to <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html" target="_blank">Using Instance Profiles</a> and <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html" target="_blank">Using an IAM Role to Grant Permissions to Applications Running on Amazon EC2 Instances</a>. 
+> The following alternative steps are available for the **CloudbreakRole**:
 
-[comment]: <> (Option 2 for CloudbreakRole: Alternatively, instead of attaching the "CloudbreakRole" role during the VM launch, you can assign the "CloudbreakRole" to an IAM user and then add the access and security key of that user to your 'Profile'.)
+> Alternatively, you can generate the "CredentialRole" role later once your Cloudbreak VM is running and once you have [configured AWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) on your VM, by running the `cbd aws generate-role` command. This command creates a role with the name "cbreak-deployer" (equivalent to the "CredentialRole"). To customize the name of the role, add `export AWS_ROLE_NAME=my-cloudbreak-role-name` (where "my-cloudbreak-role-name" is your custom role name) as a new line to your Profile.
+ 
+> Alternatively, instead of attaching the "CloudbreakRole" role during the VM launch, you can assign the "CloudbreakRole" to an IAM user and then add the access and security key of that user to your 'Profile'.
+
+You can create these roles in the **IAM console**, on the **Roles** page via the **Create Role** option. Detailed steps are provided below. For more information about IAM, refer to <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html" target="_blank">Using Instance Profiles</a> and <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html" target="_blank">Using an IAM Role to Grant Permissions to Applications Running on Amazon EC2 Instances</a>. 
 
 
 **Create CloudbreakRole**
 
-Use these steps to create CloudbreakRole.
+Use these steps to create CloudbreakRole. 
 
 Use the following "AssumeRole" policy definition: 
 
@@ -137,7 +141,7 @@ Use the following "AssumeRole" policy definition:
     
 9. When done, click **Next: Review**.
     
-9. In the **Roles name** field, enter "CloudbreakRole". 
+9. In the **Roles name** field, enter role name, for example "CloudbreakRole". 
 
     <a href="../images/aws_role-15.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-15.png" width="650" title="IAM Console"></a> 
     
@@ -175,6 +179,8 @@ Use the following "cb-policy" policy definition:
     }
   ]
 }</pre>
+
+[comment]: <> (Pasting this here because when I paste it in-between the steps, I can't get this to format correctly.) 
 
 **Steps**
 
@@ -214,7 +220,7 @@ Use the following "cb-policy" policy definition:
     
 9. When done, click **Next: Review**.
     
-10. In the **Roles name** field, enter "CredentialRole". 
+10. In the **Roles name** field, enter role name, for example "CredentialRole". 
 
     <a href="../images/aws_role6.png" target="_blank" title="click to enlarge"><img src="../images/aws_role6.png" width="650" title="IAM Console"></a> 
     
