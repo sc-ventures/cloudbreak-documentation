@@ -2,59 +2,61 @@
 
 This section will help you get started with the Cloudbreak CLI after you have [installed and configured it](cli-install.md).
 
+[comment]: <> (Will add this once I have access to the CLI.)
+
 ### Credentials
 
-Create Credential
+#### Create Credential
 
-Delete Credential 
+#### Delete Credential 
 
-List Credentials 
+#### List Credentials 
 
-Describe Credential
+#### Describe Credential
 
 
 ### Clusters
 
-Generate Cluster Template
+#### Generate Cluster Template
 
-Create Cluster
+#### Create Cluster
 
-Scale Cluster
+#### Scale Cluster
 
-Start
+#### Start
 
-Stop
+#### Stop
 
-Sync 
+#### Sync 
 
-Repair
+#### Repair
 
-Change Ambari Password
+#### Change Ambari Password
 
-Delete Cluster
+#### Delete Cluster
 
-List Clusters 
+#### List Clusters 
 
-Describe Cluster
+#### Describe Cluster
 
 
 ### Blueprints
 
-Create Blueprint
+#### Create Blueprint
 
-Delete Blueprint 
+#### Delete Blueprint 
 
-List Blueprints 
+#### List Blueprints 
 
-Describe Blueprint
+#### Describe Blueprint
 
 
 ### Recipes
 
-Create Recipe
+#### Create Recipe
 
-Delete Recipe 
+#### Delete Recipe 
 
-List Recipes 
+#### List Recipes 
 
-Describe Recipe
+#### Describe Recipe

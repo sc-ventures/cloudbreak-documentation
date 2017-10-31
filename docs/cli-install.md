@@ -13,11 +13,12 @@ After you have launched Cloudbreak, the CLI is available for download from that 
 **Steps**
 
 1. Browse to your Cloudbreak instance and log in to the Cloubdreak web UI.  
-2. From the menu, select **Download CLI**. The CLI is available for Linux, Mac OS X, and Windows.  
+2. Select **Download CLI** from the menu. The CLI is available for Linux, Mac OS X, and Windows.  
 3. Download the selected bundle to your local machine.  
 4. Extract the bundle.  
 5. You can optionally add `cb` to your system path.
 6. Run the executable to verify the CLI: 
+
     <pre>cb --version</pre>
 
 
@@ -36,6 +37,8 @@ Once you have installed the CLI, you need to configure the CLI to work with Clou
 
 2. The CLI configuration file will be saved at `~/.cb/config`.
 
+[comment]: <> (Add example content of the config file)
+
 <div class="note">
     <p class="first admonition-title">Configuration Precedence</p>
     <p class="last">
@@ -46,7 +49,7 @@ Once you have installed the CLI, you need to configure the CLI to work with Clou
     </p>
 </div>
 
-[comment]: <> (Need to clarify how this works if you have multiple profiles.)
+[comment]: <> (Need to clarify how this works if you have multiple profiles. Would you add multiple entries to the config file manually? Is the entry name supposed to match profile name?)
 
 
 ### Get Help
@@ -91,6 +94,15 @@ For example:
 <pre>cb list-clusters --output table</pre>
 
 [comment]: <> (Add actual output)
+
+[comment]: <> (I think you can also add default output to the config file?)
+
+[comment]: <> (Example:)
+[comment]: <> (default:)
+[comment]: <> (  username: admin@example.com)
+[comment]: <> (  password: MySecurePass123)
+[comment]: <> (  server: https://192.167.65.4)
+[comment]: <> (  output: table))
 
 
 <div class="next">

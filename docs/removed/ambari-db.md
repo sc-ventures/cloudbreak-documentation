@@ -14,7 +14,7 @@ Cloudbreak supports out-of-the-box PostgreSQL, MariaDB, and MySQL. This means th
 
 ### Creating and Configuring a Remote Datatabase
 
-Consider these constraints when setting up your remote datatabase:   
+Consider these constraints when setting up your remote database:   
 
 - Cloudbreak doesn't validate the database connection, so wrong connection parameters will cause the cluster installation to fail.  
 - Your database must be available to the Ambari server. This means that:  
@@ -26,6 +26,9 @@ Consider these constraints when setting up your remote datatabase:
 
 
 ### Register the Database in Cloudbreak UI
+
+
+[comment]: <> (These options are not available in 2.1 TP?)
 
 You can configure Ambari database during cluster creation. The option is available in advanced options, in the **Configure Ambari Database** tab. You must provide the following information:
 
@@ -39,5 +42,4 @@ You can configure Ambari database during cluster creation. The option is availab
 | Password | Enter database password. |
 
 
-[comment]: <> (TO-DO: The shell info should go to shell doc.)
 
