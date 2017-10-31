@@ -49,11 +49,11 @@ will have access and test access to ADLS. Refer to [Accessing Data](azure-data.m
 
 You have two options to launch Cloudbreak on Azure:
 
-* Launch via Azure Resource Manager Template
-* Launch from Azure Marketplace (Technical Preview)
+* [Launch via Azure Resource Manager Template](#option-1-launch-via-azure-resource-manager-template)
+* [Launch from Azure Marketplace](#option-2-launch-from-azure-marketplace) (Technical Preview)
 
 
-#### (Option 1) Launch via Azure Resource Manager Template
+#### Launch via Azure Resource Manager Template
 
 Launch Cloudbreak deployer using the following steps.
 
@@ -63,7 +63,7 @@ Launch Cloudbreak deployer using the following steps.
 
 2. Click here to get started with Cloudbreak installation using the Azure Resource Manager template:
 
-    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsequenceiq%2Fazure-cbd-quickstart%2F1.16.1%2FmainTemplate.json" target="_blank"> ![deploy on azure](http://azuredeploy.net/deploybutton.png)</a>
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhortonworks%2Fazure-cbd-quickstart%2F1.16.4%2FmainTemplate.json" target="_blank"> ![deploy on azure](http://azuredeploy.net/deploybutton.png)</a>
     
 3. The template for installing Cloudbreak will appear. On the **Basics** page, provide the following basic parameters:   
    
@@ -103,63 +103,6 @@ Launch Cloudbreak deployer using the following steps.
 6. Proceed to the next step: [Explore Newly Created Resources](#explore-newly-created-resources).
 
 
-#### (Option 2) Launch from Azure Marketplace 
-
-Launch Cloudbreak deployer using the following steps.
-
-> This feature is Technical Preview.  
-
-**Steps**
-
-1. Log in to your [Azure Portal](https://portal.azure.com).
-
-2. From the services menu, select <img src="../images/marketpl-icon.png" width="130" title="Icon">.
-
-3. In the search box, enter "Cloudbreak":  
-
-    <a href="../images/launch-marketpl-search.png" target="_blank" title="click to enlarge"><img src="../images/launch-marketpl-search.png" width="650" title="Azure Portal"></a>  
-
-4. Select <img src="../images/launch-marketpl-contr.png" width="270" title="Icon">.  
-    The information about the Cloudbreak for Hortonworks Data Platform will be displayed.
-    In the bottom of the page, you will see a dropdown for selecting a deployment model, with the *Resource Manager* deployment model pre-selected. This is the only deployment model available for this offering.
-
-5. Click **Create**.   
-
-6. The template for installing Cloudbreak will appear. On the **Basics** page, provide the following basic parameters:
-
-    | Parameter | Description |
-|---|---|
-| Administrator email address | Create an admin login that you will use to log in to the Cloudbreak UI. Must be a valid email address. |
-| Administrator user password | Password for the admin login. Must be at least 8 characters containing letters, numbers, and symbols. |
-| Confirm password | Confirm the password for the admin login. |
-| VM Username | Enter an admin username for the virtual machine. You will use it to SSH to the VM. |
-| VM SSH public key| <p>Paste your SSH public key.</p><p>You can use `pbcopy` to quickly copy it. For example: `pbcopy < /Users/homedir/.ssh/id_rsa.pub`</p> |
-| Subscription | Select which existing subscription you want to use. |
-| Resource group | Only **Create new** is supported. Select **Create new** to create a new resource group and enter a name for your new resource group. Cloudbreak resources will later be accessible in that chosen resource group. |
-| Location | Select an Azure region in which you want to deploy Cloudbreak. |
-
-7. Once done, click **OK**.
-
-8. On the **Advanced Settings** page, provide the following advanced parameters:
-
-    | Parameter | Description |
-|---|---|
-| Controller Instance Type | Select virtual machine instance type to use for the Cloudbreak. The minimum instance type suitable for Cloudbreak is *D2*. |
-| Allow connections to the cloud controller from this address range or [default tag](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg#default-tags) |<p>Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or use one of the default tags such as  `Internet`. For example: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>'Internet' will allow access from all. This is not a secure option but you can use it it you are just getting started and are not planning to have the instance on for a longer period. </li><li>(Advanced) 'VirtualNetwork' will allow access from the address space of the Virtual Network.</li><li> (Advanced) 'AzureLoadBalancer' will allow access from the address space of the load balancer.</li></ul></p><p>For more information, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg#default-tags).</p> |
-| Enable SmartSense | (Optional) Select whether to enable SmartSense telemetry. Default is **I have read and opt-in to SmartSense telemetry**. SmartSense provides product telemetry and usage information to Hortonworks. For more information, refer to the [SmartSense](smartsense.md) terms.|
-| Virtual network | Create a new Vnet (default) or select an existing Vnet. |
-| Subnets | If you created a new Vnet, create subnets within it. If selected an existing Vnet, select exiting subnets.  |
-
-9. Once done, click **OK**.
-
-10. On the **Summary** page, validate the information that you provided.
-    Before proceeding to the next page, you have an option to **Download template and parameters**. You can use them to launch Cloudbreak via CLI. Once done, click **OK**.
-
-11. Review terms of use and click **Purchase**.
-
-12. Proceed to the next step: [Explore Newly Created Resources](#explore-newly-created-resources).
-
-
 ### Explore Newly Created Resources
 
 > This step is optional.  
@@ -168,7 +111,7 @@ While the deployment is in progress, you can optionally navigate to the newly cr
 
 **Steps**
 
-1. From the left pane, select <img src="../images/resource-icon.png" width="150" title="Icon">.
+1. From the left pane, select **Resource groups**.
 
 2. Find the the resource group that you just created and select it to view details.
 
@@ -185,7 +128,7 @@ While the deployment is in progress, you can optionally navigate to the newly cr
     * [Network interface](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface) (NIC) attached to the VM provides the interconnection between the VM and the underlying software network.    
     * [Blob storage container](https://docs.microsoft.com/en-us/azure/storage/storage-introduction) is created to store Cloudbreak Deployer OS disk's data.  
 
-4. You can click on each entry to view details of the resource. For example, click on <img src="../images/cdeployer-icon.png" width="120" title="Icon"> to view details, including Cloudbreak IP address.
+4. You can click on each entry to view details of the resource. For example, click on **cbdeployerVM** to view details, including Cloudbreak IP address.
 
 5. Once your deployment is ready, the status will change from "Deploying" to "Success".
     
@@ -202,7 +145,7 @@ Log in to the Cloudbreak UI using the following steps.
 
 2. Once you've navigated to your resource group, click on **Deployments** and then click on **hortonworks.cloudbreal-for-hortonworks-data-platf-...**:
 
-    <a href="../images/resource-find.png" target="_blank" title="click to enlarge"><img src="../images/resource-find.png" width="650" title="Azure Portal"></a> 
+    <a href="../images/azure-resource-find.png" target="_blank" title="click to enlarge"><img src="../images/azure-resource-find.png" width="650" title="Azure Portal"></a> 
 
 3. From **Outputs**, you can copy the link by clicking on the <img src="../images/copy-icon.png" width="30" title="Icon"> icon:
 
@@ -280,12 +223,12 @@ There are two ways to create a Cloudbreak credential:
 
 7. Click **Azure login** and a new **Device login** page will open in a new browser tab:
 
-     <a href="../images/device-login.png" target="_blank" title="click to enlarge"><img src="../images/device-login.png" width="650" title="Azure Portal"></a>  
+     <a href="../images/azure-device-login.png" target="_blank" title="click to enlarge"><img src="../images/azure-device-login.png" width="650" title="Azure Portal"></a>  
 
 8. Next, paste the code in field on the  **Device login** page and click **Continue**.
 9. Confirm your account by selecting it:
 
-     <a href="../images/device-login2.png" target="_blank" title="click to enlarge"><img src="../images/device-login2.png" width="650" title="Azure Portal"></a>
+     <a href="../images/azure-device-login2.png" target="_blank" title="click to enlarge"><img src="../images/azure-device-login2.png" width="650" title="Azure Portal"></a>
 
 10. A confirmation page will appear, confirming that you have signed in to the Microsoft Azure Cross-platform Command Line Interface application on your device. You may now close this window.
 
@@ -306,13 +249,13 @@ There are two ways to create a Cloudbreak credential:
 
 1. In the Cloudbreak web UI, select **Credentials** from the left pane. 
 
-    <a href="../images/cb-azure-cred-app.png" target="_blank" title="click to enlarge"><img src="../images/cb-azure-cred-app.png" width="650" title="Cloudbreak web UI"></a> 
-
 2. Click **Create Credential**. 
 
 3. Under **Cloud provider**, select "Microsoft Azure". 
     
 4. Select **App based Login**:
+
+    <a href="../images/cb-azure-cred-app.png" target="_blank" title="click to enlarge"><img src="../images/cb-azure-cred-app.png" width="650" title="Cloudbreak web UI"></a> 
 
 1. On the **Configure credential** page, provide the following parameters:
 

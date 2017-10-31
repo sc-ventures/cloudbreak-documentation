@@ -43,7 +43,7 @@ You can delete Cloudbreak instance from your Azure account by deleting related r
 
 **Steps**
 
-1. From the Microsoft Azure Portal dashboard, select <img src="../images/resource-icon.png" width="150" title="Icon">.
+1. From the Microsoft Azure Portal dashboard, select **Resource groups**.
 
 2. Find the resource group that you want to delete.
 
