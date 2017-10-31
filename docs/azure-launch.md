@@ -34,16 +34,6 @@ When launching Cloudbreak, you will be required to provide your public SSH key. 
 * On MacOS and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
 * On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
 
-#### Azure Data Lake Store (Optional)
-
-If you want to use [Azure Data Lake Store](https://azure.microsoft.com/en-in/services/data-lake-store/) with your cluster, you must create an
-Azure Data Lake Store account in the same subscription as you use for launching Cloudbreak and clusters. In the cluster creation phase, you will specify the created account name only, and access to the Azure Data Lake Store will be
-configured automatically.
-
-You may also review the [Microsoft Azure Documentation](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal) for instructions on how these configuration steps
-are manually done from the Azure portal. After the cluster is deployed, you must define which parts of the ADLS store this cluster
-will have access and test access to ADLS. Refer to [Accessing Data](azure-data.md) for more information.
-
 
 ### Launch Cloudbreak 
 
