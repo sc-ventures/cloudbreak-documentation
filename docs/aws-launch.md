@@ -90,6 +90,21 @@ For more information about IAM, refer to <a href="http://docs.aws.amazon.com/IAM
 
 Use these steps to create CloudbreakRole.
 
+Use the following "AssumeRole" policy definition: 
+
+<pre>{
+  "Version": "2012-10-17",
+  "Statement": {
+    "Sid": "Stmt1400068149000",
+    "Effect": "Allow",
+    "Action": ["sts:AssumeRole"],
+    "Resource": "*"
+  }
+}
+</pre>  
+
+[comment]: <> (Pasting this here because when I paste it in-between the steps, I can't get this to format correctly.) 
+
 **Steps**
 
 1. Navigate to the **IAM console** > **Roles** and click **Create Role**.
@@ -110,7 +125,7 @@ Use these steps to create CloudbreakRole.
 
     <a href="../images/aws_role-12.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-12.png" width="650" title="IAM Console"></a>  
 
-6. In the **Policy Name** field, enter "AssumeRole" and in the **Policy Document** paste the policy declaration as provided in the previous step.
+6. In the **Policy Name** field, enter "AssumeRole" and in the **Policy Document** paste the policy definition provided above.
 
     <a href="../images/aws_role-13.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-13.png" width="650" title="IAM Console"></a>  
     
@@ -133,66 +148,7 @@ Use these steps to create CloudbreakRole.
 
 Use these steps to create CredentialRole.
 
-**Steps**
-
-1. Navigate to the **IAM console** > **Roles** and click **Create Role**.
-
-    <a href="../images/aws_role0.png" target="_blank" title="click to enlarge"><img src="../images/aws_role0.png" width="650" title="IAM Console"></a> 
-    
-2. In the "Create Role" wizard, select **Another AWS account** role type. Next, provide the following:
-
-    * In the **Account ID** field, enter your AWS account ID.
-    * Under **Options**, check **Require external ID**.
-    * In the **External ID**, enter "provision-ambari".
-
-    <a href="../images/aws_role1.png" target="_blank" title="click to enlarge"><img src="../images/aws_role1.png" width="650" title="IAM Console"></a> 
-    
-3. When done, click **Next: Permissions** to navigate to the next page in the wizard.
-    
-4. Click **Create policy**.
-
-    <a href="../images/aws_role2.png" target="_blank" title="click to enlarge"><img src="../images/aws_role2.png" width="650" title="IAM Console"></a>
-    
-5. Click **Select** next to "Create Your Own Policy".
-
-    <a href="../images/aws_role3.png" target="_blank" title="click to enlarge"><img src="../images/aws_role3.png" width="650" title="IAM Console"></a> 
-    
-5. Copy the "cb-policy" policy definition (see below).   
-    
-6. In the **Policy Name** field, enter "cb-policy" and in the **Policy Document** paste the policy declaration as provided below.
-
-    <a href="../images/aws_role4.png" target="_blank" title="click to enlarge"><img src="../images/aws_role4.png" width="650" title="IAM Console"></a>  
-    
-7. When done, click **Create Policy**.
-
-8. Click **Refresh**. Next, find the "cb-policy" that you just created and select it by checking the box.
-
-    <a href="../images/aws_role5.png" target="_blank" title="click to enlarge"><img src="../images/aws_role5.png" width="650" title="IAM Console"></a> 
-    
-9. When done, click **Next: Review**.
-    
-10. In the **Roles name** field, enter "CredentialRole". 
-
-    <a href="../images/aws_role6.png" target="_blank" title="click to enlarge"><img src="../images/aws_role6.png" width="650" title="IAM Console"></a> 
-    
-11. When done, click **Create role** to finish the role creation process.
-
-**Policy Definitions**
-
-The "AssumeRole" policy definition: 
-
-<pre>{
-  "Version": "2012-10-17",
-  "Statement": {
-    "Sid": "Stmt1400068149000",
-    "Effect": "Allow",
-    "Action": ["sts:AssumeRole"],
-    "Resource": "*"
-  }
-}
-</pre>   
-
-The "cb-policy" policy definition: 
+Use the following "cb-policy" policy definition: 
 
 <pre>{
   "Version": "2012-10-17",
@@ -220,6 +176,49 @@ The "cb-policy" policy definition:
   ]
 }</pre>
 
+**Steps**
+
+1. Navigate to the **IAM console** > **Roles** and click **Create Role**.
+
+    <a href="../images/aws_role0.png" target="_blank" title="click to enlarge"><img src="../images/aws_role0.png" width="650" title="IAM Console"></a> 
+    
+2. In the "Create Role" wizard, select **Another AWS account** role type. Next, provide the following:
+
+    * In the **Account ID** field, enter your AWS account ID.
+    * Under **Options**, check **Require external ID**.
+    * In the **External ID**, enter "provision-ambari".
+
+    <a href="../images/aws_role1.png" target="_blank" title="click to enlarge"><img src="../images/aws_role1.png" width="650" title="IAM Console"></a> 
+    
+3. When done, click **Next: Permissions** to navigate to the next page in the wizard.
+    
+4. Click **Create policy**.
+
+    <a href="../images/aws_role2.png" target="_blank" title="click to enlarge"><img src="../images/aws_role2.png" width="650" title="IAM Console"></a>
+    
+5. Click **Select** next to "Create Your Own Policy".
+
+    <a href="../images/aws_role3.png" target="_blank" title="click to enlarge"><img src="../images/aws_role3.png" width="650" title="IAM Console"></a> 
+    
+5. Copy the "cb-policy" policy definition (see below).   
+    
+6. In the **Policy Name** field, enter "cb-policy" and in the **Policy Document** paste the policy definition provided above.
+
+    <a href="../images/aws_role4.png" target="_blank" title="click to enlarge"><img src="../images/aws_role4.png" width="650" title="IAM Console"></a>  
+    
+7. When done, click **Create Policy**.
+
+8. Click **Refresh**. Next, find the "cb-policy" that you just created and select it by checking the box.
+
+    <a href="../images/aws_role5.png" target="_blank" title="click to enlarge"><img src="../images/aws_role5.png" width="650" title="IAM Console"></a> 
+    
+9. When done, click **Next: Review**.
+    
+10. In the **Roles name** field, enter "CredentialRole". 
+
+    <a href="../images/aws_role6.png" target="_blank" title="click to enlarge"><img src="../images/aws_role6.png" width="650" title="IAM Console"></a> 
+    
+11. When done, click **Create role** to finish the role creation process. 
 
 Once you are done, you can proceed to [Launch the VM](#launch-the-vm).   
 
