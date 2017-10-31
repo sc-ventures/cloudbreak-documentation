@@ -8,7 +8,7 @@ Before launching Cloudbreak on Azure, you must meet the following prerequisites.
 
 #### Azure Account 
 
-In order to launch Cloudbreak on the Azure Marketplace, log in to your existing Microsoft Azure account. If you don't have an account, you can set it up at [https://azure.microsoft.com](https://azure.microsoft.com).
+In order to launch Cloudbreak on the Azure, log in to your existing Microsoft Azure account. If you don't have an account, you can set it up at [https://azure.microsoft.com](https://azure.microsoft.com).
 
 #### Azure Roles 
 
@@ -47,10 +47,7 @@ will have access and test access to ADLS. Refer to [Accessing Data](azure-data.m
 
 ### Launch Cloudbreak 
 
-You have two options to launch Cloudbreak on Azure:
-
-* [Launch via Azure Resource Manager Template](#option-1-launch-via-azure-resource-manager-template)
-* [Launch from Azure Marketplace](#option-2-launch-from-azure-marketplace) (Technical Preview)
+Follow these steps to launch Cloudbreak on Azure.
 
 
 #### Launch via Azure Resource Manager Template
