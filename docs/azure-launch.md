@@ -268,7 +268,7 @@ There are two ways to create a Cloudbreak credential:
     
      <a href="../images/azure-cred-subscription.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-subscription.png" width="650" title="Cloudbreak web UI"></a>   
     
-    To obtain the **Directory Id**: 
+    To obtain the **Tenant ID** (actually **Directory Id**): 
     
     <a href="../images/azure-cred-directoryid.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-directoryid.png" width="650" title="Cloudbreak web UI"></a>    
 
@@ -332,13 +332,13 @@ There are two ways to create a Cloudbreak credential:
     
      <a href="../images/azure-cred-subscription.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-subscription.png" width="650" title="Cloudbreak web UI"></a>   
    
-    To obtain the **Application ID** and an application key from Azure Active Directory: 
+    To obtain the **App ID** (actually **Application ID**) and an application key from Azure Active Directory: 
      
      <a href="../images/azure-cred-app11.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-app11.png" width="650" title="Cloudbreak web UI"></a>  
      
      <a href="../images/azure-cred-app12.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-app12.png" width="650" title="Cloudbreak web UI"></a>      
     
-    To obtain the **Directory Id** from Azure Active Directory: 
+    To obtain the **Tenant ID** (actually **Directory Id**) from Azure Active Directory: 
     
     <a href="../images/azure-cred-directoryid.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-directoryid.png" width="650" title="Cloudbreak web UI"></a>  
 
