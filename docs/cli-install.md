@@ -13,11 +13,12 @@ After you have launched Cloudbreak, the CLI is available for download from that 
 **Steps**
 
 1. Browse to your Cloudbreak instance and log in to the Cloubdreak web UI.  
-2. Select **Download CLI** from the menu. The CLI is available for Linux, Mac OS X, and Windows.  
-3. Download the selected bundle to your local machine.  
-4. Extract the bundle.  
-5. You can optionally add `cb` to your system path.
-6. Run the executable to verify the CLI: 
+2. Select **Download CLI** from the navigation pane. 
+3. Select your operating system. The CLI is available for Linux, Mac OS X, and Windows.  
+4. Download the selected bundle to your local machine.  
+5. Extract the bundle.  
+6. You can optionally add `cb` to your system path.
+7. Run the executable to verify the CLI: 
 
     <pre>cb --version</pre>
 
@@ -34,10 +35,22 @@ Once you have installed the CLI, you need to configure the CLI to work with Clou
     * **--password** password [$CB_PASSWORD]  
    
     The password configuration is optional. If you do not provide the password, no password is stored in the CLI configuration file. Therefore, you will need to provide the password with each command you execute or via an environment variable.
+    
+    For example:
+    
+    <pre>cb configure --server https://ec2-11-111-111-11.compute-1.amazonaws.com --username admin@hortonworks.com</pre>
 
-2. The CLI configuration file will be saved at `~/.cb/config`.
+2. The CLI configuration file will be saved at `~/.cb/config`. The content will look similar to the following:
 
-[comment]: <> (Add example content of the config file)
+    <pre>default:
+  username: admin@hortonworks.com
+  server: https://ec2-11-111-111-11.compute-1.amazonaws.com</pre>
+
+
+3. Run any command to verify that you can connect to the Cloudbreak instance via CLI. For example:
+
+    <pre>cb list-clusters</pre>  
+
 
 <div class="note">
     <p class="first admonition-title">Configuration Precedence</p>
@@ -49,10 +62,34 @@ Once you have installed the CLI, you need to configure the CLI to work with Clou
     </p>
 </div>
 
-[comment]: <> (Need to clarify how this works if you have multiple profiles. Would you add multiple entries to the config file manually? Is the entry name supposed to match profile name?)
+  
+#### Add Multiple Configurations  
+
+If you are using multiple profiles for multiple environments, you can manually add them as separate entries in the `config` file. For example:
+
+<pre>default
+  username: admin@hortonworks.com
+  server: https://192.167.65.4
+staging
+  username: test@hortonworks.com
+  server: https://192.176.122.1  
+</pre>
+
+    
+[comment]: <> (Is this correct? Need to clarify how this works if you have multiple profiles. Would you add multiple entries to the config file manually, or can you do it using the configure command? Is the entry name supposed to match profile name?)  
 
 
-### Get Help
+#### Configure Default Output
+
+By default, JSON format is used in command output. For example, if you run `cb list-clusters` without specifying output type, the output will be JSON. If you would like to change default output, add it to the config file. For example:
+
+<pre>default
+  username: admin@hortonworks.com
+  server: https://192.167.65.4
+  output: table</pre>
+
+
+### Getting Help
 
 To get CLI help, you can add help to the end of a command. The following will list help for the CLI at the top-level:
 
@@ -63,48 +100,16 @@ The following will list help for the create-cluster command, including its comma
 <pre>cb create-cluster help</pre>
 
 
-### Debug
+### Debugging
 
 To use debugging mode, pass the `--debug` option. 
 
 
-### Check CLI Version
+### Checking CLI Version
 
 To check CLI version, use `cb --version`.
 
 
-### Command Structure
-
-The CLI command can contain multiple parts. The first part is a set of global options. The next part is the command. The next part is a set of command options and arguments which could include sub-commands.
-
-<pre>cb [global options] command [command options] [arguments...]</pre>
-
-
-### Command Output
-
-You can control the output from the CLI using the --output argument. The possible output formats include:
-
-* Formatted table (table)
-* JSON (json)
-
-For example:
-
-<pre>cb list-clusters --output json</pre>
-
-<pre>cb list-clusters --output table</pre>
-
-[comment]: <> (Add actual output)
-
-[comment]: <> (I think you can also add default output to the config file?)
-
-[comment]: <> (Example:)
-[comment]: <> (default:)
-[comment]: <> (  username: admin@example.com)
-[comment]: <> (  password: MySecurePass123)
-[comment]: <> (  server: https://192.167.65.4)
-[comment]: <> (  output: table))
-
-
 <div class="next">
-<a href="../cli-using/index.html">Next:Using Cloudbreak CLI</a>
+<a href="../cli-reference/index.html">Next: CLI Reference</a>
 </div>

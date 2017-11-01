@@ -58,7 +58,7 @@ pages:
         - Configure Kerberos: security-kerberos.md
       - CLI: 
         - Install the CLI: cli-install.md
-        - Using the CLI: cli-using.md
+        - CLI Reference: cli-reference.md
       - Troubleshooting: 
         - General Troubleshooting: trouble-cb.md
         - Troubleshooting AWS: trouble-aws.md

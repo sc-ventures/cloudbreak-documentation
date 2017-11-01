@@ -263,19 +263,36 @@ Cloudbreak works by connecting your OpenStack account through this credential, a
 
     <a href="../images/cb-gcp-cred.png" target="_blank" title="click to enlarge"><img src="../images/cb-gcp-cred.png" width="650" title="Cloudbreak web UI"></a> 
 
+3. Select the keystone version.
 
-3. Provide the following information:
+4. Provide the  following information:
+
+    For Keystone v2:
 
     | Parameter | Description |
 |---|---|
-| Keystone Version | Select the keystone version. | 
 | Name | Enter a name for your credential. |
 | Description | (Optional) Enter a description. | 
 | User | Enter your OpenStack user name. |
 | Password | Enter your OpenStack password. |
 | Tenant Name | Enter the OpenStack tenant name. |
 | Endpoint | Enter the OpenStack endpoint. |
-| API Facing | Select *public* or *private*. | 
+| API Facing | (Optional) Select *public*, *private*, or *internal*. | 
+
+    For Keystone v3:
+
+    | Parameter | Description |
+|---|---|
+| Keystone scope | Select the scope: default, domain, or project. |
+| Name | Enter a name for your credential. |
+| Description | (Optional) Enter a description. | 
+| User | Enter your OpenStack user name. |
+| Password | Enter your OpenStack password. |
+| User Domain | Enter your OpenStack user domain. |
+| Endpoint | Enter the OpenStack endpoint. |
+| API Facing | (Optional) Select *public*, *private*, or *internal*. | 
+
+[comment]: <> (Not sure what these params do: Keystone scope, User Domain)
  
 4. Click **Create**.
 
