@@ -77,14 +77,14 @@ Configures the Cloudbreak server address and credentials used to communicate wit
 
 **Required Options**
 
-**`--server value`**	   server address [$CB_SERVER_ADDRESS]  
-**`--username value`**		user name (e-mail address) [$CB_USER_NAME]  
+**`--server value`**  Server address [$CB_SERVER_ADDRESS]  
+**`--username value`**	 User name (e-mail address) [$CB_USER_NAME]  
 
 **Options**
 
-**`--password value`**  password [$CB_PASSWORD]  
-**`--profile value`**   selects a config profile to use [$CB_PROFILE]   
-**`--output value`**    supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--password value`**  Password [$CB_PASSWORD]  
+**`--profile value`**  Select a config profile to use [$CB_PROFILE]   
+**`--output value`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
 
 **Examples**
 
