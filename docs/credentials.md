@@ -21,7 +21,7 @@ If using multiple Cloudbreak credentials, you can select one credential and use 
  
 To set a default credential:
 
-1. In the Cloudbreak UI, select **Credentials** from the left pane.  
+1. In the Cloudbreak UI, select **Credentials** from the navigation pane.  
 2. Click **Set as default** next to the credential that you would like to set as default.  
 3. Click **Yes** to confirm. 
 
@@ -29,7 +29,7 @@ To set a default credential:
 
 To delete a credential:
 
-1. In the Cloudbreak UI, select **Credentials** from the left pane.  
+1. In the Cloudbreak UI, select **Credentials** from the navigation pane.  
 2. Select one or more credentials by checking their corresponding checkboxes.
 2. Click **Delete**. 
 3. Click **Yes** to confirm. 

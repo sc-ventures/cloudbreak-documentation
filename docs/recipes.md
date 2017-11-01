@@ -35,8 +35,12 @@ To add a recipe, perform these steps.
 **Steps**
 
 1. Place your script in a network location accessible from Cloudbreak and cluster instances virtual network. 
-  
-2. Select the recipe when creating a cluster using the Cloudbreak UI. You must provide:
+
+2. Select **Blueprints** from the navigation pane. 
+
+3. Click on **Create Blueprint**. 
+
+4. Provide the following:
 
     | Parameter | Value |
 |---|---|
@@ -47,11 +51,10 @@ To add a recipe, perform these steps.
 
     <a href="../images/cb-recipe-add.png" target="_blank" title="click to enlarge"><img src="../images/cb-recipe-add.png" width="650" title="Cloudbreak web UI"></a> 
     
-3. When creating a cluster, you can select previously added recipes using the **Recipes** option available in the advanced **General Configuration** section. 
+3. When creating a cluster, you can select previously added recipes in the **Recipes** section. 
 
     <a href="../images/cb-recipe-select.png" target="_blank" title="click to enlarge"><img src="../images/cb-recipe-select.png" width="650" title="Cloudbreak web UI"></a> 
-    
-[comment]: <> (Provide more details once the new UI is ready.)
+
 
 
 ### Deleting Recipes

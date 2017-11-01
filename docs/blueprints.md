@@ -7,7 +7,7 @@ You have three options concerning using blueprints with Cloudbreak:
 * Use one of the pre-defined blueprints.    
 * Add your custom blueprint by uploading a JSON file or pasting the JSON text. 
 
-We recommend that you review the default blueprints to check if they meet your requirements. You can do this by expanding  the **manage bluerints** pane in the Cloudbreak web UI or by reading the documentation below.
+We recommend that you review the default blueprints to check if they meet your requirements. You can do this by selecting **Blueprints** from the navigation pane in the Cloudbreak web UI or by reading the documentation below.
   
 
 ### Use Default Blueprints 
@@ -77,7 +77,7 @@ Once you have your blueprint ready, perform these steps.
 
 **Steps**
 
-1. In the Cloudbreak UI, select **Blueprints** from the left pane. 
+1. In the Cloudbreak UI, select **Blueprints** from the navigation pane. 
 2. To add your own blueprint, click **Create Blueprint** and enter the following parameters:
 
     | Parameter | Value |
@@ -96,9 +96,18 @@ Once you have your blueprint ready, perform these steps.
  
 ### Delete Blueprint
 
-You can delete previously added items by selecting and item and using the **delete** option. 
+To delete a default or custom blueprint, perform these steps.
 
-[comment]: <> (TO-DO: Is it possible to delete default blueprints?)
+**Steps**
+
+1. In the Cloudbreak UI, select **Blueprints** from the navigation pane. 
+
+2. Click on an entry to navigate to details. 
+
+3. Click **Delete**. 
+
+3. Confirm delete. 
+
 
 
 ### Modifying Existing Blueprints

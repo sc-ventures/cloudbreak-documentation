@@ -177,7 +177,7 @@ Follow these steps to create an interactive Cloudbreak credential.
 
 **Steps**
 
-1. In the Cloudbreak web UI, select **Credentials** from the left pane. 
+1. In the Cloudbreak web UI, select **Credentials** from the navigation pane. 
 
 2. Click **Create Credential**. 
 
@@ -241,7 +241,7 @@ Follow these steps to create an app based Cloudbreak credential.
 
      <a href="../images/azure-appbased03.png" target="_blank" title="click to enlarge"><img src="../images/azure-appbased03.png" width="650" title="Azure Portal"></a>   
 
-1. In the Cloudbreak web UI, select **Credentials** from the left pane. 
+1. In the Cloudbreak web UI, select **Credentials** from the navigation pane. 
 
 2. Click **Create Credential**. 
 

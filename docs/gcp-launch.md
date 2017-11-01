@@ -177,7 +177,7 @@ Cloudbreak works by connecting your GCP account through this credential, and the
 
 **Steps**
 
-1. In the Cloudbreak web UI, select **Credentials** from the left pane. 
+1. In the Cloudbreak web UI, select **Credentials** from the navigation pane. 
 
 2. Click **Create Credential**. 
 

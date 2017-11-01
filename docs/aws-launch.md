@@ -395,7 +395,7 @@ To perform these steps, you must know your access and secret key. If needed, you
 
 **Steps**
 
-1. In the Cloudbreak web UI, select **Credentials** from the left pane. 
+1. In the Cloudbreak web UI, select **Credentials** from the navigation pane. 
 
 2. Click **Create Credential**. 
 
@@ -427,7 +427,7 @@ To perform these steps, you must know the **IAM Role ARN** corresponding to the 
 
 **Steps**
 
-1. In the Cloudbreak web UI, select **Credentials** from the left pane. 
+1. In the Cloudbreak web UI, select **Credentials** from the navigation pane. 
 
 2. Click **Create Credential**. 
 
