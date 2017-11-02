@@ -1106,6 +1106,14 @@ Synchronizes a cluster with the cloud provider.
 
 
 
+### Debugging
+
+To use debugging mode, pass the `--debug` option. 
+
+
+### Checking CLI Version
+
+To check CLI version, use `cb --version`.
 
 
 

@@ -135,25 +135,25 @@ After [installing](#install-the-cli) and [configuring](#configure-the-cli) the C
 For a full list of commands, refer to [CLI Reference](cli-reference.md).    
 
 
-### Getting Help
+### Get Help
 
 To get CLI help, you can add help to the end of a command. The following will list help for the CLI at the top-level:
 
 <pre>cb help</pre>
 
+or 
+
+<pre>cb h</pre>
+
 The following will list help for the create-cluster command, including its command options and global options:
 
 <pre>cb create-cluster help</pre>
 
+or
 
-### Debugging
-
-To use debugging mode, pass the `--debug` option. 
+<pre>cb create-cluster h</pre> 
 
 
-### Checking CLI Version
-
-To check CLI version, use `cb --version`.
 
 
 <div class="next">
