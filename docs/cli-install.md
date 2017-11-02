@@ -89,6 +89,40 @@ By default, JSON format is used in command output. For example, if you run `cb l
   output: table</pre>
 
 
+### Get Started with the CLI 
+
+After [installing](#install) and [configuring](#configure) the CLI, you can use it to perform the same tasks as are available in the Cloudbreak UI: create and manage clusters, credentials, blueprints, and recipes.
+
+**Steps**
+
+1. The first step is to create at least one Cloudbreak credential using the [create-credential](cli-reference.md#create-credential) command.   
+
+2. If you are just getting started, you may want to try one of the default blueprints. You can use [list-blueprints](cli-reference.md#list-blueprints) and [describe-blueprint](cli-reference.md#describe-blueprint) to learn about those default blueprints.  
+
+    In case you would like to use your own blueprint, you can add it using [crate-blueprint](cli-reference.md#crate-blueprint) command.
+
+3. (Optional) You can optionally create [recipes](recipes.md) (custom scrpts) and add them using the [create-recipe](cli-reference.md#create-recipe) command.  
+
+4. To create a cluster, first generate a JSON skeleton using the [generate-cluster-template](cli-reference.md#generate-cluster-template) command. You can copy it to a text editor and save it in JSON format.
+
+5. Edit the JSON file by providing your parameters.  
+
+6. Once your JSON file is ready, you can use it to create a cluster via the [create-cluster](cli-reference.md#create-cluster) command.
+
+7. Once your cluster is running, use can use the CLI to manage and monitor your cluster:
+
+    * [list-clusters](cli-reference.md#list-clusters)  
+    * [describe-cluster](cli-reference.md#describe-cluster)  
+    * [repair-cluster](cli-reference.md#repair-cluster)  
+    * [scale-cluster](cli-reference.md#scale-cluster)  
+    * [start-cluster](cli-reference.md#start-cluster)  
+    * [stop-cluster](cli-reference.md#stop-cluster)  
+    * [sync-cluster](cli-reference.md#sync-cluster)  
+    * [change-ambari-passowrd](cli-reference.md#change-ambari-passowrd)  
+
+For a full list of commands, refer to [CLI Reference](cli-reference.md).    
+
+
 ### Getting Help
 
 To get CLI help, you can add help to the end of a command. The following will list help for the CLI at the top-level:
