@@ -14,8 +14,6 @@ In order to launch Cloudbreak on the Azure, log in to your existing Microsoft Az
 
 In order to provision clusters on Azure, Cloudbreak must be able to assume a sufficient Azure role ("Owner" or "Contributor") via Cloudbreak credential: 
 
-[comment]: <> (Need to confirm this)
-
 * Your account must have the "[Owner](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#owner)" role in the subscription in order to [create a Cloudbreak credential](#create-cloudbreak-credential) using the interactive credential method. 
 
 * Your account must have the "[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor)" role (or higher) in the subscription in order to [create a Cloudbreak credential](#create-cloudbreak-credential) using the app-based credential method. 
@@ -163,7 +161,6 @@ Before you can start creating clusters, you must first create a [Cloudbreak cred
 
 There are two methods for creating a Cloudbreak credential:
 
-[comment]: <> (Need to confirm the prerequisites.)
 
 | Method | Description | Prerequisite | Steps |
 |---|---|---|---|
