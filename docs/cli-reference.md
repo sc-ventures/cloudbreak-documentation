@@ -1,4 +1,4 @@
-## Using Cloudbreak CLI  
+## Cloudbreak CLI Reference  
 
 This section will help you get started with the Cloudbreak CLI after you have [installed and configured it](cli-install.md).
 
