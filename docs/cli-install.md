@@ -65,7 +65,7 @@ Once you have installed the CLI, you need to configure the CLI to work with Clou
   
 #### Add Multiple Configurations  
 
-If you are using multiple profiles for multiple environments, you can manually add them as separate entries in the `config` file. For example:
+If you are using multiple profiles for multiple environments, you can configure them using the `cb configure` command and passing `--profile value` parameter. After running the command, the configuration will be added as a new entry to the `config` file. For example:
 
 <pre>default
   username: admin@hortonworks.com

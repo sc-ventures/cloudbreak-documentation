@@ -127,8 +127,8 @@ cbd start</pre>
 
 Log in to the Cloudbreak web UI and create a credential for Cloubdreak using the following platform-specific instructions:
  
-* [Access Cloudbreak UI on AWS](aws-launch.md#access-cloudbreak-ui)
-* [Access Cloudbreak UI on Azure](azure-launch.md#access-cloudbreak-ui)
-* [Access Cloudbreak UI on GCP](gcp-launch.md#access-cloudbreak-ui)
-* [Access Cloudbreak UI on OpenStack](os-launch.md#access-cloudbreak-ui)
+* [Access Cloudbreak UI on AWS](aws-launch.md#access-cloudbreak-ui)  
+* [Access Cloudbreak UI on Azure](azure-launch.md#access-cloudbreak-ui)  
+* [Access Cloudbreak UI on GCP](gcp-launch.md#access-cloudbreak-ui)  
+* [Access Cloudbreak UI on OpenStack](os-launch.md#access-cloudbreak-ui)  
 
