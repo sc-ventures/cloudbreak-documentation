@@ -137,7 +137,7 @@ This example configures the server address with username but without a password:
 
 **Related Links**
 
-[Configure CLI](cli-install.md#configure)
+[Configure CLI](cli-install.md#configure-the-cli)
 
 
 

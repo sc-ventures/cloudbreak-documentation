@@ -6,7 +6,7 @@ The Cloudbreak Command Line Interface (CLI) is a tool to help you manage your Cl
 The CLI is available for Linux, Mac OS X, and Windows. 
 
 
-### Install 
+### Install the CLI
 
 After you have launched Cloudbreak, the CLI is available for download from that Cloudbreak instance.
 
@@ -23,7 +23,7 @@ After you have launched Cloudbreak, the CLI is available for download from that 
     <pre>cb --version</pre>
 
 
-### Configure
+### Configure the CLI 
 
 Once you have installed the CLI, you need to configure the CLI to work with Cloudbreak.
 
@@ -103,7 +103,7 @@ By default, JSON format is used in command output. For example, if you run `cb l
 
 ### Get Started with the CLI 
 
-After [installing](#install) and [configuring](#configure) the CLI, you can use it to perform the same tasks as are available in the Cloudbreak UI: create and manage clusters, credentials, blueprints, and recipes.
+After [installing](#install-the-cli) and [configuring](#configure-the-cli) the CLI, you can use it to perform the same tasks as are available in the Cloudbreak UI: create and manage clusters, credentials, blueprints, and recipes.
 
 **Steps**
 
