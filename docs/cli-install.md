@@ -65,18 +65,30 @@ Once you have installed the CLI, you need to configure the CLI to work with Clou
   
 #### Add Multiple Configurations  
 
-If you are using multiple profiles for multiple environments, you can configure them using the `cb configure` command and passing `--profile value` parameter. After running the command, the configuration will be added as a new entry to the `config` file. For example:
+If you are using multiple profiles for multiple environments, you can configure them using the `cb configure` command and passing the name of your environment-specific profile file using the `--profile` parameter. After running the command, the configuration will be added as a new entry to the `config` file. For example, running the following command `cb configure --server https://192.167.65.4 --username test@hortonworks.com --profile staging` will add the "staging" entry:
 
 <pre>default
   username: admin@hortonworks.com
   server: https://192.167.65.4
 staging
   username: test@hortonworks.com
-  server: https://192.176.122.1  
+  server: https://192.167.65.4  
 </pre>
 
-    
-[comment]: <> (Is this correct? Need to clarify how this works if you have multiple profiles. Would you add multiple entries to the config file manually, or can you do it using the configure command? Is the entry name supposed to match profile name?)  
+For example:
+
+<pre>#cb configure --server https://192.167.65.4 --username test@hortonworks.com --profile staging
+INFO:  [writeConfigToFile] dir already exists: /Users/rkovacs/.cb
+INFO:  [writeConfigToFile] writing credentials to file: /Users/rkovacs/.cb/config
+# cat /Users/rkovacs/.cb/config
+default:
+  username: admin@example.com
+  server: https://192.167.65.4
+  output: table
+staging:
+  username: test@hortonworks.com
+  server: https://192.167.65.4</pre>
+ 
 
 
 #### Configure Default Output
