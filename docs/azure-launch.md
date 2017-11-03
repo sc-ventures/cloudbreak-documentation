@@ -14,9 +14,9 @@ In order to launch Cloudbreak on the Azure, log in to your existing Microsoft Az
 
 In order to provision clusters on Azure, Cloudbreak must be able to assume a sufficient Azure role ("Owner" or "Contributor") via Cloudbreak credential: 
 
-* Your account must have the "[Owner](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#owner)" role in the subscription in order to [create a Cloudbreak credential](#create-cloudbreak-credential) using the interactive credential method. 
+* Your account must have the "[Owner](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#owner)" role (or a role with equivalent permissions) in the subscription in order to [create a Cloudbreak credential](#create-cloudbreak-credential) using the interactive credential method. 
 
-* Your account must have the "[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor)" role (or higher) in the subscription in order to [create a Cloudbreak credential](#create-cloudbreak-credential) using the app-based credential method. 
+* Your account must have the "[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor)" role (or a role with equivalent permissions) in the subscription in order to [create a Cloudbreak credential](#create-cloudbreak-credential) using the app-based credential method. The role must be assigned to the app that you register in Cloudbreak.
 
 To check the roles in your subscription, log in to your Azure account and navigate to **Subscriptions**. 
 
@@ -164,8 +164,8 @@ There are two methods for creating a Cloudbreak credential:
 
 | Method | Description | Prerequisite | Steps |
 |---|---|---|---|
-| **Interactive** | The advantage of using this method is that the app and service principal creation and role assignment are fully automated, so the only input that you need to provide is the Subscription ID and Directory ID. During the interactive credential creation, you must log in to your Azure account. | Your account must have the "Owner" role in the subscription. | To configure an interactive credential, refer to [Create an Interactive Credential](#create-an-interactive-credential). | 
-| **App-based** | The advantage of the app-based credential creation is that it allows you to create a credential without logging in to the Azure account, as long as you have been given all the information. In addition to providing your Subscription ID and  Directory ID, you must provide information for your previously created Azure AD application, including its password. | Your account must have the "Contributor" role in the subscription. |  To configure an app based credential, refer to [Create an App Based Credential](#create-an-app-based-credential). | 
+| **Interactive** | The advantage of using this method is that the app and service principal creation and role assignment are fully automated, so the only input that you need to provide is the Subscription ID and Directory ID. During the interactive credential creation, you must log in to your Azure account. | Your account must have the "Owner" role (or its equivalent) in the subscription. | To configure an interactive credential, refer to [Create an Interactive Credential](#create-an-interactive-credential). | 
+| **App-based** | The advantage of the app-based credential creation is that it allows you to create a credential without logging in to the Azure account, as long as you have been given all the information. In addition to providing your Subscription ID and  Directory ID, you must provide information for your previously created Azure AD application, including its password. | Your account must have the "Contributor" role (or equivalent) in the subscription. The role must be assigned to the app that you register in Cloudbreak. | To configure an app based credential, refer to [Create an App Based Credential](#create-an-app-based-credential). | 
 
 
 #### Create an Interactive Credential
