@@ -96,8 +96,8 @@ This option allows you to select previously uploaded recipes (scripts that will 
 For each host group, select one of the options:
 
 * Create new security group  
-Do not use security group  
-Select an existing security group
+* Do not use security group  
+* Select an existing security group
 
 If you choose to create a new security group, the *New Security Group* wizard will open.
     

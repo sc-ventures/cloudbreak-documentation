@@ -15,21 +15,36 @@ For steps, refer to:
 * [Create Credential on OpenStack](os-launch.md#create-cloudbreak-credential)
 
 
+### View Credential Details
+
+To view credential details, follow these steps.
+
+**Steps**
+
+1. In the Cloudbreak UI, select **Credentials** from the navigation pane.  
+2. Click on the name of a credential. 
+
+
+
 ### Set a Default Credential
 
 If using multiple Cloudbreak credentials, you can select one credential and use it as default for creating clusters. This default credential will be pre-selected in the create cluster wizard.
  
-To set a default credential:
+**Steps**
 
 1. In the Cloudbreak UI, select **Credentials** from the navigation pane.  
 2. Click **Set as default** next to the credential that you would like to set as default.  
 3. Click **Yes** to confirm. 
 
+
 ### Delete a Credential 
 
-To delete a credential:
+To delete a credential, follow these steps.
+
+**Steps**
 
 1. In the Cloudbreak UI, select **Credentials** from the navigation pane.  
 2. Select one or more credentials by checking their corresponding checkboxes.
 2. Click **Delete**. 
 3. Click **Yes** to confirm. 
+

@@ -17,7 +17,7 @@ You can manage monitor your clusters from the Cloudbreak UI. To do that, click o
 </div>
 
 
-### Resize Your Cluster
+### Resize Cluster
 
 To resize a cluster, follow these steps.
 
@@ -49,7 +49,7 @@ To synchronize your cluster with the cloud provider, follow these steps.
 3. Click **Yes** to confirm.
  
  
-### Stop and Restart
+### Stop and Restart Cluster 
 
 Cloudbreak supports stopping and restarting clusters. To stop and restart a cluster managed by Cloudbreak, use the options available from the Coudbreak UI. 
 
@@ -66,7 +66,7 @@ Cloudbreak supports stopping and restarting clusters. To stop and restart a clus
 5. Click **Yes** to confirm.
 
 
-### Terminate Your Cluster 
+### Terminate Cluster 
 
 To terminate a cluster managed by Cloudbreak, use the option available from the Coudbreak UI. 
 
