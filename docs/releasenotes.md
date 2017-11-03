@@ -1,8 +1,5 @@
 ## Release Notes
 
-### System Info
-
-Cloudbreak 2.1.0 Technical Preview 
 
 ### 2.1.0 TP 
 
