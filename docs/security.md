@@ -1,6 +1,6 @@
 ## Security Overview
 
-To ensure maximum security for your clusters, Cloudbreak utilizes cloud provider security resources such as virtual networks, security groups, and identity and access management. In addition, Coudbreak allows you to configure Kerberos to ensure secure authentication.
+Cloudbreak utilizes cloud provider security resources such as virtual networks, security groups, and identity and access management:
 
 1. **Network isolation** is achieved via user-configured virtual networks and subnets.  
     Read more about [Virtual Networks](#virtual-networks).  
@@ -8,7 +8,7 @@ To ensure maximum security for your clusters, Cloudbreak utilizes cloud provider
     Read more about [Network Security](#network-security).   
 3. **Controlled use of cloud resources** using IAM roles (AWS, GCP) or Active Directory (in case of Azure). 
     Read more about [Identity Management](#identity-management).    
-4. **Authentication** using Kerberos. Read more about [Kerberos](#kerberos).   
+ 
 
 ### Virtual Networks
 
@@ -39,20 +39,56 @@ The following table lists the minimum security group port configuration required
 
 To securely control access to cloud resources, cloud providers use identity management services such as IAM roles (AWS and GCP) and Active Directory (Azure). 
 
-| Cloud Provider | Documentation Link | How is IAM used by Cloudbreak |
-|---|---|---| 
-| AWS | IAM [documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) | When launching Cloudbreak on AWS, you can select to use key-based or role-based authenticaton. While key-based authentication uses your Access key and Secret key, role-based authentication uses IAM roles. |
-| Azure | Active Directory [documentation](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) | After launching Cloudbread on Azure, you are required to create a Cloudbreak credential, which uses your Azure Active Directory to authenticate with the Azure cloud provider. |
-| Google | IAM [documentation](https://cloud.google.com/iam/docs/overview) | When launching Cloudbreak on GCP, you are required to create a service account that Cloudbreak can use to authenticate with your account. |
+| Cloud Provider | Documentation Link | 
+|---|---|
+| AWS | [IAM](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
+| Azure | [Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) | 
+| Google | [IAM](https://cloud.google.com/iam/docs/overview) | 
+| OpenStack | [Keystone](https://docs.openstack.org/keystone/pike/) |
+
+Cloudbreak utilizes cloud provider’s identity management services via Cloudbreak credential. After launching Cloudbreak on your chosen cloud provider, you must create a Cloudbreak credential, which allows Cloudbreak to authenticate with your cloud provider identity management service. Only after you have completed this step, Cloudbreak can create resources on your behalf. 
 
 
-### Kerberos
+#### Authentication with AWS
 
-Cloudbreak supports using Kerberos security for its managed clusters. It supports three ways of provisioning Kerberos-enabled clusters:
+When launching Cloudbreak on AWS, you must select a way for Cloudbreak to authenticate with your AWS account and create resources on your behalf. While key-based authentication uses your AWS access key and secret key, role-based authentication uses IAM roles.
 
-* Create new MIT Kerberos at cluster provisioning time  
-* Use your existing MIT Kerberos server with a Cloudbreak provisioned cluster  
-* Use your existing Active Directory with a Cloudbreak provisioned cluster  
+{!docs/common/aws-launch-authentication-role-based-intro!}
 
-For more information about Kerberos, refer to [Configure Kerberos](security-kerberos.md) documentation.
+**Related Links**
 
+[Meet the Prerequisites: Authentication](aws-launch.md#authentication)
+
+
+#### Authentication with Azure
+
+After launching Cloudbread on Azure, you are required to create a Cloudbreak credential, which allows Cloudbreak to authenticate with your Azure Active Directory. 
+
+You have two options:
+
+* Interactive: The app and service principal creation and role assignment are fully automated, so the only input that you need to provide to Cloudbreak is your Subscription ID and Directory ID. 
+
+* App-based: The app and service principal creation and role assignment are not automated You must create an Azure Active Directory application registration and then provide its parameters to Cloudbreak, in addition to providing your Subscription ID and Directory ID. 
+
+**Related Links**
+
+[Create Cloudbreak Credential](azure-launch.md#create-cloudbreak-credential)
+
+
+#### Authentication with GCP
+
+After launching Cloudbreak on GCP, you are required to register a service account in Cloudbrak via creating a Cloudbreak credential. Cloudbreak uses this account to authenticate with the GCP identity management service.
+
+**Related Links**
+
+[Meet the Prerequisites: Service Account](gcp-launch.md#service-account)
+
+
+#### Authentication with OpenStack 
+
+After launching Cloudbread on OpenStack, you are required to create a Cloudbreak credential, which allows Cloudbreak to authenticate with keystone. 
+
+
+**Related Links**
+
+[Create Cloudbreak Credential](os-launch.md#create-cloudbreak-credential)
