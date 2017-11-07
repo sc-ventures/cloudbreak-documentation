@@ -33,7 +33,7 @@ To resize a cluster, follow these steps.
 
     While nodes are being added or removed, cluster status changes to "Update In Progress". Once the operation has completed, cluster status changes back to "Running". Messages similar to the following are written to the "Event History", : 
 
-<pre>Ambari cluster scaled up
+    <pre>Ambari cluster scaled up
 11/6/2017, 12:33:40 PM
 Scaling up the Ambari cluster
 11/6/2017, 12:26:59 PM

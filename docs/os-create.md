@@ -54,7 +54,10 @@ Use these steps to create a cluster.
 8. Click on **Create Cluster** to create a cluster.
 
 9. You will be redirected to the Cloudbreak dashboard, and a new tile representing your cluster will appear at the top of the page.
-  
+
+**Related Links**  
+[Blueprints](blueprints.md)   
+[CIDR](https://www.ipaddressguide.com/cidr) (External)    
     
 
 ### Advanced Options
@@ -74,6 +77,9 @@ Check this option if you would like your cluster to be automatically terminated 
 
 You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. refer to [Resource Tagging](tags.md).
 
+**Related Links**  
+[Resource Tagging](tags.md) 
+
 
 #### Storage
 
@@ -89,6 +95,9 @@ You can optionally specify the following storage options for your cluster:
 #### Recipes
 
 This option allows you to select previously uploaded recipes (scripts that will be run pre- or post- cluster deployment) for each host group. For more information on default and custom blueprints, refer to [Recipes](recipes.md).
+
+**Related Links**  
+[Recipes](recipes.md)  
 
 
 #### Security Groups
@@ -110,6 +119,9 @@ If you choose to create a new security group, the *New Security Group* wizard wi
 #### Enable Kerberos Security  
 
 Select this option to enable Kerberos for your cluster. You will have an option to create a new kerberos or use an existing one. For more information refer to [Kerberos](security-kerberos.md) documentation. 
+
+**Related Links**  
+[Kerberos](security-kerberos.md)
 
 
 <div class="next">

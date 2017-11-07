@@ -42,7 +42,9 @@ Ambari blueprints are specified in JSON format. After you provide the blueprint 
 
 Cloudbreak includes a few default blueprints and allows you to upload your own blueprints.
 
-To learn more about Ambari blueprints, refer to [Apache documentation](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints).
+**Related Links**  
+[Blueprints](security.md#identity-management)  
+[Apache documentation](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) (External)  
 
 
 #### Cloudbreak Credential
@@ -50,4 +52,7 @@ To learn more about Ambari blueprints, refer to [Apache documentation](https://c
 **Cloudbreak credential** allows Cloudbreak to authenticate with the cloud provider and create resources on your behalf. This is typically done via assigning a specific IAM role to Cloudbreak which allows Cloudbreak to perform certain actions within your cloud provider account.
 
 After launching Cloudbreak, you must create a Cloudbreak credential. Only after you have completed that step you can start creating clusters.
+
+**Related Links**  
+[Identity Management](security.md#identity-management)  
 

@@ -27,6 +27,9 @@ Cloudbreak requires that the following standard modules are installed and config
 * Cinder (Optional)  
 * Heat (Optional but highly recommended, since provisioning through native API calls will be deprecated in the future)  
 
+**Related Links**  
+[Red Hat Distribution of OpenStack](https://www.rdoproject.org/) (External)   
+
 ### Meet the Prerequisites
 
 Before launching Cloudbreak on OpenStack, you must meet the following prerequisites.
@@ -39,7 +42,10 @@ Create a new SSH key pair or import an existing SSH key pair.
 
 In order to launch Cloudbreak, you must have an existing security group with the following ports open: 22 (SSH) and 443 (HTTPS). 
 
-For information about OpenStack security groups, refer to the [OpenStack Operations Guide](https://docs.openstack.org/ops-guide/index.html).
+For information about OpenStack security groups, refer to the [OpenStack Administrator Guide](https://docs.openstack.org/ops-guide/index.html).
+
+**Related Links** 
+[OpenStack Administrator Guide](https://docs.openstack.org/ops-guide/index.html) (External)    
 
 ### Import Images to OpenStack 
 

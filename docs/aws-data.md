@@ -4,6 +4,9 @@
 
 To use S3 storage, you must have one or more S3 buckets on your AWS account. For instructions on how to create a bucket on S3, refer to [AWS documentation](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html).
 
+**Related Links**  
+[Create a Bucket](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) (External)    
+
 
 #### Configuring Access to S3
 
@@ -54,6 +57,7 @@ test file content</pre>
 
 For more information about configuring the S3 connector and working with data stored on S3, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) documentation.
 
-<div class="next">
-<a href="../clusters-access/index.html">Next: Access Cluster</a>
-</div>
+**Related Links**  
+[Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) (Hortonworks)
+
+

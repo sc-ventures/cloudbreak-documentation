@@ -28,7 +28,8 @@ Decide in which AWS region you would like to launch Cloudbreak. The following AW
 
 Clusters created via Cloudbreak can be in the same or different region as Cloudbreak; when you launch a cluster, you select the region in which to launch it.
 
-For detailed information about AWS regions, refer to <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html" target="_blank">AWS documentation</a>. 
+**Related Links**  
+[AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) (External)   
 
 #### SSH Key Pair
 
@@ -43,9 +44,10 @@ Import an existing key pair or generate a new key pair in the AWS region which y
     * Click **Create Key Pair** to create a new key pair. Your private key file will be automatically downloaded onto your computer. Make sure to save it in a secure location. You will need it to SSH to the cluster nodes. You may want to change access settings for the file using `chmod 400 my-key-pair.pem`.  
     * Click **Import Key Pair** to upload an existing public key and then select it and click **Import**. Make sure that you have access to its corresponding private key.    
 
-For more information, refer to [AWS documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair).
+You need this SSH key pair to SSH to the Cloudbreak instance and start Cloudbreak. 
 
-You will need this SSH key pair to SSH to the Cloudbreak instance and start Cloudbreak. 
+**Related Links**  
+[Creating a Key Pair Using Amazon EC2](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) (External)  
 
 #### Authentication 
 
@@ -80,7 +82,7 @@ If you choose this option, you can proceed to [Launch the VM](#launch-the-vm).
  
 > Alternatively, instead of attaching the "CloudbreakRole" role during the VM launch, you can assign the "CloudbreakRole" to an IAM user and then add the access and security key of that user to your 'Profile'.
 
-You can create these roles in the **IAM console**, on the **Roles** page via the **Create Role** option. Detailed steps are provided below. For more information about IAM, refer to <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html" target="_blank">Using Instance Profiles</a> and <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html" target="_blank">Using an IAM Role to Grant Permissions to Applications Running on Amazon EC2 Instances</a>. 
+You can create these roles in the **IAM console**, on the **Roles** page via the **Create Role** option. Detailed steps are provided below. 
 
 
 **Create CloudbreakRole**
@@ -219,7 +221,11 @@ Use the following "cb-policy" policy definition:
     
 11. When done, click **Create role** to finish the role creation process. 
 
-Once you are done, you can proceed to [Launch the VM](#launch-the-vm).   
+Once you are done, you can proceed to [Launch the VM](#launch-the-vm).  
+
+**Related Links**  
+[Using Instance Profiles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) (External)  
+[Using an IAM Role to Grant Permissions to Applications](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) (External)   
 
 
 ### Launch the VM  

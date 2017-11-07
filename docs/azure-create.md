@@ -55,6 +55,11 @@ Use these steps to create a cluster.
 
 9. You will be redirected to the Cloudbreak dashboard, and a new tile representing your cluster will appear at the top of the page.
 
+**Related Links**  
+[Blueprints](blueprints.md)  
+[CIDR](http://www.ipaddressguide.com/cidr) (External)  
+[General Purpose Linux VM Sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general) (External)  
+
 
 ### Advanced Options
 
@@ -69,6 +74,9 @@ Check this option if you would like your cluster to be automatically terminated 
 
 You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. refer to [Resource Tagging](tags.md).
 
+**Related Links**  
+[Resource Tagging](tags.md)  
+
 
 #### Storage
 
@@ -80,10 +88,16 @@ You can optionally specify the following storage options for your cluster:
 | Attached Volumes Per Instance | Enter the number of volumes attached per instance. Default is 1. |
 | Volume Size (GB) | Enter the size in GBs for each volume. Default is 100. |   
 
+**Related Links**  
+[Introduction to Microsoft Azure Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) (External)  
+
 
 #### Recipes
 
 This option allows you to select previously uploaded recipes (scripts that will be run pre- or post- cluster deployment) for each host group. For more information on default and custom blueprints, refer to [Recipes](recipes.md).
+
+**Related Links**  
+[Recipes](recipes.md)
 
 
 #### Security Groups 

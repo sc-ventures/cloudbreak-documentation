@@ -18,7 +18,7 @@ from/to *Windows Azure Storage Blob (WASB)* object store, as well as reading and
 
 #### Prerequisites
 
-If you want to use [Azure Data Lake Store](https://azure.microsoft.com/en-in/services/data-lake-store/) to store your data, you must enable Azure subscription for Data Lake Store, and then create an Azure Data Lake Store [storage account](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal).
+If you want to use ADLS to store your data, you must enable Azure subscription for Data Lake Store, and then create an Azure Data Lake Store [storage account](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal).
 
 #### Configuring Access to ADLS 
 
@@ -43,6 +43,11 @@ To use DistCp against ADLS, use the following syntax:
     [-D hadoop.security.credential.provider.path=localjceks://file/home/user/adls.jceks]
     hdfs://<b>namenode_hostname</b>:9001/user/foo/007020615
     adl://<b>myaccount</b>.azuredatalakestore.net/testDir/</pre>
+    
+**Related Links**  
+[Azure Data Lake Store](https://azure.microsoft.com/en-in/services/data-lake-store/) (External)    
+[Get started with Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal) (External)  
+[How to Configure Authentication with ADLS](https://community.hortonworks.com/articles/105994/how-to-configure-authentication-with-adls.html) (Hortonworks)
 
 
 ### Accessing Data in WASB  
@@ -100,6 +105,7 @@ test file content</pre>
 
 For more information about configuring the ADLS and WASB connectors and working with data stored in ADLS and WASB, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) documentation.
 
-<div class="next">
-<a href="../clusters-access/index.html">Next: Access Cluster</a>
-</div>
+**Related Links**   
+[Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) (Hortonworks)   
+[Create a Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account#create-a-storage-account) (External)   
+

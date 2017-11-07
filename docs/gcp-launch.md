@@ -28,6 +28,10 @@ A user with an "Owner" role can assign roles or access rules to service accounts
 
 <a href="../images/gcp-iam.png" target="_blank" title="click to enlarge"><img src="../images/gcp-iam.png" width="650" title="GCP Console"></a> 
 
+**Related Links**  
+[Service Account Credentials](https://cloud.google.com/storage/docs/authentication#service_accounts) (External)  
+
+
 #### VPC Network 
 
 When launching Cloudbreak, you will be required to select an existing network in which Cloudbreak can be placed. The following ports must be open on the security group: 22 (SSH) and 443 (HTTPS). You may use the *default* network as long as the aforementioned ports are open. 
@@ -39,6 +43,9 @@ You can manage networks under **Networking** > **VPC Networks**. To edit ports, 
 Decide in which region and zone you would like to launch Cloudbreak. You can launch Cloudbreak and provision your clusters in all regions [supported by GCP](https://cloud.google.com/compute/docs/regions-zones/regions-zones).  
 
 Clusters created via Cloudbreak can be in the same or different region as Cloudbreak; when you launch a cluster, you select the region in which to launch it. 
+
+**Related Links**  
+[Regions and Zones](https://cloud.google.com/compute/docs/regions-zones/) (External)  
 
 
 ### Launch the VM  
@@ -55,7 +62,7 @@ Clusters created via Cloudbreak can be in the same or different region as Cloudb
 
     <pre>gcloud compute images create cloudbreak-deployer-1164-2017-08-29 --source-uri gs://sequenceiqimage/cloudbreak-deployer-1164-2017-08-29.tar.gz</pre>
 
-    [comment]: <> (TO-DO: This should be generated automatically.) 
+[comment]: <> (TO-DO: This should be generated automatically.) 
     
 1. In the GCP UI, from the **Products and services** menu, select **Compute Engine** > **Images**.
 

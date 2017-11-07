@@ -20,12 +20,19 @@ In order to provision clusters on Azure, Cloudbreak must be able to assume a suf
 
 To check the roles in your subscription, log in to your Azure account and navigate to **Subscriptions**. 
 
+**Related Links**  
+[Built-in Roles: Owner](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#owner) (External)  
+[Built-in Roles: Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor) (External)
+
 
 #### Azure Region
 
 Decide in which Azure region you would like to launch Cloudbreak. You can launch Cloudbreak and provision your clusters in all regions [supported by Microsoft Azure](https://azure.microsoft.com/en-us/regions/). 
 
 Clusters created via Cloudbreak can be in the same or different region as Cloudbreak; when you launch a cluster, you select the region in which to launch it.
+
+**Related Links**  
+[Azure regions](https://azure.microsoft.com/en-us/regions/) (External) 
 
 
 #### SSH Key Pair
@@ -70,7 +77,7 @@ Launch Cloudbreak deployer using the following steps.
 | Admin User Password | (Required) Password for the admin login. Must be at least 8 characters containing letters, numbers, and symbols. |
 | Username | Enter an admin username for the virtual machine. You will use it to SSH to the VM. |
 | SmartSense | Select whether you want to use SmartSense telemetry. Default is "false" (not using SmartSense telemetry). |
-| Remote Location |<p>Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or use one of the default tags. Default value is `Internet` which allows access from all IP addresses. Examples: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>'Internet' will allow access from all. This is not a secure option but you can use it it you are just getting started and are not planning to have the instance on for a longer period. </li><li>(Advanced) 'VirtualNetwork' will allow access from the address space of the Virtual Network.</li><li> (Advanced) 'AzureLoadBalancer' will allow access from the address space of the load balancer.</li></ul></p><p>For more information, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg#default-tags).</p> |
+| Remote Location |<p>Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or use one of the default tags. Default value is `Internet` which allows access from all IP addresses. Examples: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>'Internet' will allow access from all. This is not a secure option but you can use it it you are just getting started and are not planning to have the instance on for a longer period. </li><li>(Advanced) 'VirtualNetwork' will allow access from the address space of the Virtual Network.</li><li> (Advanced) 'AzureLoadBalancer' will allow access from the address space of the load balancer.</li></ul></p><p>For more information, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg).</p> |
 | Ssh Key| <p>(Required) Paste your SSH public key.</p><p>You can use `pbcopy` to quickly copy it. For example: `pbcopy < /Users/homedir/.ssh/id_rsa.pub`</p> |
 | Vnet New Or Existing | By default, Cloudbreak is launched in a new VNet called `cbdeployerVnet` and a new subnet called `cbdeployerSubnet`; if needed, you can customize the settings for the new VNet using available VNet and Subnet parameters. |
 | Vnet Name | Provide the name for a new Vnet. Default is ``cbdeployerVnet`. |
@@ -84,6 +91,10 @@ Launch Cloudbreak deployer using the following steps.
 5. Click **Purchase**.
 
 6. Proceed to the next step: [Explore Newly Created Resources](#explore-newly-created-resources).
+
+**Related Links**  
+[CIDR IP](http://www.ipaddressguide.com/cidr) (External)   
+[Filter Network Traffic with Network Security Groups](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg) (External)  
 
 
 ### Explore Newly Created Resources
@@ -226,9 +237,6 @@ Follow these steps to create an interactive Cloudbreak credential.
 
 Follow these steps to create an app based Cloudbreak credential.
 
-> Alternatively, instead of performing the steps on the Azure portal, you use a utility called <b>azure-cli-tools</b>.
-The utility supports app creation and role assignment. It is available at <a href="https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools" target="_blank">https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools</a>.
-
 **Steps**
 
 1. On Azure Portal, navigate to the **Active Directory** > **App Registrations** and register a new application. For more information, refer to [Create an Azure AD Application](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal).
@@ -282,6 +290,10 @@ The utility supports app creation and role assignment. It is available at <a hre
 1. Click **Create**.
 
      Congratulations! You've successfully launched and configured Cloudbreak. Now you can use Cloudbreak to [create clusters](azure-create.md).
+     
+**Related Links**  
+[CLI Tools](https://github.com/hortonworks/cloudbreak-azure-cli-tools/blob/master/cli_tools) (Hortonworks)    
+[Use Portal to Create an Azure Active Directory Application](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal) (External)     
 
 
 <div class="next">

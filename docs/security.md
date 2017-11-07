@@ -16,9 +16,9 @@ Cloud providers use virtual networks which resemble traditional networks. Depend
   
 | Cloud Provider | Documentation Link |
 |---|---|
-| AWS | [Virtual Private Cloud (VPC)](https://aws.amazon.com/documentation/vpc/) |
-| Azure | [Virtual network (VNet)](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) |
-| Google Cloud Platform | [VPC network](https://cloud.google.com/compute/docs/vpc/) |
+| AWS | [Amazon Virtual Private Cloud (Amazon VPC)](https://aws.amazon.com/documentation/vpc/) |
+| Azure | [Microsoft Azure Virtual Network](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) |
+| Google Cloud Platform | [Virtual Private Cloud (VPC) network](https://cloud.google.com/compute/docs/vpc/) |
 | OpenStack | [Network](https://docs.openstack.org/mitaka/networking-guide/intro-os-networking.html) |
 
 ### Network Security 
@@ -41,9 +41,9 @@ To securely control access to cloud resources, cloud providers use identity mana
 
 | Cloud Provider | Documentation Link | 
 |---|---|
-| AWS | [IAM](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
-| Azure | [Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) | 
-| Google | [IAM](https://cloud.google.com/iam/docs/overview) | 
+| AWS | [AWS Identity and Access Management (IAM)](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
+| Azure | [Azure Active Directory ((Azure AD))](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) | 
+| Google | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/overview) | 
 | OpenStack | [Keystone](https://docs.openstack.org/keystone/pike/) |
 
 Cloudbreak utilizes cloud provider’s identity management services via Cloudbreak credential. After launching Cloudbreak on your chosen cloud provider, you must create a Cloudbreak credential, which allows Cloudbreak to authenticate with your cloud provider identity management service. Only after you have completed this step, Cloudbreak can create resources on your behalf. 
@@ -55,9 +55,8 @@ When launching Cloudbreak on AWS, you must select a way for Cloudbreak to authen
 
 {!docs/common/aws-launch-authentication-role-based-intro.md!}
 
-**Related Links**
-
-[Meet the Prerequisites: Authentication](aws-launch.md#authentication)
+**Related Links**  
+[Meet the Prerequisites: Authentication](aws-launch.md#authentication)  
 
 
 #### Authentication with Azure
@@ -70,18 +69,16 @@ You have two options:
 
 * App-based: The app and service principal creation and role assignment are not automated You must create an Azure Active Directory application registration and then provide its parameters to Cloudbreak, in addition to providing your Subscription ID and Directory ID. 
 
-**Related Links**
-
-[Create Cloudbreak Credential](azure-launch.md#create-cloudbreak-credential)
+**Related Links**  
+[Create Cloudbreak Credential](azure-launch.md#create-cloudbreak-credential)  
 
 
 #### Authentication with GCP
 
 After launching Cloudbreak on GCP, you are required to register a service account in Cloudbrak via creating a Cloudbreak credential. Cloudbreak uses this account to authenticate with the GCP identity management service.
 
-**Related Links**
-
-[Meet the Prerequisites: Service Account](gcp-launch.md#service-account)
+**Related Links**  
+[Meet the Prerequisites: Service Account](gcp-launch.md#service-account)  
 
 
 #### Authentication with OpenStack 
@@ -89,6 +86,5 @@ After launching Cloudbreak on GCP, you are required to register a service accoun
 After launching Cloudbread on OpenStack, you are required to create a Cloudbreak credential, which allows Cloudbreak to authenticate with keystone. 
 
 
-**Related Links**
-
-[Create Cloudbreak Credential](os-launch.md#create-cloudbreak-credential)
+**Related Links**  
+[Create Cloudbreak Credential](os-launch.md#create-cloudbreak-credential)  
