@@ -53,7 +53,7 @@ Cloudbreak utilizes cloud provider’s identity management services via Cloudbre
 
 When launching Cloudbreak on AWS, you must select a way for Cloudbreak to authenticate with your AWS account and create resources on your behalf. While key-based authentication uses your AWS access key and secret key, role-based authentication uses IAM roles.
 
-{!docs/common/aws-launch-authentication-role-based-intro!}
+{!docs/common/aws-launch-authentication-role-based-intro.md!}
 
 **Related Links**
 

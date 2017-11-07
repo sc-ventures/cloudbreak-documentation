@@ -70,7 +70,7 @@ If you choose this option, you can proceed to [Launch the VM](#launch-the-vm).
 
 #####**Option 2: Role-based Authentication**
 
-{!docs/common/aws-launch-authentication-role-based-intro!}
+{!docs/common/aws-launch-authentication-role-based-intro.md!}
 
 [comment]: <> (The notes below could be included in the table above as alternative steps, but I'm afraid that showing too many options can be confusing; especially that in order to perform these alternative steps, you must perform advanced configuration. So I am adding them as a side note.)
 
