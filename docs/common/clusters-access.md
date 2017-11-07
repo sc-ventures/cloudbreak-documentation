@@ -115,4 +115,35 @@ For example:
 
 On Windows, you can SSH using an SSH client such as PuTTY.
 
- 
+### Access Ambari
+
+You can access Ambari web UI by clicking on the links provided in the **Cluster Information** > **Ambari URL**.
+
+**Steps**
+
+1. From the cluster dashboard, click on the tile representing your cluster to navigate to cluster details.
+
+2. Find the Ambairi URL in the **Cluster Information** section. This URL is available once the Ambari cluster creation process has completed.  
+
+3. Click on the **Ambari URL** link.
+
+4. The first time you access the server, your browser will attempt to confirm that the SSL Certificate is valid. Since Cloudbreak automatically generates a self-signed certificate, your browser will warn you about an Untrusted Connection and ask you to confirm a Security Exception. Depending on your browser, perform the steps below to proceed.
+
+    | Browser	| Steps |
+|---|---|
+| Firefox | Click **Advanced** > Click **Add Exception...** > Click **Confirm Security Exception** |
+| Safari	| Click **Continue** |
+| Chrome |	Click **Advanced** > Click **Proceed...** |
+
+
+###  User Accounts
+
+The following table describes what credentials to use to access Cloudbreak and Cloudbreak-managed clusters:
+
+| Component | Method | Description |
+|---|---|---|
+| Cloudbreak | Web UI, CLI | Access with the username and password provided when launching Cloudbreak on the cloud provider. |
+| Cloudbreak | SSH to VM | Access as the "cloudbreak" user with the SSH key provided when launching Cloudbreak on the cloud provider. |
+| Cluster | SSH to VMs | Access as the "cloudbreak" user with the SSH key provided during cluster creation. |
+| Cluster | Ambari UI |Access with the credentials provided in the “Cluster User” parameter during cluster creation. |
+
