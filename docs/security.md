@@ -1,66 +1,58 @@
+## Security Overview
 
-## Network and Security
+To ensure maximum security for your clusters, Cloudbreak utilizes cloud provider security resources such as virtual networks, security groups, and identity and access management. In addition, Coudbreak allows you to configure Kerberos to ensure secure authentication.
 
-[comment]: <> (This section is under construction)
+1. **Network isolation** is achieved via user-configured virtual networks and subnets.  
+    Read more about [Virtual Networks](#virtual-networks).  
+2. **Network security** is achieved via out-of-the-box security group settings.  
+    Read more about [Network Security](#network-security).   
+3. **Controlled use of cloud resources** using IAM roles (AWS, GCP) or Active Directory (in case of Azure). 
+    Read more about [Identity Management](#identity-management).    
+4. **Authentication** using Kerberos. Read more about [Kerberos](#kerberos).   
 
-### Virtual Network
+### Virtual Networks
 
-Azure uses Virtual network (VNet) service to create virtual networks that resembles a traditional networks. Your Cloudbreak controller and clusters are launched into the virtual network infrastructure, with a new VNet created for each resource (Cloudbreak controller, cluster1, cluster2, and so on).
+Cloud providers use virtual networks which resemble traditional networks. Depending on the options that you selected during deployment, your Cloudbreak instance and clusters are launched into new or existing cloud provider networking infrastructure (virtual networks and subnets). For more information about virtual networks, refer to the cloud-provider documentation:
+  
+| Cloud Provider | Documentation Link |
+|---|---|
+| AWS | [Virtual Private Cloud (VPC)](https://aws.amazon.com/documentation/vpc/) |
+| Azure | [Virtual network (VNet)](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) |
+| Google Cloud Platform | [VPC network](https://cloud.google.com/compute/docs/vpc/) |
+| OpenStack | [Network](https://docs.openstack.org/mitaka/networking-guide/intro-os-networking.html) |
 
-### Network Security Groups
+### Network Security 
 
-Network security groups are set up to control network traffic to the VMs in the system. By default, the system is configured to restrict inbound network traffic to the minimal set of ports. You can add or modify rules to each security group that allow traffic to or from its associated instances.
+Security groups are set up to control network traffic to the instances in the system. By default, the system is configured to restrict inbound network traffic to the minimal set of ports. You can add or modify rules to each security group that allow traffic to or from its associated instances: you can do this either when creating your cluster or when the cluster is already running.  
 
-This section describes the default security group configuration for the various components in the system.
-
-> The inbound and outbound rules (protocols, port and IP ranges) for the security groups can be modified later using the Network Security Groups dashboard.
-
-The naming convention for the security groups that are automatically created is:
-
-* Cloudbreak controller VM: cbdeployerNsg
-* Cluster node VMs: {host_group_name}{cluster_name}sg
-
-The following security groups are created automatically:
-
-#### Cloudbreak Security Group
-
-The **cbdeployerNsg** security group is created when launching  Cloudbreak and is associated with the Cloudbreak VM. The following table lists the security group port configuration for the cloud controller instance.
-The security group *Source* for these ports is set to the **Remote Access** CIDR IP specified when
-launching Cloudbreak.
+The following table lists the minimum security group port configuration required for the Cloudbreak instance:
 
 | Inbound Port | Description |
 |---|---|
 | 22 | SSH access to the Cloudbreak VM. |
-| 80 | HTTP access to the Cloudbreak UI. This is automatically redirected to the HTTPS (443) port. |
-| 443 | HTTPS access to the Cloudbreak UI. |
+| 80 | HTTP access to the Cloudbreak UI. |
+
+[comment]: <> (How about cluster security groups? I see plenty of ports open on master and worker security groups.)
 
 
-#### Cluster Security Groups
+### Identity Management
 
-Multiple security groups are created when you create a cluster, one for each host group. The
-security group *Source* for these ports is set to the **Remote Access** CIDR IP specified when creating the cluster.
+To securely control access to cloud resources, cloud providers use identity management services such as IAM roles (AWS and GCP) and Active Directory (Azure). 
 
-The following table lists the **master node** security group port configuration.
-
-| Inbound Port | Description |
-|---|---|
-| 22 | SSH access to the node instance. |
-| 9443 | Internal management port, used by the cloud controller to communicate with the cluster master node. |
-| 8443<sup>1</sup> | Secured HTTPS gateway access to the Ambari, Zeppelin, Hive JDBC, and other Cluster Components. |
-
-> <sup>1</sup> Port 8443 is only opened on the master node if when you create cluster, you check the checkbox under **Setup Network and Security > Enable Knox Gateway** (to Ambari and Zeppelin Web UIs, Hive JDBC and/or Cluster Components UIs).
-
-The following table lists the security group port configuration for other host groups:
-
-| Inbound Port | Description |
-|---|---|
-| 22 | SSH access to the node instance. |
+| Cloud Provider | Documentation Link | How is IAM used by Cloudbreak |
+|---|---|---| 
+| AWS | IAM [documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) | When launching Cloudbreak on AWS, you can select to use key-based or role-based authenticaton. While key-based authentication uses your Access key and Secret key, role-based authentication uses IAM roles. |
+| Azure | Active Directory [documentation](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) | After launching Cloudbread on Azure, you are required to create a Cloudbreak credential, which uses your Azure Active Directory to authenticate with the Azure cloud provider. |
+| Google | IAM [documentation](https://cloud.google.com/iam/docs/overview) | When launching Cloudbreak on GCP, you are required to create a service account that Cloudbreak can use to authenticate with your account. |
 
 
-<div class="note">
-    <p class="first admonition-title">Learn More</p>
-    <p class="last">
-Refer to the Azure network security groups <a href="https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg" target="_blank"> documentation</a>
-for more information about viewing and modifying network security group rules for VMs.
-    </p>
-</div>
+### Kerberos
+
+Cloudbreak supports using Kerberos security for its managed clusters. It supports three ways of provisioning Kerberos-enabled clusters:
+
+* Create new MIT Kerberos at cluster provisioning time  
+* Use your existing MIT Kerberos server with a Cloudbreak provisioned cluster  
+* Use your existing Active Directory with a Cloudbreak provisioned cluster  
+
+For more information about Kerberos, refer to [Configure Kerberos](security-kerberos.md) documentation.
+
