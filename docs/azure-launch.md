@@ -226,6 +226,9 @@ Follow these steps to create an interactive Cloudbreak credential.
 
 Follow these steps to create an app based Cloudbreak credential.
 
+> Alternatively, instead of performing the steps on the Azure portal, you use a utility called <b>azure-cli-tools</b>.
+The utility supports app creation and role assignment. It is available at <a href="https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools" target="_blank">https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools</a>.
+
 **Steps**
 
 1. On Azure Portal, navigate to the **Active Directory** > **App Registrations** and register a new application. For more information, refer to [Create an Azure AD Application](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal).

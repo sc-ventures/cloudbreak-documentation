@@ -129,7 +129,7 @@ Use the following "AssumeRole" policy definition:
 
     <a href="../images/aws_role-12.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-12.png" width="650" title="IAM Console"></a>  
 
-6. In the **Policy Name** field, enter "AssumeRole" and in the **Policy Document** paste the policy definition provided above.
+6. In the **Policy Name** field, enter "AssumeRole" and in the **Policy Document** paste the policy definition provided above. You can also download and copy it from [here](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/AssumeRole.json).
 
     <a href="../images/aws_role-13.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-13.png" width="650" title="IAM Console"></a>  
     
@@ -208,7 +208,7 @@ Use the following "cb-policy" policy definition:
     
 5. Copy the "cb-policy" policy definition (see below).   
     
-6. In the **Policy Name** field, enter "cb-policy" and in the **Policy Document** paste the policy definition provided above.
+6. In the **Policy Name** field, enter "cb-policy" and in the **Policy Document** paste the policy definition provided above. You can also download and copy it from [here](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/cb-policy.json).
 
     <a href="../images/aws_role4.png" target="_blank" title="click to enlarge"><img src="../images/aws_role4.png" width="650" title="IAM Console"></a>  
     
