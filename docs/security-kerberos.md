@@ -65,15 +65,6 @@ To enable Kerberos on a cluster, perform the following steps when creating your 
 | Use Tcp Connection | The connection type for your existing MIT KDC (default is **UDP**). |
 | Existing Kerberos Realm | The realm in your existing MIT KDC. |
 
-To enable Kerberos on a cluster, do the following when creating your cluster via Cloudbreak shell:
-
-| Parameter | Description |
-|---|---|
-| --kerberosPassword | The KDC admin password to use for the KDC. |
-| --kerberosPrincipal | The KDC principal in your existing MIT KDC. |
-| --kerberosUrl | The location of your existing MIT KDC. |
-| --kerberosTcpAllowed | The connection type for your existing MIT KDC (default is **UDP**). |
-| --kerberosRealm | The realm in your existing MIT KDC. |
 
 ### Use Existing Active Directory with a Cloudbreak Provisioned Cluster
 

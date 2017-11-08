@@ -10,7 +10,7 @@ If you have to log in to the Cloudbreak host remotely, use the SSH port (usually
 
 [comment]: <> (TO-DO: Is the step above up-to-date? I think ports 80 and 22 is also open.) 
 
-### Configuring the Profile 
+### Secure the Profile 
 
 Before starting Cloudbreak for the first time, configure the Profile file as directed below. Changes are applied during startup so a restart (`cbd restart`) is required after each change.
 
@@ -60,7 +60,7 @@ cbd util add-default-user
 For more information about setting environment variables in Profile, refer to [Configure Profile Variables](profile.md#configure-profile-variables).
 
 
-### Adding SSL Certificate for Cloudbreak UI 
+### Add SSL Certificate for Cloudbreak UI 
 
 By default Cloudbreak has been configured with a self-signed certificate for access via HTTPS. This is sufficient for many deployments such as trials, development, testing, or staging. However, for production deployments, a trusted certificate is preferred and can be configured in the controller. Follow these steps to configure the cloud controller to use your own trusted certificate. 
 
