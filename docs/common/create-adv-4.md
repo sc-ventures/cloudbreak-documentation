@@ -1,6 +1,6 @@
 #### Recipes
 
-This option allows you to select previously uploaded recipes (scripts that will be run pre- or post- cluster deployment) for each host group. For more information on default and custom blueprints, refer to [Recipes](recipes.md). 
+This option allows you to select previously uploaded recipes (scripts that can be run pre or post cluster deployment) for each host group. For more information on recipes, refer to [Recipes](recipes.md). 
 
 **Related Links**   
 [Recipes](recipes.md) 
