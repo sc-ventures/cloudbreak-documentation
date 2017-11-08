@@ -32,7 +32,7 @@ Decide in which Azure region you would like to launch Cloudbreak. You can launch
 Clusters created via Cloudbreak can be in the same or different region as Cloudbreak; when you launch a cluster, you select the region in which to launch it.
 
 **Related Links**  
-[Azure regions](https://azure.microsoft.com/en-us/regions/) (External) 
+[Azure Regions](https://azure.microsoft.com/en-us/regions/) (External) 
 
 
 #### SSH Key Pair
