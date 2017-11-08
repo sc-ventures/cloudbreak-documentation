@@ -150,7 +150,7 @@ __________________________________
 
 Adds a new blueprint from a file or from a URL.
 
-**Commands**
+**Sub-commands**
 
 **`from-url`** Creates a blueprint by downloading it from a URL location  
 **`from-file`** Creates a blueprint by reading it from a local file
@@ -242,7 +242,7 @@ __________________________________
 
 Creates a new Cloudbreak credential.
 
-**Commands**
+**Sub-commands**
 
 **`aws role-based`**  Creates a new AWS credential  
 **`aws key-based`**  Creates a new AWS credential  
@@ -388,7 +388,7 @@ __________________________________
 
 Adds a new recipe from a file or from a URL.
 
-**Commands**
+**Sub-commands**
 
 **`from-url`**  Creates a recipe by downloading it from a URL location  
 **`from-file`**  Creates a recipe by reading it from a local file  
@@ -692,7 +692,7 @@ __________________________________
 
 Generates a cluster template in JSON format.
 
-**Commands**
+**Sub-commands**
 
 **`aws new-network`** Generates an AWS cluster JSON template with new network  
 **`aws existing-network`** Generates an AWS cluster JSON template with existing network  
