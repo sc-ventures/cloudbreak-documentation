@@ -27,7 +27,7 @@
  
  
 {!docs/common/create-adv-2.md!}
-| Storage Type |  <p>Select the volume type. The options are:<ul><li>Standard persistent disks (HDD)<li><li>Solid-state persistent disks (SSD)<li></ul> For more information about these options refer to <a href="https://cloud.google.com/compute/docs/disks/" target="_blank">GCP documentation</a>. |
+| Storage Type |  <p>Select the volume type. The options are:<ul><li>Standard persistent disks (HDD)</li><li>Solid-state persistent disks (SSD)</li></ul> For more information about these options refer to <a href="https://cloud.google.com/compute/docs/disks/" target="_blank">GCP documentation</a>. |
 {!docs/common/create-adv-3.md!}
 
 **Related Links**  
