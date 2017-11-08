@@ -289,7 +289,7 @@ Follow these steps to create an app based Cloudbreak credential.
 
 1. Click **Create**.
 
-     Congratulations! You've successfully launched and configured Cloudbreak. Now you can use Cloudbreak to [create clusters](azure-create.md).
+     Congratulations! You have successfully launched Cloudbreak and created a Cloudbreak credential. Now you can use Cloudbreak to [create clusters](azure-create.md).
      
 **Related Links**  
 [CLI Tools](https://github.com/hortonworks/cloudbreak-azure-cli-tools/blob/master/cli_tools) (Hortonworks)    

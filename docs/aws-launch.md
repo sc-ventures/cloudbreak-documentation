@@ -448,7 +448,7 @@ To perform these steps, you must know the **IAM Role ARN** corresponding to the 
 
 5. Your credential should now be displayed in the **Credentials** pane.
 
-    Congratulations! You've successfully launched Cloudbreak and create a Cloudbreak credential. Now it's time to [create a cluster](aws-create.md). 
+    Congratulations! You have successfully launched Cloudbreak and created a Cloudbreak credential. Now you can use Cloubdreak to [create clusters](aws-create.md). 
       
 
 <div class="next">

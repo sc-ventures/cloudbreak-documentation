@@ -12,7 +12,7 @@
 **Related Links**  
 [Blueprints](blueprints.md)   
 [CIDR](http://www.ipaddressguide.com/cidr) (External)   
-[Cloud Locations](https://cloud.google.com/about/locations/) (External) 
+[Cloud Locations](https://cloud.google.com/about/locations/) (External)  
 [Machine Types](https://cloud.google.com/compute/docs/machine-types) (External)     
 
 
