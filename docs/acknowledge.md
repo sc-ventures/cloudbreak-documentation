@@ -26,18 +26,18 @@ Oozie, Metron, Druid, and the Hadoop elephant logo are either registered tradema
 trademarks of the <a href="http://www.apache.org/" target="_blank">Apache Software Foundation</a> in
 the United States or other countries.
 
-"Amazon Web Services", "AWS", "Amazon EC2", "EC2", "Amazon Elastic Compute Cloud", "Amazon S3", "S3", "Amazon Virtual Private Cloud",
-"Amazon VPC", "Amazon Relational Database",  "Amazon RDS", the "Amazon Web Services" logo, and other
-AWS graphics and logos are trademarks of Amazon Technologies, Inc. or its affiliates in the United States and/or other countries.
+"Amazon Web Services", "AWS", "Amazon EC2", "Amazon S3", 
+"Amazon VPC", "Amazon RDS", the "Amazon Web Services" logo, and other
+AWS service names, graphics, and logos are trademarks of Amazon Technologies, Inc. or its affiliates in the United States and/or other countries.
 
-"Windows Azure", the "Azure" logo, and other
-Azure graphics and logos are trademarks of Microsoft Corporation or its affiliates in the United States and/or other countries.
+"Microsoft Azure", "Windows Azure", the "Azure" logo, and other
+Azure service names, graphics, and logos are trademarks of Microsoft Corporation or its affiliates in the United States and/or other countries.
 
 "Google Cloud", the "Google Cloud Platform" logo, and other
-Google Cloud graphics and logos are trademarks of Google LLC. or its affiliates in the United States and/or other countries.
+Google Cloud service names, graphics, and logos are trademarks of Google LLC or its affiliates in the United States and/or other countries.
 
 "OpenStack", the "OpenStack" logo, and other
-OpenStack graphics and logos are trademarks of OpenStack, LLC. or its affiliates in the United States and/or other countries.
+OpenStack graphics and logos are trademarks of OpenStack, LLC or its affiliates in the United States and/or other countries.
 
 Documentation was built with <a href="http://www.mkdocs.org/" target="_blank">MkDocs</a> and the
 <a href="http://sourcefoundry.org/cinder/" target="_blank">Cinder Theme</a>, licensed under
