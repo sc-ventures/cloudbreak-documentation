@@ -70,6 +70,6 @@ pages:
       - Release Notes: releasenotes.md
       - FAQs: faq.md 
       - Getting Help: get-help.md
-      - SmartSense: smartsense.md
+      - SmartSense: smartsense.md:
         - Acknowledgements: acknowledge.md
 
