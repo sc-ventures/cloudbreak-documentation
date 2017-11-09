@@ -22,7 +22,7 @@ trademarks and trade names are the property of their respective owners.
 
 Apache, Hadoop, Falcon, Atlas, Tez, Sqoop, Flume, Kafka, Pig, Hive,
 HBase, Accumulo, Storm, Solr, Spark, Ranger, Knox, Ambari, ZooKeeper,
-Oozie, Metron and the Hadoop elephant logo are either registered trademarks or
+Oozie, Metron, Druid, and the Hadoop elephant logo are either registered trademarks or
 trademarks of the <a href="http://www.apache.org/" target="_blank">Apache Software Foundation</a> in
 the United States or other countries.
 
