@@ -3,7 +3,7 @@
 
 The following table includes links to Cloudbreak developer documentation: 
 
-| Documentation Link | Description |
+| Doc Link | Description |
 |---|---|
 | [Set Up Local Development](https://github.com/hortonworks/cloudbreak) | This documentation will help you set up your local development environment. | 
 | [SPI Reference](#cloudbreak-service-provider-interface-spi) | This is Cloudbreak SPI reference documentation. |
