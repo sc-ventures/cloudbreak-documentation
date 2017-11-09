@@ -71,4 +71,5 @@ pages:
       - FAQs: faq.md 
       - Getting Help: get-help.md
       - SmartSense: smartsense.md
+        - Acknowledgements: acknowledge.md
 
