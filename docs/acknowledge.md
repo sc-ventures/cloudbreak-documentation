@@ -33,7 +33,7 @@ AWS service names, graphics, and logos are trademarks of Amazon Technologies, In
 "Microsoft Azure", "Windows Azure", the "Azure" logo, and other
 Azure service names, graphics, and logos are trademarks of Microsoft Corporation or its affiliates in the United States and/or other countries.
 
-"Google Cloud", the "Google Cloud Platform" logo, and other
+"Google Cloud", the "Google Cloud" logo, and other
 Google Cloud service names, graphics, and logos are trademarks of Google LLC or its affiliates in the United States and/or other countries.
 
 "OpenStack", the "OpenStack" logo, and other
