@@ -36,6 +36,7 @@
 
 {!docs/common/create-adv-4.md!} 
 
+{!docs/common/create-adv-5.md!}
 
 
 <div class="next">

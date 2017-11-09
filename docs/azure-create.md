@@ -27,10 +27,23 @@
 {!docs/common/create-adv-3.md!}
 
 **Related Links**  
-[Introduction to Microsoft Azure Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) (External)  
+[Introduction to Microsoft Azure Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) (External) 
 
 
-{!docs/common/create-adv-4.md!}
+{!docs/common/create-adv-4.md!} 
+
+
+#### Don't Create Public IP
+
+This option is available if you are creating a cluster in an existing network and subnet. Select this option if you don't want to use public IPs for the network. 
+
+
+#### Don't Create New Firewall Rules
+
+This option is available if you are creating a cluster in an existing network and subnet. Select this option if you don't want to create new firewall rules for the network. 
+
+
+{!docs/common/create-adv-5.md!}
 
 
 <div class="next">
