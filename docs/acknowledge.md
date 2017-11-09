@@ -37,7 +37,7 @@ Azure service names, graphics, and logos are trademarks of Microsoft Corporation
 Google Cloud service names, graphics, and logos are trademarks of Google LLC or its affiliates in the United States and/or other countries.
 
 "OpenStack", the "OpenStack" logo, and other
-OpenStack graphics and logos are trademarks of OpenStack, LLC or its affiliates in the United States and/or other countries.
+OpenStack graphics and logos are trademarks of OpenStack LLC or its affiliates in the United States and/or other countries.
 
 Documentation was built with <a href="http://www.mkdocs.org/" target="_blank">MkDocs</a> and the
 <a href="http://sourcefoundry.org/cinder/" target="_blank">Cinder Theme</a>, licensed under
