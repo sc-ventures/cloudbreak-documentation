@@ -30,7 +30,7 @@ The following table lists the minimum security group port configuration required
 | Inbound Port | Description |
 |---|---|
 | 22 | SSH access to the Cloudbreak VM. |
-| 80 | HTTP access to the Cloudbreak UI. |
+| 443 | HTTP access to the Cloudbreak UI. |
 
 [comment]: <> (How about cluster security groups? I see plenty of ports open on master and worker security groups.)
 
