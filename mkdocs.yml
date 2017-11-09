@@ -65,11 +65,7 @@ pages:
         - Troubleshooting Azure: trouble-azure.md
         - Troubleshooting GCP: trouble-gcp.md
         - Troubleshooting OpenStack: trouble-os.md
-      - Developer:
-        - Developer Docs: dev.md
-        - Cloudbreak SPI: dev-spi.md
-        - Cloudbreak APIs: dev-api.md
-        - Flow Diagrams: dev-flows.md 
+      - Developer Documentation: dev.md
     - More:
       - Release Notes: releasenotes.md
       - FAQs: faq.md 
