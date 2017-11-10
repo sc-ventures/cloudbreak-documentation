@@ -11,11 +11,13 @@ This release is technical preview: it is not suitable for production environment
 
 Cloudbreak 2.1.0 TP introduces a new user interface.
 
+
+
 ##### New CLI
 
 Cloudbreak 2.1.0 TP introduces a new CLI tool. For more information, refer to the [Install CLI](cli-install.md) and [CLI Reference](cli-reference.md) documentation. 
 
-____________________________________
+____________________________
 
 
 #### Behavioral Changes
@@ -55,9 +57,8 @@ Auto-scaling functionality is not available in Cloudbreak 2.1.0 TP.
 
 ##### (BUG-91540) Disabled Buttons in Create Cluster
 
-You may experience an intermittent issue where some buttons in the "Create cluster" wizard are disabled.
-
-**Workaround**: Refresh the page.
+You may experience an intermittent issue where some buttons in the "Create cluster" wizard are disabled.  
+*Workaround*: Refresh the page.  
 
 
 
@@ -67,9 +68,8 @@ You cannot create a cluster using an existing network that does not have any sub
 
 ```
 Infrastructure creation failed. Reason: Invalid value for field 'resource.network': 'https://www.googleapis.com/compute/v1/projects/siq-haas/global/networks/cbd-test'. A subnet mode Network must be specified for Subnetwork creation.: [ resourceType: GCP_SUBNET, resourceName: testgc-20171110211021 ]
-```
-
-**Workaround**: Do not use this option. It will be removed in a future release.  
+```  
+*Workaround*: Do not use this option. It will be removed in a future release.  
 
 
 
@@ -87,9 +87,8 @@ When trying to downscale your cluster below the minimum required number of nodes
 SyntaxError: Unexpected end of JSON input
 ```
 
-The log provides more information on the error: `New node(s) could not be removed from the cluster. Reason There is not enough node to downscale. Check the replication factor and the ApplicationMaster occupation.`
-
-**Workaround**: Do not scale the cluster below the minimum required number of nodes.
+The log provides more information on the error: `New node(s) could not be removed from the cluster. Reason There is not enough node to downscale. Check the replication factor and the ApplicationMaster occupation.`  
+*Workaround*: Do not scale the cluster below the minimum required number of nodes.  
 
 [comment]: <> (Not sure what the minimum number is? One master and one worker?)
 
@@ -97,15 +96,14 @@ The log provides more information on the error: `New node(s) could not be remove
 
 ##### (BUG-91077) Nodes Are Unhealthy After Sync
 
-If your blueprint contains Druid, cluster node status may change to "unhealthy" after synchronizing with the cloud provider using the "Sync" option.  
-
-**Workaround**: Manually start Druid by using Ambari web UI.
+If your blueprint contains Druid, cluster node status may change to "unhealthy" after synchronizing with the cloud provider using the "Sync" option.    
+*Workaround*: Manually start Druid by using Ambari web UI.  
 
 
 
 ##### (BUG-91013) Incorrect Node Status After Cluster Restart 
 
-You may sporadically experience an issue where after you stop and restart a cluster, the node status displayed in the *Hardware* section is incorrect. 
+You may sporadically experience an issue where after you stop and restart a cluster, the node status displayed in the "Hardware" section is incorrect.   
 
 [comment]: <> (Not sure what the workaround is?)
 
