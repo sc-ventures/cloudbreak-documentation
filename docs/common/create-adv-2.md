@@ -1,12 +1,32 @@
-#### Custom Images
+#### Base Image
 
-[Comment]: <> (TO DO: Not sure if the UI is final? Not sure if I understand the feature?)
+The **Base Image** option allows you to customize Ambari and/or HDP version used. 
 
-By default, Cloudbreak uses a CentOS image and which HDP and Ambari versions??
+*Ambari Parameters*
 
-**Base Image** option: Allows you to customize Ambari/HDP version while using the default CentOS image.
+| Parameter | Description | Example |
+|---|---|---|
+| Version | Enter Ambari version. | 2.5.1.0 |
+| Repo Url | | http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.5.1.0 |
+| Repo Gpg Key Url | | http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins | 
 
-**Prewarmed Image** option: Allows you to select a previously created custom image other than CentOS.
+*HDP Parameters*
+
+| Parameter | Description |
+|---|---|
+| Stack | |
+| Version | |
+| OS | |
+| Stack Repo Id | |
+| Base Url | |
+| Utils Repo Id | |
+| Utils Base Url | |
+
+
+#### Prewarmed Image
+
+The **Prewarmed Image** option allows you to select a previously created custom image other than CentOS.
+
 
 #### Enable Lifetime Management 
 

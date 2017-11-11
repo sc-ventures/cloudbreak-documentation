@@ -125,7 +125,7 @@ Now that your VM is ready, access it via SSH:
 * The SSH user is called "cloudbreak".
 * You can obtain the VM's IP address from the details of your instance.
 
-On Mac OS X, you can SSH to the VM by running the following from the Terminal app: `ssh -i "your-private-key.pem" cloudnreak@instance_IP` where "your-private-key.pem" points to the location of your private key and "instance_IP" is the public IP address of the VM.
+On Mac OS X, you can SSH to the VM by running the following from the Terminal app: `ssh -i "your-private-key.pem" cloudbreak@instance_IP` where "your-private-key.pem" points to the location of your private key and "instance_IP" is the public IP address of the VM.
 
 On Windows, you can use [PuTTy](http://www.putty.org/).
 
