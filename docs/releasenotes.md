@@ -58,7 +58,7 @@ Auto-scaling functionality is not available in Cloudbreak 2.1.0 TP.
 ##### (BUG-91540) Disabled Buttons in Create Cluster
 
 You may experience an intermittent issue where some buttons in the "Create cluster" wizard are disabled.  
-*Workaround*: Refresh the page.  
+*Workaround*: Refresh the page. If this does not help, try clearing the cache or using a different browser.  
 
 
 
@@ -90,7 +90,7 @@ SyntaxError: Unexpected end of JSON input
 The log provides more information on the error: `New node(s) could not be removed from the cluster. Reason There is not enough node to downscale. Check the replication factor and the ApplicationMaster occupation.`  
 *Workaround*: Do not scale the cluster below the minimum required number of nodes.  
 
-[comment]: <> (Not sure what the minimum number is? One master and one worker?)
+[comment]: <> (Not sure what the minimum number of nodes is? One master and one worker?)
 
 
 
@@ -105,11 +105,25 @@ If your blueprint contains Druid, cluster node status may change to "unhealthy" 
 
 You may sporadically experience an issue where after you stop and restart a cluster, the node status displayed in the "Hardware" section is incorrect.   
 
-[comment]: <> (Not sure what the workaround is?)
+[comment]: <> (Not sure what the workaround is for BUG-91013?)
 
  
 
-[comment]: <> ((BUG-90985) OpenStack Cluster Creation Fails at Network Configuration. Need clarification on this one.)
+##### (BUG-90985) OpenStack Cluster Creation Fails at Network Configuration
+
+When creating a cluster on OpenStack, if you do not select an existing network and subnet, the cluster fails with an error similar to:
+
+```
+Infrastructure creation failed. Reason: At least one of the following properties must be specified: network, network_id.
+```
+or
+
+```
+Infrastructure creation failed. Reason: The Parameter (router_id) was not provided.
+```
+
+*Workaround*: When creating a cluster on OpenStack, you must select an existing network and subnet. 
+
 
 
 
