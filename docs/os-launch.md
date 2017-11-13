@@ -40,7 +40,7 @@ Create a new SSH key pair or import an existing SSH key pair.
 
 #### Security Group  
 
-In order to launch Cloudbreak, you must have an existing security group with the following ports open: 22 (SSH) and 443 (HTTPS). 
+In order to launch Cloudbreak, you must have an existing security group with the following ports open: 22 (for access via SSH), 80 (for access via HTTP), and 443 (for access via HTTPS). 
 
 For information about OpenStack security groups, refer to the [OpenStack Administrator Guide](https://docs.openstack.org/ops-guide/index.html).
 

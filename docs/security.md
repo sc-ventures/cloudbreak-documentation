@@ -23,16 +23,38 @@ Cloud providers use virtual networks which resemble traditional networks. Depend
 
 ### Network Security 
 
-Security groups are set up to control network traffic to the instances in the system. By default, the system is configured to restrict inbound network traffic to the minimal set of ports. You can add or modify rules to each security group that allow traffic to or from its associated instances: you can do this either when creating your cluster or when the cluster is already running.  
+Security groups are setup to control network traffic to the instances in the system.
 
 The following table lists the minimum security group port configuration required for the Cloudbreak instance:
+
 
 | Inbound Port | Description |
 |---|---|
 | 22 | SSH access to the Cloudbreak VM. |
-| 443 | HTTP access to the Cloudbreak UI. |
+| 80 | HTTP access to the Cloudbreak UI. This is automatically redirected to the HTTPS (443) port. |
+| 443 | HTTPS access to the Cloudbreak UI. |
 
-[comment]: <> (How about cluster security groups? I see plenty of ports open on master and worker security groups.)
+For clusters, by default Cloudbreak allows you to select from two default security groups (that will be created automatically during cluster create):
+
+* default-ambari-security-group
+* default-security-group
+
+These security groups is configured to limit inbound network traffic to a minimal set of ports. Alternatively, you can select from your existing set of security groups, which can be modified using the cloud provider tooling.
+ 
+**Cluster Host Group with Ambari Server (default-ambari-security-group)**
+
+| Inbound Port | Description |
+|---|---|
+| 22 | SSH access to the VM instance. |
+| 443 | HTTPS access to the Ambari UI. |
+| 8443/9443 | Management ports, used by Cloudbreak to communicate with the cluster node VM. |
+
+**Cluster Host Groups without the Ambari Server (default-security-group)**
+
+| Inbound Port | Description |
+|---|---|
+| 22 | SSH access to the VM instance. |
+
 
 
 ### Identity Management

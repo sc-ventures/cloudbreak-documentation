@@ -274,7 +274,7 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
     
 9. (Perform this step only if you are using role-based authorization) In **Step 3: Configure Instance Details** > **IAM**, select the "CloudbreakRole" IAM role which you [created earlier](#authorization-for-cloudbreak).
 
-10. In **Step 6: Configure Security Group**, open the following ports: 22 (for access via SSH) and 443 (for access via HTTPS). Click **Review and Launch**.
+10. In **Step 6: Configure Security Group**, open the following ports: 22 (for access via SSH), 80 (for access via HTTP), and 443 (for access via HTTPS).  Click **Review and Launch**.
 
     <a href="../images/aws-04.png" target="_blank" title="click to enlarge"><img src="../images/aws-04.png" width="650" title="EC2 Console"></a> 
 

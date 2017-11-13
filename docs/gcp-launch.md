@@ -34,7 +34,7 @@ A user with an "Owner" role can assign roles or access rules to service accounts
 
 #### VPC Network 
 
-When launching Cloudbreak, you will be required to select an existing network in which Cloudbreak can be placed. The following ports must be open on the security group: 22 (SSH) and 443 (HTTPS). You may use the *default* network as long as the aforementioned ports are open. 
+When launching Cloudbreak, you will be required to select an existing network in which Cloudbreak can be placed. The following ports must be open on the security group: 22 (for access via SSH), 80 (for access via HTTP), and 443 (for access via HTTPS). You may use the *default* network as long as the aforementioned ports are open. 
 
 You can manage networks under **Networking** > **VPC Networks**. To edit ports, click on the network name and then click on **Add firewall rules**.
 
