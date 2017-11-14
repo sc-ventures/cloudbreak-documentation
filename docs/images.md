@@ -8,9 +8,9 @@ Cloudbreak includes both base images and prewarmed images, depending on the clou
 
 * **Prewarmed images** include Ambari and HDP software pre-installed. This reduces the VM create and cluster provisioning process time but these images can only be used with a specific Ambari and HDP version.
 
-| | Base Images | Prewarmed Images |
-|---|---|
-| AWS | Amazon Linux 2017 | <ul><li>CentOS 6 with HDP 2.6 and Ambari 2.5</li><li>CentOS 6 with HDP 2.5 and Ambari 2.4</li></ul> |
+| Cloud Provider | Base Images | Prewarmed Images |
+|---|---|---|
+| AWS | Amazon Linux 2017 | <ul><li>Amazon Linux 2017 with HDP 2.6 and Ambari 2.5</li><li>Amazon Linux 2017 with HDP 2.5 and Ambari 2.4</li></ul> |
 | Azure | CentOS 7 | N/A |
 | GCP | CentOS 7 |  N/A  |
 | OpenStack | CentOS 7 |  N/A  |
@@ -24,7 +24,7 @@ In order to use your own custom base images you must:
 3. Register your custom images with Cloudbreak   
 4. Select a custom image when creating a cluster  
 
-> Only base images can be created and registered as custom images. Do not create or register prewarmed images using the instructions below. 
+Only base images can be created and registered as custom images. Do not create or register prewarmed images using the instructions below. 
 
 
 ### Building Custom Images
