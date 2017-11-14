@@ -50,6 +50,7 @@ ____________________________________
 
 #### Known Issues
 
+
 ##### (RMP-10114) Auto-scaling Is Not Available
 
 Auto-scaling functionality is not available in Cloudbreak 2.1.0 TP. 
@@ -57,8 +58,7 @@ Auto-scaling functionality is not available in Cloudbreak 2.1.0 TP.
 
 ##### (BUG-91543) Networks With No Subnets Are Not Supported 
 
-You cannot create a cluster using an existing network that does not have any subnets. You must use a network that includes at least one subnet. If you try to use a network with no subnets, the cluster fails with the following error:
-
+You cannot create a cluster using an existing network that does not have any subnets. You must use a network that includes at least one subnet. If you try to use a network with no subnets, the cluster fails with the following error:   
 ```
 Infrastructure creation failed. Reason: Invalid value for field 'resource.network': 'https://www.googleapis.com/compute/v1/projects/siq-haas/global/networks/cbd-test'. A subnet mode Network must be specified for Subnetwork creation.: [ resourceType: GCP_SUBNET, resourceName: testgc-20171110211021 ]
 ```  
@@ -71,11 +71,24 @@ Infrastructure creation failed. Reason: Invalid value for field 'resource.networ
 In the *Network* section of the create cluster wizard, when you select to create a new network and subnet, there is a security group option "Do Not Use Security Group". This option does not work wen using a new network and subnet: if you select it, new security groups are created. This option will be removed in a future release.
 
 
+##### (BUG-90985) OpenStack Cluster Creation Fails at Network Configuration
+
+When creating a cluster on OpenStack, if you do not select an existing network and subnet, the cluster fails with an error similar to:  
+```
+Infrastructure creation failed. Reason: At least one of the following properties must be specified: network, network_id.
+```
+or   
+```
+Infrastructure creation failed. Reason: The Parameter (router_id) was not provided.
+```
+
+*Workaround*: When creating a cluster on OpenStack, you must select an existing network and subnet. 
+
+
 
 ##### (BUG-91071) Syntax Error During Cluster Downscale
 
-When trying to downscale your cluster below the minimum required number of nodes, you may get the following error:
- 
+When trying to downscale your cluster below the minimum required number of nodes, you may get the following error:  
 ```
 SyntaxError: Unexpected end of JSON input
 ```
@@ -99,25 +112,14 @@ You may sporadically experience an issue where after you stop and restart a clus
 
  
 
-##### (BUG-90985) OpenStack Cluster Creation Fails at Network Configuration
+##### (BUG-91674) Network and Subnet Listed as N/A
 
-When creating a cluster on OpenStack, if you do not select an existing network and subnet, the cluster fails with an error similar to:
+When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "N/A".
 
-```
-Infrastructure creation failed. Reason: At least one of the following properties must be specified: network, network_id.
-```
-or
-
-```
-Infrastructure creation failed. Reason: The Parameter (router_id) was not provided.
-```
-
-*Workaround*: When creating a cluster on OpenStack, you must select an existing network and subnet. 
+*Workaround*: If you want to check which network and subnet are used for your cluster, navigate to the cloud provider account and find the cluster instances that were created for your cluster. Next, check which virtual network and subnet they are associated with. The steps vary depending on the provider.  
 
 
 
-[Comment]: <> (How about BUG-91699? Default Master security group ports are too open?)
+[Comment]: <> (How about BUG-91699? Default Master security group ports are too open)
 
-
-[Comment]: <> (Removed "BUG-91540 Disabled Buttons in Create Cluster")
- 
+[Comment]: <> (How about BUG-91777? Amazon Linux 2017 is actually default image for AWS, not CentOS 7)
