@@ -12,7 +12,7 @@ We recommend that you review the default blueprints to check if they meet your r
 
 ### Use Default Blueprints 
 
-To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. 
+To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. 
 
 
 #### Default Blueprints 
@@ -88,7 +88,7 @@ Once you have your blueprint ready, perform these steps.
 
     <a href="../images/cb-blueprint-add.png" target="_blank" title="click to enlarge"><img src="../images/cb-blueprint-add.png" width="650" title="Cloudbreak web UI"></a> 
 
-2. To use the uploaded blueprints, select it when creating a cluster. The option is available on the **General** page. First select the **Platform Version** and then select your chosen blueprint under **Cluster Type**. 
+2. To use the uploaded blueprints, select it when creating a cluster. The option is available on the **General Configuration** page. First select the **Platform Version** and then select your chosen blueprint under **Cluster Type**. 
 
     <a href="../images/cb-blueprint-select.png" target="_blank" title="click to enlarge"><img src="../images/cb-blueprint-select.png" width="650" title="Cloudbreak web UI"></a> 
 
