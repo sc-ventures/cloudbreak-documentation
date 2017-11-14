@@ -33,7 +33,7 @@ The **Base Image** option allows you to customize Ambari and/or HDP version used
 
 #### Enable Lifetime Management 
 
-Check this option if you would like your cluster to be automatically terminated after a specific amount of time (defined as "Time to Live" in minutes) has passed. 
+Check this option if you would like your cluster to be automatically terminated after a specific amount of time (defined as "Time to Live" in minutes). 
 
 #### Tags
 
