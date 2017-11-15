@@ -67,7 +67,9 @@ You can delete Cloudbreak instance from your Google Cloud account.
 
 2. Navigate to **Compute Engine** > **VM instances**.
 
-3. Select the instance that you want to delete.
+3. Select the instance that you want to delete:
+
+    <a href="../images/gcp-delete.png" target="_blank" title="click to enlarge"><img src="../images/gcp-delete.png" width="650" title="Azure Portal"></a>     
 
 4. Click on the delete icon and then confirm delete. 
 
