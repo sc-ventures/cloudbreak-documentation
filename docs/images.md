@@ -48,7 +48,7 @@ The image catalog JSON file includes the following two high-level sections:
 * `images`: Contains information about the created images. The burned images are stored in the `base-images` section.  
 * `versions`: Contains the `cloudbreak` entry, which includes mapping between Cloudbreak versions and the image identifiers of burned images available for these Cloudbreak versions.   
 
-The `base-images` section stores one or more image "records". Every image "record" must contain the date, description, images, os, and uuid fields.
+The `base-images` section stores one or more image "records". Every image "record" must contain the date, description, images, os, os_type, and uuid fields.
 
 | Field | Description |
 |---|---|
@@ -56,6 +56,7 @@ The `base-images` section stores one or more image "records". Every image "recor
 | description | Description for your image catalog entry. |
 | images | the `images` field must contain a map that contains the image sets by a provider and an image set must store the virtual machine image IDs by the related region of the provider. The virtual machine image IDs come from the result of the image burning process and must be an existing identifier of a virtual machine image on the related provider side. For the providers which use global rather than per-region images, the region should be replaced with **`default`**, as the example image catalog JSON illustrates. |
 | os | The operating system used in the image. |
+| os_type | |
 | uuid | The `uuid` field must be a unique identifier within the file. You can generate it or select it manually. The utility `uuidgen` available from your command line is a convenient way to generate a unique ID. |
 
 The `versions` section includes a single "cloudbreak" entry, which maps the uuids to a specific Cloudbreak version:
@@ -143,6 +144,7 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
           }
         },
         "os": "centos7",
+        "os_type": "redhat7",
         "uuid": "f6e778fc-7f17-4535-9021-515351df3691"
       }
     ]
