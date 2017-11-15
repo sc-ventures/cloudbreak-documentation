@@ -1,10 +1,12 @@
 ## Custom Images
 
-By default, Cloudbreak launches clusters from **default base images**, which include default configuration and default tooling. These images are available by default for each supported provider and region. These images are **base images**: they include the OS but do not include Ambari or HDP software. The Ambari and HDP software is installed as part of the VM create and cluster provisioning process.
+By default, Cloudbreak launches clusters from **default base images**, which include default configuration and default tooling. These images are base images: they include the OS but do not include Ambari or HDP software. The Ambari and HDP software is installed as part of the VM create and cluster provisioning process. 
 
-The following table lists the standard default images available for each platform: 
+Default base images are available for each supported cloud provider and region. The following table lists the default base images available: 
 
-| Cloud Provider | Base Images |
+[Comment]: <> (For AWS and Azure, per region images are provided.)
+
+| Cloud Provider | Base Image |
 |---|---|
 | AWS | Amazon Linux 2017 | 
 | Azure | CentOS 7 | 
@@ -12,7 +14,7 @@ The following table lists the standard default images available for each platfor
 | OpenStack | CentOS 7 | 
 
 
-Since these standard default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on), Cloudbeak allows you to use your own **custom base images**.
+Since these standard default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on) Cloudbeak allows you to use your own **custom base images**.
 
 In order to use your own custom base images you must:
 
@@ -62,18 +64,22 @@ The structure of the image catalog JSON file file and an example image catalog J
 The image catalog JSON file includes the following two high-level sections: 
 
 * `images`: Contains information about the created images. The burned images are stored in the `base-images` section.  
-* `versions`: Contains the `cloudbreak` entry, which includes mapping between Cloudbreak versions and the image identifiers of burned images available for these Cloudbreak versions.   
+* `versions`: Contains the `cloudbreak` entry, which includes mapping between Cloudbreak versions and the image identifiers of burned images available for these Cloudbreak versions. 
 
-The `base-images` section stores one or more image "records". Every image "record" must contain the date, description, images, os, os_type, and uuid fields.
+**Images Section**  
+
+The burned images are stored in the `base-images` sub-section of `images`. The `base-images` section stores one or more image "records". Every image "record" must contain the date, description, images, os, os_type, and uuid fields.
 
 | Field | Description |
 |---|---|
 | date | Date for your image catalog entry. |
 | description | Description for your image catalog entry. |
-| images | the `images` field must contain a map that contains the image sets by a provider and an image set must store the virtual machine image IDs by the related region of the provider. The virtual machine image IDs come from the result of the image burning process and must be an existing identifier of a virtual machine image on the related provider side. For the providers which use global rather than per-region images, the region should be replaced with **`default`**, as the example image catalog JSON illustrates. |
+| images | The image sets by cloud provider. An image set must store the virtual machine image IDs by the related region of the provider (AWS, Azure) or contain a one default image for all regions (GCP, OpenStack). The virtual machine image IDs come from the result of the image burning process and must be an existing identifier of a virtual machine image on the related provider side. For the providers which use global rather than per-region images, the region should be replaced with **`default`**. |
 | os | The operating system used in the image. |
 | os_type | The type of operating system which will be used to determine the default Ambari and HDP repositories to use. Set `os_type` to "redhat6" for amazonlinux or centos6 images. Set `os_type` to "redhat7" for centos7 or rhel7 images. |
 | uuid | The `uuid` field must be a unique identifier within the file. You can generate it or select it manually. The utility `uuidgen` available from your command line is a convenient way to generate a unique ID. |
+
+**Versions Section**  
 
 The `versions` section includes a single "cloudbreak" entry, which maps the uuids to a specific Cloudbreak version:
 
@@ -85,12 +91,19 @@ The `versions` section includes a single "cloudbreak" entry, which maps the uuid
 
 #### Example Image Catalog JSON File 
 
-Here is an example image catalog JSON file that includes a custom base image:
+Here is an example image catalog JSON file that includes two sets of custom base images: 
 
-* For AWS, Azure, Google, and OpenStack  
-* That is using CentOS 7 operating system   
-* Has a unique ID of f6e778fc-7f17-4535-9021-515351df3692  
-* Is available to Cloudbreak 2.1.0  
+* A custom base image for AWS:
+    * That is using Amazon Linux operating system 
+    * That will use the Redhat 6 repos as default Ambari and HDP repositories during cluster create     
+    * Has a unique ID of "44b140a4-bd0b-457d-b174-e988bee3ca47"
+    * Is available for Cloudbreak 2.1.0    
+*  A custom base image for Azure, Google, and OpenStack: 
+    * That is using CentOS 7 operating system 
+    * That will use the Redhat 7 repos as default Ambari and HDP repositories during cluster create   
+    * Has a unique ID of "f6e778fc-7f17-4535-9021-515351df3692"
+    * Is available to Cloudbreak 2.1.0      
+
 
 You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/custom-image-catalog.json).
 
