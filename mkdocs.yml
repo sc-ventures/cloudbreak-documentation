@@ -50,7 +50,7 @@ pages:
         - Upgrade Cloudbreak: upgrade.md
         - Delete Cloudbreak: delete.md  
         - Manage Cloudbreak Credentials: credentials.md 
-        - Configure Cloudbreak: profile.md
+        - Edit Cloudbreak Profile: profile.md
         - Manage Cloudbreak Database: cb-db.md
       - Security: 
         - Security Overview: security.md

@@ -1,5 +1,5 @@
 
-## Configure Cloudbreak via Profile Variables
+## Edit Cloudbreak Profile 
 
 Cloudbreak deployer configuration is based on environment variables.  
 
