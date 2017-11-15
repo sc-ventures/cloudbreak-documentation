@@ -15,6 +15,9 @@ If you choose to create a new security group, the *New Security Group* wizard wi
 2. Once done, click **SAVE** to save your security group settings.  
 3. Once you define a custom security group for one host group, you can reuse this definition for other node groups.  
 
+**Related Links**   
+[Network Security](security.md#network-security)
+
 
 #### Enable Kerberos Security 
 
