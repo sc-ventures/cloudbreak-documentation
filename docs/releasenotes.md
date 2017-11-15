@@ -88,10 +88,17 @@ When creating a cluster on OpenStack, if you do not select an existing network a
 ____________________________
 
 
+##### (BUG-91077) Node Status Is Not Consistent with Ambari
+
+If your blueprint contains Druid, cluster node status may be "healthy" after a cluster is created, even though the Druid component has not started.     
+*Workaround*: Manually start Druid by using Ambari web UI.  
+____________________________
+
+
 ##### (BUG-91077) Nodes Are Unhealthy After Sync
 
 If your blueprint contains Druid, cluster node status may change to "unhealthy" after synchronizing with the cloud provider using the "Sync" option.    
-*Workaround*: Manually start Druid by using Ambari web UI.  
+*Workaround*: Manually start Druid by using Ambari web UI and then "Sync" again.  
 ____________________________
 
 

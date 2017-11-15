@@ -26,7 +26,7 @@ Platform Version: **HDP 2.6**
 | Data Science | <i class="fa fa-check" style="color: green"></i> Spark 1.6,<br>Zeppelin 0.7.0 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, Sqoop, ZooKeeper, Ambari Metrics, Spark 1.6, Zeppelin 0.7.0 |
 | Data Science | <i class="fa fa-check" style="color: green"></i> Spark 2.1,<br>Zeppelin 0.7.0 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, Sqoop, ZooKeeper, Ambari Metrics, Spark 2.1, Zeppelin 0.7.0 |
 | EDW - Analytics | <span><i class="fa fa-check" style="color: green"></i> Hive 2 LLAP</span>,<br>Zeppelin 0.7.0 | HDFS, YARN, MapReduce2, Tez, Hive 2 LLAP, Druid, Pig, ZooKeeper, Ambari Metrics, Spark 2.1 |
-| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, Sqoop, ZooKeeper, Ambari Metrics, Spark 1.6 |
+| EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br>Spark 1.6 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, Sqoop, ZooKeeper, Ambari Metrics, Spark 1.6, Druid 0.9.2 |
 | EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive 1.2.1,<br> Spark 2.1 | HDFS, YARN, MapReduce2, Tez, Hive 1.2.1, Pig, ZooKeeper, Ambari Metrics, Spark 2.1 |
 | BI | <span><i class="fa fa-warning" style="color: orange"></i> Druid 0.9.2</span> | HDFS, YARN, MapReduce2, Tez, Druid, Sqoop, ZooKeeper, Ambari Metrics |
 
