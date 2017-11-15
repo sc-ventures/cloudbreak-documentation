@@ -13,7 +13,7 @@ If the force termination does not delete all cluster resources, delete the resou
 * On Azure, you can delete the cluster manually by deleting the whole resource group created when the cluster was deployed. The name of the resource group, under which the cluster-related resources are organized always includes the name of the cluster, so you should be able to find the group by searching for that name in the **Resource groups**.
   
 
-#### Delete Cloudbreak on AWS
+### Delete Cloudbreak on AWS
 
 If you want to delete the Cloudbreak instance, you can do so by deleting the EC2 instance on which it is running.
 
@@ -72,7 +72,7 @@ You can delete Cloudbreak instance from your Google Cloud account.
 4. Click on the delete icon and then confirm delete. 
 
 
-### Deleting Cloudbreak on OpenStack
+### Delete Cloudbreak on OpenStack
 
 You can delete Cloudbreak instance from your OpeenStack console. 
 
