@@ -37,7 +37,7 @@ To upgrade Cloudbreak to the newest version, perform the following steps.
     
     Cloudbreak needs to download updated docker images for the new version, so this step may take a while.
 
-In addition, if you have any clusters running, you must update them using the folloing steps. 
+In addition, if you have any clusters running, you must update them using the following steps. 
 
 ### Update Existing Clusters
 

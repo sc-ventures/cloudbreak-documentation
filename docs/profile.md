@@ -296,7 +296,7 @@ To pass any additional Consul configuration, define the `DOCKER_CONSUL_OPTIONS` 
 
 In order to differentiate launched instances, you can optionally define custom tags for your AWS resources deployed by Cloudbreak. 
 
-* If you want just one custom tag for your Cloudformation resources, set this variable in the `Profile`:
+* If you want just one custom tag for your CloudFormation resources, set this variable in the `Profile`:
 
     ```export CB_AWS_DEFAULT_CF_TAG=mytagcontent```
 

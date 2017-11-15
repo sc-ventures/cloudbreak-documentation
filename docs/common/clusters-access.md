@@ -104,7 +104,7 @@ Setting up HDP image
 
 If you plan to access the cluster via the command line clients, SSH into the master node instance in the cluster. 
 
-* In order to use SSH, you must generate an SSH key pair or use an existing SSH keypair.  
+* In order to use SSH, you must generate an SSH key pair or use an existing SSH key pair.  
 * You can find the cluster instance public IP addresses on the cluster details page.  
 * When accessing instances via SSH use the `cloudbreak` user. 
 
@@ -123,7 +123,7 @@ You can access Ambari web UI by clicking on the links provided in the **Cluster 
 
 1. From the cluster dashboard, click on the tile representing your cluster to navigate to cluster details.
 
-2. Find the Ambairi URL in the **Cluster Information** section. This URL is available once the Ambari cluster creation process has completed.  
+2. Find the Ambari URL in the **Cluster Information** section. This URL is available once the Ambari cluster creation process has completed.  
 
 3. Click on the **Ambari URL** link.
 

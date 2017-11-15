@@ -75,7 +75,7 @@ To enable Kerberos on a cluster, perform these steps when creating your cluster 
 **Steps**
 
 1. In the **Create cluster** wizard, in the **Setup Network and Security** tab, check the **Enable security** option and select **Use Existing Active Directory**.
-2. Provide the following informstion:
+2. Provide the following information:
 
 | Field | Description |
 |---|---|

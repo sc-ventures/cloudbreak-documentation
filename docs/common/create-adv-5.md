@@ -1,6 +1,4 @@
 
-
-
 #### Security Groups 
 
 For each host group, select one of the options:

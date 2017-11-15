@@ -141,7 +141,7 @@ Log in to the Cloudbreak UI using the following steps.
 
     <a href="../images/azure-resource-find.png" target="_blank" title="click to enlarge"><img src="../images/azure-resource-find.png" width="650" title="Azure Portal"></a> 
 
-3. From **Outputs**, you can copy the link by clicking on the <img src="../images/copy-icon.png" width="30" title="Icon"> icon:
+3. From **Outputs**, you can copy the link by clicking on the copy icon:
 
     <a href="../images/azure-outputs.png" target="_blank" title="click to enlarge"><img src="../images/azure-outputs.png" width="650" title="Azure Portal"></a>   
 

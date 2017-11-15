@@ -153,7 +153,7 @@ export PUBLIC_IP=VM-PUBLIC-IP</pre>
 export UAA_DEFAULT_USER_PW=MySecurePassword123
 export PUBLIC_IP=34.212.141.253</pre> 
 
-    > You will need to provide the password when logging in to the Cloudbreak web UI and when using the Cloudbreak Shell. The secret will be used by Cloudbreak for authentication.  
+    > You will need to provide the password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.  
 
 
 ### Perform Optional Configurations

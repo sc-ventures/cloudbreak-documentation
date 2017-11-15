@@ -2,13 +2,13 @@
 
 ## SmartSense Telemetry
 
-Help us make a better product by opt'ing in to automatically send information to Hortonworks. This includes enabling
+Help us make a better product by opting in to automatically send information to Hortonworks. This includes enabling
 Hortonworks SmartSense and sending performance and usage info. As you use the product,
 SmartSense measures and collects information and then sends these information bundles to Hortonworks.
 
 ### How to Disable
 
-#### Disable Bundle Upload for the Cloud Controller and New Clusters
+#### Disable Bundle Upload for Cloudbreak and New Clusters
 
 <div class="danger">
     <p class="first admonition-title">Important</p>
@@ -18,7 +18,7 @@ SmartSense measures and collects information and then sends these information bu
 </div>
 
 
-1. SSH into the cloud controller host.
+1. SSH into the Cloudbreak host.
 
 1. Edit `/var/lib/cloudbreak-deployment/Profile`.
 
@@ -32,7 +32,7 @@ cbd restart</code></pre>
 
 #### Disable Bundle Upload for an Existing Cluster
 
-1. SSH into the Master node for the cluster.
+1. SSH into the master node for the cluster.
 
 1. Edit `/etc/hst/conf/hst-server.ini`.
 

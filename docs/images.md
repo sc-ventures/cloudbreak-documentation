@@ -13,7 +13,9 @@ Cloudbreak includes both base images and prewarmed images, depending on the clou
 | AWS | Amazon Linux 2017 | <ul><li>Amazon Linux 2017 with HDP 2.6 and Ambari 2.5</li><li>Amazon Linux 2017 with HDP 2.5 and Ambari 2.4</li></ul> |
 | Azure | CentOS 7 | N/A |
 | GCP | CentOS 7 |  N/A  |
-| OpenStack | CentOS 7 |  N/A  |
+| OpenStack | CentOS 7 |  N/A |
+
+[Comment]: <> (Not sure about the AWS prewarmed images.)
 
 Since the standard default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on), Cloudbeak allows you to use your own **custom images**.
 

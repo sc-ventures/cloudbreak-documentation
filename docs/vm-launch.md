@@ -79,7 +79,7 @@ curl -Ls s3.amazonaws.com/public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbrea
 cbd --version</pre>
 
 
-    Once the Cloudbreak Deployer is installed, you can set up the Cloudbreak application.
+    Once the Cloudbreak deployer is installed, you can set up the Cloudbreak application.
 
 2. Create a Cloudbreak deployment directory and navigate to it:
 
@@ -96,7 +96,7 @@ export UAA_DEFAULT_USER_PW=MY-PASSWORD</pre>
     <pre>export UAA_DEFAULT_SECRET=MySecret123
 export UAA_DEFAULT_USER_PW=MySecurePassword123</pre>
 
-    > You will need to provide the password when logging in to the Cloudbreak web UI and when using the Cloudbreak Shell. The secret will be used by Cloudbreak for authentication.
+    > You will need to provide the password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.
     
 4. Generate configurations by executing:
 
@@ -115,7 +115,7 @@ cbd start</pre>
 
     This will start the Docker containers and initialize the application. The first time you start the Coudbreak app, the process will take longer than usual due to the download of all the necessary docker images.
 
-5. Next, check Cloudbreak Application logs: 
+5. Next, check Cloudbreak application logs: 
 
     <pre>cbd logs cloudbreak</pre>
     
