@@ -14,8 +14,6 @@
 | **Identity** | This is Cloudbreak's OAuth identity server implementation, which utilizes UAA. |
 | **Sultans** | This is Cloudbreak's user management system. | 
 | **Periscope** | This is Cloudbreak's autoscaling application, which is responsible for automatically increasing or decreasing the capacity of the cluster when your pre-defined conditions are met. |
-
-> These component names are used in Cloudbreak logs, so for troubleshooting purposes it is useful to know what they refer to.
  
 
 ### Cloudbreak Application Architecture 
