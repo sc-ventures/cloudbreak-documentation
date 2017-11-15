@@ -110,6 +110,16 @@ You may sporadically experience an issue where after you stop and restart a clus
 
 [comment]: <> (Not sure what the workaround is for BUG-91013?)
 
+
+##### (BUG-91701) Cluster Resize Is Unclear 
+
+If you try to resize your cluster, you may notice that:
+
+* The cluster name mentioned is incorrect.  
+* The host group names may be incorrect, if you are using a custom blueprint.  
+
+
+[comment]: <> (Not sure what the workaround is for BUG-91701?)
  
 
 ##### (BUG-91674) Network and Subnet Listed as N/A
@@ -119,7 +129,5 @@ When creating a new network and subnet for your cluster, the network and subnet 
 *Workaround*: If you want to check which network and subnet are used for your cluster, navigate to the cloud provider account and find the cluster instances that were created for your cluster. Next, check which virtual network and subnet they are associated with. The steps vary depending on the provider.  
 
 
-
 [Comment]: <> (How about BUG-91699? Default Master security group ports are too open)
-
 

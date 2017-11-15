@@ -1,8 +1,6 @@
 ## Custom Images
 
-By default, Cloudbreak launches clusters from **standard default images**, which include default configuration and default tooling. These images are available by default for each supported provider and region. 
-
-**Base images** do not include Ambari or HDP software. These images can be used regardless of your choice of Ambari or HDP because that software is installed as part of the VM create and cluster provisioning process. This means you have more flexibility to use a base image but it can take longer to provision since more software is installed during cluster create.
+By default, Cloudbreak launches clusters from **standard default images**, which include default configuration and default tooling. These images are available by default for each supported provider and region:  
 
 | Cloud Provider | Base Images |
 |---|---|
@@ -11,17 +9,24 @@ By default, Cloudbreak launches clusters from **standard default images**, which
 | GCP | CentOS 7 |  
 | OpenStack | CentOS 7 | 
 
+These default images are **base images**, which do not include Ambari or HDP software. These images can be used regardless of your choice of Ambari or HDP because that software is installed as part of the VM create and cluster provisioning process. This means you have more flexibility to use a base image but it can take longer to provision since more software is installed during cluster create. 
 
-Since the standard default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on), Cloudbeak allows you to use your own **custom images**.
+Since these standard default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on), Cloudbeak allows you to use your own **custom base images**.
 
 In order to use your own custom base images you must:
 
 1. Build your custom images  
 2. Prepare the image catalog JSON file  
 3. Register your custom images with Cloudbreak   
-4. Select a custom image when creating a cluster  
+4. Select a custom image when creating a cluster  \
 
-Only base images can be created and registered as custom images. Do not create or register prewarmed images using the instructions below. 
+<div class="danger">
+    <p class="first admonition-title">Important</p>
+    <p class="last">
+Only base images can be created and registered as custom images. Do not create or register prewarmed images using instructions provided in this section. 
+</p>
+</div>
+
 
 
 ### Building Custom Images
@@ -51,7 +56,7 @@ The `base-images` section stores one or more image "records". Every image "recor
 | description | Description for your image catalog entry. |
 | images | the `images` field must contain a map that contains the image sets by a provider and an image set must store the virtual machine image IDs by the related region of the provider. The virtual machine image IDs come from the result of the image burning process and must be an existing identifier of a virtual machine image on the related provider side. For the providers which use global rather than per-region images, the region should be replaced with **`default`**, as the example image catalog JSON illustrates. |
 | os | The operating system used in the image. |
-| os_type | |
+| os_type | The type of operating system which will be used to determine the default Ambari and HDP repositories to use. Set `os_type` to "redhat6" for amazonlinux or centos6 images. Set `os_type` to "redhat7" for centos7 or rhel7 images. |
 | uuid | The `uuid` field must be a unique identifier within the file. You can generate it or select it manually. The utility `uuidgen` available from your command line is a convenient way to generate a unique ID. |
 
 The `versions` section includes a single "cloudbreak" entry, which maps the uuids to a specific Cloudbreak version:
