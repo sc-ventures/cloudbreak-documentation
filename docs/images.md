@@ -1,6 +1,8 @@
 ## Custom Images
 
-By default, Cloudbreak launches clusters from **standard default images**, which include default configuration and default tooling. These images are available by default for each supported provider and region:  
+By default, Cloudbreak launches clusters from **default base images**, which include default configuration and default tooling. These images are available by default for each supported provider and region. These images are **base images**: they include the OS but do not include Ambari or HDP software. The Ambari and HDP software is installed as part of the VM create and cluster provisioning process.
+
+The following table lists the standard default images available for each platform: 
 
 | Cloud Provider | Base Images |
 |---|---|
@@ -9,7 +11,6 @@ By default, Cloudbreak launches clusters from **standard default images**, which
 | GCP | CentOS 7 |  
 | OpenStack | CentOS 7 | 
 
-These default images are **base images**, which do not include Ambari or HDP software. These images can be used regardless of your choice of Ambari or HDP because that software is installed as part of the VM create and cluster provisioning process. This means you have more flexibility to use a base image but it can take longer to provision since more software is installed during cluster create. 
 
 Since these standard default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on), Cloudbeak allows you to use your own **custom base images**.
 
@@ -18,12 +19,12 @@ In order to use your own custom base images you must:
 1. Build your custom images  
 2. Prepare the image catalog JSON file  
 3. Register your custom images with Cloudbreak   
-4. Select a custom image when creating a cluster  \
+4. Select a custom image when creating a cluster  
 
 <div class="danger">
     <p class="first admonition-title">Important</p>
     <p class="last">
-Only base images can be created and registered as custom images. Do not create or register prewarmed images using instructions provided in this section. 
+Only base images can be created and registered as custom images. Do not create or register prewarmed images using the instructions provided in this section. 
 </p>
 </div>
 
@@ -31,12 +32,27 @@ Only base images can be created and registered as custom images. Do not create o
 
 ### Building Custom Images
 
-Refer to [Custom Images for Cloudbreak](https://github.com/hortonworks/cloudbreak-images). This repository includes instructions and scripts to help you build custom images. Once you have the images, refer to the documentation below for information on how to create an image catalog, and register and use these images with Cloudbreak.
+Refer to [Custom Images for Cloudbreak](https://github.com/hortonworks/cloudbreak-images) for information on how to build custom images. 
+
+This repository includes instructions and scripts to help you build custom images. Once you have the images, refer to the documentation below for information on how to create an image catalog and register it with Cloudbreak.
 
 
 ### Preparing the Image Catalog 
 
-Once you've built the custom images, create the `custom-image-catalog.json` file and save it on your Cloudbreak machine in the `/var/lib/cloudbreak-deployment/etc` directory. The etc directory does not exist by default so you must create it. 
+**(Option 1) Image Catalog on the Cloudbreak VM**
+
+Once you've built the custom images, create the `custom-image-catalog.json` file and save it on your Cloudbreak machine in the `/var/lib/cloudbreak-deployment/etc` directory. The etc directory does not exist by default so you must create it. For example:
+
+<pre>cd /var/lib/cloudbreak-deployment
+mkdir etc
+vi custom-image-catalog.json</pre>
+
+The structure of the image catalog JSON file file and an example image catalog JSON file are provided below. 
+
+
+**(Option 2) Remote Image Catalog** 
+
+As an alternative to creating the `custom-image-catalog.json` image catalog on the Cloudbreak VM you can place the `custom-image-catalog.json` file in a location accessible via HTTP/HTTPS.   
 
 The structure of the image catalog JSON file file and an example image catalog JSON file are provided below. 
  
@@ -69,7 +85,7 @@ The `versions` section includes a single "cloudbreak" entry, which maps the uuid
 
 #### Example Image Catalog JSON File 
 
-Here is an example JSON image catalog file that includes a custom base image:
+Here is an example image catalog JSON file that includes a custom base image:
 
 * For AWS, Azure, Google, and OpenStack  
 * That is using CentOS 7 operating system   
@@ -168,7 +184,7 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
 
 ### Register Custom Images
 
-Using the custom image JSON you created, register that JSON with your Cloudbreak instance. 
+Now that you have created your image catalog JSON file, register it with your Cloudbreak instance. 
 
 **Steps**
 
@@ -179,17 +195,21 @@ Using the custom image JSON you created, register that JSON with your Cloudbreak
 2. Add `export CB_IMAGE_CATALOG_URL` to the file and set it to the location of your JSON file which declares your custom images. Its value can be:
     * A **URL** of a remote file that is reachable by Cloudbreak through HTTP/HTTPS or    
     * A **PATH** to the file, relative to the /var/lib/cloudbreak-deployment/etc directory on the Cloudbreak host. For example: `export CB_IMAGE_CATALOG_URL=custom-image-catalog.json`    
-3. Save the Profile file.
+3. Save the Profile file.  
 4. Restart Cloudbreak.
 
 
 ### Select a Custom Image When Creating a Cluster
 
-Once you have registered the custom images you can use them when creating a cluster. 
+Once you have registered your image catalog, you can use your custom image(s) when creating a cluster. 
 
-In the web UI, this option called **Choose OS Type** is available in the advanced **General Configuration** section of the wizard, allowing you to select the OS and the base image to use. You can leave the default entries for the Ambari and HDP repositories, or you can customize to point to specific versions of Ambari and HDP that you want to use for the cluster. 
+In the web UI, your custom image should be available under the **Choose OS Type** in the advanced **General Configuration** section of the wizard:
 
 <a href="../images/cb-images.png" target="_blank" title="click to enlarge"><img src="../images/cb-images.png" width="650" title="Cloudbreak UI"></a>
+
+The "os" that you specified in the image catalog will be displayed in the selection and the content of the "description" will be displayed in green.  
+
+You can leave the default entries for the Ambari and HDP repositories, or you can customize to point to specific versions of Ambari and HDP that you want to use for the cluster. 
 
 In the CLI, to use the custom image when creating a cluster, add the "ImageId" parameter and set it to the uuid of the image(s) registered. For example: 
 
