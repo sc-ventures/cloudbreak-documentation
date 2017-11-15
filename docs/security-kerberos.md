@@ -18,7 +18,7 @@ To enable Kerberos on a cluster, follow these steps when creating your cluster v
 
 2. Provide the following information for the KDC:
 
-| Field | Description |
+| Parameter | Description |
 |---|---|
 | Kerberos master key | The master key to use for the KDC. |
 | Kerberos admin | The KDC admin username to use for the KDC. |
@@ -57,7 +57,7 @@ To enable Kerberos on a cluster, perform the following steps when creating your 
 1. In the **Create cluster** wizard, in the **Setup Network and Security** tab, check the **Enable security** option and select **Use Existing MIT Kerberos**.
 2. Fill in the following fields:
 
-| Field | Description |
+| Parameter | Description |
 |---|---|
 | Kerberos Password | The KDC admin password to use for the KDC. |
 | Existing Kerberos Principal | The KDC principal in your existing MIT KDC. |
@@ -77,7 +77,7 @@ To enable Kerberos on a cluster, perform these steps when creating your cluster 
 1. In the **Create cluster** wizard, in the **Setup Network and Security** tab, check the **Enable security** option and select **Use Existing Active Directory**.
 2. Provide the following information:
 
-| Field | Description |
+| Parameter | Description |
 |---|---|
 | Kerberos Password | The KDC admin password to use for the KDC. |
 | Existing Kerberos Principal | The KDC principal in your existing MIT KDC. |

@@ -70,7 +70,7 @@ The image catalog JSON file includes the following two high-level sections:
 
 The burned images are stored in the `base-images` sub-section of `images`. The `base-images` section stores one or more image "records". Every image "record" must contain the date, description, images, os, os_type, and uuid fields.
 
-| Field | Description |
+| Parameter | Description |
 |---|---|
 | date | Date for your image catalog entry. |
 | description | Description for your image catalog entry. |
@@ -83,7 +83,7 @@ The burned images are stored in the `base-images` sub-section of `images`. The `
 
 The `versions` section includes a single "cloudbreak" entry, which maps the uuids to a specific Cloudbreak version:
 
-| Field | Description |
+| Parameter | Description |
 |---|---|
 | images | Image `uuid`, same as the one that you specified in the `base-images` section. |
 | versions | The Cloudbreak version(s) for which you would like to use the images. |
