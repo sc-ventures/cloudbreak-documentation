@@ -67,7 +67,7 @@ You can delete Cloudbreak instance from your Google Cloud account.
 
 2. Navigate to **Compute Engine** > **VM instances**.
 
-3. Select the instance that to delete.
+3. Select the instance that you want to delete.
 
 4. Click on the delete icon and then confirm delete. 
 
