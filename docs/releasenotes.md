@@ -122,4 +122,4 @@ When creating a new network and subnet for your cluster, the network and subnet 
 
 [Comment]: <> (How about BUG-91699? Default Master security group ports are too open)
 
-[Comment]: <> (How about BUG-91777? Amazon Linux 2017 is actually default image for AWS, not CentOS 7)
+

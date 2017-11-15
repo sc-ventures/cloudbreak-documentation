@@ -63,7 +63,7 @@ The `versions` section includes a single "cloudbreak" entry, which maps the uuid
 | Field | Description |
 |---|---|
 | images | Image `uuid`, same as the one that you specified in the `base-images` section. |
-| versions | The Cloudbreak version for which you would like to use the images. |
+| versions | The Cloudbreak version(s) for which you would like to use the images. |
 
 
 #### Example Image Catalog JSON File 
@@ -84,7 +84,7 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
     "base-images": [
       {
         "date": "2017-10-13",
-        "description": "My custom base image",
+        "description": "Cloudbreak official base image",
         "images": {
           "aws": {
             "ap-northeast-1": "ami-78e9311e",
@@ -97,7 +97,16 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
             "us-east-1": "ami-51a2742b",
             "us-west-1": "ami-21ccfe41",
             "us-west-2": "ami-2a1cdc52"
-          },
+          }
+        },
+        "os": "amazonlinux",
+        "os_type": "redhat6",
+        "uuid": "44b140a4-bd0b-457d-b174-e988bee3ca47"
+      },
+      {
+        "date": "2017-10-13",
+        "description": "Cloudbreak official base image",
+        "images": {
           "azure": {
             "Australia East": "https://hwxaustraliaeast.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
             "Australia South East": "https://hwxaustralisoutheast.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
@@ -134,7 +143,7 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
           }
         },
         "os": "centos7",
-        "uuid": "f6e778fc-7f17-4535-9021-515351df3692"
+        "uuid": "f6e778fc-7f17-4535-9021-515351df3691"
       }
     ]
 },
@@ -142,6 +151,7 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
     "cloudbreak": [
       {
         "images": [
+          "44b140a4-bd0b-457d-b174-e988bee3ca47",
           "f6e778fc-7f17-4535-9021-515351df3692"
         ],
         "versions": [
@@ -168,9 +178,7 @@ Using the custom image JSON you created, register that JSON with your Cloudbreak
     * A **URL** of a remote file that is reachable by Cloudbreak through HTTP/HTTPS or    
     * A **PATH** to the file, relative to the /var/lib/cloudbreak-deployment/etc directory on the Cloudbreak host. For example: `export CB_IMAGE_CATALOG_URL=custom-image-catalog.json`    
 3. Save the Profile file.
-4. Navigate back to the Cloudbrak deployment directory and restart Cloudbreak:   
-    <pre>cd ..
-cbd restart</pre>
+4. Restart Cloudbreak.
 
 
 ### Select a Custom Image When Creating a Cluster
@@ -188,7 +196,7 @@ In the CLI, to use the custom image when creating a cluster, add the "ImageId" p
 
 ### Reverting to Default Images
 
-To revert to the default images, remove the `export CB_IMAGE_CATALOG_URL=custom-image-catalog.json` entry that you added when [registering custom images](#register-custom-images).  
+To revert to the default images, remove the `export CB_IMAGE_CATALOG_URL=custom-image-catalog.json` entry that you added when [registering custom images](#register-custom-images) and then restart Cloudbreak.  
 
 
 
