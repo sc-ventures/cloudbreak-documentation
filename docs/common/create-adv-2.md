@@ -30,6 +30,10 @@ The **Base Image** option allows you to customize Ambari and/or HDP version used
 | Utils Repo Id | Identifier for the repo linked in "Utils Base Url". | HDP-UTILS-1.1.0.21|
 | Utils Base Url | URL to the repo storing utilities for the desired stack version. | http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.21/repos/centos7 |
 
+#### Prewarmed Images 
+
+No prewarmed images are provided and this selection is disabled. 
+
 
 #### Enable Lifetime Management 
 

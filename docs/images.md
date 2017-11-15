@@ -2,20 +2,15 @@
 
 By default, Cloudbreak launches clusters from **standard default images**, which include default configuration and default tooling. These images are available by default for each supported provider and region. 
 
-Cloudbreak includes both base images and prewarmed images, depending on the cloud provider. 
+**Base images** do not include Ambari or HDP software. These images can be used regardless of your choice of Ambari or HDP because that software is installed as part of the VM create and cluster provisioning process. This means you have more flexibility to use a base image but it can take longer to provision since more software is installed during cluster create.
 
-* **Base images** do not include Ambari or HDP software. These images can be used regardless of your choice of Ambari or HDP because that software is installed as part of the VM create and cluster provisioning process. This means you have more flexibility to use a base image but it can take longer to provision since more software is installed during cluster create.
+| Cloud Provider | Base Images |
+|---|---|
+| AWS | Amazon Linux 2017 | 
+| Azure | CentOS 7 | 
+| GCP | CentOS 7 |  
+| OpenStack | CentOS 7 | 
 
-* **Prewarmed images** include Ambari and HDP software pre-installed. This reduces the VM create and cluster provisioning process time but these images can only be used with a specific Ambari and HDP version.
-
-| Cloud Provider | Base Images | Prewarmed Images |
-|---|---|---|
-| AWS | Amazon Linux 2017 | <ul><li>Amazon Linux 2017 with HDP 2.6 and Ambari 2.5</li><li>Amazon Linux 2017 with HDP 2.5 and Ambari 2.4</li></ul> |
-| Azure | CentOS 7 | N/A |
-| GCP | CentOS 7 |  N/A  |
-| OpenStack | CentOS 7 |  N/A |
-
-[Comment]: <> (Not sure about the AWS prewarmed images.)
 
 Since the standard default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on), Cloudbeak allows you to use your own **custom images**.
 
@@ -187,7 +182,7 @@ Using the custom image JSON you created, register that JSON with your Cloudbreak
 
 Once you have registered the custom images you can use them when creating a cluster. 
 
-In the web UI, this option called **Choose OS Type** is available in the advanced **General Configuration** section of the wizard, allowing you to select the OS and the base image to use. You can leave the default entries for the Ambari and HDP repositories, or you can customize to point to specific versions of Ambari and HDP that you want to use for the cluster.
+In the web UI, this option called **Choose OS Type** is available in the advanced **General Configuration** section of the wizard, allowing you to select the OS and the base image to use. You can leave the default entries for the Ambari and HDP repositories, or you can customize to point to specific versions of Ambari and HDP that you want to use for the cluster. 
 
 <a href="../images/cb-images.png" target="_blank" title="click to enlarge"><img src="../images/cb-images.png" width="650" title="Cloudbreak UI"></a>
 
