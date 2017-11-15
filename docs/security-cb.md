@@ -4,9 +4,7 @@ Cloudbreak comes with default settings designed for easy first experience rather
 
 ### Restricting Inbound Access 
 
-We recommend that you block all communication ports except 443 on the firewall or security group (depending on the provider). 
-
-If you have to log in to the Cloudbreak host remotely, use the SSH port (usually 22).
+We recommend that you block all communication ports except 22, 80, and 443 on the firewall or security group. If you have to log in to the Cloudbreak host remotely, use the SSH port (usually 22).
 
 [comment]: <> (TO-DO: Is the step above up-to-date? I think ports 80 and 22 is also open.) 
 
@@ -20,7 +18,7 @@ Before starting Cloudbreak for the first time, configure the Profile file as dir
 echo export PUBLIC_IP=[the ip or hostname to bind] > Profile
 </pre>
 
-    [comment]: <> (TO-DO: Do you mean that this needs to be executed in the deployment directory? Or?)
+[comment]: <> (TO-DO: Do you mean that this needs to be executed in the deployment directory? Or?)
 
 2. After you have a base Profile file, add the following custom properties to it:
 
@@ -43,7 +41,7 @@ export UAA_SULTANS_SECRET='[authenticator secret]'
 
     You can change these secrets at any time, except `UAA_CLOUDBREAK_SECRET` which is used to encrypt sensitive information at database level. 
     
-    [comment]: <> (TO-DO: The info below is explained in a way that is confusing. Can you rephrase?) 
+[comment]: <> (TO-DO: The info below is explained in a way that is confusing. Can you rephrase?) 
 
     `UAA_DEFAULT_USER_PW` is stored in plain text format, but if `UAA_DEFAULT_USER_PW` is missing from the Profile, it gets a default value. Because default password is not an option, if you set an empty password explicitly in the Profile Cloudbreak deployer will ask for password all the time when it is needed for the operation.
 

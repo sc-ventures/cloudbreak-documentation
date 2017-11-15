@@ -24,7 +24,7 @@ To launch the Cloudbreak deployer and install the Cloudbreak application, you mu
 
 #### Ports
 
-Ports 22 (SSH) and 443 (HTTPS) must be open.
+Ports 22 (SSH), 80 (HTTPS), and 443 (HTTPS) must be open.
 
 #### Root Access
 
