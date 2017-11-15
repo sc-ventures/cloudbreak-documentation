@@ -25,14 +25,17 @@ Cloud providers use virtual networks which resemble traditional networks. Depend
 
 Security groups are setup to control network traffic to the instances in the system.
 
-The following table lists the minimum security group port configuration required for the Cloudbreak instance:
+#### Cloudbreak Instance Security Group
 
+The following table lists the minimum security group port configuration required for the Cloudbreak instance:
 
 | Inbound Port | Description |
 |---|---|
 | 22 | SSH access to the Cloudbreak VM. |
 | 80 | HTTP access to the Cloudbreak UI. This is automatically redirected to the HTTPS (443) port. |
 | 443 | HTTPS access to the Cloudbreak UI. |
+
+#### Default Cluster Security Groups 
 
 For clusters, by default Cloudbreak allows you to select from two default security groups (that will be created automatically during cluster create):
 
