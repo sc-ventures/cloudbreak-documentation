@@ -10,17 +10,25 @@ By default, the **Choose OS Type** is set to the default image that is provided 
 
 The **Base Image** option allows you to customize Ambari and/or HDP version used. 
 
-*Ambari Parameters*
+<div class="danger">
+    <p class="first admonition-title">Supported Ambari and HDP Versions</p>
+    <p class="last">
+The following are supported:<ul><li>Ambari <b>2.5.x</b></li><li>HDP <b>2.6.x</b> and HDP <b>2.5.x</b></li></ul>Ambari 2.6.x is not supported.
+</p>
+</div>
 
-| Parameter | Description | Default Value |
+
+*Ambari*
+
+| Parameter | Description | Example |
 |---|---|---|
 | Version | Ambari version. | 2.5.1.0 |
 | Repo Url | URL to the Ambari version repo. | http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.5.1.0 |
 | Repo Gpg Key Url | URL to the repo GPG key. Each stable RPM package that is published by CentOS Project is signed with a GPG signature. By default, yum and the graphical update tools will verify these signatures and refuse to install any packages that are not signed, or have an incorrect signature. | http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins | 
 
-*HDP Parameters*
+*HDP*
 
-| Parameter | Description | Default Value | 
+| Parameter | Description | Example | 
 |---|---|--|
 | Stack | Stack name. | HDP |
 | Version | Stack version. | 2.6 |

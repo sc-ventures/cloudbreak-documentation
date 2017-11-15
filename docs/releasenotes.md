@@ -85,18 +85,6 @@ Infrastructure creation failed. Reason: The Parameter (router_id) was not provid
 *Workaround*: When creating a cluster on OpenStack, you must select an existing network and subnet. 
 
 
-
-##### (BUG-91071) Syntax Error During Cluster Downscale
-
-When trying to downscale your cluster below the minimum required number of nodes, you may get the following error:  
-```
-SyntaxError: Unexpected end of JSON input
-```
-
-The log provides more information on the error: `New node(s) could not be removed from the cluster. Reason There is not enough node to downscale. Check the replication factor and the ApplicationMaster occupation.`  
-*Workaround*: Do not scale the cluster below the minimum required number of nodes.  
-
-
 ##### (BUG-91077) Nodes Are Unhealthy After Sync
 
 If your blueprint contains Druid, cluster node status may change to "unhealthy" after synchronizing with the cloud provider using the "Sync" option.    
@@ -111,15 +99,27 @@ You may sporadically experience an issue where after you stop and restart a clus
 [comment]: <> (Not sure what the workaround is for BUG-91013?)
 
 
+##### (BUG-91071) Syntax Error During Cluster Downscale
+
+When trying to downscale your cluster below the minimum required number of nodes, you may get the following error:  
+```
+SyntaxError: Unexpected end of JSON input
+```
+ 
+*Workaround*: 
+
+Check the *Event History* for more information. If you tried to scale the cluster below the minimum required number of nodes, you will see: `New node(s) could not be removed from the cluster. Reason There is not enough node to downscale. Check the replication factor and the ApplicationMaster occupation.` It may take a few minutes for this message to appear in the the *Event History*.   
+
+
 ##### (BUG-91701) Cluster Resize Is Unclear 
 
-If you try to resize your cluster, you may notice that:
+If you try to resize your cluster, you may notice that the cluster name and cluster information in the text above the scaling controls are incorrect. 
 
-* The cluster name mentioned is incorrect.  
-* The host group names may be incorrect, if you are using a custom blueprint.  
+*Workaround*:
 
-
-[comment]: <> (Not sure what the workaround is for BUG-91701?)
+* Ignore the "shared-services-demo2" mention and other information in the text above the scaling controls.  
+* Note that by default the controls in the resize dialog are set to the *current* number of nodes. So if your cluster currently has 1 master and 5 worker nodes, the controls will be set to these values by default. To resize, adjust to the desired number of nodes.        
+* Do not resize the master node host group.  
  
 
 ##### (BUG-91674) Network and Subnet Listed as N/A
