@@ -10,10 +10,10 @@ By default, the **Choose OS Type** is set to the default image that is provided 
 
 The **Base Image** option allows you to customize Ambari and/or HDP version used. 
 
-<div class="danger">
+<div class="note">
     <p class="first admonition-title">Supported Ambari and HDP Versions</p>
     <p class="last">
-The following are supported:<ul><li>Ambari <b>2.5.x</b></li><li>HDP <b>2.6.x</b> and HDP <b>2.5.x</b></li></ul>Ambari 2.6.x is not supported.
+The following Ambari and HDP versions are supported:<ul><li>Ambari <b>2.5.x</b></li><li>HDP <b>2.6.x</b> and HDP <b>2.5.x</b></li></ul>Ambari 2.6.x is not supported.
 </p>
 </div>
 
