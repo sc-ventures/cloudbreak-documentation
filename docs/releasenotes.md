@@ -66,6 +66,9 @@ ____________________________
 By default, port 9443 is set to 0.0.0.0/0 CIDR for inbound access on the default-ambari-security-group.  
 
 *Workaround*: If you choose to use the default-ambari-security-group for your Ambari host group security group, it is strongly recommended that you limit this CIDR in the security group to only allow traffic from your Cloudbreak VM instance IP.  
+
+[Comment]: <> (Also covered in this jira BUG-91699)
+ 
 ____________________________
 
 
