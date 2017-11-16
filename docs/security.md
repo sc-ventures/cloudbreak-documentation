@@ -50,7 +50,7 @@ These security groups is configured to limit inbound network traffic to a minima
 |---|---|
 | 22 | SSH access to the VM instance. |
 | 443 | HTTPS access to the Ambari UI. |
-| 8443/9443 | Management ports, used by Cloudbreak to communicate with the cluster node VM. |
+| 9443 | Management ports, used by Cloudbreak to communicate with the cluster node VM. |
 
 **Cluster Host Groups without the Ambari Server (default-security-group)**
 
