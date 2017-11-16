@@ -88,6 +88,22 @@ When creating a cluster on OpenStack, if you do not select an existing network a
 ____________________________
 
 
+##### (BUG-91768) Adding Tags Is Not Possible 
+
+When creating a cluster via Cloubdreak web UI, you may experience an issue where *Add* button used for adding tags is disabled. 
+
+*Workaround*: Refresh the page or exist and reopen the create cluster wizard. 
+____________________________
+
+
+##### (BUG-91674) Network and Subnet Listed as N/A
+
+When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "N/A".
+
+*Workaround*: If you want to check which network and subnet are used for your cluster, navigate to the cloud provider account and find the cluster instances that were created for your cluster. Next, check which virtual network and subnet they are associated with. The steps vary depending on the provider.  
+____________________________
+
+
 ##### (BUG-91077) Node Status Is Not Consistent with Ambari
 
 If your blueprint contains Druid, cluster node status may be "healthy" after a cluster is created, even though the Druid component has not started.     
@@ -134,12 +150,25 @@ If you try to resize your cluster, you may notice that the cluster name and clus
 * Do not resize the Ambari node host group.  
  ____________________________
  
+ 
+##### (BUG-91827) After Cluster Stop Event History Shows "Infrastructure Has Been Terminated"
 
-##### (BUG-91674) Network and Subnet Listed as N/A
+After you stopped your cluster, you may see the following message in the *Event History*: *Infrastructure have been terminated*.
 
-When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "N/A".
+*Workaround*: If the cluster status is "Stopped" and the preceding messages in the *Event History* confirm that the cluster has been stopped, you can ignore this message.    
+____________________________
 
-*Workaround*: If you want to check which network and subnet are used for your cluster, navigate to the cloud provider account and find the cluster instances that were created for your cluster. Next, check which virtual network and subnet they are associated with. The steps vary depending on the provider.  
+
+##### (BUG-92826) After Upgrade Cluster Cannot Be Started
+
+After upgrading from Cloudbreak 1.x to 2.x, you may experience issues stopping and starting your upgraded clusters on Azure and OpenStack.
+
+____________________________
+
+ 
+##### (BUG-91820) After Upgrade Event History Time Stamps Are Incorrect 
+
+After upgrading from Cloudbreak 1.x to 2.x, some time stamps in the *Event History*  of an upgraded cluster may be incorrect*. Specifically, the time stamps related to actions performed on the 1.x version may show wrong dates and times. 
 ____________________________
 
 
