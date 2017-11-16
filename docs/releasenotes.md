@@ -61,6 +61,13 @@ ____________________________
 Auto-scaling functionality is not available in Cloudbreak 2.1.0 TP. 
 ____________________________
 
+##### (BUG-91835) Default Ambari Node Security Group Has Port 9443 Has Inbound CIDR Set to 0.0.0.0/0 
+
+By default, port 9443 is set to 0.0.0.0/0 CIDR for inbound access on the default-ambari-security-group.  
+
+*Workaround*: If you choose to use the default-ambari-security-group for your Ambari host group security group, it is strongly recommended that you limit this CIDR in the security group to only allow traffic from your Cloudbreak VM instance IP.  
+____________________________
+
 
 ##### (BUG-91543) Networks With No Subnets Are Not Supported 
 

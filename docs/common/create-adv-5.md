@@ -8,7 +8,9 @@ For each host group, select one of the following options:
 * Select an existing security group  
 * (Only available for existing network and subnet) Do not use security group   
 
-Unless you make a different selection, the cluster security groups will be created using the [default rules](security.md#default-cluster-security-groups): 
+**Default Security Groups**
+
+Unless you make a different selection, the cluster security groups will be created using the [default rules](security.md#default-cluster-security-groups):
 
 * *default-ambari-security-group*: for Ambari host group  
 * *default-security-group*: for all other host groups     
@@ -16,10 +18,11 @@ Unless you make a different selection, the cluster security groups will be creat
 <div class="danger">
     <p class="first admonition-title">Important</p>
     <p class="last">
-By default, port 9443 is set to 0.0.0.0/0 CIDR for inbound access on the <b>default-ambari-security-group</b>. If you choose to use this default <b>default-ambari-security-group</b>  for your Ambari host group security group, It is strongly recommended that you limit this CIDR in the security group to only allow traffic from your Cloudbreak VM instance IP. 
+By default, port 9443 is set to 0.0.0.0/0 CIDR for inbound access on the <b>default-ambari-security-group</b>. If you choose to use the <b>default-ambari-security-group</b> for your Ambari host group security group, it is strongly recommended that you limit this CIDR in the security group to only allow traffic from your Cloudbreak VM instance IP. 
 </p>
 </div>
 
+**Creating New Security Groups**
 
 If you choose to create a new security group, the *New Security Group* wizard will open.
     
