@@ -52,6 +52,13 @@ These security groups is configured to limit inbound network traffic to a minima
 | 443 | HTTPS access to the Ambari UI. |
 | 9443 | Management ports, used by Cloudbreak to communicate with the cluster node VM. |
 
+<div class="danger">
+    <p class="first admonition-title">Important</p>
+    <p class="last">
+By default, port 9443 is set to 0.0.0.0/0 CIDR for inbound access. It is strongly recommended that you limit this CIDR in the security group to only allow traffic from your Cloudbreak VM instance IP. 
+</p>
+</div>
+
 **Cluster Host Groups without the Ambari Server (default-security-group)**
 
 | Inbound Port | Description |
