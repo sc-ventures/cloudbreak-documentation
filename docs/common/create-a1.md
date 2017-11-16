@@ -4,7 +4,7 @@ Use these steps to create a cluster.
 
 1. Log in to the Cloudbreak UI.
 
-2. Click **Create Cluster** and the *Create Cluster* form is displayed.
+2. Click **Create Cluster** and the *Create Cluster* wizard is displayed.
 
     To view advanced options, click **Advanced**. To learn about advanced options, refer to [Advanced Options](#advanced-options).
 
