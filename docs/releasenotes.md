@@ -168,7 +168,7 @@ ____________________________
  
 ##### (BUG-91820) After Upgrade Event History Time Stamps Are Incorrect 
 
-After upgrading from Cloudbreak 1.x to 2.x, some time stamps in the *Event History*  of an upgraded cluster may be incorrect*. Specifically, the time stamps related to actions performed on the 1.x version may show wrong dates and times. 
+After upgrading from Cloudbreak 1.x to 2.x, some time stamps in the *Event History*  of an upgraded cluster may be incorrect. Specifically, the time stamps related to actions performed on the 1.x version may show wrong dates and times. 
 ____________________________
 
 
