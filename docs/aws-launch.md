@@ -250,8 +250,8 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
      
 6. In the search box, enter the image name. The following Cloudbreak deployer images are available:
 
-|Region Name | Region |
-|---|---|
+| Region Name | Region | Community AMI |
+|---|---|---|
 | EU (Ireland) | eu-west-1 | ami-9fd57fe6 |
 | EU (Frankfurt) | eu-central-1 |	ami-0c1e9e63 |
 | US East (N. Virginia) | us-east-1 | ami-d8d85aa2 |
