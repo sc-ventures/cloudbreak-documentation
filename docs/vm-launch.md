@@ -93,14 +93,16 @@ cd cloudbreak-deployment</pre>
 3. In the directory, create a file called `Profile` with the following content:
 
     <pre>export UAA_DEFAULT_SECRET=MY-SECRET
-export UAA_DEFAULT_USER_PW=MY-PASSWORD</pre>
+export UAA_DEFAULT_USER_PW=MY-PASSWORD
+export UAA_DEFAULT_USER_EMAIL=MY-EMAIL</pre>
 
     For example:
     
     <pre>export UAA_DEFAULT_SECRET=MySecret123
-export UAA_DEFAULT_USER_PW=MySecurePassword123</pre>
+export UAA_DEFAULT_USER_PW=MySecurePassword123
+export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
 
-    > You will need to provide the password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.
+    > You will need to provide the email and password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.
     
 4. Generate configurations by executing:
 

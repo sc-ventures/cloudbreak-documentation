@@ -150,15 +150,17 @@ In Cloudbreak 2.1.0, you need sudo access in order to run cbd commands. Run `sud
 
     <pre>export UAA_DEFAULT_SECRET=MY-SECRET
 export UAA_DEFAULT_USER_PW=MY-PASSWORD
+export UAA_DEFAULT_USER_EMAIL=MY-EMAIL
 export PUBLIC_IP=VM-PUBLIC-IP</pre>  
 
     For example: 
 
     <pre>export UAA_DEFAULT_SECRET=MySecret123
 export UAA_DEFAULT_USER_PW=MySecurePassword123
+export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com
 export PUBLIC_IP=34.212.141.253</pre> 
 
-    > You will need to provide the password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.  
+    > You will need to provide the email and password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.  
 
 
 ### Perform Optional Configurations
@@ -254,11 +256,11 @@ Log in to the Cloudbreak UI using the following steps.
 
     <a href="../images/cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
     
-4. Log in to the Cloudbreak web UI: 
+4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer):
 
-    * The default username is `admin@example.com` but you should sign up with your own email address.    
-    * The password is the value of the `UAA_DEFAULT_USER_PW` variable that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer).
-
+    * The username is the `UAA_DEFAULT_USER_EMAIL`     
+    * The password is the `UAA_DEFAULT_USER_PW` 
+    
 5. Upon a successful login, you are redirected to the dashboard:
 
     <a href="../images/cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
