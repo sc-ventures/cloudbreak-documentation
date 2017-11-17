@@ -168,3 +168,11 @@ After you stopped your cluster, you may see the following message in the *Event 
 *Workaround*: If the cluster status is "Stopped" and the preceding messages in the *Event History* confirm that the cluster has been stopped, you can ignore this message.    
 ____________________________
 
+
+##### (BUG-?????) Permissions Error When Using Cbd  
+
+Permissions Error When Using `cbd`.
+
+*Workaround*: You must assume root access: `sudo su` before using `cbd`.   
+____________________________
+

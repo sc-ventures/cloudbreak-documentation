@@ -43,10 +43,10 @@ This repository includes instructions and scripts to help you build custom image
 
 **(Option 1) Image Catalog on the Cloudbreak VM**
 
-Once you've built the custom images, create the `custom-image-catalog.json` file and save it on your Cloudbreak machine in the `/var/lib/cloudbreak-deployment/etc` directory. The etc directory does not exist by default so you must create it. For example:
+Once you've built the custom images, create the `custom-image-catalog.json` file and save it on your Cloudbreak machine in the `/var/lib/cloudbreak-deployment/etc` directory. For example:
 
-<pre>cd /var/lib/cloudbreak-deployment
-mkdir etc
+<pre>sudo su 
+cd /var/lib/cloudbreak-deployment/etc 
 vi custom-image-catalog.json</pre>
 
 The structure of the image catalog JSON file file and an example image catalog JSON file are provided below. 
@@ -201,15 +201,17 @@ Now that you have created your image catalog JSON file, register it with your Cl
 
 **Steps**
 
-1. On the Cloudbreak machine, navigate to the Cloudbreak deployment directory:  
-    cd /var/lib/cloudbreak-deployment    
+1. On the Cloudbreak machine, switch to the root user:  
+    `sudo su`  
+2. navigate to the Cloudbreak deployment directory:  
+    `cd /var/lib/cloudbreak-deployment`    
 2. Edit the Profile file:     
-    vi Profile      
+    `vi Profile`      
 2. Add `export CB_IMAGE_CATALOG_URL` to the file and set it to the location of your JSON file which declares your custom images. Its value can be:
     * A **URL** of a remote file that is reachable by Cloudbreak through HTTP/HTTPS or    
     * A **PATH** to the file, relative to the /var/lib/cloudbreak-deployment/etc directory on the Cloudbreak host. For example: `export CB_IMAGE_CATALOG_URL=custom-image-catalog.json`    
 3. Save the Profile file.  
-4. Restart Cloudbreak.
+4. Restart Cloudbreak using `cbd restart`.
 
 
 ### Select a Custom Image When Creating a Cluster
@@ -231,7 +233,7 @@ In the CLI, to use the custom image when creating a cluster, add the "ImageId" p
 
 ### Reverting to Default Images
 
-To revert to the default images, remove the `export CB_IMAGE_CATALOG_URL=custom-image-catalog.json` entry that you added when [registering custom images](#register-custom-images) and then restart Cloudbreak.  
+To revert to the default images, switch to the root user, remove the `export CB_IMAGE_CATALOG_URL=custom-image-catalog.json` entry that you added when [registering custom images](#register-custom-images) and then restart Cloudbreak.  
 
 
 
