@@ -137,7 +137,7 @@ Log in to the Cloudbreak UI using the following steps.
 
     > This only works right after deployment. At other times, you can find your resource group by selecting **Resource Groups** from the service menu and then finding your resource group by name.
 
-2. Once you've navigated to your resource group, click on **Deployments** and then click on **hortonworks.cloudbreal-for-hortonworks-data-platf-...**:
+2. Once you've navigated to your resource group, click on **Deployments** and then click on **Microsoft.Template**:
 
     <a href="../images/azure-resource-find.png" target="_blank" title="click to enlarge"><img src="../images/azure-resource-find.png" width="650" title="Azure Portal"></a> 
 

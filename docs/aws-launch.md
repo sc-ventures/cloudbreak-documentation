@@ -14,17 +14,17 @@ In order to launch Cloudbreak on Azure, you must log in to your AWS account. If 
 
 Decide in which AWS region you would like to launch Cloudbreak. The following AWS regions are supported: 
 
-|Region Name | Region |
+| Region Name | Region | 
 |---|---|
 | EU (Ireland) | eu-west-1 |
-| EU (Frankfurt) | eu-central-1 |
+| EU (Frankfurt) | eu-central-1 |	
 | US East (N. Virginia) | us-east-1 |
 | US West (N. California) | us-west-1 |	
-| US West (Oregon) | us-west-2 |
-| South America (São Paulo) | sa-east-1 |
-| Asia Pacific (Tokyo) | ap-northeast-1	|
-| Asia Pacific (Singapore) | ap-southeast-1 |
-| Asia Pacific (Sydney) | ap-southeast-2 |
+| US West (Oregon) | us-west-2 | 
+| South America (São Paulo) | sa-east-1 | 
+| Asia Pacific (Tokyo) | ap-northeast-1	|  
+| Asia Pacific (Singapore) | ap-southeast-1 | 
+| Asia Pacific (Sydney) | ap-southeast-2 | 
 
 Clusters created via Cloudbreak can be in the same or different region as Cloudbreak; when you launch a cluster, you select the region in which to launch it.
 
@@ -250,17 +250,17 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
      
 6. In the search box, enter the image name. The following Cloudbreak deployer images are available:
 
-    | Region | Image Name |
-|---|---|
-| eu-west-1 | ami-9fd57fe6 |
-| eu-central-1 |	ami-0c1e9e63 |
-| us-east-1 |	 ami-d8d85aa2 |
-| us-west-1 |	 ami-3598a155 |
-| us-west-2 |	 ami-95d003ed | 
-| sa-east-1 |	 ami-ef0c4983 |
-| ap-northeast-1 | ami-7b47f61d |
-| ap-southeast-1 | ami-00b1e463 | 
-| ap-southeast-2 | ami-fff9129d |
+    | Region Name | Region | Community AMI |
+|---|---|---|
+| EU (Ireland) | eu-west-1 | ami-9fd57fe6 |
+| EU (Frankfurt) | eu-central-1 |	ami-0c1e9e63 |
+| US East (N. Virginia) | us-east-1 | ami-d8d85aa2 |
+| US West (N. California) | us-west-1 |	ami-3598a155 |
+| US West (Oregon) | us-west-2 | ami-95d003ed | 
+| South America (São Paulo) | sa-east-1 | ami-ef0c4983 |
+| Asia Pacific (Tokyo) | ap-northeast-1	|  ami-7b47f61d |
+| Asia Pacific (Singapore) | ap-southeast-1 | ami-00b1e463 | 
+| Asia Pacific (Sydney) | ap-southeast-2 | ami-fff9129d |
 
 [comment]: <> (TO-DO: This table should be automatically generated.)
 
@@ -318,14 +318,16 @@ After accessing the VM via SSH, launch Cloudbreak deployer using the following s
 2.  Initialize your profile by creating a new file called `Profile` and adding the following content:
 
     <pre>export UAA_DEFAULT_SECRET=MY-SECRET
-export UAA_DEFAULT_USER_PW=MY-PASSWORD</pre>  
+export UAA_DEFAULT_USER_PW=MY-PASSWORD
+export UAA_DEFAULT_USER_EMAIL=MY-EMAIL</pre>  
 
     For example: 
 
     <pre>export UAA_DEFAULT_SECRET=MySecret123
-export UAA_DEFAULT_USER_PW=MySecurePassword123</pre> 
+export UAA_DEFAULT_USER_PW=MySecurePassword123
+export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre> 
 
-    > You will need to provide the password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.  
+    > You will need to provide the email and password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.  
     
 3. Start the Cloudbreak application by using the following command:
 
@@ -366,11 +368,11 @@ Log in to the Cloudbreak UI using the following steps.
 3. The login page is displayed:
 
     <a href="../images/cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
-    
-4. Log in to the Cloudbreak web UI: 
 
-    * The default username is `admin@example.com` but you should sign up with your own email address.    
-    * The password is the value of the `UAA_DEFAULT_USER_PW` variable that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer).
+4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer):
+
+    * The username is the `UAA_DEFAULT_USER_EMAIL`     
+    * The password is the `UAA_DEFAULT_USER_PW` 
 
 5. Upon a successful login, you are redirected to the dashboard:
 

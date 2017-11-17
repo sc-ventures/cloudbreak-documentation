@@ -169,3 +169,11 @@ After you stopped your cluster, you may see the following message in the *Event 
 ____________________________
 
 
+##### (BUG-91892) The Recipe Name Already Taken Error    
+
+If your recipe description is longer than 255 characters, you will get the error: *The recipe name ' recipe10' is already taken, please choose a different one*. 
+
+*Workaround*: Shorten the recipe description to less than 255 characters.    
+____________________________
+
+
