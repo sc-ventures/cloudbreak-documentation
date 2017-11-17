@@ -70,6 +70,13 @@ This section includes information about your cluster nodes: instance names, inst
 
 This section lists user-defined tags, in the same order as you added them.
 
+#### Recipes
+
+This section lists recipes executed on the host groups of the cluster.
+
+#### Repository Details 
+
+This sections includes Ambari and HDP repository information. 
 
 #### Event History 
 
