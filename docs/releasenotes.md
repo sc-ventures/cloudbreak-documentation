@@ -181,7 +181,7 @@ ____________________________
 
 You will get a permissions error when using `cbd` as a non-root user.
 
-*Workaround*: You must assume root access `sudo su` before using `cbd`.   
+*Workaround*: You must assume root access by running `sudo su` before using `cbd`.   
 ____________________________
 
 
