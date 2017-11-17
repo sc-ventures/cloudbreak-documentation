@@ -61,6 +61,7 @@ ____________________________
 Auto-scaling functionality is not available in Cloudbreak 2.1.0 TP. 
 ____________________________
 
+
 ##### (BUG-91835) Default Ambari Node Security Group Has Port 9443 Inbound CIDR Set to 0.0.0.0/0 
 
 By default, port 9443 is set to 0.0.0.0/0 CIDR for inbound access on the default-ambari-security-group.  
@@ -68,7 +69,6 @@ By default, port 9443 is set to 0.0.0.0/0 CIDR for inbound access on the default
 *Workaround*: If you choose to use the default-ambari-security-group for your Ambari host group security group, it is strongly recommended that you limit this CIDR in the security group to only allow traffic from your Cloudbreak VM instance IP.  
 
 [Comment]: <> (Also covered in this jira BUG-91699)
- 
 ____________________________
 
 
@@ -169,10 +169,19 @@ After you stopped your cluster, you may see the following message in the *Event 
 ____________________________
 
 
+##### (BUG-91892) The Recipe Name Already Taken Error    
+
+If your recipe description is longer than 255 characters, you will get the error: *The recipe name ' recipe10' is already taken, please choose a different one*. 
+
+*Workaround*: Shorten the recipe description to less than 255 characters.    
+____________________________
+
+
 ##### (BUG-?????) Permissions Error When Using Cbd  
 
 Permissions Error When Using `cbd`.
 
 *Workaround*: You must assume root access: `sudo su` before using `cbd`.   
 ____________________________
+
 
