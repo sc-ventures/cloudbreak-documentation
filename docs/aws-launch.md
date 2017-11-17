@@ -295,8 +295,7 @@ Now that your VM is ready, access it via SSH:
   
 * Use the private key from the key pair that you selected when launching the instance. 
 * The SSH user is called "cloudbreak".
-* You can obtain the host IP from the EC2 console > **Instances** view by selecting the instance, selecting the **Description** tab, and copying the value of the **Public DNS (IPv4)
-** or **IPv4 Public IP** parameter.
+* You can obtain the host IP from the EC2 console > **Instances** view by selecting the instance, selecting the **Description** tab, and copying the value of the **Public DNS (IPv4) ** or **IPv4 Public IP** parameter.
 
 On Mac OS X, you can SSH to the VM by running the following from the Terminal app: `ssh -i "your-private-key.pem" cloudnreak@instance_IP` where "your-private-key.pem" points to the location of your private key and "instance_IP" is the public IP address of the VM.
 
@@ -305,15 +304,20 @@ On Windows, you can use [PuTTy](http://www.putty.org/).
 
 ### Launch Cloudbreak Deployer 
 
-After accessing the VM via SSH, launch Cloudbreak deployer using the following steps.
+After accessing the VM via SSH, launch Cloudbreak deployer using the following steps.  
 
-**Steps** 
+**Steps**  
+
+1. In Cloudbreak 2.1.0, you need sudo access in order to run cbd commands. Run `sudo su` to get sudo access.
+
+[Comment]: <> (This is only for 2.1.0)
 
 1. Navigate to the cloudbreak-deployment directory:
 
     <pre>cd /var/lib/cloudbreak-deployment/</pre>
     
     This directory contains configuration files and the supporting binaries for Cloudbreak deployer.
+   
     
 2.  Initialize your profile by creating a new file called `Profile` and adding the following content:
 

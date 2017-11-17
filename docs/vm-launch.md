@@ -1,4 +1,4 @@
-## Install Cloudbreak in Your Own VM
+## Install Cloudbreak on Your Own VM
 
 This is an advanced deployment option. Select this option if you have custom VM requirements. Otherwise, you should use one of the pre-built images and follow these instructions:
 
