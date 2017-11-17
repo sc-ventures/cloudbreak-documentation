@@ -16,15 +16,15 @@ Decide in which AWS region you would like to launch Cloudbreak. The following AW
 
 |Region Name | Region |
 |---|---|
-| EU (Ireland) | eu-west-1 |
-| EU (Frankfurt) | eu-central-1 |
-| US East (N. Virginia) | us-east-1 |
-| US West (N. California) | us-west-1 |	
-| US West (Oregon) | us-west-2 |
-| South America (São Paulo) | sa-east-1 |
-| Asia Pacific (Tokyo) | ap-northeast-1	|
-| Asia Pacific (Singapore) | ap-southeast-1 |
-| Asia Pacific (Sydney) | ap-southeast-2 |
+| EU (Ireland) | eu-west-1 | ami-9fd57fe6 |
+| EU (Frankfurt) | eu-central-1 |	ami-0c1e9e63 |
+| US East (N. Virginia) | us-east-1 | ami-d8d85aa2 |
+| US West (N. California) | us-west-1 |	ami-3598a155 |
+| US West (Oregon) | us-west-2 | ami-95d003ed | 
+| South America (São Paulo) | sa-east-1 | ami-ef0c4983 |
+| Asia Pacific (Tokyo) | ap-northeast-1	|  ami-7b47f61d |
+| Asia Pacific (Singapore) | ap-southeast-1 | ami-00b1e463 | 
+| Asia Pacific (Sydney) | ap-southeast-2 | ami-fff9129d |
 
 Clusters created via Cloudbreak can be in the same or different region as Cloudbreak; when you launch a cluster, you select the region in which to launch it.
 
