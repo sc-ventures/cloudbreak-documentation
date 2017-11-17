@@ -252,15 +252,15 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 
     | Region | Image Name |
 |---|---|
-| eu-west-1 | ami-79c63f00 |
-| sa-east-1 |	 ami-1af18176 |
-| us-east-1 |	 ami-e9bdbc92 |
-| us-west-1 |	 ami-2dd1e44d |
-| us-west-2 |	 ami-ae6c85d6 |
-| eu-central-1 |	ami-bc18b3d3 | 
-| ap-northeast-1 | ami-f2fb0494 |
-| ap-southeast-1 | ami-47036324 | 
-| ap-southeast-2 | ami-370b1154 |
+| eu-west-1 | ami-9fd57fe6 |
+| eu-central-1 |	ami-0c1e9e63 |
+| us-east-1 |	 ami-d8d85aa2 |
+| us-west-1 |	 ami-3598a155 |
+| us-west-2 |	 ami-95d003ed | 
+| sa-east-1 |	 ami-ef0c4983 |
+| ap-northeast-1 | ami-7b47f61d |
+| ap-southeast-1 | ami-00b1e463 | 
+| ap-southeast-2 | ami-fff9129d |
 
 [comment]: <> (TO-DO: This table should be automatically generated.)
 
