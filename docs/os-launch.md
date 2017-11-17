@@ -141,10 +141,6 @@ After accessing the VM via SSH, you must initialize your Profile.
     
     This directory contains configuration files and the supporting binaries for Cloudbreak deployer.
     
-1. In Cloudbreak 2.1.0, you need sudo access in order to run cbd commands. Run `sudo su` to get sudo access.
-
-[Comment]: <> (This is only for 2.1.0)
-    
 2.  Initialize your profile by creating a new file called `Profile` and adding the following content:
 
     <pre>export UAA_DEFAULT_SECRET=MY-SECRET
