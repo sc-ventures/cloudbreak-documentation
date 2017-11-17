@@ -57,7 +57,7 @@ Import Cloudbreak deployer image using the following steps.
 
 **Steps**
 
-1. Download the latest Cloudbreak deployer image to your local machine: 
+1. Download the latest Cloudbreak deployer image onto your local machine: 
 
     <pre>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer-1165-2017-11-17.img</pre>
     
@@ -131,7 +131,11 @@ On Windows, you can use [PuTTy](http://www.putty.org/).
 
 ### Initialize Your Profile 
 
-After accessing the VM via SSH, you must initialize your Profile.
+After accessing the VM via SSH, you must initialize your Profile. 
+
+In Cloudbreak 2.1.0, you need sudo access in order to run cbd commands. Run `sudo su` to get sudo access. 
+
+[Comment]: <> (This is only for 2.1.0)
 
 **Steps** 
 
@@ -140,10 +144,7 @@ After accessing the VM via SSH, you must initialize your Profile.
     <pre>cd /var/lib/cloudbreak-deployment/</pre>
     
     This directory contains configuration files and the supporting binaries for Cloudbreak deployer.
-    
-1. In Cloudbreak 2.1.0, you need sudo access in order to run cbd commands. Run `sudo su` to get sudo access.
 
-[Comment]: <> (This is only for 2.1.0)
     
 2.  Initialize your profile by creating a new file called `Profile` and adding the following content:
 
@@ -206,6 +207,10 @@ The following is an example of `openstack-zone.json` containing two regions and 
 ### Launch Cloudbreak Deployer 
 
 Launch Cloudbreak deployer using the following steps.
+
+In Cloudbreak 2.1.0, you need sudo access in order to run cbd commands. Run `sudo su` to get sudo access. 
+
+[Comment]: <> (This is only for 2.1.0)
 
 **Steps**
 

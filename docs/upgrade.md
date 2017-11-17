@@ -5,6 +5,10 @@
 
 To upgrade Cloudbreak to the newest version, perform the following steps.
 
+In Cloudbreak 2.1.0, you need sudo access in order to run cbd commands. Run `sudo su` to get sudo access. 
+
+[Comment]: <> (This is only for 2.1.0)
+
 **Steps**
 
 1. On the VM where Cloudbreak is running, navigate to the directory where your Profile file is located:
