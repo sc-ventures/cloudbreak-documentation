@@ -177,9 +177,9 @@ If your recipe description is longer than 255 characters, you will get the error
 ____________________________
 
 
-##### (BUG-?????) Permissions Error When Using Cbd  
+##### (BUG-?????) Permissions Error When Using cbd  
 
-Permissions Error When Using `cbd`.
+You will get a permissions error when using `cbd` as a non-root user.
 
 *Workaround*: You must assume root access: `sudo su` before using `cbd`.   
 ____________________________
