@@ -14,8 +14,8 @@ In order to launch Cloudbreak on Azure, you must log in to your AWS account. If 
 
 Decide in which AWS region you would like to launch Cloudbreak. The following AWS regions are supported: 
 
-|Region Name | Region |
-|---|---|
+| Region Name | Region | Community AMI |
+|---|---|---|
 | EU (Ireland) | eu-west-1 | ami-9fd57fe6 |
 | EU (Frankfurt) | eu-central-1 |	ami-0c1e9e63 |
 | US East (N. Virginia) | us-east-1 | ami-d8d85aa2 |
