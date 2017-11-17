@@ -13,8 +13,6 @@ The following table includes links to Cloudbreak developer documentation:
 [Comment]: <> (API link should be updated for each release. Not sure about the flow diagrams?)
 
 
-[comment]: <> (TO-DO: How exactly is the flow documentation useful to developers?)
-
 ## Cloudbreak Service Provider Interface (SPI)
 
 In addition to supporting multiple cloud platforms, Cloudbreak provides an easy way to integrate a new provider trough its [Service Provider Interface (SPI)](https://github.com/hortonworks/cloudbreak/tree/master/cloud-api), a plugin mechanism that enables seamless integration with any cloud provider. 
