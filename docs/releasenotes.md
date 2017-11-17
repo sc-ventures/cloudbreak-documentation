@@ -169,18 +169,3 @@ After you stopped your cluster, you may see the following message in the *Event 
 ____________________________
 
 
-##### (BUG-92826) After Upgrade Cluster Cannot Be Started
-
-After upgrading from Cloudbreak 1.x to 2.x, you may experience issues stopping and starting your upgraded clusters on Azure and OpenStack.
-
-____________________________
-
- 
-##### (BUG-91820) After Upgrade Event History Time Stamps Are Incorrect 
-
-After upgrading from Cloudbreak 1.x to 2.x, some time stamps in the *Event History*  of an upgraded cluster may be incorrect. Specifically, the time stamps related to actions performed on the 1.x version may show wrong dates and times. 
-____________________________
-
-
-[Comment]: <> (How about BUG-91699? Default Master security group ports are too open)
-

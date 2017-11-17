@@ -47,7 +47,6 @@ pages:
         - Custom Images: images.md
       - Managing Cloudbreak:
         - Install on Your Own VM: vm-launch.md
-        - Upgrade Cloudbreak: upgrade.md
         - Delete Cloudbreak: delete.md  
         - Manage Cloudbreak Credentials: credentials.md 
         - Edit Cloudbreak Profile: profile.md
