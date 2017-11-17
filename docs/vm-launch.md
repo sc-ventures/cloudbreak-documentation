@@ -70,6 +70,10 @@ Additionally, review the following prerequisites:
 
 Install Cloudbreak using the following steps.
 
+In Cloudbreak 2.1.0, you need sudo access in order to run cbd commands. Run `sudo su` to get sudo access. 
+
+[Comment]: <> (This is only for 2.1.0)
+
 **Steps**
 
 1. Install the Cloudbreak deployer and unzip the platform-specific single binary to your PATH. For example:
