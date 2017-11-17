@@ -250,17 +250,18 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
      
 6. In the search box, enter the image name. The following Cloudbreak deployer images are available:
 
-    | Region | Image Name |
+|Region Name | Region |
 |---|---|
-| eu-west-1 | ami-9fd57fe6 |
-| eu-central-1 |	ami-0c1e9e63 |
-| us-east-1 |	 ami-d8d85aa2 |
-| us-west-1 |	 ami-3598a155 |
-| us-west-2 |	 ami-95d003ed | 
-| sa-east-1 |	 ami-ef0c4983 |
-| ap-northeast-1 | ami-7b47f61d |
-| ap-southeast-1 | ami-00b1e463 | 
-| ap-southeast-2 | ami-fff9129d |
+| EU (Ireland) | eu-west-1 | ami-9fd57fe6 |
+| EU (Frankfurt) | eu-central-1 |	ami-0c1e9e63 |
+| US East (N. Virginia) | us-east-1 | ami-d8d85aa2 |
+| US West (N. California) | us-west-1 |	ami-3598a155 |
+| US West (Oregon) | us-west-2 | ami-95d003ed | 
+| South America (São Paulo) | sa-east-1 | ami-ef0c4983 |
+| Asia Pacific (Tokyo) | ap-northeast-1	|  ami-7b47f61d |
+| Asia Pacific (Singapore) | ap-southeast-1 | ami-00b1e463 | 
+| Asia Pacific (Sydney) | ap-southeast-2 | ami-fff9129d |
+
 
 [comment]: <> (TO-DO: This table should be automatically generated.)
 
