@@ -14,17 +14,17 @@ In order to launch Cloudbreak on Azure, you must log in to your AWS account. If 
 
 Decide in which AWS region you would like to launch Cloudbreak. The following AWS regions are supported: 
 
-| Region Name | Region | Community AMI |
-|---|---|---|
-| EU (Ireland) | eu-west-1 | ami-9fd57fe6 |
-| EU (Frankfurt) | eu-central-1 |	ami-0c1e9e63 |
-| US East (N. Virginia) | us-east-1 | ami-d8d85aa2 |
-| US West (N. California) | us-west-1 |	ami-3598a155 |
-| US West (Oregon) | us-west-2 | ami-95d003ed | 
-| South America (São Paulo) | sa-east-1 | ami-ef0c4983 |
-| Asia Pacific (Tokyo) | ap-northeast-1	|  ami-7b47f61d |
-| Asia Pacific (Singapore) | ap-southeast-1 | ami-00b1e463 | 
-| Asia Pacific (Sydney) | ap-southeast-2 | ami-fff9129d |
+| Region Name | Region | 
+|---|---|
+| EU (Ireland) | eu-west-1 |
+| EU (Frankfurt) | eu-central-1 |	
+| US East (N. Virginia) | us-east-1 |
+| US West (N. California) | us-west-1 |	
+| US West (Oregon) | us-west-2 | 
+| South America (São Paulo) | sa-east-1 | 
+| Asia Pacific (Tokyo) | ap-northeast-1	|  
+| Asia Pacific (Singapore) | ap-southeast-1 | 
+| Asia Pacific (Sydney) | ap-southeast-2 | 
 
 Clusters created via Cloudbreak can be in the same or different region as Cloudbreak; when you launch a cluster, you select the region in which to launch it.
 
@@ -250,17 +250,17 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
      
 6. In the search box, enter the image name. The following Cloudbreak deployer images are available:
 
-    | Region | Image Name |
-|---|---|
-| eu-west-1 | ami-9fd57fe6 |
-| eu-central-1 |	ami-0c1e9e63 |
-| us-east-1 |	 ami-d8d85aa2 |
-| us-west-1 |	 ami-3598a155 |
-| us-west-2 |	 ami-95d003ed | 
-| sa-east-1 |	 ami-ef0c4983 |
-| ap-northeast-1 | ami-7b47f61d |
-| ap-southeast-1 | ami-00b1e463 | 
-| ap-southeast-2 | ami-fff9129d |
+    | Region Name | Region | Community AMI |
+|---|---|---|
+| EU (Ireland) | eu-west-1 | ami-9fd57fe6 |
+| EU (Frankfurt) | eu-central-1 |	ami-0c1e9e63 |
+| US East (N. Virginia) | us-east-1 | ami-d8d85aa2 |
+| US West (N. California) | us-west-1 |	ami-3598a155 |
+| US West (Oregon) | us-west-2 | ami-95d003ed | 
+| South America (São Paulo) | sa-east-1 | ami-ef0c4983 |
+| Asia Pacific (Tokyo) | ap-northeast-1	|  ami-7b47f61d |
+| Asia Pacific (Singapore) | ap-southeast-1 | ami-00b1e463 | 
+| Asia Pacific (Sydney) | ap-southeast-2 | ami-fff9129d |
 
 [comment]: <> (TO-DO: This table should be automatically generated.)
 
@@ -369,7 +369,7 @@ Log in to the Cloudbreak UI using the following steps.
     
 4. Log in to the Cloudbreak web UI: 
 
-    * The default username is `admin@example.com` but you should sign up with your own email address.    
+    * The default username is `admin@example.com`.    
     * The password is the value of the `UAA_DEFAULT_USER_PW` variable that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer).
 
 5. Upon a successful login, you are redirected to the dashboard:
