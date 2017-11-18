@@ -3,7 +3,7 @@
 The following section describes how to access the various services in the cluster.
 
 
-### Finding Cluster Information in the UI
+### Find Cluster Information in the UI
 
 Once your cluster is up and running, click on the tile representing your cluster in the Cloudbreak UI to access information related the cluster and access cluster actions. 
 
