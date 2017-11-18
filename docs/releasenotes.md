@@ -169,7 +169,7 @@ After you stopped your cluster, you may see the following message in the *Event 
 ____________________________
 
 
-##### (BUG-91892) The Recipe Name Already Taken Error    
+##### (BUG-91892) Recipe Name Already Taken Error    
 
 If your recipe description is longer than 255 characters, you will get the error: *The recipe name ' recipe10' is already taken, please choose a different one*. 
 
@@ -177,7 +177,7 @@ If your recipe description is longer than 255 characters, you will get the error
 ____________________________
 
 
-##### (BUG-?????) Permissions Error When Using cbd  
+##### (BUG-?????) Permissions Error When Using Cbd  
 
 You will get a permissions error when using `cbd` as a non-root user.
 
