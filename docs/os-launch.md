@@ -269,7 +269,7 @@ Cloudbreak works by connecting your OpenStack account through this credential, a
 
 3. Under **Cloud provider**, select "Google Cloud Platform".
 
-    <a href="../images/cb-gcp-cred.png" target="_blank" title="click to enlarge"><img src="../images/cb-gcp-cred.png" width="650" title="Cloudbreak web UI"></a> 
+    <a href="../images/cb-os-cred.png" target="_blank" title="click to enlarge"><img src="../images/cb-os-cred.png" width="650" title="Cloudbreak web UI"></a> 
 
 3. Select the keystone version.
 
