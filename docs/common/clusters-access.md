@@ -11,11 +11,13 @@ Once your cluster is up and running, click on the tile representing your cluster
 
 The information presented includes:
 
-* [Cluster Summary](#cluster-summary)
-* [Cluster Information](#cluster-information) 
-* [Hardware](#hardware)
-* [Tags](#tags) 
-* [Event History](#event-history) 
+* [Cluster Summary](#cluster-summary)  
+* [Cluster Information](#cluster-information)  
+* [Hardware](#hardware)  
+* [Tags](#tags)   
+* [Recipes](#recipes)  
+* [Repository Details](#repository-details)  
+* [Event History](#event-history)  
 
 <div class="note">
   <p class="first admonition-title">Tips</p>
@@ -52,8 +54,9 @@ The summary bar includes the following information about your cluster:
 | Ambari URL | Link to the Ambari web UI. |
 | Region | The region in which the cluster is running in the cloud provider infrastructure. |
 | Availability Zone | The availability zone within the region in which the cluster is running. |
+| Image | The base image with the operating system that was used to launch the Cloudbreak instance. |
 | Blueprint | The name of the blueprint selected under "Cluster Type" to create this cluster. |
-| Started With | The version of Cloubdreak used to create this cluster. |
+| Created With | The version of Cloubdreak used to create this cluster. |
 | Ambari Version | The Ambari version which this cluster is currently running. |
 | HDP Version | The HDP version which this cluster is currently running. |
 
@@ -63,20 +66,23 @@ The summary bar includes the following information about your cluster:
 
 #### Hardware
 
-This section includes information about your cluster nodes: instance names, instance IDs (with links to the cloud provider console), and public IPs.
+This section includes information about your cluster instances: instance names, instance IDs, instance types, their status, funny qualified domain names (FQDNs), and private and public IPs. 
 
 
 #### Tags 
 
-This section lists user-defined tags, in the same order as you added them.
+This section lists keys and values of the user-defined tags, in the same order as you added them.
+
 
 #### Recipes
 
-This section lists recipes executed on the host groups of the cluster.
+This section includes recipe-related information. For each recipe, you can see the host group on which a recipe was executed, recipe name, and recipe type. 
+ 
 
 #### Repository Details 
 
-This sections includes Ambari and HDP repository information. 
+This section includes Ambari and HDP repository information, as you provided it in the "Base Images" section when creating a cluster. 
+
 
 #### Event History 
 
