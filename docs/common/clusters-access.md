@@ -52,6 +52,7 @@ The summary bar includes the following information about your cluster:
 | Ambari URL | Link to the Ambari web UI. |
 | Region | The region in which the cluster is running in the cloud provider infrastructure. |
 | Availability Zone | The availability zone within the region in which the cluster is running. |
+| Image | The base image with the operating system that was used to launch the Cloudbreak instance. |
 | Blueprint | The name of the blueprint selected under "Cluster Type" to create this cluster. |
 | Started With | The version of Cloubdreak used to create this cluster. |
 | Ambari Version | The Ambari version which this cluster is currently running. |
