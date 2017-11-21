@@ -7,7 +7,7 @@
     | Parameter | Description |
 |---|---|
 | Select Network | Select the virtual network in which you would like your cluster to be provisioned. You can select an existing network or create a new network. |
-| Select Subnet | Select the subnet in which you would like your cluster to be provisioned. You can select an existing subnet or create a new subnet. |
+| Select Subnet | Select the subnet in which you would like your cluster to be provisioned. If you are using a new network, create a new subnet. If you are using an existing network, select an existing subnet. |
 | Subnet (CIDR)| If you selected to create a new subnet, you must define a valid [CIDR](http://www.ipaddressguide.com/cidr) for the subnet. Default is 10.0.0.0/16. |
 
 5. On the **Security** page, provide the following parameters:
