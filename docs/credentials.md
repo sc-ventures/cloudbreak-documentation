@@ -61,9 +61,20 @@ The following information is available for previously created GCP credentials:
 
 The P12 key that you attached when creating the credential is not displayed.
 
-[comment]: <> (I am unable to test wha tis displayed for OpenStack credential.)
+#### Details for OpenStack Credentials    
 
+The following information is available for previously created OpenStack credentials:
 
+* Credential Name   
+* Description  
+* Facing: "internal" or "public", as specified under "Api Facing"     
+* Endpoint  
+* Selector: "cb-keystone-v2" or "cb-keystone-v3"  
+* Keystone Version: "cb-keystone-v2" or "cb-keystone-v3"   
+* User Name    
+* Tenant Name   
+
+The password parameter is not displayed. 
 
 ### Set a Default Credential
 
