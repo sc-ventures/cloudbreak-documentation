@@ -41,7 +41,7 @@ The following configuration classification applies:
 
 ### Use Custom Blueprint
 
-This option allows you to create and save your custom blueprints. For correct blueprint layout and other useful information about Ambari blueprints, refer to the [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) page.
+This option allows you to create and save your custom blueprints. 
 
 <div class="note">
     <p class="first admonition-title">Supported Ambari and HDP Versions</p>
@@ -52,22 +52,75 @@ Cloudbreak supports the following Ambari and HDP versions:<ul><li>Ambari <b>2.5.
 
 #### Creating a Blueprint
 
-Ambari blueprints are specified in the JSON format. After you provide the blueprint to Cloudbreak, the host groups in the JSON will be mapped to a set of instances when starting the cluster, and the specified services and components will be installed on the corresponding nodes. It is not necessary to define a complete configuration in the blueprint. If a configuration is missing, Ambari will fill that with a default value. 
-Furthermore, a blueprint can be modified later from the Ambari UI.
+Ambari blueprints are specified in the JSON format. 
 
-A blueprint can be exported from a running Ambari cluster and can be reused in Cloudbreak after slight modifications. When a blueprint is exported, some configurations are hardcoded for example domain names, memory configurations, and so on, that won't be applicable to the Cloudbreak cluster. There is no automatic way to modify an exported blueprint and make it instantly usable in Cloudbreak, the modifications have to be done manually.
+A blueprint can be exported from a running Ambari cluster and can be reused in Cloudbreak after slight modifications. When a blueprint is exported, it includes  some hardcoded configurations such as domain names, memory configurations, and so on, that are not applicable to the Cloudbreak cluster. There is no automatic way to modify an exported blueprint and make it instantly usable in Cloudbreak, the modifications have to be done manually. 
 
-#### Example Blueprints
+In general, the blueprint should include the following elements:
+
+<pre>"Blueprints": {
+    "blueprint_name": "hdp-small-default",
+    "stack_name": "HDP",
+    "stack_version": "2.6"
+  },
+  "settings": [],
+  "configurations": [],
+  "host_groups": [
+  {
+      "name": "master",
+      "configurations": [],
+      "components": []
+    },
+    {
+      "name": "worker",
+      "configurations": [],
+      "components": [ ]
+    },
+    {
+      "name": "compute",
+      "configurations": [],
+      "components": []
+    }
+   ]
+  }</pre>
+  
+For correct blueprint layout and other information about Ambari blueprints, refer to the [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) page. 
+
+Cloudbreak requires you to define an additional element in the blueprint called "blueprint_name". This should be a unique name within Cloudbreak list of blueprints. That is not included in the Ambari export. For example:
+
+<pre>"Blueprints": {
+    "blueprint_name": "hdp-small-default",
+    "stack_name": "HDP",
+    "stack_version": "2.6"
+  },
+  "settings": [],
+  "configurations": [],
+  "host_groups": [
+  ...
+</pre>
+
+If using Kerberos, add an additional "security" element. For example:   
+
+<pre>  "Blueprints" : {
+    "blueprint_name": "hdp-small-default",
+    "stack_name" : "HDP",
+    "stack_version" : "2.6",
+    "security" : {
+         "type" : "KERBEROS",
+         "kerberos_descriptor" : {
+    ...
+</pre>
+
+After you provide the blueprint to Cloudbreak, the host groups in the JSON will be mapped to a set of instances when starting the cluster, and the specified services and components will be installed on the corresponding nodes. It is not necessary to define a complete configuration in the blueprint. If a configuration is missing, Ambari will use a default value. 
+
+Here are a few [blueprint examples](https://github.com/hortonworks/cloudbreak/tree/master/core/src/main/resources/defaults/blueprints). You can also refer to the default blueprints provided in the Cloudbreak UI.
+
+**Related Links**  
+[Blueprint Examples](https://github.com/hortonworks/cloudbreak/tree/master/core/src/main/resources/defaults/blueprints) (External)     
+[Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) (External)  
+ 
 
 [comment]: <> (TO-DO: Maybe we can find some newer examples?)
-
-Here are some [blueprint examples](https://github.com/hortonworks/cloudbreak/tree/master/core/src/main/resources/defaults/blueprints).  
-
-[comment]: <> ( More blueprints (HDP 2.4) )
-[comment]: <> ( [Smallest Possible HDP 2.4](https://raw.githubusercontent.com/sequenceiq/cloudbreak/master/integration-test/src/main/resources/blueprint/multi-node-hdfs-yarn.bp)
-[comment]: <>  ( [Small HDP 2.4](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-small-default.bp)
-[comment]: <>  ( [Small HDP 2.4 Streaming](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-streaming-cluster.bp)
-[comment]: <>   ( [Small HDP 2.4 Spark](https://raw.githubusercontent.com/hortonworks/cloudbreak/master/core/src/main/resources/defaults/blueprints/hdp-spark-cluster.bp)
 
 
 #### Upload a Blueprint 
