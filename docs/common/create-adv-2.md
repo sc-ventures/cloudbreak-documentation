@@ -38,6 +38,11 @@ Cloudbreak supports the following Ambari and HDP versions:<ul><li>Ambari <b>2.5.
 | Utils Repo Id | Identifier for the repo linked in "Utils Base Url". | HDP-UTILS-1.1.0.21|
 | Utils Base Url | URL to the repo storing utilities for the desired stack version. | http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.21/repos/centos7 |
 
+**Related Links**  
+[Ambari Repositories](https://docs.hortonworks.com/HDPDocuments/Ambari-2.5.2.0/bk_ambari-installation/content/ambari_repositories.html) (Hortonworks)   
+[HDP Repositories](https://docs.hortonworks.com/HDPDocuments/Ambari-2.5.2.0/bk_ambari-installation/content/hdp_stack_repositories.html) (Hortonworks)   
+ 
+
 #### Prewarmed Images 
 
 No prewarmed images are provided and this selection is disabled. 
