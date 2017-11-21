@@ -176,12 +176,3 @@ To delete a default or custom blueprint, perform these steps.
 
 3. Confirm delete. 
 
-
-
-### Modifying Existing Blueprints
-
-You cannot directly modify default blueprints.
-
-Similarly, you cannot directly modify the custom blueprints that you have uploaded or pasted. However, If you provided a URL to the location where the blueprint is stored, in order to modify the blueprint simply update it in the location to which the URL is pointing.       
-
-

@@ -61,11 +61,3 @@ To add a recipe, perform these steps.
 
 You can delete previously added items by selecting and item and using the **delete** option. 
 
-### Modifying Existing Recipes 
-
-To modify previously added recipes:
-
-* If you pasted or uploaded your recipe in the Cloudbreak UI, in order to modify it you must delete the entry and add the recipe again in a new entry.   
-* If you provided a URL to the location where the recipe is stored, in order to modify the recipe simply update it in the location to which the URL is pointing.       
-
-
