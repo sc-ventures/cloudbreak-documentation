@@ -28,7 +28,7 @@ proxy=http://10.0.0.133:3128
 ENDOF
 ```
 
-### Adding Recipes
+### Add Recipes
 
 To add a recipe, perform these steps.
 
@@ -57,7 +57,7 @@ To add a recipe, perform these steps.
 
 
 
-### Deleting Recipes
+### Delete Recipes
 
 You can delete previously added items by selecting and item and using the **delete** option. 
 

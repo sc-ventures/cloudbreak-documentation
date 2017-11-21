@@ -1,8 +1,8 @@
 ## Blueprints
 
-**Ambari blueprints** are your declarative definition of a Hadoop cluster, defining the host groups and which components to install on which host group. Ambari uses them as a base for your clusters. 
+**Ambari blueprints** are your declarative definition of your HDP cluster, defining the host groups and which components to install on which host group. Ambari uses them as a base for your clusters. 
 
-You have three options concerning using blueprints with Cloudbreak:
+You have two options concerning using blueprints with Cloudbreak:
 
 * Use one of the pre-defined blueprints.    
 * Add your custom blueprint by uploading a JSON file or pasting the JSON text. 
@@ -31,25 +31,17 @@ Platform Version: **HDP 2.6**
 | BI | <span><i class="fa fa-warning" style="color: orange"></i> Druid 0.9.2</span> | Technical preview of Druid. | HDFS, YARN, MapReduce2, Tez, Druid, Sqoop, ZooKeeper, Ambari Metrics | 
 
 
-
-<div class="note">
-    <p class="first admonition-title">Choosing Your Configuration</p>
-    <p class="last">
-When creating a cluster, you can choose a more stable cluster configuration for a predicable experience.
-Alternatively, you can try the latest capabilities by choosing a cluster configuration
-that is much more experimental. The following configuration classification applies:
+The following configuration classification applies:
 <ul>
 <li><i class="fa fa-check" style="color: green"></i> Stable configurations are the best choice if you want to avoid issues and other problems with launching and using clusters.</li>
 <li><i class="fa fa-warning" style="color: orange"></i> If you want to use a Technical Preview version of a component in a release of HDP, use these configurations.</li>
 <li><i class="fa fa-warning" style="color: red"></i> These are the most cutting edge of the configurations, including Technical Preview components in a Technical Preview HDP release.</li>
 </ul>
-</p>
-</div> 
 
 
-### Add Custom Blueprint
+### Use Custom Blueprint
 
-This option allows you to save your custom blueprints. For correct blueprint layout and other useful information about Ambari blueprints, refer to the [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) page.
+This option allows you to create and save your custom blueprints. For correct blueprint layout and other useful information about Ambari blueprints, refer to the [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) page.
 
 <div class="note">
     <p class="first admonition-title">Supported Ambari and HDP Versions</p>
