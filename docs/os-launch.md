@@ -44,7 +44,7 @@ In order to launch Cloudbreak, you must have an existing security group with the
 
 For information about OpenStack security groups, refer to the [OpenStack Administrator Guide](https://docs.openstack.org/ops-guide/index.html).
 
-**Related Links** 
+**Related Links**   
 [OpenStack Administrator Guide](https://docs.openstack.org/ops-guide/index.html) (External)    
 
 ### Import Images to OpenStack 
