@@ -20,7 +20,7 @@
 
 The Cloudbreak application is a web application that communicates with the cloud provider account to create cloud resources on your behalf. Once the cloud resources are in place, Cloudbreak uses Apache Ambari to deploy and configure the cluster on cloud VMs. Once your cluster is deployed, you can use Cloudbreak to monitor and manage the cluster. 
 
-<a href="../images/arch-app.png" target="_blank" title="click to enlarge"><img src="../images/arch-app.png" width="500" title="Cloudbreak architecture"></a> 
+<a href="../images/arch.png" target="_blank" title="click to enlarge"><img src="../images/arch.png" width="500" title="Cloudbreak architecture"></a> 
 
 Cloudbreak application is built on the foundation of cloud provider APIs and Apache Ambari:
 
