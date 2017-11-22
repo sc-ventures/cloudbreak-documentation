@@ -55,7 +55,7 @@ ____________________________
 #### Fixed Issues 
 ____________________________
 
-The following issues have been fixed in Cloudbreak 2.2 TP: 
+The following issues have been fixed in Cloudbreak 2.2.0 TP: 
 
 | Jira |  Description |
 |---|---|
@@ -68,7 +68,9 @@ ____________________________
 
 ##### (RMP-10114) Auto-scaling Is Not Available
 
-Auto-scaling functionality is not available in Cloudbreak 2.1.0 TP. 
+Auto-scaling functionality is not available in Cloudbreak 2.2.0 TP. 
+
+[comment]: <> (This should be available in 2.2.0 TP)
 ____________________________
 
 ##### (BUG-91835) Default Ambari Node Security Group Has Port 9443 Inbound CIDR Set to 0.0.0.0/0 
