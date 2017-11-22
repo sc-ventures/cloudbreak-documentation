@@ -1,4 +1,3 @@
-
 ## Manage Cloudbreak Database
 
 By default, Cloudbreak uses a built-in PostgreSQL database to persist data. For production environments, we suggest that you use an external database, an RDS served by your cloud provider. However, if you choose to use the default database, you should know that Cloudbreak deployer includes features for dumping and restoring built-in databases.
@@ -86,9 +85,10 @@ To configure an external PostgreSQL database for Cloudbreak, perform these steps
 
 1. Stop your running Cloudbreak application by using the `cbd kill` command.  
 
-[Comment]: <> (Or `docker exec -it cbreak_commondb_1 bash`) 
+[Comment]: <> (Or `docker exec -it cbreak_commondb_1 bash` ?)
  
-2. Create three database dumps (cbdb, uaadb, periscopedb) and save them to the host:  
+ 
+2. Create three database dumps (cbdb, uaadb, periscopedb) and save them to the host instance:  
 
     <pre><small>cbd db dump common cbdb
 cbd db dump common uaadb
@@ -111,7 +111,7 @@ create database periscopedb;</small></pre>
 
 5. Exit the external database's management interface.  
     
-6. Import the previously exported dump for each database. This can be done by executing the following commands:
+6. For each database that you just created, import the previously exported dump. This can be done by executing the following commands:
 
     <pre><small>docker exec -i cbreak_commondb_1 psql -U postgres cbdb < cbdb.sql
     docker exec -i cbreak_commondb_1 psql -U postgres uaadb < uaadb.sql
@@ -144,5 +144,7 @@ create database periscopedb;</small></pre>
 
 8. Start Cloudbreak application by using the `cbd start` command. 
 
-[Comment]: <> (@Peter D, How can I verify these steps worked?)
+[Comment]: <> (How can I verify these steps worked? You can try to kill the local common_db container, the application should be able to continue to run)
 
+
+ 
