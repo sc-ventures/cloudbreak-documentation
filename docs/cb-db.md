@@ -84,7 +84,10 @@ To configure an external PostgreSQL database for Cloudbreak, perform these steps
 
 **Steps**
 
-1. Stop your running Cloudbreak application by using the `cbd kill` command.   
+1. Stop your running Cloudbreak application by using the `cbd kill` command.  
+
+[Comment]: <> (Or `docker exec -it cbreak_commondb_1 bash`) 
+ 
 2. Create three database dumps (cbdb, uaadb, periscopedb) and save them to the host:  
 
     <pre><small>cbd db dump common cbdb
