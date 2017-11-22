@@ -31,6 +31,10 @@ A user with an "Owner" role can assign roles or access rules to service accounts
 **Related Links**  
 [Service Account Credentials](https://cloud.google.com/storage/docs/authentication#service_accounts) (External)  
 
+#### SSH Key Pair 
+
+[Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or use an existing SSH key pair. You must provide it when launching the VM.  
+
 
 #### VPC Network 
 
