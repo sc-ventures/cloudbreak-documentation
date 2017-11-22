@@ -70,7 +70,6 @@ ____________________________
 
 Auto-scaling functionality is not available in Cloudbreak 2.2.0 TP. 
 
-[comment]: <> (This should be available in 2.2.0 TP)
 ____________________________
 
 ##### (BUG-91835) Default Ambari Node Security Group Has Port 9443 Inbound CIDR Set to 0.0.0.0/0 
@@ -118,7 +117,7 @@ When creating a cluster via Cloubdreak web UI, you may experience an issue where
 ____________________________
 
 
-##### (BUG-91674) Network and Subnet Listed as N/A
+##### (BUG-91810) Network and Subnet Listed as N/A
 
 When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "N/A".
 
