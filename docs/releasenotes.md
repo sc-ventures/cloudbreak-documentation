@@ -1,16 +1,22 @@
 ## Release Notes
 
+### 2.2.0 TP
 
-### 2.2.0 TP 
-
-This release is technical preview: it is not suitable for production environments.
+The Cloudbreak 2.2.0 TP release is technical preview: it is not suitable for production environments.
 
 ____________________________
 
 #### New Features
 ____________________________
 
+##### New UI/UX
 
+Cloudbreak 2.1.0 TP introduces a new user interface.
+
+
+##### New CLI
+
+Cloudbreak 2.1.0 TP introduces a new CLI tool. For more information, refer to the [Install CLI](cli-install.md) and [CLI Reference](cli-reference.md) documentation. 
 
 
 ____________________________
@@ -18,18 +24,42 @@ ____________________________
 #### Behavioral Changes
 ____________________________
 
+##### Creating Custom Images 
+
+The functionality which enables you to create custom images was changed and improved. Refer to  [Custom Images](images.md).
 
 
 
+##### Removal of Cloudbreak Shell 
+
+Cloudbreak Shell is no longer available in Cloudbreak 2.1.0 TP and later. It was replaced by the [Cloudbreak CLI](cli-install.md).
+
+
+
+##### Removal of Platforms 
+
+The [platforms](http://hortonworks.github.io/cloudbreak-docs/release-1.16.4/topologies/) feature was removed. 
+
+
+##### Removal of Mesos 
+
+Cloudbreak 2.1.0 TP does not support Mesos cloud provider.
+
+
+##### Removal of Templates
+
+Earlier versions of Cloudbreak allowed you to save infrastructure, network, and security group templates. This feature was removed. Instead, you can define VMs, storage, networks, and security groups as part of the create cluster wizard. 
 
 ____________________________
 
-#### Fixed Issues
+#### Fixed Issues 
 ____________________________
 
+The following issues have been fixed in Cloudbreak 2.2 TP: 
 
-
- 
+| Jira |  Description |
+|---|---|
+|   |   |
 
 ____________________________
 
@@ -156,58 +186,6 @@ If your recipe description is longer than 255 characters, you will get the error
 *Workaround*: Shorten the recipe description to less than 255 characters.    
 ____________________________
 
-
-
-
-### 2.1.0 TP 
-
-This release is technical preview: it is not suitable for production environments.
-
-____________________________
-
-#### New Features
-____________________________
-
-##### New UI/UX
-
-Cloudbreak 2.1.0 TP introduces a new user interface.
-
-
-##### New CLI
-
-Cloudbreak 2.1.0 TP introduces a new CLI tool. For more information, refer to the [Install CLI](cli-install.md) and [CLI Reference](cli-reference.md) documentation. 
-
-
-____________________________
-
-#### Behavioral Changes
-____________________________
-
-##### Creating Custom Images 
-
-The functionality which enables you to create custom images was changed and improved. Refer to  [Custom Images](images.md).
-
-
-
-##### Removal of Cloudbreak Shell 
-
-Cloudbreak Shell is no longer available in Cloudbreak 2.1.0 TP and later. It was replaced by the [Cloudbreak CLI](cli-install.md).
-
-
-
-##### Removal of Platforms 
-
-The [platforms](http://hortonworks.github.io/cloudbreak-docs/release-1.16.4/topologies/) feature was removed. 
-
-
-##### Removal of Mesos 
-
-Cloudbreak 2.1.0 TP does not support Mesos cloud provider.
-
-
-##### Removal of Templates
-
-Earlier versions of Cloudbreak allowed you to save infrastructure, network, and security group templates. This feature was removed. Instead, you can define VMs, storage, networks, and security groups as part of the create cluster wizard. 
 
 
 
