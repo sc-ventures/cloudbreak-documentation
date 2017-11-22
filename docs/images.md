@@ -19,9 +19,8 @@ Since these standard default images may not fit the requirements of some users (
 In order to use your own custom base images you must:
 
 1. Build your custom images  
-2. Prepare the image catalog JSON file   
-3. Save the JSON file in a location accessible to the Cloudbreak VM  
-3. Register your custom images with Cloudbreak    
+2. Prepare the image catalog JSON file  
+3. Register your custom images with Cloudbreak   
 4. Select a custom image when creating a cluster  
 
 <div class="danger">
@@ -40,9 +39,24 @@ Refer to [Custom Images for Cloudbreak](https://github.com/hortonworks/cloudbrea
 This repository includes instructions and scripts to help you build custom images. Once you have the images, refer to the documentation below for information on how to create an image catalog and register it with Cloudbreak.
 
 
-### Prepare the Image Catalog 
+### Preparing the Image Catalog 
 
-Once you've built the custom images, prepare your custom image catalog JSON file. 
+**(Option 1) Image Catalog on the Cloudbreak VM**
+
+Once you've built the custom images, create the `custom-image-catalog.json` file and save it on your Cloudbreak machine in the `/var/lib/cloudbreak-deployment/etc` directory. The etc directory does not exist by default so you must create it. For example:
+
+<pre>cd /var/lib/cloudbreak-deployment
+mkdir etc
+vi custom-image-catalog.json</pre>
+
+The structure of the image catalog JSON file file and an example image catalog JSON file are provided below. 
+
+
+**(Option 2) Remote Image Catalog** 
+
+As an alternative to creating the `custom-image-catalog.json` image catalog on the Cloudbreak VM you can place the `custom-image-catalog.json` file in a location accessible via HTTP/HTTPS.   
+
+The structure of the image catalog JSON file file and an example image catalog JSON file are provided below. 
  
 
 #### Structure of the Image Catalog JSON File 
@@ -58,9 +72,9 @@ The burned images are stored in the `base-images` sub-section of `images`. The `
 
 | Parameter | Description |
 |---|---|
-| date | (Optional) Date for your image catalog entry. |
-| description | (Optional) Description for your image catalog entry. |
-| images | The image sets by cloud provider. An image set must store the virtual machine image IDs by the related region of the provider (AWS, Azure) or contain one default image for all regions (GCP, OpenStack). The virtual machine image IDs come from the result of the image burning process and must be an existing identifier of a virtual machine image on the related provider side. For the providers which use global rather than per-region images, the region should be replaced with **`default`**. |
+| date | Date for your image catalog entry. |
+| description | Description for your image catalog entry. |
+| images | The image sets by cloud provider. An image set must store the virtual machine image IDs by the related region of the provider (AWS, Azure) or contain a one default image for all regions (GCP, OpenStack). The virtual machine image IDs come from the result of the image burning process and must be an existing identifier of a virtual machine image on the related provider side. For the providers which use global rather than per-region images, the region should be replaced with **`default`**. |
 | os | The operating system used in the image. |
 | os_type | The type of operating system which will be used to determine the default Ambari and HDP repositories to use. Set `os_type` to "redhat6" for amazonlinux or centos6 images. Set `os_type` to "redhat7" for centos7 or rhel7 images. |
 | uuid | The `uuid` field must be a unique identifier within the file. You can generate it or select it manually. The utility `uuidgen` available from your command line is a convenient way to generate a unique ID. |
@@ -180,27 +194,6 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
 }
 </pre>
 
-### Save the Image Catalog 
-
-Once your image catalog JSON file is ready, you have two options for where to place it:
-
-* You can save your image catalog an the Cloudbreak VM  
-* You can save it in a location accessible to Cloudbreak via HTTP/HTTPS    
-
-#### Save Image Catalog on the Cloudbreak VM
-
-Once you've built the custom images, create the image catalog JSON file and save it on your Cloudbreak machine in the `/var/lib/cloudbreak-deployment/etc` directory. The etc directory does not exist by default so you must create it. For example:
-
-<pre>cd /var/lib/cloudbreak-deployment
-mkdir etc
-vi custom-image-catalog.json</pre>
-
-
-
-#### Create a Remote Image Catalog
-
-As an alternative to creating the image catalog JSON file on the Cloudbreak VM you can place it in a location accessible via HTTP/HTTPS.   
-
 
 ### Register Custom Images
 
@@ -223,8 +216,6 @@ Now that you have created your image catalog JSON file, register it with your Cl
 
 Once you have registered your image catalog, you can use your custom image(s) when creating a cluster. 
 
-**Select a Custom Image in Cloudbreak UI**
-
 In the web UI, your custom image should be available under the **Choose OS Type** in the advanced **General Configuration** section of the wizard:
 
 <a href="../images/cb-images.png" target="_blank" title="click to enlarge"><img src="../images/cb-images.png" width="650" title="Cloudbreak UI"></a>
@@ -232,8 +223,6 @@ In the web UI, your custom image should be available under the **Choose OS Type*
 The "os" that you specified in the image catalog will be displayed in the selection and the content of the "description" will be displayed in green.  
 
 You can leave the default entries for the Ambari and HDP repositories, or you can customize to point to specific versions of Ambari and HDP that you want to use for the cluster. 
-
-**Select a Custom Image in CLI**
 
 In the CLI, to use the custom image when creating a cluster, add the "ImageId" parameter and set it to the uuid of the image(s) registered. For example: 
 
