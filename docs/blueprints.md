@@ -99,17 +99,6 @@ Cloudbreak requires you to define an additional element in the blueprint called 
   ...
 </pre>
 
-If using Kerberos, add an additional "security" element. For example:   
-
-<pre>  "Blueprints" : {
-    "blueprint_name": "hdp-small-default",
-    "stack_name" : "HDP",
-    "stack_version" : "2.6",
-    "security" : {
-         "type" : "KERBEROS",
-         "kerberos_descriptor" : {
-    ...
-</pre>
 
 After you provide the blueprint to Cloudbreak, the host groups in the JSON will be mapped to a set of instances when starting the cluster, and the specified services and components will be installed on the corresponding nodes. It is not necessary to define a complete configuration in the blueprint. If a configuration is missing, Ambari will use a default value. 
 
