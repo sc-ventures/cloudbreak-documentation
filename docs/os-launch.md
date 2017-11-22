@@ -59,20 +59,20 @@ Import Cloudbreak deployer image using the following steps.
 
 1. Download the latest Cloudbreak deployer image to your local machine: 
 
-    <pre>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer-1165-2017-11-17.img</pre>
+    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer-1165-2017-11-17.img</small></pre>
     
 2. Set the following environment variables for the OpenStack image import: 
 
-    <pre>export CBD_LATEST_IMAGE=cloudbreak-deployer-1165-2017-11-17.img
+    <pre><small>export CBD_LATEST_IMAGE=cloudbreak-deployer-1165-2017-11-17.img
 export OS_IMAGE_NAME=cloudbreak-deployer-1165-2017-11-17.img
 export OS_USERNAME=your_os_user_name
 export OS_AUTH_URL=your_authentication_url
-export OS_TENANT_NAME=your_os_tenant_name</pre>
+export OS_TENANT_NAME=your_os_tenant_name</small></pre>
 
 
 3. Import the new image into your OpenStack:
 
-    <pre>glance image-create --name "$OS_IMAGE_NAME" --file "$CBD_LATEST_IMAGE" --disk-format qcow2 --container-format bare --progress</pre> 
+    <pre><small>glance image-create --name "$OS_IMAGE_NAME" --file "$CBD_LATEST_IMAGE" --disk-format qcow2 --container-format bare --progress</small></pre> 
 
 After performing the import, you should be able to see the Cloudbreak deployer image among your other OpenStack images. 
 
@@ -87,19 +87,19 @@ Import HDP image using the following steps.
     
 1. Download the latest HDP image to your local machine: 
 
-    <pre>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/hdc-hdp--1706141444.img</pre>
+    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/hdc-hdp--1706141444.img</small></pre>
 
 2. Set the following environment variables for the OpenStack image import: 
 
-    <pre>export CB_LATEST_IMAGE=hdc-hdp--1706141444.img 
+    <pre><small>export CB_LATEST_IMAGE=hdc-hdp--1706141444.img 
 export CB_LATEST_IMAGE_NAME=hdc-hdp--1705081316.img
 export OS_USERNAME=your_os_user_name
 export OS_AUTH_URL=your_authentication_url
-export OS_TENANT_NAME=your_os_tenant_name</pre>
+export OS_TENANT_NAME=your_os_tenant_name</small></pre>
 
 3. Import the new image into your OpenStack:
 
-    <pre>glance image-create --name "$CB_LATEST_IMAGE_NAME" --file "$CB_LATEST_IMAGE" --disk-format qcow2 --container-format bare --progress</pre>
+    <pre><small>glance image-create --name "$CB_LATEST_IMAGE_NAME" --file "$CB_LATEST_IMAGE" --disk-format qcow2 --container-format bare --progress</small></pre>
 
 After performing the import, you should be able to see the Cloudbreak image among your OpenStack images. 
 

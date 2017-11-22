@@ -73,23 +73,23 @@ To use your own certificate, you must have:
 
 1. SSH to the Cloudbreak host instance:
 
-    <pre>ssh -i mykeypair.pem cloudbreak@[CONTROLLER-IP-ADDRESS]</pre>
+    <pre><small>ssh -i mykeypair.pem cloudbreak@[CONTROLLER-IP-ADDRESS]</small></pre>
     
 2. Make sure that the target fully qualified domain name (FQDN) which you plan to use for Cloudbreak is resolvable:
 
-    <pre>nslookup [TARGET-CONTROLLER-FQDN]</pre>
+    <pre><small>nslookup [TARGET-CONTROLLER-FQDN]</small></pre>
     
     For example:
 
-    <pre>nslookup hdcloud.example.com</pre>
+    <pre><small>nslookup hdcloud.example.com</small></pre>
     
 3. Browse to the Cloudbreak deployment directory and edit the `Profile` file:
 
-    <pre>vi /var/lib/cloudbreak-deployment/Profile</pre>
+    <pre><small>vi /var/lib/cloudbreak-deployment/Profile</small></pre>
     
 4. Replace the value of the `PUBLIC_IP` variable with the `TARGET-CONTROLLER-FQDN` value:
 
-    <pre>PUBLIC_IP=[TARGET-CONTROLLER-FQDN]</pre>
+    <pre><small>PUBLIC_IP=[TARGET-CONTROLLER-FQDN]</small></pre>
     
 5. Copy your private key and certificate files for the FQDN onto the Cloudbreak host. These files must be placed under `/var/lib/cloudbreak-deployment/certs/traefik/` directory.
 
@@ -104,15 +104,15 @@ To use your own certificate, you must have:
 
     > Notice that `CERT-LOCATION` and `PRIV-KEY-LOCATION` are file locations from Step 5, starting at the `/certs/...` path.
 
-    <pre>export CBD_TRAEFIK_TLS=”[CERT-LOCATION],[PRIV-KEY-LOCATION]”</pre>
+    <pre><small>export CBD_TRAEFIK_TLS=”[CERT-LOCATION],[PRIV-KEY-LOCATION]”</small></pre>
     
     For example:
 
-    <pre>export CBD_TRAEFIK_TLS="/certs/traefik/hdcloud.example.com.crt,/certs/traefik/hdcloud.example.com.key"</pre>
+    <pre><small>export CBD_TRAEFIK_TLS="/certs/traefik/hdcloud.example.com.crt,/certs/traefik/hdcloud.example.com.key"</small></pre>
     
 7. Restart Cloudbreak deployer:
 
-    <pre>cbd restart</pre>
+    <pre><small>cbd restart</small></pre>
     
 8. Using your web browser, access to the Cloudbreak UI using the new resolvable fully qualified domain name.
 

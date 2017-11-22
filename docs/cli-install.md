@@ -21,7 +21,7 @@ After you have launched Cloudbreak, the CLI is available for download from that 
 6. You can optionally add `cb` to your system path.
 7. Run the executable to verify the CLI: 
 
-    <pre>cb --version</pre>
+    <pre><small>cb --version</small></pre>
 
 
 ### Configure the CLI 
@@ -39,18 +39,18 @@ Once you have installed the CLI, you need to configure the CLI to work with Clou
     
     For example:
     
-    <pre>cb configure --server https://ec2-11-111-111-11.compute-1.amazonaws.com --username admin@hortonworks.com</pre>
+    <pre><small>cb configure --server https://ec2-11-111-111-11.compute-1.amazonaws.com --username admin@hortonworks.com</small></pre>
 
 2. The CLI configuration file will be saved at `~/.cb/config`. The content will look similar to the following:
 
-    <pre>default:
+    <pre><small>default:
   username: admin@hortonworks.com
-  server: https://ec2-11-111-111-11.compute-1.amazonaws.com</pre>
+  server: https://ec2-11-111-111-11.compute-1.amazonaws.com</small></pre>
 
 
 3. Run any command to verify that you can connect to the Cloudbreak instance via CLI. For example:
 
-    <pre>cb list-clusters</pre>  
+    <pre><small>cb list-clusters</small></pre>  
 
 
 <div class="note">
@@ -68,17 +68,17 @@ Once you have installed the CLI, you need to configure the CLI to work with Clou
 
 If you are using multiple profiles for multiple environments, you can configure them using the `cb configure` command and passing the name of your environment-specific profile file using the `--profile` parameter. After running the command, the configuration will be added as a new entry to the `config` file. For example, running the following command `cb configure --server https://192.167.65.4 --username test@hortonworks.com --profile staging` will add the "staging" entry:
 
-<pre>default:
+<pre><small>default:
   username: admin@hortonworks.com
   server: https://192.167.65.4
 staging:
   username: test@hortonworks.com
   server: https://192.167.65.4  
-</pre>
+</small></pre>
 
 For example:
 
-<pre>#cb configure --server https://192.167.65.4 --username test@hortonworks.com --profile staging
+<pre><small>#cb configure --server https://192.167.65.4 --username test@hortonworks.com --profile staging
 INFO:  [writeConfigToFile] dir already exists: /Users/rkovacs/.cb
 INFO:  [writeConfigToFile] writing credentials to file: /Users/rkovacs/.cb/config
 # cat /Users/rkovacs/.cb/config
@@ -88,7 +88,7 @@ default:
   output: table
 staging:
   username: test@hortonworks.com
-  server: https://192.167.65.4</pre>
+  server: https://192.167.65.4</small></pre>
  
 
 
@@ -96,10 +96,10 @@ staging:
 
 By default, JSON format is used in command output. For example, if you run `cb list-clusters` without specifying output type, the output will be JSON. If you would like to change default output, add it to the config file. For example:
 
-<pre>default:
+<pre><small>default:
   username: admin@hortonworks.com
   server: https://192.167.65.4
-  output: table</pre>
+  output: table</small></pre>
 
 
 ### Get Started with the CLI 
@@ -140,19 +140,19 @@ For a full list of commands, refer to [CLI Reference](cli-reference.md).
 
 To get CLI help, you can add help to the end of a command. The following will list help for the CLI at the top-level:
 
-<pre>cb help</pre>
+<pre><small>cb help</small></pre>
 
 or 
 
-<pre>cb h</pre>
+<pre><small>cb h</small></pre>
 
 The following will list help for the create-cluster command, including its command options and global options:
 
-<pre>cb create-cluster help</pre>
+<pre><small>cb create-cluster help</small></pre>
 
 or
 
-<pre>cb create-cluster h</pre> 
+<pre><small>cb create-cluster h</small></pre> 
 
 
 

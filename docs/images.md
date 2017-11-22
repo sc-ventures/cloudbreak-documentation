@@ -94,7 +94,7 @@ Here is an example image catalog JSON file that includes two sets of custom base
 You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/custom-image-catalog.json).
 
 
-<pre>
+<pre><small>
 {
   "images": {
     "base-images": [
@@ -178,7 +178,7 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
     ]
   }
 }
-</pre>
+</small></pre>
 
 ### Save the Image Catalog 
 
