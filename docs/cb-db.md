@@ -76,7 +76,7 @@ By default Cloudbreak uses a built-in PostgreSQL database but you can optionally
 | External Oracle | Not supported |
 | External SQL Server | Not supported |
 
-#### Configure External Database for Cloudbreak 
+#### Configure an External Database for Cloudbreak 
 
 To configure an external PostgreSQL database for Cloudbreak, perform these steps. 
 
@@ -98,9 +98,9 @@ docker run --rm -v cbreak_dump:/dump -it alpine cat /dump/periscopedb/latest/dum
  
 4. On your external database, create three databases: `cbdb, uaadb, periscopedb`. If you would not like to change any database specifics (such as Owner, Tablespace), you can create these databases using the following commands:
    
-    <pre>create database cbdb;
+    <pre><small>create database cbdb;
 create database uaadb;
-create database periscopedb;</pre>
+create database periscopedb;</small></pre>
         
     For more information refer to the [PostgreSQL documentation](https://www.postgresql.org/docs/9.6/static/sql-createdatabase.html).
 
