@@ -36,7 +36,7 @@ Before launching Cloudbreak on OpenStack, you must meet the following prerequisi
 
 #### SSH Key Pair 
 
-Create a new SSH key pair or import an existing SSH key pair. 
+[Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or import an existing SSH key pair. 
 
 #### Security Group  
 

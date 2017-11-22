@@ -47,6 +47,10 @@ Clusters created via Cloudbreak can be in the same or different region as Cloudb
 **Related Links**  
 [Regions and Zones](https://cloud.google.com/compute/docs/regions-zones/) (External)  
 
+#### SSH Key Pair 
+
+[Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or use an existing SSH key pair. You must provide it when launching the VM.  
+
 
 ### Launch the VM  
 
