@@ -120,7 +120,7 @@ create database periscopedb;</small></pre>
     For more information refer to the [PostgreSQL documentation](https://www.postgresql.org/docs/9.6/static/backup-dump.html#BACKUP-DUMP-RESTORE).
     
 7. Set the following variables in Cloudbreak Profile file.  
-    Modify the RDS_URL parameter by passing the ENDPOINT:PORT of your external database. Do not need to modify values of any other parameters, as their values are derived from the RDS_URL.
+    Modify the RDS_URL parameter by passing the ENDPOINT:PORT of your external database. There is no need to modify values of any other parameters, as their values are derived from the RDS_URL.
 
     <pre><small>export RDS_URL=localhost:5432
     
