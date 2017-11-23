@@ -81,68 +81,83 @@ An embedded PostgreSQL 9.6.1 database is used by Cloudbreak by default. If you w
 
 To configure an external PostgreSQL database for Cloudbreak, perform these steps. 
 
+<div class="note">
+    <p class="first admonition-title">No data migration</p>
+    <p class="last">
+    If you do not want to migrate data from the embedded database to the external one, you should only complete steps <i>#6</i>, <i>#7</i> and <i>#9</i> and the application will automatically create the default content for the databases on the first launch. 
+    </p>
+</div>
+  
+
 **Steps**
 
-1. Stop your running Cloudbreak application by using the `cbd kill` command.  
+1. If it is not running, start the database container with `docker start cbreak_commondb_1` command
 
-[Comment]: <> (Or `docker exec -it cbreak_commondb_1 bash` ?)
+2. Execute `docker exec -it cbreak_commondb_1 bash` command to enter the container of the database.
  
+3. Create three database dumps (cbdb, uaadb, periscopedb):  
+
+    <pre><small>pg_dump -Fc -U postgres cbdb > cbdb.dump
+    pg_dump -Fc -U postgres uaadb > uaadb.dump
+    pg_dump -Fc -U postgres periscopedb > periscopedb.dump</small></pre>
+                
+4. Quit from the container with shortcut `CTRL+d`
+
+5. Save the previously created dumps to the host instance:               
+
+    <pre><small>docker cp cbreak_commondb_1:/cbdb.dump ./cbdb.dump
+    docker cp cbreak_commondb_1:/uaadb.dump ./uaadb.dump
+    docker cp cbreak_commondb_1:/periscopedb.dump ./periscopedb.dump</small></pre>
+
+6. Set the following environment variables according to the settings of your external database:
+
+    <pre><small>export RDS_URL=localhost:5432
+    export RDS_USER=admin
+    export PGPASSWORD=admin123
+    </small></pre>
  
-2. Create three database dumps (cbdb, uaadb, periscopedb) and save them to the host instance:  
-
-    <pre><small>cbd db dump common cbdb
-cbd db dump common uaadb
-cbd db dump common periscopedb</small></pre>
-
-    <pre><small>docker run --rm -v cbreak_dump:/dump -it alpine cat /dump/cbdb/latest/dump.sql > cbdb.sql
-docker run --rm -v cbreak_dump:/dump -it alpine cat /dump/uaadb/latest/dump.sql > uaadb.sql
-docker run --rm -v cbreak_dump:/dump -it alpine cat /dump/periscopedb/latest/dump.sql > periscopedb.sql</small></pre>
-
-
-3. Log in to the management interface of your external database.
- 
-4. On your external database, create three databases: `cbdb, uaadb, periscopedb`. If you would not like to change any database specifics (such as Owner, Tablespace), you can create these databases using the following commands:
+7. On your external database, create three databases: `cbdb, uaadb, periscopedb`. If you would not like to change any database specifics (such as Owner, Tablespace), you can create these databases using the `createdb` utility with the following commands:
    
-    <pre><small>create database cbdb;
-create database uaadb;
-create database periscopedb;</small></pre>
+    <pre><small>createdb -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} cbdb
+    createdb -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} uaadb
+    createdb -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} periscopedb</small></pre>
         
-    For more information refer to the [PostgreSQL documentation](https://www.postgresql.org/docs/9.6/static/sql-createdatabase.html).
+    For more information refer to the [PostgreSQL documentation](https://www.postgresql.org/docs/9.6/static/app-createdb.html) . Alternatively, you can log in to the management interface of your external database and execute `create database` commands [directly](https://www.postgresql.org/docs/9.6/static/sql-createdatabase.html). 
+     
+8. For each database that you just created, import the previously exported dump. This can be done by executing the following commands:
 
-5. Exit the external database's management interface.  
+    <pre><small>pg_restore -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} --no-owner --role=${RDS_USER} -n public -d cbdb ./cbdb.dump
+    pg_restore -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} --no-owner --role=${RDS_USER} -n public -d uaadb ./uaadb.dump
+    pg_restore -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} --no-owner --role=${RDS_USER} -n public -d periscopedb ./periscopedb.dump</small></pre>
     
-6. For each database that you just created, import the previously exported dump. This can be done by executing the following commands:
-
-    <pre><small>docker exec -i cbreak_commondb_1 psql -U postgres cbdb < cbdb.sql
-    docker exec -i cbreak_commondb_1 psql -U postgres uaadb < uaadb.sql
-    docker exec -i cbreak_commondb_1 psql -U postgres periscopedb < periscopedb.sql</small></pre>
+    For more information refer to the [PostgreSQL documentation](https://www.postgresql.org/docs/9.6/static/app-pgrestore.html).
     
-    For more information refer to the [PostgreSQL documentation](https://www.postgresql.org/docs/9.6/static/backup-dump.html#BACKUP-DUMP-RESTORE).
-    
-7. Set the following variables in Cloudbreak Profile file.  
+9. Set the following variables in Cloudbreak Profile file.  
     Modify the RDS_URL parameter by passing the ENDPOINT:PORT of your external database. There is no need to modify values of any other parameters, as their values are derived from the RDS_URL.
 
     <pre><small>export RDS_URL=localhost:5432
+    export RDS_USER=admin
+    export RDS_PASS=admin123
     
     export CB_DB_PORT_5432_TCP_ADDR=${RDS_URL%%:*}
     export CB_DB_PORT_5432_TCP_PORT=${RDS_URL##*:}
-    export CB_DB_ENV_USER=postgres
-    export CB_DB_ENV_PASS=postgres
-    export CB_DB_ENV_DB=cloudbreak_database_name
+    export CB_DB_ENV_USER=$RDS_USER
+    export CB_DB_ENV_PASS=$RDS_PASS
+    export CB_DB_ENV_DB=cbdb
     
     export PERISCOPE_DB_TCP_ADDR=${RDS_URL%%:*}
     export PERISCOPE_DB_TCP_PORT=${RDS_URL##*:}
-    export PERISCOPE_DB_USER=postgres
-    export PERISCOPE_DB_PASS=postgres
-    export PERISCOPE_DB_NAME=autoscale_database_name
-    export PERISCOPE_DB_SCHEMA_NAME=autoscale_schema_name
+    export PERISCOPE_DB_USER=$RDS_USER
+    export PERISCOPE_DB_PASS=$RDS_PASS
+    export PERISCOPE_DB_NAME=periscopedb
+    export PERISCOPE_DB_SCHEMA_NAME=public
     
     export IDENTITY_DB_URL=$RDS_URL
-    export IDENTITY_DB_USER=postgres
-    export IDENTITY_DB_PASS=postgres
-    export IDENTITY_DB_NAME=ideontity_database_name</small></pre>
+    export IDENTITY_DB_USER=$RDS_USER
+    export IDENTITY_DB_PASS=$RDS_PASS
+    export IDENTITY_DB_NAME=uaadb</small></pre>
 
-8. Start Cloudbreak application by using the `cbd start` command. 
+8. Start Cloudbreak application by using the `cbd restart` command. 
 
 [Comment]: <> (How can I verify these steps worked? You can try to kill the local common_db container, the application should be able to continue to run)
 
