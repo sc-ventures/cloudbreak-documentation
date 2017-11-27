@@ -186,11 +186,12 @@ Each entry in the report represents one cluster instance group. For each entry, 
 
 * **Created** - The date when your cluster was created (YYYY-MM-DD).
 * **Provider** - The name of the cloud provider (AWS, Azure, Google, or OpenStack) on which the cluster instances are/were running.
-* **Cluster Name** - The name that you selected for the cluster.
-* **Worker Count** - The number of worker nodes in the cluster. This number may be a decimal if a cluster has been resized.
-* **Instance Type** - Provider-specific VM type of the cluster instances.
-* **Instance Group** - The name of the instance group.  
-* **Region** - The AWS region in which your cluster is running.
+* **Cluster Name** - The name that you selected for the cluster.  
+* **Instance Group** - The name of the host group.   
+* **Instance Count** - The number of nodes in the host group. This number may be a decimal if a cluster has been resized.
+* **Instance Type** - Provider-specific VM type of the cluster instances. 
+* **Region** - The AWS region in which your cluster is/was running.
+* **Availability Zone** - The availability zone in which your cluster is/was running.      
 * **Running Time (hours)** - The sum of the running times for all the nodes in the instance group.
 
 The **AGGREGATE RUNNING TIME** is the sum of the Running Times, adjusted for the selected time range.

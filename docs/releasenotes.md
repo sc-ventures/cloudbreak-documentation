@@ -59,8 +59,12 @@ The following issues have been fixed in Cloudbreak 2.2.0 TP:
 
 | Jira |  Description |
 |---|---|
-|   |   |
+| BUG-91768 | The *Add* button used for adding tags does not work. |
+| BUG-90848 | "Do Not Use Security Group" option does not work for a new network. | 
+| BUG-91827 | After cluster has been stopped, Event History shows "Infrastructure Has Been Terminated". |
+| BUG-91701 | Cluster resize is unclear: the cluster name and cluster information in the text above the scaling controls are incorrect. | 
 
+ 
 ____________________________
 
 #### Known Issues
@@ -93,11 +97,6 @@ You cannot create a cluster using an existing network that does not have any sub
 ____________________________
 
 
-##### (BUG-90848) "Do Not Use Security Group" Does Not Work for New Network 
-
-In the *Network* section of the create cluster wizard, when you select to create a new network and subnet, there is a security group option "Do Not Use Security Group". This option does not work wen using a new network and subnet: if you select it, new security groups are created. This option will be removed in a future release.
-____________________________
-
 
 ##### (BUG-90985) OpenStack Cluster Creation Fails at Network Configuration
 
@@ -106,14 +105,6 @@ When creating a cluster on OpenStack, if you do not select an existing network a
 *Infrastructure creation failed. Reason: The Parameter (router_id) was not provided.*
 
 *Workaround*: When creating a cluster on OpenStack, you must select an existing network and subnet. 
-____________________________
-
-
-##### (BUG-91768) Adding Tags Is Not Possible 
-
-When creating a cluster via Cloubdreak web UI, you may experience an issue where *Add* button used for adding tags is disabled. 
-
-*Workaround*: Refresh the page or exist and reopen the create cluster wizard. 
 ____________________________
 
 
@@ -159,25 +150,6 @@ Check the *Event History* for more information:
 * In other cases, you should see a message informing you that downscale was successful. It may take a few minutes for this message to appear in the the *Event History*.  
 ____________________________
 
-
-##### (BUG-91701) Cluster Resize Is Unclear 
-
-If you try to resize your cluster, you may notice that the cluster name and cluster information in the text above the scaling controls are incorrect. 
-
-*Workaround*:
-
-* Ignore the "shared-services-demo2" mention and other information in the text above the scaling controls.  
-* Note that by default the controls in the resize dialog are set to the *current* number of nodes. So if your cluster currently has 1 master and 5 worker nodes, the controls will be set to these values by default. To resize, adjust to the desired number of nodes.        
-* Do not resize the Ambari node host group.  
- ____________________________
- 
- 
-##### (BUG-91827) After Cluster Stop Event History Shows "Infrastructure Has Been Terminated"
-
-After you stopped your cluster, you may see the following message in the *Event History*: *Infrastructure have been terminated*.
-
-*Workaround*: If the cluster status is "Stopped" and the preceding messages in the *Event History* confirm that the cluster has been stopped, you can ignore this message.    
-____________________________
 
 
 ##### (BUG-91892) Recipe Name Already Taken Error    
