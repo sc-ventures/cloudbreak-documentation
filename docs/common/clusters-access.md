@@ -36,6 +36,8 @@ The summary bar includes the following information about your cluster:
 
 | Item | Description |
 |---|---|
+| Cluster Name | The name that you selected for your cluster is displayed at the top of the page. |
+| Time To Live | If you enabled lifetime management for your cluster, the clock next to the cluster name indicates the amount of time that your cluster will run before it gets terminated. |
 | Cloud Provider | The logo of the cloud provider on which the cluster is running. |
 | Credential | The name of the credential used to create the cluster. |
 | Status | Current status. When a cluster is healthy, the status is *Running*. |

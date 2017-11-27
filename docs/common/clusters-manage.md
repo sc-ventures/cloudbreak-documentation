@@ -27,7 +27,10 @@ To resize a cluster, follow these steps.
 
 2. Click **Actions** and select **Resize**. The cluster resize dialog is displayed.
 
-3. Using the +/- controls, adjust how many nodes to add or remove from each host group.  
+3. Using the +/- controls, adjust the number of nodes for a chosen host group. 
+
+    > You can only modify one host group at a time.   
+    > It is not possible to resize the Ambari server host group.     
 
 4. Click **Yes** to confirm the scale-up/scale-down.
 
@@ -178,6 +181,8 @@ To generate a report, follow these steps.
 1. From the Cloudbreak UI navigation menu, select **History**.
 
 2. On the History page, select the range of dates and click **Show History** to generate a report for the selected period.
+
+    <a href="../images/cb-history.png" target="_blank" title="click to enlarge"><img src="../images/cb-history.png" width="650" title="Cloudbreak web UI"></a> 
 
 
 #### History Report Content 

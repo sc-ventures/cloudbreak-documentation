@@ -9,14 +9,7 @@ ____________________________
 #### New Features
 ____________________________
 
-##### New UI/UX
-
-Cloudbreak 2.1.0 TP introduces a new user interface.
-
-
-##### New CLI
-
-Cloudbreak 2.1.0 TP introduces a new CLI tool. For more information, refer to the [Install CLI](cli-install.md) and [CLI Reference](cli-reference.md) documentation. 
+TBD
 
 
 ____________________________
@@ -24,31 +17,7 @@ ____________________________
 #### Behavioral Changes
 ____________________________
 
-##### Creating Custom Images 
-
-The functionality which enables you to create custom images was changed and improved. Refer to  [Custom Images](images.md).
-
-
-
-##### Removal of Cloudbreak Shell 
-
-Cloudbreak Shell is no longer available in Cloudbreak 2.1.0 TP and later. It was replaced by the [Cloudbreak CLI](cli-install.md).
-
-
-
-##### Removal of Platforms 
-
-The [platforms](http://hortonworks.github.io/cloudbreak-docs/release-1.16.4/topologies/) feature was removed. 
-
-
-##### Removal of Mesos 
-
-Cloudbreak 2.1.0 TP does not support Mesos cloud provider.
-
-
-##### Removal of Templates
-
-Earlier versions of Cloudbreak allowed you to save infrastructure, network, and security group templates. This feature was removed. Instead, you can define VMs, storage, networks, and security groups as part of the create cluster wizard. 
+TBD 
 
 ____________________________
 
@@ -63,6 +32,7 @@ The following issues have been fixed in Cloudbreak 2.2.0 TP:
 | BUG-90848 | "Do Not Use Security Group" option does not work for a new network. | 
 | BUG-91827 | After cluster has been stopped, Event History shows "Infrastructure Has Been Terminated". |
 | BUG-91701 | Cluster resize is unclear: the cluster name and cluster information in the text above the scaling controls are incorrect. | 
+| BUG-91892 | "Recipe name is already taken" error when using a recipe description longer than 255 characters. | 
 
  
 ____________________________
@@ -73,8 +43,9 @@ ____________________________
 ##### (RMP-10114) Auto-scaling Is Not Available
 
 Auto-scaling functionality is not available in Cloudbreak 2.2.0 TP. 
-
 ____________________________
+
+
 
 ##### (BUG-91835) Default Ambari Node Security Group Has Port 9443 Inbound CIDR Set to 0.0.0.0/0 
 
@@ -82,9 +53,9 @@ By default, port 9443 is set to 0.0.0.0/0 CIDR for inbound access on the default
 
 *Workaround*: If you choose to use the default-ambari-security-group for your Ambari host group security group, it is strongly recommended that you limit this CIDR in the security group to only allow traffic from your Cloudbreak VM instance IP.  
 
-[Comment]: <> (Also covered in this jira BUG-91699)
- 
+[Comment]: <> (This item is closed. Need to verify the change.)
 ____________________________
+
 
 
 ##### (BUG-91543) Networks With No Subnets Are Not Supported 
@@ -108,12 +79,14 @@ When creating a cluster on OpenStack, if you do not select an existing network a
 ____________________________
 
 
+
 ##### (BUG-91810) Network and Subnet Listed as N/A
 
 When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "N/A".
 
 *Workaround*: If you want to check which network and subnet are used for your cluster, navigate to the cloud provider account and find the cluster instances that were created for your cluster. Next, check which virtual network and subnet they are associated with. The steps vary depending on the provider.  
 ____________________________
+
 
 
 ##### (BUG-91077) Node Status Is Not Consistent with Ambari
@@ -123,11 +96,13 @@ If your blueprint contains Druid, cluster node status may be "healthy" after a c
 ____________________________
 
 
+
 ##### (BUG-91077) Nodes Are Unhealthy After Sync
 
 If your blueprint contains Druid, cluster node status may change to "unhealthy" after synchronizing with the cloud provider using the "Sync" option.    
 *Workaround*: Manually start Druid by using Ambari web UI and then "Sync" again.  
 ____________________________
+
 
 
 ##### (BUG-91013) Incorrect Node Status After Cluster Restart 
@@ -136,6 +111,7 @@ You may sporadically experience an issue where after you stop and restart a clus
 
 [comment]: <> (Not sure what the workaround is for BUG-91013?)
 ____________________________
+
 
 
 ##### (BUG-91071) Syntax Error During Cluster Downscale
@@ -150,14 +126,6 @@ Check the *Event History* for more information:
 * In other cases, you should see a message informing you that downscale was successful. It may take a few minutes for this message to appear in the the *Event History*.  
 ____________________________
 
-
-
-##### (BUG-91892) Recipe Name Already Taken Error    
-
-If your recipe description is longer than 255 characters, you will get the error: *The recipe name ' recipe10' is already taken, please choose a different one*. 
-
-*Workaround*: Shorten the recipe description to less than 255 characters.    
-____________________________
 
 
 
