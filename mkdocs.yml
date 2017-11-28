@@ -51,6 +51,7 @@ pages:
         - Manage Cloudbreak Credentials: credentials.md 
         - Edit Cloudbreak Profile: profile.md
         - Manage Cloudbreak Database: cb-db.md
+        - Move Cloudbreak Instance: cb-migrate.md  
       - Security: 
         - Security Overview: security.md
         - Configure Basic Security: security-cb.md

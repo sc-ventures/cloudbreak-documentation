@@ -3,6 +3,33 @@
 By default, Cloudbreak uses a built-in PostgreSQL database to persist data. For production environments, we suggest that you use an external database, an RDS served by your cloud provider. However, if you choose to use the default database, you should know that Cloudbreak deployer includes features for dumping and restoring built-in databases.
 
 
+### Back up Cloudbreak Database 
+
+To create a backup of the internal PostgreSQL database of Cloudbreak, perform these steps:
+
+**Steps**
+
+1. SSH to Cloudbreak Server instance
+
+2. If it is not running, start the database container with `docker start cbreak_commondb_1` command
+
+3. Execute `docker exec -it cbreak_commondb_1 bash` command to enter the container of the database.
+ 
+4. Create three database dumps (cbdb, uaadb, periscopedb):  
+
+    <pre><small>pg_dump -Fc -U postgres cbdb > cbdb.dump
+    pg_dump -Fc -U postgres uaadb > uaadb.dump
+    pg_dump -Fc -U postgres periscopedb > periscopedb.dump</small></pre>
+                
+5. Quit from the container with shortcut `CTRL+d`
+
+6. Save the previously created dumps to the host instance:               
+
+    <pre><small>docker cp cbreak_commondb_1:/cbdb.dump ./cbdb.dump
+    docker cp cbreak_commondb_1:/uaadb.dump ./uaadb.dump
+    docker cp cbreak_commondb_1:/periscopedb.dump ./periscopedb.dump</small></pre>
+
+
 ### Dump and Restore Cloudbreak Database 
 
 Cloudbreak deployer uses Docker for the underlying infrastructure and uses Docker volume for storing data. There are two separate volumes: 
@@ -60,7 +87,7 @@ docker run --rm -v cbreak_dump:/dump -it alpine cat /dump/periscopedb/latest/dum
 </small></pre>
 
 
-### Using an External Database for Cloudbreak 
+### Use an External Database for Cloudbreak 
 
 By default Cloudbreak uses a built-in PostgreSQL database but you can optionally configure Cloudbreak to use an external database, typically one provided by a cloud provider.
 
@@ -91,7 +118,7 @@ To configure an external PostgreSQL database for Cloudbreak, perform these steps
 
 **Steps**
 
-1. [Create a backup](cb-backup.md) of the Cloudbreak database 
+1. [Create a backup](#back-up-cloudbreak-database) of the Cloudbreak database 
 
 2. Set the following environment variables according to the settings of your external database:
 
@@ -145,5 +172,3 @@ To configure an external PostgreSQL database for Cloudbreak, perform these steps
 
 [Comment]: <> (How can I verify these steps worked? You can try to kill the local common_db container, the application should be able to continue to run)
 
-
-{!docs/cb-migrate.md!}

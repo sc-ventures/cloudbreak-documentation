@@ -1,15 +1,18 @@
-## Moving the Cloudbreak instance
+## Move the Cloudbreak Instance
 
-To transfer a Cloudbreak Server that uses the default, embedded, PostgreSQL database from one host to a new host:
+To transfer a Cloudbreak Server that uses the default embedded PostgreSQL database from one host to a new host, perform these tasks:
+
+1. [Back up current data](cb-db.md#back-up-cloudbreak-database) from the original Cloudbreak database  
+2. [Launch the new Cloudbreak instance](index.md#launch-cloudbreak) on the target host  
+3. [Populate databases with information from the original server](#populate-databases-with-information-from-the-original-server)  
+4. [Modify Cloudbreak Profile](#modify-cloudbreak-profile)  
+
+
+#### Populate Databases with Information from the Original Server
+
+Perform these steps to populate databases with information from the original server.
 
 **Steps**
-
-1. [Back up current data](cb-backup.md) - from the original Cloudbreak database.
-2. [Launch the new Cloudbreak instance](index.md#launch-cloudbreak) - on the target host
-3. [Populate databases with information from the original Server.](#populate_db)
-4. [Modify Cloudbreak Profile](#modify_profile)
-
-#### <a name="populate_db"></a> Populate databases with information from the original server.
 
 1. Copy the dump files to the remote server.
 
@@ -44,9 +47,14 @@ To transfer a Cloudbreak Server that uses the default, embedded, PostgreSQL data
    
 7. Quit from the container with shortcut `CTRL+d`     
 
-#### <a name="modify_profile"></a> Modify Cloudbreak Profile
 
-1. Please ensure that the following parameter values match in the origin and target Profile files and modifiy Profile file of the target environment, if necessary:
+#### Modify Cloudbreak Profile
+
+Perform these steps to ensure that your new Profile file is correctly set up. 
+
+**Steps**
+
+1. Ensure that the following parameter values match in the origin and target Profile files and modify Profile file of the target environment, if necessary:
 
     <pre><small>export UAA_DEFAULT_USER_EMAIL=admin@example.com
     export UAA_DEFAULT_SECRET=cbsecret
