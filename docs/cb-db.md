@@ -81,9 +81,9 @@ To create a backup of the internal PostgreSQL database of Cloudbreak, perform th
 
 **Steps**
 
-1. SSH to Cloudbreak Server instance
+1. SSH to Cloudbreak Server instance.
 
-2. If it is not running, start the database container with `docker start cbreak_commondb_1` command
+2. If it is not running, start the database container by using the `docker start cbreak_commondb_1` command.
 
 3. Execute `docker exec -it cbreak_commondb_1 bash` command to enter the container of the database.
  
@@ -93,7 +93,7 @@ To create a backup of the internal PostgreSQL database of Cloudbreak, perform th
     pg_dump -Fc -U postgres uaadb > uaadb.dump
     pg_dump -Fc -U postgres periscopedb > periscopedb.dump</small></pre>
                 
-5. Quit from the container with shortcut `CTRL+d`
+5. Quit from the container with shortcut `CTRL+d`.
 
 6. Save the previously created dumps to the host instance:               
 
@@ -145,18 +145,28 @@ To configure an external PostgreSQL database for Cloudbreak, perform these steps
  
 3. On your external database, create three databases: `cbdb, uaadb, periscopedb`. If you would not like to change any database specifics (such as Owner, Tablespace), you can create these databases using the `createdb` utility with the following commands:
    
-    <pre><small>createdb -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} cbdb
-    createdb -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} uaadb
-    createdb -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} periscopedb</small></pre>
+    <pre><small>createdb -h ${RDS_URL%%:&#42;} -p ${RDS_URL##&#42;:} -U ${RDS_USER} cbdb
+    createdb -h ${RDS_URL%%:&#42;} -p ${RDS_URL##&#42;:} -U ${RDS_USER} uaadb
+    createdb -h ${RDS_URL%%:&#42;} -p ${RDS_URL##&#42;:} -U ${RDS_USER} periscopedb</small></pre>
+    
+[comment]: <> (Original syntax, without HTML escape code (&#42;) replacing the * char :)
+[comment]: <> (createdb -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} cbdb)
+[comment]: <> (createdb -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} uaadb)
+[comment]: <> (createdb -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} periscopedb)
         
     For more information refer to the [PostgreSQL documentation](https://www.postgresql.org/docs/9.6/static/app-createdb.html).   
     Alternatively, you can log in to the management interface of your external database and execute `create database` commands [directly](https://www.postgresql.org/docs/9.6/static/sql-createdatabase.html). 
      
 4. For each database that you just created, import the previously exported dump. This can be done by executing the following commands:
 
-    <pre><small>pg_restore -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} --no-owner --role=${RDS_USER} -n public -d cbdb ./cbdb.dump
-    pg_restore -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} --no-owner --role=${RDS_USER} -n public -d uaadb ./uaadb.dump
-    pg_restore -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} --no-owner --role=${RDS_USER} -n public -d periscopedb ./periscopedb.dump</small></pre>
+    <pre><small>pg_restore -h ${RDS_URL%%:&#42;} -p ${RDS_URL##&#42;:} -U ${RDS_USER} --no-owner --role=${RDS_USER} -n public -d cbdb ./cbdb.dump
+    pg_restore -h ${RDS_URL%%:&#42;} -p ${RDS_URL##&#42;:} -U ${RDS_USER} --no-owner --role=${RDS_USER} -n public -d uaadb ./uaadb.dump
+    pg_restore -h ${RDS_URL%%:&#42;} -p ${RDS_URL##&#42;:} -U ${RDS_USER} --no-owner --role=${RDS_USER} -n public -d periscopedb ./periscopedb.dump</small></pre>
+    
+[comment]: <> (Original syntax, without HTML escape code (&#42;) replacing the * char :)
+[comment]: <> (pg_restore -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} --no-owner --role=${RDS_USER} -n public -d cbdb ./cbdb.dump)
+[comment]: <> (pg_restore -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} --no-owner --role=${RDS_USER} -n public -d uaadb ./uaadb.dump)
+[comment]: <> (pg_restore -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} --no-owner --role=${RDS_USER} -n public -d periscopedb ./periscopedb.dump)
     
     For more information refer to the [PostgreSQL documentation](https://www.postgresql.org/docs/9.6/static/app-pgrestore.html).
     
@@ -167,14 +177,14 @@ To configure an external PostgreSQL database for Cloudbreak, perform these steps
     export RDS_USER=admin
     export RDS_PASS=admin123
     
-    export CB_DB_PORT_5432_TCP_ADDR=${RDS_URL%%:*}
-    export CB_DB_PORT_5432_TCP_PORT=${RDS_URL##*:}
+    export CB_DB_PORT_5432_TCP_ADDR=${RDS_URL%%:&#42;}
+    export CB_DB_PORT_5432_TCP_PORT=${RDS_URL##&#42;:}
     export CB_DB_ENV_USER=$RDS_USER
     export CB_DB_ENV_PASS=$RDS_PASS
     export CB_DB_ENV_DB=cbdb
     
-    export PERISCOPE_DB_TCP_ADDR=${RDS_URL%%:*}
-    export PERISCOPE_DB_TCP_PORT=${RDS_URL##*:}
+    export PERISCOPE_DB_TCP_ADDR=${RDS_URL%%:&#42;}
+    export PERISCOPE_DB_TCP_PORT=${RDS_URL##&#42;:}
     export PERISCOPE_DB_USER=$RDS_USER
     export PERISCOPE_DB_PASS=$RDS_PASS
     export PERISCOPE_DB_NAME=periscopedb
@@ -184,6 +194,13 @@ To configure an external PostgreSQL database for Cloudbreak, perform these steps
     export IDENTITY_DB_USER=$RDS_USER
     export IDENTITY_DB_PASS=$RDS_PASS
     export IDENTITY_DB_NAME=uaadb</small></pre>
+    
+    
+[comment]: <> (Original syntax, without HTML escape code (&#42;) replacing the * char :)
+[comment]: <> (export CB_DB_PORT_5432_TCP_ADDR=${RDS_URL%%:*})
+[comment]: <> (export CB_DB_PORT_5432_TCP_PORT=${RDS_URL##*:})
+[comment]: <> (export PERISCOPE_DB_TCP_ADDR=${RDS_URL%%:*})
+[comment]: <> (export PERISCOPE_DB_TCP_PORT=${RDS_URL##*:})
 
 6. Restart Cloudbreak application by using the `cbd restart` command. 
 
