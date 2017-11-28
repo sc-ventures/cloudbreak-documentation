@@ -35,6 +35,25 @@
 [Amazon EC2 Instance Store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) (External)  
 
 
+#### Use Spot Instances
+
+Check this option to use EC2 spot instances as your cluster nodes. Next, enter your bid price. The price that is pre-loaded in the form is the current on-demand price for your chosen EC2 instance type.   
+
+
+Note that: 
+
+* We recommend not using spot instances for any host group that includes Ambari server components.  
+* If you choose to use spot instances for host group nodes when creating your cluster, any nodes that you add to that host group (during cluster creation or later) will be using spot instances. Any additional nodes will be requested at the same bid price that you entered when creating a cluster.  
+* If you decide not to use spot instances when creating your cluster, any compute nodes that you add to your cluster (during cluster creation or later) will be using standard on-demand instances.     
+* Once someone outbids you, the spot instances will be taken away, removing the nodes from the cluster. 
+* If spot instances are not available right away, creating a cluster will take longer than usual. 
+
+After creating a cluster, you can view your spot instance requests, including bid price, on the EC2 dashboard under **INSTANCES** > **Spot Requests**. For more information about spot instances, refer to [AWS documentation](https://aws.amazon.com/ec2/spot/).  
+
+**Related Links**   
+[Amazon EC2 Spot Instances](https://aws.amazon.com/ec2/spot/)  
+
+
 {!docs/common/create-adv-4.md!}
 
 {!docs/common/create-adv-5.md!}
