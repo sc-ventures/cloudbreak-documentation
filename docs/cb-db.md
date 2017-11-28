@@ -134,7 +134,9 @@ To configure an external PostgreSQL database for Cloudbreak, perform these steps
 
 **Steps**
 
-1. [Create a backup](#back-up-cloudbreak-database) of the Cloudbreak database.  
+1. [Create a backup](#back-up-cloudbreak-database) of your current Cloudbreak database. 
+
+[comment]: <> (Where do I perform step 2?)
 
 2. Set the following environment variables according to the settings of your external database: 
 
@@ -143,7 +145,7 @@ To configure an external PostgreSQL database for Cloudbreak, perform these steps
     export PGPASSWORD=admin123
     </small></pre>
  
-3. On your external database, create three databases: `cbdb, uaadb, periscopedb`. If you would not like to change any database specifics (such as Owner, Tablespace), you can create these databases using the `createdb` utility with the following commands:
+3. On your external database, create three databases: `cbdb, uaadb, periscopedb`. You can create these databases using the `createdb` utility with the following commands:
    
     <pre><small>createdb -h ${RDS_URL%%:&#42;} -p ${RDS_URL##&#42;:} -U ${RDS_USER} cbdb
     createdb -h ${RDS_URL%%:&#42;} -p ${RDS_URL##&#42;:} -U ${RDS_USER} uaadb
@@ -155,7 +157,7 @@ To configure an external PostgreSQL database for Cloudbreak, perform these steps
 [comment]: <> (createdb -h ${RDS_URL%%:*} -p ${RDS_URL##*:} -U ${RDS_USER} periscopedb)
         
     For more information refer to the [PostgreSQL documentation](https://www.postgresql.org/docs/9.6/static/app-createdb.html).   
-    Alternatively, you can log in to the management interface of your external database and execute `create database` commands [directly](https://www.postgresql.org/docs/9.6/static/sql-createdatabase.html). 
+    Alternatively, you can log in to the management interface of your external database and execute [create database]](https://www.postgresql.org/docs/9.6/static/sql-createdatabase.html) commands directly. 
      
 4. For each database that you just created, import the previously exported dump. This can be done by executing the following commands:
 
@@ -170,7 +172,7 @@ To configure an external PostgreSQL database for Cloudbreak, perform these steps
     
     For more information refer to the [PostgreSQL documentation](https://www.postgresql.org/docs/9.6/static/app-pgrestore.html).
     
-5. Set the following variables in Cloudbreak Profile file.  
+5. Set the following variables in your Cloudbreak Profile file.  
     Modify the RDS_URL parameter by passing the ENDPOINT:PORT of your external database. There is no need to modify values of any other parameters, as their values are derived from the RDS_URL.
 
     <pre><small>export RDS_URL=localhost:5432

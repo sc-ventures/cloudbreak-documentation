@@ -2,21 +2,23 @@
 
 To transfer a Cloudbreak Server that uses the default embedded PostgreSQL database from one host to a new host, perform these tasks:
 
-1. [Back up current data](cb-db.md#back-up-cloudbreak-database) from the original Cloudbreak database  
-2. [Launch the new Cloudbreak instance](index.md#launch-cloudbreak) on the target host  
-3. [Populate databases with information from the original server](#populate-databases-with-information-from-the-original-server)  
+1. Back up current data - from the original Cloudbreak database.  
+    Refer to [Back up Cloudbreak Database](cb-db.md#back-up-cloudbreak-database)   
+2. Launch a new Cloudbreak instance.  
+    Refer to [Launch Cloudbreak](index.md#launch-cloudbreak)   
+3. [Populate Databases with Information from the Original Server](#populate-databases-with-information-from-the-original-server) - on the new host.  
 4. [Modify Cloudbreak Profile](#modify-cloudbreak-profile)  
 
 
-#### Populate Databases with Information from the Original Server
+### Populate Databases with Information from the Original Server
 
 Perform these steps to populate databases with information from the original server.
 
 **Steps**
 
-1. Copy the dump files to the remote server.
+1. Copy the saved database files from [Back up Cloudbreak Database](cb-db.md#back-up-cloudbreak-database) to the new Cloudbreak server host.
 
-2. Copy the dump files into the database container with the following commands. Please modify the original location as necessary (currently `/tmp`):
+2. Copy the dump files into the database container with the following commands. Modify the original location as necessary (currently `/tmp`):
 
     <pre><small>docker cp /tmp/cbdb.dump cbreak_commondb_1:/cbdb.dump
     docker cp /tmp/uaadb.dump cbreak_commondb_1:/uaadb.dump
@@ -34,7 +36,7 @@ Perform these steps to populate databases with information from the original ser
     create database cbdb;
     create database periscopedb;</small></pre>
  
-    > NOTE: If you receive `ERROR:  database "uaadb" is being accessed by other users` error then please ensure that    cbreak_identity_1 container is not running, then retry dropping uaadb.  
+    > If you get `ERROR:  database "uaadb" is being accessed by other users` error, ensure that    cbreak_identity_1 container is not running and then retry dropping uaadb.  
 
 5. Exit the PostgreSQL interactive terminal.
     <pre><small>\q</small></pre> 
@@ -45,10 +47,10 @@ Perform these steps to populate databases with information from the original ser
     pg_restore -U postgres -d cbdb cbdb.dump
     pg_restore -U postgres -d uaadb uaadb.dump</small></pre>
    
-7. Quit from the container with shortcut `CTRL+d`     
+7. Quit from the container with the shortcut `CTRL+d`.     
 
 
-#### Modify Cloudbreak Profile
+### Modify Cloudbreak Profile
 
 Perform these steps to ensure that your new Profile file is correctly set up. 
 
