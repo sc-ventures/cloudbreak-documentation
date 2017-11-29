@@ -33,6 +33,23 @@
 **Related Links**  
 [Storage Options](https://cloud.google.com/compute/docs/disks/) (External)   
 
+#### Use Preemptible Instances
+
+Check this option to use Google Cloud preemptive VM instances as your cluster nodes. To learn more, refer to [Google Cloud documentation](https://cloud.google.com/compute/docs/instances/preemptible).    
+
+Note that: 
+
+* We recommend not using preemptible instances for any host group that includes Ambari server components.  
+* If you choose to use preemptible instances for a given host group when creating your cluster, any nodes that you add to that host group (during cluster creation or later) will be using preemptible instances.   
+* If you decide not to use preemptible instances when creating your cluster, any nodes that you add to your host group (during cluster creation or later) will be using standard on-demand instances.     
+* Once someone outbids you, the preemptible instances are taken away, removing the nodes from the cluster. 
+* If the preemptible instances are not available right away, creating a cluster will take longer than usual. 
+
+[commemt]: <> (There is no bid specified in the UI, so I assume that we are using current bid?)
+
+**Related Links**   
+[Preemptible VM Instances](https://cloud.google.com/compute/docs/instances/preemptible) (External)    
+
 
 {!docs/common/create-adv-4.md!} 
 

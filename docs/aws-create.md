@@ -43,9 +43,9 @@ Check this option to use EC2 spot instances as your cluster nodes. Next, enter y
 Note that: 
 
 * We recommend not using spot instances for any host group that includes Ambari server components.  
-* If you choose to use spot instances for host group nodes when creating your cluster, any nodes that you add to that host group (during cluster creation or later) will be using spot instances. Any additional nodes will be requested at the same bid price that you entered when creating a cluster.  
-* If you decide not to use spot instances when creating your cluster, any compute nodes that you add to your cluster (during cluster creation or later) will be using standard on-demand instances.     
-* Once someone outbids you, the spot instances will be taken away, removing the nodes from the cluster. 
+* If you choose to use spot instances for a given host group when creating your cluster, any nodes that you add to that host group (during cluster creation or later) will be using spot instances. Any additional nodes will be requested at the same bid price that you entered when creating a cluster.  
+* If you decide not to use spot instances when creating your cluster, any nodes that you add to your host group (during cluster creation or later) will be using standard on-demand instances.     
+* Once someone outbids you, the spot instances are taken away, removing the nodes from the cluster. 
 * If spot instances are not available right away, creating a cluster will take longer than usual. 
 
 After creating a cluster, you can view your spot instance requests, including bid price, on the EC2 dashboard under **INSTANCES** > **Spot Requests**. For more information about spot instances, refer to [AWS documentation](https://aws.amazon.com/ec2/spot/).  

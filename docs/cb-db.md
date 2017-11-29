@@ -136,7 +136,7 @@ To configure an external PostgreSQL database for Cloudbreak, perform these steps
 
 1. [Create a backup](#back-up-cloudbreak-database) of your current Cloudbreak database. 
 
-[comment]: <> (Where do I perform step 2?)
+[comment]: <> (Where do I perform step 2 and the remainng steps? from the Cloudbreak host?)
 
 2. Set the following environment variables according to the settings of your external database: 
 

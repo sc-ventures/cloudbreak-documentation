@@ -37,14 +37,11 @@ The following table lists the minimum security group port configuration required
 
 #### Default Cluster Security Groups 
 
-For clusters, by default Cloudbreak allows you to select from two default security groups (that will be created automatically during cluster create):
+For clusters, Cloudbreak provides the following security group settings. If you do not modify these settings, the following security rules will be created.
 
-* default-ambari-security-group
-* default-security-group
-
-These security groups is configured to limit inbound network traffic to a minimal set of ports. Alternatively, you can select from your existing set of security groups, which can be modified using the cloud provider tooling.
+You can modify these rules either when creating a cluster or later using the cloud provider tools. Furthermore, as an alternative to creating new security groups, you can select from your existing set of security groups, which can be modified using the cloud provider tools.
  
-**Cluster Host Group with Ambari Server (default-ambari-security-group)**
+**Cluster Host Group with Ambari Server**
 
 | Inbound Port | Description |
 |---|---|
@@ -59,12 +56,13 @@ By default, port 9443 is set to 0.0.0.0/0 CIDR for inbound access. It is strongl
 </p>
 </div>
 
-**Cluster Host Groups without the Ambari Server (default-security-group)**
+**Cluster Host Groups without the Ambari Server**
 
 | Inbound Port | Description |
 |---|---|
 | 22 | SSH access to the VM instance. |
 
+When creating a new security group, Cloudbreak uses the following naming convention: *<clustername>-ClusterNodeSecurityGroup<hostgroupname>*. 
 
 
 ### Identity Management
