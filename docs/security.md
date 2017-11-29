@@ -37,9 +37,9 @@ The following table lists the minimum security group port configuration required
 
 #### Default Cluster Security Groups 
 
-For clusters, Cloudbreak provides the following security group settings. If you do not modify these settings, the following security rules will be created.
+For clusters, Cloudbreak provides the following security group settings. If you do not modify these settings, these default security rules will be created. You can modify these rules either when creating or, if you don't want to use security group, remove them. 
 
-You can modify these rules either when creating a cluster or later using the cloud provider tools. Furthermore, as an alternative to creating new security groups, you can select from your existing set of security groups, which can be modified using the cloud provider tools.
+As an alternative to creating new security groups, you can select from your existing set of security groups, which can be modified using the cloud provider tools. 
  
 **Cluster Host Group with Ambari Server**
 
