@@ -79,7 +79,7 @@ Refer to this list for available environment variables. The variables are listed
 | CB_DB_ENV_USER | "postgres" | User for the Cloudbreak database authentication |
 | CB_DB_ROOT_PATH | "/var/lib/cloudbreak" | (Deprecated) Location of the database volume on Cloudbreak host |
 | CB_DEFAULT_SUBSCRIPTION_ADDRESS | http://uluwatu.service.consul:3000/notifications | URL of the default subscription for Cloudbreak notifications |
-| CB_ENABLEDPLATFORMS | | Set this to disable Cloudbreak resource called Platform |
+| CB_ENABLEDPLATFORMS | | Set this to disable specific cloud providers. Accepted values are: AZURE, AWS, GCP, OPENSTACK. |
 | CB_ENABLE_CUSTOM_IMAGE | "false" | Set to "true" to enable custom cloud images |
 | CBD_FORCE_START | | Set this to disable docker-compose.yml and uaa.yml validation |
 | CB_HBM2DDL_STRATEGY | "validate" | Configures hibernate.hbm2ddl.auto in Cloudbreak |
@@ -311,3 +311,6 @@ In order to differentiate launched instances, you can optionally define custom t
 * You can specify a list of tags with a comma separated list: 
 
     ```export CB_AWS_CUSTOM_CF_TAGS=tag1:value1,tag2:value2,tag3:value3```
+    
+    
+    

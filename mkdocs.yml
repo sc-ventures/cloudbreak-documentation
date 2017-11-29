@@ -49,7 +49,8 @@ pages:
         - Install on Your Own VM: vm-launch.md
         - Delete Cloudbreak: delete.md  
         - Manage Cloudbreak Credentials: credentials.md 
-        - Edit Cloudbreak Profile: profile.md
+        - Disable Providers: cb-disable-provider.md
+        - Edit Cloudbreak Profile: cb-profile.md
         - Manage Cloudbreak Database: cb-db.md
         - Move Cloudbreak Instance: cb-migrate.md  
       - Security: 
