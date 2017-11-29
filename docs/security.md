@@ -62,7 +62,7 @@ By default, port 9443 is set to 0.0.0.0/0 CIDR for inbound access. It is strongl
 |---|---|
 | 22 | SSH access to the VM instance. |
 
-When creating a new security group, Cloudbreak uses the following naming convention: *<clustername>-ClusterNodeSecurityGroup<hostgroupname>*. 
+When creating a new security group, Cloudbreak uses the following naming convention: `<clustername>-ClusterNodeSecurityGroup<hostgroupname>` 
 
 
 ### Identity Management
