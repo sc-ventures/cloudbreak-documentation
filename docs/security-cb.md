@@ -55,7 +55,7 @@ export UAA_DEFAULT_USER_PW=''
 cbd util add-default-user
 </pre>
 
-For more information about setting environment variables in Profile, refer to [Configure Profile Variables](profile.md#configure-profile-variables).
+For more information about setting environment variables in Profile, refer to [Configure Profile Variables](cb-profile.md#configure-profile-variables).
 
 
 ### Add SSL Certificate for Cloudbreak UI 
