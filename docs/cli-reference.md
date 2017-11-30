@@ -646,9 +646,9 @@ The command returns JSON output which due to space limitation was not captured i
 
 __________________________________
 
-#### cluster generate-cluster-template
+#### cluster generate-template
 
-Generates a cluster template in JSON format.
+Generates a provider-specific cluster template in JSON format.
 
 **Sub-commands**
 
@@ -668,9 +668,13 @@ Generates a cluster template in JSON format.
 **`openstack existing-network`** Generates an OS cluster JSON template with existing network   
 **`openstack existing-subnet`** Generates an OS cluster JSON template with existing network and subnet   
 
+**Examples**
+
+<pre>cb cluster generate-template aws new-network</pre>
+
 **Related Commands**
 
-[cluster create](#cluster-create)
+[cluster create](#cluster-create) 
 
 
 
@@ -681,7 +685,9 @@ __________________________________
 
 #### cluster generate-reinstall-template
 
-[Comment]: <> (What does this do??)
+Generates a cluster template  in JSON format based on a blueprint.
+
+[Comment]: <> (What does this do?? Generates a template based on a blueprint?? Why is it called reinstall template?)
 
 
 **Required Options**
@@ -696,6 +702,11 @@ __________________________________
 **`--password <value>`** Password [$CB_PASSWORD]  
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+
+**Examples**
+
+<pre>cb cluster generate-reinstall-template --blueprint-name "EDW-ETL: Apache Hive 1.2.1, Apache Spark 2.1"</pre>
+
 
 
 
