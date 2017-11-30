@@ -51,7 +51,7 @@ pages:
         - Manage Cloudbreak Credentials: credentials.md 
         - Disable Providers: cb-disable-provider.md
         - Edit Cloudbreak Profile: cb-profile.md
-        - Manage Cloudbreak Database: cb-db.md
+        - Configure External Cloudbreak Database: cb-db.md
         - Move Cloudbreak Instance: cb-migrate.md  
       - Security: 
         - Security Overview: security.md
