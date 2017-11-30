@@ -5,16 +5,6 @@ Cloudbreak deployer configuration is based on environment variables.
 
 During startup, Cloudbreak deployer tries to determine the underlying infrastructure and then sets required environment variables with appropriate default values. If these environment variables are not sufficient for your use case, you can set additional environment variables in your `Profile` file. 
 
-Cloudbreak deployer always opens a new bash subprocess without inheriting environment variables. Only the following environment variables are inherited:
-
-* `HOME`  
-* `DEBUG`  
-* `TRACE`  
-* `CBD_DEFAULT_PROFILE`  
-* all `DOCKER_XXX` 
-
-[comment]: <> (TO-DO: What do you mean by "Cloudbreak deployer **always** opens a new bash subprocess without inheriting environment variables?" Do you mean during startup or when? Without inheriting from where?)
-
 
 ### Set Profile Variables
 
