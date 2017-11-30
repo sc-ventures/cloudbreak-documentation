@@ -16,12 +16,10 @@ use an external database for Cloudbreak, you may use the following supported dat
 | External Oracle | Not supported |
 | External SQL Server | Not supported |
 
-The following sections describe how to use Cloudbreak with an existing external database, other than
-the embedded PostgreSQL database instance that Cloudbreak uses by default.
+The following section describes how to use Cloudbreak with an existing external database, other than
+the embedded PostgreSQL database instance that Cloudbreak uses by default. To configure an external PostgreSQL database for Cloudbreak, perform these steps. 
 
 **Steps**
-
-To configure an external PostgreSQL database for Cloudbreak, perform these steps. 
 
 1. On your Cloudbreak host machine, set the following environment variables according to the settings of your external database: 
 
