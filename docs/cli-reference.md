@@ -685,9 +685,8 @@ __________________________________
 
 #### cluster generate-reinstall-template
 
-Generates a cluster template  in JSON format based on a blueprint.
+Generates a cluster template that you can use to reinstall the cluster if installation went fail. 
 
-[Comment]: <> (What does this do?? Generates a template based on a blueprint?? Why is it called reinstall template?)
 
 
 **Required Options**
