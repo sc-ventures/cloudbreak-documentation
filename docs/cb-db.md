@@ -10,7 +10,7 @@ use an external database for Cloudbreak, you may use the following supported dat
 
 | Database Type | Supported Version |
 |---|---| 
-| [External PostgreSQL](#postgresql) | 9.x |
+| External PostgreSQL | 9.x |
 | External MySQL | Not supported |
 | External MariaDB | Not supported |
 | External Oracle | Not supported |
@@ -39,12 +39,12 @@ export DATABASE_PASSWORD=Admin123!
     Alternatively, you can log in to the management interface of your external database and execute [create database](https://www.postgresql.org/docs/9.6/static/sql-createdatabase.html) commands directly. 
      
      
-3. Set the following variables in your Cloudbreak Profile file. 
+3. Set the following variables in your Cloudbreak Profile file. Modify the database parameters according to your external database.
 
     <pre><small>export DATABASE_HOST=my.database.host
-export DATABASE_PORT=5432
-export DATABASE_USERNAME=admin
-export DATABASE_PASSWORD=Admin123!
+    export DATABASE_PORT=5432
+    export DATABASE_USERNAME=admin
+    export DATABASE_PASSWORD=Admin123!
     
     export CB_DB_PORT_5432_TCP_ADDR=$DATABASE_HOST
     export CB_DB_PORT_5432_TCP_PORT=$DATABASE_PORT
@@ -66,5 +66,13 @@ export DATABASE_PASSWORD=Admin123!
     
 
 3. Restart Cloudbreak application by using the `cbd restart` command. 
+
+
+<div class="note">		
+     <p class="first admonition-title">Data migration</p>		
+     <p class="last">		
+     If you want to migrate existing data (e.g. blueprints, recipes etc.) from the embedded database to the external one, then after completing these steps, you should also create a <a href="../cb-migrate/#back-up-cloudbreak-database">backup</a> and <a href="../cb-migrate#populate-database-with-dump-from-original-cloudbreak-instance">restore</a> it in the external database.   		
+     </p>		
+</div>
 
 
