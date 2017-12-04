@@ -67,6 +67,7 @@ export DATABASE_PASSWORD=Admin123!
 
 3. Restart Cloudbreak application by using the `cbd restart` command. 
 
+After performing these steps, your external database will be used for Cloudbreak instead of the built-in datatabase. 
 
 <div class="note">		
 <p class="first admonition-title">Data Migration</p>  
