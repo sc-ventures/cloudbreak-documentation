@@ -28,7 +28,14 @@ Using spot instances is supported for clusters created on AWS. The option is ava
 Using preemptible instances is supported for clusters created on Google Cloud. The option is available in the advanced *Hardware and Storage* section of the create cluster wizard. Refer to [Use Preemptible Instances](aws-create.md#use-preemptible-instances).
 
 #####**New Types of Recipes**
-New types of recipes, PRE-AMBARI-START and PRE-DELETE, are supported. Refer to updated [Recipes](recipes.md) documentation.
+New types of recipes are introduced: 
+
+* PRE-AMBARI-START  
+* POST-AMBARI-START (formerly known as PRE) 
+* POST-CLUSTER-INSTALL (formerly known as POST)  
+* PRE-DELETE 
+
+Refer to updated [Recipes](recipes.md) documentation.
 
 #####**New CLI Commands**
 New `cloud` commands are available in the CLI, allowing you to get cloud provider details required for a cluster template. Refer to [CLI Reference](cli-reference.md).
