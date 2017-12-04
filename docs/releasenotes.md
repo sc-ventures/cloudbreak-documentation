@@ -9,7 +9,29 @@ ____________________________
 #### New Features
 ____________________________
 
-TBD
+##### **Support for Kerberos**
+Creating Kerberos-enabled clusters is supported. Refer to [Configure Kerberos](security-kerberos). 
+
+##### **Configuring an external RDBMS for Cloudbreak**
+Configuring an external RDBMS for Cloubdreak is supported. For configuration instructions, refer to [Configuring External Cloudbreak Database](cb-db.md).
+
+##### **Migrating Cloudbreak Instance**
+Migrating Cloudbreak from one machine to another is supported. For migration instructions, refer to [Moving a Cloudbreak Instance](cb-migrate.md). 
+
+##### **Providing Your Own JDK**
+Providing your own JDK on a custom base image is supported. For instructions, refer to "Advanced topics" in the [https://github.com/hortonworks/cloudbreak-images](https://github.com/hortonworks/cloudbreak-images) repo.  
+
+#####**Spot Instances on AWS**  
+Using spot instances on is supported for clusters created on AWS. The option is available in the advanced **Hardware and Storage** section of the create cluster wizard. Refer to [Use Spot Instances](aws-create.md#use-spot-instances).
+
+#####**Preemptible Instances on Google Cloud**  
+Using preemptible instances on Google Cloud is supported for clusters created on Google Cloud. The option is available in the advanced **Hardware and Storage** section of the create cluster wizard. Refer to [Use Preemptible Instances](aws-create.md#use-preemptible-instances).
+
+#####**New Types of Recipes**
+New types of recipes, PRE-AMBARI-START and PRE-DELETE, are supported. Refer to updated [Recipes](recipes.md) documentation.
+
+#####**New CLI Commands**
+New `cloud` commands are available in the CLI, allowing you to get cloud provider details required for a cluster template. Refer to [CLI Reference](cli-reference.md).
 
 
 ____________________________
@@ -17,7 +39,18 @@ ____________________________
 #### Behavioral Changes
 ____________________________
 
-TBD 
+#####**Image Catalog Registration**
+Image catalog registration steps have been simplified. Refer to updated  [Register Custom Images](images.md#register-custom-images) docuemntation.
+
+#####**Create Cluster User Interface Changes**
+Some sections in the create cluster wizard were changed to ensure better user experience. For example, the security group section was improved to help you provide desired security groups settings. 
+
+#####**Cluster Details User Interface Changes**
+The cluster details page was changed to ensure better user experience. New tabs were created to help you find information related to your cluster. 
+
+#####**CLI Syntax**
+The syntax of all CLI commands has changed. All commands start with a singular object followed by an action, for example, `blueprint create`, instead of `create blueprint`and `blueprint list` instead of `list blueprints`. Refer to updated [CLI Reference](cli-reference.md).
+
 
 ____________________________
 
