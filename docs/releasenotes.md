@@ -108,13 +108,18 @@ You cannot create a cluster using an existing network that does not have any sub
 ____________________________
 
 
+
 ##### (BUG-92605) Cluster Creation Fails with ResourceInError
 
 Cluster creation fails with the following error: 
 
 *Infrastructure creation failed. Reason: Failed to create the stack for CloudContext{id=3689, name='test-exisitngnetwork', platform='StringType{value='OPENSTACK'}', owner='e0307f96-bd7d-4641-8c8f-b95f2667d9c6'} due to: Resource CREATE failed: ResourceInError: resources.ambari_volume_master_0_0: Went to status error due to "Unknown"*
 
-*Workaround*: This may mean that the volumes that you requested exceed volumes available on your cloud provider account. When creating a cluster, on the advanced *Hardware and Storage* page of the create cluster wizard, try reducing the amount of requested storage. 
+*Workaround*: This may mean that the volumes that you requested exceed volumes available on your cloud provider account. When creating a cluster, on the advanced *Hardware and Storage* page of the create cluster wizard, try reducing the amount of requested storage. If you need more storage, try using a different region or ask your cloud provider admin to increase the resource quota for volumes.  
+____________________________
+
+
+
 
 
 ##### (BUG-90985) OpenStack Cluster Creation Fails at Network Configuration
