@@ -56,7 +56,7 @@ Some sections in the create cluster wizard were changed to ensure better user ex
 The cluster details page was changed to ensure better user experience. New tabs were created to help you find information related to your cluster. 
 
 #####**CLI Syntax**
-The syntax of all CLI commands has changed. All commands start with a singular object followed by an action, for example, `blueprint create`, instead of `create blueprint`and `blueprint list` instead of `list blueprints`. Refer to updated [CLI Reference](cli-reference.md).
+The syntax of all CLI commands has changed. All commands start with a singular object followed by an action, for example, `blueprint create` instead of `create blueprint`, and `blueprint list` instead of `list blueprints`. Refer to updated [CLI Reference](cli-reference.md).
 
 
 ____________________________
