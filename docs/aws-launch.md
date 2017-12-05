@@ -124,7 +124,7 @@ Use the following "AssumeRole" policy definition:
 
     <a href="../images/aws_role-12.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-12.png" width="650" title="IAM Console"></a>  
 
-6. In the **Policy Name** field, enter "AssumeRole" and in the **Policy Document** paste the policy definition provided above. You can also download and copy it from [here](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/AssumeRole.json).
+6. In the **Policy Name** field, enter "AssumeRole" and in the **Policy Document** paste the policy definition. You can either copy it from the section preceding these steps or download and copy it from [here](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/AssumeRole.json).
 
     <a href="../images/aws_role-13.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-13.png" width="650" title="IAM Console"></a>  
     
@@ -201,9 +201,8 @@ Use the following "cb-policy" policy definition:
 
     <a href="../images/aws_role3.png" target="_blank" title="click to enlarge"><img src="../images/aws_role3.png" width="650" title="IAM Console"></a> 
     
-5. Copy the "cb-policy" policy definition (see below).   
     
-6. In the **Policy Name** field, enter "cb-policy" and in the **Policy Document** paste the policy definition provided above. You can also download and copy it from [here](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/cb-policy.json).
+6. In the **Policy Name** field, enter "cb-policy" and in the **Policy Document** paste the policy definition.  You can either copy it from the section preceding these steps or download and copy it from [here](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/cb-policy.json).
 
     <a href="../images/aws_role4.png" target="_blank" title="click to enlarge"><img src="../images/aws_role4.png" width="650" title="IAM Console"></a>  
     
@@ -234,7 +233,7 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 
 **Steps**
 
-1. In the AWS Management Console, navigate to the EC2 Console.  
+1. On AWS, navigate to the EC2 Console.  
 
 2. In the top right corner, select the region in which you want to launch Cloudbreak.  
 
@@ -244,7 +243,7 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 
 4. Click on **Launch Instance**.
 
-5. In **Step 1: Choose an Amazon Machine Image (AMI)** page, from the left pane, select **Community AMIs**. 
+5. In *Step 1: Choose an Amazon Machine Image (AMI)*, select **Community AMIs** from the left pane. 
 
     <a href="../images/aws-02.png" target="_blank" title="click to enlarge"><img src="../images/aws-02.png" width="650" title="EC2 Console"></a> 
      
@@ -268,17 +267,23 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 
     > The steps listed below only mention required parameters. You may optionally review and adjust additional parameters. 
   
-8. In **Step2: Choose Instance Type**, choose an instance type. The minimum instance type which is suitable for Cloudbreak is **m3.large**. Minimum requirements are 8GB RAM, 10GB disk, 2 cores. Click **Next**.
+8. In *Step2: Choose Instance Type*, choose an instance type. The minimum instance type which is suitable for Cloudbreak is **m3.large**. Minimum requirements are 8GB RAM, 10GB disk, 2 cores. When done, click **Next**.
 
     <a href="../images/aws-03.png" target="_blank" title="click to enlarge"><img src="../images/aws-03.png" width="650" title="EC2 Console"></a>   
     
 9. (Perform this step only if you are using role-based authorization) In **Step 3: Configure Instance Details** > **IAM**, select the "CloudbreakRole" IAM role which you [created earlier](#authorization-for-cloudbreak).
 
-10. In **Step 6: Configure Security Group**, open the following ports: 22 (for access via SSH), 80 (for access via HTTP), and 443 (for access via HTTPS).  Click **Review and Launch**.
+10. In *Step 6: Configure Security Group*, open the following ports:
+ 
+    * 22 (for access via SSH)  
+    * 80 (for access via HTTP)   
+    * 443 (for access via HTTPS). 
 
     <a href="../images/aws-04.png" target="_blank" title="click to enlarge"><img src="../images/aws-04.png" width="650" title="EC2 Console"></a> 
+    
+    When done, click **Review and Launch**.
 
-12. In **Step 7: Review Instance Launch**, review the information carefully and then click **Launch**. 
+12. In *Step 7: Review Instance Launch*, review the information carefully and then click **Launch**. 
 
 13. When prompted select an existing key pair or create a new one. Next, acknowledge that you have access to the private key file and click **Launch Instance**. 
 
@@ -333,24 +338,21 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
 
     <pre>cbd start</pre>
     
-    This will start the Docker containers and initialize the application. The first time you start the Coudbreak app, the process will take longer than usual due to the download of all the necessary docker images.
+    This will start the Docker containers and initialize the application. The first time you start the Coudbreak app, this also downloads of all the necessary docker images.
     
-    The `cbd start` command includes the `cbd generate` command which applies the following steps:
+[Comment]: <> (Extra info which may not be needed here: The `cbd start` command includes the `cbd generate` command which applies the following steps: Creates the `docker-compose.yml` file, which describes the configuration of all the Docker containers needed for the Cloudbreak deployment. Creates the `uaa.yml` file, which holds the configuration of the identity server used to authenticate users with Cloudbreak.)
 
-    * Creates the `docker-compose.yml` file, which describes the configuration of all the Docker containers needed for the Cloudbreak deployment.
-    * Creates the `uaa.yml` file, which holds the configuration of the identity server used to authenticate users with Cloudbreak.
-
-    > Once the `cbd start` has finished, it returns the "Uluwatu (Cloudbreak UI) url" which you can later paste in your browser and log in to Cloudbreak web UI. 
+    Once the `cbd start` has finished, it returns the "Uluwatu (Cloudbreak UI) url" which you can later paste in your browser and log in to Cloudbreak web UI. 
 
 5. Check Cloudbreak deployer version and health: 
     
     <pre>cbd doctor</pre>
     
-5. Next, check Cloudbreak Application logs: 
+5. Check Cloudbreak Application logs: 
 
     <pre>cbd logs cloudbreak</pre>
     
-    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak normally takes less than a minute to start.
+    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloubdreak" error.
     
 
 ### Access Cloudbreak UI

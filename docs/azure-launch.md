@@ -99,9 +99,9 @@ Launch Cloudbreak deployer using the following steps.
 
 ### Explore Newly Created Resources
 
-> This step is optional.  
+> This step is optional. 
 
-While the deployment is in progress, you can optionally navigate to the newly created resource group and see what Azure resources are being created.
+While the deployment is in progress, you can optionally navigate to the newly created resource group and see what Azure resources are being provisioned.
 
 **Steps**
 

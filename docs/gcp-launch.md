@@ -33,7 +33,7 @@ A user with an "Owner" role can assign roles or access rules to service accounts
 
 #### SSH Key Pair 
 
-[Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or use an existing SSH key pair. You must provide it when launching the VM.  
+[Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or use an existing SSH key pair. You will be required to provide it when launching the VM.  
 
 
 #### VPC Network 
@@ -138,15 +138,12 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
 3. Start the Cloudbreak application by using the following command:
 
     <pre>cbd start</pre>
-    
-    This will start the Docker containers and initialize the application. The first time you start the Coudbreak app, the process will take longer than usual due to the download of all the necessary docker images.
-    
-    The `cbd start` command includes the `cbd generate` command which applies the following steps:
 
-    * Creates the `docker-compose.yml` file, which describes the configuration of all the Docker containers needed for the Cloudbreak deployment.
-    * Creates the `uaa.yml` file, which holds the configuration of the identity server used to authenticate users with Cloudbreak.
+    This will start the Docker containers and initialize the application. The first time you start the Coudbreak app, this also downloads of all the necessary docker images.
+    
+[Comment]: <> (Extra info which may not be needed here: The `cbd start` command includes the `cbd generate` command which applies the following steps: Creates the `docker-compose.yml` file, which describes the configuration of all the Docker containers needed for the Cloudbreak deployment. Creates the `uaa.yml` file, which holds the configuration of the identity server used to authenticate users with Cloudbreak.)
 
-    > Once the `cbd start` has finished, it returns the "Uluwatu (Cloudbreak UI) url" which you can later paste in your browser and log in to Cloudbreak web UI.
+    Once the `cbd start` has finished, it returns the "Uluwatu (Cloudbreak UI) url" which you can later paste in your browser and log in to Cloudbreak web UI.
 
 4. Check Cloudbreak deployer version and health: 
     
@@ -156,7 +153,7 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
 
     <pre>cbd logs cloudbreak</pre>
     
-    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak normally takes less than a minute to start.
+    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloubdreak" error.
      
 
 ### Access Cloudbreak UI
@@ -165,7 +162,7 @@ Log in to the Cloudbreak UI using the following steps.
 
 **Steps**
 
-1. You can log into the Cloudbreak application at  `https://IP_Address`. For example `https://34.212.141.253`.  You can obtain the VM's IP address from **Compute Engine** > **VM Instances**, the **External IP** column.
+1. You can log into the Cloudbreak application at `https://IP_Address`. For example `https://34.212.141.253`. You can obtain the VM's IP address from **Compute Engine** > **VM Instances**, the **External IP** column.
 
 2. Confirm the security exception to proceed to the Cloudbreak web UI.
 

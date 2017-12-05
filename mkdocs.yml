@@ -61,6 +61,7 @@ pages:
         - Install the CLI: cli-install.md
         - CLI Reference: cli-reference.md
       - Troubleshooting: 
+        - Cloudbreak Logs: trouble-cb-logs.md  
         - General Troubleshooting: trouble-cb.md
         - Troubleshooting AWS: trouble-aws.md
         - Troubleshooting Azure: trouble-azure.md

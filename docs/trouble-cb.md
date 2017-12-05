@@ -1,93 +1,8 @@
 ## Troubleshooting Cloudbreak
 
-[comment]: <> (TO-DO: How about 'cbd doctor'? I read in the Cloudbreak docs that "The doctor command helps you diagnose problems with your environment, such as common problems with your docker or boot2docker configuration. You can also use it to check cbd versions.") 
+This section includes common errors and steps to resolve them. 
 
-
-### Checking the Logs
-
-When troubleshooting, you can access the following Cloudbreak logs.
-
-#### Cloudbreak Logs
-
-When installing Cloudbreak using a pre-built cloud image, the  Cloudbreak Deployer location and the cbd root folder is `/var/lib/cloudbreak-deployment`. You must execute all cbd actions from the cbd root folder as a cloudbreak user. 
-
-> Your cbd root directory may be different if you installed Cloudbreak on your own VM. 
-
-Cloudbreak consists of multiple microservices deployed into Docker containers. 
-
-**Aggregated Logs**
-
-To check aggregated service logs, use the following commands:
-
-`cbd logs` shows all service logs.
-
-`cbd logs | tee cloudbreak.log` allows you to redirect the input into a file for sharing these logs.
-
-**Individual Service Logs**
-
-To check individual service logs, use the following commands:
-
-`cbd logs cloudbreak` shows Cloudbreak logs. This service is the backend service that handles all deployments.
-
-`cbd logs uluwatu` shows Cloudbreak UI logs. Uluwatu is the UI component of Cloudbreak.
-
-`cbd logs identity` shows Identity logs. Identity is responsible for authentication and authorization.
-
-`cbd logs periscope` shows Periscope logs. Periscope is responsible for triggering autoscaling rules.
-
-**Docker Logs**
-
-The same logs can be accessed via Docker commands:
-
-`docker logs cbreak_cloudbreak_1` shows the same logs as `cbd logs cloudbreak`.
-
-Cloudbreak logs are rotated and can be accessed later from the Cloudbreak deployment folder. Each time you restart the application via cbd restart a new log file is created with a timestamp in the name (for example, cbreak-20170821-105900.log). 
-
-> There is a symlink called `cbreak.log` which points to the latest log file. Sharing this symlink does not share the log itself.
- 
-
-#### Saltstack Logs
-
-Cloudbreak uses Saltstack to install Ambari and the necessary packages for the HDP provisioning. Salt Master always runs alongside the Ambari Server node. Each instance in the cluster runs a Salt Minion, which connects to the Salt Master. There can be multiple Salt Masters if the cluster is configured to run in HA (High Availability) mode and in this case each Salt Minion connects to each Salt Master.
-
-Cloudbreak also uses SaltStack to execute user-provided customization scripts called "recipes". 
-
-Salt Master and Salt Minion logs can be found at the following location: `/var/log/salt`
-
-
-#### Ambari Logs
-
-Cloudbreak uses Ambari to orchestrate the installation of the different HDP components. Each instance in the cluster runs an Ambari agent which connects to the Ambari server. Ambari server is declared by the user during the cluster installation wizard. 
-
-**Ambari Server Logs**
-
-Ambari server logs can be found on the nodes where Ambari server is installed in the following locations:
-
-`/var/log/ambari-server/ambari-server.log`
-
-`/var/log/ambari-server/ambari-server.out`
-
-Both files contain important information about the root cause of a certain issue so it is advised to check both.
-
-**Ambari Agent Logs**
-
-Ambari agent logs can be found on the nodes where Ambari agent is installed in the following locations:
-
-`/var/log/ambari-agent/ambari-agent.log`
-
-[comment]: <> (This doc http://hortonworks.github.io/cloudbreak-docs/release-1.16.4/operations/#ambari-server-node mentions more HDP/Ambari logs than these mentioned above. It says: "You can access Hadoop logs from the host and from the container in the /hadoopfs/fs1/logs directory." and "You can access Ambari logs from the host instance in the `/hadoopfs/fs1/logs folder." How are these logs different than these mentioned above?)
-
-
-#### Recipe Logs
-
-Cloudbreak supports "recipes" - user-provided customization scripts that can be run prior to or after cluster installation. It is the user’s responsibility to provide an idempotent well tested script. If the execution fails, the recipe logs can be found at `/var/log/recipes` on the nodes on which the recipes were executed.
-
-It is advised, but not required to have an advanced logging mechanism in the script, as Cloudbreak always logs every script that are run. Recipes are often the sources of installation failures as users might try to remove necessary packages or reconfigure services.
-
-
-### Common Errors
-
-#### Quota Limitations
+### Quota Limitations
 
 Each cloud provider has quota limitations on various cloud resources, and these quotas can usually be increased on request. If there is an error message in Cloudbreak saying that there are no more available EIPs (Elastic IP Address) or VPCs, you need to request more of these resources. 
 
@@ -97,7 +12,7 @@ To see the limitations visit the cloud provider’s site:
 * [Azure subscription and service limits, quotas, and constraints](https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits)
 * [GCP Resource Quotas](https://cloud.google.com/compute/quotas) 
 
-#### Connection Timeout: Ports Not Open
+### Connection Timeout When Ports Are Not Open
 
 In the cluster installation wizard, you must specify on which node you want to run the Ambari server. Cloudbreak communicates with this node to orchestrate the installation.
 
@@ -106,7 +21,9 @@ A common reason for connection timeout is security group misconfiguration. Cloud
 * 22 (SSH)  
 * 9443 (two-way-ssl through nginx) 
 
-#### Blueprints: Invalid Services and Configurations
+### Blueprint Errors 
+
+#### Invalid Services and Configurations
 
 Ambari blueprints are a declarative definition of a cluster. With a blueprint, you specify a stack, the component layout, and the configurations to materialize a Hadoop cluster instance via a REST API without having to use the Ambari cluster install wizard. 
 
@@ -119,12 +36,7 @@ To fix these type of issues, edit your blueprint and then reinstall your cluster
 There are some cases when Ambari cannot validate your blueprint beforehand. In these cases, the issues are only visible in the Ambari server logs. To trubleshoot, check Ambari server logs.
 
 
-#### Blueprints: High Availability
-
-Cloudbreak always tries to validate that a blueprint not to include multiple master services into different host groups. However, this exact setup is required for HA clusters. To overcome this, you can disable blueprint validation in the UI (using an advanced option in the Create Cluster wizard > Choose Blueprint), but you must include the necessary configurations.
-
-
-#### Blueprints: Wrong HDP Version
+#### Wrong HDP Version
 
 In the blueprint, only the major and minor HDP version should be defined (for example, "2.6"). If wrong version number is provided, the following error can be found in the logs:
 
@@ -137,7 +49,9 @@ In the blueprint, only the major and minor HDP version should be defined (for ex
 For correct blueprint layout, refer to the [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) page.
   
 
-#### Recipes: Recipe Execution Times Out
+### Recipe Errors 
+
+#### Recipe Execution Times Out
 
 If the scripts are taking too much time to execute, the processes will time out, as the threshold for all recipes is set to 15 minutes. To change this threshold, you must override the default value by adding the following to the cbd Profile file:
 
@@ -149,28 +63,27 @@ export CB_JAVA_OPTS=” -Dcb.max.salt.recipe.execution.retry=90”
 This property indicates the number of tries for checking if the scripts have finished with a sleep time (i.e. the wait time between two polling attempts) of 10 seconds. The default value is 90. To increase the threshold, provide a number greater than 90. You must restart Cloudbreak after changing properties in the Profile file.
 
 
-
-#### Recipes: Recipe Execution Fails
+#### Recipe Execution Fails
 
 It often happens that a script cannot be executed successfully because there are typos or errors in the script. To verify this you can check the recipe logs at
 `/var/log/recipes`. For each script, there will be a separate log file with the name of the script that you provided on the Cloudbreak UI.
 
 
-#### Invalid PUBLIC_IP in CBD Profile
+### Invalid PUBLIC_IP in CBD Profile
 
 The `PUBLIC_IP` property must be set in the cbd Profile file or else you won’t be able to log in on the Cloudbreak UI. 
 
 If you are migrating your instance, make sure that after the start the IP remains valid. If you need to edit the `PUBLIC_IP` property in Profile, make sure to restart Cloudbreak using `cbd restart`.
 
 
-#### Cbd Cannot Get VM's Public IP 
+### Cbd Cannot Get VM's Public IP 
 
 By default the `cbd` tool tries to get the VM's public IP to bind Cloudbreak UI to it. But if `cbd` cannot get the IP address during the initialization, you must set it manually. Check your `Profile` and if `PUBLIC_IP` is not set, add the `PUBLIC_IP` variable and set it to the public IP of the VM. For example: 
 
 <pre>export PUBLIC_IP=192.134.23.10</pre>
 
 
-#### Permission or Connection Problems 
+### Permission or Connection Problems 
 
 [comment]: <> (Not sure what this refers to. It came from the Install on Your Own VM docs.)
 
@@ -183,7 +96,7 @@ If you face permission or connection issues, disable SELinux:
     <presetenforce 0 && sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/ selinux/config</pre>
  
 
-#### Changing Properties in the Cloudbreak Profile File
+### Changing Properties in the Profile
 
 There are many properties that can be changed in the Cloudbreak application. These values must be changed in the Cloudbreak `Profil`e file. To see all possible options, use the following command:
 `cbd env show`.
@@ -201,6 +114,7 @@ In versions earlier than 1.4.0, you must run the following three commands:
 `cbd start` starts the application with the new compose file.
 
 **Related Links**  
+[Cloudbreak Logs](trouble-cb-logs.md)  
 [Troubleshooting AWS](trouble-aws.md)  
 [Troubleshooting Azure](trouble-azure.md)  
 [Troubleshooting GCP](trouble-gcp.md)  

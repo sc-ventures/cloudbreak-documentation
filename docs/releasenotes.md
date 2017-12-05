@@ -13,7 +13,7 @@ ____________________________
 Creating Kerberos-enabled clusters is supported. Refer to [Configure Kerberos](security-kerberos). 
 
 ##### **Configuring an external RDBMS for Cloudbreak**
-Configuring an external RDBMS for Cloubdreak is supported. For configuration instructions, refer to [Configuring External Cloudbreak Database](cb-db.md).
+Using an external RDBMS for Cloubdreak is supported. For configuration instructions, refer to [Configuring External Cloudbreak Database](cb-db.md).
 
 ##### **Migrating Cloudbreak Instance**
 Migrating Cloudbreak from one machine to another is supported. For migration instructions, refer to [Moving a Cloudbreak Instance](cb-migrate.md). 
@@ -37,8 +37,14 @@ New types of recipes are introduced:
 
 Refer to updated [Recipes](recipes.md) documentation.
 
+#####**Disabling Cloud Providers**
+You can hide cloud providers available in Cloudbreak by adding the CB_ENABLEDPLATFORMS environment variable in Profile and setting it to the provider(s) that you would like to have available. For more information, refer to [Disable Providers](cb-disable-provider.md).
+
+
 #####**New CLI Commands**
 New `cloud` commands are available in the CLI, allowing you to get cloud provider details required for a cluster template. Refer to [CLI Reference](cli-reference.md).
+
+
 
 
 ____________________________
