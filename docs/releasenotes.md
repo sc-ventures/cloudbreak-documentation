@@ -120,7 +120,7 @@ ____________________________
 
 
 
-##### (BUG-91810) Network and Subnet Listed as N/A
+##### (BUG-91810) Network and Subnet Are Listed as N/A
 
 When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "N/A".
 
