@@ -1,4 +1,4 @@
-## Access Data on Azure 
+## Accessing Data on Azure 
 
 Hortonworks Data Platform (HDP) supports reading and writing both block blobs and page blobs
 from/to *Windows Azure Storage Blob (WASB)* object store, as well as reading and writing files stored in an

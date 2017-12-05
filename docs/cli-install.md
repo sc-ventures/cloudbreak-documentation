@@ -1,4 +1,4 @@
-## Install Cloudbreak CLI  
+## Installing Cloudbreak CLI  
 
 
 The Cloudbreak Command Line Interface (CLI) is a tool to help you manage your Cloudbreak cluster instances. This tool can be used to interact with Cloudbreak for automating cluster creation, management, monitoring, and termination. 

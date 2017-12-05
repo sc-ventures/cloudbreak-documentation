@@ -1,4 +1,4 @@
-## Create a Cluster on OpenStack 
+## Creating a Cluster on OpenStack 
 
 {!docs/common/create-a1.md!}
 | Region | Select the region in which you would like to launch your cluster. |

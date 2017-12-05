@@ -1,4 +1,4 @@
-## Create a Cluster on AWS 
+## Creating a Cluster on AWS 
 
 {!docs/common/create-a1.md!}
 | Region | Select the AWS region in which you would like to launch your cluster. For information on available AWS regions, refer to [AWS documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html). |

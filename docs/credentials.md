@@ -1,5 +1,5 @@
 
-##  Manage Cloudbreak Credentials 
+## Managing Cloudbreak Credentials 
 
 You can view and manage Cloudbreak credentials in the **Credentials** tab by clicking **Create credential** and providing required parameters. You must create at least one credential in order to be able to create a cluster. 
 

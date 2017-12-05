@@ -18,13 +18,12 @@ It is not possible to add tags via Cloudbreak after your cluster has been create
 [comment]: <> (When you save a cluster template, all tags will be saved as part of the template, and they will be listed on the cluster template page.)    
 
 
-### Cloud Provider Documentation
+To learn more about tags and their restrictions, refer to the cloud provider documentation. 
 
-To learn more about tags and their restrictions, refer to the cloud provider documentation:
-
-* [Tags on AWS](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html)    
-* [Tags on Azure](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags)  
-* [Labels on GCP](https://cloud.google.com/resource-manager/docs/using-labels)  
-* [Tags on OpenStack](https://docs.openstack.org/mitaka/networking-guide/ops-resource-tags.html)  
+**Related Links**  
+[Tags on AWS](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html)    
+[Tags on Azure](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags)  
+[Labels on GCP](https://cloud.google.com/resource-manager/docs/using-labels)  
+[Tags on OpenStack](https://docs.openstack.org/mitaka/networking-guide/ops-resource-tags.html)  
 
 

@@ -1,4 +1,4 @@
-## Create a Cluster on GCP 
+## Creating a Cluster on GCP 
 
 {!docs/common/create-a1.md!}
 | Region | Select the GCP region in which you would like to launch your cluster. For information on available GCP regions, refer to [GCP documentation](https://cloud.google.com/about/locations/). |

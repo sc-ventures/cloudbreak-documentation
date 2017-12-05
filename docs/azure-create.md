@@ -1,4 +1,4 @@
-## Create a Cluster on Azure 
+## Creating a Cluster on Azure 
 
 {!docs/common/create-a1.md!}
 | Region | Select the Azure region in which you would like to launch your cluster. For information on available Azure regions, refer to [Azure documentation](https://azure.microsoft.com/en-us/regions/). |
