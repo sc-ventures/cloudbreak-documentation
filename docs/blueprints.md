@@ -39,7 +39,7 @@ The following configuration classification applies:
 </ul>
 
 
-### Use Custom Blueprint
+### Use Custom Blueprints 
 
 This option allows you to create and save your custom blueprints. 
 
@@ -105,7 +105,7 @@ After you provide the blueprint to Cloudbreak, the host groups in the JSON will 
 Here are a few [blueprint examples](https://github.com/hortonworks/cloudbreak/tree/master/core/src/main/resources/defaults/blueprints). You can also refer to the default blueprints provided in the Cloudbreak UI.
 
 **Related Links**  
-[Blueprint Examples](https://github.com/hortonworks/cloudbreak/tree/master/core/src/main/resources/defaults/blueprints) (External)     
+[Blueprint Examples](https://github.com/hortonworks/cloudbreak/tree/master/core/src/main/resources/defaults/blueprints) (Hortonworks)     
 [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) (External)  
  
 

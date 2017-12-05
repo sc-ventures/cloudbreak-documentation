@@ -10,19 +10,22 @@ To use S3 storage, you must have one or more S3 buckets on your AWS account. For
 
 #### Configuring Access to S3
 
-Amazon S3 is not supported as a default file system, but access to data in Amazon S3 via the s3a connector. To configure access to Amazon S3 from a cluster crated via Cloudbreak, declare your access key and secret key in a configuration file such as `core-site.xml`:
+Amazon S3 is not supported as a default file system, but access to data in Amazon S3 is possible via the s3a connector. 
 
-```xml
-<property>
-  <name>fs.s3a.access.key</name>
-  <value>ACCESS-KEY</value>
-</property>
+Data in public S3 buckets can be accessed without any access configuration. 
 
-<property>
-  <name>fs.s3a.secret.key</name>
-  <value>SECRET-KEY</value>
-</property>
-```
+During cluster creation, Cloudbreak creates a new IAM role "S3AccessRole" to grant the cluster instances access to S3 buckets within your AWS account. The  "S3AccessRole" IAM role policy is as follows: 
+
+<pre>{
+    "Statement": [
+        {
+            "Action": "s3:*",
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}</pre>
+
 
 [comment]: <> (Commenting out the following since this option is not available in 2.1 TP)
 

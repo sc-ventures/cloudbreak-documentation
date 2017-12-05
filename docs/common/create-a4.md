@@ -3,6 +3,3 @@
 
 9. You will be redirected to the Cloudbreak dashboard, and a new tile representing your cluster will appear at the top of the page.
 
-
-**Related Links**   
-[Default Cluster Security Groups](security.md#default-cluster-security-groups) 

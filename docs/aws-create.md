@@ -12,6 +12,7 @@
 
 **Related Links**  
 [Blueprints](blueprints.md)   
+[Default Cluster Security Groups](security.md#default-cluster-security-groups)  
 [Amazon EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/) (External)   
 [AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) (External)     
 [CIDR](http://www.ipaddressguide.com/cidr) (External)   
