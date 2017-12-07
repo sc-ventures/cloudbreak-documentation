@@ -93,13 +93,16 @@ ____________________________
 
 
 
-##### (BUG-91835) Default Ambari Node Security Group Has Port 9443 Inbound CIDR Set to 0.0.0.0/0 
+##### (BUG-91835) Default Ambari Node Security Group Has Port 22, 443, and 9443 Inbound CIDR Set to 0.0.0.0/0 
 
-By default, port 9443 is set to 0.0.0.0/0 CIDR for inbound access on the default-ambari-security-group.  
+By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access on the Ambari node security group.  
 
-*Workaround*: If you choose to use the default-ambari-security-group for your Ambari host group security group, it is strongly recommended that you limit this CIDR in the security group to only allow traffic from your Cloudbreak VM instance IP.  
+*Workaround*: We strongly recommend that you limit this CIDR in the security group:
 
-[Comment]: <> (This should be fixed in 2.2.0 TP)
+* For port 9443 to only allow traffic from your Cloudbreak VM instance public IP.   
+* For ports 22 and 443 to only allow traffic from your public IP.   
+
+[Comment]: <> (This should be fixed in 2.3.0 TP)
 ____________________________
 
 
