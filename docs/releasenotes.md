@@ -79,6 +79,7 @@ The following issues have been fixed in Cloudbreak 2.2.0 TP:
 | BUG-91827 | After cluster has been stopped, Event History shows "Infrastructure Has Been Terminated". |
 | BUG-91701 | Cluster resize is unclear: the cluster name and cluster information in the text above the scaling controls are incorrect. | 
 | BUG-91892 | "Recipe name is already taken" error when using a recipe description longer than 255 characters. | 
+| BUG-91077 | When usign EDW-ETL: Apache Hive 1.2.1, Apache Spark 1.6 blueprint, nodes are unhealthy after sync due to Druid service. |
 
  
 ____________________________
@@ -99,7 +100,7 @@ By default, port 9443 is set to 0.0.0.0/0 CIDR for inbound access on the default
 
 *Workaround*: If you choose to use the default-ambari-security-group for your Ambari host group security group, it is strongly recommended that you limit this CIDR in the security group to only allow traffic from your Cloudbreak VM instance IP.  
 
-[Comment]: <> (This item is closed. Need to verify the change.)
+[Comment]: <> (This should be fixed in 2.2.0 TP)
 ____________________________
 
 
@@ -126,8 +127,6 @@ ____________________________
 
 
 
-
-
 ##### (BUG-90985) OpenStack Cluster Creation Fails at Network Configuration
 
 When creating a cluster on OpenStack, if you do not select an existing network and subnet, the cluster fails with an error similar to:  
@@ -144,22 +143,6 @@ ____________________________
 When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "N/A".
 
 *Workaround*: If you want to check which network and subnet are used for your cluster, navigate to the cloud provider account and find the cluster instances that were created for your cluster. Next, check which virtual network and subnet they are associated with. The steps vary depending on the provider.  
-____________________________
-
-
-
-##### (BUG-91077) Node Status Is Not Consistent with Ambari
-
-If your blueprint contains Druid, cluster node status may be "healthy" after a cluster is created, even though the Druid component has not started.     
-*Workaround*: Manually start Druid by using Ambari web UI.  
-____________________________
-
-
-
-##### (BUG-91077) Nodes Are Unhealthy After Sync
-
-If your blueprint contains Druid, cluster node status may change to "unhealthy" after synchronizing with the cloud provider using the "Sync" option.    
-*Workaround*: Manually start Druid by using Ambari web UI and then "Sync" again.  
 ____________________________
 
 
