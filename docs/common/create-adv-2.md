@@ -14,12 +14,12 @@ Cloudbreak supports the following Ambari and HDP versions:<ul><li>Ambari <b>2.5.
 </p>
 </div>
 
-*Choose Image*
+**Choose Image**
 
-If under [Choose Image Catalog](#choose-image-catalog), you selected a custom image catalog, under **Choose Image** you can select a image from that catalog. Otherwise the default image from the default image catalog is used. For more information, refer to [Custom Images](images.md).
+If under [Choose Image Catalog](#choose-image-catalog), you selected a custom image catalog, under **Choose Image** you can select an image from that catalog. Otherwise the default image from the default image catalog is used. For more information, refer to [Custom Images](images.md).
 
 
-*Ambari*
+**Ambari**
 
 | Parameter | Description | Example |
 |---|---|---|
@@ -27,7 +27,7 @@ If under [Choose Image Catalog](#choose-image-catalog), you selected a custom im
 | Repo Url | URL to the Ambari version repo. | http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.5.1.0 |
 | Repo Gpg Key Url | URL to the repo GPG key. Each stable RPM package that is published by CentOS Project is signed with a GPG signature. By default, yum and the graphical update tools will verify these signatures and refuse to install any packages that are not signed, or have an incorrect signature. | http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins | 
 
-*HDP*
+**HDP**
 
 | Parameter | Description | Example | 
 |---|---|--|
