@@ -1208,14 +1208,14 @@ Adds a new recipe from a file or from a URL.
 **`from-url`**  
 
 **`--name <value>`**  Name for the recipe   
-**`--execution-type <value>`**  Type of execution [pre, post]  
+**`--execution-type <value>`**  Type of execution [pre-ambari-start, post-ambari-start, post-cluster-install]   
 **`--url <value>`**  URL location of the Ambari blueprint JSON file  
 
   
 **`from-file`** 
 
 **`--name <value>`**  Name for the recipe  
-**`--execution-type <value>`**  Type of execution [pre, post]  
+**`--execution-type <value>`**  Type of execution [pre-ambari-start, post-ambari-start, post-cluster-install]  
 **`--file <value>`**  Location of the Ambari blueprint JSON file  
 
 **Options**
