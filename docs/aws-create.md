@@ -32,9 +32,6 @@
 | Storage Type | <p>Select the volume type. The options are:<ul><li>Magnetic (default)</li><li>General Purpose (SSD)</li><li>Throughput Optimized HDD</li></ul>For more information about these options refer to <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html" target="_blank">AWS documentation</a>.</p>|
 {!docs/common/create-adv-3.md!}
 
-**Related Links**  
-[Amazon EC2 Instance Store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) (External)  
-
 
 #### Use Spot Instances
 
@@ -51,13 +48,12 @@ Note that:
 
 After creating a cluster, you can view your spot instance requests, including bid price, on the EC2 dashboard under **INSTANCES** > **Spot Requests**. For more information about spot instances, refer to [AWS documentation](https://aws.amazon.com/ec2/spot/).  
 
-**Related Links**   
-[Amazon EC2 Spot Instances](https://aws.amazon.com/ec2/spot/)  
-
 
 {!docs/common/create-adv-4.md!}
 
-{!docs/common/create-adv-5.md!}
+{!docs/common/create-adv-5.md!}  
+[Amazon EC2 Instance Store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) (External)  
+[Amazon EC2 Spot Instances](https://aws.amazon.com/ec2/spot/) (External)   
 
 
 <div class="next">

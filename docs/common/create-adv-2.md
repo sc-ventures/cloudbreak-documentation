@@ -1,9 +1,6 @@
 #### Choose Image Catalog
 
-By default, **Choose Image Catalog** is set to the default image that is provided with Cloudbreak. If you would like to use a different image catalog, you must first create and register it, as described in the [Custom Images](images.md) documentation.
-
-**Related Links**   
-[Custom Images](images.md)
+By default, **Choose Image Catalog** is set to the default image catalog that is provided with Cloudbreak. If you would like to use a different image catalog, you must first create and register it. For more information, refer to [Custom Images](images.md).
 
 
 #### Base Images  
@@ -16,6 +13,10 @@ The **Base Image** option allows you to customize Ambari and/or HDP version used
 Cloudbreak supports the following Ambari and HDP versions:<ul><li>Ambari <b>2.5.x</b></li><li>HDP <b>2.6.x</b> and HDP <b>2.5.x</b></li></ul>Ambari 2.6.x is not supported.
 </p>
 </div>
+
+*Choose Image*
+
+If under [Choose Image Catalog](#choose-image-catalog), you selected a custom image catalog, under **Choose Image** you can select a image from that catalog. Otherwise the default image from the default image catalog is used. For more information, refer to [Custom Images](images.md).
 
 
 *Ambari*
@@ -36,11 +37,7 @@ Cloudbreak supports the following Ambari and HDP versions:<ul><li>Ambari <b>2.5.
 | Stack Repo Id | Identifier for the repo linked in "Base Url". | HDP-2.6 |
 | Base Url | URL to the repo storing the desired stack version. | http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.6.1.0 |
 | Utils Repo Id | Identifier for the repo linked in "Utils Base Url". | HDP-UTILS-1.1.0.21|
-| Utils Base Url | URL to the repo storing utilities for the desired stack version. | http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.21/repos/centos7 |
-
-**Related Links**  
-[Ambari Repositories](https://docs.hortonworks.com/HDPDocuments/Ambari-2.5.2.0/bk_ambari-installation/content/ambari_repositories.html) (Hortonworks)   
-[HDP Repositories](https://docs.hortonworks.com/HDPDocuments/Ambari-2.5.2.0/bk_ambari-installation/content/hdp_stack_repositories.html) (Hortonworks)   
+| Utils Base Url | URL to the repo storing utilities for the desired stack version. | http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.21/repos/centos7 |  
  
 
 #### Prewarmed Images 
@@ -58,10 +55,8 @@ Check this option if you would like your cluster to be automatically terminated 
 #### Tags
 
 You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. refer to [Resource Tagging](tags.md).
-
-**Related Links**    
-[Resource Tagging](tags.md)  
-
+   
+   
 
 #### Storage
 

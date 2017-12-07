@@ -19,8 +19,8 @@ Since these standard default images may not fit the requirements of some users (
 In order to use your own custom base images you must:
 
 1. Build your custom images  
-2. Prepare the image catalog JSON file and save it in a location accessible to the Cloudbreak VM  
-3. Register your custom images with Cloudbreak    
+2. Prepare the custom image catalog JSON file and save it in a location accessible to the Cloudbreak VM  
+3. Register your custom image catalog with Cloudbreak    
 4. Select a custom image when creating a cluster  
 
 <div class="danger">
@@ -32,7 +32,7 @@ Only base images can be created and registered as custom images. Do not create o
 
 
 
-### Building Custom Images
+### Build Custom Images
 
 Refer to [Custom Images for Cloudbreak](https://github.com/hortonworks/cloudbreak-images) for information on how to build custom images. 
 
@@ -180,48 +180,48 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
 </small></pre>
 
 
-### Register Custom Images
+### Register Image Catalog 
 
 Now that you have created your image catalog JSON file, register it with your Cloudbreak instance. 
 
 **Steps**
 
 1. In the Cloudbreak UI, select **Image Catalogs** from the navigation menu.  
-2. Click **Create Image Catalog**.  
+2. Click **Create Image Catalog**.
+    <a href="../images/cb-images-register.png" target="_blank" title="click to enlarge"><img src="../images/cb-images-register.png" width="650" title="Cloudbreak UI"></a>
+  
 3. Enter name for your image catalog and the URL to the location where it is stored. 
 4. Click **Create**. 
 
-After performing these steps, the image catalog will be available in the create cluster wizard > **General Configuration** section > **Choose Image Catalog** parameter.  
+After performing these steps, the image catalog will be available in the create cluster wizard.  
+
+[Comment]: <> (Not sure if there is a way to do this in the CLI?)
 
 
 ### Select a Custom Image When Creating a Cluster
 
 Once you have registered your image catalog, you can use your custom image(s) when creating a cluster. 
 
-**Select a Custom Image in Cloudbreak UI**
+#### Select a Custom Image in Cloudbreak UI
 
-In the web UI, in the advanced **General Configuration** section of the create wizard wizard: 
+Perform these steps in the advanced **General Configuration** section of the create wizard wizard: 
 
 1. Under **Choose Image Catalog**, select your custom image catalog.  
 2. Under **Base Images** > **Choose Image**, select the provider-specific image that you would like to use.   
     The "os" that you specified in the image catalog will be displayed in the selection and the content of the "description" will be displayed in green.    
 3. You can leave the default entries for the Ambari and HDP repositories, or you can customize to point to specific versions of Ambari and HDP that you want to use for the cluster.  
 
-<a href="../images/cb-images.png" target="_blank" title="click to enlarge"><img src="../images/cb-images.png" width="650" title="Cloudbreak UI"></a>
+    <a href="../images/cb-images.png" target="_blank" title="click to enlarge"><img src="../images/cb-images.png" width="650" title="Cloudbreak UI"></a>
 
 
-
-
-**Select a Custom Image in CLI**
+#### Select a Custom Image in CLI
 
 In the CLI, to use the custom image when creating a cluster, add the "ImageId" parameter and set it to the uuid of the image(s) registered. For example: 
 
 <a href="../images/images-cli.png" target="_blank" title="click to enlarge"><img src="../images/images-cli.png" width="650" title="CLI JSON file showing images entry"></a> 
 
 
-### Reverting to Default Images
 
-To revert to the default images, remove the `export CB_IMAGE_CATALOG_URL=custom-image-catalog.json` entry that you added when [registering custom images](#register-custom-images) and then restart Cloudbreak.  
 
 
 

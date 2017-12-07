@@ -27,10 +27,6 @@
 | Storage Type | <p>Select the volume type. The options are:<ul><li>Locally-redundant storage</li><li>Geo-redundant storage</li><li>Premium locally-redundant storage</li></ul> For more information about these options refer to <a href="https://docs.microsoft.com/en-us/azure/storage/storage-introduction" target="_blank">Azure documentation</a>. |
 {!docs/common/create-adv-3.md!}
 
-**Related Links**  
-[Introduction to Microsoft Azure Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) (External) 
-
-
 {!docs/common/create-adv-4.md!} 
 
 
@@ -44,7 +40,8 @@ This option is available if you are creating a cluster in an existing network an
 This option is available if you are creating a cluster in an existing network and subnet. Select this option if you don't want to create new firewall rules for the network. 
 
 
-{!docs/common/create-adv-5.md!}
+{!docs/common/create-adv-5.md!}  
+[Introduction to Microsoft Azure Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) (External)  
 
 
 <div class="next">

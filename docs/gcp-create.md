@@ -31,8 +31,6 @@
 | Storage Type |  <p>Select the volume type. The options are:<ul><li>Standard persistent disks (HDD)</li><li>Solid-state persistent disks (SSD)</li></ul> For more information about these options refer to <a href="https://cloud.google.com/compute/docs/disks/" target="_blank">GCP documentation</a>. |
 {!docs/common/create-adv-3.md!}
 
-**Related Links**  
-[Storage Options](https://cloud.google.com/compute/docs/disks/) (External)   
 
 #### Use Preemptible Instances
 
@@ -48,13 +46,13 @@ Note that:
 
 [commemt]: <> (There is no bid specified in the UI, so I assume that we are using current bid?)
 
-**Related Links**   
-[Preemptible VM Instances](https://cloud.google.com/compute/docs/instances/preemptible) (External)    
-
 
 {!docs/common/create-adv-4.md!} 
 
-{!docs/common/create-adv-5.md!}
+{!docs/common/create-adv-5.md!}  
+[Preemptible VM Instances](https://cloud.google.com/compute/docs/instances/preemptible) (External)   
+[Storage Options](https://cloud.google.com/compute/docs/disks/) (External)  
+
 
 
 <div class="next">
