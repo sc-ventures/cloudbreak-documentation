@@ -19,8 +19,7 @@ Since these standard default images may not fit the requirements of some users (
 In order to use your own custom base images you must:
 
 1. Build your custom images  
-2. Prepare the image catalog JSON file   
-3. Save the JSON file in a location accessible to the Cloudbreak VM  
+2. Prepare the image catalog JSON file and save it in a location accessible to the Cloudbreak VM  
 3. Register your custom images with Cloudbreak    
 4. Select a custom image when creating a cluster  
 
@@ -42,7 +41,7 @@ This repository includes instructions and scripts to help you build custom image
 
 ### Prepare the Image Catalog 
 
-Once you've built the custom images, prepare your custom image catalog JSON file. 
+Once you've built the custom images, prepare your custom image catalog JSON file. Once your image catalog JSON file is ready, save it in a location accessible via HTTP/HTTPS. 
  
 
 #### Structure of the Image Catalog JSON File 
@@ -180,27 +179,6 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
 }
 </small></pre>
 
-### Save the Image Catalog 
-
-Once your image catalog JSON file is ready, you have two options for where to place it:
-
-* You can save your image catalog an the Cloudbreak VM  
-* You can save it in a location accessible to Cloudbreak via HTTP/HTTPS    
-
-#### Save Image Catalog on the Cloudbreak VM
-
-Once you've built the custom images, create the image catalog JSON file and save it on your Cloudbreak machine in the `/var/lib/cloudbreak-deployment/etc` directory. The etc directory does not exist by default so you must create it. For example:
-
-<pre>cd /var/lib/cloudbreak-deployment
-mkdir etc
-vi custom-image-catalog.json</pre>
-
-
-
-#### Create a Remote Image Catalog
-
-As an alternative to creating the image catalog JSON file on the Cloudbreak VM you can place it in a location accessible via HTTP/HTTPS.   
-
 
 ### Register Custom Images
 
@@ -208,15 +186,12 @@ Now that you have created your image catalog JSON file, register it with your Cl
 
 **Steps**
 
-1. On the Cloudbreak machine, navigate to the Cloudbreak deployment directory:  
-    cd /var/lib/cloudbreak-deployment    
-2. Edit the Profile file:     
-    vi Profile      
-2. Add `export CB_IMAGE_CATALOG_URL` to the file and set it to the location of your JSON file which declares your custom images. Its value can be:
-    * A **URL** of a remote file that is reachable by Cloudbreak through HTTP/HTTPS or    
-    * A **PATH** to the file, relative to the /var/lib/cloudbreak-deployment/etc directory on the Cloudbreak host. For example: `export CB_IMAGE_CATALOG_URL=custom-image-catalog.json`    
-3. Save the Profile file.  
-4. Restart Cloudbreak.
+1. In the Cloudbreak UI, select **Image Catalogs** from the navigation menu.  
+2. Click **Create Image Catalog**.  
+3. Enter name for your image catalog and the URL to the location where it is stored. 
+4. Click **Create**. 
+
+After performing these steps, the image catalog will be available in the create cluster wizard > **General Configuration** section > **Choose Image Catalog** parameter.  
 
 
 ### Select a Custom Image When Creating a Cluster
@@ -225,13 +200,17 @@ Once you have registered your image catalog, you can use your custom image(s) wh
 
 **Select a Custom Image in Cloudbreak UI**
 
-In the web UI, your custom image should be available under the **Choose OS Type** in the advanced **General Configuration** section of the wizard:
+In the web UI, in the advanced **General Configuration** section of the create wizard wizard: 
+
+1. Under **Choose Image Catalog**, select your custom image catalog.  
+2. Under **Base Images** > **Choose Image**, select the provider-specific image that you would like to use.   
+    The "os" that you specified in the image catalog will be displayed in the selection and the content of the "description" will be displayed in green.    
+3. You can leave the default entries for the Ambari and HDP repositories, or you can customize to point to specific versions of Ambari and HDP that you want to use for the cluster.  
 
 <a href="../images/cb-images.png" target="_blank" title="click to enlarge"><img src="../images/cb-images.png" width="650" title="Cloudbreak UI"></a>
 
-The "os" that you specified in the image catalog will be displayed in the selection and the content of the "description" will be displayed in green.  
 
-You can leave the default entries for the Ambari and HDP repositories, or you can customize to point to specific versions of Ambari and HDP that you want to use for the cluster. 
+
 
 **Select a Custom Image in CLI**
 
