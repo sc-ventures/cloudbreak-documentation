@@ -5,7 +5,10 @@
 
 To upgrade Cloudbreak to the newest version, perform the following steps.
 
+We recommend that you back up the Cloudbreak databases before upgrading. Refer to [Back up Cloudbreak Databases](cb-migrate.md#back-up-cloudbreak-database).
+
 **Steps**
+
 
 1. On the VM where Cloudbreak is running, navigate to the directory where your Profile file is located:
 
