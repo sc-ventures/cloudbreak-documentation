@@ -46,14 +46,13 @@ New `cloud` commands are available in the CLI, allowing you to get cloud provide
 
 
 
-
 ____________________________
 
 #### Behavioral Changes
 ____________________________
 
 #####**Image Catalog Registration**
-Image catalog registration steps have been simplified. Refer to updated  [Register Custom Images](images.md#register-custom-images) docuemntation.
+Image catalog registration is now possible via Cloudbreak web UI. Refer to updated [Register Custom Images](images.md#register-custom-images) documentation.
 
 #####**Create Cluster User Interface Changes**
 Some sections in the create cluster wizard were changed to ensure better user experience. For example, the security group section was improved to help you provide desired security groups settings. 
@@ -167,8 +166,5 @@ Check the *Event History* for more information:
 * If you tried to scale the cluster below the minimum required number of nodes, you will see: *New node(s) could not be removed from the cluster. Reason There is not enough node to downscale. Check the replication factor and the ApplicationMaster occupation.* It may take a few minutes for this message to appear in the the *Event History*.   
 * In other cases, you should see a message informing you that downscale was successful. It may take a few minutes for this message to appear in the the *Event History*.  
 ____________________________
-
-
-
 
 
