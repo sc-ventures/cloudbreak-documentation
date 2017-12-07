@@ -69,7 +69,7 @@ ____________________________
 #### Fixed Issues 
 ____________________________
 
-The following issues have been fixed in Cloudbreak 2.2.0 TP: 
+The following issues have been fixed in this release: 
 
 | Jira |  Description |
 |---|---|
@@ -97,7 +97,9 @@ ____________________________
 
 By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access on the Ambari node security group.  
 
-*Workaround*: We strongly recommend that you limit this CIDR in the security group:
+*Workaround*: 
+
+We strongly recommend that you limit this CIDR in the security group:
 
 * For port 9443 to only allow traffic from your Cloudbreak VM instance public IP.   
 * For ports 22 and 443 to only allow traffic from your public IP.   
@@ -113,7 +115,9 @@ You cannot create a cluster using an existing network that does not have any sub
 
 *Infrastructure creation failed. Reason: Invalid value for field 'resource.network': 'https://www.googleapis.com/compute/v1/projects/siq-haas/global/networks/cbd-test'. A subnet mode Network must be specified for Subnetwork creation.: [ resourceType: GCP_SUBNET, resourceName: testgc-20171110211021 ]*
   
-*Workaround*: Do not use this option. It will be removed in a future release.  
+*Workaround*: 
+
+Do not use this option. It will be removed in a future release.  
 ____________________________
 
 
@@ -124,7 +128,9 @@ Cluster creation fails with the following error:
 
 *Infrastructure creation failed. Reason: Failed to create the stack for CloudContext{id=3689, name='test-exisitngnetwork', platform='StringType{value='OPENSTACK'}', owner='e0307f96-bd7d-4641-8c8f-b95f2667d9c6'} due to: Resource CREATE failed: ResourceInError: resources.ambari_volume_master_0_0: Went to status error due to "Unknown"*
 
-*Workaround*: This may mean that the volumes that you requested exceed volumes available on your cloud provider account. When creating a cluster, on the advanced *Hardware and Storage* page of the create cluster wizard, try reducing the amount of requested storage. If you need more storage, try using a different region or ask your cloud provider admin to increase the resource quota for volumes.  
+*Workaround*: 
+
+This may mean that the volumes that you requested exceed volumes available on your cloud provider account. When creating a cluster, on the advanced *Hardware and Storage* page of the create cluster wizard, try reducing the amount of requested storage. If you need more storage, try using a different region or ask your cloud provider admin to increase the resource quota for volumes.  
 ____________________________
 
 
@@ -135,7 +141,9 @@ When creating a cluster on OpenStack, if you do not select an existing network a
 *Infrastructure creation failed. Reason: At least one of the following properties must be specified: network, network_id.*   
 *Infrastructure creation failed. Reason: The Parameter (router_id) was not provided.*
 
-*Workaround*: When creating a cluster on OpenStack, you must select an existing network and subnet. 
+*Workaround*: 
+
+When creating a cluster on OpenStack, you must select an existing network and subnet. 
 ____________________________
 
 
@@ -144,7 +152,9 @@ ____________________________
 
 When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "N/A".
 
-*Workaround*: If you want to check which network and subnet are used for your cluster, navigate to the cloud provider account and find the cluster instances that were created for your cluster. Next, check which virtual network and subnet they are associated with. The steps vary depending on the provider.  
+*Workaround*: 
+
+If you want to check which network and subnet are used for your cluster, navigate to the cloud provider account and find the cluster instances that were created for your cluster. Next, check which virtual network and subnet they are associated with. The steps vary depending on the provider.  
 ____________________________
 
 
