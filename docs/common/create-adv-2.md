@@ -1,6 +1,6 @@
-#### Choose OS Type
+#### Choose Image Catalog
 
-By default, the **Choose OS Type** is set to the default image that is provided with Cloudbreak. If you would like to use a different image, you must register it in a custom image catalog, as described in the [Custom Images](images.md) documentation.
+By default, **Choose Image Catalog** is set to the default image that is provided with Cloudbreak. If you would like to use a different image catalog, you must first create and register it, as described in the [Custom Images](images.md) documentation.
 
 **Related Links**   
 [Custom Images](images.md)
