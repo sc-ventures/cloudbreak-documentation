@@ -3,7 +3,7 @@
 Cloudbreak supports using Kerberos security for its clusters. It supports three ways of provisioning Kerberos-enabled clusters:
 
 * Create new MIT Kerberos at cluster provisioning time  
-* Use your existing MIT Kerberos server with a Cloudbreak provisioned cluster  
+* (Default) Use your existing MIT Kerberos server with a Cloudbreak provisioned cluster  
 * Use your existing Active Directory with a Cloudbreak provisioned cluster  
 
 ### Create New MIT Kerberos at Cluster Provisioning
@@ -20,9 +20,9 @@ To enable Kerberos on a cluster, follow these steps when creating your cluster v
 
 | Parameter | Description |
 |---|---|
-| Kerberos master key | The master key to use for the KDC. |
-| Kerberos admin | The KDC admin username to use for the KDC. |
-| Kerberos password | The KDC admin password to use for the KDC. |
+| Kerberos Master key | The master key to use for the KDC. |
+| Kerberos Admin | The KDC admin username to use for the KDC. |
+| Kerberos Password | The KDC admin password to use for the KDC. |
 
 
 #### Testing Kerberos
@@ -62,8 +62,8 @@ To enable Kerberos on a cluster, perform the following steps when creating your 
 | Kerberos Password | The KDC admin password to use for the KDC. |
 | Existing Kerberos Principal | The KDC principal in your existing MIT KDC. |
 | Existing Kerberos URL | The location of your existing MIT KDC. |
-| Use Tcp Connection | The connection type for your existing MIT KDC (default is **UDP**). |
 | Existing Kerberos Realm | The realm in your existing MIT KDC. |
+| Use Tcp Connection | Check to use TPC connection. **UDP** is used by default. | 
 
 
 ### Use Existing Active Directory with a Cloudbreak Provisioned Cluster
@@ -82,10 +82,10 @@ To enable Kerberos on a cluster, perform these steps when creating your cluster 
 | Kerberos Password | The KDC admin password to use for the KDC. |
 | Existing Kerberos Principal | The KDC principal in your existing MIT KDC. |
 | Existing Kerberos URL | The location of your existing MIT KDC. |
-| Use Tcp Connection | The connection type for your existing MIT KDC (default is **UDP**). |
 | Existing Kerberos Realm | The realm in your existing MIT KDC. |
-| Existing Kerberos Ldap AD Url | The url of the existing secure ldap (eg. ldaps://10.1.1.5). |
+| Existing Kerberos AD Ldap Url | The url of the existing secure ldap (eg. ldaps://10.1.1.5). |
 | Existing Kerberos AD Container DN | Active Directory User container for principals. For example "OU=Hadoop,OU=People,dc=apache,dc=org". |
+| Use Tcp Connection | Check to use TPC connection. **UDP** is used by default. |  
 
 
 ### Create Hadoop Users
