@@ -166,7 +166,7 @@ Cluster deletion may fail if Cloudbreak is unable to delete one or more of the c
 
 4. This deletes the cluster tile from the UI.  
 
-4. Log in to your cloud provider account and [manually delete](delete.md) any resources that failed to be deleted.
+4. Log in to your cloud provider account and [manually delete](cb-delete.md) any resources that failed to be deleted.
 
 
 
