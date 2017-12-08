@@ -33,7 +33,6 @@ New types of recipes are introduced:
 * PRE-AMBARI-START  
 * POST-AMBARI-START (formerly known as PRE) 
 * POST-CLUSTER-INSTALL (formerly known as POST)  
-* PRE-DELETE 
 
 Refer to updated [Recipes](recipes.md) documentation.
 
