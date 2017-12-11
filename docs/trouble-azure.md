@@ -33,6 +33,14 @@ The necessary action set for Cloudbreak to be able to manage the clusters includ
         "Microsoft.Storage/*",
         "Microsoft.Resources/*"`
  
+#### Client does not have authorization  
+
+Example error message: *<span class="cfn-output3">Failed to verify credential: Status code 403, {"error":{"code":"AuthorizationFailed","message":"The client 'X' with object id 'z' does not have authorization to perform action 'Microsoft.Storage/storageAccounts/read' over scope 'subscriptions/...'"}</span>*
+
+**Symptom**: Your account does not have sufficient permissions to create a Coudbreak credential. 
+
+**Solution**: If you get this error during interactive credential creation, you can try the app-based approach which may require lesser permissions. Otherwise contact your Azure administrator.  
+ 
 #### Cloud not validate publickey certificate
 
 Example error message: *<span class="cfn-output3">Could not validate publickey certificate [certificate: 'fdfdsf'], detailed message: Corrupt or unknown public key file format</span>*
