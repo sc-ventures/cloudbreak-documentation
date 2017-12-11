@@ -184,6 +184,10 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
 
 Now that you have created your image catalog JSON file, register it with your Cloudbreak instance. 
 
+#### Register Image Catalog in the UI
+
+Use these steps to register your custom image catalog in the Cloudbreak UI. 
+
 **Steps**
 
 1. In the Cloudbreak UI, select **Image Catalogs** from the navigation menu.  
@@ -195,7 +199,9 @@ Now that you have created your image catalog JSON file, register it with your Cl
 
 After performing these steps, the image catalog will be available in the create cluster wizard.  
 
-[Comment]: <> (Not sure if there is a way to do this in the CLI?)
+#### Register Image Catalog in the CLI
+
+To register your custom image catalog using the CLI, use the `cb imagecatalog create` command. Refer to [CLI documentation](cli-reference.md#imagecatalog-create). 
 
 
 ### Select a Custom Image When Creating a Cluster
