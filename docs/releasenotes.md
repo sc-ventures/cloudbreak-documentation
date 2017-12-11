@@ -40,7 +40,7 @@ Refer to updated [Recipes](recipes.md) documentation.
 You can hide cloud providers available in Cloudbreak by adding the CB_ENABLEDPLATFORMS environment variable in Profile and setting it to the provider(s) that you would like to have available. For more information, refer to [Disable Providers](cb-disable-provider.md).
 
 
-#####**New CLI Commands**
+#####**New 'cloud' CLI Commands**
 New `cloud` commands are available in the CLI, allowing you to get cloud provider details required for a cluster template. Refer to [CLI Reference](cli-reference.md).
 
 

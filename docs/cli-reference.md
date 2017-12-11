@@ -71,7 +71,16 @@ Cluster:
 * [cluster scale](#cluster scale)      
 * [cluster start](#cluster-start)        
 * [cluster stop](#cluster-stop)              
-* [cluster sync](#cluster-sync)             
+* [cluster sync](#cluster-sync) 
+ 
+
+Image Catalog
+
+* [imagecatalog create](#imagecatalog-create)     
+* [imagecatalog delete](#imagecatalog-delete) 
+* [imagecatalog images](#imagecatalog-images)                      
+* [imagecatalog list](#imagecatalog-list)  
+* [imagecatalog set-default](#imagecatalog-set-default)            
        
 
 Recipe:  
@@ -1194,6 +1203,188 @@ Lists credentials, with output formatted in a table format:
 
 __________________________________
 
+#### imagecatalog create   
+
+Registers a new custom image catalog based on URL provided.  
+
+
+**Required Options**  
+
+**`--name <value>`**  Name for the image catalog  
+**`--url <value>`**   URL location of the image catalog JSON file  
+
+**Options**
+
+**`--description <value>`**  Description for the recipe   
+**`--public`**   Public in account  
+**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+
+**Examples**
+
+Registers an image catalog called "mycustomcatalog" which is available at https://example.com/myimagecatalog.json: 
+
+<pre>cb imagecatalog create --name mycustomcatalog --url https://example.com/myimagecatalog.json</pre> 
+
+
+
+
+
+
+
+__________________________________ 
+
+#### imagecatalog delete
+
+Deletes a previously registered custom image catalog. 
+
+**Required Options**  
+
+**`--name <value>`**  Name for the image catalog   
+
+**Options**
+
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE] 
+
+**Examples**
+
+Deletes an image catalog called "mycustomcatalog":
+
+<pre>cb imagecatalog delete --name mycustomcatalog</pre> 
+
+
+
+
+
+
+
+
+
+__________________________________
+
+#### imagecatalog images 
+
+Lists available images from a specified image catalog.   
+
+**Sub-commands**  
+
+**`aws`**         Lists available aws images     
+**`azure`**       Lists available azure images     
+**`gcp`**         Lists available gcp images    
+**`openstack`**   Lists available openstack images    
+
+
+**Required Options**
+
+**`--imagecatalog <value>`**  Name of the imagecatalog   
+**`--region <value>`**         Name of the region    
+
+   
+**Options**
+
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]    
+**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`** Password [$CB_PASSWORD]   
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]   
+
+**Examples**  
+
+Lists available AWS images from an image catalog called "myimagecatalog":
+
+<pre>cb imagecatalog images aws --region us-west-2 --imagecatalog myimagecatalog</pre>
+
+
+
+
+
+
+__________________________________  
+               
+#### imagecatalog list 
+
+Lists default and custom image catalogs registered with Cloudbreak instance.   
+
+**Required Options**  
+
+None  
+
+**Options**  
+
+**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]   
+
+**Examples**
+
+Lists existing image catalogs:  
+
+<pre>cb  imagecatalog list 
+[
+  {
+    "Name": "test-catalog2",
+    "Default": false,
+    "URL": "htpps://testtest.com/test.json"
+  },
+  {
+    "Name": "mycustomcatalog",
+    "Default": false,
+    "URL": "https://example.com/imagecatalog.json"
+  },
+  {
+    "Name": "cloudbreak-default",
+    "Default": true,
+    "URL": "https://s3-eu-west-1.amazonaws.com/cloudbreak-info/v2-dev-cb-image-catalog.json"
+  }
+]</pre>
+
+
+
+
+
+
+
+__________________________________
+
+#### imagecatalog set-default
+
+Sets the specified image catalog as default.  
+
+**Required Options**   
+
+**`--name <value>`**  Name for the image catalog    
+
+**Options**
+
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE] 
+
+**Examples**
+
+Sets "mycustomcatalog" as default:  
+
+<pre>imagecatalog set-default --name mycustomcatalog</pre>
+
+
+
+
+
+
+
+
+__________________________________
+
 #### recipe create
 
 Adds a new recipe from a file or from a URL.
@@ -1348,7 +1539,7 @@ None
 **`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
 **`--password <value>`**  Password [$CB_PASSWORD]  
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
 
 **Examples**
 
