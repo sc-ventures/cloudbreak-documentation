@@ -237,7 +237,7 @@ Follow these steps to create an interactive Cloudbreak credential.
 
 Follow these steps to create an app based Cloudbreak credential.
 
-> The role assignment step in prerequisites must be preformed by a user with an "Owner" role.
+> The role assignment step in prerequisites must be preformed by a user with the "Owner" role.
 
 **Prerequisites**
 
