@@ -237,6 +237,8 @@ Follow these steps to create an interactive Cloudbreak credential.
 
 Follow these steps to create an app based Cloudbreak credential.
 
+[Comment]: <> (Hortonworks SE accounts do not have the permissions to perform this step. You must have the Owner role.)
+
 **Prerequisites**
 
 1. On Azure Portal, navigate to the **Active Directory** > **App Registrations** and register a new application. For more information, refer to [Create an Azure AD Application](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal).
