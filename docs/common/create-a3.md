@@ -12,6 +12,8 @@
 
 7. Next, define security groups for each host group. For each host group, you can either create a new security group and define its rules or use an existing security group:
 
+[Comment]: <> (On AWS/GCP Existing security groups should be selectable only for existing VPC.)
+
     | Option | Description |
 |---|---|
 | New Security Group | <p>(Default) Creates a new security group with the rules that you defined:</p><p><ul><li>A set of [default rules](security.md#default-cluster-security-groups) is provided. You should review and adjust these default rules. If you do not make any modifications, default rules will be applied. </li><li>You may open ports by defining the CIDR, entering port range, selecting protocol and clicking **+**.</li><li>You may delete default or previously added rules using the delete icon.</li><li>If you don't want to use security group, remove the default rules.</li><ul></p> |  
