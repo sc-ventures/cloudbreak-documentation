@@ -5,9 +5,10 @@
 {!docs/common/create-a2.md!}
 | Instance Type | Select an instance type. For information about instance types on Azure refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general). |
 {!docs/common/create-a3.md!}
+{!docs/common/create-a4.md!}
 | SSH Public Key | Specify a public SSH key. You will use the matching private key to access your cluster nodes via SSH. |
 
-{!docs/common/create-a4.md!}
+{!docs/common/create-a5.md!}
 
 **Related Links**  
 [Blueprints](blueprints.md)   

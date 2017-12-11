@@ -5,9 +5,13 @@
 {!docs/common/create-a2.md!}
 | Instance Type | Select a VM instance type. For information about instance types on GCP refer to [GCP documentation](https://cloud.google.com/compute/docs/machine-types).|
 {!docs/common/create-a3.md!}
+
+    > Existing security groups are only available for an existing VPC. 
+    
+{!docs/common/create-a4.md!}
 | SSH Public Key | Specify a public SSH key. You will use the matching private key to access your cluster nodes via SSH. |
 
-{!docs/common/create-a4.md!}
+{!docs/common/create-a5.md!}
 
 **Related Links**  
 [Blueprints](blueprints.md)   

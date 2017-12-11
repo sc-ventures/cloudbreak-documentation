@@ -5,10 +5,14 @@
 {!docs/common/create-a2.md!}
 | Instance Type | Select an instance type. For information about instance types on AWS refer to [AWS documentation](https://aws.amazon.com/ec2/instance-types/). |
 {!docs/common/create-a3.md!}
+
+    > Existing security groups are only available for an existing VPC. 
+
+{!docs/common/create-a4.md!}
 | SSH Key Pair| Select an existing public key. You will use the matching private key to access your cluster nodes via SSH. |
 | Specify new SSH public key | Check this option to specify a new public key and then enter the public key. You will use the matching private key to access your cluster nodes via SSH. |
 
-{!docs/common/create-a4.md!}
+{!docs/common/create-a5.md!}
 
 **Related Links**  
 [Blueprints](blueprints.md)   

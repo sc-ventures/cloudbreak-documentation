@@ -5,9 +5,10 @@
 {!docs/common/create-a2.md!}
 | Instance Type | Select an instance type. |
 {!docs/common/create-a3.md!}
+{!docs/common/create-a4.md!}
 | SSH Public Key | Select an existing public key or specify a new public key. You will use the matching private key to access your cluster nodes via SSH. |
 
-{!docs/common/create-a4.md!}
+{!docs/common/create-a5.md!}
 
 **Related Links**  
 [Blueprints](blueprints.md)   
