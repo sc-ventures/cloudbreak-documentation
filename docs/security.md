@@ -54,7 +54,8 @@ As an alternative to creating new security groups, you can select from your exis
     <p class="last">
 By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access. We strongly recommend that you limit this CIDR in the security group:
 <ul><li>For port 9443 to only allow traffic from your Cloudbreak VM instance public IP.</li> 
-<li>For ports 22 and 443 to only allow traffic from your public IP.</li></ul>  
+<li>For ports 22 and 443 to only allow traffic from your public IP and from your Cloudbreak VM instance public IP.</li>
+<li>You can set cb.default.gateway.cidr in your Cloudbreak's Profile file in order to automatically set ports 9443 and 22 to your Cloudbrak IP.</li></ul>  
 </p>
 </div>
 
@@ -63,6 +64,12 @@ By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access
 | Inbound Port | Description |
 |---|---|
 | 22 | SSH access to the VM instance. |
+
+<div class="danger">
+    <p class="first admonition-title">Important</p>
+    <p class="last">
+By default, port 22 is set to 0.0.0.0/0 CIDR for inbound access. We strongly recommend that you remove it.</p>
+</div>
 
 When creating a new security group, Cloudbreak uses the following naming convention: `<clustername>-ClusterNodeSecurityGroup<hostgroupname>` 
 
