@@ -10,7 +10,7 @@ The **Base Image** option allows you to customize Ambari and/or HDP version used
 <div class="note">
     <p class="first admonition-title">Supported Ambari and HDP Versions</p>
     <p class="last">
-Cloudbreak supports the following Ambari and HDP versions:<ul><li>Ambari <b>2.5.x</b></li><li>HDP <b>2.6.x</b> and HDP <b>2.5.x</b></li></ul>Ambari 2.6.x is not supported.
+Cloudbreak supports the following HDP and Ambari versions:<ul><li>HDP <b>2.5.x</b> and HDP <b>2.6.x</b></li><li>Ambari <b>2.5.x</b>.</li><li>If you would like to use Ambari <b>2.6.x</b>, use the version provided by default in the Cloudbreak web UI, or newer. Other versions are not supported.</li></ul>  
 </p>
 </div>
 
