@@ -190,7 +190,7 @@ Use these steps to register your custom image catalog in the Cloudbreak UI.
 
 **Steps**
 
-1. In the Cloudbreak UI, select **Image Catalogs** from the navigation menu.  
+1. In the Cloudbreak UI, select **Settings** > **Image Catalogs** from the navigation menu.  
 2. Click **Create Image Catalog**.
     <a href="../images/cb-images-register.png" target="_blank" title="click to enlarge"><img src="../images/cb-images-register.png" width="650" title="Cloudbreak UI"></a>
   
