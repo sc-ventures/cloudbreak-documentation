@@ -5,7 +5,7 @@ By default, **Choose Image Catalog** is set to the default image catalog that is
 
 #### Base Images  
 
-The **Base Image** option allows you to customize Ambari and/or HDP version used. 
+The **Base Image** option allows you to choose a custom image, and customize Ambari and HDP version used. 
 
 <div class="note">
     <p class="first admonition-title">Supported Ambari and HDP Versions</p>
@@ -13,6 +13,7 @@ The **Base Image** option allows you to customize Ambari and/or HDP version used
 Cloudbreak supports the following HDP and Ambari versions:<ul><li>HDP <b>2.5.x</b> and HDP <b>2.6.x</b></li><li>Ambari <b>2.5.x</b>.</li><li>If you would like to use Ambari <b>2.6.x</b>, use the version provided by default in the Cloudbreak web UI, or newer. Other versions are not supported.</li></ul>  
 </p>
 </div>
+
 
 **Choose Image**
 
