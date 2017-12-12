@@ -45,20 +45,20 @@ As an alternative to creating new security groups, you can select from your exis
 
 | Inbound Port | Description |
 |---|---|
-| 22 | SSH access to the VM instance. |
+| 22 | SSH access to the VM instance. This port is also used by Cloudbreak to communicate with the cluster. |
 | 443 | HTTPS access to the Ambari UI. |
 | 9443 | Management port, used by Cloudbreak to communicate with the cluster node VM. |
 
 <div class="danger">
 <p class="first admonition-title">Important</p>
 <p class="last">
-By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access on the Ambari node security group. We strongly recommend that you limit this CIDR:
-<ul><li>For port 22 to only allow traffic from your public IP and from your Cloudbreak VM instance public IP.</li>
-<li>For port 443 to only allow traffic from your public IP.</li>
-<li>For port 9443 to only allow traffic from your Cloudbreak VM instance public IP.</li></ul>
-You can set  CB_DEFAULT_GATEWAY_CIDR in your Cloudbreak's Profile file in order to automatically open ports 22 and 9443 to your Cloudbrak IP. Refer to <a href="../security-cb/index.html#restricting-inbound-access-to-clusters">Restricting Inbound Access to Clusters</a>.   
+By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access on the Ambari node security group. We strongly recommend that you limit this CIDR, considering the following restrictions:
+<ul><li>Ports 22 and 9443 must be open to Cloudbreak's CIDR. You can set CB_DEFAULT_GATEWAY_CIDR in your Cloudbreak's Profile file in order to automatically open ports 22 and 9443 to your Cloudbrak IP. Refer to <a href="../security-cb/index.html#restricting-inbound-access-to-clusters">Restricting Inbound Access to Clusters</a>.</li>
+<li>Port 22 must be open to your CIDR if you would like to access the master node via SSH.</li>
+<li>Port 443 must be open to your CIDR if you would like to access Cloudbreak web UI in your browser.</li></ul>  
 </p>
 </div>
+
 
 **Cluster Host Groups without the Ambari Server**
 
