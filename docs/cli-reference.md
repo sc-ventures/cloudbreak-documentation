@@ -1070,7 +1070,7 @@ Creates a role-based credential on OpenStack with Keystone-v2:
 <pre>cb credential create openstack keystone-v2 --name my-credential5 --tenant-user test --tenant-password MySecurePass123 --tenant-name test --endpoint http://openstack.test.organization.com:5000/v2.0</pre>
 
 
-**Related Links**
+**Related Links**  
 
 [Create Credential on AWS](aws-launch.md#create-credential)  
 [Create Credential on Azure](azure-launch.md#create-credential)  
@@ -1228,6 +1228,11 @@ Registers an image catalog called "mycustomcatalog" which is available at https:
 
 <pre>cb imagecatalog create --name mycustomcatalog --url https://example.com/myimagecatalog.json</pre> 
 
+**Related Links**  
+
+[Custom Images](images.md)   
+
+
 
 
 
@@ -1257,6 +1262,11 @@ Deletes a previously registered custom image catalog.
 Deletes an image catalog called "mycustomcatalog":
 
 <pre>cb imagecatalog delete --name mycustomcatalog</pre> 
+
+**Related Links**  
+
+[Custom Images](images.md)  
+
 
 
 
@@ -1314,6 +1324,16 @@ Lists available AWS images from an image catalog called "myimagecatalog":
 ]</pre>
 
 
+**Related Links**  
+
+[Custom Images](images.md)  
+
+
+
+
+
+
+
 
 
 
@@ -1343,11 +1363,6 @@ Lists existing image catalogs:
 <pre>cb  imagecatalog list 
 [
   {
-    "Name": "test-catalog2",
-    "Default": false,
-    "URL": "htpps://testtest.com/test.json"
-  },
-  {
     "Name": "mycustomcatalog",
     "Default": false,
     "URL": "https://example.com/imagecatalog.json"
@@ -1358,6 +1373,13 @@ Lists existing image catalogs:
     "URL": "https://s3-eu-west-1.amazonaws.com/cloudbreak-info/v2-dev-cb-image-catalog.json"
   }
 ]</pre>
+
+
+**Related Links**  
+
+[Custom Images](images.md)  
+
+
 
 
 
@@ -1388,6 +1410,10 @@ Sets the specified image catalog as default.
 Sets "mycustomcatalog" as default:  
 
 <pre>imagecatalog set-default --name mycustomcatalog</pre>
+
+**Related Links**  
+
+[Custom Images](images.md)  
 
 
 

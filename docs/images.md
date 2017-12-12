@@ -222,7 +222,7 @@ Perform these steps in the advanced **General Configuration** section of the cre
 
 #### Select a Custom Image in CLI
 
-In the CLI, to use the custom image when creating a cluster, add the "ImageId" parameter and set it to the uuid of the image(s) registered. For example: 
+In the CLI, to use the custom image when creating a cluster, add the "ImageId" parameter and set it to the uuid of a previously registered image. For example: 
 
 <a href="../images/images-cli.png" target="_blank" title="click to enlarge"><img src="../images/images-cli.png" width="650" title="CLI JSON file showing images entry"></a> 
 
