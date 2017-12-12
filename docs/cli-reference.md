@@ -1205,7 +1205,7 @@ __________________________________
 
 #### imagecatalog create   
 
-Registers a new custom image catalog based on URL provided.  
+Registers a new custom image catalog based on the URL provided.  
 
 
 **Required Options**  
@@ -1270,7 +1270,7 @@ __________________________________
 
 #### imagecatalog images 
 
-Lists available images from a specified image catalog.   
+Lists images from the specified image catalog available for the specified cloud provider.   
 
 **Sub-commands**  
 
@@ -1282,8 +1282,7 @@ Lists available images from a specified image catalog.
 
 **Required Options**
 
-**`--imagecatalog <value>`**  Name of the imagecatalog   
-**`--region <value>`**         Name of the region    
+**`--imagecatalog <value>`**  Name of the imagecatalog     
 
    
 **Options**
@@ -1298,7 +1297,21 @@ Lists available images from a specified image catalog.
 
 Lists available AWS images from an image catalog called "myimagecatalog":
 
-<pre>cb imagecatalog images aws --region us-west-2 --imagecatalog myimagecatalog</pre>
+<pre>./cb imagecatalog images aws --imagecatalog cloudbreak-default
+[
+  {
+    "Date": "2017-10-13",
+    "Description": "Cloudbreak official base image",
+    "Version": "2.6.0.0",
+    "ImageID": "44b140a4-bd0b-457d-b174-e988bee3ca47"
+  },
+  {
+    "Date": "2017-11-16",
+    "Description": "Official Cloudbreak image",
+    "Version": "2.6.0.0",
+    "ImageID": "3c7598a4-ebd6-4a02-5638-882f5c7f7add"
+  }
+]</pre>
 
 
 
