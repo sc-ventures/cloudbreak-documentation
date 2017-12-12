@@ -50,13 +50,13 @@ As an alternative to creating new security groups, you can select from your exis
 | 9443 | Management port, used by Cloudbreak to communicate with the cluster node VM. |
 
 <div class="danger">
-    <p class="first admonition-title">Important</p>
-    <p class="last">
-By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access. We strongly recommend that you limit this CIDR in the security group:
+<p class="first admonition-title">Important</p>
+<p class="last">
+By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access on the Ambari node security group. We strongly recommend that you limit this CIDR in the security group:
 <ul><li>For port 22 to only allow traffic from your public IP and from your Cloudbreak VM instance public IP.</li>
 <li>For port 9443 to only allow traffic from your Cloudbreak VM instance public IP.</li> 
 <li>For port 443 to only allow traffic from your public IP.</li></ul>
-You can set cb.default.gateway.cidr=Cloudbreak_IP in your Cloudbreak's Profile file in order to automatically open ports 9443 and 22 to your Cloudbrak IP.  
+You can set  CB_DEFAULT_GATEWAY_CIDR in your Cloudbreak's Profile file in order to automatically open ports 9443 and 22 to your Cloudbrak IP. Refer to <a href="../security-cb/index.html#restricting-inbound-access-to-clusters">Restricting Inbound Access to Clusters</a>.   
 </p>
 </div>
 
@@ -67,9 +67,9 @@ You can set cb.default.gateway.cidr=Cloudbreak_IP in your Cloudbreak's Profile f
 | 22 | SSH access to the VM instance. |
 
 <div class="danger">
-    <p class="first admonition-title">Important</p>
-    <p class="last">
-By default, port 22 is set to 0.0.0.0/0 CIDR for inbound access. We strongly recommend that you remove it.</p>
+<p class="first admonition-title">Important</p>
+<p class="last">
+By default, port 22 is set to 0.0.0.0/0 CIDR for inbound access on non-Ambari node security groups. We strongly recommend that you remove it.</p>
 </div>
 
 When creating a new security group, Cloudbreak uses the following naming convention: `<clustername>-ClusterNodeSecurityGroup<hostgroupname>` 
