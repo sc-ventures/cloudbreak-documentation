@@ -164,6 +164,8 @@ Cluster deletion may fail if Cloudbreak is unable to delete one or more of the c
 
 3. Click **Yes** to confirm. 
 
+    When terminating a cluster with Kerberos enabled, you have an option to disable Kerberos prior to cluster termination. This option removes any cluster-related principals from the KDC.
+
 4. This deletes the cluster tile from the UI.  
 
 4. Log in to your cloud provider account and [manually delete](cb-delete.md) any resources that failed to be deleted.

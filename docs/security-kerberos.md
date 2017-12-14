@@ -29,20 +29,18 @@ The following table explains the Kerberos related terminology:
 
 The option to enable Kerberos is available in the advanced **Security** section of the create cluster wizard.  
 
-#### Options for Enabling Kerberos 
-
 You have the following options for enabling Kerberos in a Cloudbreak  managed cluster:
 
 | Option | Description | Environment |
 |---|---|---|
 | [Use Existing KDC](#use-existing-kdc) | <p>Allows you to leverage an existing MIT KDC or Active Directory for enabling Kerberos with the cluster.<p/><p>You can either provide the required parameters and Cloudbreak will generate the descriptors on your behalf, or provide the exact Ambari Kerberos descriptors to be injected into your blueprint in JSON format.</p> | Suitable for production |
-| [Use Test KDC](#use-test-kdc) | <p>Installs a new MIT KDC on the master node and configures the cluster to leverage that KDC.</p> | Suitable for evaluation and testing, not suitable for production |
+| [Use Test KDC](#use-test-kdc) | <p>Installs a new MIT KDC on the master node and configures the cluster to leverage that KDC.</p> | Suitable for evaluation and testing only, not suitable for production |
 
 #### Use Existing KDC 
 
 To use an existing KDC, in the advanced **Security** section of the create cluster wizard select **Enable Kerberos Security**. By default, **Use Existing KDC** option is selected.  
 
-Before proceeding with the configuration, you must review the list of requirements. Check the box next to each requirement to confirmed that you have met the requirement. The configuration options are displayed only after you have confirmed all the requirements by checking every box.
+Before proceeding with the configuration, you must confirm that you met the requirements by checking the boxes next to all requirements listed. The configuration options are displayed only after you have confirmed all the requirements by checking every box.
 
 You must provide the following information about your MIT KDC or Active Directory:  
 
@@ -54,11 +52,11 @@ You must provide the following information about your MIT KDC or Active Director
 | Kerberos Realm | MIT, AD | The default realm to use when creating service principals. Example: "EXAMPLE.COM" |
 | Kerberos AD Ldap Url | AD | The URL to the Active Directory LDAP Interface. This value must indicate a secure channel using LDAPS since it is required for creating and updating passwords for Active Directory accounts. Example: "ldaps://ad.example.com:636" |
 | Kerberos AD Container DN | AD | The distinguished name (DN) of the container used store service principals. Example:  "OU=hadoop,DC=example,DC=com" |
-| Use TCP Connection | -- | By default, Kerberos uses UDP. Select this to use TCP instead. |
+| Use TCP Connection | Optional | By default, Kerberos uses UDP. Checkmark this box to use TCP instead. |
 
 **Use Custom Configuration** 
 
-If you check the **Use Custom Configuration** option, instead of providing some of the parameters, you must provide the actual Ambari Kerberos descriptors to be injected into your blueprint (instead of Cloudbreak generating the descriptors on your behalf). This is the most powerful option, and gives you full control of the Ambari Kerberos options that are available. You must provide: 
+If you check the **Use Custom Configuration** option, you must provide the actual Ambari Kerberos descriptors to be injected into your blueprint (instead of Cloudbreak generating the descriptors on your behalf). This is the most powerful option which gives you full control of the Ambari Kerberos options that are available. You must provide: 
 
 * Kerberos-env JSON Descriptor (required)
 * krb5-conf JSON Descriptor (optional)
@@ -120,5 +118,5 @@ Example krb5-conf JSON  descriptor file:
     }</pre>  
 
 
-
-
+**Related Links**   
+[Apache cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Automated+Kerberizaton#AutomatedKerberizaton-Configurations) 
