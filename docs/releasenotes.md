@@ -79,7 +79,6 @@ The following issues have been fixed in this release:
 | BUG-91892 | "Recipe name is already taken" error when using a recipe description longer than 255 characters. | 
 | BUG-91077 | When usign EDW-ETL: Apache Hive 1.2.1, Apache Spark 1.6 blueprint, nodes are unhealthy after sync due to Druid service. |
 | BUG-91835 | Default Ambari node security group Has Port 22, 443, and 9443 inbound CIDR set to 0.0.0.0/0. |
-| BUG-91071 | Syntax error during cluster downscale "SyntaxError: Unexpected end of JSON input" |
 
 
  
@@ -153,6 +152,19 @@ You may sporadically experience an issue where after you stop and restart a clus
 ____________________________
 
 
+##### (BUG-91071) Syntax Error During Cluster Downscale  
+
+When trying to downscale your cluster below the minimum required number of nodes, you may get the following error: SyntaxError: Unexpected end of JSON input.
+
+*Workaround:*
+
+Check the Event History for more information:
+
+* If you tried to scale the cluster below the minimum required number of nodes, you will see: New node(s) could not be removed from the cluster. Reason There is not enough node to downscale. Check the replication factor and the ApplicationMaster occupation. It may take a few minutes for this message to appear in the the Event History.  
+* In other cases, you should see a message informing you that downscale was successful. It may take a few minutes for this message to appear in the the Event History.  
+
+
+____________________________
 
 
 
