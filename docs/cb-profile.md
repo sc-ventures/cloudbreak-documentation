@@ -68,6 +68,7 @@ Refer to this list for available environment variables. The variables are listed
 | CB_DB_ENV_SCHEMA | "public" | Schema used in the Cloudbreak database |
 | CB_DB_ENV_USER | "postgres" | User for the Cloudbreak database authentication |
 | CB_DB_ROOT_PATH | "/var/lib/cloudbreak" | (Deprecated) Location of the database volume on Cloudbreak host |
+| CB_DEFAULT_GATEWAY_CIDR |  | CIDR address range which is used by Cloudbreak to communicate with its managed clusters. For more information, refer to [Restricting Inbound Access to Clusters](security-cb.md#restricting-inbound-access-to-clusters). |
 | CB_DEFAULT_SUBSCRIPTION_ADDRESS | http://uluwatu.service.consul:3000/notifications | URL of the default subscription for Cloudbreak notifications |
 | CB_ENABLEDPLATFORMS | | Set this to disable specific cloud providers. Accepted values are: AZURE, AWS, GCP, OPENSTACK. |
 | CB_ENABLE_CUSTOM_IMAGE | "false" | Set to "true" to enable custom cloud images |
