@@ -10,7 +10,7 @@ ____________________________
 ____________________________
 
 ##### **Support for Kerberos**
-Creating Kerberos-enabled clusters is supported. Refer to [Configure Kerberos](security-kerberos). 
+Creating Kerberos-enabled clusters is supported. Refer to [Enabling Kerberos Security](security-kerberos). 
 
 ##### **Configuring an external RDBMS for Cloudbreak**
 Using an external RDBMS for Cloubdreak is supported. For configuration instructions, refer to [Configuring External Cloudbreak Database](cb-db.md).
