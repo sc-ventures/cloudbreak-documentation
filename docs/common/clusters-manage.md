@@ -34,27 +34,15 @@ To resize a cluster, follow these steps.
 
 4. Click **Yes** to confirm the scale-up/scale-down.
 
-    While nodes are being added or removed, cluster status changes to "Update In Progress". Once the operation has completed, cluster status changes back to "Running". Messages similar to the following are written to the "Event History", : 
-
-    <pre>Ambari cluster scaled up
-11/6/2017, 12:33:40 PM
-Scaling up the Ambari cluster
-11/6/2017, 12:26:59 PM
-Stack successfully upscaled
-11/6/2017, 12:26:54 PM
-Bootstrapping new nodes
-11/6/2017, 12:26:16 PM
-Infrastructure metadata extension finished
-11/6/2017, 12:26:10 PM
-Billing changed due to upscaling of cluster infrastructure
-11/6/2017, 12:26:10 PM
-Adding 1 new instances to the infrastructure
-11/6/2017, 12:25:23 PM</pre>
+    While nodes are being added or removed, cluster status changes to "Update In Progress". Once the operation has completed, cluster status changes back to "Running". 
 
 
-### Synchronize with Cloud Provider
+### Synchronize the Cluster 
 
-If you have just made changes on your cloud provider side (for example, deleted cluster VMs) and you would like to synchronize Cloudbreak with the cloud provider, use the **sync** option. 
+Use the **sync** option if you:  
+
+* Made changes on your cloud provider side (for example, deleted cluster VMs) and you would like to synchronize Cloudbreak with the cloud provider.  
+* Manually changed service status in Ambari (for example, restarted services).   
 
 [comment]: <> (What are some examples where this option should be used?)
 
@@ -83,26 +71,10 @@ Cloudbreak supports stopping and restarting clusters. To stop and restart a clus
 
 3. Click **Yes** to confirm. 
 
-    Your cluster status changes to "Stopping in progress" and then to "Stopped". You should see the following messages in the "Event History":
+4. Your cluster status changes to "Stopping in progress" and then to "Stopped". Once stopping the infrastructure has completed, you will see a **Start** option to restart your cluster. 
 
-    <pre>Billing stopped, the cluster and its infrastructure have been terminated
-11/6/2017, 12:46:48 PM
-Infrastructure successfully stopped
-11/6/2017, 12:46:47 PM
-Infrastructure is now stopping
-11/6/2017, 12:43:58 PM
-Ambari cluster stopped
-11/6/2017, 12:43:52 PM
-Ambari services have been stopped.
-11/6/2017, 12:43:49 PM
-Stopping Ambari services.
-11/6/2017, 12:42:14 PM
-Stopping Ambari cluster
-11/6/2017, 12:42:10 PM
-Cluster infrastructure stop requested
-11/6/2017, 12:42:06 PM</pre>
+When a cluster is in the "stopped" state, you are not charged for the VMs, but you are charged for external storage.  
 
-Once stopping the infrastructure has completed, you will see a **Start** option to restart your cluster. 
 
 
 ### Restart Cluster 
@@ -115,24 +87,7 @@ If your cluster is in the "Stopped" state, you can restart the cluster by follow
 
 2. Click **Yes** to confirm.
 
-    Your cluster status changes to "Start in progress" and then to "Running". You should see the following messages in the "Event History":
-
-    <pre>Ambari cluster started; Ambari ip:35.203.149.236
-11/6/2017, 1:02:13 PM
-Ambari services have been started.
-11/6/2017, 1:02:08 PM
-Starting Ambari services.
-11/6/2017, 12:54:37 PM
-Starting Ambari cluster
-11/6/2017, 12:52:57 PM
-Billing started, the cluster and its infrastructure have successfully been started
-11/6/2017, 12:52:48 PM
-Infrastructure successfully started
-11/6/2017, 12:52:48 PM
-Infrastructure is now starting
-11/6/2017, 12:52:26 PM
-Ambari cluster start requested
-11/6/2017, 12:52:24 PM</pre>
+    Your cluster status changes to "Start in progress" and then to "Running". 
 
 
 ### Terminate Cluster 
