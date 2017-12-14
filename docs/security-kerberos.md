@@ -56,7 +56,7 @@ You must provide the following information about your MIT KDC or Active Director
 
 **Use Custom Configuration** 
 
-If you check the **Use Custom Configuration** option, you must provide the actual Ambari Kerberos descriptors to be injected into your blueprint (instead of Cloudbreak generating the descriptors on your behalf). This is the most powerful option which gives you full control of the Ambari Kerberos options that are available. You must provide: 
+Checking the **Use Custom Configuration** option allows you to provide the actual Ambari Kerberos descriptors to be injected into your blueprint (instead of Cloudbreak generating the descriptors on your behalf). This is the most powerful option which gives you full control of the Ambari Kerberos options that are available. You must provide: 
 
 * Kerberos-env JSON Descriptor (required)
 * krb5-conf JSON Descriptor (optional)
