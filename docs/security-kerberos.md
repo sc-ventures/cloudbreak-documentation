@@ -47,13 +47,13 @@ Before proceeding with the configuration, you must review the list of requiremen
 You must provide the following information about your MIT KDC or Active Directory:  
 
 | Parameter | Required if using... | Description |
-|---|---|---|
-| Kerberos Admin Principal | MIT, AD | The admin principal in your existing MIT KDC or AD. |
-| Kerberos Admin Password | MIT, AD | The admin principal password in your existing MIT KDC or AD. |
-| Kerberos Url | MIT, AD | The location of your existing MIT KDC or AD. |
-| Kerberos Realm | MIT, AD | The realm in your existing MIT KDC or AD. |
-| Kerberos AD Ldap Url | AD | The URL of the existing secure LDAP.  |
-| Kerberos AD Container DN | AD | Active Directory user container for principals. |
+|---|---|---|---|
+| Kerberos Admin Principal | MIT, AD | The admin principal in your existing MIT KDC or AD. | 
+| Kerberos Admin Password | MIT, AD | The admin principal password in your existing MIT KDC or AD. | 
+| Kerberos Url | MIT, AD | IP address or FQDN for the KDC host. Optionally a port number may be included. Example: "kdc.example.com:88" or "kdc.example.com" |
+| Kerberos Realm | MIT, AD | The default realm to use when creating service principals. Example: "EXAMPLE.COM" |
+| Kerberos AD Ldap Url | AD | The URL to the Active Directory LDAP Interface. This value must indicate a secure channel using LDAPS since it is required for creating and updating passwords for Active Directory accounts. Example: "ldaps://ad.example.com:636" |
+| Kerberos AD Container DN | AD | The distinguished name (DN) of the container used store service principals. Example:  "OU=hadoop,DC=example,DC=com" |
 | Use TCP Connection | -- | By default, Kerberos uses UDP. Select this to use TCP instead. |
 
 **Use Custom Configuration** 
