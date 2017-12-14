@@ -56,7 +56,7 @@ pages:
       - Security: 
         - Security Overview: security.md
         - Configure Basic Security: security-cb.md
-        - Configure Kerberos: security-kerberos.md
+        - Enable Kerberos Security: security-kerberos.md
       - CLI: 
         - Install the CLI: cli-install.md
         - CLI Reference: cli-reference.md

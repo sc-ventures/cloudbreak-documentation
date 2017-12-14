@@ -2,7 +2,7 @@
 
 #### Enable Kerberos Security 
 
-Select this option to enable Kerberos for your cluster. For more information refer to [Kerberos](security-kerberos.md). 
+Select this option to enable Kerberos for your cluster. For information about available Kerberos options, refer to [Enabling Kerberos Security](security-kerberos.md). 
 
 
 **Related Links**     
