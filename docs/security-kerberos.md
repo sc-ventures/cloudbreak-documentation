@@ -31,7 +31,7 @@ The option to enable Kerberos is available in the advanced **Security** section 
 
 #### Options for Enabling Kerberos 
 
-You have the following options for enabling Kerberos with Cloudbreak  managed clusters:
+You have the following options for enabling Kerberos in a Cloudbreak  managed cluster:
 
 | Option | Description | Environment |
 |---|---|---|
@@ -73,7 +73,7 @@ To use an existing KDC, follow these steps when creating a cluster.
 
         To learn more about the Ambari Kerberos JSON descriptors, refer to [Apache cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Automated+Kerberizaton#AutomatedKerberizaton-Configurations).  
         
-5. After you have provided these parameters, click **CREATE CLUSETR** to create a cluster with Kerberos enabled.  
+After you have provided these parameters, click **CREATE CLUSETR** to create a cluster with Kerberos enabled.  
 
 
 #### Use Test KDC 
@@ -99,16 +99,16 @@ Using the Test KDC is for evaluation and testing purposes only, and cannot be us
 | Kerberos Admin Password | The admin principal password. |
 | Confirm Kerberos Admin Password | The admin principal password. | 
 
-4. After you have provided these parameters, click **CREATE CLUSTER** to create a cluster with Kerberos enabled.  
+After you have provided these parameters, click **CREATE CLUSTER** to create a cluster with Kerberos enabled.  
 
-With this option:
+When using the test KDC option:
     
-* Cloudbreak installs an MIT KDC instance on the master node.  
+* Cloudbreak installs an MIT KDC instance on the Ambari server node.  
 * Kerberos clients are installed on all cluster nodes, and the krb5.conf is configured to use the MIT KDC.  
 * The cluster is configured for Kerberos to use the MIT KDC. Very basic Ambari KSON Kerberos descriptors are generated and used accordingly.
 
 
-Example kerberos-env JSON file:
+Example kerberos-env JSON descriptor file:
 
 <pre>{
       "kerberos-env" : {
@@ -124,7 +124,7 @@ Example kerberos-env JSON file:
       }
     }</pre> 
     
-Example krb5-conf JSON file: 
+Example krb5-conf JSON  descriptor file: 
 
 <pre> {
       "krb5-conf" : {
