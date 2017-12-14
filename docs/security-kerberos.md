@@ -40,9 +40,9 @@ You have the following options for enabling Kerberos in a Cloudbreak  managed cl
 
 To use an existing KDC, in the advanced **Security** section of the create cluster wizard select **Enable Kerberos Security**. By default, **Use Existing KDC** option is selected.  
 
-Before proceeding with the configuration, you must confirm that you met the requirements by checking the boxes next to all requirements listed. The configuration options are displayed only after you have confirmed all the requirements by checking every box.
+You must provide the following information about your MIT KDC or Active Directory. Based on these parameters, kerberos-env and krb5-conf JSON descriptors for Ambari are generated and injected into your Blueprint:
 
-You must provide the following information about your MIT KDC or Active Directory. Based on these parameters, kerberos-env and krb5-conf JSON descriptors for Ambari are generated and injected into your Blueprint.  
+> Before proceeding with the configuration, you must confirm that you met the requirements by checking the boxes next to all requirements listed. The configuration options are displayed only after you have confirmed all the requirements by checking every box.    
 
 | Parameter | Required if using... | Description |
 |---|---|---|---|
