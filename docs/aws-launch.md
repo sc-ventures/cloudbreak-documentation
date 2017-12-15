@@ -8,7 +8,7 @@ Before launching Cloudbreak on AWS, you must meet the following prerequisites.
 
 #### AWS Account 
 
-In order to launch Cloudbreak on Azure, you must log in to your AWS account. If you don't have an account, you can create one at [https://aws.amazon.com/](https://aws.amazon.com/).
+In order to launch Cloudbreak on AWS, you must log in to your AWS account. If you don't have an account, you can create one at [https://aws.amazon.com/](https://aws.amazon.com/).
 
 #### AWS Region
 
