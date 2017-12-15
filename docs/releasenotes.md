@@ -30,10 +30,10 @@ Using preemptible instances is supported for clusters created on Google Cloud. T
 #####**New Types of Recipes**
 New types of recipes are introduced: 
 
-* PRE-AMBARI-START  
+* PRE-AMBARI-START (new, useful for configuring Ambari prior to start)  
 * POST-AMBARI-START (formerly known as PRE) 
 * POST-CLUSTER-INSTALL (formerly known as POST)  
-
+ 
 Refer to updated [Recipes](recipes.md) documentation.
 
 #####**Disabling Cloud Providers**
