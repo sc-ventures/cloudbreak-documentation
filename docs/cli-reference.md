@@ -1305,7 +1305,7 @@ Lists images from the specified image catalog available for the specified cloud 
 
 **Examples**  
 
-Lists available AWS images from an image catalog called "myimagecatalog":
+Returns date, description, Ambari version, and image ID for all AWS images from an image catalog called "myimagecatalog":
 
 <pre>./cb imagecatalog images aws --imagecatalog cloudbreak-default
 [
