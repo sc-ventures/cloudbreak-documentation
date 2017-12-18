@@ -133,11 +133,34 @@ ____________________________
 
 
 
+##### (BUG-93339) HiveServer2 Process Could Not Establish Connection to jdbc:hive2  
+
+When using EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0 blueprint with a two-node cluster, Ambari shows the following Alert on Hive: *HiveServer2 Process CRIT Connection failed on host...* 
+
+*Workaround:* 
+
+* Although it is possible to create a cluster with less than 3 nodes, in order to use the EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0 blueprint, you must have at least 3 nodes: 1 Ambari node and 2 non-Ambari nodes. Try adding additional nodes, or terminate the cluster and create a new one with at least 3 nodes.   
+* Alternatively, it is possible to resolve this issue by adding an additional NodeManager for the Ambari host group.  
+____________________________
+
+
+
+##### (BUG-92581) Unable to Open Ambari in Firefox 57.0 (64-bit) 
+
+When trying to access Ambari in the Firefox 57.0 (64-bit) browser, you may get "Secure Connection Failed" with an error code "SEC_ERROR_INADEQUATE_KEY_USAGE". 
+
+*Workaround:* 
+
+Try using a different browser. 
+____________________________
+
+
+
 ##### (BUG-91810) Network and Subnet Are Listed as N/A
 
 When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "N/A".
 
-*Workaround*: 
+*Workaround:* 
 
 If you want to check which network and subnet are used for your cluster, navigate to the cloud provider account and find the cluster instances that were created for your cluster. Next, check which virtual network and subnet they are associated with. The steps vary depending on the provider.  
 ____________________________
@@ -152,6 +175,7 @@ You may sporadically experience an issue where after you stop and restart a clus
 ____________________________
 
 
+
 ##### (BUG-91071) Syntax Error During Cluster Downscale  
 
 When trying to downscale your cluster below the minimum required number of nodes, you may get the following error: SyntaxError: Unexpected end of JSON input.
@@ -162,9 +186,57 @@ Check the Event History for more information:
 
 * If you tried to scale the cluster below the minimum required number of nodes, you will see: New node(s) could not be removed from the cluster. Reason There is not enough node to downscale. Check the replication factor and the ApplicationMaster occupation. It may take a few minutes for this message to appear in the the Event History.  
 * In other cases, you should see a message informing you that downscale was successful. It may take a few minutes for this message to appear in the the Event History.  
-
-
 ____________________________
 
 
 
+##### (BUG-93241) Error When Scaling Multiple Host Groups 
+
+Scaling of multiple host groups fails with the following error: 
+*Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; nested exception is org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1*
+
+*Workaround:*
+
+Scaling multiple host groups at once is not supported. If you would like to scale multiple host groups: scale the first host group and wait until scaling has completed, then scale the second host group, and so on.  
+____________________________
+
+
+
+##### (BUG-93243) Incorrect Recipe Type Is Listed
+
+After adding a post-ambari-start recipe, you may see it incorrectly listed as a post-ambari-install recipe. 
+____________________________
+
+
+
+##### (BUG-93257) Clusters Are Missing From History   
+
+After changing the dates on the *History* page multiple times, the results displayed may sometimes be incorrect. 
+
+*Workaround:*
+
+Refresh the page if you think that the history displayed may be incorrect.  
+____________________________
+
+
+
+##### (RMP-10340) Unable to Dekerberize Cloudbreak Provisioned Cluster 
+
+Cluster with Cloudbreak provisioned Kerberos fails during dekerberizing. The Ambari shows the following error:
+
+*ERROR [ambari-heartbeat-processor-0] ServiceComponentHostImpl:1025 - Can't handle ServiceComponentHostEvent event at current state, serviceComponentName=ZOOKEEPER_CLIENT, hostName=host-10-0-0-3.openstacklocal, currentState=INSTALLED, eventType=HOST_SVCCOMP_STOPPED, event=EventType: HOST_SVCCOMP_STOPPED  
+WARN [ambari-heartbeat-processor-0] HeartbeatProcessor:567 - State machine exception. Invalid event: HOST_SVCCOMP_STOPPED at INSTALLED  
+ERROR [Server Action Executor Worker 62] PrepareDisableKerberosServerAction:151 - The data directory has not been set.  Generated data can not be stored.  
+WARN [Server Action Executor Worker 62] ServerActionExecutor:458 - Task #62 failed to complete execution due to thrown exception: org.apache.ambari.server.AmbariException:The data directory has not been set.  Generated data can not be stored.
+org.apache.ambari.server.AmbariException: The data directory has not been set.  Generated data can not be stored.
+        at org.apache.ambari.server.serveraction.kerberos.PrepareDisableKerberosServerAction.execute(PrepareDisableKerberosServerAction.java:152)
+        at org.apache.ambari.server.serveraction.ServerActionExecutor$Worker.execute(ServerActionExecutor.java:516)
+        at org.apache.ambari.server.serveraction.ServerActionExecutor$Worker.run(ServerActionExecutor.java:453)
+        at java.lang.Thread.run(Thread.java:748)  
+ERROR [ambari-action-scheduler] ActionScheduler:447 - Operation completely failed, aborting request id: 30*
+
+*Workaround:*
+
+Try terminating the cluster again. 
+
+____________________________
