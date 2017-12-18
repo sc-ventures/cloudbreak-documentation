@@ -220,7 +220,7 @@ ____________________________
 
 
 
-##### (RMP-10340) Unable to Dekerberize Cloudbreak Provisioned Cluster 
+##### (RMP-10340) Unable to Dekerberize the Cluster During Cluster Termination  
 
 Cluster with Cloudbreak provisioned Kerberos fails during dekerberizing. The Ambari shows the following error:
 
