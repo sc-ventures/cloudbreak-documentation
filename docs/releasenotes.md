@@ -106,6 +106,16 @@ Do not use this option. It will be removed in a future release.
 ____________________________
 
 
+##### (BUG-93548) AWS Region eu-west-3 Is Not Supported 
+
+The AWS region eu-west-3 can be selected during cluster creation; however, it is not supported by Cloudbreak.
+
+*Workaround*: 
+
+Do not use the AWS region eu-west-3. Instead, use eu-west-1 or eu-west-2.
+____________________________
+
+
 
 ##### (BUG-92605) Cluster Creation Fails with ResourceInError
 
@@ -139,7 +149,7 @@ When using EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0 blueprint wi
 
 *Workaround:* 
 
-* Although it is possible to create a cluster with less than 3 nodes, in order to use the EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0 blueprint, you must have at least 3 nodes: 1 Ambari node and 2 non-Ambari nodes. Try adding additional nodes, or terminate the cluster and create a new one with at least 3 nodes.   
+* Although it is possible to create a cluster with less than 3 nodes, in order to use the EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0 blueprint, you must have at least 3 nodes: 1 Ambari node and 2 non-Ambari nodes. Terminate the cluster and create a new one with at least 3 nodes.   
 * Alternatively, it is possible to resolve this issue by adding an additional NodeManager for the Ambari host group.  
 ____________________________
 
@@ -156,9 +166,9 @@ ____________________________
 
 
 
-##### (BUG-91810) Network and Subnet Are Listed as N/A
+##### (BUG-91810) Network and Subnet Are Listed as "N/A" or "New"
 
-When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "N/A".
+When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "N/A" or "New".
 
 *Workaround:* 
 
