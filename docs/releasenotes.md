@@ -1,67 +1,24 @@
 ## Release Notes
 
-### 2.2.0 TP
+### 2.3.0
 
-The Cloudbreak 2.2.0 TP release is technical preview: it is not suitable for production environments.
+Cloudbreak 2.3.0 is a general availability release, which is suitable for production deployments. 
 
 ____________________________
 
 #### New Features
 ____________________________
 
-##### **Support for Kerberos**
-Creating Kerberos-enabled clusters is supported. Refer to [Enabling Kerberos Security](security-kerberos). 
 
-##### **Configuring an external RDBMS for Cloudbreak**
-Using an external RDBMS for Cloubdreak is supported. For configuration instructions, refer to [Configuring External Cloudbreak Database](cb-db.md).
-
-##### **Migrating Cloudbreak Instance**
-Migrating Cloudbreak from one machine to another is supported. For migration instructions, refer to [Moving a Cloudbreak Instance](cb-migrate.md). 
-
-##### **Providing Your Own JDK**
-Providing your own JDK on a custom base image is supported. For instructions, refer to "Advanced topics" in the [https://github.com/hortonworks/cloudbreak-images](https://github.com/hortonworks/cloudbreak-images) repo.  
-
-#####**Spot Instances on AWS**  
-Using spot instances is supported for clusters created on AWS. The option is available in the advanced *Hardware and Storage* section of the create cluster wizard. Refer to [Use Spot Instances](aws-create.md#use-spot-instances).
-
-#####**Preemptible Instances on Google Cloud**  
-Using preemptible instances is supported for clusters created on Google Cloud. The option is available in the advanced *Hardware and Storage* section of the create cluster wizard. Refer to [Use Preemptible Instances](aws-create.md#use-preemptible-instances).
-
-#####**New Types of Recipes**
-New types of recipes are introduced: 
-
-* PRE-AMBARI-START (new, useful for configuring Ambari prior to start)  
-* POST-AMBARI-START (formerly known as PRE) 
-* POST-CLUSTER-INSTALL (formerly known as POST)  
- 
-Refer to updated [Recipes](recipes.md) documentation.
-
-#####**Disabling Cloud Providers**
-You can hide cloud providers available in Cloudbreak by adding the CB_ENABLEDPLATFORMS environment variable in Profile and setting it to the provider(s) that you would like to have available. For more information, refer to [Disable Providers](cb-disable-provider.md).
-
-
-#####**New 'cloud' CLI Commands**
-New `cloud` commands are available in the CLI, allowing you to get cloud provider details required for a cluster template. Refer to [CLI Reference](cli-reference.md).
-
-
+TBD
 
 ____________________________
 
 #### Behavioral Changes
 ____________________________
 
-#####**Image Catalog Registration**
-Image catalog registration is now possible via Cloudbreak web UI. Refer to updated [Register Custom Images](images.md#register-custom-images) documentation.
 
-#####**Create Cluster User Interface Changes**
-Some sections in the create cluster wizard were changed to ensure better user experience. For example, the security group section was improved to help you provide desired security groups settings. 
-
-#####**Cluster Details User Interface Changes**
-The cluster details page was changed to ensure better user experience. New tabs were created to help you find information related to your cluster. 
-
-#####**CLI Syntax**
-The syntax of all CLI commands has changed. All commands start with a singular object followed by an action, for example, `blueprint create` instead of `create blueprint`, and `blueprint list` instead of `list blueprints`. Refer to updated [CLI Reference](cli-reference.md).
-
+TBD
 
 ____________________________
 
@@ -72,13 +29,7 @@ The following issues have been fixed in this release:
 
 | Jira |  Description |
 |---|---|
-| BUG-91768 | The *Add* button used for adding tags does not work. |
-| BUG-90848 | "Do Not Use Security Group" option does not work for a new network. | 
-| BUG-91827 | After cluster has been stopped, Event History shows "Infrastructure Has Been Terminated". |
-| BUG-91701 | Cluster resize is unclear: the cluster name and cluster information in the text above the scaling controls are incorrect. | 
-| BUG-91892 | "Recipe name is already taken" error when using a recipe description longer than 255 characters. | 
-| BUG-91077 | When usign EDW-ETL: Apache Hive 1.2.1, Apache Spark 1.6 blueprint, nodes are unhealthy after sync due to Druid service. |
-| BUG-91835 | Default Ambari node security group Has Port 22, 443, and 9443 inbound CIDR set to 0.0.0.0/0. |
+|   |   |
 
 
  
@@ -261,5 +212,5 @@ ERROR [ambari-action-scheduler] ActionScheduler:447 - Operation completely faile
 *Workaround:*
 
 Try terminating the cluster again. 
-
 ____________________________
+

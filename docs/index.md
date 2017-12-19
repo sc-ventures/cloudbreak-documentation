@@ -1,6 +1,6 @@
 ## Introduction
 
-Welcome to the **Cloudbreak 2.2 Technical Preview** documentation!
+Welcome to the **Cloudbreak 2.3** documentation!
 
 Cloudbreak simplifies the provisioning, management, and monitoring of on-demand HDP clusters in virtual and cloud environments. It leverages cloud infrastructure to create host instances, and uses Apache Ambari via Ambari blueprints to provision and manage HDP clusters. 
 
