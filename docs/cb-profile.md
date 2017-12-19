@@ -138,13 +138,13 @@ Refer to this list for available environment variables. The variables are listed
 | IDENTITY_DB_URL | "${COMMON_DB}.service.consul:5432" | URL for the Identity database connection, including the port number |
 |IDENTITY_DB_USER | "postgres" | User for the Identity database authentication |
 | LOCAL_SMTP_PASSWORD | "$UAA_DEFAULT_USER_PW" | Default password for the internal mail server |
-| PERISCOPE_DB_HBM2DDL_STRATEGY | "validate" | Configures hibernate.hbm2ddl.auto in Autoscale |
-| PERISCOPE_DB_NAME | "periscopedb" | Name of the Autoscale database |
-| PERISCOPE_DB_PASS | "" | Password for the Autoscale database authentication |
-| PERISCOPE_DB_SCHEMA_NAME | "public" | Schema used in the Autoscale database |
-| PERISCOPE_DB_USER | "postgres" | User for the Autoscale database authentication |
-| PERISCOPE_DB_TCP_ADDR | | Address of the Autoscale database |
-| PERISCOPE_DB_TCP_PORT | | Port number of the Autoscale database |
+| PERISCOPE_DB_ENV_DB | "periscopedb" | Name of the Autoscale database |
+| PERISCOPE_DB_ENV_PASS | "" | Password for the Autoscale database authentication |
+| PERISCOPE_DB_ENV_SCHEMA | "public" | Schema used in the Autoscale database |
+| PERISCOPE_DB_ENV_USER | "postgres" | User for the Autoscale database authentication |
+| PERISCOPE_DB_PORT_5432_TCP_ADDR | | Address of the Autoscale database |
+| PERISCOPE_DB_PORT_5432_TCP_PORT | | Port number of the Autoscale database |
+| PERISCOPE_HBM2DDL_STRATEGY | "validate" | Configures hibernate.hbm2ddl.auto in Autoscale |
 | PERISCOPE_LOG_LEVEL | "INFO" | Log level of the Autoscale service |
 | PERISCOPE_SCHEMA_MIGRATION_AUTO | true | When set to "true", enables Autoscale automatic database schema update |
 | PUBLIC_IP | | IP address or hostname of the public interface |
