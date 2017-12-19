@@ -105,6 +105,18 @@ ____________________________
 
 
 
+##### (BUG-93548) AWS Region eu-west-3 Is Not Supported 
+
+The AWS region eu-west-3 can be selected during cluster creation. However, it is not supported by Cloudbreak.
+
+*Workaround*: 
+
+Do not use the AWS region eu-west-3. Instead, use eu-west-1 or eu-west-2.
+____________________________
+
+
+
+
 ##### (BUG-91543) Networks With No Subnets Are Not Supported 
 
 You cannot create a cluster using an existing network that does not have any subnets. You must use a network that includes at least one subnet. If you try to use a network with no subnets, the cluster fails with the following error:   
@@ -114,17 +126,6 @@ You cannot create a cluster using an existing network that does not have any sub
 *Workaround*: 
 
 Do not use this option. It will be removed in a future release.  
-____________________________
-
-
-
-##### (BUG-93548) AWS Region eu-west-3 Is Not Supported 
-
-The AWS region eu-west-3 can be selected during cluster creation. However, it is not supported by Cloudbreak.
-
-*Workaround*: 
-
-Do not use the AWS region eu-west-3. Instead, use eu-west-1 or eu-west-2.
 ____________________________
 
 
