@@ -251,15 +251,15 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 
     | Region Name | Region | Community AMI |
 |---|---|---|
-| EU (Ireland) | eu-west-1 | ami-9fd57fe6 |
-| EU (Frankfurt) | eu-central-1 |	ami-0c1e9e63 |
-| US East (N. Virginia) | us-east-1 | ami-d8d85aa2 |
-| US West (N. California) | us-west-1 |	ami-3598a155 |
-| US West (Oregon) | us-west-2 | ami-95d003ed | 
-| South America (São Paulo) | sa-east-1 | ami-ef0c4983 |
-| Asia Pacific (Tokyo) | ap-northeast-1	|  ami-7b47f61d |
-| Asia Pacific (Singapore) | ap-southeast-1 | ami-00b1e463 | 
-| Asia Pacific (Sydney) | ap-southeast-2 | ami-fff9129d |
+| EU (Ireland) | eu-west-1 | ami-6edb5817 |
+| EU (Frankfurt) | eu-central-1 |	 ami-665ecb09 |
+| US East (N. Virginia) | us-east-1 | ami-82324cf8 |
+| US West (N. California) | us-west-1 | ami-a53532c5 |
+| US West (Oregon) | us-west-2 | ami-d88725a0 | 
+| South America (São Paulo) | sa-east-1 | ami-a56627c9 |
+| Asia Pacific (Tokyo) | ap-northeast-1	| ami-d40d84b2 |
+| Asia Pacific (Singapore) | ap-southeast-1 | ami-02523e7e | 
+| Asia Pacific (Sydney) | ap-southeast-2 | ami-afd726cd |
 
 [comment]: <> (TO-DO: This table should be automatically generated.)
 
