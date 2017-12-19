@@ -94,6 +94,17 @@ ____________________________
 
 
 
+##### (BUG-93556) Hadoop YARN Provider is not Supported 
+
+When creating a Cloudbreak credential, the UI shows a "Hadoop YARN" cloud provider as an option.
+
+*Workaround*: 
+
+Do not use this option. 
+____________________________
+
+
+
 ##### (BUG-91543) Networks With No Subnets Are Not Supported 
 
 You cannot create a cluster using an existing network that does not have any subnets. You must use a network that includes at least one subnet. If you try to use a network with no subnets, the cluster fails with the following error:   
@@ -106,9 +117,10 @@ Do not use this option. It will be removed in a future release.
 ____________________________
 
 
+
 ##### (BUG-93548) AWS Region eu-west-3 Is Not Supported 
 
-The AWS region eu-west-3 can be selected during cluster creation; however, it is not supported by Cloudbreak.
+The AWS region eu-west-3 can be selected during cluster creation. However, it is not supported by Cloudbreak.
 
 *Workaround*: 
 
