@@ -59,12 +59,12 @@ Import Cloudbreak deployer image using the following steps.
 
 1. Download the latest Cloudbreak deployer image to your local machine:
 
-    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer-1165-2017-11-17.img</small></pre>
+    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer-220-2017-12-19.img</small></pre>
 
 2. Set the following environment variables for the OpenStack image import:
 
-    <pre><small>export CBD_LATEST_IMAGE=cloudbreak-deployer-1165-2017-11-17.img
-export OS_IMAGE_NAME=cloudbreak-deployer-1165-2017-11-17.img
+    <pre><small>export CBD_LATEST_IMAGE=cloudbreak-deployer-220-2017-12-19.img
+export OS_IMAGE_NAME=cloudbreak-deployer-220-2017-12-19.img
 export OS_USERNAME=your_os_user_name
 export OS_AUTH_URL=your_authentication_url
 export OS_TENANT_NAME=your_os_tenant_name</small></pre>
