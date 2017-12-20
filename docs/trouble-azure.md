@@ -1,5 +1,20 @@
 ## Troubleshooting Cloudbreak on Azure 
 
+### Cloudbreak Deployment Errors 
+
+#### Invalid Resource Reference
+
+Example error message:  
+*<span class="cfn-output3">Resource /subscriptions/.../resourceGroups//providers/Microsoft.Network/virtualNetworks/cbdeployerVnet/  
+subnets/cbdeployerSubnet referenced by resource /subscriptions/.../resourceGroups/Manulife-ADLS/providers/  
+Microsoft.Network/networkInterfaces/cbdeployerNic was not found.  
+Please make sure that the referenced resource exists, and that both resources are in the same region.</span>*
+
+**Symptom**: The most common reason for this error is that you did not provide the Vnet RG Name (last parameter in the template).  
+
+**Solution**: When launching Cloudbreak, under "Vnet RG Name" provide the name of the resource group in which the selected VNet is located. If using a new VNet, enter the same resource group name as in "Resource group". 
+
+
 ### Credential Creation Errors
 
 #### Role already exists
@@ -21,7 +36,7 @@ Example error message: *<span class="cfn-output3">Role does not exist in Azure w
 #### Role does not have enough privileges 
 
 Example error message: *<span class="cfn-output3">CloudbreakCustom 50 role does not have enough privileges to be used by Cloudbreak!</span>  
-<span class="cfn-output3">Please contact the documentation for more information!</span>*
+<span class="cfn-output3"></span>*
 
 **Symptom**: You specified that you want to reuse an  existing role for your Cloudbreak credential, but that particular role does not have the necessary privileges for Cloudbreak cluster management.
 
@@ -35,7 +50,10 @@ The necessary action set for Cloudbreak to be able to manage the clusters includ
  
 #### Client does not have authorization  
 
-Example error message: *<span class="cfn-output3">Failed to verify credential: Status code 403, {"error":{"code":"AuthorizationFailed","message":"The client 'X' with object id 'z' does not have authorization to perform action 'Microsoft.Storage/storageAccounts/read' over scope 'subscriptions/...'"}</span>*
+Example error message:  
+*<span class="cfn-output3">Failed to verify credential: Status code 403, {"error":{"code":"AuthorizationFailed",  
+"message":"The client 'X' with object id 'z' does not have authorization to perform action  
+'Microsoft.Storage/storageAccounts/read' over scope 'subscriptions/...'"}</span>*
 
 **Symptom**: Your Azure account does not have sufficient permissions to create a Coudbreak credential. 
 
@@ -43,7 +61,9 @@ Example error message: *<span class="cfn-output3">Failed to verify credential: S
  
 #### Cloud not validate publickey certificate
 
-Example error message: *<span class="cfn-output3">Could not validate publickey certificate [certificate: 'fdfdsf'], detailed message: Corrupt or unknown public key file format</span>*
+Example error message:  
+*<span class="cfn-output3">Could not validate publickey certificate [certificate: 'fdfdsf'], detailed message:   
+Corrupt or unknown public key file format</span>*
 
 **Symptom**: The syntax of your SSH public key is incorrect.
 
