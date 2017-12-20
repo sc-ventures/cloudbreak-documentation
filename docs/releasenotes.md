@@ -89,7 +89,14 @@ ____________________________
 
 ##### (RMP-10114) Auto-scaling Is Not Available
 
-Auto-scaling functionality is not available in Cloudbreak 2.2.0 TP. 
+Cluster auto-scaling functionality is not available in Cloudbreak 2.2.0 TP. 
+____________________________
+
+
+
+##### (RMP-10409) Azure Disk Encryption Is Not Available
+
+Azure disk encryption functionality is not available in Cloudbreak 2.2.0 TP.
 ____________________________
 
 
@@ -116,7 +123,6 @@ ____________________________
 
 
 
-
 ##### (BUG-91543) Networks With No Subnets Are Not Supported 
 
 You cannot create a cluster using an existing network that does not have any subnets. You must use a network that includes at least one subnet. If you try to use a network with no subnets, the cluster fails with the following error:   
@@ -126,6 +132,13 @@ You cannot create a cluster using an existing network that does not have any sub
 *Workaround*: 
 
 Do not use this option. It will be removed in a future release.  
+____________________________
+
+
+
+##### (BUG-93602) Do Not Create Public IPs Azure Cluster Option
+
+If you check "Do not create Public IPs” when creating a cluster on Azure, public IPs are created. This will be fixed in a future release.  
 ____________________________
 
 
