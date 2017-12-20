@@ -92,7 +92,11 @@ Launch Cloudbreak deployer using the following steps.
 
 5. Click **Purchase**.
 
-6. Proceed to the next step: [Explore Newly Created Resources](#explore-newly-created-resources).
+6. Your deployment should be initiated.  
+
+    > If you encounter errors, refer to [Troubleshooting Azure](trouble-azure.md).   
+
+7. Proceed to the next step: [Explore Newly Created Resources](#explore-newly-created-resources).
 
 **Related Links**  
 [CIDR IP](http://www.ipaddressguide.com/cidr) (External)   
@@ -232,6 +236,8 @@ Follow these steps to create an interactive Cloudbreak credential.
 
 10. A confirmation page will appear, confirming that you have signed in to the Microsoft Azure Cross-platform Command Line Interface application on your device. You may now close this window.
 
+    > If you encounter errors, refer to [Troubleshooting Azure](trouble-azure.md). 
+
      Congratulations! You've successfully launched and configured Cloudbreak. Now you can use Cloudbreak to [create clusters](azure-create.md).
 
 
@@ -297,6 +303,8 @@ Follow these steps to create an app based Cloudbreak credential.
 
 
 1. Click **Create**.
+
+    > If you encounter errors, refer to [Troubleshooting Azure](trouble-azure.md).  
 
      Congratulations! You have successfully launched Cloudbreak and created a Cloudbreak credential. Now you can use Cloudbreak to [create clusters](azure-create.md).
      
