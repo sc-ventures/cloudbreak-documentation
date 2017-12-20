@@ -33,7 +33,7 @@ For example, if there are configurations for a certain service like Hive but Hiv
 
 To fix these type of issues, edit your blueprint and then reinstall your cluster. Cloudbreak UI has support for this so the infrastructure does not have to be terminated.
 
-There are some cases when Ambari cannot validate your blueprint beforehand. In these cases, the issues are only visible in the Ambari server logs. To trubleshoot, check Ambari server logs.
+There are some cases when Ambari cannot validate your blueprint beforehand. In these cases, the issues are only visible in the Ambari server logs. To troubleshoot, check Ambari server logs.
 
 
 #### Wrong HDP Version
