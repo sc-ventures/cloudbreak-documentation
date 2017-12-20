@@ -34,7 +34,7 @@ If you want to delete the Cloudbreak instance, you can do so by deleting the EC2
 
 ### Delete Cloudbreak on Azure
 
-You can delete Cloudbreak instance from your Azure account by deleting related resoucres. To delete a Cloudbreak instance:
+You can delete Cloudbreak instance from your Azure account by deleting related resources. To delete a Cloudbreak instance:
 
 * If you deployed Cloudbreak in a new resource group: to delete Cloudbreak, delete the whole related resource group.
 

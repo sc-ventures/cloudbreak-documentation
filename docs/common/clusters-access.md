@@ -43,7 +43,7 @@ The summary bar includes the following information about your cluster:
 | Status | Current status. When a cluster is healthy, the status is *Running*. |
 | Nodes | The current number of cluster nodes, including the master node. |
 | Uptime | The amount of time (HH:MM) that the cluster has been in the running state since it was started. Each time you stop and restart the cluster, the running time is reset to 0. |
-| Created | The date when the cluster was created. The date format is Mon DD, YYYY. For exampple: Oct 27, 2017. |
+| Created | The date when the cluster was created. The date format is Mon DD, YYYY. For example: Oct 27, 2017. |
 
 #### Cluster Information 
 

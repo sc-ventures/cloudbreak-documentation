@@ -21,7 +21,7 @@ Example error message: *<span class="cfn-output3">Role does not exist in Azure w
 #### Role does not have enough privileges 
 
 Example error message: *<span class="cfn-output3">CloudbreakCustom 50 role does not have enough privileges to be used by Cloudbreak!</span>  
-<span class="cfn-output3">Please contact the documentaion for more information!</span>*
+<span class="cfn-output3">Please contact the documentation for more information!</span>*
 
 **Symptom**: You specified that you want to reuse an  existing role for your Cloudbreak credential, but that particular role does not have the necessary privileges for Cloudbreak cluster management.
 
