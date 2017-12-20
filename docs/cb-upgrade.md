@@ -3,6 +3,8 @@
 
 ### Update Cloudbreak Deployer 
 
+[Comment]: <> (Need to update and validate these steps.)
+
 To upgrade Cloudbreak to the newest version, perform the following steps.
 
 We recommend that you back up the Cloudbreak databases before upgrading. Refer to [Back up Cloudbreak Databases](cb-migrate.md#back-up-cloudbreak-database).
