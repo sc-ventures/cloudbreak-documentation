@@ -10,7 +10,9 @@ ____________________________
 ____________________________
 
 
-TBD
+##### Pre-termination Recipes
+
+A new "pre-termination" recipe type is introduced to allow you to run custom scripts before cluster termination. Refer to updated [Recipes](recipes.md) documentation.  
 
 ____________________________
 
