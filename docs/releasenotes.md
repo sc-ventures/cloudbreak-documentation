@@ -29,7 +29,7 @@ The following issues have been fixed in this release:
 
 | Jira |  Description |
 |---|---|
-|   |   |
+| BUG-93602 | "Do not create Public IPs" Azure cluster option is now available. |
 
 
  
