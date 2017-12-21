@@ -25,14 +25,16 @@ ____________________________
 #### Fixed Issues 
 ____________________________
 
+
 The following issues have been fixed in this release: 
 
 | Jira |  Description |
 |---|---|
-| BUG-93602 | "Do not create Public IPs" Azure cluster option is now available. |
+| BUG-93602 | "Do not create Public IPs" Azure cluster option was fixed and it can now be used. |
 
 
- 
+
+
 ____________________________
 
 #### Known Issues
