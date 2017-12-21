@@ -101,13 +101,13 @@ ____________________________
 
 
 
-##### (BUG-93556) Hadoop YARN Provider is not Supported 
+##### (BUG-93556) Hadoop YARN Provider Option in the Create Credential Dropdown  
 
-When creating a Cloudbreak credential, the UI shows a "Hadoop YARN" cloud provider as an option.
+When creating a Cloudbreak credential, the UI shows "Hadoop YARN" as a cloud provider option.
 
 *Workaround*: 
 
-Do not use this option. 
+Ignore this option. 
 ____________________________
 
 
