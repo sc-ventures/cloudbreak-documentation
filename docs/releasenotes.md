@@ -47,6 +47,12 @@ ____________________________
 
 
 
+##### (RMP-10409) Azure Disk Encryption Is Not Available
+
+Azure disk encryption functionality is not available in Cloudbreak 2.2.0 TP.
+____________________________
+
+
 ##### (BUG-93556) Hadoop YARN Provider is not Supported 
 
 When creating a Cloudbreak credential, the UI shows a "Hadoop YARN" cloud provider as an option.
