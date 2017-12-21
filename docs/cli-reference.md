@@ -1438,14 +1438,14 @@ Adds a new recipe from a file or from a URL.
 **`from-url`**  
 
 **`--name <value>`**  Name for the recipe   
-**`--execution-type <value>`**  Type of execution [pre-ambari-start, post-ambari-start, post-cluster-install]   
+**`--execution-type <value>`**  Type of execution [pre-ambari-start, pre-termination, post-ambari-start, post-cluster-install]    
 **`--url <value>`**  URL location of the Ambari blueprint JSON file  
 
   
 **`from-file`** 
 
 **`--name <value>`**  Name for the recipe  
-**`--execution-type <value>`**  Type of execution [pre-ambari-start, post-ambari-start, post-cluster-install]  
+**`--execution-type <value>`**  Type of execution [pre-ambari-start, pre-termination, post-ambari-start, post-cluster-install]   
 **`--file <value>`**  Location of the Ambari blueprint JSON file  
 
 **Options**
@@ -1462,11 +1462,11 @@ Adds a new recipe from a file or from a URL.
 
 Adds a new recipe called "test1" from a URL:
 
-<pre>cb recipe create from-url --name "test1" --execution post --url http://some-site.com/test.sh</pre>
+<pre>cb recipe create from-url --name "test1" --execution-type post-ambari-start --url http://some-site.com/test.sh</pre>
 
 Adds a new recipe called "test2" from a file:
 
-<pre>cb recipe create from-url --name "test2" --execution post --file /Users/test/Documents/test.sh</pre>
+<pre>cb recipe create from-url --name "test2" --execution-type post-ambari-start --file /Users/test/Documents/test.sh</pre>
 
 **Related Links**
 
@@ -1596,11 +1596,11 @@ Lists existing recipes:
 Lists existing recipes, with output presented in a table format:
 
 <pre>cb recipe list --output table
-+------+-------------+----------------+
-| NAME | DESCRIPTION | EXECUTION TYPE |
-+------+-------------+----------------+
-| test |             | POST           |
-+------+-------------+----------------+
++------+-------------+-------------------+
+| NAME | DESCRIPTION | EXECUTION TYPE    |
++------+-------------+-------------------+
+| test |             | POST-AMBARI-START |
++------+-------------+-------------------+
 </pre>
 
 **Related Commands**

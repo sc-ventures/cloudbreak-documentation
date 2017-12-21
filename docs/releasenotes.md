@@ -30,8 +30,16 @@ The following issues have been fixed in this release:
 
 | Jira |  Description |
 |---|---|
-| BUG-93602 | "Do not create Public IPs" Azure cluster option was fixed and it can now be used. |
+| BUG-93602 | "Do not create Public IPs" Azure cluster option was fixed and can now be used. |
+| BUG-91071 | Removed "SyntaxError: Unexpected end of JSON input" error when trying to downscale a cluster below the minimum required number of nodes. |
 
+*Workaround:*
+
+Check the Event History for more information:
+
+* If you tried to scale the cluster below the minimum required number of nodes, you will see: New node(s) could not be removed from the cluster. Reason There is not enough node to downscale. Check the replication factor and the ApplicationMaster occupation. It may take a few minutes for this message to appear in the the Event History.  
+* In other cases, you should see a message informing you that downscale was successful. It may take a few minutes for this message to appear in the the Event History.  
+____________________________
 
 
 
@@ -154,20 +162,6 @@ ____________________________
 You may sporadically experience an issue where after you stop and restart a cluster, the node status displayed in the "Hardware" section is incorrect.   
 
 [comment]: <> (Not sure what the workaround is for BUG-91013?)
-____________________________
-
-
-
-##### (BUG-91071) Syntax Error During Cluster Downscale  
-
-When trying to downscale your cluster below the minimum required number of nodes, you may get the following error: SyntaxError: Unexpected end of JSON input.
-
-*Workaround:*
-
-Check the Event History for more information:
-
-* If you tried to scale the cluster below the minimum required number of nodes, you will see: New node(s) could not be removed from the cluster. Reason There is not enough node to downscale. Check the replication factor and the ApplicationMaster occupation. It may take a few minutes for this message to appear in the the Event History.  
-* In other cases, you should see a message informing you that downscale was successful. It may take a few minutes for this message to appear in the the Event History.  
 ____________________________
 
 

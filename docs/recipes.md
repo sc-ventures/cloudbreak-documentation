@@ -4,7 +4,12 @@ Although Cloudbreak lets you provision HDP clusters in the cloud based on custom
 
 A recipe is a script that runs on all nodes of a selected node group before or after the Ambari cluster installation. You can use recipes for tasks such as installing additional software or performing advanced cluster configuration. For example, you can use a recipe to put a JAR file on the Hadoop classpath.
 
-When creating a cluster, you can optionally upload one or more "recipes" (custom scripts) and they will be executed on a specific host group before Ambari server start, after Ambari server start, or after cluster installation. 
+When creating a cluster, you can optionally upload one or more "recipes" (custom scripts) and they will be executed on a specific host group at a specified time. Available recipe execution times are:  
+
+* Before Ambari server start    
+* After Ambari server start    
+* After cluster installation    
+* Before cluster termination   
 
 
 ### Writing Recipes
@@ -46,7 +51,7 @@ To add a recipe, perform these steps.
 |---|---|
 | Name | Enter a name for your recipe. |
 | Description | (Optional) Enter a description for your recipe.|
-| Execution Type | Select one of the following options: <ul><li>**pre-ambari-start**: The script will be executed prior to Ambari server start.</li><li>**post-ambari-start**: The script will be executed after Ambari server start but prior to cluster installation.</li><li>**post-cluster-install**: The script will be executed after Ambari cluster deployment.</li></ul>|
+| Execution Type | Select one of the following options: <ul><li>**pre-ambari-start**: The script will be executed prior to Ambari server start.</li><li>**post-ambari-start**: The script will be executed after Ambari server start but prior to cluster installation.</li><li>**post-cluster-install**: The script will be executed after cluster deployment.</li><li>**pre-termination**: The script will be executed before cluster termination.</li></ul>|
 | Script | <p>Select one of: <ul><li>**Script**: Paste the script.</li><li> **File**: Point to a file on your machine that contains the recipe.</li><li> **URL**: Specify the URL for your recipe.</li></ul> |
 
     <a href="../images/cb-recipe-add.png" target="_blank" title="click to enlarge"><img src="../images/cb-recipe-add.png" width="650" title="Cloudbreak web UI"></a> 
