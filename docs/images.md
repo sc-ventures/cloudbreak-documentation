@@ -197,7 +197,7 @@ Use these steps to register your custom image catalog in the Cloudbreak UI.
 3. Enter name for your image catalog and the URL to the location where it is stored. 
 4. Click **Create**. 
 
-After performing these steps, the image catalog will be available in the create cluster wizard.  
+After performing these steps, the image catalog will be available and automatically selected as the default entry in the image catalog drop-down list in the create cluster wizard.
 
 #### Register Image Catalog in the CLI
 
@@ -272,8 +272,3 @@ To use the custom image when creating a cluster via CLI, perform these steps.
 
 **Related Links**  
 [CLI Reference](cli-reference.md)  
-
-
-
-
-
