@@ -28,6 +28,24 @@
 | Storage Type | <p>Select the volume type. The options are:<ul><li>Locally-redundant storage</li><li>Geo-redundant storage</li><li>Premium locally-redundant storage</li></ul> For more information about these options refer to <a href="https://docs.microsoft.com/en-us/azure/storage/storage-introduction" target="_blank">Azure documentation</a>. |
 {!docs/common/create-adv-3.md!}
 
+#### Availability Sets 
+
+[Comment]: <> (Will update this once I can see it the UI how it works)
+
+
+To support fault tolerance for VMs, Azure uses the concept of [availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/manage-availability). This allows two or more VMs to be mapped to multiple fault domains, each of which defines a group of virtual machines that share a common power source and a network switch. When adding VMs to an availability set, Azure automatically assigns each VM a fault domain. The SLA includes guarantees that during OS Patching in Azure or during maintenance operations, at least one VM belonging to a given fault domain will be available.
+
+In Cloudbreak UI, availability sets can be configured during cluster creation for each host group:
+
+1. For a given host group, enable availability sets by checking the box.  
+
+    > The availability set option should only be used when there is a group of two or more application-tier VMs. Single instances placed in an availability set are not subject to Azure’s SLA, and you will not receive warnings of planned maintenance events.
+    
+2. Add the desired availability set by providing a name and the desired fault domain count (2 or 3). One availability set can be assigned to only one host group. The assignment of fault domains is automated by Azure, so there is no option for this in Cloudbreak UI.
+
+4. After the deployment is finished, you can check the layout of the VMs inside an availability set on Azure Portal. You will find the "Availability set" resources corresponding to the host groups inside the deployment's resource group.
+
+
 {!docs/common/create-adv-4.md!} 
 
 
