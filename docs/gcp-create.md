@@ -9,8 +9,6 @@
     > Existing security groups are only available for an existing network. 
     
 {!docs/common/create-a4.md!}
-| SSH Public Key | Specify a public SSH key. You will use the matching private key to access your cluster nodes via SSH. |
-
 {!docs/common/create-a5.md!}
 
 **Related Links**  
