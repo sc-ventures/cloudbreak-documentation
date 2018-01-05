@@ -44,8 +44,8 @@ In Cloudbreak UI, availability sets can be configured during cluster creation fo
     | Parameter | Description |
 |---|---|
 | Availability Set Name | Choose a name for the availability set that will be created for the selected host group. |
-| Fault Domain Count | By, default, the fault domain count is set to 2. To update this number, provide a desired domain count by updating the "Update Domain Count" parameter.|
-| Update Domain Count | To update the fault domain count, provide a desired domain count by updating the "Update Domain Count" parameter |
+| Fault Domain Count | The number of fault domains. This defaults to 2 or 3, depending on the setting supported by Azure.  |
+| Update Domain Count | This number of update domains. This can be set to a number in range of 2-20. Default is 20. |
 
 After the deployment is finished, you can check the layout of the VMs inside an availability set on Azure Portal. You will find the "Availability set" resources corresponding to the host groups inside the deployment's resource group.
 
