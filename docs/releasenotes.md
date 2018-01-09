@@ -9,17 +9,77 @@ ____________________________
 #### New Features
 ____________________________
 
+##### New UI/UX
 
-##### Pre-termination Recipes
+Cloudbreak 2 introduces a new user interface, designed to make user interaction with Cloudbreak easier.
 
-A new "pre-termination" recipe type is introduced to allow you to run custom scripts before cluster termination. Refer to updated [Recipes](recipes.md) documentation.  
+##### New CLI
+
+Cloudbreak 2.1.0 TP introduces a new CLI tool. All commands start with a singular object followed by an action, for example, blueprint create instead of create blueprint, and blueprint list instead of list blueprints. Refer to [Install CLI](cli-install.md) and [CLI Reference](cli-reference.md).
+
+##### Support for Kerberos
+
+Creating Kerberos-enabled clusters is supported. Refer to [Enabling Kerberos Security](security-kerberos.md).
+
+##### Support for Configuring an External RDBMS for Cloudbreak
+
+Using an external RDBMS for Cloubdreak is supported. For configuration instructions, refer to [Configuring External Cloudbreak Database](cb-db.md).
+
+##### Support for Migrating Cloudbreak Instance
+
+Migrating Cloudbreak from one machine to another is supported. For migration instructions, refer to [Moving a Cloudbreak Instance](cb-migrate.md).
+
+##### Providing Your Own JDK
+
+Providing your own JDK on a custom base image is supported. For instructions, refer to "Advanced topics" in the [https://github.com/hortonworks/cloudbreak-images](https://github.com/hortonworks/cloudbreak-images) repository.
+
+##### Spot Instances on AWS
+
+Using spot instances is supported for clusters created on AWS. The option is available in the advanced *Hardware and Storage* section of the create cluster wizard. Refer to [Use Spot Instances](aws-create.md#use-spot-instances).
+
+##### Preemptible Instances on Google Cloud
+
+Using preemptible instances is supported for clusters created on Google Cloud. The option is available in the advanced *Hardware and Storage* section of the create cluster wizard. Refer to [Use Preemptible Instances](gcp-create.md#use-preemptible-instances).
+
+##### New Recipe Types 
+
+New types of recipes are introduced:
+
+* PRE-AMBARI-START (new, useful for configuring Ambari prior to start)  
+* POST-AMBARI-START (formerly known as PRE)  
+* POST-CLUSTER-INSTALL (formerly known as POST)  
+* PRE-TERMINATION (new, useful for cleanup pre-termination tasks)  
+Refer to updated [Recipes](recipes.md) documentation.
+
+##### Disabling Cloud Providers 
+
+You can hide cloud providers available in Cloudbreak by adding the `CB_ENABLEDPLATFORMS` environment variable in Profile and setting it to the provider(s) that you would like to have available. For more information, refer to [Disable Providers](cb-disable-provider.md).
+
 
 ____________________________
 
 #### Behavioral Changes
 ____________________________
 
+##### Custom Images
 
+The functionality which enables you to create custom images was changed and improved. Refer to [Custom Images](images.md).
+
+##### Removal of Cloudbreak Shell
+
+Cloudbreak Shell is no longer available in Cloudbreak 2.1.0 TP and later. It was replaced by the [Cloudbreak CLI](cli-install.md).
+
+##### Removal of Platforms
+
+The [Platforms](http://hortonworks.github.io/cloudbreak-docs/release-1.16.5/topologies/) feature was removed.
+
+##### Removal of Mesos
+
+Cloudbreak 2 does not support Mesos cloud provider.
+
+##### Removal of Templates
+
+Earlier versions of Cloudbreak allowed you to save infrastructure, network, and security group templates. This feature was removed. Instead, you can define VMs, storage, networks, and security groups as part of the create cluster wizard.
 
 ____________________________
 
@@ -35,24 +95,11 @@ The following issues have been fixed in this release:
 | BUG-91071 | Removed "SyntaxError: Unexpected end of JSON input" error when trying to downscale a cluster below the minimum required number of nodes. |
 | BUG-93556 | When creating a Cloudbreak credential, the UI shows a "Hadoop YARN" cloud provider as an option. |
 
-*Workaround:*
-
-Check the Event History for more information:
-
-* If you tried to scale the cluster below the minimum required number of nodes, you will see: New node(s) could not be removed from the cluster. Reason There is not enough node to downscale. Check the replication factor and the ApplicationMaster occupation. It may take a few minutes for this message to appear in the the Event History.  
-* In other cases, you should see a message informing you that downscale was successful. It may take a few minutes for this message to appear in the the Event History.  
-____________________________
-
 
 
 ____________________________
 
 #### Known Issues
-____________________________
-
-##### (RMP-10114) Auto-scaling Is Not Available
-
-Auto-scaling functionality is not available in Cloudbreak 2.4.0. 
 ____________________________
 
 
