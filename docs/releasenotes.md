@@ -1,8 +1,8 @@
 ## Release Notes
 
-### 2.3.0
+### 2.4.0
 
-Cloudbreak 2.3.0 is a general availability release, which is suitable for production deployments. 
+Cloudbreak 2.4.0 is a general availability release, which is suitable for production deployments. 
 
 ____________________________
 
@@ -20,7 +20,6 @@ ____________________________
 ____________________________
 
 
-TBD
 
 ____________________________
 
@@ -34,6 +33,7 @@ The following issues have been fixed in this release:
 |---|---|
 | BUG-93602 | "Do not create Public IPs" Azure cluster option was fixed and can now be used. |
 | BUG-91071 | Removed "SyntaxError: Unexpected end of JSON input" error when trying to downscale a cluster below the minimum required number of nodes. |
+| BUG-93556 | When creating a Cloudbreak credential, the UI shows a "Hadoop YARN" cloud provider as an option. |
 
 *Workaround:*
 
@@ -52,24 +52,7 @@ ____________________________
 
 ##### (RMP-10114) Auto-scaling Is Not Available
 
-Auto-scaling functionality is not available in Cloudbreak 2.2.0 TP. 
-____________________________
-
-
-
-##### (RMP-10409) Azure Disk Encryption Is Not Available
-
-Azure disk encryption functionality is not available in Cloudbreak 2.2.0 TP.
-____________________________
-
-
-##### (BUG-93556) Hadoop YARN Provider is not Supported 
-
-When creating a Cloudbreak credential, the UI shows a "Hadoop YARN" cloud provider as an option.
-
-*Workaround*: 
-
-Do not use this option. 
+Auto-scaling functionality is not available in Cloudbreak 2.4.0. 
 ____________________________
 
 
@@ -148,9 +131,9 @@ ____________________________
 
 
 
-##### (BUG-91810) Network and Subnet Are Listed as "N/A" or "New"
+##### (BUG-91810) Network and Subnet Are Listed as "New"
 
-When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "N/A" or "New".
+When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "New".
 
 *Workaround:* 
 
