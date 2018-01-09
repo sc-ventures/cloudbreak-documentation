@@ -33,14 +33,6 @@ Migrating Cloudbreak from one machine to another is supported. For migration ins
 
 Providing your own JDK on a custom base image is supported. For instructions, refer to "Advanced topics" in the [https://github.com/hortonworks/cloudbreak-images](https://github.com/hortonworks/cloudbreak-images) repository.
 
-##### Spot Instances on AWS
-
-Using spot instances is supported for clusters created on AWS. The option is available in the advanced *Hardware and Storage* section of the create cluster wizard. Refer to [Use Spot Instances](aws-create.md#use-spot-instances).
-
-##### Preemptible Instances on Google Cloud
-
-Using preemptible instances is supported for clusters created on Google Cloud. The option is available in the advanced *Hardware and Storage* section of the create cluster wizard. Refer to [Use Preemptible Instances](gcp-create.md#use-preemptible-instances).
-
 ##### New Recipe Types 
 
 New types of recipes are introduced:
