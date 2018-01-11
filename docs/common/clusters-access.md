@@ -17,6 +17,9 @@ The information presented includes:
 * [Tags](#tags)   
 * [Recipes](#recipes)  
 * [Repository Details](#repository-details)  
+* [Image Details](#image-details)    
+* [Network](#network)  
+* [Autoscaling](#autoscaling)    
 * [Event History](#event-history)  
 
 <div class="note">
@@ -49,20 +52,15 @@ The summary bar includes the following information about your cluster:
 
 | Item | Description |
 |---|---|
-| Network | The name of the network in which the cluster is running. |
-| Subnet | The name of the subnet in which the cluster is running. |
 | Cluster User | The name of the cluster user that you created when creating the cluster. |  
 | SSH Username | The SSH user which you must use when accessing cluster VMs via SSH. The SSH user is always "cloudbreak". |
 | Ambari URL | Link to the Ambari web UI. |
 | Region | The region in which the cluster is running in the cloud provider infrastructure. |
 | Availability Zone | The availability zone within the region in which the cluster is running. |
-| Image | The base image with the operating system that was used to launch the Cloudbreak instance. |
 | Blueprint | The name of the blueprint selected under "Cluster Type" to create this cluster. |
 | Created With | The version of Cloubdreak used to create this cluster. |
 | Ambari Version | The Ambari version which this cluster is currently running. |
 | HDP Version | The HDP version which this cluster is currently running. |
-
-[comment]: <> (Why is the Ambari link labeled "Remote Access"?)
 
 [comment]: <> (Regarding Ambari and HDP version, if I upgrade, should this show the current version or the original version?)
 
@@ -83,7 +81,22 @@ This section includes recipe-related information. For each recipe, you can see t
 
 #### Repository Details 
 
-This section includes Ambari and HDP repository information, as you provided it in the "Base Images" section when creating a cluster. 
+This section includes Ambari and HDP repository information, as you provided it in the "Base Images" section when creating a cluster.
+
+
+#### Image Details
+
+This section includes information about the base image that was used for the Cloudbreak instance. 
+
+
+#### Network
+
+This section includes information about the names of the network and subnet in which the cluster is running and the links to related cloud provider console.
+
+
+#### Autoscaling
+ 
+This section includes configuration options related to autoscaling. Refer to [Autoscaling](autoscaling.md).  
 
 
 #### Event History 

@@ -90,6 +90,7 @@ If your cluster is in the "Stopped" state, you can restart the cluster by follow
     Your cluster status changes to "Start in progress" and then to "Running". 
 
 
+
 ### Terminate Cluster 
 
 To terminate a cluster managed by Cloudbreak, use the option available from the Coudbreak UI. 
@@ -124,6 +125,7 @@ Cluster deletion may fail if Cloudbreak is unable to delete one or more of the c
 4. This deletes the cluster tile from the UI.  
 
 4. Log in to your cloud provider account and [manually delete](cb-delete.md) any resources that failed to be deleted.
+
 
 
 

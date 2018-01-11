@@ -45,6 +45,7 @@ pages:
         - Recipes: recipes.md
         - Resource Tagging: tags.md 
         - Custom Images: images.md
+        - Autoscaling: autoscaling.md 
       - Managing Cloudbreak:
         - Install on Your Own VM: vm-launch.md
         - Upgrade Cloudbreak: cb-upgrade.md
