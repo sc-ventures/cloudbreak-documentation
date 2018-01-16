@@ -78,7 +78,7 @@ hadoop fs -cat s3a://mytestbucket/testFile
 test file content</pre>
 
 
-### Learn More
+### Working with S3 
 
 For more information about configuring the S3 connector and working with data stored on S3, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) documentation.
 
