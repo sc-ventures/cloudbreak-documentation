@@ -49,7 +49,9 @@ To configure access to S3 with an instance profile, follow these steps.
 
 1. You or your AWS admin must create an IAM role with an S3 access policy which can be used by cluster instances to access one or more S3 buckets. Refer to [Creating an IAM Role for S3 Access](creating-an-iam-role-for-s3-access).  
 2. On the **File System** page in the advanced cluster wizard view, select **Use existing instance profile**. 
-3. Select an existing IAM role created in step 1. 
+3. Select an existing IAM role created in step 1:
+
+    <a href="../images/aws-s3-role_05.png" target="_blank" title="click to enlarge"><img src="../images/aws-s3-role_05.png" width="650" title="Cloudbreak UI"></a> 
 
 During the cluster creation process, Cloudbreak assigns the IAM role and its associated permissions to the EC2 instances that are part of the cluster so that applications running on these instances can use the role to access S3.   
 
