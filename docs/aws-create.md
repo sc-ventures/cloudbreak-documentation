@@ -50,6 +50,17 @@ Note that:
 After creating a cluster, you can view your spot instance requests, including bid price, on the EC2 dashboard under **INSTANCES** > **Spot Requests**. For more information about spot instances, refer to [AWS documentation](https://aws.amazon.com/ec2/spot/).  
 
 
+#### File System 
+
+By default, HDP uses HDFS as the default filesystem and it supports access to the Amazon S3 object store through the S3A connector. In on-premise deployments access to S3 can be configured in the core-site.xml file, but in cloud deployments on AWS access to S3 should be configured by using an instance profile. For basic information on instance profile, refer to [AWS documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html).
+
+To configure access to S3 with an instance profile:
+
+1. You or your AWS admin must first create an IAM role with an S3 access policy which can be used by cluster instances to access one or more S3 buckets.     
+2. On the **File System** page in the advanced cluster wizard view, select **Use existing instance profile**. 
+3. Select an existing IAM role created in step 1.    
+
+
 {!docs/common/create-adv-4.md!}
 
 {!docs/common/create-adv-5.md!}  
