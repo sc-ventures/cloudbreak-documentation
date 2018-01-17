@@ -142,7 +142,7 @@ When creating a cluster on OpenStack, if you do not select an existing network a
 
 *Workaround*: 
 
-This error occurrs if your OpenStack does not allow creating new networks and/or subnets. In such a case, you must select an existing network and subnet when creating a cluster on OpenStack. 
+You must select an existing network and subnet when creating a cluster on OpenStack. 
 ____________________________
 
 
