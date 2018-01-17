@@ -66,7 +66,7 @@ The summary bar includes the following information about your cluster:
 
 #### Hardware
 
-This section includes information about your cluster instances: instance names, instance IDs, instance types, their status, funny qualified domain names (FQDNs), and private and public IPs. 
+This section includes information about your cluster instances: instance names, instance IDs, instance types, their status, fully qualified domain names (FQDNs), and private and public IPs. 
 
 
 #### Tags 
