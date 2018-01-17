@@ -142,7 +142,7 @@ When creating a cluster on OpenStack, if you do not select an existing network a
 
 *Workaround*: 
 
-When creating a cluster on OpenStack, you must select an existing network and subnet. 
+This error occurrs if your OpenStack does not allow creating new networks and/or subnets. In such a case, you must select an existing network and subnet when creating a cluster on OpenStack. 
 ____________________________
 
 
@@ -168,16 +168,6 @@ When trying to access Ambari in the Firefox 57.0 (64-bit) browser, you may get "
 Try using a different browser. 
 ____________________________
 
-
-
-##### (BUG-91810) Network and Subnet Are Listed as "New"
-
-When creating a new network and subnet for your cluster, the network and subnet information is unavailable on the cluster details page, showing "New".
-
-*Workaround:* 
-
-If you want to check which network and subnet are used for your cluster, navigate to the cloud provider account and find the cluster instances that were created for your cluster. Next, check which virtual network and subnet they are associated with. The steps vary depending on the provider.  
-____________________________
 
 
 
