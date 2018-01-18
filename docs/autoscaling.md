@@ -15,7 +15,7 @@ For example:
 |---|---|---|
 | Metric based | *NodeManager Health* alert with *CRITICAL* state for 5 minutes | Add 3 worker nodes |
 | Metric based | *Ambari Server Alerts* alert with *CRITICAL* state for 30 minutes | Set 0 compute nodes |
-| Time based | Every day at 08:00 AM (GMT-8) | Remove 5 worker nodes |
+| Time based | Every day at 08:00 AM (GMT-8) | Remove 5 worker nodes | 
  
 
 ### Enable Auto Scaling 
@@ -33,7 +33,7 @@ For each newly created cluster, autoscaling is disabled by default but it can be
 
 ### Defining an Alert
 
-After you have enabled autoscaling, define an alert.
+After you have enabled autoscaling, define an alert. Alerts can be Ambari metric-based or time-based.  
 
 #### Define a Metric-based Alert 
 
