@@ -7,7 +7,7 @@ The following section describes how to access the various services in the cluste
 
 Once your cluster is up and running, click on the tile representing your cluster in the Cloudbreak UI to access information related the cluster and access cluster actions. 
 
-<a href="../images/cb-ui-clinfo.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui-clinfo.png" width="650" title="Cluster Information"></a> 
+<a href="../images/cb-cl-details1.png" target="_blank" title="click to enlarge"><img src="../images/cb-cl-details1.png" width="650" title="Cluster Information"></a> 
 
 The information presented includes:
 

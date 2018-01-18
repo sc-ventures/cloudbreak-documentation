@@ -2,7 +2,7 @@
 
 You can manage monitor your clusters from the Cloudbreak UI. To do that, click on the tile representing the cluster that you want to access. The actions available for your cluster are listed in the top right corner: 
 
-<a href="../images/cb-ui2.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui2.png" width="650" title="Cloudbreak web UI"></a> 
+<a href="../images/cb-cl-details2.png" target="_blank" title="click to enlarge"><img src="../images/cb-cl-details2.png" width="650" title="Cloudbreak web UI"></a> 
 
 
 <div class="note">
