@@ -79,13 +79,7 @@ ____________________________
 ____________________________
 
 
-The following issues have been fixed in this release: 
-
-| Jira |  Description |
-|---|---|
-| BUG-93602 | "Do not create Public IPs" Azure cluster option was fixed and can now be used. |
-| BUG-91071 | Removed "SyntaxError: Unexpected end of JSON input" error when trying to downscale a cluster below the minimum required number of nodes. |
-| BUG-93556 | When creating a Cloudbreak credential, the UI shows a "Hadoop YARN" cloud provider as an option. |
+[Comment]: <> (Not sure which issues were fixed when comparing 2.x with 1.6.x?)
 
 
 
@@ -155,17 +149,6 @@ When using EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0 blueprint wi
 
 * Although it is possible to create a cluster with less than 3 nodes, in order to use the EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0 blueprint, you must have at least 3 nodes: 1 Ambari node and 2 non-Ambari nodes. Terminate the cluster and create a new one with at least 3 nodes.   
 * Alternatively, it is possible to resolve this issue by adding an additional NodeManager for the Ambari host group.  
-____________________________
-
-
-
-##### (BUG-92581) Unable to Open Ambari in Firefox 57.0 (64-bit) 
-
-When trying to access Ambari in the Firefox 57.0 (64-bit) browser, you may get "Secure Connection Failed" with an error code "SEC_ERROR_INADEQUATE_KEY_USAGE". 
-
-*Workaround:* 
-
-Try using a different browser. 
 ____________________________
 
 
