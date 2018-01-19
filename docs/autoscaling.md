@@ -1,12 +1,12 @@
 ## Autoscaling 
 
-Autoscaling allows you to define policies to automatically increase or decrease the capacity of the cluster when certain pre-defined conditions are met. 
+Autoscaling allows you to define policies to automatically increase or decrease the capacity of a cluster when certain pre-defined conditions are met. 
 
 When creating an autoscaling policy, you define:
 
 * An **alert** that triggers a scaling policy. Alerts can be **Ambari metric-based** or **time-based**:
-    * **Ambari metric-based** alerts: Based on the blueprint used and the services running, Cloudbreak accesses all available metrics from the subsystem and allows you to define alerts based on these metrics.  
-    * **Time-based** alerts: These alerts must be defined in a cron expression format.  
+    * **Ambari metric-based** alerts: Based on the blueprint used and the services running, Cloudbreak accesses all available metrics and allows you to define alerts based on these metrics.  
+    * **Time-based** alerts: These alerts can be defined in a cron expression format.  
 * A **scaling policy** that adds or removes a set number of worker or compute nodes when the conditions defined in the attached alert are met. 
 
 For example:
@@ -15,7 +15,7 @@ For example:
 |---|---|---|
 | Metric based | *NodeManager Health* alert with *CRITICAL* state for 5 minutes | Add 3 worker nodes |
 | Metric based | *Ambari Server Alerts* alert with *CRITICAL* state for 30 minutes | Set 0 compute nodes |
-| Time based | Every day at 08:00 AM (GMT-8) | Remove 5 worker nodes | 
+| Time based | Every day at 08:00 AM (GMT-8) | Add 10 percent to the worker nodes | 
  
 
 ### Enable Auto Scaling 
