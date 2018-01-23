@@ -102,49 +102,8 @@ By default, JSON format is used in command output. For example, if you run `cb l
   output: table</small></pre>
 
 
-### Get Started with the CLI 
-
-After [installing](#install-the-cli) and [configuring](#configure-the-cli) the CLI, you can use it to perform the same tasks as are available in the Cloudbreak UI: create and manage clusters, credentials, blueprints, and recipes.
-
-**Steps**
-
-1. The first step is to create at least one Cloudbreak credential using the [credential create](cli-reference.md#credential-create) command.   
-
-2. If you are just getting started, you may want to try one of the default blueprints. You can use [blueprint list](cli-reference.md#blueprint-list) and [blueprint describe](cli-reference.md#blueprint-describe) to learn about those default blueprints.  
-
-    In case you would like to use your own blueprint, you can add it using [blueprint create](cli-reference.md#blueprint-crate) command.
-
-3. You can optionally create [recipes](recipes.md) (custom scrpts) and add them using the [recipe create](cli-reference.md#recipe-create) command.  
-
-4. To create a cluster, first generate a JSON skeleton using the [cluster generate-template](cli-reference.md#cluster-generate-template) command. You can copy it to a text editor and save it in JSON format.
-
-5. Edit the JSON file by providing your parameters. 
-
-6. Once your JSON file is ready, you can use it to create a cluster via the [cluster create](cli-reference.md#cluster-create) command.
-
-7. Once your cluster is running, use can use the CLI to manage and monitor your cluster. For a full list of commands, refer to [CLI Reference](cli-reference.md).    
-
-
-### Get Help
-
-To get CLI help, you can add help to the end of a command. The following will list help for the CLI at the top-level:
-
-<pre><small>cb --help</small></pre>
-
-or 
-
-<pre><small>cb --h</small></pre>
-
-The following will list help for the create-cluster command, including its command options and global options:
-
-<pre><small>cb cluster --help</small></pre>
-
-or
-
-<pre><small>cb cluster --h</small></pre> 
-
 
 
 <div class="next">
-<a href="../cli-reference/index.html">Next: CLI Reference</a>
+<a href="../cli-get-started/index.html">Next: Get Started with CLI</a>
 </div>

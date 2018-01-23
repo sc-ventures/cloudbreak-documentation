@@ -181,9 +181,6 @@ Deletes an existing blueprint.
 
 <pre>cb blueprint delete --name "testbp"</pre>
 
-**Related Commands**
-
-[blueprint list](#blueprint-list)
 
 
 
@@ -227,9 +224,6 @@ Describes an existing blueprint.
   "Tags": "DEFAULT"
 }</pre>
 
-**Related Commands**
-
-[blueprint list](#blueprint-list)
 
 
 
@@ -317,9 +311,6 @@ Nome
 ]</pre>
 
 
-**Related Commands**
-
-[blueprint describe](#blueprint-describe)
 
 
 
@@ -548,11 +539,11 @@ Creates a new cluster based on a JSON template.
 
 **Required Options**
 
-**`--name <value>`**  Name for the cluster  
 **`--cli-input-json <value>`**  User provided file in JSON format  
 
 **Options**
 
+**`--name <value>`**  Name for the cluster  
 **`--description <value>`**  Description of resource   
 **`--public`**  Public in account   
 **`--input-json-param-password <value>`**  Password for the cluster and Ambari   
@@ -569,9 +560,10 @@ Creates a cluster called "testcluster" based on a local JSON file called "mytemp
 <pre>cb cluster create --name testcluster --cli-input-json /Users/test/Documents/mytemplate.json</pre>
 
 
-**Related Commands**
+**Related Links**  
+[Obtain Cluster JSON Template from the UI](cli-get-started.md#obtain-json-template-from-the-ui)   
 
-[cluster generate-template](#cluster-generate-template) 
+
 
 
 
@@ -603,9 +595,7 @@ Deletes an existing cluster.
 
 <pre>cb cluster delete --name test1234</pre>
 
-**Related Commands**
 
-[cluster list](#cluster-list)
 
 
 
@@ -641,9 +631,6 @@ Returns a JSON file describing an existing cluster called "test1234":
 
 The command returns JSON output which due to space limitation was not captured in the example.
 
-**Related Commands**
-
-[cluster list](#cluster-list)
 
 
 
@@ -683,7 +670,8 @@ Generates a provider-specific cluster template in JSON format.
 
 **Related Commands**
 
-[cluster create](#cluster-create) 
+**Related Links**  
+[Obtain Cluster JSON Template from the UI](cli-get-started.md#obtain-json-template-from-the-ui)   
 
 
 
@@ -762,9 +750,6 @@ Lists available clusters, with output in a table format:
 | test1234 |             | AZURE         | UPDATE_IN_PROGRESS | REQUESTED     |
 +----------+-------------+---------------+--------------------+---------------+</pre>
 
-**Related Commands**
-
-[cluster list](#cluster-list)
 
 
 
@@ -798,9 +783,7 @@ Repairs a cluster if cluster installation failed.
 
 <pre>cb cluster repair --name test1234</pre>
 
-**Related Commands**
 
-[cluster list](#cluster-list)
 
 
 
@@ -833,9 +816,7 @@ Scales a cluster by adding or removing nodes.
 
 <pre>cb cluster scale --name test1234 --group-name worker --desired node-count 3</pre>
 
-**Related Commands**
 
-[cluster list](#cluster-list)
 
 
 
@@ -863,9 +844,7 @@ Starts a cluster which has previously been stopped.
 
 <pre>cb cluster start --name test1234</pre>
 
-**Related Commands**
 
-[cluster list](#cluster-list)
 
 
 
@@ -893,9 +872,7 @@ Stops a cluster.
 
 <pre>cb cluster stop --name test1234</pre>
 
-**Related Commands**
 
-[cluster list](#cluster-list)
 
 
 
@@ -1104,9 +1081,7 @@ Deletes an existing Cloudbreak credential.
 
 <pre>cb credential delete --name test-cred</pre>
 
-**Related Commands**
 
-[credential list](#credential-list)
 
 
 
@@ -1139,9 +1114,7 @@ Describes an existing credential.
   "CloudPlatform": "AZURE"
 }</pre>
 
-**Related Commands**
 
-[credential list](#credential-list)
 
 
 
@@ -1190,9 +1163,7 @@ Lists credentials, with output formatted in a table format:
 | armcred |             | AZURE         |
 +---------+-------------+---------------+</pre>
 
-**Related Commands**
 
-[credential describe](#credential-describe)
 
 
 
@@ -1500,9 +1471,7 @@ Deletes an existing recipe.
 
 <pre>cb recipe delete --name test</pre>
 
-**Related Commands**
 
-[recipe list](#recipe-list)
 
 
 
@@ -1550,9 +1519,7 @@ Describes a recipe called "test", with output presented in a table format:
 | test |             | POST           |
 +------+-------------+----------------+</pre>
 
-**Related Commands**
 
-[recipe list](#recipe-list)
 
 
 
@@ -1603,9 +1570,9 @@ Lists existing recipes, with output presented in a table format:
 +------+-------------+-------------------+
 </pre>
 
-**Related Commands**
 
-[recipe describe](#recipe-describe)
+
+
 
 
 

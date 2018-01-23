@@ -61,6 +61,7 @@ pages:
         - Enable Kerberos Security: security-kerberos.md
       - CLI: 
         - Install the CLI: cli-install.md
+        - H\Get Started with CLI: cli-get-started.md
         - CLI Reference: cli-reference.md
       - Troubleshooting: 
         - Cloudbreak Logs: trouble-cb-logs.md  
