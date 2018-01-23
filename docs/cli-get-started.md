@@ -12,7 +12,7 @@ After [installing](cli-install.md#install-the-cli) and [configuring](cli-install
 
 2. If you haven't already, create at least one Cloudbreak credential by using Cloudbreak UI or the [credential create](cli-reference.md#credential-create) command. 
 
-3. To create a cluster, you must first generate a JSON skeleton. Although it is possible to generate it by using the [cluster generate-template](cli-reference.md#cluster-generate-template) command, it is easiest to obtain it from the Cloudbreak UI, as described in [Obtain Cluster JSON Template from the UI](cli-install.md#obtain-cluster-json-template-from-the-ui).
+3. To create a cluster, you must first generate a JSON skeleton. Although it is possible to generate it by using the [cluster generate-template](cli-reference.md#cluster-generate-template) command, it is easiest to obtain it from the Cloudbreak UI, as described in [Obtain Cluster JSON Template from the UI](#obtain-cluster-json-template-from-the-ui).
 
 4. Save the template in the JSON format and edit it if needed.
 
