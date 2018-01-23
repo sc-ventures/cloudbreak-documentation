@@ -43,6 +43,10 @@ If you would like to change default thresholds for an Ambari Metric, refer to [M
 
 TBD 
 
+Metrics:
+
+TBD
+
 
 #### Define a Time-based Alert 
 

@@ -2,7 +2,7 @@
 
 You must terminate all clusters associated with a Cloudbreak before you can terminate the Cloudbreak instance. In general, you should delete clusters from the Cloudbreak UI. If needed, you can also delete the cluster resources manually via the cloud provider tools. 
 
-#### Delete Clusters  
+#### Deleting Clusters  
 
 The proper way to delete clusters is to use the the **Terminate** option available in the Cloudbreak UI. If the terminate process fails, try the **Terminate** > **Force terminate** option.
 
@@ -11,6 +11,8 @@ If the force termination does not delete all cluster resources, delete the resou
 * To find the VMs, click on the links available in the cluster details. 
 * To find the network and subnet, see the **Cluster Information** in the cluster details. 
 * On Azure, you can delete the cluster manually by deleting the whole resource group created when the cluster was deployed. The name of the resource group, under which the cluster-related resources are organized always includes the name of the cluster, so you should be able to find the group by searching for that name in the **Resource groups**.
+
+Upon cluster termination, Cloudbreak only terminates the resources that it created. It does not terminate any resources (such as networks, subnets, roles, and so on) which existed prior to cluster creation. 
   
 
 ### Delete Cloudbreak on AWS
