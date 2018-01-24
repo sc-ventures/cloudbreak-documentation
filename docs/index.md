@@ -25,7 +25,7 @@ Cloudbreak allows you to create, manage, and monitor your clusters on your chose
 Refer to [Architecture](architecture.md).
 
 
-## Get Started
+### Get Started
 
 To get started with Cloudbreak:
 
@@ -34,7 +34,7 @@ To get started with Cloudbreak:
 1. [Launch Cloudbreak](#launch-cloudbreak). 
 
 
-### Select Cloud Platform 
+#### Select Cloud Platform 
 
 You can deploy and use Cloudbreak on the following cloud platforms:
 
@@ -44,7 +44,7 @@ You can deploy and use Cloudbreak on the following cloud platforms:
 * OpenStack
 
 
-### Select Deployment Option
+#### Select Deployment Option
 
 There are two basic deployment options:
 
@@ -54,7 +54,7 @@ There are two basic deployment options:
 | Install the Cloudbreak deployer on your own VM | <p>This is an advanced deployment option.</p> <p>Select this option if you have custom VM requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).</p> |
 
 
-### Launch Cloudbreak 
+#### Launch Cloudbreak 
 
 (Option 1) You can launch Cloudbreak from one of the pre-built images:  
 

@@ -30,6 +30,7 @@ Cloudbreak requires that the following standard modules are installed and config
 **Related Links**
 [Red Hat Distribution of OpenStack](https://www.rdoproject.org/) (External)
 
+
 ### Meet the Prerequisites
 
 Before launching Cloudbreak on OpenStack, you must meet the following prerequisites.
@@ -47,11 +48,12 @@ For information about OpenStack security groups, refer to the [OpenStack Adminis
 **Related Links**
 [OpenStack Administrator Guide](https://docs.openstack.org/ops-guide/index.html) (External)
 
-### Import Images to OpenStack
+
+#### Import Images to OpenStack
 
 An OpenStack administrator must perform these steps to add the Cloudbreak deployer and HDP images to your OpenStack deployment.
 
-#### Import Cloudbreak Deployer Image
+##### Import Cloudbreak Deployer Image
 
 Import Cloudbreak deployer image using the following steps.
 
@@ -79,7 +81,7 @@ After performing the import, you should be able to see the Cloudbreak deployer i
 [comment]: <> (Some of this content was automatically generated.)
 
 
-#### Import HDP Image
+##### Import HDP Image
 
 Import HDP image using the following steps.
 

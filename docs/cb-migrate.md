@@ -34,7 +34,7 @@ To create a backup of the embedded PostgreSQL database, perform these steps.
 
 
 
-### Populate Database with Dump from Original Cloudbreak instance
+### Populate Database with Dump from Original Cloudbreak Instance
 
 Perform these steps to populate databases with information from the Cloudbreak server.
 

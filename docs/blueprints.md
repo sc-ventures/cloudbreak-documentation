@@ -10,7 +10,7 @@ You have two options concerning using blueprints with Cloudbreak:
 We recommend that you review the default blueprints to check if they meet your requirements. You can do this by selecting **Blueprints** from the navigation pane in the Cloudbreak web UI or by reading the documentation below.
   
 
-### Use Default Blueprints 
+### Using Default Blueprints 
 
 To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. 
 
@@ -39,7 +39,7 @@ The following configuration classification applies:
 </ul>
 
 
-### Use Custom Blueprints 
+### Using Custom Blueprints 
 
 This option allows you to create and save your custom blueprints. 
 

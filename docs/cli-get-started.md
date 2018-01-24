@@ -1,7 +1,6 @@
 
 ## Getting Started with the CLI   
 
-
 ### Get Started with the CLI 
 
 After [installing](cli-install.md#install-the-cli) and [configuring](cli-install.md#configure-the-cli) the CLI, you can use it to perform the same tasks as are available in the Cloudbreak UI: create and manage clusters, credentials, blueprints, and recipes.

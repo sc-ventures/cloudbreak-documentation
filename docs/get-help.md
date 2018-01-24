@@ -66,7 +66,7 @@ Once you log in to the Cloudbreak web UI, you can manage your Flex subscriptions
 When creating a cluster, you can select the Flex subscription that you want to use for the cluster.
 
 
-### More Resources 
+### More Cloudbreak Resources 
 
 Check out the following documentation to learn more:
 

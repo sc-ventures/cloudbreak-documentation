@@ -98,3 +98,4 @@ To delete a credential, follow these steps.
 2. Click **Delete**. 
 3. Click **Yes** to confirm. 
 
+

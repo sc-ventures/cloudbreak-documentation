@@ -59,7 +59,7 @@ Before you can start using Cloudbreak for provisioning clusters, you must select
 
 * **Role-based**: This requires that you or your AWS admin create an IAM role to allow Cloudbreak to assume AWS roles (the "AssumeRole" policy).
 
-#####**Option 1: Key-based Authentication**
+**Option 1: Key-based Authentication**
 
 If you are using key-based authentication for Cloudbreak on AWS, you must be able to provide your AWS access key and secret key pair. Cloudbreak will use these keys to launch the resources. You must provide the access and secret keys later in the Cloudbreak web UI later when creating a credential. 
 
@@ -70,7 +70,7 @@ If you choose this option, all you need to do at this point is check your AWS ac
 If you choose this option, you can proceed to [Launch the VM](#launch-the-vm).
  
 
-#####**Option 2: Role-based Authentication**
+**Option 2: Role-based Authentication**
 
 {!docs/common/aws-launch-authentication-role-based-intro.md!}
 

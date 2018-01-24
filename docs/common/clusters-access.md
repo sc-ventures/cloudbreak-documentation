@@ -3,7 +3,7 @@
 The following section describes how to access the various services in the cluster.
 
 
-### Find Cluster Information in the UI
+### Finding Cluster Information in the UI
 
 Once your cluster is up and running, click on the tile representing your cluster in the Cloudbreak UI to access information related the cluster and access cluster actions. 
 
@@ -128,7 +128,7 @@ Setting up HDP image
 10/26/2017, 9:22:21 AM</pre>
 
 
-### Access Cluster via SSH
+### Accessing Cluster via SSH
 
 If you plan to access the cluster via the command line clients, SSH into the master node instance in the cluster. 
 
@@ -164,7 +164,7 @@ You can access Ambari web UI by clicking on the links provided in the **Cluster 
 | Chrome |	Click **Advanced** > Click **Proceed...** |
 
 
-###  User Accounts
+### Cloudbreak User Accounts
 
 The following table describes what credentials to use to access Cloudbreak and Cloudbreak-managed clusters:
 

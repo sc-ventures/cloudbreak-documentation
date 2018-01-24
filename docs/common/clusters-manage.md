@@ -17,7 +17,7 @@ You can manage monitor your clusters from the Cloudbreak UI. To do that, click o
 </div>
 
 
-### Resize Cluster
+### Resize a Cluster
 
 To resize a cluster, follow these steps.
 
@@ -37,7 +37,7 @@ To resize a cluster, follow these steps.
     While nodes are being added or removed, cluster status changes to "Update In Progress". Once the operation has completed, cluster status changes back to "Running". 
 
 
-### Synchronize the Cluster 
+### Synchronize a Cluster 
 
 Use the **sync** option if you:  
 
@@ -59,7 +59,7 @@ To synchronize your cluster with the cloud provider, follow these steps.
     Your cluster infrastructure is synchronized based on changes on the cloud provider. The updates are written to the "Event History". 
  
  
-### Stop Cluster 
+### Stop a Cluster 
 
 Cloudbreak supports stopping and restarting clusters. To stop and restart a cluster managed by Cloudbreak, use the options available from the Coudbreak UI. 
 
@@ -77,7 +77,7 @@ When a cluster is in the "stopped" state, you are not charged for the VMs, but y
 
 
 
-### Restart Cluster 
+### Restart a Cluster 
 
 If your cluster is in the "Stopped" state, you can restart the cluster by follow these steps.
 
@@ -91,7 +91,7 @@ If your cluster is in the "Stopped" state, you can restart the cluster by follow
 
 
 
-### Terminate Cluster 
+### Terminate a Cluster 
 
 To terminate a cluster managed by Cloudbreak, use the option available from the Coudbreak UI. 
 
@@ -106,7 +106,7 @@ To terminate a cluster managed by Cloudbreak, use the option available from the 
     All cluster-related resources will be deleted, unless the resources (such as networks and subnets) existed prior to cluster creation or are used by other VMs in which case they will be preserved. 
 
 
-#### Force Terminate
+### Force Terminate a Cluster 
 
 Cluster deletion may fail if Cloudbreak is unable to delete one or more of the cloud resources that were part of your cluster infrastructure. In such as case, you can use the **Terminate** > **Force terminate** option to remove the cluster entry from the Cloudbreak web UI, but you must also check your cloud provider account to see if there are any resources that must be deleted manually.
 
@@ -125,7 +125,6 @@ Cluster deletion may fail if Cloudbreak is unable to delete one or more of the c
 4. This deletes the cluster tile from the UI.  
 
 4. Log in to your cloud provider account and [manually delete](cb-delete.md) any resources that failed to be deleted.
-
 
 
 

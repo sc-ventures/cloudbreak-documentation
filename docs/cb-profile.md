@@ -242,7 +242,7 @@ Refer to this list for available environment variables. The variables are listed
 | MACHINE_STORAGE_PATH | $HOME/.docker/machine | Docker Machine storage path |
 
 
-####UAA_DEFAULT_USER_GROUPS
+#### UAA_DEFAULT_USER_GROUPS
 
 Default value fro `UAA_DEFAULT_USER_GROUPS` is:
 

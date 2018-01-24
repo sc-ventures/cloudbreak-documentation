@@ -21,6 +21,7 @@ Cloud providers use virtual networks which resemble traditional networks. Depend
 | Google Cloud Platform | [Virtual Private Cloud (VPC) network](https://cloud.google.com/compute/docs/vpc/) |
 | OpenStack | [Network](https://docs.openstack.org/mitaka/networking-guide/intro-os-networking.html) |
 
+
 ### Network Security 
 
 Security groups are setup to control network traffic to the instances in the system.

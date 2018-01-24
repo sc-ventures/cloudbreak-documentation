@@ -2,7 +2,7 @@
 
 You must terminate all clusters associated with a Cloudbreak before you can terminate the Cloudbreak instance. In general, you should delete clusters from the Cloudbreak UI. If needed, you can also delete the cluster resources manually via the cloud provider tools. 
 
-#### Deleting Clusters  
+### Deleting Clusters  
 
 The proper way to delete clusters is to use the the **Terminate** option available in the Cloudbreak UI. If the terminate process fails, try the **Terminate** > **Force terminate** option.
 

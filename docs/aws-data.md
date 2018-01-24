@@ -2,7 +2,7 @@
 
 Amazon S3 is not supported as a default file system, but access to data in Amazon S3 is possible via the s3a connector. 
 
-#### Prerequisites
+### Prerequisites
 
 To use S3 storage, you must have one or more S3 buckets on your AWS account. For instructions on how to create a bucket on S3, refer to [AWS documentation](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html).
 
@@ -10,7 +10,7 @@ To use S3 storage, you must have one or more S3 buckets on your AWS account. For
 [Create a Bucket](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) (External)    
 
 
-#### Creating an IAM Role for S3 Access 
+### Creating an IAM Role for S3 Access 
 
 In order to configure access from your cluster to Amazon S3, you must have an existing IAM role which determines what actions can be performed on which S3 buckets. If you do not have an existing IAM role, use these steps to create one. 
 
@@ -39,7 +39,7 @@ In order to configure access from your cluster to Amazon S3, you must have an ex
 7. Click **Create role** to finish the role creation process.
 
 
-#### Configuring Access to S3
+### Configuring Access to S3
 
 Amazon S3 is not supported as a default file system, but access to data in S3 from your cluster VMs can be automatically configured by attaching an [instance profile](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) allowing access to S3. You can optionally create or attach an existing instance profile during cluster creation on the **File System** page.
 
@@ -56,7 +56,7 @@ To configure access to S3 with an instance profile, follow these steps.
 During the cluster creation process, Cloudbreak assigns the IAM role and its associated permissions to the EC2 instances that are part of the cluster so that applications running on these instances can use the role to access S3.   
 
 
-#### Testing Access to S3
+### Testing Access to S3
 
 To tests access to S3, SSH to a cluster node and run a few hadoop fs shell commands against your existing S3 bucket.
 
