@@ -170,7 +170,6 @@ Use the following "cb-policy" policy definition:
                 "ec2:AssociateAddress",
                 "ec2:AssociateRouteTable",
                 "ec2:AuthorizeSecurityGroupIngress",
-                "ec2:CreateAddress",
                 "ec2:CreateRoute",
                 "ec2:CreateRouteTable",
                 "ec2:CreateSecurityGroup",
@@ -196,7 +195,10 @@ Use the following "cb-policy" policy definition:
                 "ec2:DescribeSubnets",
                 "ec2:DescribeVpcs",
                 "ec2:DescribeVpcAttribute",
-                "ec2:ImportKeyPair"
+                "ec2:ImportKeyPair",
+                "ec2:DescribeSpotInstanceRequests",
+                "ec2:DescribeRegions",
+                "ec2:DescribeAvailabilityZones"
             ],
             "Resource": [
                 "*"
