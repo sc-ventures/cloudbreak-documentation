@@ -45,6 +45,18 @@ Click **Copy the JSON** to copy the content and then use a text editor to edit a
 <a href="../images/cli-json-details2.png" target="_blank" title="click to enlarge"><img src="../images/cli-json-details2.png" width="650" title="Cloudbreak web UI"></a> 
 
 
+### Obtain CLI Command from the UI
+
+Cloudbreak web UI includes as option in the UI which allows you to generate the  `create` command for resources such as credentials, blueprints, clusters, and recipes. This option is available when creating a resource and for existing resources, from the resource details page.   
+
+**From Create Resource**
+
+When creating a resource (credential, blueprint, cluster, or recipe), provide all information and then click **Show CLI Command**. The UI will display the `create` CLI command for the resource.
+
+**From Resource Details**
+
+Navigate to credential, blueprint, cluster, or recipe details and  click **Show CLI Command**. The UI will display the `create` CLI command for the resource.
+
 
 ### Get Help
 
