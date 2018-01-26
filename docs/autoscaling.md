@@ -12,7 +12,7 @@ Cloudbreak accesses all available Ambari metrics and allows you to define alerts
 | Alert Definition | Policy Definition |
 |---|---|
 | *????* alert with *CRITICAL* state for 5 minutes | Add 10 worker nodes |
-| *????* alert with *CRITICAL* state for 10 minutes | Set 10 worker nodes |
+| *????* alert with *CRITICAL* state for 10 minutes | Set the number of worker nodes to 10 |
 
 
 [Comment]: <> (Need real examples)
@@ -25,8 +25,8 @@ These alerts can be defined in a cron expression format. For example:
 
 | Alert Definition | Policy Definition |
 |---|---|
-| Every day at 07:00 AM (GMT-8) | Add 90 percent to the worker nodes | 
- 
+| Every day at 07:00 AM (GMT-8) | Add 90 worker nodes | 
+| Every day at 08:00 PM (GMT-8) | Remove 90 worker nodes |
  
 
 ### Enable Auto Scaling 
