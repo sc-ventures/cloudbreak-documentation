@@ -42,14 +42,14 @@ For each newly created cluster, autoscaling is disabled by default but it can be
 1. On the cluster details page, navigate to the **Autoscaling** tab.   
 3. Click the toggle button to enable autoscaling.  
 4. The toggle button turns green and you can see that "Autoscaling is enabled".
-5. [Define alerts](#defining-an-alert) and [scaling policies](#creating-a-scaling-policy). 
+5. [Define alerts](#defining-an-alert) and [scaling policies](#create-a-scaling-policy). 
 
 
 ### Defining an Alert
 
 After you have enabled autoscaling, define a metric-based or time-based alert.  
 
-#### Defining a Metric-based Alert 
+#### Define a Metric-based Alert 
 
 To create a metric-based alert, perform the following steps.  
 
@@ -63,10 +63,10 @@ To create a metric-based alert, perform the following steps.
 4. Choose metric type, alert status, and alert duration that should trigger a scaling action.   
 5. Click **+** to save the alert.  
 
-Once you have defined an alert, [create a scaling policy](#creating-a-scaling-policy) that this metric should trigger.
+Once you have defined an alert, [create a scaling policy](#create-a-scaling-policy) that this metric should trigger.
 
 
-#### Defining a Time-based Alert 
+#### Define a Time-based Alert 
 
 To create a time-based alert, perform the following steps.
 
@@ -78,10 +78,10 @@ To create a time-based alert, perform the following steps.
 4. Enter a cron expression to define the frequency of the alert. Refer to [Cron Expression Generator](http://www.cronmaker.com/).  
 5. Click **+** to save the alert.   
 
-Once you have defined an alert, [create a scaling policy](#creating-a-scaling-policy) that this metric should trigger.
+Once you have defined an alert, [create a scaling policy](#create-a-scaling-policy) that this metric should trigger.
 
 
-### Creating a Scaling Policy 
+### Create a Scaling Policy 
 
 To create a scaling policy, perform the following steps.
 
