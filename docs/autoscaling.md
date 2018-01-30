@@ -58,6 +58,7 @@ After you have enabled autoscaling, define a metric-based or time-based alert.
 To create a metric-based alert, perform the following steps.  
 
 > If you would like to change default thresholds for an Ambari metric, refer to [Modifying Alerts](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.0/bk_ambari-operations/content/modifying_alerts.html) in Ambari documentation. 
+> If you would like to create a custom Ambari alert, refer to [How to Create a Custom Ambari Alert and Use it for Cloudbreak Autoscaling Policies](https://community.hortonworks.com/articles/143762/how-to-create-a-custom-ambari-alert-and-use-it-for.html).
 
 **Steps**
 
@@ -69,6 +70,11 @@ To create a metric-based alert, perform the following steps.
 5. Click **+** to save the alert.  
 
 Once you have defined an alert, [create a scaling policy](#create-a-scaling-policy) that this metric should trigger.
+
+**Related Links:**  
+[How to Create a Custom Ambari Alert and Use it for Cloudbreak Autoscaling Policies](https://community.hortonworks.com/articles/143762/how-to-create-a-custom-ambari-alert-and-use-it-for.html) (HCC)   
+[Modifying Alerts](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.0/bk_ambari-operations/content/modifying_alerts.html) (Hortonworks)   
+
 
 
 #### Define a Time-based Alert 
@@ -126,4 +132,4 @@ To configure the auto scaling settings for your cluster, perform these steps.
 
 3. Click **Save** to save the changes. 
 
- 
+
