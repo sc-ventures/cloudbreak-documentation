@@ -59,7 +59,9 @@ If you would like to access S3 through the S3A connector, you must configure acc
 
 {!docs/common/create-adv-4.md!}
 
-{!docs/common/create-adv-5.md!}  
+{!docs/common/create-adv-5.md!}
+
+{!docs/common/create-adv-6.md!}  
 [Amazon EC2 Instance Store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) (External)  
 [Amazon EC2 Spot Instances](https://aws.amazon.com/ec2/spot/) (External)   
 

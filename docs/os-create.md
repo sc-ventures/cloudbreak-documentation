@@ -33,6 +33,8 @@
 
 {!docs/common/create-adv-5.md!}
 
+{!docs/common/create-adv-6.md!}
+
 
 <div class="next">
 <a href="../os-clusters-access/index.html">Next: Access Cluster</a>

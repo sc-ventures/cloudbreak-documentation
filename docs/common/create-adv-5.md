@@ -1,14 +1,8 @@
 
+#### Ambari Server Master Key 
 
-#### Enable Kerberos Security 
+If you plan to configure Ambari to retain the Kerberos KDC admin account credentials when configuring Kerberos, or you wish to encrypt the Ambari database and LDAP server passwords, you need to setup encryption for the passwords stored in the Ambari database. If you plan to do that, enter the Ambari server master key to set up Ambari server with password encryption. 
 
-Select this option to enable Kerberos for your cluster. For information about available Kerberos options, refer to [Enabling Kerberos Security](security-kerberos.md). 
+[Comment]: <> (This is similar to "​Encrypt Database and LDAP Passwords documented at: https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.0/bk_ambari-security/content/optional_encrypt_database_and_ldap_passwords.html)   
 
 
-**Related Links**     
-[Custom Images](images.md)  
-[Kerberos](security-kerberos.md)  
-[Recipes](recipes.md) 
-[Resource Tagging](tags.md) 
-[Ambari Repositories](https://docs.hortonworks.com/HDPDocuments/Ambari-2.5.2.0/bk_ambari-installation/content/ambari_repositories.html) (Hortonworks)   
-[HDP Repositories](https://docs.hortonworks.com/HDPDocuments/Ambari-2.5.2.0/bk_ambari-installation/content/hdp_stack_repositories.html) (Hortonworks) 

@@ -55,12 +55,14 @@ This option is available if you are creating a cluster in an existing network an
 
 This option is available if you are creating a cluster in an existing network and subnet. Select this option if you don't want to create new firewall rules for the network. 
 
+{!docs/common/create-adv-5.md!}
+
 
 #### Enable Azure Disk Encryption 
 
 Check this option if you would like to have your virtual machine disks encrypted using the Azure Disk Encryption capability provided by Azure. For more information, refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption).  
 
-{!docs/common/create-adv-5.md!}  
+{!docs/common/create-adv-6.md!}  
 [Introduction to Microsoft Azure Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) (External)  
 
 

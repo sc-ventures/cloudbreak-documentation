@@ -51,7 +51,9 @@ Note that:
 
 {!docs/common/create-adv-4.md!} 
 
-{!docs/common/create-adv-5.md!}  
+{!docs/common/create-adv-5.md!}
+
+{!docs/common/create-adv-6.md!}  
 [Preemptible VM Instances](https://cloud.google.com/compute/docs/instances/preemptible) (External)   
 [Storage Options](https://cloud.google.com/compute/docs/disks/) (External)  
 
