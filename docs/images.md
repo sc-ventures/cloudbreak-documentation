@@ -1,14 +1,5 @@
 ## Custom Images
 
-Cloudbreak supports the following types of images for launching clusters:
-
-| Image Type | Description | Default Images Provided | Support for Custom Images |
-|---|---|---|---|
-| Prewarmed Images | By default, Cloudbreak launches clusters from prewarmed images. Prewarmed images include the operating system as well as Ambari and HDP. The HDP and Ambari version used by prewarmed images cannot be customized.  | Yes | No |
-| Base Images | Base images include default configuration and default tooling. These images include the operating system but do not include Ambari or HDP software. | Yes | Yes | 
-
-This section refers to base images only. 
-
 Default base images are available for each supported cloud provider and region. The following table lists the default base images available: 
 
 [Comment]: <> (For AWS and Azure, per region images are provided.)

@@ -5,14 +5,19 @@ By default, **Choose Image Catalog** is set to the default image catalog that is
 **Related Links**     
 [Custom Images](images.md)  
 
-#### Prewarmed Images 
 
-By default, Cloudbreak uses prewarmed images, which include the operating system, as well as Ambari [version] and HDP [version]. If you would like to use different Ambari and HDP versions, use the base image instead of a prewarmed image. Refer to [Base Images](#base-images). 
+#### Prewarmed and Base Images 
 
+Cloudbreak supports the following types of images for launching clusters:
 
-#### Base Images  
+| Image Type | Description | Default Images Provided | Support for Custom Images |
+|---|---|---|---|
+| Prewarmed Images | By default, Cloudbreak launches clusters from prewarmed images. Prewarmed images include the operating system as well as Ambari and HDP. The HDP and Ambari version used by prewarmed images cannot be customized. | Yes | No |
+| Base Images | Base images include default configuration and default tooling. These images include the operating system but do not include Ambari or HDP software. | Yes | Yes | 
 
-Select the **Base Image** option if you would like to:
+By default, Cloudbreak uses **Prewarmed Images**, which include the operating system, as well as Ambari [version] and HDP [version]. 
+
+You can optionally select the **Base Image** option if you would like to:
 
 * Use custom Ambari and HDP versions and/or  
 * Choose a previously created custom base image   
