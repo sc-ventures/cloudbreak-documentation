@@ -54,8 +54,8 @@ You must provide the following information about your MIT KDC or Active Director
 
 | Parameter | Required if using... | Description |
 |---|---|---|
-| Kerberos Url | MIT, AD | IP address or FQDN for the KDC host. Optionally a port number may be included. Example: "kdc.example.com:88" or "kdc.example.com" |
-| Kerberos Admin URL | MIT, AD | (Optional) Description TBD. Example: TBD |
+| Kerberos Url | MIT, AD | IP address or FQDN for the KDC host. Optionally a port number may be included. Example: "kdc.example1.com:88" or "kdc.example1.com" |
+| Kerberos Admin URL | MIT, AD | (Optional) IP address or FQDN for the KDC admin host. Optionally a port number may be included. Example: "kdc.example2.com:88" or "kdc.example2.com" |
 | Kerberos Realm | MIT, AD | The default realm to use when creating service principals. Example: "EXAMPLE.COM" |
 | Kerberos AD Ldap Url | AD | The URL to the Active Directory LDAP Interface. This value must indicate a secure channel using LDAPS since it is required for creating and updating passwords for Active Directory accounts. Example: "ldaps://ad.example.com:636" |
 | Kerberos AD Container DN | AD | The distinguished name (DN) of the container used store service principals. Example:  "OU=hadoop,DC=example,DC=com" |
