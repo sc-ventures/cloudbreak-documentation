@@ -18,7 +18,8 @@ The information presented includes:
 * [Recipes](#recipes)  
 * [Repository Details](#repository-details)  
 * [Image Details](#image-details)    
-* [Network](#network)  
+* [Network](#network)   
+* [Security](#security)  
 * [Autoscaling](#autoscaling)    
 * [Event History](#event-history)  
 
@@ -93,6 +94,9 @@ This section includes information about the base image that was used for the Clo
 
 This section includes information about the names of the network and subnet in which the cluster is running and the links to related cloud provider console.
 
+#### Security 
+
+This section is only available if you have enabled Kerberos security. It provides you with the details of your Kerberos configuration.  
 
 #### Autoscaling
  
