@@ -1,6 +1,13 @@
 ## Custom Images
 
-By default, Cloudbreak launches clusters from **default base images**, which include default configuration and default tooling. These images are base images: they include the OS but do not include Ambari or HDP software. The Ambari and HDP software is installed as part of the VM create and cluster provisioning process. 
+Cloudbreak supports the following types of images for launching clusters:
+
+| Image Type | Description | Default Images Provided | Support for Custom Images |
+|---|---|---|---|
+| Prewarmed Images | By default, Cloudbreak launches clusters from prewarmed images. Prewarmed images include the operating system as well as Ambari and HDP. The HDP and Ambari version used by prewarmed images cannot be customized.  | Yes | No |
+| Base Images | Base images include default configuration and default tooling. These images include the operating system but do not include Ambari or HDP software. | Yes | Yes | 
+
+This section refers to base images only. 
 
 Default base images are available for each supported cloud provider and region. The following table lists the default base images available: 
 
@@ -12,7 +19,6 @@ Default base images are available for each supported cloud provider and region. 
 | Azure | CentOS 7 | 
 | GCP | CentOS 7 |  
 | OpenStack | CentOS 7 | 
-
 
 Since these standard default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on) Cloudbeak allows you to use your own **custom base images**.
 

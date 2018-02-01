@@ -1,14 +1,21 @@
 #### Choose Image Catalog
 
-By default, **Choose Image Catalog** is set to the default image catalog that is provided with Cloudbreak. If you would like to use a different image catalog, you must first create and register it. For more information, refer to [Custom Images](images.md).
+By default, **Choose Image Catalog** is set to the default image catalog that is provided with Cloudbreak. If you would like to use a different image catalog, you must first create and register it. For complete instructions, refer to [Custom Images](images.md).
 
 **Related Links**     
 [Custom Images](images.md)  
 
+#### Prewarmed Images 
+
+By default, Cloudbreak uses prewarmed images, which include the operating system, as well as Ambari [version] and HDP [version]. If you would like to use different Ambari and HDP versions, use the base image instead of a prewarmed image. Refer to [Base Images](#base-images). 
+
 
 #### Base Images  
 
-The **Base Image** option allows you to choose a custom image, and customize Ambari and HDP version used. 
+Select the **Base Image** option if you would like to:
+
+* Use custom Ambari and HDP versions and/or  
+* Choose a previously created custom base image   
 
 <div class="note">
     <p class="first admonition-title">Supported Ambari and HDP Versions</p>
@@ -19,12 +26,15 @@ Cloudbreak supports the following HDP and Ambari versions:<ul><li>HDP <b>2.5.x</
 
 [Comment]: <> (Removed: If you would like to use Ambari <b>2.6.x</b>, use the version provided by default in the Cloudbreak web UI, or newer. Other versions are not supported.)
 
-**Choose Image**
+**Choose Image**  
 
-If under [Choose Image Catalog](#choose-image-catalog), you selected a custom image catalog, under **Choose Image** you can select an image from that catalog. Otherwise the default image from the default image catalog is used. For more information, refer to [Custom Images](images.md).
+If under [Choose Image Catalog](#choose-image-catalog), you selected a custom image catalog, under **Choose Image** you can select an image from that catalog. For complete instructions, refer to [Custom Images](images.md). 
 
+If you are trying to customize Ambari and HDP versions, you can ignore the **Choose Image** option; in this case default base image is used.
 
-**Ambari**
+**Ambari Repository Specification**
+
+If you would like to use a custom Ambari version, provide the following information: 
 
 | Parameter | Description | Example |
 |---|---|---|
@@ -32,7 +42,9 @@ If under [Choose Image Catalog](#choose-image-catalog), you selected a custom im
 | Repo Url | URL to the Ambari version repo. | http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.5.1.0 |
 | Repo Gpg Key Url | URL to the repo GPG key. Each stable RPM package that is published by CentOS Project is signed with a GPG signature. By default, yum and the graphical update tools will verify these signatures and refuse to install any packages that are not signed, or have an incorrect signature. | http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins | 
 
-**HDP**
+**HDP Repository Specification**
+
+If you would like to use a custom HDP version, provide the following information: 
 
 | Parameter | Description | Example | 
 |---|---|--|
@@ -44,14 +56,8 @@ If under [Choose Image Catalog](#choose-image-catalog), you selected a custom im
 | Utils Repo Id | Identifier for the repo linked in "Utils Base Url". | HDP-UTILS-1.1.0.21|
 | Utils Base Url | URL to the repo storing utilities for the desired stack version. | http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.21/repos/centos7 |  
 
-**Related Links**     
-[Ambari Repositories](https://docs.hortonworks.com/HDPDocuments/Ambari-2.5.2.0/bk_ambari-installation/content/ambari_repositories.html) (Hortonworks)   
-[HDP Repositories](https://docs.hortonworks.com/HDPDocuments/Ambari-2.5.2.0/bk_ambari-installation/content/hdp_stack_repositories.html) (Hortonworks) 
+**Related Links**      
 [Custom Images](images.md)      
-
-#### Prewarmed Images 
-
-No prewarmed images are provided and this selection is disabled. 
 
 
 #### Enable Lifetime Management 
