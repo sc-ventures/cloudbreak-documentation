@@ -40,7 +40,7 @@ New types of recipes are introduced:
 * PRE-AMBARI-START (new, useful for configuring Ambari prior to start)  
 * POST-AMBARI-START (formerly known as PRE)  
 * POST-CLUSTER-INSTALL (formerly known as POST)  
-* PRE-TERMINATION (new, useful for cleanup pre-termination tasks)  
+* PRE-TERMINATION (new, useful for cluster cleanup pre-termination tasks)  
 Refer to updated [Recipes](recipes.md) documentation.
 
 ##### Disabling Cloud Providers 
@@ -90,6 +90,7 @@ ____________________________
 
 
 
+
 ##### (BUG-93548) AWS Region eu-west-3 Is Not Supported 
 
 The AWS region eu-west-3 can be selected during cluster creation. However, it is not supported by Cloudbreak.
@@ -97,6 +98,8 @@ The AWS region eu-west-3 can be selected during cluster creation. However, it is
 *Workaround*: 
 
 Do not use the AWS region eu-west-3. Instead, use eu-west-1 or eu-west-2.
+
+[Comment]: <> (Should be fixed in 2.4.0.)
 ____________________________
 
 
@@ -110,7 +113,9 @@ You cannot create a cluster using an existing network that does not have any sub
   
 *Workaround*: 
 
-Do not use this option. It will be removed in a future release.  
+Do not use this option. It will be removed in a future release. 
+
+[Comment]: <> (Should be fixed in 2.4.0.) 
 ____________________________
 
 
@@ -124,20 +129,12 @@ Cluster creation fails with the following error:
 *Workaround*: 
 
 This may mean that the volumes that you requested exceed volumes available on your cloud provider account. When creating a cluster, on the advanced *Hardware and Storage* page of the create cluster wizard, try reducing the amount of requested storage. If you need more storage, try using a different region or ask your cloud provider admin to increase the resource quota for volumes.  
+
+[Comment]: <> (This jira item was closed so it will not be fixed. Maybe add this to troubleshooting?)
 ____________________________
 
 
 
-##### (BUG-90985) OpenStack Cluster Creation Fails at Network Configuration
-
-When creating a cluster on OpenStack, if you do not select an existing network and subnet, the cluster fails with an error similar to:  
-*Infrastructure creation failed. Reason: At least one of the following properties must be specified: network, network_id.*   
-*Infrastructure creation failed. Reason: The Parameter (router_id) was not provided.*
-
-*Workaround*: 
-
-You must select an existing network and subnet when creating a cluster on OpenStack. 
-____________________________
 
 
 
@@ -149,7 +146,10 @@ When using EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0 blueprint wi
 
 * Although it is possible to create a cluster with less than 3 nodes, in order to use the EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0 blueprint, you must have at least 3 nodes: 1 Ambari node and 2 non-Ambari nodes. Terminate the cluster and create a new one with at least 3 nodes.   
 * Alternatively, it is possible to resolve this issue by adding an additional NodeManager for the Ambari host group.  
+
+[comment]: <> (Should be fixed in 2.4.0) 
 ____________________________
+
 
 
 
@@ -160,6 +160,8 @@ You may sporadically experience an issue where after you stop and restart a clus
 
 [comment]: <> (Not sure what the workaround is for BUG-91013?)
 ____________________________
+
+
 
 
 
@@ -175,10 +177,6 @@ ____________________________
 
 
 
-##### (BUG-93243) Incorrect Recipe Type Is Listed
-
-After adding a post-ambari-start recipe, you may see it incorrectly listed as a post-ambari-install recipe. 
-____________________________
 
 
 
@@ -193,23 +191,5 @@ ____________________________
 
 
 
-##### (RMP-10340) Unable to Dekerberize the Cluster During Cluster Termination  
 
-Cluster with Cloudbreak provisioned Kerberos fails during dekerberizing. The Ambari shows the following error:
-
-*ERROR [ambari-heartbeat-processor-0] ServiceComponentHostImpl:1025 - Can't handle ServiceComponentHostEvent event at current state, serviceComponentName=ZOOKEEPER_CLIENT, hostName=host-10-0-0-3.openstacklocal, currentState=INSTALLED, eventType=HOST_SVCCOMP_STOPPED, event=EventType: HOST_SVCCOMP_STOPPED  
-WARN [ambari-heartbeat-processor-0] HeartbeatProcessor:567 - State machine exception. Invalid event: HOST_SVCCOMP_STOPPED at INSTALLED  
-ERROR [Server Action Executor Worker 62] PrepareDisableKerberosServerAction:151 - The data directory has not been set.  Generated data can not be stored.  
-WARN [Server Action Executor Worker 62] ServerActionExecutor:458 - Task #62 failed to complete execution due to thrown exception: org.apache.ambari.server.AmbariException:The data directory has not been set.  Generated data can not be stored.
-org.apache.ambari.server.AmbariException: The data directory has not been set.  Generated data can not be stored.
-        at org.apache.ambari.server.serveraction.kerberos.PrepareDisableKerberosServerAction.execute(PrepareDisableKerberosServerAction.java:152)
-        at org.apache.ambari.server.serveraction.ServerActionExecutor$Worker.execute(ServerActionExecutor.java:516)
-        at org.apache.ambari.server.serveraction.ServerActionExecutor$Worker.run(ServerActionExecutor.java:453)
-        at java.lang.Thread.run(Thread.java:748)  
-ERROR [ambari-action-scheduler] ActionScheduler:447 - Operation completely failed, aborting request id: 30*
-
-*Workaround:*
-
-Try terminating the cluster again. 
-____________________________
 
