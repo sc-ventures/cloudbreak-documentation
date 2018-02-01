@@ -12,24 +12,18 @@ Cloudbreak supports the following types of images for launching clusters:
 
 | Image Type | Description | Default Images Provided | Support for Custom Images |
 |---|---|---|---|
-| Prewarmed Images | By default, Cloudbreak launches clusters from prewarmed images. Prewarmed images include the operating system as well as Ambari and HDP. The HDP and Ambari version used by prewarmed images cannot be customized. | Yes | No |
 | Base Images | Base images include default configuration and default tooling. These images include the operating system but do not include Ambari or HDP software. | Yes | Yes | 
+| Prewarmed Images | By default, Cloudbreak launches clusters from prewarmed images. Prewarmed images include the operating system as well as Ambari and HDP. The HDP and Ambari version used by prewarmed images cannot be customized. | Yes | No |
 
-By default, Cloudbreak uses **Prewarmed Images**, which include the operating system, as well as Ambari [version] and HDP [version]. 
+By default, Cloudbreak uses the included default **Prewarmed Images**, which include the operating system, as well as
+Ambari and HDP packages installed. 
 
 You can optionally select the **Base Image** option if you would like to:
 
-* Use custom Ambari and HDP versions and/or  
-* Choose a previously created custom base image   
+* Use an Ambari and HDP versions different than what the **Prewarmed Image** includes and/or  
+* Choose a previously created custom **Base Image**
 
-<div class="note">
-    <p class="first admonition-title">Supported Ambari and HDP Versions</p>
-    <p class="last">
-Cloudbreak supports the following HDP and Ambari versions:<ul><li>HDP <b>2.5.x</b> and HDP <b>2.6.x</b></li><li>Ambari <b>2.5.x</b>.</li></ul>Ambari 2.6.x is not supported.  
-</p>
-</div>
-
-[Comment]: <> (Removed: If you would like to use Ambari <b>2.6.x</b>, use the version provided by default in the Cloudbreak web UI, or newer. Other versions are not supported.)
+[Comment]: <> (Removed: If you would like to use Ambari <b>2.6.1</b>, use the version provided by default in the Cloudbreak web UI, or newer.)
 
 **Choose Image**  
 
@@ -43,8 +37,8 @@ If you would like to use a custom Ambari version, provide the following informat
 
 | Parameter | Description | Example |
 |---|---|---|
-| Version | Ambari version. | 2.5.1.0 |
-| Repo Url | URL to the Ambari version repo. | http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.5.1.0 |
+| Version | Ambari version. | 2.6.1.0!!! |
+| Repo Url | URL to the Ambari version repo. | http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.6.1.0!!! |
 | Repo Gpg Key Url | URL to the repo GPG key. Each stable RPM package that is published by CentOS Project is signed with a GPG signature. By default, yum and the graphical update tools will verify these signatures and refuse to install any packages that are not signed, or have an incorrect signature. | http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins | 
 
 **HDP Repository Specification**
@@ -54,12 +48,14 @@ If you would like to use a custom HDP version, provide the following information
 | Parameter | Description | Example | 
 |---|---|--|
 | Stack | Stack name. | HDP |
-| Version | Stack version. | 2.6 |
+| Version | Stack version. | 2.6!!! |
 | OS | Operating system. | centos7 |
 | Stack Repo Id | Identifier for the repo linked in "Base Url". | HDP-2.6 |
-| Base Url | URL to the repo storing the desired stack version. | http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.6.1.0 |
+| Base Url | URL to the repo storing the desired stack version. | http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.6.1.0!!! |
 | Utils Repo Id | Identifier for the repo linked in "Utils Base Url". | HDP-UTILS-1.1.0.21|
 | Utils Base Url | URL to the repo storing utilities for the desired stack version. | http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.21/repos/centos7 |  
+
+!!! THE LZO AND GPL REPO STUFF WILL END UP HERE https://hortonworks.jira.com/browse/RMP-10635 and https://hortonworks.jira.com/browse/BUG-95132 !!!
 
 **Related Links**      
 [Custom Images](images.md)      

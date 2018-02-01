@@ -8,7 +8,7 @@ extra_css:
   - css/extra.css
 dev_addr: 0.0.0.0:8000
 strict: true
-copyright: © 2011-2017 <a href="http://www.hortonworks.com" target="_blank">Hortonworks Inc</a>. All Rights Reserved. | <a href="http://hortonworks.com/privacy-policy/" target="_blank">Privacy Policy</a>
+copyright: © 2011-2018 <a href="http://www.hortonworks.com" target="_blank">Hortonworks Inc</a>. All Rights Reserved. | <a href="http://hortonworks.com/privacy-policy/" target="_blank">Privacy Policy</a>
 google_analytics: ['UA-22950817-24', 'auto']
 markdown_extensions:
   - markdown_include.include

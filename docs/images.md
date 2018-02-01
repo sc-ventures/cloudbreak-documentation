@@ -23,7 +23,7 @@ In order to use your own custom base images you must:
 <div class="danger">
     <p class="first admonition-title">Important</p>
     <p class="last">
-Only base images can be created and registered as custom images. Do not create or register prewarmed images using the instructions provided in this section. 
+Only <strong>Base Images</strong> can be created and registered as custom images. Do not create or register <strong>Prewarmed Images</strong> as a custom image. 
 </p>
 </div>
 
@@ -79,12 +79,12 @@ Here is an example image catalog JSON file that includes two sets of custom base
     * That is using Amazon Linux operating system 
     * That will use the Redhat 6 repos as default Ambari and HDP repositories during cluster create     
     * Has a unique ID of "44b140a4-bd0b-457d-b174-e988bee3ca47"
-    * Is available for Cloudbreak 2.1.0    
+    * Is available for Cloudbreak 2.4.0    
 *  A custom base image for Azure, Google, and OpenStack: 
     * That is using CentOS 7 operating system 
     * That will use the Redhat 7 repos as default Ambari and HDP repositories during cluster create   
     * Has a unique ID of "f6e778fc-7f17-4535-9021-515351df3692"
-    * Is available to Cloudbreak 2.1.0      
+    * Is available to Cloudbreak 2.4.0      
 
 
 You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/custom-image-catalog.json).
@@ -168,7 +168,7 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
           "f6e778fc-7f17-4535-9021-515351df3692"
         ],
         "versions": [
-          "2.1.0"
+          "2.4.0"
         ]
       }
     ]

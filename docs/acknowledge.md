@@ -16,7 +16,7 @@
 
 ### Copyrights and Trademarks
 
-© 2011-2016 Hortonworks Inc. All Rights Reserved. Hortonworks and HDP are registered trademarks
+© 2011-2018 Hortonworks Inc. All Rights Reserved. Hortonworks and HDP are registered trademarks
 or trademarks of Hortonworks, Inc. in the United States and other jurisdictions.  All other
 trademarks and trade names are the property of their respective owners.
 
