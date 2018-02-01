@@ -33,6 +33,16 @@ Migrating Cloudbreak from one machine to another is supported. For migration ins
 
 Providing your own JDK on a custom base image is supported. For instructions, refer to "Advanced topics" in the [https://github.com/hortonworks/cloudbreak-images](https://github.com/hortonworks/cloudbreak-images) repository.
 
+##### Prewarmed Images 
+
+To accelerate cluster creation, CLoudbreak 2.4 introduces prewarmed images, which include the operating system, as well as the default version of Ambari and HDP. By default, Cloudbreak 2.4 launches clusters from these prewarmed images, instead of using base images (which were used by default in earlier versions of Cloubdreak). Default base images are still available in case you would like to use different Ambari and HDP versions than those provided with prewarmed images. For more information, refer to [Prewardmed and Base Images](aws-create.md#prewarmed-and-base-images). 
+
+##### CLI Templates 
+
+After specifying the parameters for your cluster in the Cloudbreak web UI, you can copy the content of the CLI JSON file that can be used to create a cluster via Cloudbreeak CLI. For more information, refer to [Obtain Cluster JSON Template from the UI](cli-get-started.md#obtain-cluster-json-template-from-the-ui).    
+
+Furthermore, Cloudbreak web UI includes an option in the UI which allows you to generate the  `create` command for resources such as credentials, blueprints, clusters, and recipes. For more information, refer to [Obtain CLI Command from the UI](cli-get-started.md#obtain-cli-command-from-the-ui).  
+
 ##### New Recipe Types 
 
 New types of recipes are introduced:
@@ -46,6 +56,17 @@ Refer to updated [Recipes](recipes.md) documentation.
 ##### Disabling Cloud Providers 
 
 You can hide cloud providers available in Cloudbreak by adding the `CB_ENABLEDPLATFORMS` environment variable in Profile and setting it to the provider(s) that you would like to have available. For more information, refer to [Disable Providers](cb-disable-provider.md).
+
+##### Support for Ambari 2.6
+
+TBD
+
+##### Ambari Master Key 
+
+[Comment]: <> (Not sure if this is a new feature or if it was available in Cloudbreak 1.16?)
+
+
+
 
 
 ____________________________
@@ -72,6 +93,12 @@ Cloudbreak 2 does not support Mesos cloud provider.
 ##### Removal of Templates
 
 Earlier versions of Cloudbreak allowed you to save infrastructure, network, and security group templates. This feature was removed. Instead, you can define VMs, storage, networks, and security groups as part of the create cluster wizard.
+
+[Comment]: <> (Add GPL changes?)
+
+
+
+
 
 ____________________________
 
@@ -105,6 +132,8 @@ ____________________________
 
 
 
+
+
 ##### (BUG-91543) Networks With No Subnets Are Not Supported 
 
 You cannot create a cluster using an existing network that does not have any subnets. You must use a network that includes at least one subnet. If you try to use a network with no subnets, the cluster fails with the following error:   
@@ -117,6 +146,9 @@ Do not use this option. It will be removed in a future release.
 
 [Comment]: <> (Should be fixed in 2.4.0.) 
 ____________________________
+
+
+
 
 
 

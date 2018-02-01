@@ -1,17 +1,17 @@
 ## Custom Images
 
-Default base images are available for each supported cloud provider and region. The following table lists the default base images available: 
+Default images are available for each supported cloud provider and region. The following table lists the default base images available: 
 
 [Comment]: <> (For AWS and Azure, per region images are provided.)
 
-| Cloud Provider | Base Image |
+| Cloud Provider | Default Image |
 |---|---|
 | AWS | Amazon Linux 2017 | 
 | Azure | CentOS 7 | 
 | GCP | CentOS 7 |  
 | OpenStack | CentOS 7 | 
 
-Since these standard default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on) Cloudbeak allows you to use your own **custom base images**.
+Since these default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on) Cloudbeak allows you to use your own **custom base images**.
 
 In order to use your own custom base images you must:
 
@@ -23,7 +23,7 @@ In order to use your own custom base images you must:
 <div class="danger">
     <p class="first admonition-title">Important</p>
     <p class="last">
-Only <strong>Base Images</strong> can be created and registered as custom images. Do not create or register <strong>Prewarmed Images</strong> as a custom image. 
+Only <strong>base images</strong> can be created and registered as custom images. Do not create or register <strong>prewarmed images</strong> as custom images. 
 </p>
 </div>
 
