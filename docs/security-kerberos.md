@@ -44,17 +44,24 @@ You must provide the following information about your MIT KDC or Active Director
 
 > Before proceeding with the configuration, you must confirm that you met the requirements by checking the boxes next to all requirements listed. The configuration options are displayed only after you have confirmed all the requirements by checking every box.    
 
+| Parameter | Description |
+|---|---|
+| Kerberos Admin Principal | The admin principal in your existing MIT KDC or AD. | 
+| Kerberos Admin Password  | The admin principal password in your existing MIT KDC or AD. | 
+| MIT KDC or Active Directory | Select MIT KDC or Active Directory. |
+
+**Use Basic Configuration**
+
 | Parameter | Required if using... | Description |
-|---|---|---|---|
-| Kerberos Admin Principal | MIT, AD | The admin principal in your existing MIT KDC or AD. | 
-| Kerberos Admin Password | MIT, AD | The admin principal password in your existing MIT KDC or AD. | 
+|---|---|---|
 | Kerberos Url | MIT, AD | IP address or FQDN for the KDC host. Optionally a port number may be included. Example: "kdc.example.com:88" or "kdc.example.com" |
+| Kerberos Admin URL | MIT, AD | (Optional) Description TBD. Example: TBD |
 | Kerberos Realm | MIT, AD | The default realm to use when creating service principals. Example: "EXAMPLE.COM" |
 | Kerberos AD Ldap Url | AD | The URL to the Active Directory LDAP Interface. This value must indicate a secure channel using LDAPS since it is required for creating and updating passwords for Active Directory accounts. Example: "ldaps://ad.example.com:636" |
 | Kerberos AD Container DN | AD | The distinguished name (DN) of the container used store service principals. Example:  "OU=hadoop,DC=example,DC=com" |
 | Use TCP Connection | Optional | By default, Kerberos uses UDP. Checkmark this box to use TCP instead. |
 
-**Use Custom Configuration** 
+**Use Advanced Configuration** 
 
 Checking the **Use Custom Configuration** option allows you to provide the actual Ambari Kerberos descriptors to be injected into your blueprint (instead of Cloudbreak generating the descriptors on your behalf). This is the most powerful option which gives you full control of the Ambari Kerberos options that are available. You must provide: 
 
