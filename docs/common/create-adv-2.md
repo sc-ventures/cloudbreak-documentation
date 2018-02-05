@@ -21,8 +21,6 @@ Ambari and HDP packages installed. You can optionally select the **base image** 
 * Use an Ambari and HDP versions different than what the prewarmed image includes and/or  
 * Choose a previously created custom base image
 
-[Comment]: <> (Removed: If you would like to use Ambari <b>2.6.1</b>, use the version provided by default in the Cloudbreak web UI, or newer.)
-
 **Choose Image**  
 
 If under [Choose Image Catalog](#choose-image-catalog), you selected a custom image catalog, under **Choose Image** you can select an image from that catalog. For complete instructions, refer to [Custom Images](images.md). 
@@ -32,6 +30,10 @@ If you are trying to customize Ambari and HDP versions, you can ignore the **Cho
 **Ambari Repository Specification**
 
 If you would like to use a custom Ambari version, provide the following information: 
+
+<div class="note">
+<p class="first admonition-title"> Ambari 2.6.1</p>
+<p class="last">If you would like to use Ambari <b>2.6.1</b>, use the version provided by default in the Cloudbreak web UI, or newer.</p></div>
 
 | Parameter | Description | Example |
 |---|---|---|
