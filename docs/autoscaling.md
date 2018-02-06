@@ -87,9 +87,6 @@ Once you have defined an alert, [create a scaling policy](#create-a-scaling-poli
 
 After [enabling autoscaling](#enable-autoscaling), perform the following steps to create a time-based alert.
 
-**Prerequisites**  
-[Enable autoscaling](#enable-autoscaling). 
-
 **Steps**
  
 1. In the **Alert Configuration** section, select the **Time Based** alert type:  
