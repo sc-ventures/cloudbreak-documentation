@@ -41,8 +41,11 @@ For each newly created cluster, autoscaling is disabled by default but it can be
 
     <a href="../images/cb-autoscaling1.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling1.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
       
-4. The toggle button turns green and you can see that "Autoscaling is enabled".
-5. [Define alerts](#defining-an-alert) and [define scaling policies](#create-a-scaling-policy). 
+4. The toggle button turns green and you can see that "Autoscaling is enabled":
+
+    <a href="../images/cb-autoscaling2.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling2.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
+    
+5. [Define alerts](#defining-an-alert) and then [define scaling policies](#create-a-scaling-policy). You can also [adjust the autoscaling settings](#configure-autoscaling-settings). 
 
 If you decide to disable autoscaling, your previously defined alerts and policies will be preserved. 
 
@@ -62,8 +65,7 @@ After [enabling autoscaling](#enable-autoscaling), perform the following steps t
 
 **Steps**
 
-1. In the **Alert Configuration** section, **Metric Based** alert type should be preselected:
-    <a href="../images/cb-autoscaling2.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling2.png" width="650" title="Autoscaling in Cloudbreak UI"></a>    
+1. In the **Alert Configuration** section, select **Metric Based** alert type.      
 2. Provide the following information:
 
     | Parameter | Description |
@@ -89,8 +91,7 @@ After [enabling autoscaling](#enable-autoscaling), perform the following steps t
 
 **Steps**
  
-1. In the **Alert Configuration** section, select the **Time Based** alert type:  
-    <a href="../images/cb-autoscaling3.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling3.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
+1. In the **Alert Configuration** section, select the **Time Based** alert type. 
 2. Provide the following information: 
 
     | Parameter | Description |
@@ -110,9 +111,7 @@ After [enabling autoscaling](#enable-autoscaling) and [creating at least one ale
 
 **Steps**
 
-1. In the **Policy Configuration** section, provide the information required:
-    <a href="../images/cb-autoscaling4.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling4.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
-3. Provide the following information: 
+1. In the **Policy Configuration** section, provide the following information:
 
     | Parameter | Description |
 |---|---| 
@@ -121,7 +120,8 @@ After [enabling autoscaling](#enable-autoscaling) and [creating at least one ale
 | Enter number or percentage | Enter a number defining how many or what percentage of nodes to add or remove. If the action selected is "set", this defines the number of nodes that a host group will be set to after scaling. |  
 | Select nodes of percent | Select "nodes" or "percent", depending on whether you want to scale to a specific number, or percent of current number of nodes.  |
 | Select host group | Select the host group to which to apply the scaling. | 
-| Choose an alert | Select the alert based on which the scaling should be applied. | 
+| Choose an alert | Select the alert based on which the scaling should be applied. |   
+
 9. Click **+** to save the alert.   
 
 
@@ -132,8 +132,7 @@ After [enabling autoscaling](#enable-autoscaling), perform these steps to config
 
 **Steps**
 
-1. In the **Cluster Scaling Configuration**, provide the following information:
-    <a href="../images/cb-autoscaling5.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling5.png" width="650" title="Autoscaling in Cloudbreak UI"></a>   
+1. In the **Cluster Scaling Configuration**, provide the following information: 
     
     | Setting | Description	 | Default Value |
 |---|---|---|
