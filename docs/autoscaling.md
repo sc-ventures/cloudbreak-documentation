@@ -46,13 +46,15 @@ For each newly created cluster, autoscaling is disabled by default but it can be
 
 If you decide to disable autoscaling, your previously defined alerts and policies will be preserved. 
 
+
 ### Defining an Alert
 
 After you have enabled autoscaling, define a metric-based or time-based alert.  
 
+
 #### Define a Metric-based Alert 
 
-To create a metric-based alert, perform the following steps.  
+After [enabling autoscaling](#enable-autoscaling), perform the following steps to create a metric-based alert.  
 
 > If you would like to change default thresholds for an Ambari metric, refer to [Modifying Alerts](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.0/bk_ambari-operations/content/modifying_alerts.html) in Ambari documentation. 
 
@@ -60,10 +62,9 @@ To create a metric-based alert, perform the following steps.
 
 **Steps**
 
-1. [Enable autoscaling](#enable-autoscaling).  
-2. In the **Alert Configuration** section, **Metric Based** alert type should be preselected:
+1. In the **Alert Configuration** section, **Metric Based** alert type should be preselected:
     <a href="../images/cb-autoscaling2.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling2.png" width="650" title="Autoscaling in Cloudbreak UI"></a>    
-3. Provide the following information:
+2. Provide the following information:
 
     | Parameter | Description |
 |---|---|
@@ -72,7 +73,7 @@ To create a metric-based alert, perform the following steps.
 | Alert status | Select the alert status that should trigger an alert for the selected metric. One of: OK, CRITICAL, WARNING. | 
 | Alert duration | Select the alert duration that should trigger an alert. |   
 
-5. Click **+** to save the alert.  
+3. Click **+** to save the alert.  
 
 Once you have defined an alert, [create a scaling policy](#create-a-scaling-policy) that this metric should trigger.
 
@@ -84,14 +85,16 @@ Once you have defined an alert, [create a scaling policy](#create-a-scaling-poli
 
 #### Define a Time-based Alert 
 
-To create a time-based alert, perform the following steps.
+After [enabling autoscaling](#enable-autoscaling), perform the following steps to create a time-based alert.
+
+**Prerequisites**  
+[Enable autoscaling](#enable-autoscaling). 
 
 **Steps**
-
-1. [Enable autoscaling](#enable-autoscaling).  
-2. In the **Alert Configuration** section, select the **Time Based** alert type:  
+ 
+1. In the **Alert Configuration** section, select the **Time Based** alert type:  
     <a href="../images/cb-autoscaling3.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling3.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
-3. Provide the following information: 
+2. Provide the following information: 
 
     | Parameter | Description |
 |---|---|
@@ -99,19 +102,18 @@ To create a time-based alert, perform the following steps.
 | Select timezone. | Select your timezone. |   
 | Enter cron expression | Enter a cron expression that defines the frequency of the alert. Refer to [Cron Expression Generator](http://www.cronmaker.com/). | 
 
-4. Click **+** to save the alert.   
+3. Click **+** to save the alert.   
 
 Once you have defined an alert, [create a scaling policy](#create-a-scaling-policy) that this metric should trigger.
 
 
 ### Create a Scaling Policy 
 
-To create a scaling policy, perform the following steps.
+After [enabling autoscaling](#enable-autoscaling) and [creating at least one alert](#defining-an-alert), perform the following steps to create a scaling policy.
 
 **Steps**
 
-1. [Enable autoscaling](#enable-autoscaling) and [create at least one alert](#defining-an-alert).  
-2. In the **Policy Configuration** section, provide the information required:
+1. In the **Policy Configuration** section, provide the information required:
     <a href="../images/cb-autoscaling4.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling4.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
 3. Provide the following information: 
 
@@ -129,12 +131,11 @@ To create a scaling policy, perform the following steps.
 
 ### Configure Autoscaling Settings 
 
-To configure the auto scaling settings for your cluster, perform these steps. 
+After [enabling autoscaling](#enable-autoscaling), perform these steps to configure the auto scaling settings for your cluster.   
 
 **Steps**
 
-1. [Enable autoscaling](#enable-autoscaling).
-2. In the **Cluster Scaling Configuration**, provide the following information:
+1. In the **Cluster Scaling Configuration**, provide the following information:
     <a href="../images/cb-autoscaling5.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling5.png" width="650" title="Autoscaling in Cloudbreak UI"></a>   
     
     | Setting | Description	 | Default Value |
@@ -143,6 +144,6 @@ To configure the auto scaling settings for your cluster, perform these steps.
 | Minimum Cluster Size |	The minimum size allowed for the cluster. Auto scaling policies cannot scale the cluster below or above this size. | 2 nodes |
 | Maximum Cluster Size |	The maximum size allowed for the cluster. Auto scaling policies cannot scale the cluster below or above this size. | 100 nodes |
 
-3. Click **Save** to save the changes. 
+2. Click **Save** to save the changes. 
 
 
