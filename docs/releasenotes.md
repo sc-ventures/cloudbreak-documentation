@@ -216,6 +216,28 @@ ____________________________
 
 
 
+##### (BUG-95607) Special Characters in Blueprint Name Cause an Error in CLI  
+
+When registering a blueprint via `blueprint create` CLI command, if the name of the blueprint includes one or more of the following special characters `@#$%|:&*;` you will get an error similar to:  
+
+*cb blueprint create from-url --name test@# --url https://myurl.com/myblueprint.bp  
+[1] 7547
+-bash: application.yml: command not found
+-bash: --url: command not found
+ ~  integration-test  1  time="2018-02-01T12:56:44+01:00" level="error" msg="the following parameters are missing: url\n"* 
+ 
+ *Workaround:*  
+ You have two options:
+ 
+* Do not include any of the following special characters `@#$%|:&*;` in the blueprint name.  
+* If you want to use special characters in the name, perform the task via the UI.  
+____________________________
+
+
+
+
+
+
 ##### (BUG-93257) Clusters Are Missing From History   
 
 After changing the dates on the *History* page multiple times, the results displayed may sometimes be incorrect. 
