@@ -11,9 +11,9 @@ Cloudbreak accesses all available Ambari metrics and allows you to define alerts
 
 | Alert Definition | Policy Definition |
 |---|---|
-| *ResourceManager CPU* alert with *CRITICAL* state for 5 minutes | Add 10 worker nodes |
-| *HDFS Capacity Utilization* alert with *WARN* state for 20 minutes | Set the number of worker nodes to 50 |
-| *Ambari Server Alerts* alert with *CRITICAL* state for 15 minutes | Decrease the number of worker nodes by 80% |
+| *ResourceManager CPU* alert with *CRITICAL* status for 5 minutes | Add 10 worker nodes |
+| *HDFS Capacity Utilization* alert with *WARN* status for 20 minutes | Set the number of worker nodes to 50 |
+| *Ambari Server Alerts* alert with *CRITICAL* status for 15 minutes | Decrease the number of worker nodes by 80% |
 
 
 **Time-based Autoscaling**
@@ -68,9 +68,9 @@ To create a metric-based alert, perform the following steps.
     | Parameter | Description |
 |---|---|
 | Enter alert name | Enter a unique name for the alert. | 
-| Choose metric type | Select an Ambari metric should trigger the alert. |
-| Alert status | Select an alert type that should trigger an alert for the selected metric. One of: OK, CRITICAL, WARNING. | 
-| Alert duration | Select an alert duration that should trigger an alert. |   
+| Choose metric type | Select the Ambari metric that should trigger the alert. |
+| Alert status | Select the alert status that should trigger an alert for the selected metric. One of: OK, CRITICAL, WARNING. | 
+| Alert duration | Select the alert duration that should trigger an alert. |   
 
 5. Click **+** to save the alert.  
 
@@ -97,7 +97,7 @@ To create a time-based alert, perform the following steps.
 |---|---|
 | Enter alert name. |  Enter a unique name for the alert. | 
 | Select timezone. | Select your timezone. |   
-| Enter cron expression | Enter a cron expression to define the frequency of the alert. Refer to [Cron Expression Generator](http://www.cronmaker.com/). | 
+| Enter cron expression | Enter a cron expression that defines the frequency of the alert. Refer to [Cron Expression Generator](http://www.cronmaker.com/). | 
 
 4. Click **+** to save the alert.   
 
