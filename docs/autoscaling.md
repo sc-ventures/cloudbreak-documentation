@@ -18,7 +18,7 @@ Cloudbreak accesses all available Ambari metrics and allows you to define alerts
 
 **Time-based Autoscaling**
 
-These alerts can be defined in a cron expression format. For example: 
+Time-based alerts can be defined by providing a cron expression. For example: 
 
 | Alert Definition | Policy Definition |
 |---|---|
