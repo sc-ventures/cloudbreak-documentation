@@ -17,6 +17,9 @@ export MY_VAR=some_value
 export MY_OTHER_VAR=another_value 
 ```
 
+After changing a property, you must regenerate the config file and restart the application by using `cbd restart`.
+
+
 ### Check Available Profile Variables
 
 To see all available environment variables with their default values, use:
