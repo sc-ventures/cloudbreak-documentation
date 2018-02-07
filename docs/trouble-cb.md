@@ -4,7 +4,7 @@ This section includes common errors and steps to resolve them.
 
 ### Quota Limitations
 
-Each cloud provider has quota limitations on various cloud resources, and these quotas can usually be increased on request. If there is an error message in Cloudbreak saying that there are no more available EIPs (Elastic IP Address) or VPCs, you need to request more of these resources. 
+Each cloud provider has quota limitations on various cloud resources, and these quotas can usually be increased on request. If there is an error message in Cloudbreak stating that there are no more available EIPs (Elastic IP Address) or VPCs, you need to request more of these resources. 
 
 To see the limitations visit the cloud provider’s site:
 

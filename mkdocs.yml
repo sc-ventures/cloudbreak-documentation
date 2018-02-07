@@ -65,7 +65,8 @@ pages:
         - CLI Reference: cli-reference.md
       - Troubleshooting: 
         - Cloudbreak Logs: trouble-cb-logs.md  
-        - General Troubleshooting: trouble-cb.md
+        - Troubleshooting Cloudbreak: trouble-cb.md
+        - Troubleshooting Cluster Creation: trouble-cluster.md
         - Troubleshooting AWS: trouble-aws.md
         - Troubleshooting Azure: trouble-azure.md
         - Troubleshooting GCP: trouble-gcp.md

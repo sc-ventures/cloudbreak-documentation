@@ -56,7 +56,6 @@ If you would like to use a custom HDP version, provide the following information
 | Utils Base Url | URL to the repo storing utilities for the desired stack version. | http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.21/repos/centos7 |  
 | Enable Ambari Server to download and install GPL Licensed LZO packages? | (Optional, only available if using Ambari 2.6.1 or newer) Use this option to enable LZO compression in your HDP cluster. LZO is a lossless data compression library that favors speed over compression ratio. Ambari does not install nor enable LZO compression libraries by default, and must be explicitly configured to do so. For more information, refer to [Enabling LZO](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.0/bk_ambari-administration/content/enabling_lzo.html).| <img src="../images/toggle.png" alt="On" /> |
 
-[Comment]: <> (THE LZO AND GPL REPO STUFF WILL END UP HERE RMP-10635 and BUG-95132)
 
 **Related Links**      
 [Custom Images](images.md)      
