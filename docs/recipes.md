@@ -53,6 +53,7 @@ The general steps are:
 
 1. Be sure to review and agree to the ExtJS license prior to using this recipe.  
 2. Create a PRE-AMBARI-START recipe. For instructions on how to create a recipe, refer to [Add Recipes](#add-recipes).   
+3. When creating a cluster, choose this recipe to be executed on all host groups of the cluster.  
 
 
 
