@@ -1,5 +1,9 @@
 Use these steps to create a cluster.
 
+**Prerequisites**
+
+If you would like to use Oozie web UI, you must install the ExtJS library. For instructions, refer to [Recipe to Install ExtJS for Oozie](recipes.md#recipe-to-install-extjs-for-oozie).
+
 **Steps**
 
 1. Log in to the Cloudbreak UI.
