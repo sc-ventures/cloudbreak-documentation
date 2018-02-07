@@ -33,10 +33,6 @@ proxy=http://10.0.0.133:3128
 ENDOF
 ```
 
-#### Recipe to Install Ext JS for Oozie 
-
-{!docs/common/extjs-recipe.md!}
-
 
 ### Add Recipes
 
