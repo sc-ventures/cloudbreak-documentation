@@ -34,7 +34,7 @@ If you face permission or connection issues, disable SELinux:
 
 **Related Links**  
 [Cloudbreak Logs](trouble-cb-logs.md)  
-[Troubleshooting Cluster Creation](trouble-cluster.md) 
+[Troubleshooting Cluster Creation](trouble-cluster.md)  
 [Troubleshooting AWS](trouble-aws.md)  
 [Troubleshooting Azure](trouble-azure.md)  
 [Troubleshooting GCP](trouble-gcp.md)  
