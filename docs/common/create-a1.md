@@ -2,7 +2,7 @@ Use these steps to create a cluster.
 
 **Prerequisites**
 
-If you would like to use Oozie web UI, you must install the ExtJS library. For instructions, refer to [Recipe to Install ExtJS for Oozie](recipes.md#recipe-to-install-extjs-for-oozie).
+If you would like to use **Oozie** with **Ambari 2.6.1 or newer**, you must install the Ext JS library. For instructions, refer to [Recipe to Install Ext JS for Oozie](recipes.md#recipe-to-install-ext-js-for-oozie).
 
 **Steps**
 

@@ -33,11 +33,13 @@ proxy=http://10.0.0.133:3128
 ENDOF
 ```
 
-#### Recipe to Install ExtJS for Oozie 
+#### Recipe to Install Ext JS for Oozie 
 
-Oozie requires the ExtJS library to be on the host in order to build and use the Oozie Web UI. Ambari is not allowed to install this library, so if you plan to use Oozie, you must ensure that ExtJS is installed prior to installing Oozie (that is, prior to cluster install). 
+If you would like to use **Oozie** with **Ambari 2.6.1 or newer**, you must install the Ext JS library.
 
-You can add the following PRE-AMBARI-START recipe to install ExtJS:
+Oozie requires the Ext JS library to be on the host in order to build and use the Oozie Web UI. Ambari is not allowed to install this library, so if you plan to use Oozie, you must ensure that ExtJS is installed prior to installing Oozie (that is, prior to cluster install). 
+
+You can add the following PRE-AMBARI-START recipe to install Ext JS:
 
 <pre>export EXT_JS_VERSION=2.2-1
      export OS_NAME=centos6
@@ -51,7 +53,7 @@ Make the following changes to the script:
 
 The general steps are:
 
-1. Be sure to review and agree to the ExtJS license prior to using this recipe.  
+1. Be sure to review and agree to the Ext JS license prior to using this recipe.  
 2. Create a PRE-AMBARI-START recipe. For instructions on how to create a recipe, refer to [Add Recipes](#add-recipes).   
 3. When creating a cluster, choose this recipe to be executed on all host groups of the cluster.  
 
