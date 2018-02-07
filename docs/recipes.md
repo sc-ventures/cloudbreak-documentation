@@ -35,7 +35,7 @@ ENDOF
 
 #### Recipe to Install Ext JS for Oozie 
 
-Ext JS is GPL licensed software and is no longer included in builds of HDP 2.6. Because of this, the Oozie WAR file is not built to include the Ext JS-based user interface unless Ext JS is manually installed on the Oozie server. If you add Oozie using Ambari 2.6.1.0 to an HDP 2.6.4 or greater stack, no Oozie UI will be available by default. Therefore, if you plan to use Oozie with Ambari 2.6.1.0 to an HDP 2.6.4 or greater, you must ensure that ExtJS is installed prior to installing Oozie (that is, prior to cluster install). 
+Ext JS is GPL licensed software and is no longer included in builds of HDP 2.6. Because of this, the Oozie WAR file is not built to include the Ext JS-based user interface unless Ext JS is manually installed on the Oozie server. If you add Oozie using Ambari 2.6.1.0 to an HDP 2.6.4 or greater stack, no Oozie UI will be available by default. Therefore, if you plan to use Oozie web UI with Ambari 2.6.1.0 and HDP 2.6.4 or greater, you you must manually install Ext JS on the Oozie server host.
 
 You can install Ext JS by adding the following PRE-AMBARI-START recipe:
 
