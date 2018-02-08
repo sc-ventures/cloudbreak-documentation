@@ -16,8 +16,6 @@ You can register for optional free community support at [Hortonworks Community C
 
 ### Flex Subscription
 
-[Comment]: <> (Need to update these steps based on UI changes.)
-
 You can optionally use your existing Hortonworks [Flex subscription(s)](https://hortonworks.com/services/support/enterprise/) to cover the Cloudbreak node and clusters managed by it. 
 
 > You must have an existing SmartSense ID and a Flex subscription. For general information about the Hortonworks Flex Support Subscription, visit the Hortonworks Support page at [https://hortonworks.com/services/support/enterprise/](https://hortonworks.com/services/support/enterprise/).
@@ -25,9 +23,8 @@ You can optionally use your existing Hortonworks [Flex subscription(s)](https://
 The general steps are:
 
 1. Configure Smart Sense in your `Profile` file.   
-2. Register your Flex subscription in the Cloudbreak web UI or via CLI. You can register and manage multiple Flex subscriptions. For example, you can choose to use your Flex subscription to cover the Cloudbreak node.   
+2. Register your Flex subscription in the Cloudbreak web UI. You can register and manage multiple Flex subscriptions. For example, you can choose to use your Flex subscription to cover the Cloudbreak node.   
 4. When creating a cluster, you can select the Flex subscription that you want to use for the cluster.  
-
 
 
 #### Configuring SmartSense
@@ -45,20 +42,20 @@ export CB_SMARTSENSE_ID=A-00000000-C-00000000</pre>
 You can do this in one of the two ways:
 
 * When initiating Cloudbreak deployer  
-* After you've already initiated Cloudbreak Deployer. If you choose this option, you must restart Cloudbreak using `cbd restart`.
-
-> SmartSense ID defined in the `Profile` file always overrides the ID registered via Cloudbreak CLI.
+* After you've already initiated Cloudbreak deployer. If you choose this option, you must restart Cloudbreak using `cbd restart`.
 
 
 #### Register and Manage Flex Subscriptions
 
-Once you log in to the Cloudbreak web UI, you can manage your Flex subscriptions from the **Flex Subscriptions** page available in the navigation menu. You can:
+Once you log in to the Cloudbreak web UI, you can manage your Flex subscriptions from the **Settings** page > **Flex Subscriptions**. You can:
 
 * Register a new Flex subscription.  
+* Activate a Flex subscription.  
 * Set a default Flex subscription.  
 * Select a Flex subscription to be used for the Cloudbreak node.  
 * Delete a Flex subscription.  
-* Check which clusters are connected to a specific subscription.  
+
+[comment]: <> (This is not implemented yet: Check which clusters are connected to a specific subscription.)  
 
 
 #### Use Flex Subscription for a Cluster 
