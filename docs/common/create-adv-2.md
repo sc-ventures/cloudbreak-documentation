@@ -37,8 +37,8 @@ If you would like to use a custom Ambari version, provide the following informat
 
 | Parameter | Description | Default |
 |---|---|---|
-| Version | Enter Ambari version. | 2.6.1.2 |
-| Repo Url | Provide a URL to the Ambari version repo that you would like to use. | http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.6.1.2 |
+| Version | Enter Ambari version. | 2.6.1.3 |
+| Repo Url | Provide a URL to the Ambari version repo that you would like to use. | http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.6.1.3 |
 | Repo Gpg Key Url | Provide a URL to the repo GPG key. Each stable RPM package that is published by CentOS Project is signed with a GPG signature. By default, yum and the graphical update tools will verify these signatures and refuse to install any packages that are not signed, or have an incorrect signature. | http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins | 
 
 **HDP Repository Specification**

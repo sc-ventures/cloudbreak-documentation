@@ -57,9 +57,9 @@ Refer to updated [Recipes](recipes.md) documentation.
 
 You can hide cloud providers available in Cloudbreak by adding the `CB_ENABLEDPLATFORMS` environment variable in Profile and setting it to the provider(s) that you would like to have available. For more information, refer to [Disable Providers](cb-disable-provider.md).
 
-##### Support for Ambari 2.6
+##### Support for Ambari 2.6 (2.6.1.3+)
 
-TBD
+Cloudbreak 2.4.0 introduces support for Ambari 2.6 and uses Ambari 2.6.1.3 by default. If you would like to use Ambari 2.6, you must use Ambari version 2.6.1.3 or newer. 
 
 ##### Ambari Master Key 
 
