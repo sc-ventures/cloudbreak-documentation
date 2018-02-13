@@ -23,6 +23,7 @@ Once you have the service account that you want to use for Cloudbreak, make sure
 * Compute Instance Admin (v1)  
 * Compute Network Admin  
 * Compute Security Admin  
+* Compute Storage Admin 
     
 A user with an "Owner" role can assign roles or access rules to service accounts from **IAM & Admin** > **IAM**. For example:
 
