@@ -122,19 +122,6 @@ ____________________________
 
 
 
-##### (BUG-93548) AWS Region eu-west-3 Is Not Supported 
-
-The AWS region eu-west-3 can be selected during cluster creation. However, it is not supported by Cloudbreak.
-
-*Workaround*: 
-
-Do not use the AWS region eu-west-3. Instead, use eu-west-1 or eu-west-2.
-
-[Comment]: <> (Should be fixed in 2.4.0.)
-____________________________
-
-
-
 
 
 
