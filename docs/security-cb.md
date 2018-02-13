@@ -132,7 +132,7 @@ To use your own certificate, you must have:
 
     <pre><small>cbd restart</small></pre>
     
-8. Using your web browser, access to the Cloudbreak UI using the new resolvable fully qualified domain name.
+8. Using your web browser, access the Cloudbreak UI using the new resolvable fully qualified domain name.
 
 9. Confirm that the connection is SSL-protected and that the certificate used is the certificate that you provided to Cloudbreak.
 
