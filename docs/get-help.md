@@ -24,7 +24,7 @@ The general steps are:
 
 1. Configure Smart Sense in your `Profile` file.   
 2. Register your Flex subscription in the Cloudbreak web UI. You can register and manage multiple Flex subscriptions. For example, you can choose to use your Flex subscription to cover the Cloudbreak node.   
-4. When creating a cluster, you can select the Flex subscription that you want to use for the cluster.  
+3. When creating a cluster, in the **General Configuration** > **Flex Subscription**, you can select the Flex subscription that you want to use for the cluster.  
 
 
 #### Configuring SmartSense
@@ -48,19 +48,22 @@ You can do this in one of the two ways:
 #### Register and Manage Flex Subscriptions
 
 Once you log in to the Cloudbreak web UI, you can manage your Flex subscriptions from the **Settings** page > **Flex Subscriptions**. You can:
-
-* Register a new Flex subscription.  
-* Activate a Flex subscription.  
-* Set a default Flex subscription.  
-* Select a Flex subscription to be used for the Cloudbreak node.  
-* Delete a Flex subscription.  
+ 
+* Register a new Flex subscription    
+* Set a default Flex subscription ("Default")  
+* Select a Flex subscription to be used for the Cloudbreak node ("Use for controller")  
+* Delete a Flex subscription    
 
 [comment]: <> (This is not implemented yet: Check which clusters are connected to a specific subscription.)  
+
+<a href="../images/cb-flex-settings.png" target="_blank" title="click to enlarge"><img src="../images/cb-flex-settings.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
 
 
 #### Use Flex Subscription for a Cluster 
 
-When creating a cluster, you can select the Flex subscription that you want to use for the cluster.
+When creating a cluster, on the **General Configuration** page you can select the Flex subscription that you want to use for the cluster:
+
+<a href="../images/cb-flex-cluster.png" target="_blank" title="click to enlarge"><img src="../images/cb-flex-cluster.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
 
 
 ### More Cloudbreak Resources 
