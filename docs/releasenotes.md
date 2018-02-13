@@ -171,6 +171,27 @@ ____________________________
 
 
 
+##### (AMBARI-14149) Ambari Cluster Could Not Be Started After Stop
+
+When using Ambari version 2.5.0.3, after stopping and starting a cluster, Event History shows the following error:
+
+*Ambari cluster could not be started. Reason: Failed to start Hadoop services.
+2/7/2018, 12:47:05 PM
+Starting Ambari services.
+2/7/2018, 12:47:04 PM
+Manual recovery is needed for the following failed nodes:   
+[host-10-0-0-4.openstacklocal, host-10-0-0-3.openstacklocal, host-10-0-0-5.openstacklocal*
+
+Ambari dashboard shows that nodes are not sending heartbeats. 
+
+ *Workaround:*  
+ 
+ This issue is fixed in 2.5.1.0 and newer.  
+
+[Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
+____________________________
+
+
 
 ##### (BUG-95607) Special Characters in Blueprint Name Cause an Error in CLI  
 
