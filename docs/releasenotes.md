@@ -125,23 +125,6 @@ ____________________________
 
 
 
-##### (BUG-91543) Networks With No Subnets Are Not Supported 
-
-You cannot create a cluster using an existing network that does not have any subnets. You must use a network that includes at least one subnet. If you try to use a network with no subnets, the cluster fails with the following error:   
-
-*Infrastructure creation failed. Reason: Invalid value for field 'resource.network': 'https://www.googleapis.com/compute/v1/projects/siq-haas/global/networks/cbd-test'. A subnet mode Network must be specified for Subnetwork creation.: [ resourceType: GCP_SUBNET, resourceName: testgc-20171110211021 ]*
-  
-*Workaround*: 
-
-Do not use this option. It will be removed in a future release. 
-
-[Comment]: <> (Should be fixed in 2.4.0.) 
-____________________________
-
-
-
-
-
 
 ##### (BUG-92605) Cluster Creation Fails with ResourceInError
 
@@ -158,20 +141,6 @@ ____________________________
 
 
 
-
-
-
-##### (BUG-93339) HiveServer2 Process Could Not Establish Connection to jdbc:hive2  
-
-When using EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0 blueprint with a two-node cluster, Ambari shows the following Alert on Hive: *HiveServer2 Process CRIT Connection failed on host...* 
-
-*Workaround:* 
-
-* Although it is possible to create a cluster with less than 3 nodes, in order to use the EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0 blueprint, you must have at least 3 nodes: 1 Ambari node and 2 non-Ambari nodes. Terminate the cluster and create a new one with at least 3 nodes.   
-* Alternatively, it is possible to resolve this issue by adding an additional NodeManager for the Ambari host group.  
-
-[comment]: <> (Should be fixed in 2.4.0) 
-____________________________
 
 
 
