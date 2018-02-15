@@ -159,7 +159,6 @@ Refer to this list for available environment variables. The variables are listed
 | UAA_CLOUDBREAK_ID | cloudbreak | Identity of the Cloudbreak scope in Identity |
 | UAA_CLOUDBREAK_SECRET | $UAA_DEFAULT_SECRET | Secret of the Cloudbreak scope in Identity |
 | UAA_CLOUDBREAK_SHELL_ID | cloudbreak_shell | Identity of the Cloudbreak Shell scope in Identity |
-| UAA_DEFAULT_ACCOUNT | "seq1234567.SequenceIQ" | Default account for users as an Identity group |
 | UAA_DEFAULT_SECRET | | Default secret for all the scopes and encryptions |
 | UAA_DEFAULT_USER_EMAIL | admin@example.com | Email address of default admin user |
 | UAA_DEFAULT_USER_FIRSTNAME | Joe | First name of default admin user |
