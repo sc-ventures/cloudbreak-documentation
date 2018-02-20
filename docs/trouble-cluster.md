@@ -22,7 +22,6 @@ vi Profile</pre>
 3. Restart Cloudbreak by using `cbd restart`.      
 
  
-
 ### Cannot Access Oozie Web UI
 
 Ext JS is GPL licensed software and is no longer included in builds of HDP 2.6. Because of this, the Oozie WAR file is not built to include the Ext JS-based user interface unless Ext JS is manually installed on the Oozie server. If you add Oozie using Ambari 2.6.1.0 to an HDP 2.6.4 or greater stack, no Oozie UI will be available by default. Therefore, if you plan to use Oozie web UI with Ambari 2.6.1.0 and HDP 2.6.4 or greater, you you must manually install Ext JS on the Oozie server host.
