@@ -26,7 +26,7 @@ Cloud providers use virtual networks which resemble traditional networks. Depend
 
 Security groups are set up to control network traffic to the instances in the system.
 
-> Cloudbreak uses public IP addresses when communicating with cluster nodes. On AWS, you can configure it to use private IPs instead. For instructions, refer to [trouble-cluster/index.html#configure-communication-via-private-ips-on-aws](trouble-cluster.html#configure-communication-via-private-ips-aws).  
+Cloudbreak uses public IP addresses when communicating with cluster nodes. On AWS, you can configure it to use private IPs instead. For instructions, refer to [trouble-cluster/index.html#configure-communication-via-private-ips-on-aws](trouble-cluster.html#configure-communication-via-private-ips-aws).  
 
 #### Cloudbreak Instance Security Group
 
