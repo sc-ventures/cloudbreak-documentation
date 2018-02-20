@@ -4,7 +4,8 @@
 | Region | Select the region in which you would like to launch your cluster. |
 {!docs/common/create-a2.md!}
 | Instance Type | Select an instance type. |
-{!docs/common/create-a3.md!}
+{!docs/common/create-a3-1.md!}
+{!docs/common/create-a3-2.md!}
 {!docs/common/create-a4.md!}
 {!docs/common/create-a5.md!}
 

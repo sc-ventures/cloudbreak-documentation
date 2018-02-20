@@ -1,7 +1,29 @@
 ## Troubleshooting Cluster Creation
 
-### Cannot Access Oozie Web UI
+### Configure Communication via Private IPs (AWS)
 
+Cloudbreak uses public IP addresses when communicating with cluster nodes. On AWS, you can configure it to use private IPs instead of public IPs by setting the CB_AWS_VPC variable in the Profile. 
+
+> This configuration is available for AWS only. Do not use it for other cloud providers. 
+
+1. Navigate to the Cloudbreak deployment directory and edit Profile. For example:
+
+    <pre>cd /var/lib/cloudbreak-deployment/
+vi Profile</pre>
+
+2. Add the following entry, setting it to the AWS VPC identifier where you have deployed Cloudbreak:
+
+    <pre>export CB_AWS_VPC=your-VPC-ID</pre>
+
+    For example:
+    
+    <pre>export CB_AWS_VPC=vpc-e261a185</pre>
+    
+3. Restart Cloudbreak by using `cbd restart`.      
+
+ 
+
+### Cannot Access Oozie Web UI
 
 Ext JS is GPL licensed software and is no longer included in builds of HDP 2.6. Because of this, the Oozie WAR file is not built to include the Ext JS-based user interface unless Ext JS is manually installed on the Oozie server. If you add Oozie using Ambari 2.6.1.0 to an HDP 2.6.4 or greater stack, no Oozie UI will be available by default. Therefore, if you plan to use Oozie web UI with Ambari 2.6.1.0 and HDP 2.6.4 or greater, you you must manually install Ext JS on the Oozie server host.
 

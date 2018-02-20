@@ -4,7 +4,8 @@
 | Region | Select the Azure region in which you would like to launch your cluster. For information on available Azure regions, refer to [Azure documentation](https://azure.microsoft.com/en-us/regions/). |
 {!docs/common/create-a2.md!}
 | Instance Type | Select an instance type. For information about instance types on Azure refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general). |
-{!docs/common/create-a3.md!}
+{!docs/common/create-a3-1.md!}
+{!docs/common/create-a3-2.md!}
 {!docs/common/create-a4.md!}
 {!docs/common/create-a5.md!}
 

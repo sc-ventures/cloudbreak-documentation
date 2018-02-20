@@ -10,4 +10,4 @@
 | Select Subnet | Select the subnet in which you would like your cluster to be provisioned. If you are using a new network, create a new subnet. If you are using an existing network, select an existing subnet. |
 | Subnet (CIDR)| If you selected to create a new subnet, you must define a valid [CIDR](http://www.ipaddressguide.com/cidr) for the subnet. Default is 10.0.0.0/16. |
 
-7. Define security groups for each host group. You can either create new security groups and define their rules or reuse existing security groups:
+    > Cloudbreak uses public IP addresses when communicating with cluster nodes.  

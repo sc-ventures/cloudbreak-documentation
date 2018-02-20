@@ -4,7 +4,8 @@
 | Region | Select the GCP region in which you would like to launch your cluster. For information on available GCP regions, refer to [GCP documentation](https://cloud.google.com/about/locations/). |
 {!docs/common/create-a2.md!}
 | Instance Type | Select a VM instance type. For information about instance types on GCP refer to [GCP documentation](https://cloud.google.com/compute/docs/machine-types).|
-{!docs/common/create-a3.md!}
+{!docs/common/create-a3-1.md!}
+{!docs/common/create-a3-2.md!}
 
     > Existing security groups are only available for an existing network. 
     

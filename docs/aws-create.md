@@ -4,7 +4,10 @@
 | Region | Select the AWS region in which you would like to launch your cluster. For information on available AWS regions, refer to [AWS documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html). |
 {!docs/common/create-a2.md!}
 | Instance Type | Select an instance type. For information about instance types on AWS refer to [AWS documentation](https://aws.amazon.com/ec2/instance-types/). |
-{!docs/common/create-a3.md!}
+{!docs/common/create-a3-1.md!}
+    > On AWS, you can configure it to use private IPs instead. For instructions, refer to [Configure Communication via Private IPs](trouble-cluster.html#configure-communication-via-private-ips-aws). 
+
+{!docs/common/create-a3-2.md!}
 
     > Existing security groups are only available for an existing VPC. 
 
