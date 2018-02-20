@@ -5,7 +5,7 @@
 {!docs/common/create-a2.md!}
 | Instance Type | Select an instance type. For information about instance types on AWS refer to [AWS documentation](https://aws.amazon.com/ec2/instance-types/). |
 {!docs/common/create-a3-1.md!}
-    > On AWS, you can configure it to use private IPs instead. For instructions, refer to [Configure Communication via Private IPs](trouble-cluster.html#configure-communication-via-private-ips-aws). 
+    > On AWS, you can configure it to use private IPs instead. For instructions, refer to [Configure Communication via Private IPs on AWS](trouble-cluster.md#configure-communication-via-private-ips-on-aws). 
 
 {!docs/common/create-a3-2.md!}
 

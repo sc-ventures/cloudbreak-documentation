@@ -1,6 +1,6 @@
 ## Troubleshooting Cluster Creation
 
-### Configure Communication via Private IPs (AWS)
+### Configure Communication via Private IPs on AWS
 
 Cloudbreak uses public IP addresses when communicating with cluster nodes. On AWS, you can configure it to use private IPs instead of public IPs by setting the CB_AWS_VPC variable in the Profile. 
 
