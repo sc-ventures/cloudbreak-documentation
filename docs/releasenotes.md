@@ -75,7 +75,9 @@ If you decide to use Ambari 2.6.1, you should be aware of the following:
 
 - Ambari 2.6.1 or newer does not install the mysqlconnector; therefore, when creating a blueprint for Ambari 2.6.1 or newer do not include the MYSQL_SERVER component for Hive Metastore in your blueprint. Instead, you have two options described in [Creating a Blueprint](blueprints.md#creating-a-blueprint).  
 - If you would like to use Oozie, you must manually install Ext JS. The steps are described in [Cannot Access Oozie Web UI](trouble-cluster.md#cannot-access-oozie-web-ui).   
-- To enable LZO compression in your HDP cluster, you must check the "Enable Ambari Server to download and install GPL Licensed LZO packages?" during cluster creation. The option is available in the **Security** > **Prewarmed and Base Images**.   
+- To enable LZO compression in your HDP cluster, you must check the "Enable Ambari Server to download and install GPL Licensed LZO packages?" during cluster creation. The option is available in the **Security** > **Prewarmed and Base Images**.  
+
+[Comment]: <> (Or should these be described as behavioral changes?) 
 
 
 ##### Ambari Master Key 
@@ -93,25 +95,23 @@ The functionality which enables you to create custom images was changed and impr
 
 ##### Prewarmed Images Are Used By Default  
 
-By default, Cloudbreak 2.4 launches clusters from these prewarmed images, instead of base images (which were used by default in earlier versions of Cloudbreak). For more information, refer to [Prewardmed and Base Images](aws-create.md#prewarmed-and-base-images). 
+By default, Cloudbreak 2.4.0 launches clusters from prewarmed images, instead of base images (which were used by default in earlier versions of Cloudbreak). For more information, refer to [Prewardmed and Base Images](aws-create.md#prewarmed-and-base-images). 
 
 ##### Removal of Cloudbreak Shell
 
-Cloudbreak Shell is no longer available in Cloudbreak 2.1.0 TP and later. It was replaced by the [Cloudbreak CLI](cli-install.md).
+Cloudbreak Shell is not available in Cloudbreak 2.x. It was replaced by the [Cloudbreak CLI](cli-install.md).
 
 ##### Removal of Platforms
 
-The [Platforms](http://hortonworks.github.io/cloudbreak-docs/release-1.16.5/topologies/) feature was removed.
+The [Platforms](http://hortonworks.github.io/cloudbreak-docs/release-1.16.5/topologies/) feature was removed and is not available in Cloudbreak 2.x.
 
 ##### Removal of Mesos
 
-Cloudbreak 2 does not support Mesos cloud provider.
+Mesos cloud provider is not supported and the corresponding options were removed in Cloudbreak 2.x.
 
 ##### Removal of Templates
 
 Earlier versions of Cloudbreak allowed you to save infrastructure, network, and security group templates. This feature was removed. Instead, you can define VMs, storage, networks, and security groups as part of the create cluster wizard.
-
-[Comment]: <> (Add GPL changes?)
 
 
 
