@@ -25,7 +25,7 @@ ____________________________
 
 ##### New CLI
 
-Cloudbreak 2.4.0 introduces a new CLI tool. All commands start with a singular object followed by an action, for example, `blueprint create` instead of `create blueprint`, and `blueprint list` instead of `list blueprints`. Refer to [Install CLI](cli-install.md) and [CLI Reference](cli-reference.md).
+Cloudbreak 2.4.0 introduces the new CLI tool, which replaces Cloudbreak Shell. All commands start with a singular object followed by an action, for example, `blueprint create`  and `blueprint list`. Refer to [Install CLI](cli-install.md), [Get Started with the CLI](cli-get-started.md), and [CLI Reference](cli-reference.md).
 ____________________________
 
 
@@ -189,7 +189,6 @@ ____________________________
 ____________________________
 
 **Known Issues: Cloudbreak**
-
 ____________________________
 
 
@@ -357,13 +356,15 @@ ____________________________
 
 **Known Issues: Ambari 2.6.1.3 and HDP 2.6.4.0**
 
-
 > The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak 2.4.0.
 
 > For general Ambari 2.6.1.3 and HDP 2.6.4.0 known issues, refer to:  
 > [Ambari 2.6.1.3 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.3/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.3.html)  
 > [HDP 2.6.4.0 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.4/bk_release-notes/content/ch_relnotes.html)  
 ____________________________
+
+
+
 
 
 
