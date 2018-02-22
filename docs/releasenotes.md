@@ -315,3 +315,34 @@ ____________________________
 
 
 
+
+
+
+##### (BUG-96784) Hive LLAP Start Takes More Than an Hour
+
+Hive LLAP start time outs on Ambari, but eventually (after one hour or so) it starts.
+
+____________________________
+
+
+
+
+
+
+
+##### (BUG-96613) Hive LLAP Container Fails on Azure Due to CSR with Too Long Hostname
+
+On Azure, Hive LLAP container fails on Azure due to CSR with a hostname that is too long (more than 64 characters). Failed YARN contained log shows:
+
+*2018-02-14 15:57:21,896 [Thread-24] INFO  security.CertificateManager - problems making Certificate Request
+2018-02-14 15:57:21,896 [Thread-24] INFO  security.CertificateManager - 140223026857888:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:a_mbstr.c:158:maxsize=64
+2018-02-14 15:57:21,896 [main] WARN  security.SecurityUtils - Command openssl req -passin pass:**** -new -key /tmp/sec1518623841372/security/ca.key -out /tmp/sec1518623841372/security/ca.csr -config /tmp/sec1518623841372/security/ca.config -subj /CN=azure-cluster-c0.k4kldeirxsoutbyybgqoiqdsgg.fx.internal.cloudapp.net/OU=container_1518623123591_0008_02_000001/OU=llap0 -batch was finished with exit code: 1 - an error occurred parsing the command options.*
+
+____________________________
+
+
+
+
+
+
+
