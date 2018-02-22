@@ -11,7 +11,7 @@ This is an advanced deployment option. Select this option if you have custom VM 
 
 To launch the Cloudbreak deployer and install the Cloudbreak application, your system must meet the following requirements:
 
-* Minimum VM requirements: 8GB RAM, 10GB disk, 2 cores
+* Minimum VM requirements: 16GB RAM, 40GB disk, 4 cores
 * Supported operating systems: RHEL, CentOS, and Oracle Linux 7 (64-bit)
 * Docker 1.9.1 must be installed 
 

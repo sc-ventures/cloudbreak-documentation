@@ -87,7 +87,7 @@ Clusters created via Cloudbreak can be in the same or different region as Cloudb
 |---|---|
 | Name | Enter a name for the VM. |
 | Zone | Select the zone in which to launch the VM. |
-| Machine type | The minimum instance type suitable for Cloudbreak is **n1-standard-2**. The minimum requirements are 4GB RAM, 10GB disk, 2 cores. |
+| Machine type | The minimum instance type suitable for Cloudbreak is **n1-standard-4**. The minimum requirements are 16GB RAM, 40GB disk, 4 cores. |
 | Boot disk | Verify that the Cloudbreak deployer disk which you imported earlier is pre-selected. |
 
 1. Click on **Management, disks, networking, SSH keys** to view the options.
