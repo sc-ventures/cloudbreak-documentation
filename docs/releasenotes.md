@@ -113,6 +113,10 @@ Cloudbreak 2.4.0 allows you to specify the Ambari Master Key. The Ambari Server 
 
 
 
+
+
+
+
 ____________________________
 
 #### Behavioral Changes
@@ -163,8 +167,6 @@ ____________________________
 ____________________________
 
 
-[Comment]: <> (Not sure which issues were fixed when comparing 2.x with 1.6.x?)
-
 
 
 
@@ -173,7 +175,7 @@ ____________________________
 All default images used by Cloudbreak were rebuilt. Each image now includes an updated version of the operating system with the following CPU security fixes: 
 
 * Cloudbreak image (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for Spectre Variant 1 and 3.  
-* Default HDP image for AWS (Amazon Linux): Moved to Amazon Linux ??? version, which includes fixes for Spectre Variant 1, 2, and 3.  
+* Default HDP image for AWS (Amazon Linux): Moved to Amazon Linux 2017.09 version, which includes fixes for Spectre Variant 1, 2, and 3.  
 * Default HDP image for Azure, Google Cloud, and Openstack (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for Spectre Variant 1 and 3.  
 
 
@@ -183,7 +185,10 @@ All default images used by Cloudbreak were rebuilt. Each image now includes an u
 ____________________________
 
 #### Known Issues
+
+The known issues were discovered when testing Ambari 2.6.1.3 and HDP 2.6.4.0 which are used by default in Cloudbreak 2.4.0.
 ____________________________
+
 
 
 
@@ -200,7 +205,6 @@ This issue will be fixed in a future release.
 
 If you would like to use the Azure availability sets feature now, you must add at least 2 instances to the host group for which you want to use them. The option Azure availability sets is available on the advanced **Hardware and Storage** page of the create cluster wizard.   
 ____________________________
-
 
 
 
@@ -271,28 +275,6 @@ ____________________________
 
 
 
-##### (AMBARI-14149) Ambari Cluster Could Not Be Started After Stop
-
-When using Ambari version 2.5.0.3, after stopping and starting a cluster, Event History shows the following error:
-
-*Ambari cluster could not be started. Reason: Failed to start Hadoop services.
-2/7/2018, 12:47:05 PM
-Starting Ambari services.
-2/7/2018, 12:47:04 PM
-Manual recovery is needed for the following failed nodes:   
-[host-10-0-0-4.openstacklocal, host-10-0-0-3.openstacklocal, host-10-0-0-5.openstacklocal*
-
-Ambari dashboard shows that nodes are not sending heartbeats. 
-
- *Workaround:*  
- 
- This issue is fixed in 2.5.1.0 and newer.  
-
-[Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
-____________________________
-
-
-
 
 
 
@@ -348,11 +330,35 @@ ____________________________
 
 
 
+##### (AMBARI-14149) Ambari Cluster Cannot Be Started After Stop
+
+When using Ambari version 2.5.0.3, after stopping and starting a cluster, Event History shows the following error:
+
+*Ambari cluster could not be started. Reason: Failed to start Hadoop services.
+2/7/2018, 12:47:05 PM
+Starting Ambari services.
+2/7/2018, 12:47:04 PM
+Manual recovery is needed for the following failed nodes:   
+[host-10-0-0-4.openstacklocal, host-10-0-0-3.openstacklocal, host-10-0-0-5.openstacklocal*
+
+Ambari dashboard shows that nodes are not sending heartbeats. 
+
+ *Workaround:*  
+ 
+ This issue is fixed in Ambari version 2.5.1.0 and newer.  
+
+[Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
+____________________________
+
+
+
+
+
+
 
 ##### (BUG-96784) Hive LLAP Start Takes More Than an Hour
 
-Hive LLAP start time outs on Ambari, but eventually (after one hour or so) it starts.
-
+Hive LLAP start times out in Ambari, but eventually it starts (after 15 minutes on AWS and after one hour or so on other providers).  
 ____________________________
 
 
@@ -361,14 +367,9 @@ ____________________________
 
 
 
-##### (BUG-96613) Hive LLAP Container Fails on Azure Due to CSR with Too Long Hostname
+##### (BUG-96707) Druid Overload Does Not Start
 
-On Azure, Hive LLAP container fails on Azure due to CSR with a hostname that is too long (more than 64 characters). Failed YARN container log shows:
-
-*2018-02-14 15:57:21,896 [Thread-24] INFO  security.CertificateManager - problems making Certificate Request
-2018-02-14 15:57:21,896 [Thread-24] INFO  security.CertificateManager - 140223026857888:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:a_mbstr.c:158:maxsize=64
-2018-02-14 15:57:21,896 [main] WARN  security.SecurityUtils - Command openssl req -passin pass:**** -new -key /tmp/sec1518623841372/security/ca.key -out /tmp/sec1518623841372/security/ca.csr -config /tmp/sec1518623841372/security/ca.config -subj /CN=azure-cluster-c0.k4kldeirxsoutbyybgqoiqdsgg.fx.internal.cloudapp.net/OU=container_1518623123591_0008_02_000001/OU=llap0 -batch was finished with exit code: 1 - an error occurred parsing the command options.*
-
+Druid overload start fails with *ERROR [main] io.druid.cli.CliOverlord - Error when starting up.  Failing. com.google.inject.ProvisionException: Unable to provision* when using Ambari 2.6.1.3 and HDP 2.6.4.0.  
 ____________________________
 
 
@@ -377,3 +378,78 @@ ____________________________
 
 
 
+##### (BUG-94210) Ambari Fails to Replace HOSTGROUP var for Schema Registry and Streamline
+
+Ambari fails to replace HOSTGROUP var for Schema Registry and Streamline in the blueprint: 
+
+*"registry.url": "http://%HOSTGROUP::master_2%:7788/api/v1,http://%HOSTGROUP::master_3%:7788/api/v1",  
+"streamline.dashboard.url": "http://%HOSTGROUP::master_2%:9090",  
+"registry.storage.connector.connectURI": "jdbc:mysql://%HOSTGROUP::master_2%:3306/registry"*
+____________________________
+
+
+
+
+
+
+##### (BUG-97055) Name Node Goes into Safe Mode Frequently 
+
+Name Node goes into safe mode very frequently. After turning safe mode off manually, the Name Node continues running normally, but after a while it goes into safe mode again.
+____________________________
+
+
+
+
+
+
+
+
+##### (BUG-97080) Ambari Fils In Some Cases When an mpack is Installed 
+
+If we set the following properties then cluster install may fail (in 20-30% of the cases), because of the Ambari agent cache being updated concurrently:
+
+*/etc/ambari-server/conf/ambari.properties
+agent.auto.cache.update=true*
+
+*/etc/ambari-agent/conf/ambari-agent.ini
+parallel_execution=1*
+____________________________
+
+
+
+
+
+
+##### (BUG-97066) DLM 1.0 mpack Install Fails
+
+When installing DLM 1.0 mpack:
+* Ranger install fails. 
+* When BEACON_SERVER is present in the blueprint, all worker nodes fail. 
+
+As a result the entire HDP installation fails.  
+____________________________
+
+
+
+
+
+
+
+##### (BUG-91984) Ranger Fails to Install from Blueprint
+
+Ranger install from Ambari Blueprint fails with with DB access error:
+
+<pre>17 15:40:00,148  [I] Running DBA setup script. QuiteMode:True
+2017-11-17 15:40:00,149  [I] Using Java:/usr/lib/jvm/java/bin/java
+2017-11-17 15:40:00,149  [I] DB FLAVOR:MYSQL
+2017-11-17 15:40:00,149  [I] DB Host:
+2017-11-17 15:40:00,149  [I] ---------- Verifying DB root password ---------- 
+2017-11-17 15:40:00,150  [I] DBA root user password validated
+2017-11-17 15:40:00,150  [I] ---------- Verifying Ranger Admin db user password ---------- 
+2017-11-17 15:40:00,150  [I] admin user password validated
+2017-11-17 15:40:00,150  [I] ---------- Creating Ranger Admin db user ---------- 
+2017-11-17 15:40:00,150  [JISQL] /usr/lib/jvm/java/bin/java  -cp /usr/hdp/current/ranger-admin/ews/lib/mysql-connector-java-5.1.39-bin.jar:/usr/hdp/current/ranger-admin/jisql/lib/* org.apache.util.sql.Jisql -driver mysqlconj -cstring jdbc:mysql:///mysql -u root -p '********' -noheader -trim -c \; -query "SELECT version();"
+SQLException : SQL state: 28000 java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES) ErrorCode: 1045
+2017-11-17 15:40:00,714  [E] Can't establish db connection.. Exiting..
+Traceback (most recent call last):</pre>
+____________________________
