@@ -4,6 +4,10 @@
 
 Cloudbreak 2.4.0 is a general availability release, which is suitable for production deployments. 
 
+
+
+
+
 ____________________________
 
 #### New Features
@@ -84,6 +88,10 @@ If you decide to use Ambari 2.6.1, you should be aware of the following:
 
 Cloudbreak 2.4.0 allows you to specify the Ambari Master Key. The Ambari Server Master Key is used to configure Ambari to encrypt database and Kerberos credentials that are retained by Ambari as part of the Ambari setup. The option is available on the **Security** page of the create cluster wizard.
 
+
+
+
+
 ____________________________
 
 #### Behavioral Changes
@@ -117,6 +125,7 @@ Earlier versions of Cloudbreak allowed you to save infrastructure, network, and 
 
 
 
+
 ____________________________
 
 #### Fixed Issues 
@@ -127,9 +136,38 @@ ____________________________
 
 
 
+
+##### (BUG-94801) New Default Images Including OS Fixes for CPU Security Issues 
+
+All default images used by Cloudbreak were rebuilt. Each image now includes an updated version of the operating system with the following CPU security fixes: 
+
+* Cloudbreak image (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for Spectre Variant 1 and 3.  
+* Default HDP image for AWS (Amazon Linux): Moved to Amazon Linux ??? version, which includes fixes for Spectre Variant 1, 2, and 3.  
+* Default HDP image for Azure, Google Cloud, and Openstack (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for Spectre Variant 1 and 3.  
+
+
+
+
+
 ____________________________
 
 #### Known Issues
+____________________________
+
+
+
+
+
+
+##### (BUG-96788) Azure Availability Set Option Is Not Available for Instance Count of 1
+
+When creating a cluster, the Azure availability set feature is not available for host groups with the instance count of 1.
+
+*Workaround*: 
+
+This issue will be fixed in a future release. 
+
+If you would like to use the Azure availability sets feature now, you must add at least 2 instances to the host group for which you want to use them. The option Azure availability sets is available on the advanced **Hardware and Storage** page of the create cluster wizard.   
 ____________________________
 
 
@@ -170,6 +208,8 @@ ____________________________
 
 
 
+
+
 ##### (BUG-93241) Error When Scaling Multiple Host Groups 
 
 Scaling of multiple host groups fails with the following error: 
@@ -179,6 +219,22 @@ Scaling of multiple host groups fails with the following error:
 
 Scaling multiple host groups at once is not supported. If you would like to scale multiple host groups: scale the first host group and wait until scaling has completed, then scale the second host group, and so on.  
 ____________________________
+
+
+
+
+
+
+
+##### (BUG-96764) "Failed to remove instance" Error When Using the Delete Icon
+
+When trying to delete instances by using the delete icon on the cluster details in the *Hardware* tab, you will get the following error: "Failed to remove instance".
+
+*Workaround:*
+
+This issue will be fixed in a future release. If you would like to change the number of instances in a given host group, you can use the **Resize** option available from the **Actions** menu.  
+____________________________
+
 
 
 
@@ -203,6 +259,24 @@ Ambari dashboard shows that nodes are not sending heartbeats.
 
 [Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
 ____________________________
+
+
+
+
+
+
+##### (BUG-97044) Show CLI Command Copy JSON Button Does Not Work
+  
+When using the *Show CLI Command* > *Copy the JSON* or *Copy the Command* button with  Firefox, the content does not does not get copied if adblock plugin or other advertise blocker plugins are present.
+
+ *Workaround:*  
+ 
+ Use a browser without an adblock plugin. 
+____________________________
+
+
+
+
 
 
 
