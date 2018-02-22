@@ -162,6 +162,6 @@ The **AGGREGATE RUNNING TIME** is the sum of the Running Times, adjusted for the
 To learn about how your cloud provider bills you for the VMs, refer to their documentation:
 
 * [AWS](https://aws.amazon.com/premiumsupport/knowledge-center/ec2-instance-hour-billing/)      
-* [Azure](https://azure.microsoft.com/en-us/pricing/faq/virtual-machines-how-do-instance-sizes-get-billed/)     
+* [Azure](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/)     
 * [GCP](https://cloud.google.com/compute/pricing)   
 

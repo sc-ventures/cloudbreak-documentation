@@ -59,7 +59,7 @@ The summary bar includes the following information about your cluster:
 | Region | The region in which the cluster is running in the cloud provider infrastructure. |
 | Availability Zone | The availability zone within the region in which the cluster is running. |
 | Blueprint | The name of the blueprint selected under "Cluster Type" to create this cluster. |
-| Created With | The version of Cloubdreak used to create this cluster. |
+| Created With | The version of Cloudbreak used to create this cluster. |
 | Ambari Version | The Ambari version which this cluster is currently running. |
 | HDP Version | The HDP version which this cluster is currently running. |
 
