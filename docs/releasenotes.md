@@ -298,7 +298,7 @@ ____________________________
 
 ##### (BUG-97044) Show CLI Command Copy JSON Button Does Not Work
   
-When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** button with  Firefox, the content does not does not get copied if Adblock plugin or other advertise blocker plugins are present.
+When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** button with  Firefox, the content does not does not get copied if adblock plugin or other advertise blocker plugins are present.
 
  *Workaround:*  
  
@@ -363,7 +363,7 @@ ____________________________
 
 ##### (BUG-96613) Hive LLAP Container Fails on Azure Due to CSR with Too Long Hostname
 
-On Azure, Hive LLAP container fails on Azure due to CSR with a hostname that is too long (more than 64 characters). Failed YARN contained log shows:
+On Azure, Hive LLAP container fails on Azure due to CSR with a hostname that is too long (more than 64 characters). Failed YARN container log shows:
 
 *2018-02-14 15:57:21,896 [Thread-24] INFO  security.CertificateManager - problems making Certificate Request
 2018-02-14 15:57:21,896 [Thread-24] INFO  security.CertificateManager - 140223026857888:error:0D07A097:asn1 encoding routines:ASN1_mbstring_ncopy:string too long:a_mbstr.c:158:maxsize=64
