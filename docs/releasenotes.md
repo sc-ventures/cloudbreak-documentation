@@ -428,18 +428,6 @@ ____________________________
 
 
 
-##### (BUG-97055) Name Node Goes into Safe Mode Frequently 
-
-Name Node goes into safe mode very frequently. After turning safe mode off manually, the Name Node continues running normally, but after a while it goes into safe mode again.
-____________________________
-
-
-
-
-
-
-
-
 ##### (BUG-97080) Ambari Fils In Some Cases When an mpack is Installed 
 
 If we set the following properties then cluster install may fail (in 20-30% of the cases), because of the Ambari agent cache being updated concurrently:
