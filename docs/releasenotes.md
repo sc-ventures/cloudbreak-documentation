@@ -177,12 +177,23 @@ ____________________________
 ##### Removal of Templates
 
 Earlier versions of Cloudbreak allowed you to save infrastructure, network, and security group templates. This feature was removed. Instead, you can define VMs, storage, networks, and security groups as part of the create cluster wizard.
+____________________________
 
 
 
+##### cbd update Improvements 
+
+The following improvements were added for `cbd update`:
+
+* Cloudbreak performs an automatic backup to prevent accidental data loss.   
+* cbd delete requires confirmation.  
+* Cloudbreak stores `psql` command history on the data volume to help investigate support cases.    
+* There are two new files in the cbd deployment directory: .cbd_history and .cbd_output_history to help investigate support cases.   
+* The default 10 second stop timeout is increased to 60 seconds. This can be overridden by setting DOCKER_STOP_TIMEOUT (in seconds).  
 
 
 
+ 
 ____________________________
 
 #### Fixed Issues 
