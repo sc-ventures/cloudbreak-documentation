@@ -229,7 +229,7 @@ Launch Cloudbreak deployer using the following steps.
 
     <pre>cbd logs cloudbreak</pre>
 
-    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloubdreak" error.
+    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
 
 
 ### Access Cloudbreak UI

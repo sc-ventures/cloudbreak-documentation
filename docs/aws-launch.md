@@ -414,7 +414,7 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
 
     <pre>cbd start</pre>
     
-    This will start the Docker containers and initialize the application. The first time you start the Coudbreak app, this also downloads of all the necessary docker images.
+    This will start the Docker containers and initialize the application. The first time you start the Cloudbreak app, this also downloads of all the necessary docker images.
     
 [Comment]: <> (Extra info which may not be needed here: The `cbd start` command includes the `cbd generate` command which applies the following steps: Creates the `docker-compose.yml` file, which describes the configuration of all the Docker containers needed for the Cloudbreak deployment. Creates the `uaa.yml` file, which holds the configuration of the identity server used to authenticate users with Cloudbreak.)
 
@@ -428,7 +428,7 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
 
     <pre>cbd logs cloudbreak</pre>
     
-    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloubdreak" error.
+    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
     
 
 ### Access Cloudbreak UI

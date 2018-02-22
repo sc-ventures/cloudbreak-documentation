@@ -11,7 +11,7 @@ Default images are available for each supported cloud provider and region. The f
 | GCP | CentOS 7 |  
 | OpenStack | CentOS 7 | 
 
-Since these default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on) Cloudbeak allows you to use your own **custom base images**.
+Since these default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on) Cloudbreak allows you to use your own **custom base images**.
 
 In order to use your own custom base images you must:
 

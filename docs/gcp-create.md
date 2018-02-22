@@ -47,7 +47,7 @@ Note that:
 * Once someone outbids you, the preemptible instances are taken away, removing the nodes from the cluster. 
 * If the preemptible instances are not available right away, creating a cluster will take longer than usual. 
 
-[commemt]: <> (There is no bid specified in the UI, so I assume that we are using current bid?)
+[Comment]: <> (There is no bid specified in the UI, so I assume that we are using current bid?)
 
 
 {!docs/common/create-adv-4.md!} 

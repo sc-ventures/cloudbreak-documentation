@@ -278,7 +278,7 @@ export CLOUDBREAK_SMTP_TYPE=smtps
 
 Cloudbreak uses [Consul](https://www.consul.io/) for DNS resolution. All Cloudbreak related services are registered as someservice.service.consul.
 
-Consul’s built-in DNS server is able to fallback on another DNS server. This option is called `-recursor`. Clodbreak Deployer first tries to discover the DNS settings of the host by looking for nameserver entry in the `/etc/resolv.conf` file. If it finds one, consul will use it as a recursor. Otherwise, it will use `8.8.8.8`.
+Consul’s built-in DNS server is able to fallback on another DNS server. This option is called `-recursor`. Cloudbreak Deployer first tries to discover the DNS settings of the host by looking for nameserver entry in the `/etc/resolv.conf` file. If it finds one, consul will use it as a recursor. Otherwise, it will use `8.8.8.8`.
 
 For a full list of available consul config options, refer to [Consul documentation](https://www.consul.io/docs/agent/options.html).
 

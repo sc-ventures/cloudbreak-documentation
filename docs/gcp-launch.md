@@ -75,7 +75,7 @@ Clusters created via Cloudbreak can be in the same or different region as Cloudb
 
 1. In the search bar, type the name of the Cloudbreak deployer image that you imported earlier.
 
-1. Select the image and then select **Create Instance**:  
+1. Select the image and then click **Create Instance**:  
 
     <a href="../images/gcp-02.png" target="_blank" title="click to enlarge"><img src="../images/gcp-02.png" width="650" title="GCP Console"></a>  
 
@@ -142,7 +142,7 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
 
     <pre>cbd start</pre>
 
-    This will start the Docker containers and initialize the application. The first time you start the Coudbreak app, this also downloads of all the necessary docker images.
+    This will start the Docker containers and initialize the application. The first time you start the Cloudbreak app, this also downloads of all the necessary docker images.
     
 [Comment]: <> (Extra info which may not be needed here: The `cbd start` command includes the `cbd generate` command which applies the following steps: Creates the `docker-compose.yml` file, which describes the configuration of all the Docker containers needed for the Cloudbreak deployment. Creates the `uaa.yml` file, which holds the configuration of the identity server used to authenticate users with Cloudbreak.)
 
@@ -156,7 +156,7 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
 
     <pre>cbd logs cloudbreak</pre>
     
-    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloubdreak" error.
+    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
      
 
 ### Access Cloudbreak UI

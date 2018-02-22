@@ -12,7 +12,7 @@ After you have launched Cloudbreak, the CLI is available for download from that 
 
 **Steps**
 
-1. Browse to your Cloudbreak instance and log in to the Cloubdreak web UI.  
+1. Browse to your Cloudbreak instance and log in to the Cloudbreak web UI.  
 2. Select **Download CLI** from the navigation pane. 
 3. Select your operating system. The CLI is available for Linux, Mac OS X, and Windows:  
     <a href="../images/cb-cli.png" target="_blank" title="click to enlarge"><img src="../images/cb-cli.png" width="650" title="Cloudbreak web UI"></a>  

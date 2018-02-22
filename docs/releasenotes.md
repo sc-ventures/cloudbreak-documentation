@@ -80,7 +80,7 @@ ____________________________
 ##### Prewarmed Images 
 
 To accelerate cluster creation, CLoudbreak 2.4.0 introduces prewarmed images, which include the operating system, as well as the default version of Ambari and HDP. By default, Cloudbreak 2.4 launches clusters from these prewarmed images, instead of using base images (which were used by default in earlier versions of Cloudbreak). Default base images are still available in case you would like to use different Ambari and HDP versions than those provided with prewarmed images.  
-For more information, refer to [Prewardmed and Base Images](aws-create.md#prewarmed-and-base-images). 
+For more information, refer to [Prewarmed and Base Images](aws-create.md#prewarmed-and-base-images). 
 ____________________________
 
 
@@ -92,7 +92,7 @@ ____________________________
 
 ##### Generating CLI Templates 
 
-After specifying the parameters for your cluster in the Cloudbreak web UI, you can copy the content of the CLI JSON file that can be used to create a cluster via Cloudbreeak CLI. For more information, refer to [Obtain Cluster JSON Template from the UI](cli-get-started.md#obtain-cluster-json-template-from-the-ui).    
+After specifying the parameters for your cluster in the Cloudbreak web UI, you can copy the content of the CLI JSON file that can be used to create a cluster via Cloudbreak CLI. For more information, refer to [Obtain Cluster JSON Template from the UI](cli-get-started.md#obtain-cluster-json-template-from-the-ui).    
 
 Furthermore, Cloudbreak web UI includes an option in the UI which allows you to generate the  `create` command for resources such as credentials, blueprints, clusters, and recipes. For more information, refer to [Obtain CLI Command from the UI](cli-get-started.md#obtain-cli-command-from-the-ui).  
 ____________________________
