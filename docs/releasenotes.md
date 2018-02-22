@@ -186,15 +186,11 @@ ____________________________
 
 #### Known Issues
 
-> The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak 2.4.0.
-
-> For general Ambari 2.6.1.3 and HDP 2.6.4.0 known issues, refer to:  
-> [Ambari 2.6.1.3 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.3/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.3.html)  
-> [HDP 2.6.4.0 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.4/bk_release-notes/content/ch_relnotes.html)  
 ____________________________
 
+**Known Issues: Cloudbreak**
 
-
+____________________________
 
 
 
@@ -353,11 +349,21 @@ Ambari dashboard shows that nodes are not sending heartbeats.
  This issue is fixed in Ambari version 2.5.1.0 and newer.  
 
 [Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
+
+
+
+
 ____________________________
 
+**Known Issues: Ambari 2.6.1.3 and HDP 2.6.4.0**
 
 
+> The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak 2.4.0.
 
+> For general Ambari 2.6.1.3 and HDP 2.6.4.0 known issues, refer to:  
+> [Ambari 2.6.1.3 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.3/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.3.html)  
+> [HDP 2.6.4.0 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.4/bk_release-notes/content/ch_relnotes.html)  
+____________________________
 
 
 
