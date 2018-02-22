@@ -73,7 +73,7 @@ Launch Cloudbreak deployer using the following steps.
 |---|---|
 | Base Url | This is the URL to the page where the template is stored. |
 | Location | This is an internal parameter. Do not change it.|
-| Vm Size | Select virtual machine instance type to use for the Cloudbreak controller. The minimum instance type suitable for Cloudbreak is *D2*. The minimum requirements are 16GB RAM, 40GB disk, 4 cores. |
+| Vm Size | Select virtual machine instance type to use for the Cloudbreak controller. The minimum instance type suitable for Cloudbreak is *Standard_D3*. The minimum requirements are 16GB RAM, 40GB disk, 4 cores. |
 | Admin Username | Create an admin login that you will use to log in to the Cloudbreak UI. Must be a valid email address. By default, admin@example.com is used but you should change it to your email address. |
 | Admin User Password | Password for the admin login. Must be at least 8 characters containing letters, numbers, and symbols. |
 | Username | Enter an admin username for the virtual machine. You will use it to SSH to the VM. |
