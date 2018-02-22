@@ -202,28 +202,6 @@ To import the certificate, place the certificate file in the `/certs/trusted/` d
 Cloudbreak will automatically pick up the certificate and import it into its truststore upon start.
 
 
-#### Configuring Availability Zone and Region
-
-By default, Cloudbreak uses `RegionOne` region with `nova` availability zone, but you can customize Cloudbreak deployment and enable multiple regions and availability zones by creating an `openstack-zone.json` file in the `etc` directory of Cloudbreak deployment (that is`/var/lib/cloudbreak-deployment/etc/openstack-zone.json`). If the etc directory does not exist in the Cloudbreak deployment directory, then create it.
-
-The following is an example of `openstack-zone.json` containing two regions and four availability zones:
-
-<pre>{
-  "items": [
-    {
-      "name": "MyRegionOne",
-      "zones": [ "az1", "az2", "az3"]
-    },
-    {
-      "name": "MyRegionTwo",
-      "zones": [ "myaz"]
-    }
-  ]
-}
-</pre>
-
-> If you are performing this after you have started cbd, perform `cbd restart`.
-
 
 ### Launch Cloudbreak Deployer
 
