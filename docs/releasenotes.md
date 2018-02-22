@@ -13,6 +13,8 @@ ____________________________
 #### New Features
 ____________________________
 
+
+
 ##### New UI/UX
 
 Cloudbreak 2.4.0 introduces a new user interface. 
@@ -180,7 +182,6 @@ Earlier versions of Cloudbreak allowed you to save infrastructure, network, and 
 ____________________________
 
 
-
 ##### cbd update Improvements 
 
 The following improvements were added for `cbd update`:
@@ -203,7 +204,7 @@ ____________________________
 
 
 
-##### (BUG-94801) New Default Images Including OS Fixes for CPU Security Issues 
+##### (BUG-94801) New Default Images Including OS with Meltdown and Spectre Patches 
 
 All default images used by Cloudbreak were rebuilt. Each image now includes an updated version of the operating system with the following CPU security fixes: 
 
@@ -426,19 +427,6 @@ ____________________________
 
 
 
-##### (BUG-94210) Ambari Fails to Replace HOSTGROUP var for Schema Registry and Streamline
-
-Ambari fails to replace HOSTGROUP var for Schema Registry and Streamline in the blueprint: 
-
-*"registry.url": "http://%HOSTGROUP::master_2%:7788/api/v1,http://%HOSTGROUP::master_3%:7788/api/v1",  
-"streamline.dashboard.url": "http://%HOSTGROUP::master_2%:9090",  
-"registry.storage.connector.connectURI": "jdbc:mysql://%HOSTGROUP::master_2%:3306/registry"*
-____________________________
-
-
-
-
-
 
 ##### (BUG-97055) Name Node Goes into Safe Mode Frequently 
 
@@ -464,42 +452,3 @@ ____________________________
 
 
 
-
-
-
-##### (BUG-97066) DLM 1.0 mpack Install Fails
-
-When installing DLM 1.0 mpack:
-
-* Ranger install fails.  
-* When BEACON_SERVER is present in the blueprint, all worker nodes fail.  
-
-As a result the entire HDP installation fails.  
-____________________________
-
-
-
-
-
-
-
-##### (BUG-91984) Ranger Fails to Install from Blueprint
-
-Ranger install from Ambari Blueprint fails with with DB access error:
-
-<pre>17 15:40:00,148  [I] Running DBA setup script. QuiteMode:True
-2017-11-17 15:40:00,149  [I] Using Java:/usr/lib/jvm/java/bin/java
-2017-11-17 15:40:00,149  [I] DB FLAVOR:MYSQL
-2017-11-17 15:40:00,149  [I] DB Host:
-2017-11-17 15:40:00,149  [I] ---------- Verifying DB root password ---------- 
-2017-11-17 15:40:00,150  [I] DBA root user password validated
-2017-11-17 15:40:00,150  [I] ---------- Verifying Ranger Admin db user password ---------- 
-2017-11-17 15:40:00,150  [I] admin user password validated
-2017-11-17 15:40:00,150  [I] ---------- Creating Ranger Admin db user ---------- 
-2017-11-17 15:40:00,150  [JISQL] /usr/lib/jvm/java/bin/java  -cp /usr/hdp/current/ranger-admin/ews/lib/mysql-connector-java-5.1.39-bin.jar:/usr/hdp/current/ranger-admin/jisql/lib/* org.apache.util.sql.Jisql -driver mysqlconj -cstring jdbc:mysql:///mysql -u root -p '********' -noheader -trim -c \; -query "SELECT version();"
-SQLException : SQL state: 28000 java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES) ErrorCode: 1045
-2017-11-17 15:40:00,714  [E] Can't establish db connection.. Exiting..
-Traceback (most recent call last):</pre>
-
-[Comment]: <> (In the jira item there is a script listed as a workaround.)
-____________________________
