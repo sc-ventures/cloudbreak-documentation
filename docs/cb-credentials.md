@@ -5,7 +5,7 @@ You can view and manage Cloudbreak credentials in the **Credentials** tab by cli
 
 <a href="../images/cb-credentials.png" target="_blank" title="click to enlarge"><img src="../images/cb-credentials.png" width="650" title="Cloudbreak web UI"></a> 
 
-### Create Cloudbreak Credental  
+### Create Cloudbreak Credential  
 
 For steps, refer to:
 

@@ -78,7 +78,7 @@ You can delete Cloudbreak instance from your Google Cloud account.
 
 ### Delete Cloudbreak on OpenStack
 
-You can delete Cloudbreak instance from your OpeenStack console. 
+You can delete Cloudbreak instance from your OpenStack console. 
 
 **Steps**
 

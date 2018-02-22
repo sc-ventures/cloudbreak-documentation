@@ -128,7 +128,7 @@ Use the following "AssumeRole" policy definition:
     
 7. When done, click **Create Policy**.
 
-8. Click **Refresh**. Next, find the "AsumeRole" policy that you just created and select it by checking the box.
+8. Click **Refresh**. Next, find the "AssumeRole" policy that you just created and select it by checking the box.
 
     <a href="../images/aws_role-14.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-14.png" width="650" title="IAM Console"></a> 
     
@@ -343,7 +343,7 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 
     > The steps listed below only mention required parameters. You may optionally review and adjust additional parameters. 
   
-8. In *Step2: Choose Instance Type*, choose an instance type. The minimum instance type which is suitable for Cloudbreak is **m3.large**. Minimum requirements are 8GB RAM, 10GB disk, 2 cores. When done, click **Next**.
+8. In *Step2: Choose Instance Type*, choose an instance type. The minimum instance type which is suitable for Cloudbreak is **m4.xlarge**. Minimum requirements are 8GB RAM, 10GB disk, 2 cores. When done, click **Next**.
 
     <a href="../images/aws-03.png" target="_blank" title="click to enlarge"><img src="../images/aws-03.png" width="650" title="EC2 Console"></a>   
     

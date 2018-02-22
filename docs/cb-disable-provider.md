@@ -1,6 +1,6 @@
 ## Disable Providers 
 
-If you are planning to use Cloubdreak with a specific cloud provider or a specific set of cloud providers, you may want to disable the remaining providers. For example, if you are planning to use Cloubdreak with Azure only, you may want to disable AWS, Google Cloud, and OpenStack. 
+If you are planning to use Cloudbreak with a specific cloud provider or a specific set of cloud providers, you may want to disable the remaining providers. For example, if you are planning to use Cloudbreak with Azure only, you may want to disable AWS, Google Cloud, and OpenStack. 
 
 **Steps**
 
