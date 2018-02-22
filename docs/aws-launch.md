@@ -338,7 +338,6 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 | Asia Pacific (Singapore) | ap-southeast-1 | ami-4cace230 | 
 | Asia Pacific (Sydney) | ap-southeast-2 | ami-8bbf78e9 |
 
-[comment]: <> (TO-DO: This table should be automatically generated.)
 
 7. Click **Select**.  
 
