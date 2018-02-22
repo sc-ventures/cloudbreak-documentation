@@ -15,17 +15,38 @@ ____________________________
 
 ##### New UI/UX
 
-Cloudbreak 2.4.0 introduces a new user interface:
-
-<a href="../images/cb-ui3.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui3.png" width="650" title="Cloudbreak web UI"></a>  
+Cloudbreak 2.4.0 introduces a new user interface. 
 
 All major options are now easily accessible from the collapsable navigation menu on the left side. All UI options and wizards have been redesigned in order to make cluster creation and management more intuitive. 
+
+The following screenshot shows the cluster dashboard: 
+
+<a href="../images/cb-ui3.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui3.png" width="650" title="Cloudbreak web UI"></a> 
+
+The following screenshot shows cluster details page:
+ 
+> Note that autoscaling is available from the **Autoscaling** tab:  
+
+<a href="../images/cb-ui4.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui4.png" width="650" title="Cloudbreak web UI"></a> 
+
+[Comment]: <> (Adding this screenshot, which shows autoscaling, because it seems like everyone is thinking that autoscaling is no longer available in Cloudbreak.)
+
+The following screenshot shows the create cluster wizard:
+
+> Note the **Basic/Advanced** toggle button, which allows you to switch between the basic and advanced wizard view. In the **Settings** you can select which view you would like to see by default.  
+
+> Note the **Show CLI Command** available from **Actions** menu. This allows you to generate a CLI template of the cluster. A similar option is available on the last page of the create cluster wizard.  
+
+<a href="../images/cb-ui5.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui5.png" width="650" title="Cloudbreak web UI"></a> 
+
+[Comment]: <> (Adding this screenshot, because many SEs have missed the Basic/Advanced toggle button.)
+
 ____________________________
 
 
 ##### New CLI
 
-Cloudbreak 2.4.0 introduces the new CLI tool, which replaces Cloudbreak Shell. All commands start with a singular object followed by an action, for example, `blueprint create`  and `blueprint list`. Refer to [Install CLI](cli-install.md), [Get Started with the CLI](cli-get-started.md), and [CLI Reference](cli-reference.md).
+Cloudbreak 2.4.0 introduces the new CLI tool, which replaces Cloudbreak Shell. All commands start with a singular object followed by an action, for example, `blueprint create`  and `blueprint list`. To download the CLI, select **the Download CLI** from the navigation pane. Refer to [Install CLI](cli-install.md), [Get Started with the CLI](cli-get-started.md), and [CLI Reference](cli-reference.md).  
 ____________________________
 
 
@@ -33,8 +54,8 @@ ____________________________
 
 Creating Kerberos-enabled clusters is supported:  
 
-- Use an existing existing MIT KDC or Active Directory for production deployments.  
-- Set up a test KDC for evaluation purposes.  
+- Use an existing MIT KDC or Active Directory for production deployments.  
+- Use a test KDC for evaluation purposes.  
 
 Refer to [Enabling Kerberos Security](security-kerberos.md).
 ____________________________
@@ -42,19 +63,22 @@ ____________________________
 
 ##### Support for Configuring an External RDBMS for Cloudbreak
 
-Using an external RDBMS for Cloubdreak is supported and recommended for production environments. For configuration instructions, refer to [Configuring External Cloudbreak Database](cb-db.md).
+Using an external RDBMS for Cloubdreak is supported and recommended for production environments.   
+For configuration instructions, refer to [Configuring External Cloudbreak Database](cb-db.md).
 ____________________________
 
 
 ##### Support for Migrating Cloudbreak Instance
 
-Migrating Cloudbreak from one machine to another is supported. For migration instructions, refer to [Moving a Cloudbreak Instance](cb-migrate.md).
+Migrating Cloudbreak from one machine to another is supported.  
+For migration instructions, refer to [Moving a Cloudbreak Instance](cb-migrate.md).
 ____________________________
 
 
 ##### Prewarmed Images 
 
-To accelerate cluster creation, CLoudbreak 2.4.0 introduces prewarmed images, which include the operating system, as well as the default version of Ambari and HDP. By default, Cloudbreak 2.4 launches clusters from these prewarmed images, instead of using base images (which were used by default in earlier versions of Cloudbreak). Default base images are still available in case you would like to use different Ambari and HDP versions than those provided with prewarmed images. For more information, refer to [Prewardmed and Base Images](aws-create.md#prewarmed-and-base-images). 
+To accelerate cluster creation, CLoudbreak 2.4.0 introduces prewarmed images, which include the operating system, as well as the default version of Ambari and HDP. By default, Cloudbreak 2.4 launches clusters from these prewarmed images, instead of using base images (which were used by default in earlier versions of Cloudbreak). Default base images are still available in case you would like to use different Ambari and HDP versions than those provided with prewarmed images.  
+For more information, refer to [Prewardmed and Base Images](aws-create.md#prewarmed-and-base-images). 
 ____________________________
 
 
@@ -99,17 +123,15 @@ If you decide to use Ambari 2.6.1, you should be aware of the following:
 
 - Ambari 2.6.1 or newer does not install the mysqlconnector; therefore, when creating a blueprint for Ambari 2.6.1 or newer do not include the MYSQL_SERVER component for Hive Metastore in your blueprint. Instead, you have two options described in [Creating a Blueprint](blueprints.md#creating-a-blueprint).  
 - If you would like to use Oozie, you must manually install Ext JS. The steps are described in [Cannot Access Oozie Web UI](trouble-cluster.md#cannot-access-oozie-web-ui).   
-- To enable LZO compression in your HDP cluster, you must check the "Enable Ambari Server to download and install GPL Licensed LZO packages?" during cluster creation. The option is available in the **Security** > **Prewarmed and Base Images**.  
+- To enable LZO compression in your HDP cluster, you must check the "Enable Ambari Server to download and install GPL Licensed LZO packages?" during cluster creation. The option is available under **Security** > **Prewarmed and Base Images**.  
 
 [Comment]: <> (Or should these be described as behavioral changes?) 
 ____________________________
 
 
-
 ##### Ambari Master Key 
 
 Cloudbreak 2.4.0 allows you to specify the Ambari Master Key. The Ambari Server Master Key is used to configure Ambari to encrypt database and Kerberos credentials that are retained by Ambari as part of the Ambari setup. The option is available on the **Security** page of the create cluster wizard.
-
 
 
 
