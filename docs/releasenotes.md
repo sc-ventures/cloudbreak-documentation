@@ -216,7 +216,7 @@ Cluster creation fails with the following error:
 
 *Workaround*: 
 
-This may mean that the volumes that you requested exceed volumes available on your cloud provider account. When creating a cluster, on the advanced *Hardware and Storage* page of the create cluster wizard, try reducing the amount of requested storage. If you need more storage, try using a different region or ask your cloud provider admin to increase the resource quota for volumes.  
+This may mean that the volumes that you requested exceed volumes available on your cloud provider account. When creating a cluster, on the advanced **Hardware and Storage** page of the create cluster wizard, try reducing the amount of requested storage. If you need more storage, try using a different region or ask your cloud provider admin to increase the resource quota for volumes.  
 
 [Comment]: <> (This jira item was closed so it will not be fixed. Maybe add this to troubleshooting?)
 ____________________________
@@ -259,7 +259,7 @@ ____________________________
 
 ##### (BUG-96764) "Failed to remove instance" Error When Using the Delete Icon
 
-When trying to delete instances by using the delete icon on the cluster details in the *Hardware* tab, you will get the following error: "Failed to remove instance".
+When trying to delete instances by using the delete icon on the cluster details in the **Hardware** tab, you will get the following error: "Failed to remove instance".
 
 *Workaround:*
 
@@ -298,7 +298,7 @@ ____________________________
 
 ##### (BUG-97044) Show CLI Command Copy JSON Button Does Not Work
   
-When using the *Show CLI Command* > *Copy the JSON* or *Copy the Command* button with  Firefox, the content does not does not get copied if adblock plugin or other advertise blocker plugins are present.
+When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** button with  Firefox, the content does not does not get copied if Adblock plugin or other advertise blocker plugins are present.
 
  *Workaround:*  
  
@@ -335,7 +335,7 @@ ____________________________
 
 ##### (BUG-93257) Clusters Are Missing From History   
 
-After changing the dates on the *History* page multiple times, the results displayed may sometimes be incorrect. 
+After changing the dates on the History page multiple times, the results displayed may sometimes be incorrect. 
 
 *Workaround:*
 
