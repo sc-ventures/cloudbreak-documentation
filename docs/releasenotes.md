@@ -186,7 +186,11 @@ ____________________________
 
 #### Known Issues
 
-The known issues were discovered when testing Ambari 2.6.1.3 and HDP 2.6.4.0 which are used by default in Cloudbreak 2.4.0.
+> The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak 2.4.0.
+
+> For general Ambari 2.6.1.3 and HDP 2.6.4.0 known issues, refer to:  
+> [Ambari 2.6.1.3 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.3/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.3.html)  
+> [HDP 2.6.4.0 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.4/bk_release-notes/content/ch_relnotes.html)  
 ____________________________
 
 
@@ -456,4 +460,6 @@ Ranger install from Ambari Blueprint fails with with DB access error:
 SQLException : SQL state: 28000 java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES) ErrorCode: 1045
 2017-11-17 15:40:00,714  [E] Can't establish db connection.. Exiting..
 Traceback (most recent call last):</pre>
+
+[Comment]: <> (In the jira item there is a script listed as a workaround.)
 ____________________________
