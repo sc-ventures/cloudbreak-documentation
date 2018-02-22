@@ -36,10 +36,10 @@ Configure CLI:
 
 Cloud Provider:
 
-* [cloud availability-zones](cloud-availability-zones)  
-* [cloud regions](cloud-regions)       
-* [cloud volumes](cloud-volumes)   
-* [cloud instances](cloud-instances)   
+* [cloud availability-zones](#cloud-availability-zones)  
+* [cloud regions](#cloud-regions)       
+* [cloud volumes](#cloud-volumes)   
+* [cloud instances](#cloud-instances)   
  
  
 Credential:  
