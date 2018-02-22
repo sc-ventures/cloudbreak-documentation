@@ -248,6 +248,7 @@ ____________________________
 ##### (BUG-93241) Error When Scaling Multiple Host Groups 
 
 Scaling of multiple host groups fails with the following error: 
+
 *Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; nested exception is org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1*
 
 *Workaround:*
@@ -297,11 +298,11 @@ ____________________________
 
 When registering a blueprint via `blueprint create` CLI command, if the name of the blueprint includes one or more of the following special characters `@#$%|:&*;` you will get an error similar to:  
 
-*cb blueprint create from-url --name test@# --url https://myurl.com/myblueprint.bp  
+<pre>cb blueprint create from-url --name test@# --url https://myurl.com/myblueprint.bp  
 [1] 7547
 -bash: application.yml: command not found
 -bash: --url: command not found
- ~  integration-test  1  time="2018-02-01T12:56:44+01:00" level="error" msg="the following parameters are missing: url\n"* 
+ ~  integration-test  1  time="2018-02-01T12:56:44+01:00" level="error" msg="the following parameters are missing: url\n"</pre> 
  
  *Workaround:*  
  You have two options:
@@ -334,12 +335,12 @@ ____________________________
 
 When using Ambari version 2.5.0.3, after stopping and starting a cluster, Event History shows the following error:
 
-*Ambari cluster could not be started. Reason: Failed to start Hadoop services.
+<pre>Ambari cluster could not be started. Reason: Failed to start Hadoop services.
 2/7/2018, 12:47:05 PM
 Starting Ambari services.
 2/7/2018, 12:47:04 PM
 Manual recovery is needed for the following failed nodes:   
-[host-10-0-0-4.openstacklocal, host-10-0-0-3.openstacklocal, host-10-0-0-5.openstacklocal*
+[host-10-0-0-4.openstacklocal, host-10-0-0-3.openstacklocal, host-10-0-0-5.openstacklocal</pre>
 
 Ambari dashboard shows that nodes are not sending heartbeats. 
 
@@ -369,7 +370,10 @@ ____________________________
 
 ##### (BUG-96707) Druid Overload Does Not Start
 
-Druid overload start fails with *ERROR [main] io.druid.cli.CliOverlord - Error when starting up.  Failing. com.google.inject.ProvisionException: Unable to provision* when using Ambari 2.6.1.3 and HDP 2.6.4.0.  
+Druid overload start fails with the following error when using Ambari 2.6.1.3 and HDP 2.6.4.0: 
+
+*ERROR [main] io.druid.cli.CliOverlord - Error when starting up.  Failing. com.google.inject.ProvisionException: Unable to provision* 
+  
 ____________________________
 
 
@@ -408,11 +412,10 @@ ____________________________
 
 If we set the following properties then cluster install may fail (in 20-30% of the cases), because of the Ambari agent cache being updated concurrently:
 
-*/etc/ambari-server/conf/ambari.properties
-agent.auto.cache.update=true*
-
-*/etc/ambari-agent/conf/ambari-agent.ini
-parallel_execution=1*
+<pre>/etc/ambari-server/conf/ambari.properties  
+agent.auto.cache.update=true*  
+*/etc/ambari-agent/conf/ambari-agent.ini  
+parallel_execution=1</pre> 
 ____________________________
 
 
@@ -423,8 +426,9 @@ ____________________________
 ##### (BUG-97066) DLM 1.0 mpack Install Fails
 
 When installing DLM 1.0 mpack:
-* Ranger install fails. 
-* When BEACON_SERVER is present in the blueprint, all worker nodes fail. 
+
+* Ranger install fails.  
+* When BEACON_SERVER is present in the blueprint, all worker nodes fail.  
 
 As a result the entire HDP installation fails.  
 ____________________________
