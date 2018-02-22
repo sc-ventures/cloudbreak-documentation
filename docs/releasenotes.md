@@ -64,7 +64,7 @@ Providing your own JDK on a custom base image is supported. For instructions, re
 ____________________________
 
 
-##### CLI Templates 
+##### Generating CLI Templates 
 
 After specifying the parameters for your cluster in the Cloudbreak web UI, you can copy the content of the CLI JSON file that can be used to create a cluster via Cloudbreeak CLI. For more information, refer to [Obtain Cluster JSON Template from the UI](cli-get-started.md#obtain-cluster-json-template-from-the-ui).    
 
