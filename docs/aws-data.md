@@ -47,7 +47,7 @@ To configure access to S3 with an instance profile, follow these steps.
 
 **Steps**
 
-1. You or your AWS admin must create an IAM role with an S3 access policy which can be used by cluster instances to access one or more S3 buckets. Refer to [Creating an IAM Role for S3 Access](creating-an-iam-role-for-s3-access).  
+1. You or your AWS admin must create an IAM role with an S3 access policy which can be used by cluster instances to access one or more S3 buckets. Refer to [Creating an IAM Role for S3 Access](#creating-an-iam-role-for-s3-access).  
 2. On the **File System** page in the advanced cluster wizard view, select **Use existing instance profile**. 
 3. Select an existing IAM role created in step 1:
 
