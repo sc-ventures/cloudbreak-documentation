@@ -28,7 +28,7 @@ In addition to supporting multiple cloud platforms, Cloudbreak provides an easy 
 This SPI plugin mechanism has been used to integrate all currently supported providers with Cloudbreak. The following links point to the Cloudbreak SPI implementations for AWS, Azure, Google Cloud, and OpenStack. You can use these implementations as a reference:
  
  * The [cloud-aws](https://github.com/hortonworks/cloudbreak/tree/master/cloud-aws) module integrates Amazon Web Services
- * The [cloud-arm](https://github.com/hortonworks/cloudbreak/tree/master/cloud-arm) module integrates Microsoft Azure
+ * The [cloud-azure](https://github.com/hortonworks/cloudbreak/tree/master/cloud-azure) module integrates Microsoft Azure
  * The [cloud-gcp](https://github.com/hortonworks/cloudbreak/tree/master/cloud-gcp) module integrates Google Cloud Platform  
  * The [cloud-openstack](https://github.com/hortonworks/cloudbreak/tree/master/cloud-openstack) module integrates OpenStack
 
