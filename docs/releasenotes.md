@@ -27,7 +27,7 @@ The following screenshot shows the cluster dashboard:
 
 The following screenshot shows cluster details page:
  
-> Note that autoscaling is available from the **Autoscaling** tab:  
+> Note that autoscaling is available from the **Autoscaling** tab.  
 
 <a href="../images/cb-ui4.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui4.png" width="650" title="Cloudbreak web UI"></a> 
 
@@ -198,7 +198,7 @@ The following improvements were added for `cbd update`:
 All default images used by Cloudbreak were rebuilt. Each image now includes an updated version of the operating system with the following CPU security fixes: 
 
 * Cloudbreak image (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for Spectre Variant 1 and 3.  
-* Default HDP image for AWS (Amazon Linux): Moved to Amazon Linux 2017.09 version,  kernel version differs (kernel version 4.9.81-35) which includes fixes for Spectre Variant 1, 2, and 3.  
+* Default HDP image for AWS (Amazon Linux): Moved to Amazon Linux 2017.09 version (kernel version 4.9.81-35) which includes fixes for Spectre Variant 1, 2, and 3.  
 * Default HDP image for Azure, Google Cloud, and Openstack (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for Spectre Variant 1 and 3.  
 
 
