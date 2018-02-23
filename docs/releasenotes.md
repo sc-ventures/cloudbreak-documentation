@@ -205,15 +205,6 @@ All default images used by Cloudbreak were rebuilt. Each image now includes an u
 
 
 
- 
-____________________________
-
-#### Fixed Issues 
-____________________________
-
-
-
-
 
 
 ____________________________
