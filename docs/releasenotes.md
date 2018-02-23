@@ -197,9 +197,9 @@ The following improvements were added for `cbd update`:
 
 All default images used by Cloudbreak were rebuilt. Each image now includes an updated version of the operating system with the following CPU security fixes: 
 
-* Cloudbreak image (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for Spectre Variant 1 and 3.  
-* Default HDP image for AWS (Amazon Linux): Moved to Amazon Linux 2017.09 version (kernel version 4.9.81-35), which includes fixes for Spectre Variant 1, 2, and 3.  
-* Default HDP image for Azure, Google Cloud, and Openstack (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for Spectre Variant 1 and 3.  
+* Cloudbreak image (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for CVE-2017-5753 (also known as "Spectre Variant 1") and "Meltdown" (also known as "Variant 3").  
+* Default HDP image for Azure, Google Cloud, and Openstack (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for CVE-2017-5753 (also known as "Spectre Variant 1") and "Meltdown" (also known as "Variant 3").  
+* Default HDP image for AWS (Amazon Linux): Moved to Amazon Linux 2017.09 version (kernel version 4.9.81-35), which includes fixes for CVE-2017-5753 (also known as "Spectre Variant 1"), CVE-2017-5715 (also known as "Spectre Variant 2"), and "Meltdown" (also known as "Variant 3").  
 
 
 
