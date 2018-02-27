@@ -1,10 +1,4 @@
-## Upgrading Cloudbreak
-
-Upgrading Cloudbreak consists of upgrading Cloudbreak deployer and upgrading existing clusters, if needed. 
-
-### Update Cloudbreak  
-
-[Comment]: <> (Need to update and validate these steps.)
+## Upgrade Cloudbreak
 
 To upgrade Cloudbreak to the newest version, perform the following steps.
 
