@@ -19,7 +19,7 @@ ____________________________
 
 Cloudbreak 2.4.0 introduces a new user interface. 
 
-All major options are now easily accessible from the collapsable navigation menu on the left side. All UI options and wizards have been redesigned in order to make cluster creation and management more intuitive. 
+All major options are now easily accessible from the collapsible navigation menu on the left side. All UI options and wizards have been redesigned in order to make cluster creation and management more intuitive. 
 
 The following screenshot shows the cluster dashboard: 
 
