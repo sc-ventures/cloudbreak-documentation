@@ -19,7 +19,7 @@ ____________________________
 
 Cloudbreak 2.4.0 introduces a new user interface. 
 
-All major options are now easily accessible from the collapsable navigation menu on the left side. All UI options and wizards have been redesigned in order to make cluster creation and management more intuitive. 
+All major options are now easily accessible from the collapsible navigation menu. All UI options and wizards have been redesigned in order to make cluster creation and management more intuitive. 
 
 The following screenshot shows the cluster dashboard: 
 
@@ -27,7 +27,9 @@ The following screenshot shows the cluster dashboard:
 
 The following screenshot shows cluster details page:
  
-> Note that autoscaling is available from the **Autoscaling** tab:  
+> Note that autoscaling is available from the **Autoscaling** tab.
+
+> Note the **Show CLI Command** available from **Actions** menu. This allows you to generate a CLI template of the cluster. A similar option is available on the last page of the create cluster wizard.  
 
 <a href="../images/cb-ui4.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui4.png" width="650" title="Cloudbreak web UI"></a> 
 
@@ -36,8 +38,6 @@ The following screenshot shows cluster details page:
 The following screenshot shows the create cluster wizard:
 
 > Note the **Basic/Advanced** toggle button, which allows you to switch between the basic and advanced wizard view. In the **Settings** you can select which view you would like to see by default.  
-
-> Note the **Show CLI Command** available from **Actions** menu. This allows you to generate a CLI template of the cluster. A similar option is available on the last page of the create cluster wizard.  
 
 <a href="../images/cb-ui5.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui5.png" width="650" title="Cloudbreak web UI"></a> 
 
@@ -48,7 +48,7 @@ ____________________________
 
 ##### New CLI
 
-Cloudbreak 2.4.0 introduces the new CLI tool, which replaces Cloudbreak Shell. All commands start with a singular object followed by an action, for example, `blueprint create`  and `blueprint list`. To download the CLI, select **the Download CLI** from the navigation pane. Refer to [Install CLI](cli-install.md), [Get Started with the CLI](cli-get-started.md), and [CLI Reference](cli-reference.md).  
+Cloudbreak 2.4.0 introduces the new CLI tool, which replaces Cloudbreak Shell. All commands start with a singular object followed by an action, for example, `blueprint create`  and `blueprint list`. To download the CLI, select **Download CLI** from the navigation pane. Refer to [Install CLI](cli-install.md), [Get Started with the CLI](cli-get-started.md), and [CLI Reference](cli-reference.md).  
 ____________________________
 
 
@@ -65,7 +65,7 @@ ____________________________
 
 ##### Support for Configuring an External RDBMS for Cloudbreak
 
-Using an external RDBMS for Cloubdreak is supported and recommended for production environments.   
+Using an external RDBMS for Cloudbreak is supported and recommended for production environments.   
 For configuration instructions, refer to [Configuring External Cloudbreak Database](cb-db.md).
 ____________________________
 
