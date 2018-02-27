@@ -8,7 +8,7 @@ Upgrading Cloudbreak consists of upgrading Cloudbreak deployer and upgrading exi
 
 To upgrade Cloudbreak to the newest version, perform the following steps.
 
-We recommend that you back up the Cloudbreak databases before upgrading. Refer to [Back up Cloudbreak Databases](cb-migrate.md#back-up-cloudbreak-database).
+We recommend that you back up Cloudbreak databases before upgrading. Refer to [Back up Cloudbreak Database](cb-migrate.md#back-up-cloudbreak-database).
 
 **Steps**
 
@@ -43,24 +43,4 @@ We recommend that you back up the Cloudbreak databases before upgrading. Refer t
     
     Cloudbreak needs to download updated docker images for the new version, so this step may take a while.
 
-In addition, if you have any clusters running, you must update them using the following steps. 
-
-### Update Existing Clusters
-
-[comment]: <> (TO-DO: Maybe the sentence below should say "Upgrading from version 1.4.0 **or newer** to the newest version"??)
-
-Upgrading from version 1.4.0 to the newest version does not require any manual modification from the users.
-
-Upgrading from version 1.3.0 to the newest version requires that you update existing clusters. To update existing clusters, run the following commands on the `cbgateway` node of the cluster.
-
-**Steps**
-
-1. Update the version of the Salt-Bootsrap tool on the nodes:
-    <pre>salt '*' cmd.run 'curl -Ls https://github.com/sequenceiq/salt-bootstrap/releases/download/v0.1.2/salt-bootstrap_0.1.2_Linux_x86_64.tgz | tar -zx -C /usr/sbin/ salt-bootstrap'</pre>
-    
-2. Trigger restart of the tool on the nodes:
-
-    <pre>salt '*' service.dead salt-bootstrap</pre>
-
-    > To check the version of the Salt-Bootsrap on the nodes, use `salt '*' cmd.run 'salt-bootstrap --version'`
     
