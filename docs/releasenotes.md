@@ -65,7 +65,7 @@ ____________________________
 
 ##### Support for Configuring an External RDBMS for Cloudbreak
 
-Using an external RDBMS for Cloubdreak is supported and recommended for production environments.   
+Using an external RDBMS for Cloudbreak is supported and recommended for production environments.   
 For configuration instructions, refer to [Configuring External Cloudbreak Database](cb-db.md).
 ____________________________
 
