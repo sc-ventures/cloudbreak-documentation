@@ -27,7 +27,9 @@ The following screenshot shows the cluster dashboard:
 
 The following screenshot shows cluster details page:
  
-> Note that autoscaling is available from the **Autoscaling** tab:  
+> Note that autoscaling is available from the **Autoscaling** tab.
+
+> Note the **Show CLI Command** available from **Actions** menu. This allows you to generate a CLI template of the cluster. A similar option is available on the last page of the create cluster wizard.  
 
 <a href="../images/cb-ui4.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui4.png" width="650" title="Cloudbreak web UI"></a> 
 
@@ -36,8 +38,6 @@ The following screenshot shows cluster details page:
 The following screenshot shows the create cluster wizard:
 
 > Note the **Basic/Advanced** toggle button, which allows you to switch between the basic and advanced wizard view. In the **Settings** you can select which view you would like to see by default.  
-
-> Note the **Show CLI Command** available from **Actions** menu. This allows you to generate a CLI template of the cluster. A similar option is available on the last page of the create cluster wizard.  
 
 <a href="../images/cb-ui5.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui5.png" width="650" title="Cloudbreak web UI"></a> 
 
