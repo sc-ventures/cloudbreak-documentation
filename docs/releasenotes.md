@@ -48,7 +48,7 @@ ____________________________
 
 ##### New CLI
 
-Cloudbreak 2.4.0 introduces the new CLI tool, which replaces Cloudbreak Shell. All commands start with a singular object followed by an action, for example, `blueprint create`  and `blueprint list`. To download the CLI, select **the Download CLI** from the navigation pane. Refer to [Install CLI](cli-install.md), [Get Started with the CLI](cli-get-started.md), and [CLI Reference](cli-reference.md).  
+Cloudbreak 2.4.0 introduces the new CLI tool, which replaces Cloudbreak Shell. All commands start with a singular object followed by an action, for example, `blueprint create`  and `blueprint list`. To download the CLI, select **Download CLI** from the navigation pane. Refer to [Install CLI](cli-install.md), [Get Started with the CLI](cli-get-started.md), and [CLI Reference](cli-reference.md).  
 ____________________________
 
 
