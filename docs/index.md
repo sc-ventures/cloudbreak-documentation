@@ -9,16 +9,13 @@ Cloudbreak allows you to create clusters using the Cloudbreak web UI, Cloudbreak
 <a href="./images/cb-ui3.png" target="_blank" title="click to enlarge"><img src="./images/cb-ui3.png" width="650" title="Cloudbreak web UI"></a>   
 
 
-### Use Cases
+### Primary Use Cases
 
 Cloudbreak allows you to create, manage, and monitor your clusters on your chosen cloud platform:
 
-* Quickly create a cluster using one of the default cluster blueprints and infrastructure settings.  
-* Create a cluster based on the requirements of your workloads and provision infrastructure based on your IT requirements.
-* Secure your cluster by enabling Kerberos.
-* Automate cluster creation using the Cloudbreak CLI. 
-* Develop your application using Cloudbreak API.
-
+* Dynamically deploy, configure, and manage clusters on public and private clouds (AWS, Azure, Google Cloud, OpenmStack).   
+* Use automated scaling to seamlessly manage elasticity requirements as cluster workloads change.  
+* Secure your cluster by enabling Kerberos.   
 
 ### Architecture
 
