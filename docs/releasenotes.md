@@ -1,8 +1,8 @@
 ## Release Notes
 
-### 2.4.0
+### 2.5.0 TP
 
-Cloudbreak 2.4.0 is a general availability release, which is suitable for production deployments. 
+Cloudbreak 2.5.0 is a technical preview release. 
 
 
 
@@ -15,183 +15,11 @@ ____________________________
 
 
 
-##### New UI/UX
-
-Cloudbreak 2.4.0 introduces a new user interface. 
-
-All major options are now easily accessible from the collapsible navigation menu. All UI options and wizards have been redesigned in order to make cluster creation and management more intuitive. 
-
-The following screenshot shows the cluster dashboard: 
-
-<a href="../images/cb-ui3.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui3.png" width="650" title="Cloudbreak web UI"></a> 
-
-The following screenshot shows cluster details page:
- 
-> Note that autoscaling is available from the **Autoscaling** tab.
-
-> Note the **Show CLI Command** available from **Actions** menu. This allows you to generate a CLI template of the cluster. A similar option is available on the last page of the create cluster wizard.  
-
-<a href="../images/cb-ui4.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui4.png" width="650" title="Cloudbreak web UI"></a> 
-
-[Comment]: <> (Adding this screenshot, which shows autoscaling, because it seems like everyone is thinking that autoscaling is no longer available in Cloudbreak.)
-
-The following screenshot shows the create cluster wizard:
-
-> Note the **Basic/Advanced** toggle button, which allows you to switch between the basic and advanced wizard view. In the **Settings** you can select which view you would like to see by default.  
-
-<a href="../images/cb-ui5.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui5.png" width="650" title="Cloudbreak web UI"></a> 
-
-[Comment]: <> (Adding this screenshot, because many SEs have missed the Basic/Advanced toggle button.)
-
-____________________________
-
-
-##### New CLI
-
-Cloudbreak 2.4.0 introduces the new CLI tool, which replaces Cloudbreak Shell. All commands start with a singular object followed by an action, for example, `blueprint create`  and `blueprint list`. To download the CLI, select **Download CLI** from the navigation pane. Refer to [Install CLI](cli-install.md), [Get Started with the CLI](cli-get-started.md), and [CLI Reference](cli-reference.md).  
-____________________________
-
-
-##### Support for Kerberos
-
-Creating Kerberos-enabled clusters is supported:  
-
-- Use an existing MIT KDC or Active Directory for production deployments.  
-- Use a test KDC for evaluation purposes.  
-
-Refer to [Enabling Kerberos Security](security-kerberos.md).
-____________________________
-
-
-##### Support for Configuring an External RDBMS for Cloudbreak
-
-Using an external RDBMS for Cloudbreak is supported and recommended for production environments.   
-For configuration instructions, refer to [Configuring External Cloudbreak Database](cb-db.md).
-____________________________
-
-
-##### Support for Migrating Cloudbreak Instance
-
-Migrating Cloudbreak from one machine to another is supported.  
-For migration instructions, refer to [Moving a Cloudbreak Instance](cb-migrate.md).
-____________________________
-
-
-##### Prewarmed Images 
-
-To accelerate cluster creation, CLoudbreak 2.4.0 introduces prewarmed images, which include the operating system, as well as the default version of Ambari and HDP. By default, Cloudbreak 2.4 launches clusters from these prewarmed images, instead of using base images (which were used by default in earlier versions of Cloudbreak). Default base images are still available in case you would like to use different Ambari and HDP versions than those provided with prewarmed images.  
-For more information, refer to [Prewarmed and Base Images](aws-create.md#prewarmed-and-base-images). 
-____________________________
-
-
-##### Providing Your Own JDK
-
-Providing your own JDK on a custom base image is supported. For instructions, refer to "Advanced topics" in the [https://github.com/hortonworks/cloudbreak-images](https://github.com/hortonworks/cloudbreak-images) repository.
-____________________________
-
-
-##### Generating CLI Templates 
-
-After specifying the parameters for your cluster in the Cloudbreak web UI, you can copy the content of the CLI JSON file that can be used to create a cluster via Cloudbreak CLI. For more information, refer to [Obtain Cluster JSON Template from the UI](cli-get-started.md#obtain-cluster-json-template-from-the-ui).    
-
-Furthermore, Cloudbreak web UI includes an option in the UI which allows you to generate the  `create` command for resources such as credentials, blueprints, clusters, and recipes. For more information, refer to [Obtain CLI Command from the UI](cli-get-started.md#obtain-cli-command-from-the-ui).  
-____________________________
-
-
-##### New Recipe Types 
-
-New types of recipes are introduced:
-
-* PRE-AMBARI-START (new, useful for configuring Ambari prior to start)  
-* POST-AMBARI-START (formerly known as PRE)  
-* POST-CLUSTER-INSTALL (formerly known as POST)  
-* PRE-TERMINATION (new, useful for cluster cleanup pre-termination tasks)  
-
-Refer to updated [Recipes](recipes.md) documentation.
-____________________________
-
-
-##### Disabling Cloud Providers 
-
-You can hide cloud providers available in Cloudbreak by adding the `CB_ENABLEDPLATFORMS` environment variable in Profile and setting it to the provider(s) that you would like to have available. For more information, refer to [Disable Providers](cb-disable-provider.md).
-____________________________
-
-
-##### Support for Ambari 2.6 (2.6.1.3+)
-
-Cloudbreak 2.4.0 introduces support for Ambari 2.6 and uses Ambari 2.6.1.3 by default. If you would like to use Ambari 2.6, you must use Ambari version 2.6.1.3 or newer. 
-
-If you decide to use Ambari 2.6.1, you should be aware of the following:
-
-- Ambari 2.6.1 or newer does not install the mysqlconnector; therefore, when creating a blueprint for Ambari 2.6.1 or newer do not include the MYSQL_SERVER component for Hive Metastore in your blueprint. Instead, you have two options described in [Creating a Blueprint](blueprints.md#creating-a-blueprint).  
-- If you would like to use Oozie, you must manually install Ext JS. The steps are described in [Cannot Access Oozie Web UI](trouble-cluster.md#cannot-access-oozie-web-ui).   
-- To enable LZO compression in your HDP cluster, you must check the "Enable Ambari Server to download and install GPL Licensed LZO packages?" during cluster creation. The option is available under **Security** > **Prewarmed and Base Images**.  
-
-[Comment]: <> (Or should these be described as behavioral changes?) 
-____________________________
-
-
-##### Ambari Master Key 
-
-Cloudbreak 2.4.0 allows you to specify the Ambari Master Key. The Ambari Server Master Key is used to configure Ambari to encrypt database and Kerberos credentials that are retained by Ambari as part of the Ambari setup. The option is available on the **Security** page of the create cluster wizard.
-
-
-
-
-
-
 
 ____________________________
 
 #### Behavioral Changes
 ____________________________
-
-##### Custom Images
-
-The functionality which enables you to create custom images was changed and improved. Refer to [Custom Images](images.md).
-____________________________
-
-
-##### Prewarmed Images Are Used By Default  
-
-By default, Cloudbreak 2.4.0 launches clusters from prewarmed images, instead of base images (which were used by default in earlier versions of Cloudbreak). For more information, refer to [Prewardmed and Base Images](aws-create.md#prewarmed-and-base-images). 
-____________________________
-
-
-##### Removal of Cloudbreak Shell
-
-Cloudbreak Shell is not available in Cloudbreak 2.x. It was replaced by the [Cloudbreak CLI](cli-install.md).
-____________________________
-
-
-##### Removal of Platforms
-
-The [Platforms](http://hortonworks.github.io/cloudbreak-docs/release-1.16.5/topologies/) feature was removed and is not available in Cloudbreak 2.x.
-____________________________
-
-
-##### Removal of Mesos
-
-Mesos cloud provider is not supported and the corresponding options were removed in Cloudbreak 2.x.
-____________________________
-
-
-##### Removal of Templates
-
-Earlier versions of Cloudbreak allowed you to save infrastructure, network, and security group templates. This feature was removed. Instead, you can define VMs, storage, networks, and security groups as part of the create cluster wizard.
-____________________________
-
-
-##### cbd update Improvements 
-
-The following improvements were added for `cbd update`:
-
-* Cloudbreak performs an automatic backup to prevent accidental data loss.   
-* cbd delete requires confirmation.  
-* Cloudbreak stores `psql` command history on the data volume to help investigate support cases.    
-* There are two new files in the cbd deployment directory: .cbd_history and .cbd_output_history to help investigate support cases.   
-* The default 10 second stop timeout is increased to 60 seconds. This can be overridden by setting DOCKER_STOP_TIMEOUT (in seconds).  
-
 
 
  
