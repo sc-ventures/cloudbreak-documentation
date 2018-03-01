@@ -1,15 +1,15 @@
 ## Custom Images
 
-Default images are available for each supported cloud provider and region. The following table lists the default base images available: 
+Default images are available for each supported cloud provider and region. The following table lists the default base images available:
 
 [Comment]: <> (For AWS and Azure, per region images are provided.)
 
 | Cloud Provider | Default Image |
 |---|---|
-| AWS | Amazon Linux 2017 | 
-| Azure | CentOS 7 | 
+| AWS | Amazon Linux 2017 |
+| Azure | CentOS 7 |
 | GCP | CentOS 7 |  
-| OpenStack | CentOS 7 | 
+| OpenStack | CentOS 7 |
 
 Since these default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on) Cloudbreak allows you to use your own **custom base images**.
 
@@ -23,7 +23,7 @@ In order to use your own custom base images you must:
 <div class="danger">
     <p class="first admonition-title">Important</p>
     <p class="last">
-Only <strong>base images</strong> can be created and registered as custom images. Do not create or register <strong>prewarmed images</strong> as custom images. 
+Only <strong>base images</strong> can be created and registered as custom images. Do not create or register <strong>prewarmed images</strong> as custom images.
 </p>
 </div>
 
@@ -31,22 +31,22 @@ Only <strong>base images</strong> can be created and registered as custom images
 
 ### Build Custom Images
 
-Refer to [Custom Images for Cloudbreak](https://github.com/hortonworks/cloudbreak-images) for information on how to build custom images. 
+Refer to [Custom Images for Cloudbreak](https://github.com/hortonworks/cloudbreak-images) for information on how to build custom images.
 
 This repository includes instructions and scripts to help you build custom images. Once you have the images, refer to the documentation below for information on how to create an image catalog and register it with Cloudbreak.
 
 
-### Prepare the Image Catalog 
+### Prepare the Image Catalog
 
-Once you've built the custom images, prepare your custom image catalog JSON file. Once your image catalog JSON file is ready, save it in a location accessible via HTTP/HTTPS. 
- 
+Once you've built the custom images, prepare your custom image catalog JSON file. Once your image catalog JSON file is ready, save it in a location accessible via HTTP/HTTPS.
 
-#### Structure of the Image Catalog JSON File 
 
-The image catalog JSON file includes the following two high-level sections: 
+#### Structure of the Image Catalog JSON File
+
+The image catalog JSON file includes the following two high-level sections:
 
 * `images`: Contains information about the created images. The burned images are stored in the `base-images` section.  
-* `versions`: Contains the `cloudbreak` entry, which includes mapping between Cloudbreak versions and the image identifiers of burned images available for these Cloudbreak versions. 
+* `versions`: Contains the `cloudbreak` entry, which includes mapping between Cloudbreak versions and the image identifiers of burned images available for these Cloudbreak versions.
 
 **Images Section**  
 
@@ -71,17 +71,17 @@ The `versions` section includes a single "cloudbreak" entry, which maps the uuid
 | versions | The Cloudbreak version(s) for which you would like to use the images. |
 
 
-#### Example Image Catalog JSON File 
+#### Example Image Catalog JSON File
 
-Here is an example image catalog JSON file that includes two sets of custom base images: 
+Here is an example image catalog JSON file that includes two sets of custom base images:
 
 * A custom base image for AWS:
-    * That is using Amazon Linux operating system 
+    * That is using Amazon Linux operating system
     * That will use the Redhat 6 repos as default Ambari and HDP repositories during cluster create     
     * Has a unique ID of "44b140a4-bd0b-457d-b174-e988bee3ca47"
     * Is available for Cloudbreak 2.4.0    
-*  A custom base image for Azure, Google, and OpenStack: 
-    * That is using CentOS 7 operating system 
+*  A custom base image for Azure, Google, and OpenStack:
+    * That is using CentOS 7 operating system
     * That will use the Redhat 7 repos as default Ambari and HDP repositories during cluster create   
     * Has a unique ID of "f6e778fc-7f17-4535-9021-515351df3692"
     * Is available to Cloudbreak 2.4.0      
@@ -177,33 +177,40 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
 </small></pre>
 
 
-### Register Image Catalog 
+### Register Image Catalog
 
-Now that you have created your image catalog JSON file, register it with your Cloudbreak instance. 
+Now that you have created your image catalog JSON file, register it with your Cloudbreak instance.
+
+<div class="note">
+  <p class="first admonition-title">Important</p>
+  <p class="last">
+  Please note that the content type of your image catalog should be <i>"application/json"</i> otherwise Cloudbreak might not be able to process it.
+</p>
+</div>
 
 #### Register Image Catalog in the UI
 
-Use these steps to register your custom image catalog in the Cloudbreak UI. 
+Use these steps to register your custom image catalog in the Cloudbreak UI.
 
 **Steps**
 
 1. In the Cloudbreak UI, select **Settings** > **Image Catalogs** from the navigation menu.  
 2. Click **Create Image Catalog**.
     <a href="../images/cb-images-register.png" target="_blank" title="click to enlarge"><img src="../images/cb-images-register.png" width="650" title="Cloudbreak UI"></a>
-  
-3. Enter name for your image catalog and the URL to the location where it is stored. 
-4. Click **Create**. 
+
+3. Enter name for your image catalog and the URL to the location where it is stored.
+4. Click **Create**.
 
 After performing these steps, the image catalog will be available and automatically selected as the default entry in the image catalog drop-down list in the create cluster wizard.
 
 #### Register Image Catalog in the CLI
 
-To register your custom image catalog using the CLI, use the `cb imagecatalog create` command. Refer to [CLI documentation](cli-reference.md#imagecatalog-create). 
+To register your custom image catalog using the CLI, use the `cb imagecatalog create` command. Refer to [CLI documentation](cli-reference.md#imagecatalog-create).
 
 
 ### Select a Custom Image When Creating a Cluster
 
-Once you have registered your image catalog, you can use your custom image(s) when creating a cluster. 
+Once you have registered your image catalog, you can use your custom image(s) when creating a cluster.
 
 #### Select a Custom Image in Cloudbreak UI
 
@@ -225,7 +232,7 @@ To use the custom image when creating a cluster via CLI, perform these steps.
 
 **Steps**  
 
-1. Obtain the image ID. For example: 
+1. Obtain the image ID. For example:
 
     <pre>cb imagecatalog images aws --imagecatalog custom-catalog
 [
@@ -243,7 +250,7 @@ To use the custom image when creating a cluster via CLI, perform these steps.
   }
 ]</pre>
 
-2. When preparing a CLI JSON template for your cluster, set the "ImageCatalog" parameter to the image catalog that you would like to use, and set the "ImageId" parameter to the uuid of the image from that catalog that you would like to use. For example: 
+2. When preparing a CLI JSON template for your cluster, set the "ImageCatalog" parameter to the image catalog that you would like to use, and set the "ImageId" parameter to the uuid of the image from that catalog that you would like to use. For example:
 
     <pre>...
   "name": "aszegedi-cli-ci",
