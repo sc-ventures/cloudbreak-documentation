@@ -177,9 +177,17 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
 </small></pre>
 
 
-### Register Image Catalog 
 
-Now that you have created your image catalog JSON file, register it with your Cloudbreak instance. 
+### Register Image Catalog
+
+Now that you have created your image catalog JSON file, register it with your Cloudbreak instance.
+
+<div class="note">
+  <p class="first admonition-title">Important</p>
+  <p class="last">
+  The content type of your image catalog file should be <i>"application/json"</i> for Cloudbreak to be able to process it.
+</p>
+</div>
 
 #### Register Image Catalog in the UI
 
