@@ -184,7 +184,7 @@ Now that you have created your image catalog JSON file, register it with your Cl
 <div class="note">
   <p class="first admonition-title">Important</p>
   <p class="last">
-  The content type of your image catalog should be <i>"application/json"</i> for Cloudbreak to be able to process it.
+  The content type of your image catalog file should be <i>"application/json"</i> for Cloudbreak to be able to process it.
 </p>
 </div>
 
