@@ -284,7 +284,7 @@ Follow these steps to create an app based Cloudbreak credential.
 | Subscription Id | Copy and paste the Subscription ID from your **Subscriptions**. |
 | Tenant Id | Copy and paste your Directory ID from your **Active Directory** > **Properties**. |
 | App Id | Copy and paste the Application ID from your **Azure Active Directory** > **App Registrations** > your app registration's **Settings** > **Properties**. |
-| Password | This is your application key. You can generate it from your from your **Azure Active Directory** app registration's **Settings** > **Keys**. |
+| Password | This is your application key. You can generate it from your **Azure Active Directory** app registration's **Settings** > **Keys**. |
 
 
     To obtain the **Subscription Id** from Subscriptions: 
