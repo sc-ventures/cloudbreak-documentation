@@ -30,20 +30,6 @@ ____________________________
 
 
 
-
-
-##### (BUG-94801) New Default Images Including OS with Meltdown and Spectre Patches 
-
-All default images used by Cloudbreak were rebuilt. Each image now includes an updated version of the operating system with the following CPU security fixes: 
-
-* Cloudbreak image (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for Spectre Variant 1 and 3.  
-* Default HDP image for AWS (Amazon Linux): Moved to Amazon Linux 2017.09 version, which includes fixes for Spectre Variant 1, 2, and 3.  
-* Default HDP image for Azure, Google Cloud, and Openstack (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for Spectre Variant 1 and 3.  
-
-
-
-
-
 ____________________________
 
 #### Known Issues
