@@ -36,14 +36,7 @@ For more information on creating a Service Account and generating a P12 key, ref
 
 #### SSH Key Pair 
 
-[Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or use an existing SSH key pair. You will be required to provide it when launching the VM.  
-
-
-#### VPC Network 
-
-When launching Cloudbreak, you will be required to select an existing network in which Cloudbreak can be placed. The following ports must be open on the security group: 22 (for access via SSH), 80 (for access via HTTP), and 443 (for access via HTTPS). You may use the *default* network as long as the aforementioned ports are open. 
-
-You can manage networks under **Networking** > **VPC Networks**. To edit ports, click on the network name and then click on **Add firewall rules**.
+[Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or use an existing SSH key pair. You will be required to provide it when launching the VM. 
 
 #### Region and Zone 
 
@@ -53,6 +46,13 @@ Clusters created via Cloudbreak can be in the same or different region as Cloudb
 
 **Related Links**  
 [Regions and Zones](https://cloud.google.com/compute/docs/regions-zones/) (External)  
+
+
+#### VPC Network 
+
+When launching Cloudbreak, you will be required to select an existing network in which Cloudbreak can be placed. The following ports must be open on the security group: 22 (for access via SSH), 80 (for access via HTTP), and 443 (for access via HTTPS). You may use the *default* network as long as the aforementioned ports are open. 
+
+You can manage networks under **Networking** > **VPC Networks**. To edit ports, click on the network name and then click on **Add firewall rules**. 
 
 
 ### Launch the VM  
