@@ -35,7 +35,7 @@ If you would like to use a custom Ambari version, provide the following informat
 <p class="first admonition-title"> Ambari 2.6.1</p>
 <p class="last">If you would like to use Ambari <b>2.6.1</b>, use the version provided by default in the Cloudbreak web UI, or newer.</p></div>
 
-| Parameter | Description | Default |
+| Parameter | Description | Example |
 |---|---|---|
 | Version | Enter Ambari version. | 2.6.1.3 |
 | Repo Url | Provide a URL to the Ambari version repo that you would like to use. | http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.6.1.3 |
@@ -45,7 +45,7 @@ If you would like to use a custom Ambari version, provide the following informat
 
 If you would like to use a custom HDP version, provide the following information: 
 
-| Parameter | Description | Default | 
+| Parameter | Description | Example | 
 |---|---|--|
 | Stack | Stack name. | HDP |
 | Version | Stack version. | 2.6 |
