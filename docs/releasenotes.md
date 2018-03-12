@@ -6,8 +6,6 @@ Cloudbreak 2.4.0 is a general availability release, which is suitable for produc
 
 
 
-
-
 ____________________________
 
 #### New Features
@@ -204,7 +202,11 @@ All default images used by Cloudbreak were rebuilt. Each image now includes an u
 
 
 
+____________________________
 
+#### Image Catalog Updates 
+
+____________________________
 
 
 
