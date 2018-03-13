@@ -8,14 +8,10 @@ You have two options concerning using blueprints with Cloudbreak:
 * Add your custom blueprint by uploading a JSON file or pasting the JSON text. 
 
 We recommend that you review the default blueprints to check if they meet your requirements. You can do this by selecting **Blueprints** from the navigation pane in the Cloudbreak web UI or by reading the documentation below.
-  
-
-### Using Default Blueprints 
-
-To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. 
+ 
 
 
-#### Default Blueprints 
+### Default Blueprints 
 
 Cloudbreak includes the following default HDP cluster blueprints:
 
@@ -27,6 +23,12 @@ Platform Version: **HDP 2.6**
 | EDW - Analytics | <span><i class="fa fa-check" style="color: green"></i> Hive 2 LLAP</span>,<br>Zeppelin | Useful for EDW analytics using Hive LLAP. | HDFS, YARN, MapReduce2, Tez, Hive 2 LLAP, Druid, Pig, ZooKeeper, Ambari Metrics, Spark 2 | 
 | EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive,<br> Spark 2 | Useful for ETL data processing with Hive and Spark 2. | HDFS, YARN, MapReduce2, Tez, Hive, Pig, ZooKeeper, Ambari Metrics, Spark 2 |
 
+Platform Version: **HDF 3.1.1**
+
+| Cluster Type  | Main Services | Description |  List of All Services Included |
+|---|---|---|---|
+| Flow Management | <i class="fa fa-warning" style="color: red"></i> NiFi | Useful for flow management with NiFi. | NiFi, ZooKeeper, Ambari Metrics |
+
 
 The following configuration classification applies:
 <ul>
@@ -34,6 +36,8 @@ The following configuration classification applies:
 <li><i class="fa fa-warning" style="color: orange"></i> If you want to use a Technical Preview version of a component in a release of HDP, use these configurations.</li>
 <li><i class="fa fa-warning" style="color: red"></i> These are the most cutting edge of the configurations, including Technical Preview components in a Technical Preview HDP release.</li>
 </ul>
+
+To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. 
 
 
 ### Using Custom Blueprints 
