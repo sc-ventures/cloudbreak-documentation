@@ -10,6 +10,24 @@ ____________________________
 #### New Features
 ____________________________
 
+##### Launching Cloudbreak in Environments with Limited or No Internet Access 
+
+##### Launching Cloudbreak in Restricted Enterprise Environments
+
+##### Creating HDF Clusters 
+
+##### Configuring LDAP/AuthN for Cloudbreak
+
+##### Creating a External RDS
+
+##### Creating LDAP for Clusters 
+
+##### Auto-import of OpenStack Images
+
+##### Editing Existing Cloudbreak Credentials 
+
+
+
 
 ____________________________
 
