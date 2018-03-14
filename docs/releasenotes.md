@@ -4,30 +4,53 @@
 
 Cloudbreak 2.5.0 is a technical preview release. 
 
-
 ____________________________
 
 #### New Features
 ____________________________
 
-##### Launching Cloudbreak in Environments with Limited or No Internet Access 
-
-##### Launching Cloudbreak in Restricted Enterprise Environments
-
 ##### Creating HDF Clusters 
 
-##### Configuring LDAP/AuthN for Cloudbreak
+You can use Cloudbreak to create HDF clusters on AWS, Azure, Google Cloud and OpenStack. In the Cloudbreak web UI, you can do this by selecting "HDF 3.1" under Platform Version and then selecting an HDF blueprint.
 
-##### Creating a External RDS
+Cloudbreak includes one default HDF blueprint "Flow Management: Apache Nifi" and supports uploading your own custom blueprints. This feature supports HDF 3.1.1 blueprints. HDF clusters are currently launched from base images; prewarmed images are not available.  
 
-##### Creating LDAP for Clusters 
+For updated create cluster instructions, refer to [Creating a Cluster](aws-launch.md) instructions for your chosen cloud provider.
+For updated blueprint information, refer to [Default Blueprints](blueprints.md#default-blueprints). 
 
-##### Auto-import of OpenStack Images
+
+##### Using External RDS for Cluster Services 
+
+You can register an existing external RDS in the Cloudbreak UI or CLI so that the external RDS can be used for those cluster components which support using an external RDS. After the RDS has been registered in the Cloudbreak UI, it is available during the cluster create and can be reused with one or more clusters.  
+
+Only Postgre is supported at this time. Refer to component-specific documentation for information on which version of Postgres (if any) is supported.
+
+Cloudbreak does not configure the external RDS for you, the RDS must exist prior to registering it with Cloudbreak. 
+
+
+##### Configuring LDAP/AD for Clusters 
+
+You can configure Cloudbreak to create an LDAP/AD that can later be associated with Cloudbreak-managed clusters.
+
 
 ##### Editing Existing Cloudbreak Credentials 
 
+Cloudbreak allows you to edit existing credentials by using the edit option available in Cloudbreak UI or CLI. 
 
 
+##### Launching Cloudbreak in Environments with Limited or No Internet Access 
+
+You can launch Cloudbreak in environments with limited internet access or no internet access. 
+
+
+##### Configuring Existing LDAP for Cloudbreak
+
+You can configure Cloudbreak to use your existing LDAP/AD so that you can authenticate Cloudbreak users against an existing LDAP/AD server. 
+
+
+##### Auto-import of HDP/HDF Images on OpenStack
+
+When using Cloudbreak on OpenStack, you no longer need to import HDP and HDF images manually, because during your first attempt to create a cluster, Cloudbreak automatically imports HDP and HDF images to your OpenStack. Only Cloudbreak image must be imported manually. 
 
 ____________________________
 
@@ -41,6 +64,22 @@ ____________________________
 ____________________________
  
  
+##### March 16, 2018 
+
+[Comment]: <> (Update the date once the update is available.)
+
+Update 1:
+
+Default Ambari version 2.6.1.3  
+Default HDP version 2.6.4.5-2  
+Default HDF version 3.1.1.0-35   
+
+##### February 23, 2018
+
+Default Ambari version 2.6.1.3   
+Default HDP version  2.6.4.0-91    
+
+
 ____________________________
 
 #### Fixed Issues 
