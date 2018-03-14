@@ -9,7 +9,7 @@ ____________________________
 #### New Features
 ____________________________
 
-##### Creating HDF Clusters 
+##### **Creating HDF Clusters** 
 
 You can use Cloudbreak to create HDF clusters on AWS, Azure, Google Cloud and OpenStack. In the Cloudbreak web UI, you can do this by selecting "HDF 3.1" under Platform Version and then selecting an HDF blueprint.
 
@@ -19,7 +19,7 @@ For updated create cluster instructions, refer to [Creating a Cluster](aws-launc
 For updated blueprint information, refer to [Default Blueprints](blueprints.md#default-blueprints). 
 
 
-##### Using External RDS for Cluster Services 
+##### **Using External RDS for Cluster Services** 
 
 You can register an existing external RDS in the Cloudbreak UI or CLI so that the external RDS can be used for those cluster components which support using an external RDS. After the RDS has been registered in the Cloudbreak UI, it is available during the cluster create and can be reused with one or more clusters.  
 
@@ -28,29 +28,24 @@ Only Postgre is supported at this time. Refer to component-specific documentatio
 Cloudbreak does not configure the external RDS for you, the RDS must exist prior to registering it with Cloudbreak. 
 
 
-##### Configuring LDAP/AD for Clusters 
+##### **Configuring LDAP/AD for Clusters** 
 
-You can configure Cloudbreak to create an LDAP/AD that can later be associated with Cloudbreak-managed clusters.
-
-
-##### Editing Existing Cloudbreak Credentials 
-
-Cloudbreak allows you to edit existing credentials by using the edit option available in Cloudbreak UI or CLI. 
+You can configure Cloudbreak to create a new LDAP/AD that can later be associated with one or more Cloudbreak-managed clusters. This configuration can be perfrmed by using Cloudbreak UI or CLI.
 
 
-##### Launching Cloudbreak in Environments with Limited or No Internet Access 
+##### **Modifying Existing Cloudbreak Credentials** 
 
-You can launch Cloudbreak in environments with limited internet access or no internet access. 
+Cloudbreak allows you to modify existing credentials by using the edit option available in Cloudbreak UI or CLI. 
 
 
-##### Configuring Existing LDAP for Cloudbreak
+##### **Configuring Existing LDAP/AD for Cloudbreak**
 
 You can configure Cloudbreak to use your existing LDAP/AD so that you can authenticate Cloudbreak users against an existing LDAP/AD server. 
 
 
-##### Auto-import of HDP/HDF Images on OpenStack
+##### **Launching Cloudbreak in Environments with Limited or No Internet Access** 
 
-When using Cloudbreak on OpenStack, you no longer need to import HDP and HDF images manually, because during your first attempt to create a cluster, Cloudbreak automatically imports HDP and HDF images to your OpenStack. Only Cloudbreak image must be imported manually. 
+You can launch Cloudbreak in environments with limited internet access or no internet access. 
 
 ____________________________
 
@@ -58,13 +53,17 @@ ____________________________
 ____________________________
 
 
+##### **Auto-import of HDP/HDF Images on OpenStack**
+
+When using Cloudbreak on OpenStack, you no longer need to import HDP and HDF images manually, because during your first attempt to create a cluster, Cloudbreak automatically imports HDP and HDF images to your OpenStack. Only Cloudbreak image must be imported manually. 
+
 ____________________________
  
 #### Image Catalog Updates
 ____________________________
  
  
-##### March 16, 2018 
+##### **March 16, 2018** 
 
 [Comment]: <> (Update the date once the update is available.)
 
@@ -74,7 +73,7 @@ Default Ambari version 2.6.1.3
 Default HDP version 2.6.4.5-2  
 Default HDF version 3.1.1.0-35   
 
-##### February 23, 2018
+##### **February 23, 2018**
 
 Default Ambari version 2.6.1.3   
 Default HDP version  2.6.4.0-91    
@@ -97,7 +96,7 @@ ____________________________
 
 
 
-##### (BUG-96788) Azure Availability Set Option Is Not Available for Instance Count of 1
+##### (BUG-96788) **Azure Availability Set Option Is Not Available for Instance Count of 1**
 
 When creating a cluster, the Azure availability set feature is not available for host groups with the instance count of 1.
 
@@ -114,7 +113,7 @@ ____________________________
 
 
 
-##### (BUG-92605) Cluster Creation Fails with ResourceInError
+##### (BUG-92605) **Cluster Creation Fails with ResourceInError**
 
 Cluster creation fails with the following error: 
 
@@ -134,7 +133,7 @@ ____________________________
 
 
 
-##### (BUG-91013) Incorrect Node Status After Cluster Restart 
+##### (BUG-91013) **Incorrect Node Status After Cluster Restart** 
 
 You may sporadically experience an issue where after you stop and restart a cluster, the node status displayed in the "Hardware" section is incorrect.   
 
@@ -147,7 +146,7 @@ ____________________________
 
 
 
-##### (BUG-93241) Error When Scaling Multiple Host Groups 
+##### (BUG-93241) **Error When Scaling Multiple Host Groups** 
 
 Scaling of multiple host groups fails with the following error: 
 
@@ -164,7 +163,7 @@ ____________________________
 
 
 
-##### (BUG-96764) "Failed to remove instance" Error When Using the Delete Icon
+##### (BUG-96764) **"Failed to remove instance" Error When Using the Delete Icon**
 
 When trying to delete instances by using the delete icon on the cluster details in the **Hardware** tab, you will get the following error: "Failed to remove instance".
 
@@ -181,7 +180,7 @@ ____________________________
 
 
 
-##### (BUG-97044) Show CLI Command Copy JSON Button Does Not Work
+##### (BUG-97044) **Show CLI Command Copy JSON Button Does Not Work**
   
 When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** button with  Firefox, the content does not does not get copied if adblock plugin or other advertise blocker plugins are present.
 
@@ -196,7 +195,7 @@ ____________________________
 
 
 
-##### (BUG-95607) Special Characters in Blueprint Name Cause an Error in CLI  
+##### (BUG-95607) **Special Characters in Blueprint Name Cause an Error in CLI**  
 
 When registering a blueprint via `blueprint create` CLI command, if the name of the blueprint includes one or more of the following special characters `@#$%|:&*;` you will get an error similar to:  
 
@@ -218,7 +217,7 @@ ____________________________
 
 
 
-##### (BUG-93257) Clusters Are Missing From History   
+##### (BUG-93257) **Clusters Are Missing From History**   
 
 After changing the dates on the History page multiple times, the results displayed may sometimes be incorrect. 
 
@@ -233,7 +232,7 @@ ____________________________
 
 
 
-##### (AMBARI-14149) Ambari Cluster Cannot Be Started After Stop
+##### (AMBARI-14149) **Ambari Cluster Cannot Be Started After Stop**
 
 When using Ambari version 2.5.0.3, after stopping and starting a cluster, Event History shows the following error:
 
@@ -271,7 +270,7 @@ ____________________________
 
 
 
-##### (BUG-96784) Hive LLAP Start Takes More Than an Hour
+##### (BUG-96784) **Hive LLAP Start Takes More Than an Hour**
 
 Hive LLAP start times out in Ambari, but eventually it starts (after 15 minutes on AWS and after one hour or so on other providers).  
 ____________________________
@@ -282,7 +281,7 @@ ____________________________
 
 
 
-##### (BUG-96707) Druid Overload Does Not Start
+##### (BUG-96707) **Druid Overload Does Not Start**
 
 Druid overload start fails with the following error when using Ambari 2.6.1.3 and HDP 2.6.4.0: 
 
@@ -297,7 +296,7 @@ ____________________________
 
 
 
-##### (BUG-97080) Ambari Fils In Some Cases When an mpack is Installed 
+##### (BUG-97080) **Ambari Fils In Some Cases When an mpack is Installed** 
 
 If we set the following properties then cluster install may fail (in 20-30% of the cases), because of the Ambari agent cache being updated concurrently:
 
