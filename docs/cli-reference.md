@@ -330,7 +330,7 @@ __________________________________
 
 #### cloud availability-zones
 
-Lists the available availability zones in a region. 
+Lists all availability zones available in the specified cloud provider region. 
 
 **Required Options**
 
@@ -374,7 +374,7 @@ __________________________________
 
 #### cloud regions  
 
-Lists available regions. 
+Lists the available cloud provider regions. 
 
 **Required Options**
 
@@ -413,7 +413,7 @@ __________________________________
 
 #### cloud volumes
 
-Lists the available volume types. 
+Lists the available cloud provider volume types. 
 
 **Sub-commands**
 
@@ -467,7 +467,7 @@ __________________________________
 
 #### cloud instances 
  
-Lists the available instance types.
+Lists the available cloud provider instance types.
 
 **Required Options**
 
@@ -549,7 +549,7 @@ __________________________________
 
 #### cluster create 
 
-Creates a new cluster based on a JSON template.
+Creates a new cluster based on a JSON template. 
 
 **Required Options**
 
@@ -819,13 +819,13 @@ Scales a cluster by adding or removing nodes.
 
 **Required Options**
 
-**`--name <value>`**  Name of the cluster
-**`--group-name <value>`**  Name of the group to scale
-**`--desired-node-count <value>`**  Desired number of nodes
+**`--name <value>`**  Name of the cluster  
+**`--group-name <value>`**  Name of the group to scale  
+**`--desired-node-count <value>`**  Desired number of nodes  
 
 **Options**
 
-**`--wait`**  Wait for the operation to finish. No argument is required  
+**`--wait`**  Wait for the operation to finish. No argument is required   
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
 **`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
 **`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
@@ -1244,7 +1244,7 @@ __________________________________
 
 #### imagecatalog delete
 
-Deletes a previously registered custom image catalog. 
+Deletes a previously registered custom image catalog. It does not delete any cloud provider resources that you created as a prerequisite for creating the Cloudbreak credential.    
 
 **Required Options**  
 
@@ -1440,28 +1440,28 @@ Creates a new LDAP, which can later be used for Cloudbreak-managed clusters.
 
 **Required Options**
 
-**`--name <value>'**  Name for the LDAP       
-**`--ldap-server <value>'**  Address of the LDAP server (e.g. ldap://10.0.0.1:384)  
-**`--ldap-domain <value>'**   LDAP domain (e.g. ad.cb.com)  
-**`--ldap-bind-dn <value>'**  LDAP bind DN (e.g. CN=Administrator,CN=Users,DC=ad,DC=cb,DC=com)  
-**`--ldap-bind-password <value>'**  LDAP bind password  
-**`--ldap-directory-type <value>'**   LDAP directory type (LDAP or ACTIVE_DIRECTORY)   
-**`--ldap-user-search-base <value>'**   LDAP user search base (e.g. CN=Users,DC=ad,DC=cb,DC=com)  
-**`--ldap-user-name-attribute <value>'**   LDAP user name attribute  
-**`--ldap-user-object-class <value>'**   LDAP user object class  
-**`--ldap-group-member-attribute <value>'** LDAP group member attribute  
-**`--ldap-group-name-attribute <value>'**  LDAP group name attribute  
-**`--ldap-group-object-class <value>'**  LDAP group object class  
-**`--ldap-group-search-base <value>'**   LDAP group search base (e.g. OU=scopes,DC=ad,DC=cb,DC=com)  
+**`--name <value>`**  Name for the LDAP       
+**`--ldap-server <value>`**  Address of the LDAP server (e.g. ldap://10.0.0.1:384)  
+**`--ldap-domain <value>`**   LDAP domain (e.g. ad.cb.com)  
+**`--ldap-bind-dn <value>`**  LDAP bind DN (e.g. CN=Administrator,CN=Users,DC=ad,DC=cb,DC=com)  
+**`--ldap-bind-password <value>`**  LDAP bind password  
+**`--ldap-directory-type <value>`**   LDAP directory type (LDAP or ACTIVE_DIRECTORY)   
+**`--ldap-user-search-base <value>`**   LDAP user search base (e.g. CN=Users,DC=ad,DC=cb,DC=com)  
+**`--ldap-user-name-attribute <value>`**   LDAP user name attribute  
+**`--ldap-user-object-class <value>`**   LDAP user object class  
+**`--ldap-group-member-attribute <value>`** LDAP group member attribute  
+**`--ldap-group-name-attribute <value>`**  LDAP group name attribute  
+**`--ldap-group-object-class <value>`**  LDAP group object class  
+**`--ldap-group-search-base <value>`**   LDAP group search base (e.g. OU=scopes,DC=ad,DC=cb,DC=com)  
 
 **Options**
 
-**`--ldap-admin-group <value>'**  LDAP group of administrators  
+**`--ldap-admin-group <value>`**  LDAP group of administrators  
 **`--description <value>`**  Description for the LDAP      
 **`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
 **`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
 **`--password <value>`**  Cloudbreak password [$CB_PASSWORD]   
-**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE] 
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
 **`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 **`--public`**   Public in account  
 
@@ -1539,7 +1539,7 @@ Lists existing LDAPs:
 
 Lists existing LDAPs, with output presented in a table format:
 
-<pre>cb ldap list --output table
+<pre>cb ldap list --output table</pre>
 
 
 
@@ -1567,9 +1567,9 @@ Registers an existing proxy with Cloudbreak.
 
 **Required Options**
 
-**`--name <value>'**  Name for the proxy     
-**`--proxy-host <value>'**  Hostname or IP address of the proxy
-**`--proxy-port <value>'**  Port of the proxy 
+**`--name <value>`**  Name for the proxy     
+**`--proxy-host <value>`**  Hostname or IP address of the proxy  
+**`--proxy-port <value>`**  Port of the proxy  
 
 **Options**
 
@@ -1580,7 +1580,7 @@ Registers an existing proxy with Cloudbreak.
 **`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
 **`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
 **`--password <value>`**  Cloudbreak password [$CB_PASSWORD]   
-**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE] 
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
 **`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 **`--public`**   Public in account  
 
@@ -1658,7 +1658,7 @@ Lists existing proxy registrations:
 
 Lists existing proxy registrations, with output presented in a table format:
 
-<pre>cb proxy list --output table
+<pre>cb proxy list --output table</pre>
 
 
 
@@ -1682,13 +1682,13 @@ Registers an existing external RDS with Cloudbreak.
 
 **Required Options**
 
-**`--name <value>'**   Name for the RDS   
-**`--rds-username <value>'**  Username for the JDBC connection  
-**`--rds-password <value>'**  Password for the JDBC connection  
-**`--url <value>'**  JDBC connection URL in the form of jdbc:<db-type>://<address>:<port>/<db>  
-**`--driver <value>'**   Name of the JDBC connection driver (for example: 'org.postgresql.Driver')  
-**`--database-engine <value>'**   Name of the external database engine (MYSQL, POSTGRES...)  
-**`--type <value>'**   Name if the service that will use the RDS (HIVE, DRUID, SUPERSET, RANGER, etc.)    
+**`--name <value>`**   Name for the RDS   
+**`--rds-username <value>`**  Username for the JDBC connection  
+**`--rds-password <value>`**  Password for the JDBC connection  
+**`--url <value>`**  JDBC connection URL in the form of jdbc:db-type://address:port/db  
+**`--driver <value>`**   Name of the JDBC connection driver (for example: 'org.postgresql.Driver')  
+**`--database-engine <value>`**   Name of the external database engine (MYSQL, POSTGRES...)  
+**`--type <value>`**   Name if the service that will use the RDS (HIVE, DRUID, SUPERSET, RANGER, etc.)    
 
 **Options**
 
@@ -1697,8 +1697,8 @@ Registers an existing external RDS with Cloudbreak.
 **`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
 **`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
 **`--password <value>`**  Cloudbreak password [$CB_PASSWORD]   
-**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE] 
-**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   
 **`--public`**   Public in account  
 
 **Examples**
@@ -1707,7 +1707,7 @@ Registers an existing Postgres RDS called "test-rds" with Cloudbreak:
 
 <pre>cb rds create --name testrds --rds-username testuser --rds-password MySecurePassword123 --url jdbc:postgresql://test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432/testdb --driver 'org.postgresql.Driver' --database-engine POSTGRES --type HIVE</pre>
 
-The connection URL includes three components <db-type>://<address>:<port>/<db>: 
+The connection URL includes three components db-type://address:port/db: 
 
 * Database type "jdbc:postgresql"  
 * Endpoint "test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432"  
@@ -1788,7 +1788,7 @@ Lists existing rds registrations:
 
 Lists existing rds registrations, with output presented in a table format:
 
-<pre>cb rds list --output table
+<pre>cb rds list --output table</pre>
 
 
 
