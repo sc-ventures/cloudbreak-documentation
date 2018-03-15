@@ -58,7 +58,7 @@ The burned images are stored in the `base-images` sub-section of `images`. The `
 | description | Description for your image catalog entry. |
 | images | The image sets by cloud provider. An image set must store the virtual machine image IDs by the related region of the provider (AWS, Azure) or contain one default image for all regions (GCP, OpenStack). The virtual machine image IDs come from the result of the image burning process and must be an existing identifier of a virtual machine image on the related provider side. For the providers which use global rather than per-region images, the region should be replaced with **`default`**. |
 | os | The operating system used in the image. |
-| os_type | The type of operating system which will be used to determine the default Ambari and HDP repositories to use. Set `os_type` to "redhat6" for amazonlinux or centos6 images. Set `os_type` to "redhat7" for centos7 or rhel7 images. |
+| os_type | The type of operating system which will be used to determine the default Ambari and HDP/HDF repositories to use. Set `os_type` to "redhat6" for amazonlinux or centos6 images. Set `os_type` to "redhat7" for centos7 or rhel7 images. |
 | uuid | The `uuid` field must be a unique identifier within the file. You can generate it or select it manually. The utility `uuidgen` available from your command line is a convenient way to generate a unique ID. |
 
 **Versions Section**  
@@ -221,7 +221,7 @@ Perform these steps in the advanced **General Configuration** section of the cre
 1. Under **Choose Image Catalog**, select your custom image catalog.  
 2. Under **Base Images** > **Choose Image**, select the provider-specific image that you would like to use.   
     The "os" that you specified in the image catalog will be displayed in the selection and the content of the "description" will be displayed in green.    
-3. You can leave the default entries for the Ambari and HDP repositories, or you can customize to point to specific versions of Ambari and HDP that you want to use for the cluster.  
+3. You can leave the default entries for the Ambari and HDP repositories, or you can customize to point to specific versions of Ambari and HDP/HDF that you want to use for the cluster.  
 
     <a href="../images/cb-images.png" target="_blank" title="click to enlarge"><img src="../images/cb-images.png" width="650" title="Cloudbreak UI"></a>
 

@@ -1,6 +1,6 @@
 ## Recipes
 
-Although Cloudbreak lets you provision HDP clusters in the cloud based on custom Ambari blueprints, Cloudbreak provisioning options don't consider all possible use cases. For that reason, we introduced recipes. 
+Although Cloudbreak lets you provision clusters in the cloud based on custom Ambari blueprints, Cloudbreak provisioning options don't consider all possible use cases. For that reason, we introduced recipes. 
 
 A recipe is a script that runs on all nodes of a selected node group before or after the Ambari cluster installation. You can use recipes for tasks such as installing additional software or performing advanced cluster configuration. For example, you can use a recipe to put a JAR file on the Hadoop classpath.
 

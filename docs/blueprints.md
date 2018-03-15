@@ -1,6 +1,6 @@
 ## Blueprints
 
-**Ambari blueprints** are your declarative definition of your HDP cluster, defining the host groups and which components to install on which host group. Ambari uses them as a base for your clusters. 
+**Ambari blueprints** are your declarative definition of your HDP or HDF cluster, defining the host groups and which components to install on which host group. Ambari uses them as a base for your clusters. 
 
 You have two options concerning using blueprints with Cloudbreak:
 
@@ -9,7 +9,6 @@ You have two options concerning using blueprints with Cloudbreak:
 
 We recommend that you review the default blueprints to check if they meet your requirements. You can do this by selecting **Blueprints** from the navigation pane in the Cloudbreak web UI or by reading the documentation below.
  
-
 
 ### Default Blueprints 
 

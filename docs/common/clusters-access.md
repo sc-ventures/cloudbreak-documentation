@@ -61,9 +61,9 @@ The summary bar includes the following information about your cluster:
 | Blueprint | The name of the blueprint selected under "Cluster Type" to create this cluster. |
 | Created With | The version of Cloudbreak used to create this cluster. |
 | Ambari Version | The Ambari version which this cluster is currently running. |
-| HDP Version | The HDP version which this cluster is currently running. |
+| HDP/HDF Version | The HDP or HDF version which this cluster is currently running. |
 
-[comment]: <> (Regarding Ambari and HDP version, if I upgrade, should this show the current version or the original version?)
+[comment]: <> (Regarding Ambari and HDP/HDF version, if I upgrade, should this show the current version or the original version?)
 
 #### Hardware
 
@@ -82,7 +82,7 @@ This section includes recipe-related information. For each recipe, you can see t
 
 #### Repository Details 
 
-This section includes Ambari and HDP repository information, as you provided it in the "Base Images" section when creating a cluster.
+This section includes Ambari and HDP/HDF repository information, as you provided it in the "Base Images" section when creating a cluster.
 
 
 #### Image Details

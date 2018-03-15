@@ -12,20 +12,20 @@ Cloudbreak supports the following types of images for launching clusters:
 
 | Image Type | Description | Default Images Provided | Support for Custom Images |
 |---|---|---|---|
-| **Base Images** | Base images include default configuration and default tooling. These images include the operating system but do not include Ambari or HDP software. | Yes | Yes | 
-| **Prewarmed Images** | By default, Cloudbreak launches clusters from prewarmed images. Prewarmed images include the operating system as well as Ambari and HDP. The HDP and Ambari version used by prewarmed images cannot be customized. | Yes | No |
+| **Base Images** | Base images include default configuration and default tooling. These images include the operating system but do not include Ambari or HDP/HDF software. | Yes | Yes | 
+| **Prewarmed Images** | By default, Cloudbreak launches clusters from prewarmed images. Prewarmed images include the operating system as well as Ambari and HDP. The Ambari and HDP version used by prewarmed images cannot be customized. No prewarmed HDF images are currently provided. | Yes (HDP only) | No |
 
 By default, Cloudbreak uses the included default **prewarmed images**, which include the operating system, as well as
-Ambari and HDP packages installed. You can optionally select the **base image** option if you would like to:
+Ambari and HDP/HDF packages installed. You can optionally select the **base image** option if you would like to:
 
-* Use an Ambari and HDP versions different than what the prewarmed image includes and/or  
+* Use an Ambari and HDP/HDF versions different than what the prewarmed image includes and/or  
 * Choose a previously created custom base image
 
 **Choose Image**  
 
 If under [Choose Image Catalog](#choose-image-catalog), you selected a custom image catalog, under **Choose Image** you can select an image from that catalog. For complete instructions, refer to [Custom Images](images.md). 
 
-If you are trying to customize Ambari and HDP versions, you can ignore the **Choose Image** option; in this case default base image is used.
+If you are trying to customize Ambari and HDP/HDF versions, you can ignore the **Choose Image** option; in this case default base image is used.
 
 **Ambari Repository Specification**
 
@@ -41,9 +41,9 @@ If you would like to use a custom Ambari version, provide the following informat
 | Repo Url | Provide a URL to the Ambari version repo that you would like to use. | http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.6.1.3 |
 | Repo Gpg Key Url | Provide a URL to the repo GPG key. Each stable RPM package that is published by CentOS Project is signed with a GPG signature. By default, yum and the graphical update tools will verify these signatures and refuse to install any packages that are not signed, or have an incorrect signature. | http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins | 
 
-**HDP Repository Specification**
+**HDP or HDF Repository Specification**
 
-If you would like to use a custom HDP version, provide the following information: 
+If you would like to use a custom HDP or HDF version, provide the following information: 
 
 | Parameter | Description | Example | 
 |---|---|--|
@@ -52,9 +52,12 @@ If you would like to use a custom HDP version, provide the following information
 | OS | Operating system. | centos7 (Azure, GCP, OpenStack) or amazonlinux (AWS) |
 | Repository Version | Enter repository version. | 2.6.4.0-91 |
 | Version Definition File | Enter the URL of the VDF file. | http://public-repo-1.hortonworks.com/HDP/centos6/2.x/updates/2.6.4.0/HDP-2.6.4.0-91.xml |
-| Enable Ambari Server to download and install GPL Licensed LZO packages? | (Optional, only available if using Ambari 2.6.1.0 or newer) Use this option to enable LZO compression in your HDP cluster. LZO is a lossless data compression library that favors speed over compression ratio. Ambari does not install nor enable LZO compression libraries by default, and must be explicitly configured to do so. For more information, refer to [Enabling LZO](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.0/bk_ambari-administration/content/enabling_lzo.html).| <img src="../images/toggle.png" alt="On" /> |
+| (HDF only) MPack Url | (HDF only) Provide MPack URL. | http://public-repo-1.hortonworks.com/HDF/centos7/3.x/updates/3.1.1.0/tars/hdf_ambari_mp/hdf-ambari-mpack-3.1.1.0-35.tar.gz |
+| Enable Ambari Server to download and install GPL Licensed LZO packages? | (Optional, only available if using Ambari 2.6.1.0 or newer) Use this option to enable LZO compression in your HDP/HDF cluster. LZO is a lossless data compression library that favors speed over compression ratio. Ambari does not install nor enable LZO compression libraries by default, and must be explicitly configured to do so. For more information, refer to [Enabling LZO](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.0/bk_ambari-administration/content/enabling_lzo.html).| <img src="../images/toggle.png" alt="On" /> |
 
-> If you choose to use a base image with custom Ambari and/or HDP version, Cloudbreak validates the information entered. When Cloudbreak detects that the information entered is incorrect, it displays a warning marked with the <img src="../images/warning.png" width="25" title="Icon"> sign. You should review all the warnings before proceeding and make sure that the information that you entered is correct. If you choose to proceed in spite of the warnings, check "Ignore repository warnings".  
+> If you choose to use a base image with custom Ambari and/or HDP/HDF version, Cloudbreak validates the information entered. When Cloudbreak detects that the information entered is incorrect, it displays a warning marked with the <img src="../images/warning.png" width="25" title="Icon"> sign. You should review all the warnings before proceeding and make sure that the information that you entered is correct. If you choose to proceed in spite of the warnings, check "Ignore repository warnings".  
+ 
+
 
 **Related Links**      
 [Custom Images](images.md)      

@@ -28,7 +28,6 @@ pages:
       - Create a Cluster: azure-create.md
       - Access Cluster: azure-clusters-access.md
       - Manage and Monitor Clusters: azure-clusters-manage.md
-      - Access Data on Azure: azure-data.md
     - GCP:
       - Launch on GCP: gcp-launch.md
       - Create a Cluster: gcp-create.md

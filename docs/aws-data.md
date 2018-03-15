@@ -1,6 +1,6 @@
 ## Access Data on S3  
 
-Amazon S3 is not supported as a default file system, but access to data in Amazon S3 is possible via the s3a connector. 
+Use these steps to configure access from your cluster to Amazon S3. 
 
 ### Prerequisites
 
@@ -12,7 +12,7 @@ To use S3 storage, you must have one or more S3 buckets on your AWS account. For
 
 ### Creating an IAM Role for S3 Access 
 
-In order to configure access from your cluster to Amazon S3, you must have an existing IAM role which determines what actions can be performed on which S3 buckets. If you do not have an existing IAM role, use these steps to create one. 
+In order to configure access from your cluster to Amazon S3, you must have an existing IAM role which determines what actions can be performed on which S3 buckets. If you already have an IAM role, skip to the next step. If you do not have an existing IAM role, use the following instructions to create one. 
 
 **Steps**
 
@@ -56,9 +56,11 @@ To configure access to S3 with an instance profile, follow these steps.
 During the cluster creation process, Cloudbreak assigns the IAM role and its associated permissions to the EC2 instances that are part of the cluster so that applications running on these instances can use the role to access S3.   
 
 
-### Testing Access to S3
+### Testing Access from HDP to S3
 
-To tests access to S3, SSH to a cluster node and run a few hadoop fs shell commands against your existing S3 bucket.
+Amazon S3 is not supported in HDP as a default file system, but access to data in Amazon S3 is possible via the s3a connector. 
+
+To tests access to S3 from HDP, SSH to a cluster node and run a few hadoop fs shell commands against your existing S3 bucket.
 
 Amazon S3 access path syntax is:
 
@@ -79,10 +81,7 @@ hadoop fs -put testFile s3a://mytestbucket/testFile
 hadoop fs -cat s3a://mytestbucket/testFile
 test file content</pre>
 
-
-### Working with S3 
-
-For more information about configuring the S3 connector and working with data stored on S3, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) documentation.
+For more information about configuring the S3 connector for HDP and working with data stored on S3, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) documentation.
 
 **Related Links**  
 [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) (Hortonworks)

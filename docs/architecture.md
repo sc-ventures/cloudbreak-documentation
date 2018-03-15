@@ -18,7 +18,7 @@
 
 ### Cloudbreak Application Architecture 
 
-The Cloudbreak application is a web application which simplifies HDP cluster provisioning in the cloud. Based on your input, Cloudbreak provisions all required cloud infrastructure and then provisions an HDP cluster on your behalf within your cloud provider account.   
+The Cloudbreak application is a web application which simplifies cluster provisioning in the cloud. Based on your input, Cloudbreak provisions all required cloud infrastructure and then provisions a cluster on your behalf within your cloud provider account.   
 
 <a href="../images/arch.png" target="_blank" title="click to enlarge"><img src="../images/arch.png" width="550" title="Cloudbreak architecture"></a> 
 
@@ -26,9 +26,9 @@ Cloudbreak application is built on the foundation of cloud provider APIs and Apa
     
 * Cloudbreak uses **cloud provider APIs** to communicate with the cloud providers. 
 
-* Cloudbreak uses the **Cloudbreak credential** to authenticate with your cloud provider account and provision cloud resources required for the HDP clusters. 
+* Cloudbreak uses the **Cloudbreak credential** to authenticate with your cloud provider account and provision cloud resources required for the clusters. 
     
-* Cloudbreak uses Apache Ambari and **Ambari blueprints** to provision, manage, and monitor HDP clusters. Ambari blueprints are a declarative definition of a cluster. With a blueprint, you can specify stack, component layout, and configurations to materialize an HDP cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard.     
+* Cloudbreak uses Apache Ambari and **Ambari blueprints** to provision, manage, and monitor clusters. Ambari blueprints are a declarative definition of a cluster. With a blueprint, you can specify stack, component layout, and configurations to materialize a cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard.     
     
 
 
@@ -47,7 +47,7 @@ Cloudbreak credential allows Cloudbreak to authenticate with the cloud provider 
 
 #### Ambari Blueprints
 
-Ambari blueprints are a declarative definition of a cluster. A blueprint allows you to specify stack, component layout, and configurations to materialize an HDP cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard.  
+Ambari blueprints are a declarative definition of a cluster. A blueprint allows you to specify stack, component layout, and configurations to materialize a cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard.  
 
 Ambari blueprints are specified in JSON format. After you provide the blueprint to Cloudbreak, the host groups in the JSON are mapped to a set of instances when starting the cluster, and the specified services and components are installed on the corresponding nodes.
 

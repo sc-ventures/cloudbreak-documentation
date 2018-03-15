@@ -55,9 +55,7 @@ After creating a cluster, you can view your spot instance requests, including bi
 
 #### File System 
 
-HDP uses HDFS as the default filesystem and it supports accessing the Amazon S3 object store through the S3A connector. 
-
-If you would like to access S3 through the S3A connector, you must configure access to S3 trough an instance profile. For instructions, refer to [Configuring Access to S3](aws-data.md#configuring-access-to-s3). 
+If you would like to access S3 from your cluster, you must configure access to S3 trough an instance profile. For instructions, refer to [Configuring Access to S3](aws-data.md#configuring-access-to-s3). 
 
 
 {!docs/common/create-adv-4.md!}
