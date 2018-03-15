@@ -2,7 +2,7 @@
 
 Welcome to the **Cloudbreak 2.5 Technical Preview** documentation!
 
-Cloudbreak simplifies the provisioning, management, and monitoring of on-demand HDP clusters in virtual and cloud environments. It leverages cloud infrastructure to create host instances, and uses Apache Ambari via Ambari blueprints to provision and manage HDP clusters. 
+Cloudbreak simplifies the provisioning, management, and monitoring of on-demand HDP and HDF clusters in virtual and cloud environments. It leverages cloud infrastructure to create host instances, and uses Apache Ambari via Ambari blueprints to provision and manage HDP clusters. 
 
 Cloudbreak allows you to create clusters using the Cloudbreak web UI, Cloudbreak CLI, and Cloudbreak REST API. Clusters can be launched on public cloud infrastructure platforms **Microsoft Azure**, **Amazon Web Services (AWS)**, and **Google Cloud Platform (GCP)**, and on the private cloud infrastructure platform **OpenStack**.
 
@@ -11,11 +11,19 @@ Cloudbreak allows you to create clusters using the Cloudbreak web UI, Cloudbreak
 
 ### Primary Use Cases
 
-Cloudbreak allows you to create, manage, and monitor your clusters on your chosen cloud platform:
+Cloudbreak allows you to create, manage, and monitor your HDP and HDF clusters on your chosen cloud platform:
 
 * Dynamically deploy, configure, and manage clusters on public and private clouds (AWS, Azure, Google Cloud, OpenmStack).   
 * Use automated scaling to seamlessly manage elasticity requirements as cluster workloads change.  
 * Secure your cluster by enabling Kerberos.   
+
+### Default Cluster Configurations
+
+Cloudbreak includes default cluster configurations (in the form of bleuprints) and supports using your own custom cluster configurations (in the form of custom blueprints).
+
+The following default cluster configurations are available:
+
+{!docs/common/cluster-configs.md!}
 
 ### Architecture
 
