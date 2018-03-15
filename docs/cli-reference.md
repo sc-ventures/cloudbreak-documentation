@@ -1435,7 +1435,7 @@ __________________________________
 
 #### ldap create
 
-Creates a new LDAP, which can later be used for Cloudbreak-managed clusters.
+Registers an existing LDAP with Cloudbreak.
  
 
 **Required Options**
@@ -1479,7 +1479,7 @@ __________________________________
  
 #### ldap delete
 
-Deletes selected LDAP. 
+Deletes selected LDAP registration from Cloudbreak. It does not delete the LDAP. 
 
 **Required Options**
 
