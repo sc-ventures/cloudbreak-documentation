@@ -1,7 +1,7 @@
 ## Configuring LDAP
 
 
-Before [creating a data lake](create-data-lake.md), you must register an existing authentication source:
+You can register an existing LDAP with Cloudbreak and use it for one or more clusters.
 
 <div class="danger">
     <p class="first admonition-title">Important</p>
@@ -10,8 +10,7 @@ Registering an authentication source <strong>does not create the LDAP instance</
 	</p>
 </div> 
 
-### Registering an Authentication Source
-
+**Steps**
 
 1. From the controller UI navigation menu, select **SHARED SERVICES**.
 
@@ -53,36 +52,6 @@ Registering an authentication source <strong>does not create the LDAP instance</
 5. Click **Test connection** to verify that the connection information that you entered is correct.
  
 6. Click **REGISTER LDAP**. 
-
-Now that you've registered an authentication source, you can proceed to [create a data lake](create-data-lake.md).
-
-> Prior to creating Data Lake Services you must create an RDS instance for Hive, Ranger, and Ambari databases. For instructions, refer to [Creating an Amazon RDS Instance](metastore.md#creating-an-amazon-rds-instance).
-
-
-### Viewing Existing Authentication Sources
-
-1. From the controller UI navigation menu, select **SHARED SERVICES**.
-
-2. Select **AUTHENTICATION SORUCES** and the list of registered shared services, including authentication sources is displayed.
-
-To view the details of a specific authentication source, click on its corresponding entry.
-
-
-
-### Deleting an Existing Authentication Source
-
-1. From the controller UI navigation menu, select **SHARED SERVICES**.
-
-1. The list of registered shared services is displayed with **AUTHENTICATION SOURCES** pre-selected. 
-
-1. Click on the control icon next to the authentication source name.
-
-1. Click **DELETE LDAP** and then **YES, DELETE LDAP**. This unregisters the authentication source with the cloud controller, but does not terminate the LDAP instance.
-
-
-### Managing Authentication Sources via CLI
-
-This option is currently unavailable.
 
 
 
