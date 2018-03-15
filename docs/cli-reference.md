@@ -81,7 +81,21 @@ Image Catalog
 * [imagecatalog images](#imagecatalog-images)                      
 * [imagecatalog list](#imagecatalog-list)  
 * [imagecatalog set-default](#imagecatalog-set-default)            
+   
        
+Ldap:
+
+* [ldap create](#ldap-create)  
+* [ldap delete](#ldap-delete)  
+* [ldap list](#ldap-list)
+
+
+Proxy:
+
+* [proxy create](#proxy-create)  
+* [proxy delete](#proxy-delete)  
+* [proxy list](#proxy-list)
+
 
 Recipe:  
        
@@ -89,7 +103,13 @@ Recipe:
 * [recipe delete](#recipe-delete)            
 * [recipe describe](#recipe-describe)            
 * [recipe list](#recipe-list)              
-            
+       
+       
+Rds:            
+
+* [rds create](#rds-create)  
+* [rds delete](#rds-delete)  
+* [rds list](#rds-list)
 
 
 
@@ -128,12 +148,12 @@ Adds a new blueprint from a file or from a URL.
 **Options**
 
 **`--description <value>`**  Description of the resource  
-**`--public`**  Public in account  
-**`--server <value>`** Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`** User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
-**`--profile <value>`** Selects a config profile to use [$CB_PROFILE] 
-
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`** Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
+**`--public`**   Public in account  
 
 **Examples**
 
@@ -172,10 +192,11 @@ Deletes an existing blueprint.
 
 [comment]: <> (This also has "--output option", which I believe should not be there.)
 
-**`--server <value>`** Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`** User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
-**`--profile <value>`** Selects a config profile to use [$CB_PROFILE] 
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`** Selects a config profile to use [$CB_PROFILE]   
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
@@ -207,11 +228,12 @@ Describes an existing blueprint.
 
 **Options**
 
-**`--server <value>`** Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`** User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
 **`--profile <value>`** Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
@@ -249,65 +271,52 @@ Nome
 
 **Options**
 
-**`--server <value>`** Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`** User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--output <value>`** Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]   
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
 **`--profile <value>`** Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`** Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
 <pre>cb blueprint list
 [
   {
-    "Name": "Data Science: Apache Spark 2.1, Apache Zeppelin 0.7.0",
-    "Description": "Data Science: Apache Spark 2.1, Apache Zeppelin 0.7.0",
+    "Name": "EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin",
+    "Description": "Useful for EDW analytics using Hive LLAP",
     "HDPVersion": "2.6",
     "HostgroupCount": "3",
     "Tags": "DEFAULT"
   },
   {
-    "Name": "EDW-ETL: Apache Hive 1.2.1, Apache Spark 2.1",
-    "Description": "EDW-ETL: Apache Hive 1.2.1, Apache Spark 2.1",
+    "Name": "Data Science: Apache Spark 2, Apache Zeppelin",
+    "Description": "Useful for data science with Spark and Zeppelin",
     "HDPVersion": "2.6",
     "HostgroupCount": "3",
     "Tags": "DEFAULT"
   },
   {
-    "Name": "26EDW-ETL: Apache Hive 1.2.1, Apache Spark 1.6",
-    "Description": "26EDW-ETL: Apache Hive 1.2.1, Apache Spark 1.6",
+    "Name": "EDW-ETL: Apache Hive, Apache Spark 2",
+    "Description": "Useful for ETL data processing with Hive and Spark",
     "HDPVersion": "2.6",
     "HostgroupCount": "3",
     "Tags": "DEFAULT"
   },
   {
-    "Name": "Data Science: Apache Spark 1.6, Apache Zeppelin 0.7.0",
-    "Description": "Data Science: Apache Spark 1.6, Apache Zeppelin 0.7.0",
-    "HDPVersion": "2.6",
-    "HostgroupCount": "3",
+    "Name": "Flow Management: Apache NiFi",
+    "Description": "Useful for data-flow management with Apache NiFi",
+    "HDPVersion": "3.1",
+    "HostgroupCount": "2",
     "Tags": "DEFAULT"
   },
   {
-    "Name": "BI: Druid 0.9.2 (Technical Preview)",
-    "Description": "BI: Druid 0.9.2 (Technical Preview)",
-    "HDPVersion": "2.6",
+    "Name": "my-hdf-test",
+    "Description": "",
+    "HDPVersion": "3.1",
     "HostgroupCount": "3",
-    "Tags": "DEFAULT"
-  },
-  {
-    "Name": "EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0",
-    "Description": "EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin 0.7.0",
-    "HDPVersion": "2.6",
-    "HostgroupCount": "3",
-    "Tags": "DEFAULT"
-  },
-  {
-    "Name": "EDW-ETL: Apache Hive 1.2.1, Apache Spark 1.6",
-    "Description": "EDW-ETL: Apache Hive 1.2.1, Apache Spark 1.6",
-    "HDPVersion": "2.6",
-    "HostgroupCount": "3",
-    "Tags": "DEFAULT"
-  }
+    "Tags": "USER_MANAGED"
+ }
 ]</pre>
 
 
@@ -330,11 +339,12 @@ Lists the available availability zones in a region.
    
 **Options**
 
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]   
-**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]   
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]   
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]   
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   
 
 **Examples**
 
@@ -372,11 +382,12 @@ Lists available regions.
    
 **Options**
 
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]   
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]   
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]   
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   
 
 **Examples**
 
@@ -416,11 +427,12 @@ None
    
 **Options**
 
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]   
-**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]   
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]   
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   
 
 **Examples**
 
@@ -465,12 +477,13 @@ Lists the available instance types.
 
 **Options**
 
-**`--server <value>`**  	Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  	User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** 	Password [$CB_PASSWORD]   
-**`--profile <value>`**  	Selects a config profile to use [$CB_PROFILE]   
 **`--availability-zone <value>`**  Name of the availability zone   
-**`--output <value>`**  	Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT] 
+**`--output <value>`**  	Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`**  	Selects a config profile to use [$CB_PROFILE]   
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]    
 
 **Examples**
 
@@ -508,15 +521,16 @@ Changes Ambari password.
 **`--name <value>`**  Cluster name  
 **`--old-password <value>`** Old Ambari password   
 **`--new-password <value>`**  New Ambari password    
-**`--ambari-user`**  Ambari user   
+**`--ambari-user <value>`**  Ambari user   
 
 **Options**
 
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]    
 
 **Examples**
 
@@ -545,13 +559,14 @@ Creates a new cluster based on a JSON template.
 
 **`--name <value>`**  Name for the cluster  
 **`--description <value>`**  Description of resource   
-**`--public`**  Public in account   
 **`--input-json-param-password <value>`**  Password for the cluster and Ambari   
 **`--wait`**  Wait for the operation to finish. No argument is required   
-**`--server <value>`**   Server address   [$CB_SERVER_ADDRESS]   
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`**  Password [$CB_PASSWORD]  
-**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]   
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]     
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]    
+**`--public`**   Public in account  
 
 **Examples**
 
@@ -586,10 +601,11 @@ Deletes an existing cluster.
 
 **`--force`**  Force the operation  
 **`--wait`**  Wait for the operation to finish. No argument is required  
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]   
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   
 
 **Examples**
 
@@ -617,11 +633,12 @@ Describes an existing cluster.
 
 **Options**
 
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`**  Password [$CB_PASSWORD]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]   
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   
 
 **Examples**
 
@@ -693,11 +710,12 @@ Generates a cluster template that you can use to reinstall the cluster if instal
 
 **Options**
 
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   
 
 **Examples**
 
@@ -720,11 +738,12 @@ None
 
 **Options**
 
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
@@ -773,11 +792,12 @@ Repairs a cluster if cluster installation failed.
 **Options**
 
 **`--wait`**  Wait for the operation to finish. No argument is required  
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT] 
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   
 
 **Examples**
 
@@ -806,11 +826,12 @@ Scales a cluster by adding or removing nodes.
 **Options**
 
 **`--wait`**  Wait for the operation to finish. No argument is required  
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
-**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   
 
 **Examples**
 
@@ -834,11 +855,12 @@ Starts a cluster which has previously been stopped.
 **Options**
 
 **`--wait`**  Wait for the operation to finish. No argument is required  
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   
 
 **Examples**
 
@@ -862,11 +884,12 @@ Stops a cluster.
 **Options**
 
 **`--wait`**  Wait for the operation to finish. No argument is required  
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
@@ -890,11 +913,12 @@ Synchronizes a cluster with the cloud provider.
 
 **Options**
 
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 
 **Examples**
@@ -916,14 +940,15 @@ Configures the Cloudbreak server address and credentials used to communicate wit
 
 **Required Options**
 
-**`--server value`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username value`**	 User name (e-mail address) [$CB_USER_NAME]  
+**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**	 User name (e-mail address) [$CB_USER_NAME]  
 
 **Options**
 
-**`--password value`**  Password [$CB_PASSWORD]  
-**`--profile value`**  Select a config profile to use [$CB_PROFILE]   
-**`--output value`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--password <value>`**  Password [$CB_PASSWORD]  
+**`--profile <value>`**  Select a config profile to use [$CB_PROFILE]   
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
@@ -1008,11 +1033,12 @@ Creates a new Cloudbreak credential.
 **Options**
 
 **`--description <value>`**  Description of the resource  
-**`--public`**  Public in account  
-**`--server <value>`** Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`** User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
 **`--profile <value>`** Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
+**`--public`**   Public in account  
 
 Additionally, the following option is available for OpenStack Keystone2 and Keystone3:
 
@@ -1068,14 +1094,15 @@ Deletes an existing Cloudbreak credential.
 
 **Required Options**
 
-**`--name <value<`**  Name of the credential 
+**`--name <value>`**  Name of the credential 
 
 **Options**
 
-**`--server <value>`** Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`** User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
-**`--profile <value>`** Selects a config profile to use [$CB_PROFILE] 
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
+**`--profile <value>`** Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
@@ -1099,11 +1126,12 @@ Describes an existing credential.
 
 **Options**
   
-**`--server <value>`** Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`** User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]    
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
 **`--profile <value>`** Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
@@ -1134,11 +1162,12 @@ None
 
 **Options**
 
-**`--server <value>`** Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`** User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
 **`--profile <value>`** Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
@@ -1187,11 +1216,12 @@ Registers a new custom image catalog based on the URL provided.
 **Options**
 
 **`--description <value>`**  Description for the recipe   
-**`--public`**   Public in account  
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`**  Password [$CB_PASSWORD]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
+**`--public`**   Public in account  
 
 **Examples**
 
@@ -1223,10 +1253,11 @@ Deletes a previously registered custom image catalog.
 **Options**
 
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`**  Password [$CB_PASSWORD]  
-**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE] 
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
@@ -1269,10 +1300,11 @@ Lists images from the specified image catalog available for the specified cloud 
 **Options**
 
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]    
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`** Password [$CB_PASSWORD]   
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]     
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]   
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**  
 
@@ -1321,11 +1353,12 @@ None
 
 **Options**  
 
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`**  Password [$CB_PASSWORD]  
-**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]   
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
@@ -1371,10 +1404,11 @@ Sets the specified image catalog as default.
 **Options**
 
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`**  Password [$CB_PASSWORD]  
-**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE] 
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
@@ -1385,6 +1419,379 @@ Sets "mycustomcatalog" as default:
 **Related Links**  
 
 [Custom Images](images.md)  
+
+
+
+
+
+
+
+
+
+
+
+
+__________________________________
+
+#### ldap create
+
+Creates a new LDAP, which can later be used for Cloudbreak-managed clusters.
+ 
+
+**Required Options**
+
+**`--name <value>'**  Name for the LDAP       
+**`--ldap-server <value>'**  Address of the LDAP server (e.g. ldap://10.0.0.1:384)  
+**`--ldap-domain <value>'**   LDAP domain (e.g. ad.cb.com)  
+**`--ldap-bind-dn <value>'**  LDAP bind DN (e.g. CN=Administrator,CN=Users,DC=ad,DC=cb,DC=com)  
+**`--ldap-bind-password <value>'**  LDAP bind password  
+**`--ldap-directory-type <value>'**   LDAP directory type (LDAP or ACTIVE_DIRECTORY)   
+**`--ldap-user-search-base <value>'**   LDAP user search base (e.g. CN=Users,DC=ad,DC=cb,DC=com)  
+**`--ldap-user-name-attribute <value>'**   LDAP user name attribute  
+**`--ldap-user-object-class <value>'**   LDAP user object class  
+**`--ldap-group-member-attribute <value>'** LDAP group member attribute  
+**`--ldap-group-name-attribute <value>'**  LDAP group name attribute  
+**`--ldap-group-object-class <value>'**  LDAP group object class  
+**`--ldap-group-search-base <value>'**   LDAP group search base (e.g. OU=scopes,DC=ad,DC=cb,DC=com)  
+
+**Options**
+
+**`--ldap-admin-group <value>'**  LDAP group of administrators  
+**`--description <value>`**  Description for the LDAP      
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]   
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE] 
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
+**`--public`**   Public in account  
+
+
+
+
+
+
+
+
+
+
+
+__________________________________
+ 
+#### ldap delete
+
+Deletes selected LDAP. 
+
+**Required Options**
+
+**`--name <value>`**  Name for the proxy     
+
+**Options**
+
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak erver address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]
+
+**Examples**
+
+<pre>cb ldap delete --name testldap</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+__________________________________
+
+#### ldap list
+
+Lists all available LDAPs.
+
+**Required Options**
+
+None
+
+**Options**
+
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]
+
+**Examples**
+
+Lists existing LDAPs:
+
+<pre>cb ldap list</pre>
+
+Lists existing LDAPs, with output presented in a table format:
+
+<pre>cb ldap list --output table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+__________________________________
+
+#### proxy create
+
+Registers an existing proxy with Cloudbreak.
+ 
+
+**Required Options**
+
+**`--name <value>'**  Name for the proxy     
+**`--proxy-host <value>'**  Hostname or IP address of the proxy
+**`--proxy-port <value>'**  Port of the proxy 
+
+**Options**
+
+**`--proxy-protocol <value>`**  Protocol for the proxy (http or https) (default: "http")  
+**`--proxy-user <value>`**   User for the proxy if basic auth is required  
+**`--proxy-password <value>`**  Password for the proxy if basic auth is required  
+**`--description <value>`**  Description for the proxy      
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]   
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE] 
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
+**`--public`**   Public in account  
+
+
+
+
+
+
+
+
+
+
+
+__________________________________
+ 
+#### proxy delete
+
+Unregisters a previously registered proxy with Cloudbreak. It does not delete the proxy. 
+
+**Required Options**
+
+**`--name <value>`**  Name for the proxy     
+
+**Options**
+
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak erver address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]
+
+**Examples**
+
+<pre>cb proxy delete --name testproxy</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+__________________________________
+
+#### proxy list
+
+Lists all proxies that were previously registered with Cloudbreak.
+
+**Required Options**
+
+None
+
+**Options**
+
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]
+
+**Examples**
+
+Lists existing proxy registrations:
+
+<pre>cb proxy list</pre>
+
+Lists existing proxy registrations, with output presented in a table format:
+
+<pre>cb proxy list --output table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+__________________________________
+
+#### rds create
+
+Registers an existing external RDS with Cloudbreak.
+ 
+
+**Required Options**
+
+**`--name <value>'**   Name for the RDS   
+**`--rds-username <value>'**  Username for the JDBC connection  
+**`--rds-password <value>'**  Password for the JDBC connection  
+**`--url <value>'**  JDBC connection URL in the form of jdbc:<db-type>://<address>:<port>/<db>  
+**`--driver <value>'**   Name of the JDBC connection driver (for example: 'org.postgresql.Driver')  
+**`--database-engine <value>'**   Name of the external database engine (MYSQL, POSTGRES...)  
+**`--type <value>'**   Name if the service that will use the RDS (HIVE, DRUID, SUPERSET, RANGER, etc.)    
+
+**Options**
+
+**`--description <value>`**  Description for the RDS     
+**`--not-validated`**  If set, then the RDS configuration will be not validated  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]   
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE] 
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
+**`--public`**   Public in account  
+
+**Examples**
+
+Registers an existing Postgres RDS called "test-rds" with Cloudbreak:
+
+<pre>cb rds create --name testrds --rds-username testuser --rds-password MySecurePassword123 --url jdbc:postgresql://test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432/testdb --driver 'org.postgresql.Driver' --database-engine POSTGRES --type HIVE</pre>
+
+The connection URL includes three components <db-type>://<address>:<port>/<db>: 
+
+* Database type "jdbc:postgresql"  
+* Endpoint "test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432"  
+* Port "5432"  
+* Database name "testdb"  
+
+
+
+
+
+
+
+
+
+
+
+__________________________________
+ 
+#### rds delete
+
+Unregisters a previously registered RDS with Cloudbreak. It does not delete the RDS instance. 
+
+**Required Options**
+
+**`--name <value>`**  Name for the RDS   
+
+**Options**
+
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak erver address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]
+
+**Examples**
+
+<pre>cb rds delete --name testrds</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+__________________________________
+
+#### rds list
+
+Lists all available RDS registrations.
+
+**Required Options**
+
+None
+
+**Options**
+
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]
+
+**Examples**
+
+Lists existing rds registrations:
+
+<pre>cb rds list</pre>
+
+Lists existing rds registrations, with output presented in a table format:
+
+<pre>cb rds list --output table
+
+
+
 
 
 
@@ -1422,11 +1829,12 @@ Adds a new recipe from a file or from a URL.
 **Options**
 
 **`--description <value>`**  Description for the recipe   
-**`--public`**   Public in account  
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`**  Password [$CB_PASSWORD]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
+**`--public`**   Public in account  
 
 **Examples**
 
@@ -1461,11 +1869,12 @@ Deletes an existing recipe.
 
 **Options**
 
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`**  Password [$CB_PASSWORD]  
-**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]   
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
@@ -1492,11 +1901,12 @@ Describes an existing recipe.
 
 **Options**
 
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`**  Password [$CB_PASSWORD]  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 
 **Examples**
@@ -1541,11 +1951,12 @@ None
 
 **Options**
 
-**`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
-**`--username <value>`**  User name (e-mail address) [$CB_USER_NAME]  
-**`--password <value>`**  Password [$CB_PASSWORD]  
-**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
 
 **Examples**
 
