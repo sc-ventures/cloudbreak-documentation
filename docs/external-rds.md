@@ -1,6 +1,6 @@
 ## Configuring External RDS 
 
-When [creating a cluster](create.md), you have an option to attach an external database that you have previously created. 
+When [creating a cluster](aws-create.md), you have an option to attach an external database that you have previously created. 
 
 > You must create an RDS instance and database prior to registering it with Cloudbreak.
 
@@ -28,6 +28,6 @@ When [creating a cluster](create.md), you have an option to attach an external d
 6. Click **Test connection** to validate and test the RDS connection information. If you experience connection issues, refer to the <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Troubleshooting.html" target="_blank">Amazon RDS Troubleshooting documentation</a>.
 
 7. Once your settings are validated and working, click **REGISTER HIVE METASTORE** or **REGISTER DRUID METASTORE** to save the metastore. The metastore will
-now show up in the list of available metastores when [creating a cluster](create.md).
+now show up in the list of available metastores when [creating a cluster](aws-create.md).
 
 
