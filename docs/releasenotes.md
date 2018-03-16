@@ -258,7 +258,7 @@ ____________________________
 
 **Known Issues: Ambari 2.6.1.3 and HDP 2.6.4.0**
 
-> The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak 2.4.0.
+> The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak.
 
 > For general Ambari 2.6.1.3 and HDP 2.6.4.0 known issues, refer to:  
 > [Ambari 2.6.1.3 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.3/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.3.html)  
@@ -304,7 +304,21 @@ If we set the following properties then cluster install may fail (in 20-30% of t
 agent.auto.cache.update=true*  
 */etc/ambari-agent/conf/ambari-agent.ini  
 parallel_execution=1</pre> 
+
+
+
+
+
+
+
 ____________________________
 
+**Known Issues: HDF 3.1.1**
 
+The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDF 3.1.1, which are used by default in Cloudbreak.
 
+> For general HDF 3.1.1 known issues, refer to [HDF 3.1.1 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDF3/HDF-3.1.1/bk_release-notes/content/ch_hdf_relnotes.html)
+
+____________________________
+
+N/A 
