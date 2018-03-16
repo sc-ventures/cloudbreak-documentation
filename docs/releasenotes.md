@@ -308,3 +308,17 @@ ____________________________
 
 
 
+
+
+
+____________________________
+
+**Known Issues: HDF 3.1.1**
+
+The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDF 3.1.1, which are used by default in Cloudbreak.
+
+> For general HDF 3.1.1 known issues, refer to [HDF 3.1.1 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDF3/HDF-3.1.1/bk_release-notes/content/ch_hdf_relnotes.html)
+
+____________________________
+
+N/A 
