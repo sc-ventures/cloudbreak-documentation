@@ -4,7 +4,7 @@ Hortonworks Data Platform (HDP) supports reading and writing both block blobs an
 from/to *Windows Azure Storage Blob (WASB)* object store, as well as reading and writing files stored in an
 *Azure Data Lake Storage (ADLS)* account. 
 
-### Accessing Data in ADLS
+### Accessing Data in ADLS from HDP 
 
 [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/en-in/services/data-lake-store/) is an enterprise-wide hyper-scale repository for big data analytic workloads.
 
@@ -51,7 +51,7 @@ For more information about configuring the ADLS connector and working with data 
 
 
 
-### Accessing Data in WASB  
+### Accessing Data in WASB from HDP 
 
 Windows Azure Storage Blob (WASB) is an object store service available on Azure.
 
