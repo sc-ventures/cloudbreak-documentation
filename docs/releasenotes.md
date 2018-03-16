@@ -304,7 +304,7 @@ If we set the following properties then cluster install may fail (in 20-30% of t
 agent.auto.cache.update=true*  
 */etc/ambari-agent/conf/ambari-agent.ini  
 parallel_execution=1</pre> 
-____________________________
+
 
 
 
