@@ -55,9 +55,8 @@ To configure access to S3 with an instance profile, follow these steps.
 
 During the cluster creation process, Cloudbreak assigns the IAM role and its associated permissions to the EC2 instances that are part of the cluster so that applications running on these instances can use the role to access S3.   
 
-### Testing Access to S3
 
-#### Testing Access from HDP to S3
+### Testing Access from HDP to S3
 
 Amazon S3 is not supported in HDP as a default file system, but access to data in Amazon S3 is possible via the s3a connector. 
 
@@ -88,12 +87,5 @@ For more information about configuring the S3 connector for HDP and working with
 [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) (Hortonworks)
 
 
-#### Testing Access from Nifi to S3 
-
-Performing this configuration provides the EC2 instance that your Nifi is running on with access to S3 (as specified in the IAM policy). 
-
-As a next step, configure your specific processor. An example configuration is described in   
-[Integrating Apache NiFi with AWS S3 and SQS](https://community.hortonworks.com/articles/49467/integrating-apache-nifi-with-aws-s3-and-sqs.html).   
-
-**Related Links**  
-[Integrating Apache NiFi with AWS S3 and SQS](https://community.hortonworks.com/articles/49467/integrating-apache-nifi-with-aws-s3-and-sqs.html) (HCC)  
+[Comment]: <> (Performing this configuration provides the EC2 instance that your Nifi is running on with access to S3 (as specified in the IAM policy). As a next step, configure your specific processor, as described in Nifi documentation.)   
+[Comment]: <> ([Integrating Apache NiFi with AWS S3 and SQS](https://community.hortonworks.com/articles/49467/integrating-apache-nifi-with-aws-s3-and-sqs.html) (HCC))  
