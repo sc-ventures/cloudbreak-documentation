@@ -2,5 +2,5 @@
 
 
 <div class="next">
-<a href="../aws-data/index.html">Next: Access Data</a>
+<a href="../aws-data/index.html">Next: Access Cloud Data</a>
 </div>

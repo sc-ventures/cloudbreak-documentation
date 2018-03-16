@@ -2,15 +2,7 @@
 
 Hortonworks Data Platform (HDP) supports reading and writing both block blobs and page blobs
 from/to *Windows Azure Storage Blob (WASB)* object store, as well as reading and writing files stored in an
-*Azure Data Lake Storage (ADLS)* account. This allows you to:
-
-* Persist data using cloud storage services beyond the lifetime of your HDP clusters.  
-* Load data in Hadoop ecosystem applications directly from Azure storage services, without first importing or uploading data from external resources to HDFS.  
-* Use other applications (not necessarily in your Hadoop ecosystem) to manipulate the data stored in Azure storage services beyond the lifetime of your HDP clusters.  
-* Share data between multiple HDP clusters fast and easily by pointing to the same Azure data sets. 
-* Move or copy data between different Azure storage services or between Azure storage services and HDFS to facilitate different scenarios for big data analytics workloads.  
-* Back up unlimited archive data at any scale from HDP cluster to fully managed, durable, and highly available Azure storage services.   
-
+*Azure Data Lake Storage (ADLS)* account. 
 
 ### Accessing Data in ADLS
 
@@ -44,7 +36,6 @@ To use DistCp against ADLS, use the following syntax:
     hdfs://<b>namenode_hostname</b>:9001/user/foo/007020615
     adl://<b>myaccount</b>.azuredatalakestore.net/testDir/</pre>
     
-
 
 #### Working with ADLS  
 
