@@ -49,14 +49,15 @@ pages:
       - External Resources:
         - Configure External RDS: external-rds.md 
         - Configure LDAP: external-ldap.md  
-        - Configure Proxy: external-proxy.md 
       - Managing Cloudbreak:
         - Install on Your Own VM: vm-launch.md
+        - Configure Cloudbreak for Low/No Internet Environment: cb-proxy.md 
+        - Configure LDAP/AD for Cloudbreak: cb-ldap.md 
         - Upgrade Cloudbreak: cb-upgrade.md
-        - Manage Cloudbreak Credentials: cb-credentials.md 
-        - Disable Providers: cb-disable-provider.md
         - Configure External Cloudbreak Database: cb-db.md
         - Move Cloudbreak Instance: cb-migrate.md  
+        - Manage Cloudbreak Credentials: cb-credentials.md 
+        - Disable Providers: cb-disable-provider.md
         - Edit Cloudbreak Profile: cb-profile.md
         - Delete Cloudbreak: cb-delete.md  
       - Security: 

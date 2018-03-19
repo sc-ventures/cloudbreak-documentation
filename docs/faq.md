@@ -80,49 +80,4 @@ To get more detailed command prompt output, set the DEBUG environment variable t
 DEBUG=1 cbd <some_command>
 ```
 
-### Configure and Test Proxy Settings
-
-**For cbd**
-
-To configure proxy settings for Cloudbreak Deployer, add the following configs to your Profile:
-
-```
-export http_proxy="http://YOUR_PROXY_ADDRESS:YOUR_PROXY_PORT/"
-export https_proxy="http(s)://YOUR_PROXY_ADDRESS:YOUR_PROXY_PORT/"
-export CB_HTTP_PROXY="http://YOUR_PROXY_ADDRESS:YOUR_PROXY_PORT/"
-export CB_HTTPS_PROXY="http(s)://YOUR_PROXY_ADDRESS:YOUR_PROXY_PORT/"
-export CB_JAVA_OPTS="-Dhttp.proxyHost=YOUR_PROXY_ADDRESS -Dhttp.proxyPort=YOUR_PROXY_PORT -Dhttps.proxyHost=YOUR_PROXY_ADDRESS -Dhttps.proxyPort=YOUR_PROXY_PORT -Dhttp.nonProxyHosts=172.17.0.1|*.service.consul|*.node.dc1.consul"
-```
-
-**For Docker**
-
-To download newer Docker images from the official repository, you need to configure proxy settings for the Docker service. You can do this by configuring the 'HTTP_PROXY' variable in your environment. Next, restart the docker service. For more information, refer to [Docker documentation](https://docs.docker.com/engine/admin/systemd/).
-
-
-**For Provisioned Clusters**
-
-For a cluster to be provisioned to a (virtual) network that is behind a proxy, the yum on the provisioned machines needs to be configured to use that proxy. This is important because the Ambari install needs access to public repositories. You can configure yum proxy settings by using the recipe functionality of Cloudbreak. Use the following bash script to create a 'pre' recipe that will run on all of the nodes before the Ambari install:
-
-```
-#!/bin/bash
-cat >> /etc/yum.conf <<ENDOF
-
-proxy=http://YOUR_PROXY_ADDRESS:YOUR_PROXY_PORT
-
-ENDOF
-```
-
-**Test Your Proxy Settings**
-
-You can use the following CURL command to test your proxy settings:
-
-```
-https_proxy="YOUR_PROXY_ADDRESS:YOUR_PROXY_PORT" curl -X GET -I --insecure https://cloudbreak-api.sequenceiq.com/info
-```
-
-Its output should start with:
-
-```
-HTTP/1.1 200 OK
-```
 
