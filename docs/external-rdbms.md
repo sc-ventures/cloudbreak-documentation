@@ -1,4 +1,4 @@
-## Configuring External RDBMS 
+## Configuring External Database 
 
 When creating a cluster, you have an option to attach an external database that you have previously created. 
 

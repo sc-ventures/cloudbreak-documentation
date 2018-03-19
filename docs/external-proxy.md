@@ -1,3 +1,3 @@
-## Configuring Cloudbreak for Low/No Internet Environment  
+## Configuring a Proxy   
 
 Google doc

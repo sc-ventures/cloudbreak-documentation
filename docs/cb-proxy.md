@@ -1,3 +1,3 @@
-## Configuring Cloudbreak for Low/No Internet Environment  
+## Configuring Cloudbreak for Limited or No Internet Environment  
 
 Google doc

@@ -47,7 +47,7 @@ pages:
         - Tag Resources: tags.md 
         - Enable Kerberos Security: security-kerberos.md
         - Configure Autoscaling: autoscaling.md 
-        - External Sources:
+        - Add External Sources:
           - Database Configurations: external-rdbms.md 
           - Authentication Configurations: external-ldap.md  
           - Proxy Configurations: external-proxy.md  
