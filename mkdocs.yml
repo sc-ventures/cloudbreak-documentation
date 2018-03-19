@@ -40,18 +40,17 @@ pages:
       - Access Cluster: os-clusters-access.md
       - Manage and Monitor Clusters: os-clusters-manage.md
     - Using Cloudbreak:
-      - Advanced Cluster Options:
-        - Blueprints: blueprints.md
-        - Recipes: recipes.md
-        - Resource Tagging: tags.md 
-        - Custom Images: images.md
-        - Kerberos Security: security-kerberos.md
-        - Autoscaling: autoscaling.md 
-      - External Resources:
-        - Database Configurations: external-rdbms.md 
-        - Authentication Configuration: external-ldap.md  
-      - Advanced Cloudbreak Options:
-        - Install on Your Own VM: vm-launch.md
+      - Advanced Options:
+        - Use Custom Blueprints: blueprints.md
+        - Use Custom Scripts (Recipes): recipes.md
+        - Use Custom Images: images.md
+        - Tag Resources: tags.md 
+        - Configure Kerberos Security: security-kerberos.md
+        - Configure Autoscaling: autoscaling.md 
+        - Configure External Resources:
+          - Database Configurations: external-rdbms.md 
+          - Authentication Configurations: external-ldap.md  
+        - Install Cloudbreak on Your Own VM: vm-launch.md
         - Configure Cloudbreak for Limited or No Internet Environment: cb-proxy.md 
         - Configure Existing LDAP/AD for Cloudbreak: cb-ldap.md 
         - Configure External Cloudbreak Database: cb-db.md
@@ -61,8 +60,7 @@ pages:
         - Configure Access From Custom Domains: security-cb-customdom.md
         - Disable Providers: cb-disable-provider.md
         - Manage Cloudbreak Credentials: cb-credentials.md 
-        - Modify Settings in Cloudbreak Profile: cb-profile.md
-        - Delete Cloudbreak: cb-delete.md  
+        - Modify Settings in Cloudbreak Profile: cb-profile.md 
       - Security: 
         - Security Overview: security.md
       - CLI: 
@@ -70,6 +68,7 @@ pages:
         - Get Started with the CLI: cli-get-started.md
         - CLI Reference: cli-reference.md
       - Upgrade Cloudbreak: cb-upgrade.md
+      - Delete Cloudbreak: cb-delete.md 
       - Troubleshooting: 
         - Cloudbreak Logs: trouble-cb-logs.md  
         - Troubleshooting Cloudbreak: trouble-cb.md
