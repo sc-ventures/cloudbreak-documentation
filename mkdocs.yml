@@ -45,29 +45,31 @@ pages:
         - Recipes: recipes.md
         - Resource Tagging: tags.md 
         - Custom Images: images.md
+        - Kerberos Security: security-kerberos.md
         - Autoscaling: autoscaling.md 
       - External Resources:
         - Configure External RDS: external-rds.md 
-        - Configure LDAP: external-ldap.md  
-      - Managing Cloudbreak:
+        - Configure Existing LDAP: external-ldap.md  
+      - Advanced Cloudbreak Options:
         - Install on Your Own VM: vm-launch.md
         - Configure Cloudbreak for Low/No Internet Environment: cb-proxy.md 
-        - Configure LDAP/AD for Cloudbreak: cb-ldap.md 
-        - Upgrade Cloudbreak: cb-upgrade.md
+        - Configure Existing LDAP/AD for Cloudbreak: cb-ldap.md 
         - Configure External Cloudbreak Database: cb-db.md
         - Move Cloudbreak Instance: cb-migrate.md  
-        - Manage Cloudbreak Credentials: cb-credentials.md 
+        - Restrict Inbound Access to Clusters: security-cb-inbound.md
+        - Add SSL Certificate for Cloudbreak UI: security-cb-ssl.md
+        - Configure Access From Custom Domains: security-cb-customdom.md
         - Disable Providers: cb-disable-provider.md
-        - Edit Cloudbreak Profile: cb-profile.md
+        - Manage Cloudbreak Credentials: cb-credentials.md 
+        - Modify Settings in Cloudbreak Profile: cb-profile.md
         - Delete Cloudbreak: cb-delete.md  
       - Security: 
         - Security Overview: security.md
-        - Configure Basic Security: security-cb.md
-        - Enable Kerberos Security: security-kerberos.md
       - CLI: 
         - Install the CLI: cli-install.md
         - Get Started with the CLI: cli-get-started.md
         - CLI Reference: cli-reference.md
+      - Upgrade Cloudbreak: cb-upgrade.md
       - Troubleshooting: 
         - Cloudbreak Logs: trouble-cb-logs.md  
         - Troubleshooting Cloudbreak: trouble-cb.md
