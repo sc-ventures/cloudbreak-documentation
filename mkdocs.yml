@@ -48,7 +48,7 @@ pages:
         - Kerberos Security: security-kerberos.md
         - Autoscaling: autoscaling.md 
       - External Resources:
-        - Configure External RDS: external-rds.md 
+        - Configure External RDBMS: external-rdbms.md 
         - Configure Existing LDAP: external-ldap.md  
       - Advanced Cloudbreak Options:
         - Install on Your Own VM: vm-launch.md
