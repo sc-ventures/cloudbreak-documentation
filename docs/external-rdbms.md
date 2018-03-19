@@ -1,6 +1,6 @@
 ## Configuring External RDBMS 
 
-When [creating a cluster](aws-create.md), you have an option to attach an external database that you have previously created. 
+When creating a cluster, you have an option to attach an external database that you have previously created. 
 
 > You must create the external RDBMS instance and database prior to registering it with Cloudbreak.
 
