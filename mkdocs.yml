@@ -45,30 +45,32 @@ pages:
         - Use Custom Scripts (Recipes): recipes.md
         - Use Custom Images: images.md
         - Tag Resources: tags.md 
-        - Configure Kerberos Security: security-kerberos.md
+        - Enable Kerberos Security: security-kerberos.md
         - Configure Autoscaling: autoscaling.md 
-        - Configure External Resources:
+        - External Sources:
           - Database Configurations: external-rdbms.md 
           - Authentication Configurations: external-ldap.md  
-        - Install Cloudbreak on Your Own VM: vm-launch.md
-        - Configure Cloudbreak for Limited or No Internet Environment: cb-proxy.md 
-        - Configure Existing LDAP/AD for Cloudbreak: cb-ldap.md 
-        - Configure External Cloudbreak Database: cb-db.md
-        - Move Cloudbreak Instance: cb-migrate.md  
-        - Restrict Inbound Access to Clusters: security-cb-inbound.md
-        - Add SSL Certificate for Cloudbreak UI: security-cb-ssl.md
-        - Configure Access From Custom Domains: security-cb-customdom.md
-        - Disable Providers: cb-disable-provider.md
-        - Manage Cloudbreak Credentials: cb-credentials.md 
-        - Modify Settings in Cloudbreak Profile: cb-profile.md 
-      - Security: 
+          - Proxy Configurations: external-proxy.md  
+      - Network and Security:  
         - Security Overview: security.md
+        - Manage Cloudbreak Credentials: cb-credentials.md 
+        - Configure Outbound Internet Access and Proxy: cb-proxy.md 
+        - Restrict Inbound Access to Clusters: security-cb-inbound.md
+        - Configure Access From Custom Domains: security-cb-customdom.md
+      - Manage Cloudbreak:  
+        - Install Cloudbreak on Your Own VM: vm-launch.md
+        - Upgrade Cloudbreak: cb-upgrade.md 
+        - Move Cloudbreak Instance: cb-migrate.md 
+        - Configure LDAP/AD Authentication for Cloudbreak: cb-ldap.md  
+        - Configure SSL Certificates: security-cb-ssl.md
+        - Configure External Cloudbreak Database: cb-db.md
+        - Disable Providers: cb-disable-provider.md
+        - Modify Settings in Cloudbreak Profile: cb-profile.md 
+        - Delete Cloudbreak: cb-delete.md
       - CLI: 
         - Install the CLI: cli-install.md
         - Get Started with the CLI: cli-get-started.md
         - CLI Reference: cli-reference.md
-      - Upgrade Cloudbreak: cb-upgrade.md
-      - Delete Cloudbreak: cb-delete.md 
       - Troubleshooting: 
         - Cloudbreak Logs: trouble-cb-logs.md  
         - Troubleshooting Cloudbreak: trouble-cb.md
