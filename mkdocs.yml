@@ -48,7 +48,7 @@ pages:
         - Enable Kerberos Security: security-kerberos.md
         - Configure Autoscaling: autoscaling.md 
         - Add External Sources:
-          - Database Configurations: external-rdbms.md 
+          - Database Configurations: external-db.md  
           - Authentication Configurations: external-ldap.md  
           - Proxy Configurations: external-proxy.md  
       - Network and Security:  
