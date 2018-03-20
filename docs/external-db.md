@@ -1,4 +1,4 @@
-## Configuring External Database  
+## Registering External Database  
 
 Cloudbreak allows you to register an existing RDBMS instance to be used for a database for the following services:   
 
@@ -21,7 +21,12 @@ You must create the external RDBMS instance and database prior to registering it
 
 Follow these steps to register an external RDBMS instance with Cloudbreak. 
 
-> You must create the external RDBMS instance and database prior to registering it with Cloudbreak.
+<div class="danger">
+    <p class="first admonition-title">Important</p>
+    <p class="last">
+Registering an external databse does not create the RDBMS instance. You must have an existing RDBMS instance and database prior to registering it.
+	</p>
+</div> 
 
 **Steps** 
 
