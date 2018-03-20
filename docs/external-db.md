@@ -34,7 +34,7 @@ Follow these steps to register an external RDBMS instance with Cloudbreak.
     | Name | Enter the name to use when registering this database to Cloudbreak. This is **not** the database name. |
     | Type | Select the service for which you would like to use the external database. |
     | JDBC Connection | Select the database **type** (PostgreSQL) and enter the **JDBC connection** string (HOST:PORT/DB_NAME).  |
-    | Username | Enter the JDBC connection username and password. |
+    | Username | Enter the JDBC connection username. |
     | Password | Enter the JDBC connection password. |
 
 6. Click **Test Connection** to validate and test the RDS connection information.  
