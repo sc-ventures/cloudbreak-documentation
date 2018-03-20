@@ -5,3 +5,12 @@ This option allows you to select previously uploaded recipes (scripts that can b
 
 **Related Links**      
 [Recipes](recipes.md) 
+
+### External Sources 
+
+To configure external sources, refer to:
+
+* [Configure Authentication](external-ldap.md)    
+* [Configure External Database](external-db.md)  
+* [Configure Proxy](external-proxy.md)  
+
