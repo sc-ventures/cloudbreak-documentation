@@ -48,6 +48,7 @@ Credential:
 * [credential delete](#credential-delete)        
 * [credential describe](#credential-describe)        
 * [credential list](#credential-list)         
+* [credential modify](#credential-modify)   
  
 
 Blueprint:   
@@ -1191,6 +1192,122 @@ Lists credentials, with output formatted in a table format:
 +---------+-------------+---------------+
 | armcred |             | AZURE         |
 +---------+-------------+---------------+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+__________________________________
+
+#### credential modify 
+
+Modifies an existing Cloudbreak credential.
+
+**Sub-commands**
+
+**`aws role-based`**  Modifies an AWS role-based credential  
+**`aws key-based`**  Modifies an AWS key-based credential  
+**`azure app-based`** Modifies an app-based Azure credential  
+**`gcp`** Modifies a Google Cloud credential  
+**`openstack keystone-v2`** Modifies an OpenStack v2 credential  
+**`openstack keystone-v3`** Modifies an  OpenStack v3 credential 
+
+**Required Options**
+
+**`aws role-based`** 
+
+**`--name <value>`**  Credential name  
+**`--role-arn <value>`** IAM Role ARN of the role used for Cloudbreak credential  
+
+**`aws key-based`** 
+
+**`--name <value>`**  Credential name  
+**`--access-key <value>`**  AWS Access Key  
+**`--secret-key <value>`**  AWS Secret Key  
+
+**`azure app-based`** 
+
+**`--name <value>`**  Credential name  
+**`--subscription-id <value>`**  Subscription ID from your Azure Subscriptions  
+**`--tenant-id <value>`**  Directory ID from your Azure Active Directory > Properties      
+**`--app-id <value>`**  Application ID of your app from your Azure Active Directory > App Registrations            
+**`--app-password <value>`**  Your application key from app registration's Settings > Keys  
+
+**`gcp`** 
+
+**`--name <value>`**  Credential name   
+**`--project-id <value>`**  Project ID from your GCP account                        
+**`--service-account-id <value>`**  Your GCP Service account ID from IAM & Admin > Service accounts                 
+**`--service-account-private-key-file <value>`**  P12 key from your GCP service account  
+
+**`openstack keystone-v2`**  
+
+**`--name <value>`**  Credential name  
+**`--tenant-user <value>`**  OpenStack user name     
+**`--tenant-password <value>`**  OpenStack password  
+**`--tenant-name <value>`**  OpenStack tenant name      
+**`--endpoint <value>`**   OpenStack endpoint   
+
+**`openstack keystone-v3`** 
+
+**`--name <value>`**  Credential name  
+**`--tenant-user <value>`**  OpenStack user name     
+**`--tenant-password <value>`**  OpenStack password  
+**`--user-domain <value>`**  OpenStack user domain      
+**`--endpoint <value>`**   OpenStack endpoint  
+
+
+**Options**
+
+**`--description <value>`**  Description of the resource  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
+**`--profile <value>`** Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]    
+
+Additionally, the following option is available for OpenStack Keystone2 and Keystone3:
+
+**`--facing <value>`** API facing. One of: public, admin, internal
+
+Additionally, the following option is available for OpenStack Keystone3:
+
+**`--keystone-scope <value>`** OpenStack keystone scope. One of: default, domain, project 
+
+
+**Examples**
+
+Modifies a role-based AWS credential:
+
+<pre>cb credential modify aws role-based --name my-credential1 --role-arn arn:aws:iam::517127065441:role/CredentialRole</pre>
+
+Modifies a key-based AWS credential:
+
+<pre>cb credential modify aws key-based --name my-credential2 --access-key ABDVIRDFV3K4HLJ45SKA --secret-key D89L5pOPM+426Rtj3curKzJEJL3lYoNcP8GvguBV</pre>
+
+Modifies an app-based Azure credential:
+
+<pre>cb credential modify azure app-based --name my-credential3 --subscription-id b8e7379e-568g-55d3-na82-45b8d421e998 --tenant-id  c79n5399-3231-65ba-8dgg-2g4e2a40085e --app-id 6d147d89-48d2-5de2-eef8-b89775bbfcg1 --app-password 4a8hBgfI52s/C8R5Sea2YHGnBFrD3fRONfdG8w7F2Ua=</pre>
+
+Modifies a Google Cloud credential:
+
+<pre>cb credential modify gcp --name my-credential4 --project-id test-proj --service-account-id test@test-proj.iam.gserviceaccount.com --service-account-private-key-file /Users/test/3fff57a6f68e.p12</pre>
+
+
+Modifies a role-based OpenStack credential which uses Keystone-v2:
+
+<pre>cb credential modify openstack keystone-v2 --name my-credential5 --tenant-user test --tenant-password MySecurePass123 --tenant-name test --endpoint http://openstack.test.organization.com:5000/v2.0</pre>
+
+
+
+
 
 
 
