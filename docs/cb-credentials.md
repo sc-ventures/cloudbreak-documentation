@@ -25,13 +25,17 @@ To view credential details, follow these steps.
 
 ### Modify an Existing Credential
 
-To view credential details, follow these steps.
+You can modify an existing Cloudbreak credential by following these steps.
+
+> Credential name cannot be changed.  
+> Sensitive parameter values will not be displayed and you will have to reenter them.    
 
 **Steps**
 
 1. In the Cloudbreak UI, select **Credentials** from the navigation pane.  
 2.Click on <img src="../images/edit.png" alt="On" />  next to the credential that you want to edit.  
 3. When done making changes, click **Save** to save your changes.  
+
 
 
 ### Set a Default Credential
