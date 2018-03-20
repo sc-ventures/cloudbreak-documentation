@@ -1,4 +1,4 @@
-## Configuring an Authentication Source 
+## Registering an Authentication Source 
 
 
 You can register an existing LDAP with Cloudbreak and use it for one or more clusters.
