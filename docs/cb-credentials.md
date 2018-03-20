@@ -3,7 +3,6 @@
 
 You can view and manage Cloudbreak credentials in the **Credentials** tab by clicking **Create credential** and providing required parameters. You must create at least one credential in order to be able to create a cluster. 
 
-<a href="../images/cb-credentials.png" target="_blank" title="click to enlarge"><img src="../images/cb-credentials.png" width="650" title="Cloudbreak web UI"></a> 
 
 ### Create Cloudbreak Credential  
 
@@ -26,7 +25,13 @@ To view credential details, follow these steps.
 
 ### Modify an Existing Credential
 
-You can modify a previously created credential by navigating to the **Credentials** page and clicking on <img src="../images/edit.png" alt="On" />  next to the credential that you want to edit. 
+To view credential details, follow these steps.
+
+**Steps**
+
+1. In the Cloudbreak UI, select **Credentials** from the navigation pane.  
+2.Click on <img src="../images/edit.png" alt="On" />  next to the credential that you want to edit.  
+3. When done making changes, click **Save** to save your changes.  
 
 
 ### Set a Default Credential
