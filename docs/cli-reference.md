@@ -1045,9 +1045,12 @@ Additionally, the following option is available for OpenStack Keystone2 and Keys
 
 **`--facing <value>`** API facing. One of: public, admin, internal
 
-Additionally, the following option is available for OpenStack Keystone3:
+Additionally, the following options are available for OpenStack Keystone3:
 
-**`--keystone-scope <value>`** OpenStack keystone scope. One of: default, domain, project 
+**`--project-domain-name <value>`**  OpenStack project domain name    
+**`--project-name <value>`**  OpenStack project name           
+**`--domain-name <value>`**  OpenStack domain name    
+**`--keystone-scope <value>`** OpenStack keystone scope. One of: default, domain, project   
 
 
 **Examples**
@@ -1277,9 +1280,12 @@ Additionally, the following option is available for OpenStack Keystone2 and Keys
 
 **`--facing <value>`** API facing. One of: public, admin, internal
 
-Additionally, the following option is available for OpenStack Keystone3:
+Additionally, the following options are available for OpenStack Keystone3:
 
-**`--keystone-scope <value>`** OpenStack keystone scope. One of: default, domain, project 
+**`--project-domain-name <value>`**  OpenStack project domain name    
+**`--project-name <value>`**  OpenStack project name           
+**`--domain-name <value>`**  OpenStack domain name    
+**`--keystone-scope <value>`** OpenStack keystone scope. One of: default, domain, project  
 
 
 **Examples**
