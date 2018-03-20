@@ -25,7 +25,7 @@ Follow these steps to register an external RDBMS instance with Cloudbreak.
 
 **Steps** 
 
-1. From the navigation pane, select **External Services** > **Database Configurations**.  
+1. From the navigation pane, select **External Sources** > **Database Configurations**.  
 2. Select **Register Database Configuration**.    
 5. Provide the following information:
 
