@@ -1,4 +1,4 @@
-## Configuring an External Database  
+## Configuring External Database  
 
 Cloudbreak allows you to register an existing RDBMS instance to be used for a database for the following services:   
 
