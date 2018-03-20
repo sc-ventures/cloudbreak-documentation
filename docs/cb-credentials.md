@@ -26,7 +26,7 @@ To view credential details, follow these steps.
 
 ### Modify an Existing Credential
 
-TBD
+You can modify a previously created credential by navigating to the **Credentials** page and clicking on <img src="../images/edit.png" alt="On" />  next to the credential that you want to edit. 
 
 
 ### Set a Default Credential
