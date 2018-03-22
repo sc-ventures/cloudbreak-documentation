@@ -1,3 +1,3 @@
-## Configuring Existing LDAP/AD with Cloudbreak   
+## Configuring Cloudbreak for LDAP/AD Authentication    
 
 Google doc  

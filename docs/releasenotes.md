@@ -11,7 +11,7 @@ ____________________________
 
 ##### **Creating HDF Clusters** 
 
-You can use Cloudbreak to create HDF clusters on AWS, Azure, Google Cloud and OpenStack. In the Cloudbreak web UI, you can do this by selecting "HDF 3.1" under Platform Version and then selecting an HDF blueprint.
+You can use Cloudbreak to create HDF clusters on AWS, Azure, Google Cloud and OpenStack. In the Cloudbreak web UI, you can do this by selecting "HDF 3.1" under *Platform Version and* then selecting an HDF blueprint.
 
 Cloudbreak includes one default HDF blueprint "Flow Management: Apache Nifi" and supports uploading your own custom blueprints. This feature supports HDF 3.1.1 blueprints. HDF clusters are currently launched from base images; prewarmed images are not available.  
 
@@ -19,33 +19,35 @@ For updated create cluster instructions, refer to [Creating a Cluster](aws-launc
 For updated blueprint information, refer to [Default Blueprints](blueprints.md#default-blueprints). 
 
 
-##### **Using External RDS for Cluster Services** 
+##### **Using External Database for Cluster Services** 
 
-You can register an existing external RDS in the Cloudbreak UI or CLI so that the external RDS can be used for those cluster components which support using an external RDS. After the RDS has been registered in the Cloudbreak UI, it is available during the cluster create and can be reused with one or more clusters.  
+You can register an existing external RDBMS in the Cloudbreak UI or CLI so that it can be used for those cluster components which have support for it. After the RDBMS has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.  
 
-Only Postgre is supported at this time. Refer to component-specific documentation for information on which version of Postgres (if any) is supported.
+Only Postgres is supported at this time. Refer to component-specific documentation for information on which version of Postgres (if any) is supported.  
 
-Cloudbreak does not configure the external RDS for you, the RDS must exist prior to registering it with Cloudbreak. 
+For more information, refer to [Register an External Database](external-db.md).   
 
 
-##### **Configuring LDAP/AD for Clusters** 
+##### **Using External Authentication Source (LDAP/AD) for Clusters** 
 
-You can configure Cloudbreak to create a new LDAP/AD that can later be associated with one or more Cloudbreak-managed clusters. This configuration can be perfrmed by using Cloudbreak UI or CLI.
+You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.
+
+For more information, refer to [Register an Authentication Source](external-ldap.md).     
 
 
 ##### **Modifying Existing Cloudbreak Credentials** 
 
-Cloudbreak allows you to modify existing credentials by using the edit option available in Cloudbreak UI or CLI. 
+Cloudbreak allows you to modify existing credentials by using the edit option available in Cloudbreak UI or CLI. For more information, refer to [Modify an Existing Credential](cb-credentials.md#modify-an-existing-credential). 
 
 
 ##### **Configuring Existing LDAP/AD for Cloudbreak**
 
-You can configure Cloudbreak to use your existing LDAP/AD so that you can authenticate Cloudbreak users against an existing LDAP/AD server. 
+You can configure Cloudbreak to use your existing LDAP/AD so that you can authenticate Cloudbreak users against an existing LDAP/AD server. For more information, refer to [Configuring Cloudbreak for LDAP/AD Authentication](cb-ldap.md). 
 
 
 ##### **Launching Cloudbreak in Environments with Limited or No Internet Access** 
 
-You can launch Cloudbreak in environments with limited internet access or no internet access. 
+You can launch Cloudbreak in environments with limited internet access or no internet access. For more information, refer to [Configuring Outbound Internet Access and Proxy](cb-proxy.md). 
 
 ____________________________
 
@@ -63,7 +65,7 @@ ____________________________
 ____________________________
  
  
-##### **March 16, 2018** 
+##### **March 22, 2018** 
 
 [Comment]: <> (Update the date once the update is available.)
 
@@ -83,6 +85,7 @@ ____________________________
 
 #### Fixed Issues 
 ____________________________
+
 
 
 ____________________________
@@ -322,3 +325,5 @@ The known issues described here were discovered when testing Cloubdreak with Amb
 ____________________________
 
 N/A 
+
+
