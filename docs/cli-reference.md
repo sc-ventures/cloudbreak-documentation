@@ -1211,7 +1211,10 @@ __________________________________
 
 #### credential modify 
 
-Modifies an existing Cloudbreak credential.
+Modifies an existing Cloudbreak credential. 
+
+> The `--name` parameter is used to identify the credential that is being modified, and therefore its value cannot be modified.    
+
 
 **Sub-commands**
 
