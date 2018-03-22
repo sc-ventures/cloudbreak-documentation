@@ -47,7 +47,7 @@ You can configure Cloudbreak to use your existing LDAP/AD so that you can authen
 
 ##### **Launching Cloudbreak in Environments with Limited or No Internet Access** 
 
-You can launch Cloudbreak in environments with limited internet access or no internet access. For more information, refer to [Configuring Outbound Internet Access and Proxy](cb-proxy.md). 
+You can launch Cloudbreak in environments with limited internet access or no internet access. For more information, refer to [Configure Outbound Internet Access and Proxy](cb-proxy.md). 
 
 ____________________________
 
