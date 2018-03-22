@@ -3,7 +3,7 @@
 Autoscaling allows you to adjust cluster capacity based on Ambari metrics and alerts, as well as schedule time-based capacity adjustment. When creating an autoscaling policy, you define:
 
 * An **alert** that triggers a scaling policy. An alert can be based on an Ambari metric or can be time-based.     
-* A **scaling policy** that adds or removes a set number of nodes to a selected host group when the conditions defined in the attached alert are met.   
+* A **scaling policy** that adds or removes a set number of nodes to a selected host group when the conditions defined in the attached alert are met.    
 
 **Metric-based Autoscaling**
 

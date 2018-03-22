@@ -11,12 +11,19 @@ ____________________________
 
 ##### **Creating HDF Clusters** 
 
-You can use Cloudbreak to create HDF clusters on AWS, Azure, Google Cloud and OpenStack. In the Cloudbreak web UI, you can do this by selecting "HDF 3.1" under *Platform Version and* then selecting an HDF blueprint.
+You can use Cloudbreak to create HDF clusters on AWS, Azure, Google Cloud and OpenStack. In the Cloudbreak web UI, you can do this by selecting "HDF 3.1" under *Platform Version* and then selecting an HDF blueprint.
 
-Cloudbreak includes one default HDF blueprint "Flow Management: Apache Nifi" and supports uploading your own custom blueprints. This feature supports HDF 3.1.1 blueprints. HDF clusters are currently launched from base images; prewarmed images are not available.  
+Cloudbreak includes one default HDF blueprint "Flow Management: Apache NiFi" and supports uploading your own custom HDF 3.1.1 NiFi blueprints.  
+
+Note the following when creating NiFi clusters:
+
+- When creating a cluster, open 9091 TCP port on the NiFi host group. Without it, you will be unable to access the UI.  
+- Enabling kerberos is mandatory. You can either use your own kerberos or select for Cloudbreak to create a test KDC.    
+- Although Cloudbreak includes cluster scaling (including autoscaling), scaling is not fully supported by NiFi. Downscaling NiFi clusters is not supported - as it can result in data loss when a node is removed that has not yet processed all the data on that node. There is also a known issue related to scaling listed in the [Known Issues](#known-issues) below.  
 
 For updated create cluster instructions, refer to [Creating a Cluster](aws-launch.md) instructions for your chosen cloud provider.
 For updated blueprint information, refer to [Default Blueprints](blueprints.md#default-blueprints). 
+
 
 
 ##### **Using External Databases for Cluster Services** 

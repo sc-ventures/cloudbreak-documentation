@@ -14,25 +14,48 @@ This section provides information on the outbound network destinations for Cloud
 
 To install and configure Cloudbreak, you will need the following outbound destinations available:
 
-| Destination | Description |
-|---|---|
-| *.docker.io | Obtain the Docker images for Cloudbreak. |
-| <p>raw.githubusercontent.com</p><p>github.com</p><p>s3.amazonaws.com</p><p>*.cloudfront.net</p>| Obtain Cloudbreak dependencies. |
-| cloudbreak-imagecatalog.s3.amazonaws.com | The default Cloudbreak image catalog used for VMs. Refer to [Custom Images](images.md) for more information on image catalogs. |
+<table>
+<tr>
+    <th>Destination</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>*.docker.io</td>
+    <td>Obtain the Docker images for Cloudbreak.</td> 
+  </tr>
+  <tr>
+    <td><p>raw.githubusercontent.com</p><p>github.com</p><p>s3.amazonaws.com</p><p>*.cloudfront.net</p></td>
+    <td>Obtain Cloudbreak dependencies.</td> 
+  </tr>
+  <tr>
+  <td>cloudbreak-imagecatalog.s3.amazonaws.com </td><td> The default Cloudbreak image catalog used for VMs. Refer to [Custom Images](images.md) for more information on image catalogs. </td>
+  </tr>
+</table>
 
 Once Cloudbreak is installed and configured, you will need the following outbound destinations available in order to communicate with the cloud provider APIs to obtain cloud resources for clusters.
 
-
-| Cloud Provider | Cloud Provider API Destinations |
-|---|---|
-| Amazon Web Services | *.amazonaws.com |
-| Microsoft Azure | <p>*.microsoftonline.com</p><p>*.windows.net</p><p>*.azure.com</p>|
-| Google Cloud Platform| <p>accounts.google.com</p><p>*.googleapis.com</p>|
+<table>
+<tr>
+    <th>Cloud Provider</th>
+    <th>Cloud Provider API Destinations</th> 
+  </tr>
+  <tr>
+  <td>Amazon Web Services</td>
+  <td>*.amazonaws.com</td>
+ </tr>
+  <td> Microsoft Azure </td>
+  <td> <p>*.microsoftonline.com</p><p>*.windows.net</p><p>*.azure.com</p></td>
+   </tr>
+   <tr>
+  <td> Google Cloud Platform  </td>  
+  <td> <p>accounts.google.com</p><p>*.googleapis.com</p></td>
+  </tr>
+</table>
 
 To install the cluster software, you can: 
 
 a) use the public hosted repositories provided by Hortonworks, or  
-b) specify your own local hosted repositories when you Create a Cluster. 
+b) specify your own local hosted repositories when you create a cluster. 
 
 If you choose to (a) use the public hosted repositories, be sure to allow outbound access to the following destinations:
 
