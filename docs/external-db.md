@@ -1,4 +1,4 @@
-## Registering External Database  
+## Register an External Database  
 
 Cloudbreak allows you to register an existing RDBMS instance to be used for a database for the following services:   
 
@@ -17,17 +17,6 @@ You must create the external RDBMS instance and database prior to registering it
 > Only **PostgreSQL** is supported at this time. 
 
 
-### Register an External Database 
-
-Follow these steps to register an external RDBMS instance with Cloudbreak. 
-
-<div class="danger">
-    <p class="first admonition-title">Important</p>
-    <p class="last">
-Registering an external databse does not create the RDBMS instance. You must have an existing RDBMS instance and database prior to registering it.
-	</p>
-</div> 
-
 **Steps** 
 
 1. From the navigation pane, select **External Sources** > **Database Configurations**.  
@@ -43,7 +32,8 @@ Registering an external databse does not create the RDBMS instance. You must hav
     | Password | Enter the JDBC connection password. |
 
 6. Click **Test Connection** to validate and test the RDS connection information.  
-7. Once your settings are validated and working, click **REGISTER** to save the configuration. The database will now show up in the list of available databases when creating a cluster under advanced **External Sources** > **Configure Databases**.  
+7. Once your settings are validated and working, click **REGISTER** to save the configuration.  
+8. The database will now show up on the list of available databases when creating a cluster under advanced **External Sources** > **Configure Databases**. You can select it each time you would like to use it for a cluster.  
 
 
 
