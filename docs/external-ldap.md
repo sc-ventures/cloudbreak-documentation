@@ -47,7 +47,7 @@ You must create the LDAP/AD prior to registering it with Cloudbreak. Once you ha
  
 6. Click **REGISTER**. 
 
-7. The LDAP will now show up in the list of available authentication sources when creating a cluster under advanced **External Sources** > **Configure Authentication**.    
+7. The LDAP will now show up on the list of available authentication sources when creating a cluster under advanced **External Sources** > **Configure Authentication**. It can be reused with multiple clusters. Just select it if you would like to use it for a given cluster.     
 
 
 
