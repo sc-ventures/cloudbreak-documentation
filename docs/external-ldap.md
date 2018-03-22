@@ -1,8 +1,6 @@
 ## Register an Authentication Source 
 
-Cloudbreak allows you to register an existing LDAP/AD instance and use it for multiple clusters.  
-
-You must create the LDAP/AD prior to registering it with Cloudbreak. Once you have it ready, you can:
+Cloudbreak allows you to register an existing LDAP/AD instance and use it for multiple clusters. You must create the LDAP/AD prior to registering it with Cloudbreak. Once you have it ready, you can:
 
 1. Register an existing LDAP in Cloudbreak web UI or CLI.  
 2. Use it as an authentication source for your clusters. Once registered, the LDAP will now show up in the list of available authentication sources when creating a cluster under advanced **External Sources** > **Configure Authentication**.   
