@@ -1338,8 +1338,8 @@ Registers an existing external database with Cloudbreak.
 **Required Options**
 
 **`--name <value>`**   Name for the database     
-**`--database-username <value>`**  Username for the JDBC connection  
-**`--database-password <value>`**  Password for the JDBC connection  
+**`--db-username <value>`**  Username for the JDBC connection  
+**`--db-password <value>`**  Password for the JDBC connection  
 **`--url <value>`**  JDBC connection URL in the form of jdbc:db-type://address:port/db  
 **`--driver <value>`**   Name of the JDBC connection driver (for example: 'org.postgresql.Driver')  
 **`--database-engine <value>`**   Name of the external database engine (MYSQL, POSTGRES...)  

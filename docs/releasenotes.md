@@ -19,7 +19,7 @@ For updated create cluster instructions, refer to [Creating a Cluster](aws-launc
 For updated blueprint information, refer to [Default Blueprints](blueprints.md#default-blueprints). 
 
 
-##### **Using External Database for Cluster Services** 
+##### **Using External Databases for Cluster Services** 
 
 You can register an existing external RDBMS in the Cloudbreak UI or CLI so that it can be used for those cluster components which have support for it. After the RDBMS has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.  
 
@@ -28,7 +28,7 @@ Only Postgres is supported at this time. Refer to component-specific documentati
 For more information, refer to [Register an External Database](external-db.md).   
 
 
-##### **Using External Authentication Source (LDAP/AD) for Clusters** 
+##### **Using External Authentication Sources (LDAP/AD) for Clusters** 
 
 You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.
 
@@ -40,7 +40,7 @@ For more information, refer to [Register an Authentication Source](external-ldap
 Cloudbreak allows you to modify existing credentials by using the edit option available in Cloudbreak UI or CLI. For more information, refer to [Modify an Existing Credential](cb-credentials.md#modify-an-existing-credential). 
 
 
-##### **Configuring Existing LDAP/AD for Cloudbreak**
+##### **Configuring Cloudbreak to Use Existing LDAP/AD**
 
 You can configure Cloudbreak to use your existing LDAP/AD so that you can authenticate Cloudbreak users against an existing LDAP/AD server. For more information, refer to [Configuring Cloudbreak for LDAP/AD Authentication](cb-ldap.md). 
 
@@ -78,13 +78,19 @@ Default HDF version 3.1.1.0-35
 ##### **February 23, 2018**
 
 Default Ambari version 2.6.1.3   
-Default HDP version  2.6.4.0-91    
-
+Default HDP version  2.6.4.0-91  
+Default HDF version 3.1.1.0-35   
 
 ____________________________
 
 #### Fixed Issues 
 ____________________________
+
+| Jira Issue | Issue Description |
+|---|---|
+| BUG-96764 | When trying to delete instances by using the delete icon on the cluster details in the Hardware tab, the following appears: "Failed to remove instance". |
+| BUG-96784 | Hive LLAP start times out in Ambari, but eventually it starts (after 15 minutes on AWS and after one hour or so on other providers).  |
+ 
 
 
 
@@ -136,17 +142,6 @@ ____________________________
 
 
 
-##### (BUG-91013) **Incorrect Node Status After Cluster Restart** 
-
-You may sporadically experience an issue where after you stop and restart a cluster, the node status displayed in the "Hardware" section is incorrect.   
-
-[comment]: <> (Not sure what the workaround is for BUG-91013?)
-____________________________
-
-
-
-
-
 
 
 ##### (BUG-93241) **Error When Scaling Multiple Host Groups** 
@@ -166,17 +161,6 @@ ____________________________
 
 
 
-##### (BUG-96764) **"Failed to remove instance" Error When Using the Delete Icon**
-
-When trying to delete instances by using the delete icon on the cluster details in the **Hardware** tab, you will get the following error: "Failed to remove instance".
-
-*Workaround:*
-
-This issue will be fixed in a future release. If you would like to change the number of instances in a given host group, you can use the **Resize** option available from the **Actions** menu.  
-____________________________
-
-
-
 
 
 
@@ -190,7 +174,10 @@ When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** 
  *Workaround:*  
  
  Use a browser without an adblock plugin. 
+ 
 ____________________________
+
+
 
 
 
@@ -227,32 +214,10 @@ After changing the dates on the History page multiple times, the results display
 *Workaround:*
 
 Refresh the page if you think that the history displayed may be incorrect.  
-____________________________
 
 
 
 
-
-
-
-##### (AMBARI-14149) **Ambari Cluster Cannot Be Started After Stop**
-
-When using Ambari version 2.5.0.3, after stopping and starting a cluster, Event History shows the following error:
-
-<pre>Ambari cluster could not be started. Reason: Failed to start Hadoop services.
-2/7/2018, 12:47:05 PM
-Starting Ambari services.
-2/7/2018, 12:47:04 PM
-Manual recovery is needed for the following failed nodes:   
-[host-10-0-0-4.openstacklocal, host-10-0-0-3.openstacklocal, host-10-0-0-5.openstacklocal</pre>
-
-Ambari dashboard shows that nodes are not sending heartbeats. 
-
- *Workaround:*  
- 
- This issue is fixed in Ambari version 2.5.1.0 and newer.  
-
-[Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
 
 
 
@@ -269,14 +234,6 @@ ____________________________
 ____________________________
 
 
-
-
-
-
-##### (BUG-96784) **Hive LLAP Start Takes More Than an Hour**
-
-Hive LLAP start times out in Ambari, but eventually it starts (after 15 minutes on AWS and after one hour or so on other providers).  
-____________________________
 
 
 
@@ -308,6 +265,34 @@ agent.auto.cache.update=true*
 */etc/ambari-agent/conf/ambari-agent.ini  
 parallel_execution=1</pre> 
 
+[Comment]: <> (Fixed in Ambari 2.7) 
+
+____________________________
+
+
+
+
+
+
+
+##### (AMBARI-14149) **Ambari Cluster Cannot Be Started After Stop**
+
+When using Ambari version 2.5.0.3, after stopping and starting a cluster, Event History shows the following error:
+
+<pre>Ambari cluster could not be started. Reason: Failed to start Hadoop services.
+2/7/2018, 12:47:05 PM
+Starting Ambari services.
+2/7/2018, 12:47:04 PM
+Manual recovery is needed for the following failed nodes:   
+[host-10-0-0-4.openstacklocal, host-10-0-0-3.openstacklocal, host-10-0-0-5.openstacklocal</pre>
+
+Ambari dashboard shows that nodes are not sending heartbeats. 
+
+ *Workaround:*  
+ 
+ This issue is fixed in Ambari version 2.5.1.0 and newer.  
+
+[Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
 
 
 
@@ -324,6 +309,8 @@ The known issues described here were discovered when testing Cloubdreak with Amb
 
 ____________________________
 
-N/A 
+
+
+
 
 
