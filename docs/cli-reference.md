@@ -1338,17 +1338,17 @@ Registers an existing external database with Cloudbreak.
 **Required Options**
 
 **`--name <value>`**   Name for the database     
-**`--rds-username <value>`**  Username for the JDBC connection  
-**`--rds-password <value>`**  Password for the JDBC connection  
+**`--database-username <value>`**  Username for the JDBC connection  
+**`--database-password <value>`**  Password for the JDBC connection  
 **`--url <value>`**  JDBC connection URL in the form of jdbc:db-type://address:port/db  
 **`--driver <value>`**   Name of the JDBC connection driver (for example: 'org.postgresql.Driver')  
 **`--database-engine <value>`**   Name of the external database engine (MYSQL, POSTGRES...)  
-**`--type <value>`**   Name if the service that will use the RDS (HIVE, DRUID, SUPERSET, RANGER, etc.)    
+**`--type <value>`**   Name if the service that will use the database (HIVE, DRUID, SUPERSET, RANGER, etc.)    
 
 **Options**
 
 **`--description <value>`**  Description for the database       
-**`--not-validated`**  If set, then the RDS configuration will be not validated  
+**`--not-validated`**  If set, then the database configuration will be not validated  
 **`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
 **`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
 **`--password <value>`**  Cloudbreak password [$CB_PASSWORD]   
@@ -1358,9 +1358,9 @@ Registers an existing external database with Cloudbreak.
 
 **Examples**
 
-Registers an existing Postgres database called "test-rds" with Cloudbreak:
+Registers an existing Postgres database called "test-database" with Cloudbreak:
 
-<pre>cb rds create --name testrds --rds-username testuser --rds-password MySecurePassword123 --url jdbc:postgresql://test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432/testdb --driver 'org.postgresql.Driver' --database-engine POSTGRES --type HIVE</pre>
+<pre>cb database create --name testdatabase --database-username testuser --database-password MySecurePassword123 --url jdbc:postgresql://test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432/testdb --driver 'org.postgresql.Driver' --database-engine POSTGRES --type HIVE</pre>
 
 The connection URL includes three components db-type://address:port/db: 
 
@@ -1400,7 +1400,7 @@ Unregisters a previously registered database with Cloudbreak. It does not delete
 
 **Examples**
 
-<pre>cb rds delete --name testrds</pre>
+<pre>cb database delete --name testdatabase</pre>
 
 
 
