@@ -311,6 +311,16 @@ ____________________________
 
 
 
+##### (BUG-98865) Scaling HDF Clusters Does Not Update Configurations on New Nodes
+
+After HDF cluster upscale/downscale the `nifi.web.proxy.host` blueprint parameter should be changed. It is necessary for the Nifi UI to be reachable. 
+
+*Workaround:*  
+ 
+ In Ambari web UI, navigate to NiFi Configs and manually edit `nifi.web.proxy.host` by adding new NiFi hosts. For example: 
+ 
+ `HOST1:PORT,HOST2:PORT,HOST3:PORT`
+   
 
 
 
