@@ -347,10 +347,8 @@ When registering a blueprint via `blueprint create` CLI command, if the name of 
  ~  integration-test  1  time="2018-02-01T12:56:44+01:00" level="error" msg="the following parameters are missing: url\n"</pre> 
  
  *Workaround:*  
- You have two options:
- 
-* Do not include any of the following special characters `@#$%|:&*;` in the blueprint name.  
-* If you want to use special characters in the name, perform the task via the UI.  
+You must use quotes when specifying a blueprint name which includes special characters:  
+<pre>cb blueprint create from-url --name "test@#" --url https://myurl.com/myblueprint.bp
 ____________________________
 
 
