@@ -66,22 +66,35 @@ If you choose to (a) use the public hosted repositories, be sure to allow outbou
 
 In some cases, your environment requires all internet traffic to go through an internet proxy. This section describes the following:
 
-* How to setup Cloudbreak to use a proxy  
-* How to configure your cluster hosts to use a proxy  
+* How to [set up Cloudbreak to use a proxy](#set-up-cloudbreak-to-use-a-proxy)  
+* How to [configure your cluster hosts to use a proxy](#set-up-clusters-to-use-a-proxy)  
 
 #### Set up Cloudbreak to Use a Proxy 
 
+Use these steps if you would like to set up Cloudbreak to use your proxy. 
+
 **Steps**
 
-1. After downloading and installing Cloudbreak, configure the Docker daemon to use proxy:  
+1. After downloading and installing Cloudbreak, configure the Docker daemon to use proxy by adding the following to the Docker service file:
 
-    <pre>vi /etc/systemd/system/docker.service ->
-Environment="HTTP_PROXY=http://10.0.2.237:3128"
-"NO_PROXY=localhost,127.0.0.1"</pre>
+    <pre>Environment="HTTP_PROXY=http://my-proxy-host:my-proxy-port" "NO_PROXY=localhost,127.0.0.1"</pre>   
+
+    For more information refer to
+[Docker docs](https://docs.docker.com/config/daemon/systemd/#httphttps-proxy).     
 
 2. 9443 and 8443 should be handled as SSL connection in the proxy config.
 
 3. Configure proxy settings in the Profile file by setting the following variables:  
+
+<pre>HTTP_PROXY_HOST=your-proxy-host
+HTTPS_PROXY_HOST=your-proxy-host
+PROXY_PORT=your-proxy-port
+PROXY_USER=your-proxy-user
+PROXY_PASSWORD=your-proxy-password
+#NON_PROXY_HOSTS
+#HTTPS_PROXYFORCLUSTERCONNECTION=false</pre>
+
+For example:
 
 <pre>HTTP_PROXY_HOST=10.0.2.237
 HTTPS_PROXY_HOST=10.0.2.237
@@ -91,26 +104,27 @@ PROXY_PASSWORD=squid
 #NON_PROXY_HOSTS
 #HTTPS_PROXYFORCLUSTERCONNECTION=false</pre>
 
+
 #### Set up Clusters to Use a Proxy 
 
 Use the following guidelines to find out what steps to perform in order to set up your clusters to use a proxy:  
 
 | What base image are you using?| Where are the platform repositories? | What to do | 
 |---|---|---|
-| Default | Public | Use [Register a Proxy](#external-proxy) |
-| Default | Local | Use [Register a Proxy](#external-proxy)|
-| Custom | Public | Set up the proxy on your custom image OR use [Register a Proxy](#external-proxy).|
+| Default | Public | Use [Register a Proxy](external-proxy.md) |
+| Default | Local | Use [Register a Proxy](external-proxy.md)|
+| Custom | Public | Set up the proxy on your custom image OR use [Register a Proxy](external-proxy.md).|
 | Custom | Local | Not required. Skip this section. |
 
-You can define a proxy Configuration as an external source, and then (optionally) specify to configure that proxy configuration on the hosts that are part of the cluster during cluster create. Refer to [Register a Proxy](#external-proxy) for more information.  
+You can define a proxy configuration as an external source in CLoudbreak wen UI or CLI, and then (optionally) specify to configure that proxy configuration on the hosts that are part of the cluster during cluster create. Refer to [Register a Proxy](#external-proxy) for more information.  
 
 
 #### Advanced Proxy Setup Scenarios 
 
 In some cases, Cloudbreak using the proxy might vary depending on your Cloudbreak -> cluster deployment. This section describes two scenarios:
 
-**Scenario 1**: Cloudbreak needs to go through a proxy to access the Cloud provider APIs (and other public internet resources) but can talk to the cluster hosts directly.  
-**Scenario 2**: Cloudbreak needs to go through a proxy to access the Cloud provider APIs (and other public internet resources) and the cluster hosts.  
+* **Scenario 1**: Cloudbreak needs to go through a proxy to access the Cloud provider APIs (and other public internet resources) but can talk to the cluster hosts directly.  
+* **Scenario 2**: Cloudbreak needs to go through a proxy to access the Cloud provider APIs (and other public internet resources) and the cluster hosts.  
 
 
 ##### **Scenario 1**
@@ -126,7 +140,7 @@ To configure this scenario, set this setting in your Profile file:
 
 ##### **Scenario 2**
 
-In this scenario, Cloudbreak will connect to the Ambari Server through the configured Proxy. For example, this can be a scenario where Cloudbreak is deployed to a different VPC/VNet than the cluster and must go through a proxy. Communication to the public Cloud Provider APIs also is via the proxy.
+In this scenario, Cloudbreak will connect to the Ambari Server through the configured proxy. For example, this can be a scenario where Cloudbreak is deployed to a different VPC/VNet than the cluster and must go through a proxy. Communication to the public cloud provider APIs also is via the proxy.
 
 To configure this scenario, set this setting in your Profile file:
 
