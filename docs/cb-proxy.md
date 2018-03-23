@@ -78,6 +78,10 @@ Use these steps if you would like to set up Cloudbreak to use your proxy.
 1. After downloading and installing Cloudbreak, configure the Docker daemon to use proxy by adding the following to the Docker service file:
 
     <pre>Environment="HTTP_PROXY=http://my-proxy-host:my-proxy-port" "NO_PROXY=localhost,127.0.0.1"</pre>   
+    
+    For example:
+    
+    <pre>vi /etc/systemd/system/docker.service -> Environment="HTTP_PROXY=http://10.0.2.237:3128" "NO_PROXY=localhost,127.0.0.1"</pre>
 
     For more information refer to
 [Docker docs](https://docs.docker.com/config/daemon/systemd/#httphttps-proxy).     
