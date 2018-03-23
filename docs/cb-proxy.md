@@ -86,7 +86,7 @@ Use these steps if you would like to set up Cloudbreak to use your proxy.
     For more information refer to
 [Docker docs](https://docs.docker.com/config/daemon/systemd/#httphttps-proxy).     
 
-2. 9443 and 8443 should be handled as SSL connection in the proxy config.
+2. Ensure that ports 9443 and 8443 are handled as SSL connections in the proxy config.   
 
 3. Configure proxy settings in the Profile file by setting the following variables:  
 

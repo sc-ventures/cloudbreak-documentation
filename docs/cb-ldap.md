@@ -2,13 +2,13 @@
 
 By default Cloudbreak uses an internal system as the user store for authentication (enabled by using [CloudFoundry UAA](https://github.com/cloudfoundry/uaa )). If you would like to configure LDAP or Active Directory (AD) external authentication, you need to:  
 
-1. Collect the following information about your LDAP/AD setup    
-2. Configure Cloudbreak to work with that LDAP/AD setup.
+1. Collect the [following information](#ldapad-information) about your LDAP/AD setup    
+2. [Configure Cloudbreak](#configuring-cloudbreak-for-ldapad) to work with that LDAP/AD setup.
 
 
 ### LDAP/AD Information 
 
-The following table details the properties and values you need to know about your LDAP/AD environment: 
+The following table details the properties and values that you need to know about your LDAP/AD environment on order to use the LDAP/AD with Cloudbreak: 
 
 | Parameter | Description | Example |
 |---|---|---|
@@ -40,10 +40,9 @@ Configure LDAP/AD user authentication for Cloudbreak by using these steps.
 
     > The name of this file can be customized by setting the following in Profile: `export UAA_SETTINGS_FILE=myldap.yml`
     
-3. In the yml file enter the following using your LDAP/AD information: 
+3. In the yml file enter the following using your [LDAP/AD information](#ldapad-information). Next, save the file and restart Cloudbreak.  
 
-<pre>
-spring_profiles: postgresql,ldap
+<pre>spring_profiles: postgresql,ldap
 
 ldap:
   profile:
@@ -63,7 +62,7 @@ ldap:
     autoAdd: true
 </pre>
 
-3. Save the file and restart Cloudbreak. 
+
 
 
 #### Configure Group Authorization 
