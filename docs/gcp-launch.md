@@ -148,11 +148,11 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
 
     Once the `cbd start` has finished, it returns the "Uluwatu (Cloudbreak UI) url" which you can later paste in your browser and log in to Cloudbreak web UI.
 
-4. Check Cloudbreak deployer version and health: 
+    To check Cloudbreak deployer version and health, use: 
     
     <pre>cbd doctor</pre>
     
-5. Next, check Cloudbreak Application logs: 
+    If you need to check Cloudbreak Application logs, use: 
 
     <pre>cbd logs cloudbreak</pre>
     

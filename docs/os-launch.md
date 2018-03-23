@@ -227,11 +227,11 @@ Launch Cloudbreak deployer using the following steps.
 
     Once the `cbd start` has finished, it returns the "Uluwatu (Cloudbreak UI) url" which you can later paste in your browser and log in to Cloudbreak web UI.
 
-2. Check Cloudbreak deployer version and health:
+    To check Cloudbreak deployer version and health, use:
 
     <pre>cbd doctor</pre>
 
-3. Next, check Cloudbreak Application logs:
+    If you would like to check Cloudbreak Application logs, use:
 
     <pre>cbd logs cloudbreak</pre>
 
