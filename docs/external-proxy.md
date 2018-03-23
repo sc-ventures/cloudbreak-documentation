@@ -12,15 +12,15 @@ Cloudbreak allows you to save your existing proxy configuration information so t
 2. Select **Register Proxy Configuration**.    
 5. Provide the following information:
 
-    | Parameter | Description |
-    |:---|:---|
-    | Name | Enter the name to use when registering this database to Cloudbreak. This is **not** the database name. |
-    | Description | Provide description. | 
-    | Protocol | Select HTTP or HTTPS. |
-    | Server Host| Enter the URL of your proxy server host. |
-    | Server Port | Enter proxy server port. |
-    | Username | Enter the username for the proxy. |
-    | Password | Enter the password for the proxy. |
+    | Parameter | Description | Example |
+    |:---|:---|:---|
+    | Name | Enter the name to use when registering this database to Cloudbreak. This is **not** the database name. | my-proxy |
+    | Description | Provide description. | |
+    | Protocol | Select HTTP or HTTPS. | HTTPS|
+    | Server Host| Enter the URL of your proxy server host. | 10.0.2.237 |
+    | Server Port | Enter proxy server port. | 3128 |
+    | Username | Enter the username for the proxy. | testuser |
+    | Password | Enter the password for the proxy. | MyPassword123 |
 
 6. Click **REGISTER** to save the configuration. 
 
