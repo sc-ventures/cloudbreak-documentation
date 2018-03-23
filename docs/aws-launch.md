@@ -418,13 +418,13 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
     
 [Comment]: <> (Extra info which may not be needed here: The `cbd start` command includes the `cbd generate` command which applies the following steps: Creates the `docker-compose.yml` file, which describes the configuration of all the Docker containers needed for the Cloudbreak deployment. Creates the `uaa.yml` file, which holds the configuration of the identity server used to authenticate users with Cloudbreak.)
 
-    Once the `cbd start` has finished, it returns the "Uluwatu (Cloudbreak UI) url" which you can later paste in your browser and log in to Cloudbreak web UI. 
+4. Once the `cbd start` has finished, it returns the "Uluwatu (Cloudbreak UI) url" which you can later paste in your browser and log in to Cloudbreak web UI. 
 
-5. Check Cloudbreak deployer version and health: 
+    If you would like to check Cloudbreak deployer version and health, use: 
     
     <pre>cbd doctor</pre>
     
-5. Check Cloudbreak Application logs: 
+    If you need to check Cloudbreak application logs, use: 
 
     <pre>cbd logs cloudbreak</pre>
     

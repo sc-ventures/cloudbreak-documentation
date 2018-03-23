@@ -39,3 +39,6 @@ If you face permission or connection issues, disable SELinux:
 [Troubleshooting Azure](trouble-azure.md)  
 [Troubleshooting GCP](trouble-gcp.md)  
 [Troubleshooting OpenStack](trouble-os.md)  
+
+
+[Comment]: <> (More: https://docs.google.com/document/d/197-0r2n3OFHYKkN4QhE2fCqTxLUTdliqvU3Gb1JH3tk/edit) 

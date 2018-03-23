@@ -50,7 +50,7 @@ Once you have installed the CLI, you need to configure the CLI to work with Clou
 
 3. Run any command to verify that you can connect to the Cloudbreak instance via CLI. For example:
 
-    <pre><small>cb list-clusters</small></pre>  
+    <pre><small>cb cluster list</small></pre>  
 
 
 <div class="note">
