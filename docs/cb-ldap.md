@@ -73,6 +73,6 @@ To create a group authorization, execute the following (for example: to add “A
  
 <pre>cbd util execute-ldap-mapping cn=Analysts,ou=Groups,dc=hortonworks,dc=local</pre>
 
-To remove a group authorization, execute the following:
+To remove a group authorization, execute the following (for example: to remove “Analysts” group):
 
 <pre>cbd util delete-ldap-mapping cn=Analysts,ou=Groups,dc=hortonworks,dc=local</pre>
