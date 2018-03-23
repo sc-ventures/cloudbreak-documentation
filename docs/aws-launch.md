@@ -199,6 +199,7 @@ Use the following "cb-policy" policy definition:
         "ec2:DescribeSpotInstanceRequests",
         "ec2:DescribeVpcAttribute",
         "ec2:ImportKeyPair",
+        "ec2:DeleteKeyPair",
         "ec2:AttachInternetGateway",
         "ec2:DeleteVpc",
         "ec2:DeleteSecurityGroup",
