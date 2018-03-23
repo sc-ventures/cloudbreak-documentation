@@ -182,6 +182,7 @@ Use the following "cb-policy" policy definition:
         "ec2:DeleteSubnet",
         "ec2:CreateInternetGateway",
         "ec2:CreateKeyPair",
+        "ec2:DeleteKeyPair", 
         "ec2:DisassociateAddress",
         "ec2:DisassociateRouteTable",
         "ec2:ModifySubnetAttribute",

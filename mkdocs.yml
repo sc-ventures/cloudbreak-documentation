@@ -40,17 +40,16 @@ pages:
       - Access Cluster: os-clusters-access.md
       - Manage and Monitor Clusters: os-clusters-manage.md
     - Using Cloudbreak:
-      - Advanced Options:
+      - Advanced Cluster Options:
         - Use Custom Blueprints: blueprints.md
         - Use Custom Scripts (Recipes): recipes.md
         - Use Custom Images: images.md
         - Tag Resources: tags.md 
         - Enable Kerberos Security: security-kerberos.md
         - Configure Autoscaling: autoscaling.md 
-        - Register External Sources:
-          - Database Configurations: external-db.md  
-          - Authentication Configurations: external-ldap.md  
-          - Proxy Configurations: external-proxy.md  
+        - Register External Database: external-db.md  
+        - Register External Authentication Source: external-ldap.md  
+        - Register Proxy Configuration: external-proxy.md  
       - Network and Security:  
         - Security Overview: security.md
         - Configure Outbound Internet Access and Proxy: cb-proxy.md 
