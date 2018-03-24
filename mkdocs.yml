@@ -14,8 +14,8 @@ markdown_extensions:
   - markdown_include.include
 use_directory_urls: false
 pages:
-    - Get Started:
-      - Introduction: index.md
+    - Intro:
+      - Get Started: index.md
       - Architecture: architecture.md
       - Security Overview: security.md
     - AWS:
