@@ -11,7 +11,7 @@ ____________________________
 
 ##### **Creating HDF Clusters** 
 
-You can use Cloudbreak to create HDF clusters on AWS, Azure, Google Cloud and OpenStack. In the Cloudbreak web UI, you can do this by selecting "HDF 3.1" under *Platform Version* and then selecting an HDF blueprint.
+You can use Cloudbreak to create HDF clusters from base images on AWS, Azure, Google Cloud and OpenStack. In the Cloudbreak web UI, you can do this by selecting "HDF 3.1" under *Platform Version* and then selecting an HDF blueprint.
 
 Cloudbreak includes one default HDF blueprint "Flow Management: Apache NiFi" and supports uploading your own custom HDF 3.1.1 NiFi blueprints.  
 
