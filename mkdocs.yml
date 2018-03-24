@@ -76,6 +76,7 @@ pages:
         - Troubleshooting AWS: trouble-aws.md
         - Troubleshooting Azure: trouble-azure.md
         - Troubleshooting GCP: trouble-gcp.md
+        - Troubleshooting Cloudbreak CLI: trouble-cli.md
     - More:
       - Release Notes: releasenotes.md
       - FAQs: faq.md 
