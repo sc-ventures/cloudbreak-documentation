@@ -32,13 +32,6 @@ If you face permission or connection issues, disable SELinux:
 
 
 
-**Related Links**  
-[Cloudbreak Logs](trouble-cb-logs.md)  
-[Troubleshooting Cluster Creation](trouble-cluster.md)  
-[Troubleshooting AWS](trouble-aws.md)  
-[Troubleshooting Azure](trouble-azure.md)  
-[Troubleshooting GCP](trouble-gcp.md)  
-[Troubleshooting OpenStack](trouble-os.md)  
 
 
 [Comment]: <> (More: https://drive.google.com/drive/u/0/folders/1Ml8hU3pgphYt47LLWHilRpGQEo6sNee3) 

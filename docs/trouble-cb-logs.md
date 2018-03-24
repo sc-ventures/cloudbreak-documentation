@@ -82,7 +82,5 @@ Ambari agent logs can be found on the nodes where Ambari agent is installed in t
 Cloudbreak supports "recipes" - user-provided customization scripts that can be run prior to or after cluster installation. It is the user’s responsibility to provide an idempotent well tested script. If the execution fails, the recipe logs can be found at `/var/log/recipes` on the nodes on which the recipes were executed.
 
 It is advised, but not required to have an advanced logging mechanism in the script, as Cloudbreak always logs every script that are run. Recipes are often the sources of installation failures as users might try to remove necessary packages or reconfigure services.
-
-**Related Links**  
-[Troubleshooting Cloudbreak](trouble-cb.md)    
+   
 
