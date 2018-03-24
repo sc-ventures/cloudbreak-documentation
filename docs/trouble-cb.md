@@ -41,4 +41,4 @@ If you face permission or connection issues, disable SELinux:
 [Troubleshooting OpenStack](trouble-os.md)  
 
 
-[Comment]: <> (More: https://docs.google.com/document/d/197-0r2n3OFHYKkN4QhE2fCqTxLUTdliqvU3Gb1JH3tk/edit) 
+[Comment]: <> (More: https://drive.google.com/drive/u/0/folders/1Ml8hU3pgphYt47LLWHilRpGQEo6sNee3) 

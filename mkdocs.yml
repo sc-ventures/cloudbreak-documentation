@@ -17,6 +17,7 @@ pages:
     - Get Started:
       - Introduction: index.md
       - Architecture: architecture.md
+      - Security Overview: security.md
     - AWS:
       - Launch on AWS: aws-launch.md
       - Create a Cluster: aws-create.md
@@ -50,18 +51,16 @@ pages:
         - Register External Database: external-db.md  
         - Register External Authentication Source: external-ldap.md  
         - Register Proxy Configuration: external-proxy.md  
-      - Network and Security:  
-        - Security Overview: security.md
-        - Configure Outbound Internet Access and Proxy: cb-proxy.md 
-        - Restrict Inbound Access to Clusters: security-cb-inbound.md
-        - Configure Access From Custom Domains: security-cb-customdom.md
-      - Manage Cloudbreak:  
+      - Manage and Configure Cloudbreak:  
         - Install Cloudbreak on Your Own VM: vm-launch.md
         - Upgrade Cloudbreak: cb-upgrade.md 
         - Manage Cloudbreak Credentials: cb-credentials.md 
         - Move Cloudbreak Instance: cb-migrate.md 
         - Configure LDAP/AD Authentication for Cloudbreak: cb-ldap.md  
         - Configure SSL Certificates: security-cb-ssl.md
+        - Configure Outbound Internet Access and Proxy: cb-proxy.md 
+        - Restrict Inbound Access to Clusters: security-cb-inbound.md
+        - Configure Access From Custom Domains: security-cb-customdom.md
         - Configure External Cloudbreak Database: cb-db.md
         - Disable Providers: cb-disable-provider.md
         - Modify Settings in Cloudbreak Profile: cb-profile.md 
@@ -78,10 +77,10 @@ pages:
         - Troubleshooting Azure: trouble-azure.md
         - Troubleshooting GCP: trouble-gcp.md
         - Troubleshooting OpenStack: trouble-os.md
-      - Developer Documentation: dev.md
     - More:
       - Release Notes: releasenotes.md
       - FAQs: faq.md 
+      - Developer Documentation Links: dev.md
       - Getting Help: get-help.md
       - SmartSense: smartsense.md
       - Legal:
