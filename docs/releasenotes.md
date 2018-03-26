@@ -240,7 +240,7 @@ ____________________________
 
 
 
-##### (BUG-) All Google Cloud Clusters Fail 
+##### (BUG-BUG-99168) All Google Cloud Clusters Fail 
 
 All clusters launched on Google Cloud Platform fail. This happens due to a recent change in the Google Cloud Platform's response code. In order to fix the issue, a change Cloudbreak's code was required. The change was introduced in Cloudbreak 2.4.1.
 
