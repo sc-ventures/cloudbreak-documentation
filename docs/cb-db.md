@@ -10,7 +10,7 @@ use an external database for Cloudbreak, you may use the following supported dat
 
 | Database Type | Supported Version |
 |---|---| 
-| External PostgreSQL | 9.x |
+| External PostgreSQL | 9.6.1 or above |
 | External MySQL | Not supported |
 | External MariaDB | Not supported |
 | External Oracle | Not supported |
