@@ -1,6 +1,6 @@
 ## Release Notes
 
-### 2.4.0
+### 2.4.1
 
 Cloudbreak 2.4.0 is a general availability release, which is suitable for production deployments. 
 
@@ -235,6 +235,7 @@ ____________________________
 
 | Issue | Description |
 |---|---|
+| BUG-99168 | All clusters created on Google Cloud Platform fail. |
 | BUG-????? | Time based cluster autoscaling does not work. |
 | BUG-96764 | "Failed to remove instance" error when using the delete icon. |
 
