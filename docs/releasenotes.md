@@ -237,6 +237,25 @@ ____________________________
 
 
 
+
+
+
+##### (BUG-) All Google Cloud Clusters Fail 
+
+All clusters launched on Google Cloud Platform fail. This happens due to a recent change in the Google Cloud Platform's response code. In order to fix the issue, a change Cloudbreak's code was required. The change was introduced in Cloudbreak 2.4.1.
+
+*Workaround*: 
+
+There is no workaround for this in Cloudbreak 2.4.0. In order to create clusters on Google Cloud Platform, you must [launch](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/content/gcp-launch/index.html) or [upgrade](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/content/cb-upgrade/index.html) to Cloudbreak 2.4.1.   
+
+  
+____________________________
+
+
+
+
+
+
 ##### (BUG-96788) Azure Availability Set Option Is Not Available for Instance Count of 1
 
 When creating a cluster, the Azure availability set feature is not available for host groups with the instance count of 1.
@@ -285,7 +304,7 @@ ____________________________
 
 
 
-##### (BUG-?????) Time Based Scaling Does Not Work 
+##### (BUG-?????) Time Based Autoscaling Does Not Work 
 
 Time based cluster autoscaling does not work. This issue will be fixed in the upcoming release. 
 ____________________________
