@@ -25,9 +25,9 @@ The following default cluster configurations are available:
 
 {!docs/common/cluster-configs.md!}
 
-### Architecture
+### Core Concepts   
 
-Refer to [Architecture](architecture.md).
+Refer to [Architecture](architecture.md) and [Core Concepts](architecture.md#core-concepts).
 
 
 ### Get Started

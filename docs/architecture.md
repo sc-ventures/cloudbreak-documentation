@@ -29,7 +29,11 @@ Cloudbreak application is built on the foundation of cloud provider APIs and Apa
 * Cloudbreak uses the **Cloudbreak credential** to authenticate with your cloud provider account and provision cloud resources required for the clusters. 
     
 * Cloudbreak uses Apache Ambari and **Ambari blueprints** to provision, manage, and monitor clusters. Ambari blueprints are a declarative definition of a cluster. With a blueprint, you can specify stack, component layout, and configurations to materialize a cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard.     
-    
+  
+  
+### Core Concepts  
+
+Before using Cloudbreak, you should familiarize yourself with the following concepts.     
 
 
 #### Cloudbreak Credential
@@ -58,3 +62,22 @@ Cloudbreak includes a few default blueprints and allows you to upload your own b
 **Related Links**  
 [Blueprints](security.md#identity-management)  
 [Apache documentation](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) (External)  
+
+
+#### Recipes 
+
+Cloudbreak allows you to upload custom scripts, called "recipes". A recipe is a script that runs on all nodes of a selected node group at a specific time. You can use recipes for tasks such as installing additional software or performing advanced cluster configuration. For example, you can use a recipe to put a JAR file on the Hadoop classpath.
+
+Available recipe execution times are:  
+
+* Before Ambari server start    
+* After Ambari server start    
+* After cluster installation    
+* Before cluster termination   
+
+You can upload your recipes to Cloudbreak via the UI or CLI. Then, when creating a cluster, you can optionally attach one or more "recipes" and they will be executed on a specific host group at a specified time. 
+
+**Related Links**  
+[Recipes](recipes.md) 
+
+   

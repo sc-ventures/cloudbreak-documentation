@@ -12,15 +12,7 @@ Once your cluster is up and running, click on the tile representing your cluster
 The information presented includes:
 
 * [Cluster Summary](#cluster-summary)  
-* [Cluster Information](#cluster-information)  
-* [Hardware](#hardware)  
-* [Tags](#tags)   
-* [Recipes](#recipes)  
-* [Repository Details](#repository-details)  
-* [Image Details](#image-details)    
-* [Network](#network)   
-* [Security](#security)  
-* [Autoscaling](#autoscaling)    
+* [Cluster Information](#cluster-information)     
 * [Event History](#event-history)  
 
 <div class="note">
@@ -51,6 +43,8 @@ The summary bar includes the following information about your cluster:
 
 #### Cluster Information 
 
+The following information is available on the cluster details page: 
+
 | Item | Description |
 |---|---|
 | Cluster User | The name of the cluster user that you created when creating the cluster. |  
@@ -62,45 +56,23 @@ The summary bar includes the following information about your cluster:
 | Created With | The version of Cloudbreak used to create this cluster. |
 | Ambari Version | The Ambari version which this cluster is currently running. |
 | HDP/HDF Version | The HDP or HDF version which this cluster is currently running. |
-
-[comment]: <> (Regarding Ambari and HDP/HDF version, if I upgrade, should this show the current version or the original version?)
-
-#### Hardware
-
-This section includes information about your cluster instances: instance names, instance IDs, instance types, their status, fully qualified domain names (FQDNs), and private and public IPs. 
+| Authentication Source | If you are using an external authentication source (LDAP/AD) for your cluster, you can see it here. Refer to [Register an Authentication Source](external-ldap.md). |
 
 
-#### Tags 
+Below this, you will see additional tabs that you can click on in order to see their content:
 
-This section lists keys and values of the user-defined tags, in the same order as you added them.
+| Item | Description |
+|---|---|
+|Hardware | This section includes information about your cluster instances: instance names, instance IDs, instance types, their status, fully qualified domain names (FQDNs), and private and public IPs. |
+| Tags | This section lists keys and values of the user-defined tags, in the same order as you added them. |
+| Recipes | This section includes recipe-related information. For each recipe, you can see the host group on which a recipe was executed, recipe name, and recipe type. Refer to [Recipes](recipes.md). |
+| External Databases | If you are using an external database for your cluster, you can see it here. Refer to [Register an External Database](external-db.md). |
+| Repository Details | This section includes Ambari and HDP/HDF repository information, as you provided it in the "Base Images" section when creating a cluster. |
+| Image Details | This section includes information about the base image that was used for the Cloudbreak instance. |
+| Network | This section includes information about the names of the network and subnet in which the cluster is running and the links to related cloud provider console. |
+| Security | This section is only available if you have enabled Kerberos security. It provides you with the details of your Kerberos configuration.  
+| Autoscaling | This section includes configuration options related to autoscaling. Refer to [Autoscaling](autoscaling.md). |
 
-
-#### Recipes
-
-This section includes recipe-related information. For each recipe, you can see the host group on which a recipe was executed, recipe name, and recipe type. 
- 
-
-#### Repository Details 
-
-This section includes Ambari and HDP/HDF repository information, as you provided it in the "Base Images" section when creating a cluster.
-
-
-#### Image Details
-
-This section includes information about the base image that was used for the Cloudbreak instance. 
-
-
-#### Network
-
-This section includes information about the names of the network and subnet in which the cluster is running and the links to related cloud provider console.
-
-#### Security 
-
-This section is only available if you have enabled Kerberos security. It provides you with the details of your Kerberos configuration.  
-
-#### Autoscaling
- 
-This section includes configuration options related to autoscaling. Refer to [Autoscaling](autoscaling.md).  
 
 
 #### Event History 

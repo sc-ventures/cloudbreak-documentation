@@ -2,14 +2,16 @@
 
 Although Cloudbreak lets you provision clusters in the cloud based on custom Ambari blueprints, Cloudbreak provisioning options don't consider all possible use cases. For that reason, we introduced recipes. 
 
-A recipe is a script that runs on all nodes of a selected node group before or after the Ambari cluster installation. You can use recipes for tasks such as installing additional software or performing advanced cluster configuration. For example, you can use a recipe to put a JAR file on the Hadoop classpath.
+A recipe is a script that runs on all nodes of a selected node group at a specific time. You can use recipes for tasks such as installing additional software or performing advanced cluster configuration. For example, you can use a recipe to put a JAR file on the Hadoop classpath.
 
-When creating a cluster, you can optionally upload one or more "recipes" (custom scripts) and they will be executed on a specific host group at a specified time. Available recipe execution times are:  
+Available recipe execution times are:  
 
 * Before Ambari server start    
 * After Ambari server start    
 * After cluster installation    
 * Before cluster termination   
+
+You can upload your recipes to Cloudbreak via the UI or CLI. Then, when creating a cluster, you can optionally attach one or more "recipes" and they will be executed on a specific host group at a specified time. 
 
 
 ### Writing Recipes
