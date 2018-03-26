@@ -226,6 +226,22 @@ Default HDP version  2.6.4.0-91
 
 
 
+
+
+____________________________
+
+#### Fixed Issues
+____________________________
+
+| Issue | Description |
+|---|---|
+| BUG-????? | Time based cluster autoscaling does not work. |
+| BUG-96764 | "Failed to remove instance" error when using the delete icon. |
+
+
+
+
+
 ____________________________
 
 #### Known Issues
@@ -285,13 +301,6 @@ ____________________________
 
 
 
-##### (BUG-?????) Time Based Scaling Does Not Work 
-
-Time based cluster autoscaling does not work. This issue will be fixed in the upcoming release. 
-____________________________
-
-
-
 
 
 
@@ -309,18 +318,6 @@ ____________________________
 
 
 
-
-
-
-
-##### (BUG-96764) "Failed to remove instance" Error When Using the Delete Icon
-
-When trying to delete instances by using the delete icon on the cluster details in the **Hardware** tab, you will get the following error: "Failed to remove instance".
-
-*Workaround:*
-
-This issue will be fixed in a future release. If you would like to change the number of instances in a given host group, you can use the **Resize** option available from the **Actions** menu.  
-____________________________
 
 
 
@@ -356,8 +353,7 @@ When registering a blueprint via `blueprint create` CLI command, if the name of 
  ~  integration-test  1  time="2018-02-01T12:56:44+01:00" level="error" msg="the following parameters are missing: url\n"</pre> 
  
  *Workaround:*  
-You must use quotes when specifying a blueprint name which includes special characters:  
-<pre>cb blueprint create from-url --name "test@#" --url https://myurl.com/myblueprint.bp
+When specifying a bleuprint name that contains special characters, make sure to use quotes, for example "test@#".
 ____________________________
 
 
@@ -373,6 +369,23 @@ After changing the dates on the History page multiple times, the results display
 
 Refresh the page if you think that the history displayed may be incorrect.  
 ____________________________
+
+
+
+
+
+
+____________________________
+
+**Known Issues: Ambari 2.6.1.3 and HDP 2.6.4.0**
+
+> The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak 2.4.0.
+
+> For general Ambari 2.6.1.3 and HDP 2.6.4.0 known issues, refer to:  
+> [Ambari 2.6.1.3 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.3/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.3.html)  
+> [HDP 2.6.4.0 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.4/bk_release-notes/content/ch_relnotes.html)  
+____________________________
+
 
 
 
@@ -400,18 +413,6 @@ Ambari dashboard shows that nodes are not sending heartbeats.
 [Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
 
 
-
-
-____________________________
-
-**Known Issues: Ambari 2.6.1.3 and HDP 2.6.4.0**
-
-> The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak 2.4.0.
-
-> For general Ambari 2.6.1.3 and HDP 2.6.4.0 known issues, refer to:  
-> [Ambari 2.6.1.3 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.3/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.3.html)  
-> [HDP 2.6.4.0 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.4/bk_release-notes/content/ch_relnotes.html)  
-____________________________
 
 
 
