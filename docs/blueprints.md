@@ -4,20 +4,11 @@
 
 You have two options concerning using blueprints with Cloudbreak:
 
-* Use one of the pre-defined blueprints.    
-* Add your custom blueprint by uploading a JSON file or pasting the JSON text. 
+* **Use one of the pre-defined blueprints**: To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. For the list of default blueprints, refer to [Default Cluster Configurations](index.md#default-cluster-configurations).       
+* **Add your custom blueprint** by uploading a JSON file or pasting the JSON text. 
 
 We recommend that you review the default blueprints to check if they meet your requirements. You can do this by selecting **Blueprints** from the navigation pane in the Cloudbreak web UI or by reading the documentation below.
  
-
-### Default Blueprints 
-
-Cloudbreak includes the following default cluster blueprints:
-
-{!docs/common/cluster-configs.md!}
-
-To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. 
-
 
 ### Using Custom Blueprints 
 
@@ -119,15 +110,13 @@ Once you have your blueprint ready, perform these steps.
 
 
 
-### View Blueprint Details 
+#### View Blueprint Details 
 
 Once a blueprint has been registered in Cloudbreak, you can access its details in the Cloudbreak UI.
 
 **Steps**
 
-1. In the Cloudbreak UI, select **Blueprints** from the navigation pane. 
-
-2. Click on an entry to navigate to details. 
+1. In the Cloudbreak UI, select **Blueprints** from the navigation pane and click on an entry to navigate to details. 
 
     You can view blueprint details using the **List View** and **Raw View**:
 
@@ -135,7 +124,7 @@ Once a blueprint has been registered in Cloudbreak, you can access its details i
 
 
  
-### Delete Blueprint
+#### Delete Blueprint
 
 To delete a default or custom blueprint, perform these steps.
 

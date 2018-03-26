@@ -26,13 +26,14 @@ The information presented includes:
 </p>
 </div>
 
+
 #### Cluster Summary 
 
 The summary bar includes the following information about your cluster:
 
 | Item | Description |
 |---|---|
-| Cluster Name | The name that you selected for your cluster is displayed at the top of the page. |
+| Cluster Name | The name that you selected for your cluster is displayed at the top of the page. Below it is the name of the cluster blueprint. |
 | Time Remaining | If you enabled lifetime management for your cluster, the clock next to the cluster name indicates the amount of time that your cluster will run before it gets terminated. Note that the time remaining counter does not stop when you stop the cluster. |
 | Cloud Provider | The logo of the cloud provider on which the cluster is running. |
 | Credential | The name of the credential used to create the cluster. |

@@ -7,4 +7,3 @@ Select this option to enable Kerberos for your cluster. For information about av
 
 **Related Links**      
 [Kerberos](security-kerberos.md)  
-

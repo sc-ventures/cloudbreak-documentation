@@ -21,6 +21,8 @@ You can manage monitor your clusters from the Cloudbreak UI. To do that, click o
 
 To resize a cluster, follow these steps.
 
+> To configure automated cluster scaling, refer to [Autoscaling](autoscaling.md).  
+
 **Steps**
 
 1. Browse to the cluster details.
@@ -138,9 +140,7 @@ To generate a report, follow these steps.
 
 1. From the Cloudbreak UI navigation menu, select **History**.
 
-2. On the History page, select the range of dates and click **Show History** to generate a report for the selected period.
-
-    <a href="../images/cb-history.png" target="_blank" title="click to enlarge"><img src="../images/cb-history.png" width="650" title="Cloudbreak web UI"></a> 
+2. On the History page, select the range of dates and click **Show History** to generate a tabular report for the selected period.
 
 
 #### History Report Content 
