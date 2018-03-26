@@ -7,6 +7,11 @@ Welcome to the **Cloudbreak 2.4.0** documentation!
 <p class="last">Cloudbreak 2.4.1 includes fixes for the Google Cloud Platform issue and time-based autoscaling issue. If you were planning to install Cloudbreak 2.4.0, use <a href="https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/index.html">Cloudbreak 2.4.1</a> instead.  If you are already using Cloudbreak 2.4.0 and are affected by these issues, you may want to <a href="https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/content/cb-upgrade/index.html">upgrade</a> to Cloudbreak 2.4.1.</p>
 </div>
 
+<div class="danger">
+<p class="first admonition-title">Cloudbreak 2.4.1 is available!</p>
+<p class="last">Cloudbreak 2.4.1 includes fixes for the Google Cloud Platform issue and time-based autoscaling issue. If you were planning to install Cloudbreak 2.4.0, use <a href="https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/index.html">Cloudbreak 2.4.1</a> instead.  If you are already using Cloudbreak 2.4.0 and are affected by these issues, you may want to <a href="https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/content/cb-upgrade/index.html">upgrade</a> to Cloudbreak 2.4.1.</p>
+</div>
+
 Cloudbreak simplifies the provisioning, management, and monitoring of on-demand HDP clusters in virtual and cloud environments. It leverages cloud infrastructure to create host instances, and uses Apache Ambari via Ambari blueprints to provision and manage HDP clusters. 
 
 Cloudbreak allows you to create clusters using the Cloudbreak web UI, Cloudbreak CLI, and Cloudbreak REST API. Clusters can be launched on public cloud infrastructure platforms **Microsoft Azure**, **Amazon Web Services (AWS)**, and **Google Cloud Platform (GCP)**, and on the private cloud infrastructure platform **OpenStack**.
