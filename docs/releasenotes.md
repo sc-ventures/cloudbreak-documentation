@@ -285,6 +285,15 @@ ____________________________
 
 
 
+##### (BUG-?????) Time Based Scaling Does Not Work 
+
+Time based cluster autoscaling does not work. This issue will be fixed in the upcoming release. 
+____________________________
+
+
+
+
+
 
 
 ##### (BUG-93241) Error When Scaling Multiple Host Groups 
