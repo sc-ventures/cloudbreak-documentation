@@ -41,10 +41,7 @@ For each newly created cluster, autoscaling is disabled by default but it can be
 
     <a href="../images/cb-autoscaling1.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling1.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
       
-4. The toggle button turns green and you can see that "Autoscaling is enabled":
-
-    <a href="../images/cb-autoscaling2.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling2.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
-    
+4. The toggle button turns green and you can see that "Autoscaling is enabled".   
 5. [Define alerts](#defining-an-alert) and then [define scaling policies](#create-a-scaling-policy). You can also [adjust the autoscaling settings](#configure-autoscaling-settings). 
 
 If you decide to disable autoscaling, your previously defined alerts and policies will be preserved. 

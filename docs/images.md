@@ -195,10 +195,8 @@ Use these steps to register your custom image catalog in the Cloudbreak UI.
 **Steps**
 
 1. In the Cloudbreak UI, select **Settings** > **Image Catalogs** from the navigation menu.  
-2. Click **Create Image Catalog**.
-    <a href="../images/cb-images-register.png" target="_blank" title="click to enlarge"><img src="../images/cb-images-register.png" width="650" title="Cloudbreak UI"></a>
-
-3. Enter name for your image catalog and the URL to the location where it is stored.
+2. Click **Create Image Catalog**.  
+3. Enter name for your image catalog and the URL to the location where it is stored.  
 4. Click **Create**.
 
 After performing these steps, the image catalog will be available and automatically selected as the default entry in the image catalog drop-down list in the create cluster wizard.
@@ -218,6 +216,7 @@ Perform these steps in the advanced **General Configuration** section of the cre
 
 **Steps**  
 
+1. In the create cluster wizard, make sure that you are using the advanced wizard version. You need to perform the steps in the **General Configuration** section.  
 1. Under **Choose Image Catalog**, select your custom image catalog.  
 2. Under **Base Images** > **Choose Image**, select the provider-specific image that you would like to use.   
     The "os" that you specified in the image catalog will be displayed in the selection and the content of the "description" will be displayed in green.    

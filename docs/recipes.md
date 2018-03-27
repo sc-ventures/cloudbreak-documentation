@@ -56,12 +56,9 @@ To add a recipe, perform these steps.
 | Description | (Optional) Enter a description for your recipe.|
 | Execution Type | Select one of the following options: <ul><li>**pre-ambari-start**: The script will be executed prior to Ambari server start.</li><li>**post-ambari-start**: The script will be executed after Ambari server start but prior to cluster installation.</li><li>**post-cluster-install**: The script will be executed after cluster deployment.</li><li>**pre-termination**: The script will be executed before cluster termination.</li></ul>|
 | Script | <p>Select one of: <ul><li>**Script**: Paste the script.</li><li> **File**: Point to a file on your machine that contains the recipe.</li><li> **URL**: Specify the URL for your recipe.</li></ul> |
-
-    <a href="../images/cb-recipe-add.png" target="_blank" title="click to enlarge"><img src="../images/cb-recipe-add.png" width="650" title="Cloudbreak web UI"></a> 
     
-3. When creating a cluster, you can select previously added recipes in the **Recipes** section. 
+5. When creating a cluster, you can select previously added recipes in the advanced **Recipes** page of the cluster wizard. 
 
-    <a href="../images/cb-recipe-select.png" target="_blank" title="click to enlarge"><img src="../images/cb-recipe-select.png" width="650" title="Cloudbreak web UI"></a> 
 
 
 
