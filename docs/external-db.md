@@ -26,7 +26,7 @@ You must create the external RDBMS instance and database prior to registering it
     | Parameter | Description |
     |:---|:---|
     | Name | Enter the name to use when registering this database to Cloudbreak. This is **not** the database name. |
-    | Type | Select the service for which you would like to use the external database. |
+    | Type | Select the service for which you would like to use the external database. If you selected "Other", you must provide a special blueprint. Refer to [](blueprint.md#creating-a-dynamic-blueprint). |
     | JDBC Connection | Select the database **type** (PostgreSQL) and enter the **JDBC connection** string (HOST:PORT/DB_NAME).  |
     | Username | Enter the JDBC connection username. |
     | Password | Enter the JDBC connection password. |
