@@ -91,7 +91,7 @@ Here are a few [blueprint examples](https://github.com/hortonworks/cloudbreak/tr
 
 [Comment]: <> (Draft from Richard. Need to edit.)
 
-Cloudbreak allows you to create special blueprints which include some templating: the values of the variables specified in the blueprint and provided in the UI or CLI will be dynamically generated in the cluster creation phase. Cloudbreak supports mustache kind of templating with the {{{variable}}} syntax.
+Cloudbreak allows you to create special blueprints which include templating: the values of the variables specified in the blueprint and provided in the UI or CLI will be dynamically generated in the cluster creation phase. Cloudbreak supports mustache kind of templating with the {{{variable}}} syntax.
 You cannot use functions in the blueprint file only the variable injection is supported.
 
 The following variables can be specified:
