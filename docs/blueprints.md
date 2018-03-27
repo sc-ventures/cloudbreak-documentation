@@ -91,58 +91,59 @@ Here are a few [blueprint examples](https://github.com/hortonworks/cloudbreak/tr
 
 [Comment]: <> (Draft from Richard. Need to edit.)
 
-Blueprint templating in cloudbreak:
-You are able to create special blueprints which include some tmeplating and the those variables will be dynamically generated under the cluster creation phase. We are suppoting mustache kind of templating with {{{variable}}} syntax.
-You can not use functions in the blueprint file only the variable injection is supported:
-- ldap properties which were assigned to the cluster
-    - ldap.connectionURL the URL of the LDAP (host + port)
-    - ldap.bindDn
-    - ldap.bindPassword
-    - ldap.directoryType
-    - ldap.userSearchBase
-    - ldap.userNameAttribute
-    - ldap.userObjectClass
-    - ldap.groupSearchBase
-    - ldap.groupNameAttribute
-    - ldap.groupObjectClass
-    - ldap.groupMemberAttribute
-    - ldap.domain
-- Rds properties which were assigned to the cluster
-    - rds.[type].connectionURL the jdbc url to the rds
-    - rds.[type].connectionDriver is case of postgres this is org.postgresql.Driver
-    - rds.[type].connectionUserName the user name to the rds
-    - rds.[type].connectionPassword the password for the connection
-    - rds.[type].databaseName the name of the database
-    - rds.[type].host the host of the database
-    - rds.[type].hostWithPort rds host + port like 10.1.1.1:1234
-    - rds.[type].subprotocol parsed from jdbc url like postgres
-    - rds.[type].databaseEngine bit capital database name like POSTGRES
-- Gateway which are used for Knox
-    - gateway.enableGateway
-    - gateway.gatewayType
-    - gateway.path
-    - gateway.topologyName
-    - gateway.exposedServices
-    - gateway.ssoType
-    - gateway.ssoProvider
-    - gateway.signKey
-    - gateway.signPub
-    - gateway.signCert
-    - gateway.tokenCert
-- Name of the cluster
-    - cluster_name
-- First name of the cluster user
-    - cluster_admin_firstname
-- Password to Ambari
-    - cluster_admin_password
-- Last name of the cluster user
-    - cluster_admin_lastname
-- Email of the cluster user
-    - admin_email
-- Version of HDP or HDF
-    - stack_type_version
-- Type of stack (HDF or HDP)
-    - stack_type
+Cloudbreak allows you to create special blueprints which include some tmeplating: the values of the variables specified in the blueprint and provided in the UI or CLI will be dynamically generated in the cluster creation phase. Cloudbreak suppots mustache kind of templating with the {{{variable}}} syntax.
+You cannot use functions in the blueprint file only the variable injection is supported.
+
+The following variables can be specified:
+- LDAP properties which were assigned to the cluster:
+    - ldap.connectionURL the URL of the LDAP (host + port)  
+    - ldap.bindDn  
+    - ldap.bindPassword  
+    - ldap.directoryType  
+    - ldap.userSearchBase  
+    - ldap.userNameAttribute  
+    - ldap.userObjectClass  
+    - ldap.groupSearchBase  
+    - ldap.groupNameAttribute  
+    - ldap.groupObjectClass  
+    - ldap.groupMemberAttribute  
+    - ldap.domain  
+- Rds properties which were assigned to the cluster:  
+    - rds.[type].connectionURL the jdbc url to the rds  
+    - rds.[type].connectionDriver is case of postgres this is org.postgresql.Driver  
+    - rds.[type].connectionUserName the user name to the rds  
+    - rds.[type].connectionPassword the password for the connection  
+    - rds.[type].databaseName the name of the database  
+    - rds.[type].host the host of the database  
+    - rds.[type].hostWithPort rds host + port like 10.1.1.1:1234  
+    - rds.[type].subprotocol parsed from jdbc url like postgres  
+    - rds.[type].databaseEngine bit capital database name like POSTGRES  
+- Gateway which are used for Knox:  
+    - gateway.enableGateway  
+    - gateway.gatewayType  
+    - gateway.path  
+    - gateway.topologyName  
+    - gateway.exposedServices  
+    - gateway.ssoType  
+    - gateway.ssoProvider   
+    - gateway.signKey  
+    - gateway.signPub  
+    - gateway.signCert  
+    - gateway.tokenCert  
+- Name of the cluster:  
+    - cluster_name  
+- First name of the cluster user:  
+    - cluster_admin_firstname  
+- Password for Ambari:  
+    - cluster_admin_password  
+- Last name of the cluster user:  
+    - cluster_admin_lastname  
+- Email of the cluster user:  
+    - admin_email    
+- Version of HDP or HDF:  
+    - stack_type_version  
+- Type of stack (HDF or HDP):  
+    - stack_type  
 
 
 #### Upload a Blueprint 
