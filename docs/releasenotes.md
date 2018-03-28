@@ -242,7 +242,9 @@ ____________________________
 
 ##### (BUG-BUG-99168) All Google Cloud Clusters Fail 
 
-All clusters launched on Google Cloud Platform fail. This happens due to a recent change in the Google Cloud Platform's response code. In order to fix the issue, a change Cloudbreak's code was required. The change was introduced in Cloudbreak 2.4.1.
+All clusters launched on Google Cloud Platform fail with "Infrastructure creation failed. Error during status check: 403 Forbidden." 
+
+This error happens due to a recent change in the Google Cloud Platform's response code. In order to address the change, a corresponding change Cloudbreak's code was required. The change was introduced in Cloudbreak 2.4.1.
 
 *Workaround*: 
 
