@@ -3,13 +3,8 @@
 Welcome to the **Cloudbreak 2.4.0** documentation!
 
 <div class="danger">
-<p class="first admonition-title">Cloudbreak 2.4.1 is available!</p>
-<p class="last">Cloudbreak 2.4.1 includes fixes for the Google Cloud Platform issue and time-based autoscaling issue. If you were planning to install Cloudbreak 2.4.0, use <a href="https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/index.html">Cloudbreak 2.4.1</a> instead.  If you are already using Cloudbreak 2.4.0 and are affected by these issues, you may want to <a href="https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/content/cb-upgrade/index.html">upgrade</a> to Cloudbreak 2.4.1.</p>
-</div>
-
-<div class="danger">
-<p class="first admonition-title">Cloudbreak 2.4.1 is available!</p>
-<p class="last">Cloudbreak 2.4.1 includes fixes for the Google Cloud Platform issue and time-based autoscaling issue. If you were planning to install Cloudbreak 2.4.0, use <a href="https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/index.html">Cloudbreak 2.4.1</a> instead.  If you are already using Cloudbreak 2.4.0 and are affected by these issues, you may want to <a href="https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/content/cb-upgrade/index.html">upgrade</a> to Cloudbreak 2.4.1.</p>
+<p class="first admonition-title">Important: Upgrade to Cloudbreak 2.4.1!</p>
+<p class="last">Due to a change on Google Cloud, all clusters created with Cloudbreak 2.4.0 on Google Cloud will fail. This issue is fixed in Cloudbreak 2.4.1. If you are already using Cloudbreak 2.4.0 with Google Cloud,  <a href="https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/content/cb-upgrade/index.html">upgrade</a> to Cloudbreak 2.4.1. If you were planning to install Cloudbreak 2.4.0, use <a href="https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/index.html">Cloudbreak 2.4.1</a> instead.</p>
 </div>
 
 Cloudbreak simplifies the provisioning, management, and monitoring of on-demand HDP clusters in virtual and cloud environments. It leverages cloud infrastructure to create host instances, and uses Apache Ambari via Ambari blueprints to provision and manage HDP clusters. 

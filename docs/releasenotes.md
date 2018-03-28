@@ -246,7 +246,7 @@ All clusters launched on Google Cloud Platform fail. This happens due to a recen
 
 *Workaround*: 
 
-There is no workaround for this in Cloudbreak 2.4.0. In order to create clusters on Google Cloud Platform, you must [launch](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/content/gcp-launch/index.html) or [upgrade](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/content/cb-upgrade/index.html) to Cloudbreak 2.4.1.   
+There is no workaround for this in Cloudbreak 2.4.0. In order to create clusters on Google Cloud Platform, you must [upgrade](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cloudbreak-2.4.1/content/cb-upgrade/index.html) to Cloudbreak 2.4.1.   
 
   
 ____________________________
