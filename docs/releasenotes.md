@@ -2,7 +2,7 @@
 
 ### 2.4.1
 
-Cloudbreak 2.4.0 is a general availability release, which is suitable for production deployments. 
+Cloudbreak 2.4.1 is a general availability release, which is suitable for production deployments. 
 
 
 
