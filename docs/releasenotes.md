@@ -2,7 +2,7 @@
 
 ### 2.4.1
 
-Cloudbreak 2.4.0 is a general availability release, which is suitable for production deployments. 
+Cloudbreak 2.4.1 is a general availability release, which is suitable for production deployments. 
 
 
 
@@ -252,7 +252,7 @@ ____________________________
 | BUG-97296| GCP credential creation should validate whether resources are available with the credential. | Usability |
 | BUG-99635 | Default credential selection problem. | Usability |
 | BUG-97660 | Ignore repository warnings checkbox are missing after changing base image Ambari or HDP to a custom one. | Usability |
-| BUG-97307 | Ignore repository warning is not selectable after change the HDP VDF URL. | Usability |
+| BUG-97307 | Ignore repository warnings checkbox is not selectable after change the HDP VDF URL. | Usability |
 | BUG-96764 | "Failed to remove instance" error when using the delete icon. | Usability | 
 | BUG-97390 | Cloudbreak should support longer resource ID-s on AWS. | Usability |
 | BUG-99512 | Azure ES_v3 instances should support premium storage. | Usability | 
