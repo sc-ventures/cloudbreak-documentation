@@ -233,11 +233,29 @@ ____________________________
 #### Fixed Issues
 ____________________________
 
-| Issue | Description |
+[Commmet]: <> (BUG-99505 is still in progress. If not done, should be removed from this list.)
+[Commmet]: <> (BUG-98792 is also tagged for 2.4.1 but is still open. If done, it should be added to this list.)
+[Comment]: <> (BUG-97207 is internal? YARN?)
+
+| Issue | Issue Description | Category | 
 |---|---|
-| BUG-99168 | All clusters created on Google Cloud Platform fail. |
-| BUG-????? | Time based cluster autoscaling does not work. |
-| BUG-96764 | "Failed to remove instance" error when using the delete icon. |
+| BUG-99168 | All clusters created on Google Cloud Platform fail. | Stability | 
+| BUG-99400 | Time-based cluster autoscaling does not work. | Stability |
+| BUG-99505 | Sync is not working for an AWS instance that was terminated a long time ago. | Stability |
+| BUG-98277 | Network interface handling in CloudBreak should be improved. | Stability |
+| BUG-97395 | Networks are duplicated on networks tab of the cluster create wizard. | Stability |
+| BUG-97259 | "Update failed" status after downscale failed, even though cluster was not modified and its status should be "Running". | Stability |
+| BUG-97207 | Changing lifecycle management on YARN causes NPE. | Stability |
+| BUG-99189 | ImageCatalog PUT endpoint is not secured. | Security |
+| BUG-97895 | LDAP password should be removed from Cloudbreak logs. | Security |
+| BUG-97300 | Cloudbreak should show proper error messages when the given credential is not valid anymore. | Usability |
+| BUG-97296| GCP credential creation should validate whether resources are available with the credential. | Usability |
+| BUG-97660 | Ignore repository warnings checkbox are missing after changing base image Ambari or HDP to a custom one. | Usability |
+| BUG-97307 | Ignore repository warning is not selectable after change the HDP VDF URL. | Usability |
+| BUG-96764 | "Failed to remove instance" error when using the delete icon. | Usability | 
+| BUG-97390 | Cloudbreak should support longer resource ID-s on AWS. | Usability |
+| BUG-99512 | Azure ES_v3 instances should support premium storage. | Usability | 
+| BUG-97206 | Backend should return only images for enabled platforms. | Usability |
 
 
 
