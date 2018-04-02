@@ -208,7 +208,7 @@ ____________________________
 #### Image Catalog Updates 
 ____________________________
 
-##### March 27, 2018 
+##### April 3, 2018 
 
 [Comment]: <> (Update the date once the update is available.)
 
