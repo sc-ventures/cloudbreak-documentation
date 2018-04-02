@@ -91,12 +91,12 @@ Here are a few [blueprint examples](https://github.com/hortonworks/cloudbreak/tr
 
 [Comment]: <> (Draft from Richard. Need to edit.)
 
-Cloudbreak allows you to create special blueprints which include templating: the values of the variables specified in the blueprint and provided in the UI or CLI will be dynamically generated in the cluster creation phase. Cloudbreak supports mustache kind of templating with the {{{variable}}} syntax.
-You cannot use functions in the blueprint file only the variable injection is supported.
+Cloudbreak allows you to create special blueprints which include templating: the values of the variables specified in the blueprint will be dynamically generated in the cluster creation phase, picking up the parameter values that you provided in the UI or CLI. Cloudbreak supports mustache kind of templating with the {{{variable}}} syntax.
+You cannot use functions in the blueprint file; only variable injection is supported.
 
 The following variables can be specified:
 
-LDAP properties which were assigned to the cluster:
+- LDAP properties (when assigning an external LDAP to a cluster):
     - ldap.connectionURL - the URL of the LDAP (host:port)  
     - ldap.bindDn  
     - ldap.bindPassword  
@@ -109,7 +109,8 @@ LDAP properties which were assigned to the cluster:
     - ldap.groupObjectClass  
     - ldap.groupMemberAttribute  
     - ldap.domain  
-- Rds properties which were assigned to the cluster:  
+    
+- External database properties (when assigning an external database to a cluster):
     - rds.[type].connectionURL - The jdbc url to the RDBMS    
     - rds.[type].connectionDriver - In case of Postgres this is org.postgresql.Driver  
     - rds.[type].connectionUserName - The user name to the database     
@@ -119,7 +120,8 @@ LDAP properties which were assigned to the cluster:
     - rds.[type].hostWithPort - Database host + port like 10.1.1.1:1234  
     - rds.[type].subprotocol - Parsed from jdbc url like postgres  
     - rds.[type].databaseEngine - Capital database name like POSTGRES  
-- Gateway which are used for Knox:  
+    
+- Properties related to the gateway used for Knox:
     - gateway.enableGateway  
     - gateway.gatewayType  
     - gateway.path  
@@ -131,19 +133,26 @@ LDAP properties which were assigned to the cluster:
     - gateway.signPub  
     - gateway.signCert  
     - gateway.tokenCert  
-- Name of the cluster:  
+    
+- Name of the cluster:
     - cluster_name  
-- First name of the cluster user:  
+    
+- First name of the cluster user:
     - cluster_admin_firstname  
-- Password for Ambari:  
+    
+- Password for Ambari:
     - cluster_admin_password  
-- Last name of the cluster user:  
+    
+- Last name of the cluster user:
     - cluster_admin_lastname  
-- Email of the cluster user:  
+    
+- Email of the cluster user:
     - admin_email    
-- Version of HDP or HDF:  
+    
+- Version of HDP or HDF:
     - stack_type_version  
-- Type of stack (HDF or HDP):  
+    
+- Type of stack (HDF or HDP):
     - stack_type  
 
 
