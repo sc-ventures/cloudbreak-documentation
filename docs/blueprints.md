@@ -87,7 +87,7 @@ Here are a few [blueprint examples](https://github.com/hortonworks/cloudbreak/tr
 [comment]: <> (TO-DO: Maybe we can find some newer examples?)
 
 
-#### Creating a Dynamic Blueprint 
+#### Creating a Dynamic Blueprint Template   
 
 [Comment]: <> (Draft from Richard. Need to edit.)
 
