@@ -44,7 +44,7 @@ For more information, refer to [Register an Authentication Source](external-ldap
 
 ##### **Modifying Existing Cloudbreak Credentials** 
 
-Cloudbreak allows you to modify existing credentials by using the edit option available in Cloudbreak UI or CLI. For more information, refer to [Modify an Existing Credential](cb-credentials.md#modify-an-existing-credential). 
+Cloudbreak allows you to modify existing credentials by using the edit option available in Cloudbreak UI or by using the `credential modify` command in the CLI. For more information, refer to [Modify an Existing Credential](cb-credentials.md#modify-an-existing-credential). 
 
 
 ##### **Configuring Cloudbreak to Use Existing LDAP/AD**
@@ -52,9 +52,9 @@ Cloudbreak allows you to modify existing credentials by using the edit option av
 You can configure Cloudbreak to use your existing LDAP/AD so that you can authenticate Cloudbreak users against an existing LDAP/AD server. For more information, refer to [Configuring Cloudbreak for LDAP/AD Authentication](cb-ldap.md). 
 
 
-##### **Launching Cloudbreak in Environments with Limited or No Internet Access** 
+##### **Launching Cloudbreak in Environments with Restricted Internet Access or Required Use of Proxy** 
 
-You can launch Cloudbreak in environments with limited internet access or no internet access. For more information, refer to [Configure Outbound Internet Access and Proxy](cb-proxy.md). 
+You can launch Cloudbreak in environments with limited or restricted internet access and/or required use of a proxy to obtain internet access. For more information, refer to [Configure Outbound Internet Access and Proxy](cb-proxy.md). 
 
 ____________________________
 

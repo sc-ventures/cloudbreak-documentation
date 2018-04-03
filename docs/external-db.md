@@ -1,20 +1,130 @@
-## Register an External Database  
+## Using an External Database  
 
-Cloudbreak allows you to register an existing RDBMS instance to be used for a database for the following services:   
+Cloudbreak allows you to register an existing RDBMS instance to be used for a database for certain services. After you register the RDBMS with Cloudbreak, you can use it for multiple clusters. 
 
-* Hive  
-* Druid  
-* Ranger  
-* Superset  
-* Oozie  
-* Hue 
+> Only **PostgreSQL** is supported at this time.  
 
+### External Database Options  
+
+Cloudbreak includes the following external database options:
+
+| Option | Description | Blueprint Requirements | Steps | Example |
+|---|---|---|---|---|
+| Built-in types | Cloudbreak includes a few built-in types: Hive, Druid, Ranger, Superset, and Oozie. | Use a standard blueprint which does not include any JDBC  parameters. Cloudbreak automatically injects the JDBC property variables into the blueprint. | Simply [register the database in the UI](#register-an-external-database). After that, you can attach the database config to your clusters. | Refer to [Example 1](#example-1-built-in-type-hive) |
+| Custom types | In addition to the built-in types, Cloudbreak allows you to specify custom types. In the UI, this corresponds to the UI option is called "Other" > "Enter the type". | You must provide a custom dynamic blueprint which includes RDBMS-specific variables. Refer to [Creating a Dynamic Blueprint](blueprints.md#creating-a-template-blueprint-for-rdmbs). | Prepare your custom blueprint first. Next, [register the database in the UI](#register-an-external-database). After that, you can attach the database config to your clusters. | Refer to [Example 2](#example-2-other-type) | 
+
+During cluster create, Cloudbreak checks whether the JDBC properties are present in the blueprint:
+
+<a href="../images/cb-rdbms-diagram.png" target="_blank" title="click to enlarge"><img src="../images/cb-rdbms-diagram.png" width="550" title="Cloudbreak web UI"></a>
+
+  
+#### Example 1: Built-in Type Hive 
+
+In this scenario, you start up with a standard blueprint, and Cloudbreak injects the JDBC properties into the blueprint.
+
+1. Register an existing external database of "Hive" type (built-in type):
+
+    <a href="../images/cb-rdbms-e1.png" target="_blank" title="click to enlarge"><img src="../images/cb-rdbms-e1.png" width="550" title="Cloudbreak web UI"></a>
+    
+    | Property Variable | Example Value |
+|---|---|
+| rds.hive.connectionURL | jdbc:postgresql://hive.test.eu-west-1:5432/hive |
+| rds.hive.connectionDriver | org.postgresql.Driver | 
+| rds.hive.connectionUserName | mydatabaseuser |
+| rds.hive.connectionPassword | Hadoop123! |
+| rds.hive.subprotocol | postgres |
+| rds.hive.databaseEngine | POSTGRES |
+
+2. Create a cluster by using a standard blueprint (i.e. one without JDBC related variables) and by attaching the external Hive database configuration.  
+
+3. Upon cluster create, Hive JDBC properties will be injected into the blueprint according to the following template:
+
+    <pre>...
+"hive-site": {
+     "properties": {
+       "javax.jdo.option.ConnectionURL": "{{{ rds.hive.connectionURL }}}",
+       "javax.jdo.option.ConnectionDriverName": "{{{ rds.hive.connectionDriver }}}",
+       "javax.jdo.option.ConnectionUserName": "{{{ rds.hive.connectionUserName }}}",
+       "javax.jdo.option.ConnectionPassword": "{{{ rds.hive.connectionPassword }}}"
+      }
+    },
+"hive-env" : {
+     "properties" : {
+       "hive_database" : "Existing {{{ rds.hive.subprotocol }}} Database",
+       "hive_database_type" : "{{{ rds.hive.databaseEngine }}}"
+      }
+}
+...</pre> 
+
+
+
+#### Example 2: Other Type 
+
+In this scenario, you start up with a special blueprint including JDBC property variables, and Cloudbreak replaces JDBC-related property variables in the blueprint. 
+
+1. Prepare a blueprint blueprint that includes property variables. Use [mustache template](https://mustache.github.io/) syntax. For example:
+
+    <pre>...
+"test-site": {
+    "properties": {
+       "javax.jdo.option.ConnectionURL":"{{rds.test.connectionURL}}"
+      }
+...</pre>
+
+
+1. Register an existing external database of some "Other" type. For example:
+
+    <a href="../images/cb-rdbms-e2.png" target="_blank" title="click to enlarge"><img src="../images/cb-rdbms-e2.png" width="550" title="Cloudbreak web UI"></a>
+    
+    | Property Variable | Example Value |
+|---|---|
+| rds.hive.connectionURL | db.test.eu-west-1:5432/sometest |
+| rds.hive.connectionDriver | org.postgresql.Driver | 
+| rds.hive.connectionUserName | mydatabaseuser |
+| rds.hive.connectionPassword | Hadoop123! |
+| rds.hive.subprotocol | postgres |
+| rds.hive.databaseEngine | POSTGRES |
+
+2. Create a cluster by using your custom blueprint and by attaching the external database configuration.  
+
+3. Upon cluster create, Cloudbreak replaces JDBC-related property variables in the blueprint. 
+
+**Related Links**  
+[Mustache Template Syntax](https://mustache.github.io/)  
+  
+### Creating a Template Blueprint for RDMBS  
+
+In order to use an external RDBMS for some component other than the built-in components, you must include JDBC property variables in your blueprint. You must use [mustache template](https://mustache.github.io/) syntax. See [Example 2: Other Type](#example-2-other-type) for an example configuration. 
+
+**Related Links**  
+[Creating a Template Blueprint](blueprints.md#creating-a-template-blueprint)  
+[Mustache Template Syntax](https://mustache.github.io/) (External)  
+
+
+#### RDBMS Property Variables
+
+Cloudbreak utilizes the following RDBMS related variables, where [type] can be one of [hive,druid,oozie,ranger,superset] or other specified by you (for example "beacon").
+
+<pre>rds.[type].connectionURL
+rds.[type].connectionDriver
+rds.[type].connectionUserName
+rds.[type].connectionPassword
+rds.[type].databaseName
+rds.[type].host
+rds.[type].hostWithPort
+rds.[type].subprotocol
+rds.[type].databaseEngine</pre>
+
+These parameters correspond to the external database UI and CLI options. 
+
+ 
+
+### Register an External Database    
+  
 You must create the external RDBMS instance and database prior to registering it with Cloudbreak. Once you have it ready, you can:
 
 1. Register it in Cloudbreak web UI or CLI.  
 2. Use it with one or more clusters. Once registered, the database will now show up in the list of available databases when creating a cluster under advanced **External Sources** > **Configure Databases**.  
-
-> Only **PostgreSQL** is supported at this time. 
 
 
 **Steps** 
@@ -26,7 +136,7 @@ You must create the external RDBMS instance and database prior to registering it
     | Parameter | Description |
     |:---|:---|
     | Name | Enter the name to use when registering this database to Cloudbreak. This is **not** the database name. |
-    | Type | Select the service for which you would like to use the external database. If you selected "Other", you must provide a special blueprint. Refer to [Creating a Dynamic Blueprint Template](blueprints.md#creating-a-dynamic-blueprint-template). |
+    | Type | Select the service for which you would like to use the external database. If you selected "Other", you must provide a special blueprint. |
     | JDBC Connection | Select the database **type** (PostgreSQL) and enter the **JDBC connection** string (HOST:PORT/DB_NAME).  |
     | Username | Enter the JDBC connection username. |
     | Password | Enter the JDBC connection password. |
