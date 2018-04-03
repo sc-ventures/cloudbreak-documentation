@@ -13,13 +13,13 @@ Cloudbreak allows you to create clusters using the Cloudbreak web UI, Cloudbreak
 
 Cloudbreak allows you to create, manage, and monitor your HDP and HDF clusters on your chosen cloud platform:
 
-* Dynamically deploy, configure, and manage clusters on public and private clouds (AWS, Azure, Google Cloud, OpenmStack).   
+* Dynamically deploy, configure, and manage clusters on public and private clouds (AWS, Azure, Google Cloud, OpenStack).   
 * Use automated scaling to seamlessly manage elasticity requirements as cluster workloads change.  
 * Secure your cluster by enabling Kerberos.   
 
 ### Default Cluster Configurations
 
-Cloudbreak includes default cluster configurations (in the form of bleuprints) and supports using your own custom cluster configurations (in the form of custom blueprints).
+Cloudbreak includes default cluster configurations (in the form of blueprints) and supports using your own custom cluster configurations (in the form of custom blueprints).
 
 The following default cluster configurations are available:
 

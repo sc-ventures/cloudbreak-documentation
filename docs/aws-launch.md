@@ -329,15 +329,15 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 
     | Region Name | Region | Community AMI |
 |---|---|---|
-| EU (Ireland) | eu-west-1 | ami-6f1c6516 |
-| EU (Frankfurt) | eu-central-1 |	 ami-01c6a56e |
-| US East (N. Virginia) | us-east-1 | ami-d5b457a8 |
-| US West (N. California) | us-west-1 | ami-a2f6fec2 |
-| US West (Oregon) | us-west-2 | ami-9242cdea | 
-| South America (São Paulo) | sa-east-1 | ami-2f3b7343 |
-| Asia Pacific (Tokyo) | ap-northeast-1	| ami-6d354f0b |
-| Asia Pacific (Singapore) | ap-southeast-1 | ami-4cace230 | 
-| Asia Pacific (Sydney) | ap-southeast-2 | ami-8bbf78e9 |
+| EU (Ireland) | eu-west-1 | 	ami-0b70cb1044802db4a |
+| EU (Frankfurt) | eu-central-1 |	 ami-2d7827c6 |
+| US East (N. Virginia) | us-east-1 | ami-8d8220f0 |
+| US West (N. California) | us-west-1 | ami-de5949be |
+| US West (Oregon) | us-west-2 | ami-59432721 | 
+| South America (São Paulo) | sa-east-1 | ami-955402f9 |
+| Asia Pacific (Tokyo) | ap-northeast-1	| ami-e9564195 |
+| Asia Pacific (Singapore) | ap-southeast-1 | ami-8e98c2f2 | 
+| Asia Pacific (Sydney) | ap-southeast-2 | ami-31985653 |
 
 
 7. Click **Select**.  

@@ -179,7 +179,7 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
 
 ### Register Image Catalog
 
-Now that you have created your image catalog JSON file, register it with your Cloudbreak instance.
+Now that you have created your image catalog JSON file, register it with your Cloudbreak instance. You can do this via Cloudbreak UI, CLI, or be editing the Profile file. 
 
 <div class="note">
   <p class="first admonition-title">Important</p>
@@ -204,6 +204,18 @@ After performing these steps, the image catalog will be available and automatica
 #### Register Image Catalog in the CLI
 
 To register your custom image catalog using the CLI, use the `cb imagecatalog create` command. Refer to [CLI documentation](cli-reference.md#imagecatalog-create).
+
+#### Register Image Catalog in the Profile 
+
+As an alternative to using the UI or CLI, it is possible to place the catalog file to the Cloudbreak deployer`s etc directory and then set CB_IMAGE_CATALOG_URL variable in your Profile to IMAGE_CATALOG_FILE_NAME.JSON. 
+
+**Steps**
+
+1. On the Cloudbreak machine, switch to the root user by using `sudo su`  
+2. Save the image catalog file on your Cloudbreak machine in the /var/lib/cloudbreak-deployment/etc directory.  
+3. Edit the Profile file located in /var/lib/cloudbreak-deployment by adding export CB_IMAGE_CATALOG_URL to the file and set it to the name of your JSON file which declares your custom images. For example: `export CB_IMAGE_CATALOG_URL=custom-image-catalog.json`    
+4. Save the Profile file.  
+5. Restart Cloudbreak by using `cbd restart`.  
 
 
 ### Select a Custom Image When Creating a Cluster

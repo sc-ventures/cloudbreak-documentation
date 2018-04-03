@@ -102,6 +102,7 @@ ____________________________
 [Commmet]: <> (BUG-99505 is still in progress. If not done, should be removed from this list.)
 [Commmet]: <> (BUG-98792 is also tagged for 2.4.1 but is still open. If done, it should be added to this list.)
 [Comment]: <> (BUG-97207 is internal? YARN?)
+[Comment]: <> (Not included in 2.5.0 TP, only 2.4.1: BUG-99635 Default credential selection problem.)
 
 | Issue | Issue Description | Category | 
 |---|---|
@@ -116,7 +117,6 @@ ____________________________
 | BUG-97895 | LDAP password should be removed from Cloudbreak logs. | Security |
 | BUG-97300 | Cloudbreak should show proper error messages when the given credential is not valid anymore. | Usability |
 | BUG-97296| GCP credential creation should validate whether resources are available with the credential. | Usability |
-| BUG-99635 | Default credential selection problem. | Usability |
 | BUG-97660 | Ignore repository warnings checkbox are missing after changing base image Ambari or HDP to a custom one. | Usability |
 | BUG-97307 | Ignore repository warnings checkbox is not selectable after change the HDP VDF URL. | Usability |
 | BUG-96764 | "Failed to remove instance" error when using the delete icon. | Usability | 
