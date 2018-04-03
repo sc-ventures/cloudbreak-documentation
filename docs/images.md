@@ -48,6 +48,8 @@ The image catalog JSON file includes the following two high-level sections:
 * `images`: Contains information about the created images. The burned images are stored in the `base-images` section.  
 * `versions`: Contains the `cloudbreak` entry, which includes mapping between Cloudbreak versions and the image identifiers of burned images available for these Cloudbreak versions.
 
+> After adding your image(s) to the `images` section, make sure to also update the `versions` section. 
+
 **Images Section**  
 
 The burned images are stored in the `base-images` sub-section of `images`. The `base-images` section stores one or more image "records". Every image "record" must contain the date, description, images, os, os_type, and uuid fields.

@@ -32,7 +32,7 @@ This SPI plugin mechanism has been used to integrate all currently supported pro
  * The [cloud-gcp](https://github.com/hortonworks/cloudbreak/tree/master/cloud-gcp) module integrates Google Cloud Platform  
  * The [cloud-openstack](https://github.com/hortonworks/cloudbreak/tree/master/cloud-openstack) module integrates OpenStack
 
-The Cloubdreak SPI interface is event-based, scalable, and decoupled from Cloudbreak. The core of Cloudbreak uses [EventBus](http://projectreactor.io/) to communicate with the providers, but the complexity of event handling is hidden from the provider implementation.
+The Cloudbreak SPI interface is event-based, scalable, and decoupled from Cloudbreak. The core of Cloudbreak uses [EventBus](http://projectreactor.io/) to communicate with the providers, but the complexity of event handling is hidden from the provider implementation.
 
 #### Supported Resource Management Methods
 

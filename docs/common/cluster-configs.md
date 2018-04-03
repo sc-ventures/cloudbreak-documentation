@@ -10,7 +10,7 @@ Platform Version: **HDF 3.1**
 
 | Cluster Type  | Main Services | Description |  List of All Services Included |
 |---|---|---|---|
-| Flow Management | <i class="fa fa-warning" style="color: orange"></i> NiFi | Useful for flow management with NiFi. | NiFi, ZooKeeper, Ambari Metrics |
+| Flow Management | <i class="fa fa-check" style="color: green"></i> NiFi | Useful for flow management with NiFi. | NiFi, ZooKeeper, Ambari Metrics |
 
 
 The following configuration classification applies:

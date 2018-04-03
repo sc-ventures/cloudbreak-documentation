@@ -15,6 +15,6 @@ We recommend that after launching Cloudbreak you set  CB_DEFAULT_GATEWAY_CIDR in
     
 2. If Cloudbreak has already been started, restart it using `cbd restart`.     
     
-3. When CB_DEFAULT_GATEWAY_CIDR is set, two additional rules are added to your Ambari node security group: (1) port 9443 open to your Cloudbreak IP, and (2) port 22 open to your Cloudbrak IP. You can view and edit these default rules in the create cluster wizard. 
+3. When CB_DEFAULT_GATEWAY_CIDR is set, two additional rules are added to your Ambari node security group: (1) port 9443 open to your Cloudbreak IP, and (2) port 22 open to your Cloudbreak IP. You can view and edit these default rules in the create cluster wizard. 
 
 

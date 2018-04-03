@@ -21,9 +21,9 @@ Note the following when creating NiFi clusters:
 - Enabling kerberos is mandatory. You can either use your own kerberos or select for Cloudbreak to create a test KDC.    
 - Although Cloudbreak includes cluster scaling (including autoscaling), scaling is not fully supported by NiFi. Downscaling NiFi clusters is not supported - as it can result in data loss when a node is removed that has not yet processed all the data on that node. There is also a known issue related to scaling listed in the [Known Issues](#known-issues) below.  
 
-For updated create cluster instructions, refer to [Creating a Cluster](aws-launch.md) instructions for your chosen cloud provider.
-For updated blueprint information, refer to [Default Blueprints](blueprints.md#default-blueprints). 
+For updated create cluster instructions, refer to [Creating a Cluster](aws-launch.md) instructions for your chosen cloud provider. For updated blueprint information, refer to [Default Blueprints](blueprints.md#default-blueprints). 
 
+For a tutorial on creating a NiFi cluster with Cloudbreak, refer to the following [HCC post](https://community.hortonworks.com/articles/182221/create-a-nifi-cluster-on-aws-azure-google-or-opens.html). 
 
 
 ##### **Using External Databases for Cluster Services** 
@@ -99,8 +99,8 @@ ____________________________
 #### Fixed Issues
 ____________________________
 
-[Commmet]: <> (BUG-99505 is still in progress. If not done, should be removed from this list.)
-[Commmet]: <> (BUG-98792 is also tagged for 2.4.1 but is still open. If done, it should be added to this list.)
+[Comment]: <> (BUG-99505 is still in progress. If not done, should be removed from this list.)
+[Comment]: <> (BUG-98792 is also tagged for 2.4.1 but is still open. If done, it should be added to this list.)
 [Comment]: <> (BUG-97207 is internal? YARN?)
 [Comment]: <> (Not included in 2.5.0 TP, only 2.4.1: BUG-99635 Default credential selection problem.)
 
@@ -243,10 +243,10 @@ ____________________________
 
 **Known Issues: Ambari 2.6.1.3 and HDP 2.6.4.0**
 
-> The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak.
+> The known issues described here were discovered when testing Cloudbreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak.
 
-> For general Ambari 2.6.1.3 and HDP 2.6.4.0 known issues, refer to:  
-> [Ambari 2.6.1.3 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.3/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.3.html)  
+> For general Ambari 2.6.1.5 and HDP 2.6.4.0 known issues, refer to:  
+> [Ambari 2.6.1.5 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.3/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.5.html)  
 > [HDP 2.6.4.0 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.4/bk_release-notes/content/ch_relnotes.html)  
 ____________________________
 
@@ -320,7 +320,7 @@ ____________________________
 
 **Known Issues: HDF 3.1.1**
 
-The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDF 3.1.1, which are used by default in Cloudbreak.
+The known issues described here were discovered when testing Cloudbreak with Ambari 2.6.1.3 and HDF 3.1.1, which are used by default in Cloudbreak.
 
 > For general HDF 3.1.1 known issues, refer to [HDF 3.1.1 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDF3/HDF-3.1.1/bk_release-notes/content/ch_hdf_relnotes.html)
 
@@ -331,11 +331,11 @@ ____________________________
 ##### (BUG-98865) Scaling HDF Clusters Does Not Update Configurations on New Nodes
 
 Blueprint configuration parameters are not applied when scaling an HDF cluster. 
-One example that affects all users is that after HDF cluster upscale/downscale the `nifi.web.proxy.host` blueprint parameter does not get updated to include the new nodes, and as a result the Nifi UI is not reachable from these nodes. 
+One example that affects all users is that after HDF cluster upscale/downscale the `nifi.web.proxy.host` blueprint parameter does not get updated to include the new nodes, and as a result the NiFi UI is not reachable from these nodes. 
 
 *Workaround:*  
  
-Configuration parameters set in the blueprint are not applied when scaling an HDF cluster. One example that affects all NiFi users is that after HDF cluster upscale the `nifi.web.proxy.host` parameter does not get updated to include the new hosts, and as a result the Nifi UI is not reachable from these hosts. 
+Configuration parameters set in the blueprint are not applied when scaling an HDF cluster. One example that affects all NiFi users is that after HDF cluster upscale the `nifi.web.proxy.host` parameter does not get updated to include the new hosts, and as a result the NiFi UI is not reachable from these hosts. 
  
 `HOST1-IP:PORT,HOST2-IP:PORT,HOST3-IP:PORT`
    

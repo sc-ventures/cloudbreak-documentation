@@ -118,7 +118,7 @@ You have two options:
 
 #### Authentication with GCP
 
-After launching Cloudbreak on GCP, you are required to register a service account in Cloudbrak via creating a Cloudbreak credential. Cloudbreak uses this account to authenticate with the GCP identity management service.
+After launching Cloudbreak on GCP, you are required to register a service account in Cloudbreak via creating a Cloudbreak credential. Cloudbreak uses this account to authenticate with the GCP identity management service.
 
 **Related Links**  
 [Meet the Prerequisites: Service Account](gcp-launch.md#service-account)  
@@ -126,7 +126,7 @@ After launching Cloudbreak on GCP, you are required to register a service accoun
 
 #### Authentication with OpenStack 
 
-After launching Cloudbread on OpenStack, you are required to create a Cloudbreak credential, which allows Cloudbreak to authenticate with keystone. 
+After launching Cloudbreak on OpenStack, you are required to create a Cloudbreak credential, which allows Cloudbreak to authenticate with keystone. 
 
 
 **Related Links**  

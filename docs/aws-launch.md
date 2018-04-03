@@ -350,6 +350,8 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
     
 9. (Perform this step only if you are using role-based authorization) In **Step 3: Configure Instance Details** > **IAM**, select the "CloudbreakRole" IAM role which you [created earlier](#authorization-for-cloudbreak).
 
+9. In *Step4: Add Storage*, attach as much storage as you need. 
+
 10. In *Step 6: Configure Security Group*, open the following ports:
  
     * 22 (for access via SSH)  

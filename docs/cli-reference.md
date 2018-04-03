@@ -1747,7 +1747,7 @@ Deletes selected LDAP registration from Cloudbreak. It does not delete the LDAP.
 **Options**
 
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
-**`--server <value>`**  Cloudbreak erver address [$CB_SERVER_ADDRESS]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
 **`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
 **`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
@@ -1866,7 +1866,7 @@ Unregisters a previously registered proxy with Cloudbreak. It does not delete th
 **Options**
 
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
-**`--server <value>`**  Cloudbreak erver address [$CB_SERVER_ADDRESS]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
 **`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
 **`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
 **`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  

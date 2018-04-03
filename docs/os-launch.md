@@ -203,7 +203,7 @@ To import the certificate, place the certificate file in the `/certs/trusted/` d
 2. Create the `trusted` directory.
 3. Copy the certificate to the `trusted` directory.
 
-Cloudbreak will automatically pick up the certificate and import it into its truststore upon start.
+Cloudbreak will automatically pick up the certificate and import it into its trust store upon start.
 
 
 
@@ -217,9 +217,9 @@ Launch Cloudbreak deployer using the following steps.
 
     <pre>cbd start</pre>
 
-    This will start the Docker containers and initialize the application. The first time you start the Coudbreak app, the process will take longer than usual due to the download of all the necessary docker images.
+    This will start the Docker containers and initialize the application. The first time you start the Cloudbreak app, the process will take longer than usual due to the download of all the necessary docker images.
 
-    This will start the Docker containers and initialize the application. The first time you start the Coudbreak app, this also downloads of all the necessary docker images.
+    This will start the Docker containers and initialize the application. The first time you start the Cloudbreak app, this also downloads of all the necessary docker images.
 
 [Comment]: <> (Extra info which may not be needed here: The `cbd start` command includes the `cbd generate` command which applies the following steps: Creates the `docker-compose.yml` file, which describes the configuration of all the Docker containers needed for the Cloudbreak deployment. Creates the `uaa.yml` file, which holds the configuration of the identity server used to authenticate users with Cloudbreak.)
 

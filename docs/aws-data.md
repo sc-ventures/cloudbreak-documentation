@@ -85,5 +85,5 @@ For more information about configuring the S3 connector for HDP and working with
 [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) (Hortonworks)
 
 
-[Comment]: <> (Performing this configuration provides the EC2 instance that your Nifi is running on with access to S3 (as specified in the IAM policy). As a next step, configure your specific processor, as described in Nifi documentation.)   
+[Comment]: <> (Performing this configuration provides the EC2 instance that your NiFi is running on with access to S3 (as specified in the IAM policy). As a next step, configure your specific processor, as described in NiFi documentation.)   
 [Comment]: <> ([Integrating Apache NiFi with AWS S3 and SQS](https://community.hortonworks.com/articles/49467/integrating-apache-nifi-with-aws-s3-and-sqs.html) (HCC))  

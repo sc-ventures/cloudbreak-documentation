@@ -112,10 +112,10 @@ cbd generate</pre>
 
 5. Start the Cloudbreak application by using the following commands:
 
-    <pre>cbd pull
+    <pre>cbd pullcoudbreak
 cbd start</pre>
 
-    This will start the Docker containers and initialize the application. The first time you start the Coudbreak app, the process will take longer than usual due to the download of all the necessary docker images.
+    This will start the Docker containers and initialize the application. The first time you start the Cloudbreak app, the process will take longer than usual due to the download of all the necessary docker images.
 
 5. Next, check Cloudbreak application logs: 
 
@@ -127,7 +127,7 @@ cbd start</pre>
 
 ### Next Steps After Installing on Your Own VM 
 
-Log in to the Cloudbreak web UI and create a credential for Cloubdreak using the following platform-specific instructions:
+Log in to the Cloudbreak web UI and create a credential for Cloudbreak using the following platform-specific instructions:
  
 * [Access Cloudbreak UI on AWS](aws-launch.md#access-cloudbreak-ui)  
 * [Access Cloudbreak UI on Azure](azure-launch.md#access-cloudbreak-ui)  

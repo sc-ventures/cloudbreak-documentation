@@ -40,7 +40,7 @@ You can delete Cloudbreak instance from your Azure account by deleting related r
 
 * If you deployed Cloudbreak in a new resource group: to delete Cloudbreak, delete the whole related resource group.
 
-* If you deployed Cloudbreak in an existing resource group: navigate to the group and delete only Cloubdreak-related resources such as the VM.
+* If you deployed Cloudbreak in an existing resource group: navigate to the group and delete only Cloudbreak related resources such as the VM.
 
 
 **Steps**

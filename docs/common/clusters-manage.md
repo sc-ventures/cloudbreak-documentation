@@ -63,7 +63,7 @@ To synchronize your cluster with the cloud provider, follow these steps.
  
 ### Stop a Cluster 
 
-Cloudbreak supports stopping and restarting clusters. To stop and restart a cluster managed by Cloudbreak, use the options available from the Coudbreak UI. 
+Cloudbreak supports stopping and restarting clusters. To stop and restart a cluster managed by Cloudbreak, use the options available from the Cloudbreak UI. 
 
 **Steps**
 
@@ -95,7 +95,7 @@ If your cluster is in the "Stopped" state, you can restart the cluster by follow
 
 ### Terminate a Cluster 
 
-To terminate a cluster managed by Cloudbreak, use the option available from the Coudbreak UI. 
+To terminate a cluster managed by Cloudbreak, use the option available from the Cloudbreak UI. 
 
 **Steps**
 
