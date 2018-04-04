@@ -102,7 +102,7 @@ ____________________________
 [Comment]: <> (BUG-99505 is still in progress. If not done, should be removed from this list.)
 [Comment]: <> (BUG-98792 is also tagged for 2.4.1 but is still open. If done, it should be added to this list.)
 [Comment]: <> (BUG-97207 is internal? YARN?)
-[Comment]: <> (Not included in 2.5.0 TP, only 2.4.1: BUG-99635 Default credential selection problem.)
+[Comment]: <> (Not included in 2.5.0 TP, only 2.4.1: BUG-99635 After deleting a default credential and creating a new credential, credential is missing from the create cluster wizard.)
 
 | Issue | Issue Description | Category | 
 |---|---|
