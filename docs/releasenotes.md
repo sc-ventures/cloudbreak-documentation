@@ -249,8 +249,8 @@ ____________________________
 | BUG-99189 | ImageCatalog PUT endpoint is not secured. | Security |
 | BUG-97895 | LDAP password should be removed from Cloudbreak logs. | Security |
 | BUG-97300 | Cloudbreak should show proper error messages when the given credential is not valid anymore. | Usability |
-| BUG-97296| GCP credential creation should validate whether resources are available with the credential. | Usability |
-| BUG-99635 | Default credential selection problem. | Usability |
+| BUG-97296 | GCP credential creation should validate whether resources are available with the credential. | Usability |
+| BUG-99635 | After deleting a default credential and creating a new credential, credential is missing from the create cluster wizard. | Usability |
 | BUG-97660 | Ignore repository warnings checkbox are missing after changing base image Ambari or HDP to a custom one. | Usability |
 | BUG-97307 | Ignore repository warnings checkbox is not selectable after change the HDP VDF URL. | Usability |
 | BUG-96764 | "Failed to remove instance" error when using the delete icon. | Usability | 
