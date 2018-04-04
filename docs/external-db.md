@@ -4,9 +4,6 @@ Cloudbreak allows you to register an existing RDBMS instance to be used for a da
 
 > Only **PostgreSQL** is supported at this time.  
 
-
-### External Database Options  
-
 Cloudbreak includes the following external database options:
 
 | Option | Description | Blueprint Requirements | Steps | Example |
@@ -19,7 +16,7 @@ During cluster create, Cloudbreak checks whether the JDBC properties are present
 <a href="../images/cb-rdbms-diagram.png" target="_blank" title="click to enlarge"><img src="../images/cb-rdbms-diagram.png" width="550" title="Cloudbreak web UI"></a>
 
   
-#### Example 1: Built-in Type Hive 
+### Example 1: Built-in Type Hive 
 
 In this scenario, you start up with a standard blueprint, and Cloudbreak injects the JDBC properties into the blueprint.
 
@@ -59,7 +56,7 @@ In this scenario, you start up with a standard blueprint, and Cloudbreak injects
 
 
 
-#### Example 2: Other Type 
+### Example 2: Other Type 
 
 In this scenario, you start up with a special blueprint including JDBC property variables, and Cloudbreak replaces JDBC-related property variables in the blueprint. 
 
