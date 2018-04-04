@@ -7,6 +7,8 @@ Cloudbreak allows you to register an existing LDAP/AD instance and use it for mu
 1. Prepare a blueprint which includes Ranger or Atlas.
 1. Create a cluster by using the Ranger/Atlas blueprint and by attaching the authentication source. Cloudbreak automatically injects the LDAP property variables into the blueprint. 
 
+> Before injecting the properties, Cloudbreak checks if ldap properties already exist in the blueprint. If they exist, they are not injected. 
+
 
 ### Preparing a Blueprint for LDAP/AD 
 
