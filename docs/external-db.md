@@ -8,8 +8,8 @@ Cloudbreak includes the following external database options:
 
 | Option | Description | Blueprint Requirements | Steps | Example |
 |---|---|---|---|---|
-| Built-in types | Cloudbreak includes a few built-in types: Hive, Druid, Ranger, Superset, and Oozie. | Use a standard blueprint which does not include any JDBC  parameters. Cloudbreak automatically injects the JDBC property variables into the blueprint. | Simply [register the database in the UI](#register-an-external-database). After that, you can attach the database config to your clusters. | Refer to [Example 1](#example-1-built-in-type-hive) |
-| Custom types | In addition to the built-in types, Cloudbreak allows you to specify custom types. In the UI, this corresponds to the UI option is called "Other" > "Enter the type". | You must provide a custom dynamic blueprint which includes RDBMS-specific variables. Refer to [Creating a Dynamic Blueprint](blueprints.md#creating-a-template-blueprint-for-rdmbs). | Prepare your custom blueprint first. Next, [register the database in the UI](#register-an-external-database). After that, you can attach the database config to your clusters. | Refer to [Example 2](#example-2-other-type) | 
+| **Built-in types** | Cloudbreak includes a few built-in types: Hive, Druid, Ranger, Superset, and Oozie. | Use a standard blueprint which does not include any JDBC  parameters. Cloudbreak automatically injects the JDBC property variables into the blueprint. | Simply [register the database in the UI](#register-an-external-database). After that, you can attach the database config to your clusters. | Refer to [Example 1](#example-1-built-in-type-hive) |
+| **Other types** | In addition to the built-in types, Cloudbreak allows you to specify custom types. In the UI, this corresponds to the UI option is called "Other" > "Enter the type". | You must provide a custom dynamic blueprint which includes RDBMS-specific variables. Refer to [Creating a Dynamic Blueprint](blueprints.md#creating-a-template-blueprint-for-rdmbs). | Prepare your custom blueprint first. Next, [register the database in the UI](#register-an-external-database). After that, you can attach the database config to your clusters. | Refer to [Example 2](#example-2-other-type) | 
 
 During cluster create, Cloudbreak checks whether the JDBC properties are present in the blueprint:
 
@@ -129,7 +129,7 @@ You must create the external RDBMS instance and database prior to registering it
 
 1. From the navigation pane, select **External Sources** > **Database Configurations**.  
 2. Select **Register Database Configuration**.    
-5. Provide the following information:
+3. Provide the following information:
 
     | Parameter | Description |
     |:---|:---|
@@ -139,9 +139,9 @@ You must create the external RDBMS instance and database prior to registering it
     | Username | Enter the JDBC connection username. |
     | Password | Enter the JDBC connection password. |
 
-6. Click **Test Connection** to validate and test the RDS connection information.  
-7. Once your settings are validated and working, click **REGISTER** to save the configuration.  
-8. The database will now show up on the list of available databases when creating a cluster under advanced **External Sources** > **Configure Databases**. You can select it each time you would like to use it for a cluster.  
+4. Click **Test Connection** to validate and test the RDS connection information.  
+5. Once your settings are validated and working, click **REGISTER** to save the configuration.  
+6. The database will now show up on the list of available databases when creating a cluster under advanced **External Sources** > **Configure Databases**. You can select it each time you would like to use it for a cluster.  
 
 
 
