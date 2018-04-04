@@ -4,15 +4,37 @@ Cloudbreak allows you to register an existing LDAP/AD instance and use it for mu
    
 1. Register an existing LDAP in Cloudbreak web UI or CLI.  
 1. Once registered, the LDAP will now show up in the list of available authentication sources when creating a cluster under advanced **External Sources** > **Configure Authentication**.  
-1. Prepare a blueprint which includes Ranger or Atlas.
-1. Create a cluster by using the Ranger/Atlas blueprint and by attaching the authentication source. Cloudbreak automatically injects the LDAP property variables into the blueprint. 
-
-> Before injecting the properties, Cloudbreak checks if ldap properties already exist in the blueprint. If they exist, they are not injected. 
+1. Prepare a blueprint as described in [Preparing a Blueprint for LDAP/AD ](#preparing-a-blueprint-for-ldapad).  
+1. Create a cluster by using the blueprint and by attaching the authentication source. Cloudbreak automatically injects the LDAP property variables into the blueprint. 
 
 
 ### Preparing a Blueprint for LDAP/AD 
 
-In order to use this feature, your blueprint must include Ranger or Atlas. 
+In order to use LDAP/AD for your cluster, you must provide a suitable cluster blueprint:
+
+- The blueprint must include one or more of the following supported components: Atlas, Hadoop, Hive LLAP, Ranger Admin, Ranger UserSync.  
+- The blueprint should not include any LDAP properties. Before injecting the properties, Cloudbreak checks if LDAP related properties already exist in the blueprint. If they exist, they are not injected.  
+
+During cluster creation the following properties will be injected in the blueprint:
+
+- ldap.connectionURL  
+- ldap.domain  
+- ldap.bindDn  
+- ldap.bindPassword  
+- ldap.userSearchBase  
+- ldap.userObjectClass  
+- ldap.userNameAttribute  
+- ldap.groupSearchBase  
+- ldap.groupObjectClass  
+- ldap.groupNameAttribute  
+- ldap.groupMemberAttribute  
+- ldap.directoryType  
+- ldap.directoryTypeShort  
+
+Their values will be the values that you provided to Cloudbreak: 
+
+<a href="../images/cb-ldap.png" target="_blank" title="click to enlarge"><img src="../images/cb-ldap.png" width="550" title="Cloudbreak web UI"></a>
+
 
 
 ### Register an Authentication Source 

@@ -65,7 +65,7 @@ pages:
         - Disable Providers: cb-disable-provider.md
         - Modify Settings in Cloudbreak Profile: cb-profile.md 
         - Delete Cloudbreak: cb-delete.md
-      - CLI: 
+      - Cloudbreak CLI: 
         - Install the CLI: cli-install.md
         - Get Started with the CLI: cli-get-started.md
         - CLI Reference: cli-reference.md
