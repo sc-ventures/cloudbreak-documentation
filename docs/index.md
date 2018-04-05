@@ -56,7 +56,7 @@ There are two basic deployment options:
 | Deployment option | When to use |
 |---|---|
 | Option 1: Instantiate Cloudbreak using one of the provided pre-built cloud images | <p>This is the basic deployment option and the easiest to get started with.</p><p> The cloud images include Cloudbreak deployer pre-installed on a CentOS VM.</p>  |
-| Option2: Install the Cloudbreak deployer on your own VM | <p>This is an advanced deployment option.</p> <p>Select this option if you have custom VM requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).</p> |
+| Option 2: Install the Cloudbreak deployer on your own VM | <p>This is an advanced deployment option.</p> <p>Select this option if you have custom VM requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).</p> |
 
 
 #### Launch Cloudbreak 
