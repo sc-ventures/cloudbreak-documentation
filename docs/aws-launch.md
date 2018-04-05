@@ -334,7 +334,7 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 | US East (N. Virginia) | us-east-1 | ami-4843ec35 |
 | US West (N. California) | us-west-1 | ami-ae3323ce |
 | US West (Oregon) | us-west-2 | ami-60accb18 | 
-| South America (São Paulo) | sa-east-1 | ami-60accb18 |
+| South America (São Paulo) | sa-east-1 | ami-699cca05 |
 | Asia Pacific (Tokyo) | ap-northeast-1	| ami-9bdccae7 |
 | Asia Pacific (Singapore) | ap-southeast-1 | ami-4ee5c032 | 
 | Asia Pacific (Sydney) | ap-southeast-2 | ami-c207c9a0 |
