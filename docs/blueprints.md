@@ -89,69 +89,43 @@ Here are a few [blueprint examples](https://github.com/hortonworks/cloudbreak/tr
 
 #### Creating a Template Blueprint   
 
-Cloudbreak allows you to create special blueprints which include templating: the values of the variables specified in the blueprint will be dynamically generated in the cluster creation phase, picking up the parameter values that you provided in the UI or CLI. Cloudbreak supports [mustache](https://mustache.github.io/) kind of templating with {{{variable}}} syntax. You cannot use functions in the blueprint file; only variable injection is supported.
+Cloudbreak allows you to create special blueprints which include templating: the values of the variables specified in the blueprint will be dynamically generated & replaced in the cluster creation phase, picking up the parameter values that you provided in the Cloudbreak UI or CLI.
+Cloudbreak supports [mustache](https://mustache.github.io/) kind of templating with {{{variable}}} syntax. You cannot use functions in the blueprint file; only variable injection is supported.
 
-The following variables can be specified:
+##### External Authentication Source (LDAP/AD)
 
-- LDAP properties (when assigning an external LDAP to a cluster):
-    - ldap.connectionURL - the URL of the LDAP (host:port)  
-    - ldap.bindDn  
-    - ldap.bindPassword  
-    - ldap.directoryType  
-    - ldap.userSearchBase  
-    - ldap.userNameAttribute  
-    - ldap.userObjectClass  
-    - ldap.groupSearchBase  
-    - ldap.groupNameAttribute  
-    - ldap.groupObjectClass  
-    - ldap.groupMemberAttribute  
-    - ldap.domain  
-    
-- External database properties (when assigning an external database to a cluster):
-    - rds.[type].connectionURL - The jdbc url to the RDBMS    
-    - rds.[type].connectionDriver - In case of Postgres this is org.postgresql.Driver  
-    - rds.[type].connectionUserName - The user name to the database     
-    - rds.[type].connectionPassword - The password for the connection  
-    - rds.[type].databaseName - The name of the database  
-    - rds.[type].host - The host of the database  
-    - rds.[type].hostWithPort - Database host + port like 10.1.1.1:1234  
-    - rds.[type].subprotocol - Parsed from jdbc url like postgres  
-    - rds.[type].databaseEngine - Capital database name like POSTGRES  
-    
-- Properties related to the gateway used for Knox:
-    - gateway.enableGateway  
-    - gateway.gatewayType  
-    - gateway.path  
-    - gateway.topologyName  
-    - gateway.exposedServices  
-    - gateway.ssoType  
-    - gateway.ssoProvider   
-    - gateway.signKey  
-    - gateway.signPub  
-    - gateway.signCert  
-    - gateway.tokenCert  
-    
-- Name of the cluster:
-    - cluster_name  
-    
-- First name of the cluster user:
-    - cluster_admin_firstname  
-    
-- Password for Ambari:
-    - cluster_admin_password  
-    
-- Last name of the cluster user:
-    - cluster_admin_lastname  
-    
-- Email of the cluster user:
-    - admin_email    
-    
-- Version of HDP or HDF:
-    - stack_type_version  
-    
-- Type of stack (HDF or HDP):
-    - stack_type  
+When using [External Authentication Sources](external-ldap.md), the following variables can be specified in your Blueprint for replacement:
 
+| Variable | Description | Example |
+|---|---|---|
+| ldap.connectionURL | the URL of the LDAP (host:port) | ldap://10.1.1.1:389 |
+| ldap.bindDn | The root Distinguished Name to search in the directory for users | CN=Administrator,CN=Users,DC=ad,DC=hdc,DC=com |
+| ldap.bindPassword | The root Distinguished Name password | Password1234! |
+| ldap.directoryType | The directory of type | LDAP or ACTIVE_DIRECTORY |
+| ldap.userSearchBase | User search base | CN=Users,DC=ad,DC=hdc,DC=com |
+| ldap.userNameAttribute | Username attribute | cn |
+| ldap.userObjectClass | Object class for users | person |
+| ldap.groupSearchBase | Group search base | OU=Groups,DC=ad,DC=hdc,DC=com|
+| ldap.groupNameAttribute | Group attribute | cb |
+| ldap.groupObjectClass | Group object class | group |
+| ldap.groupMemberAttribute | Attribute for membershio | member |
+| ldap.domain | Your domain | example.com |
+
+##### External Database (RDBMS)
+
+When using [External Databases](external-db.md), the following variables can be specified in your Blueprint for replacement:
+
+| Variable | Description | Example |
+|---|---|---|
+| rds.[type].connectionURL | The jdbc url to the RDBMS | jdbc:postgresql://db.test:5432/test |
+| rds.[type].connectionDriver | The connection driver | org.postgresql.Driver |
+| rds.[type].connectionUserName | The user name to the database | admin |
+| rds.[type].connectionPassword | The password for the connection | Password1234! |  
+| rds.[type].databaseName | The name of the database  | hive |
+| rds.[type].host | The host of the database  | 10.1.1.1 |
+| rds.[type].hostWithPort | Database host + port | 10.1.1.1:1234 |
+| rds.[type].subprotocol | Parsed from jdbc url | postgres  |
+| rds.[type].databaseEngine | Capital database name | POSTGRES |
 
 #### Upload a Blueprint 
 

@@ -55,20 +55,20 @@ There are two basic deployment options:
 
 | Deployment option | When to use |
 |---|---|
-| Instantiate one of the pre-built cloud images | <p>This is the recommended basic deployment option.</p><p> The cloud images include Cloudbreak deployer pre-installed on a CentOS VM.</p>  |
-| Install the Cloudbreak deployer on your own VM | <p>This is an advanced deployment option.</p> <p>Select this option if you have custom VM requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).</p> |
+| Option 1: Instantiate Cloudbreak using one of the provided pre-built cloud images | <p>This is the basic deployment option and the easiest to get started with.</p><p> The cloud images include Cloudbreak deployer pre-installed on a CentOS VM.</p>  |
+| Option2: Install the Cloudbreak deployer on your own VM | <p>This is an advanced deployment option.</p> <p>Select this option if you have custom VM requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).</p> |
 
 
 #### Launch Cloudbreak 
 
-(Option 1) You can launch Cloudbreak from one of the pre-built images:  
+**(Option 1)** You can launch Cloudbreak from one of the pre-built images:  
 
 * [Launch on AWS](aws-launch.md)  
 * [Launch on Azure](azure-launch.md)  
 * [Launch on GCP](gcp-launch.md)   
 * [Launch on OpenStack](os-launch.md)    
      
-(Option 2) Or you can launch Cloudbreak [on your own VM](vm-launch.md) on one of these cloud platforms. This is an advanced deployment option that you should only use if you have custom VM requirements. 
+**(Option 2)** Or you can launch Cloudbreak [on your own VM](vm-launch.md) on one of these cloud platforms. This is an advanced deployment option that you should only use if you have custom VM requirements. 
 
 In general, the steps include meeting the prerequisites, launching Cloudbreak on a VM, and creating the Cloudbreak credential. After performing these steps, you can create a cluster based on one of the default blueprints or upload your own blueprint and then create a cluster. 
 

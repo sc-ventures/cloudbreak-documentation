@@ -1,7 +1,10 @@
 
 ## Restrict Inbound Access to Clusters 
 
-We recommend that after launching Cloudbreak you set  CB_DEFAULT_GATEWAY_CIDR in your Cloudbreak's Profile file in order to automatically open ports 9443 and 22 to your Cloudbreak IP on your Ambari node security group. 
+We recommend that after launching Cloudbreak you set CB_DEFAULT_GATEWAY_CIDR in your Cloudbreak's Profile file.
+When you launch a cluster, and Cloudbreak proposes security groups, this CIDR will be used
+for the Cloudbreak to the Cluster master node (i.e. the host with Ambari Server) with this IP. This limits access
+from Cloudbreak to this cluster name for ports 9443 and 22 for Cloudbreak communication and management of the cluster.
 
 **Steps** 
 

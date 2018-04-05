@@ -11,11 +11,3 @@ Platform Version: **HDF 3.1**
 | Cluster Type  | Main Services | Description |  List of All Services Included |
 |---|---|---|---|
 | Flow Management | <i class="fa fa-check" style="color: green"></i> NiFi | Useful for flow management with NiFi. | NiFi, ZooKeeper, Ambari Metrics |
-
-
-The following configuration classification applies:
-<ul>
-<li><i class="fa fa-check" style="color: green"></i> Stable configurations are the best choice if you want to avoid issues and other problems with launching and using clusters.</li>
-<li><i class="fa fa-warning" style="color: orange"></i> If you want to use a Technical Preview version of a component in a release of HDP/HDF, use these configurations.</li>
-<li><i class="fa fa-warning" style="color: red"></i> These are the most cutting edge of the configurations, including Technical Preview components in a Technical Preview HDP/HDF release.</li>
-</ul>

@@ -28,7 +28,7 @@ To install and configure Cloudbreak, you will need the following outbound destin
     <td>Obtain Cloudbreak dependencies.</td> 
   </tr>
   <tr>
-  <td>cloudbreak-imagecatalog.s3.amazonaws.com </td><td> The default Cloudbreak image catalog used for VMs. Refer to [Custom Images](images.md) for more information on image catalogs. </td>
+  <td>cloudbreak-imagecatalog.s3.amazonaws.com </td><td> The default Cloudbreak image catalog used for VMs. Refer to <a href="../images/index.html">Custom Images</a> for more information on image catalogs. </td>
   </tr>
 </table>
 
@@ -120,7 +120,7 @@ Use the following guidelines to find out what steps to perform in order to set u
 | Custom | Public | Set up the proxy on your custom image OR use [Register a Proxy](external-proxy.md).|
 | Custom | Local | Not required. Skip this section. |
 
-You can define a proxy configuration as an external source in CLoudbreak wen UI or CLI, and then (optionally) specify to configure that proxy configuration on the hosts that are part of the cluster during cluster create. Refer to [Register a Proxy](external-proxy.md) for more information.  
+You can define a proxy configuration as an external source in Cloudbreak web UI or CLI, and then (optionally) specify to configure that proxy configuration on the hosts that are part of the cluster during cluster create. Refer to [Register a Proxy](external-proxy.md) for more information.  
 
 
 #### Advanced Proxy Setup Scenarios 
