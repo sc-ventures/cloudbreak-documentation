@@ -55,7 +55,7 @@ An OpenStack administrator must perform these steps to add the Cloudbreak deploy
 
 ##### Import Cloudbreak Deployer Image
 
-Import Cloudbreak deployer image using the following steps.
+Import Cloudbreak deployer image by using the following steps.
 
 **Steps**
 
@@ -82,7 +82,7 @@ After performing the import, you should be able to see the Cloudbreak deployer i
 
 ##### Import HDP Base Image
 
-Import HDP base image using the following steps.
+Import HDP base image by using the following steps.
 
 **Steps**
 
@@ -102,16 +102,16 @@ export OS_TENANT_NAME=your_os_tenant_name</small></pre>
 
     <pre><small>glance image-create --name "$CB_LATEST_IMAGE_NAME" --file "$CB_LATEST_IMAGE" --disk-format qcow2 --container-format bare --progress</small></pre>
 
-After performing the import, you should be able to see the Cloudbreak image among your OpenStack images.
+After performing the import, you should be able to see the image among your OpenStack images.
 
 
-##### Import HDP Prewarmed Image
+##### Import HDP Prewarmed Images
 
-Import HDP prewarmed image using the following steps.
+Import HDP prewarmed image by using the following steps.
 
 **Steps**
 
-1. Download the latest HDP image to your local machine:
+1. Download the latest HDP images to your local machine:
 
     <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp-26-1802090220.img</small></pre>
 
@@ -126,8 +126,10 @@ export OS_TENANT_NAME=your_os_tenant_name</small></pre>
 3. Import the new image into your OpenStack:
 
     <pre><small>glance image-create --name "$CB_LATEST_IMAGE_NAME" --file "$CB_LATEST_IMAGE" --disk-format qcow2 --container-format bare --progress</small></pre>
+    
+4. Perform steps 1-3 for the second image cb-hdp-26-1803011524.img.    
 
-After performing the import, you should be able to see the Cloudbreak image among your OpenStack images.
+After performing the import, you should be able to see the images among your OpenStack images.
 
 
 ### Launch the VM
