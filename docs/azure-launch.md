@@ -53,7 +53,7 @@ Launch Cloudbreak deployer using the following steps.
 
 2. Click here to get started with Cloudbreak installation using the Azure Resource Manager template:
 
-    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsequenceiq%2Fazure-cbd-quickstart%2F2.4.0%2FmainTemplate.json" target="_blank"> ![deploy on azure](http://azuredeploy.net/deploybutton.png)</a>
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhortonworks%2Fazure-cbd-quickstart%2F2.4.1%2FmainTemplate.json" target="_blank"> ![deploy on azure](http://azuredeploy.net/deploybutton.png)</a>
     
 3. The template for installing Cloudbreak will appear. On the **Basics** page, provide the following basic parameters:   
 
