@@ -1,60 +1,18 @@
 ## Release Notes
 
-### 2.5.0 TP
+### 2.6.0 TP
 
-Cloudbreak 2.5.0 is a technical preview release. 
+Cloudbreak 2.6.0 is a technical preview release. 
 
 ____________________________
 
 #### New Features
 ____________________________
 
-##### **Creating HDF Clusters** 
-
-You can use Cloudbreak to create HDF clusters from base images on AWS, Azure, Google Cloud and OpenStack. In the Cloudbreak web UI, you can do this by selecting "HDF 3.1" under *Platform Version* and then selecting an HDF blueprint.
-
-Cloudbreak includes one default HDF blueprint "Flow Management: Apache NiFi" and supports uploading your own custom HDF 3.1.1 NiFi blueprints.  
-
-Note the following when creating NiFi clusters:
-
-- When creating a cluster, open 9091 TCP port on the NiFi host group. Without it, you will be unable to access the UI.  
-- Enabling kerberos is mandatory. You can either use your own kerberos or select for Cloudbreak to create a test KDC.    
-- Although Cloudbreak includes cluster scaling (including autoscaling), scaling is not fully supported by NiFi. Downscaling NiFi clusters is not supported - as it can result in data loss when a node is removed that has not yet processed all the data on that node. There is also a known issue related to scaling listed in the [Known Issues](#known-issues) below.  
-
-For updated create cluster instructions, refer to [Creating a Cluster](aws-launch.md) instructions for your chosen cloud provider. For updated blueprint information, refer to [Default Blueprints](blueprints.md#default-blueprints). 
-
-For a tutorial on creating a NiFi cluster with Cloudbreak, refer to the following [HCC post](https://community.hortonworks.com/articles/182221/create-a-nifi-cluster-on-aws-azure-google-or-opens.html). 
 
 
-##### **Using External Databases for Cluster Services** 
-
-You can register an existing external RDBMS in the Cloudbreak UI or CLI so that it can be used for those cluster components which have support for it. After the RDBMS has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.  
-
-Only Postgres is supported at this time. Refer to component-specific documentation for information on which version of Postgres (if any) is supported.  
-
-For more information, refer to [Register an External Database](external-db.md).   
 
 
-##### **Using External Authentication Sources (LDAP/AD) for Clusters** 
-
-You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.
-
-For more information, refer to [Register an Authentication Source](external-ldap.md).     
-
-
-##### **Modifying Existing Cloudbreak Credentials** 
-
-Cloudbreak allows you to modify existing credentials by using the edit option available in Cloudbreak UI or by using the `credential modify` command in the CLI. For more information, refer to [Modify an Existing Credential](cb-credentials.md#modify-an-existing-credential). 
-
-
-##### **Configuring Cloudbreak to Use Existing LDAP/AD**
-
-You can configure Cloudbreak to use your existing LDAP/AD so that you can authenticate Cloudbreak users against an existing LDAP/AD server. For more information, refer to [Configuring Cloudbreak for LDAP/AD Authentication](cb-ldap.md). 
-
-
-##### **Launching Cloudbreak in Environments with Restricted Internet Access or Required Use of Proxy** 
-
-You can launch Cloudbreak in environments with limited or restricted internet access and/or required use of a proxy to obtain internet access. For more information, refer to [Configure Outbound Internet Access and Proxy](cb-proxy.md). 
 
 ____________________________
 
@@ -62,20 +20,13 @@ ____________________________
 ____________________________
 
 
-##### **Auto-import of HDP/HDF Images on OpenStack**
-
-When using Cloudbreak on OpenStack, you no longer need to import HDP and HDF images manually, because during your first attempt to create a cluster, Cloudbreak automatically imports HDP and HDF images to your OpenStack. Only Cloudbreak image must be imported manually. 
 
 ____________________________
  
 #### Image Catalog Updates
 ____________________________
  
- 
-
 ##### **April 3, 2018** 
-
-[Comment]: <> (Update the date once the update is available.)
 
 Update 1:
 
@@ -98,6 +49,14 @@ ____________________________
 
 #### Fixed Issues
 ____________________________
+
+
+Fixed in 2.6.0 TP: 
+
+| Issue | Issue Description | Category | 
+|---|---|
+
+Fixed in 2.5.0 TP: 
 
 [Comment]: <> (BUG-99505 is still in progress. If not done, should be removed from this list.)
 [Comment]: <> (BUG-98792 is also tagged for 2.4.1 but is still open. If done, it should be added to this list.)
