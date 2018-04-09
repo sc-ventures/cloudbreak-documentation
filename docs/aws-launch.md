@@ -65,7 +65,7 @@ If you are using key-based authentication for Cloudbreak on AWS, you must be abl
 
 If you choose this option, all you need to do at this point is check your AWS account and make sure that you can access this key pair. You can generate new access and secret keys from the **IAM Console** > **Users**. Next, select a user and click on the **Security credentials** tab:
 
-<a href="../images/aws-iam_security_creds.png" target="_blank" title="click to enlarge"><img src="../images/aws-iam_security_creds.png" width="650" title="IAM Console"></a> 
+<a href="../images/cb_aws-iam_security_creds.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-iam_security_creds.png" width="650" title="IAM Console"></a> 
 
 If you choose this option, you can proceed to [Launch the VM](#launch-the-vm).
  
@@ -106,37 +106,37 @@ Use the following "AssumeRole" policy definition:
 
 1. Navigate to the **IAM console** > **Roles** and click **Create Role**.
 
-    <a href="../images/aws_role-00.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-00.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws_role-00.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role-00.png" width="650" title="IAM Console"></a> 
     
 2. In the "Create Role" wizard, select **AWS service** role type and then select any service. 
 
-    <a href="../images/aws_role-10.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-10.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws_role-10.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role-10.png" width="650" title="IAM Console"></a> 
 
 3. When done, click **Next: Permissions** to navigate to the next page in the wizard.
     
 4. Click **Create policy**.
 
-    <a href="../images/aws_role-11.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-11.png" width="650" title="IAM Console"></a>
+    <a href="../images/cb_aws_role-11.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role-11.png" width="650" title="IAM Console"></a>
     
 5. Click **Select** next to "Create Your Own Policy".
 
-    <a href="../images/aws_role-12.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-12.png" width="650" title="IAM Console"></a>  
+    <a href="../images/cb_aws_role-12.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role-12.png" width="650" title="IAM Console"></a>  
 
 6. In the **Policy Name** field, enter "AssumeRole" and in the **Policy Document** paste the policy definition. You can either copy it from the section preceding these steps or download and copy it from [here](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/AssumeRole.json).
 
-    <a href="../images/aws_role-13.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-13.png" width="650" title="IAM Console"></a>  
+    <a href="../images/cb_aws_role-13.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role-13.png" width="650" title="IAM Console"></a>  
     
 7. When done, click **Create Policy**.
 
 8. Click **Refresh**. Next, find the "AssumeRole" policy that you just created and select it by checking the box.
 
-    <a href="../images/aws_role-14.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-14.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws_role-14.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role-14.png" width="650" title="IAM Console"></a> 
     
 9. When done, click **Next: Review**.
     
 9. In the **Roles name** field, enter role name, for example "CloudbreakRole". 
 
-    <a href="../images/aws_role-15.png" target="_blank" title="click to enlarge"><img src="../images/aws_role-15.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws_role-15.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role-15.png" width="650" title="IAM Console"></a> 
     
 10. When done, click **Create role** to finish the role creation process.
     
@@ -259,7 +259,7 @@ Use the following "cb-policy" policy definition:
 
 1. Navigate to the **IAM console** > **Roles** and click **Create Role**.
 
-    <a href="../images/aws_role0.png" target="_blank" title="click to enlarge"><img src="../images/aws_role0.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws_role0.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role0.png" width="650" title="IAM Console"></a> 
     
 2. In the "Create Role" wizard, select **Another AWS account** role type. Next, provide the following:
 
@@ -267,34 +267,34 @@ Use the following "cb-policy" policy definition:
     * Under **Options**, check **Require external ID**.
     * In the **External ID**, enter "provision-ambari".
 
-    <a href="../images/aws_role1.png" target="_blank" title="click to enlarge"><img src="../images/aws_role1.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws_role1.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role1.png" width="650" title="IAM Console"></a> 
     
 3. When done, click **Next: Permissions** to navigate to the next page in the wizard.
     
 4. Click **Create policy**.
 
-    <a href="../images/aws_role2.png" target="_blank" title="click to enlarge"><img src="../images/aws_role2.png" width="650" title="IAM Console"></a>
+    <a href="../images/cb_aws_role2.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role2.png" width="650" title="IAM Console"></a>
     
 5. Click **Select** next to "Create Your Own Policy".
 
-    <a href="../images/aws_role3.png" target="_blank" title="click to enlarge"><img src="../images/aws_role3.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws_role3.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role3.png" width="650" title="IAM Console"></a> 
     
     
 6. In the **Policy Name** field, enter "cb-policy" and in the **Policy Document** paste the policy definition.  You can either copy it from the section preceding these steps or download and copy it from [here](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/cb-policy.json).
 
-    <a href="../images/aws_role4.png" target="_blank" title="click to enlarge"><img src="../images/aws_role4.png" width="650" title="IAM Console"></a>  
+    <a href="../images/cb_aws_role4.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role4.png" width="650" title="IAM Console"></a>  
     
 7. When done, click **Create Policy**.
 
 8. Click **Refresh**. Next, find the "cb-policy" that you just created and select it by checking the box.
 
-    <a href="../images/aws_role5.png" target="_blank" title="click to enlarge"><img src="../images/aws_role5.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws_role5.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role5.png" width="650" title="IAM Console"></a> 
     
 9. When done, click **Next: Review**.
     
 10. In the **Roles name** field, enter role name, for example "CredentialRole". 
 
-    <a href="../images/aws_role6.png" target="_blank" title="click to enlarge"><img src="../images/aws_role6.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws_role6.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role6.png" width="650" title="IAM Console"></a> 
     
 11. When done, click **Create role** to finish the role creation process. 
 
@@ -315,7 +315,7 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 
 2. In the top right corner, select the region in which you want to launch Cloudbreak.  
 
-    <a href="../images/aws-01.png" target="_blank" title="click to enlarge"><img src="../images/aws-01.png" width="650" title="EC2 Console"></a> 
+    <a href="../images/cb_aws-01.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-01.png" width="650" title="EC2 Console"></a> 
     
 3. From the left pane, select **INSTANCES** > **Instances**.  
 
@@ -323,7 +323,7 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 
 5. In *Step 1: Choose an Amazon Machine Image (AMI)*, select **Community AMIs** from the left pane. 
 
-    <a href="../images/aws-02.png" target="_blank" title="click to enlarge"><img src="../images/aws-02.png" width="650" title="EC2 Console"></a> 
+    <a href="../images/cb_aws-02.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-02.png" width="650" title="EC2 Console"></a> 
      
 6. In the search box, enter the image name. The following Cloudbreak deployer images are available:
 
@@ -346,7 +346,7 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
   
 8. In *Step2: Choose Instance Type*, choose an instance type. The minimum instance type which is suitable for Cloudbreak is **m4.xlarge**. Minimum requirements are 16GB RAM, 40GB disk, 4 cores. When done, click **Next**.
 
-    <a href="../images/aws-03.png" target="_blank" title="click to enlarge"><img src="../images/aws-03.png" width="650" title="EC2 Console"></a>   
+    <a href="../images/cb_aws-03.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-03.png" width="650" title="EC2 Console"></a>   
     
 9. (Perform this step only if you are using role-based authorization) In **Step 3: Configure Instance Details** > **IAM**, select the "CloudbreakRole" IAM role which you [created earlier](#authorization-for-cloudbreak).
 
@@ -358,7 +358,7 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
     * 80 (for access via HTTP)   
     * 443 (for access via HTTPS). 
 
-    <a href="../images/aws-04.png" target="_blank" title="click to enlarge"><img src="../images/aws-04.png" width="650" title="EC2 Console"></a> 
+    <a href="../images/cb_aws-04.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-04.png" width="650" title="EC2 Console"></a> 
     
     When done, click **Review and Launch**.
 
@@ -366,11 +366,11 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 
 13. When prompted select an existing key pair or create a new one. Next, acknowledge that you have access to the private key file and click **Launch Instance**. 
 
-    <a href="../images/aws-05.png" target="_blank" title="click to enlarge"><img src="../images/aws-05.png" width="400" title="EC2 Console"></a>  
+    <a href="../images/cb_aws-05.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-05.png" width="400" title="EC2 Console"></a>  
     
 14. Click on the instance ID to navigate to the **Instances** view in your EC2 console. 
 
-    <a href="../images/aws-06.png" target="_blank" title="click to enlarge"><img src="../images/aws-06.png" width="650" title="EC2 Console"></a>  
+    <a href="../images/cb_aws-06.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-06.png" width="650" title="EC2 Console"></a>  
 
 
 ### SSH to the VM  
@@ -448,7 +448,7 @@ Log in to the Cloudbreak UI using the following steps.
 
 3. The login page is displayed:
 
-    <a href="../images/cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
 
 4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer):
 
@@ -457,7 +457,7 @@ Log in to the Cloudbreak UI using the following steps.
 
 5. Upon a successful login, you are redirected to the dashboard:
 
-    <a href="../images/cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
 
 
 ### Create Cloudbreak Credential
@@ -481,7 +481,7 @@ To perform these steps, you must know your access and secret key. If needed, you
 
 3. Under **Cloud provider**, select "Amazon Web Services":
 
-    <a href="../images/cb-aws-cred-key.png" target="_blank" title="click to enlarge"><img src="../images/cb-aws-cred-key.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb_cb-aws-cred-key.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-aws-cred-key.png" width="650" title="Cloudbreak web UI"></a>  
 
 3. Provide the following information:
 
@@ -513,7 +513,7 @@ To perform these steps, you must know the **IAM Role ARN** corresponding to the 
 
 3. Under **Cloud provider**, select "Amazon Web Services":
 
-    <a href="../images/cb-aws-cred-role.png" target="_blank" title="click to enlarge"><img src="../images/cb-aws-cred-role.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb_cb-aws-cred-role.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-aws-cred-role.png" width="650" title="Cloudbreak web UI"></a>  
 
 3. Provide the following information:
 

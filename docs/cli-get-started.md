@@ -29,7 +29,7 @@ The simplest way to obtain a valid JSON template for your cluster is to get it f
 
 Once you've provided all the cluster parameters, on the last page of the create cluster wizard, click **Show CLI Command** to obtain the JSON template:
 
-<a href="../images/cli-json-create-cluster2.png" target="_blank" title="click to enlarge"><img src="../images/cli-json-create-cluster2.png" width="650" title="Cloudbreak web UI"></a>    
+<a href="../images/cb_cli-json-create-cluster2.png" target="_blank" title="click to enlarge"><img src="../images/cb_cli-json-create-cluster2.png" width="650" title="Cloudbreak web UI"></a>    
 
 Click **Copy the JSON** to copy the content and then use a text editor to edit and save it. 
 
@@ -38,11 +38,11 @@ Click **Copy the JSON** to copy the content and then use a text editor to edit a
 
 You can obtain the JSON template for a cluster from the cluster details page by selecting **Actions** > **Show CLI Command**. This option is available for all clusters that have been initiated, so the cluster does not need to be in the running state to obtain this information. In fact, this option is useful when troubleshooting cluster failures.  
 
-<a href="../images/cli-json-details1.png" target="_blank" title="click to enlarge"><img src="../images/cli-json-details1.png" width="650" title="Cloudbreak web UI"></a>   
+<a href="../images/cb_cli-json-details1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cli-json-details1.png" width="650" title="Cloudbreak web UI"></a>   
 
 Click **Copy the JSON** to copy the content and then use a text editor to edit and save it. 
 
-<a href="../images/cli-json-details2.png" target="_blank" title="click to enlarge"><img src="../images/cli-json-details2.png" width="650" title="Cloudbreak web UI"></a> 
+<a href="../images/cb_cli-json-details2.png" target="_blank" title="click to enlarge"><img src="../images/cb_cli-json-details2.png" width="650" title="Cloudbreak web UI"></a> 
 
 
 ### Obtain CLI Command from the UI

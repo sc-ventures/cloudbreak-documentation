@@ -6,7 +6,7 @@ Cloudbreak simplifies the provisioning, management, and monitoring of on-demand 
 
 Cloudbreak allows you to create clusters using the Cloudbreak web UI, Cloudbreak CLI, and Cloudbreak REST API. Clusters can be launched on public cloud infrastructure platforms **Microsoft Azure**, **Amazon Web Services (AWS)**, and **Google Cloud Platform (GCP)**, and on the private cloud infrastructure platform **OpenStack**.
 
-<a href="./images/cb-ui3.png" target="_blank" title="click to enlarge"><img src="./images/cb-ui3.png" width="650" title="Cloudbreak web UI"></a>   
+<a href="./images/cb_cb-ui3.png" target="_blank" title="click to enlarge"><img src="./images/cb_cb-ui3.png" width="650" title="Cloudbreak web UI"></a>   
 
 
 ### Primary Use Cases

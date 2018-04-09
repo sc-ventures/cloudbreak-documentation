@@ -116,7 +116,7 @@ While the deployment is in progress, you can optionally navigate to the newly cr
 
 3. The following resources should have been created in your resource group:
 
-    <a href="../images/azure-resources.png" target="_blank" title="click to enlarge"><img src="../images/azure-resources.png" width="650" title="Azure Portal"></a>
+    <a href="../images/cb_azure-resources.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-resources.png" width="650" title="Azure Portal"></a>
 
     > If you chose to use an existing virtual network, the virtual network will not be added to the resource group.
 
@@ -144,11 +144,11 @@ Log in to the Cloudbreak UI using the following steps.
 
 2. Once you've navigated to your resource group, click on **Deployments** and then click on **Microsoft.Template**:
 
-    <a href="../images/azure-resource-find.png" target="_blank" title="click to enlarge"><img src="../images/azure-resource-find.png" width="650" title="Azure Portal"></a>
+    <a href="../images/cb_azure-resource-find.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-resource-find.png" width="650" title="Azure Portal"></a>
 
 3. From **Outputs**, you can copy the link by clicking on the copy icon:
 
-    <a href="../images/azure-outputs.png" target="_blank" title="click to enlarge"><img src="../images/azure-outputs.png" width="650" title="Azure Portal"></a>   
+    <a href="../images/cb_azure-outputs.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-outputs.png" width="650" title="Azure Portal"></a>   
 
 2. Paste the link in your browser's address bar.
 
@@ -162,11 +162,11 @@ Log in to the Cloudbreak UI using the following steps.
 
 3. Now you should be able to access Cloudbreak UI and log in with the **Admin email address** and **Admin password** that you created when launching Cloudbreak:
 
-     <a href="../images/cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui.png" width="650" title="Azure Portal"></a>
+     <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Azure Portal"></a>
 
 4. Upon a successful login, you are redirected to the dashboard:
 
-    <a href="../images/cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
 
 The last task that you need to perform before you can use Cloudbreak is to [create a cloudbreak credential](#create-cloudbreak-credential).         
 
@@ -198,7 +198,7 @@ Follow these steps to create an interactive Cloudbreak credential.
 
 4. Select **Interactive Login**:
 
-    <a href="../images/cb-azure-cred-inter.png" target="_blank" title="click to enlarge"><img src="../images/cb-azure-cred-inter.png" width="650" title="Cloudbreak web UI"></a>     
+    <a href="../images/cb_cb-azure-cred-inter.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-azure-cred-inter.png" width="650" title="Cloudbreak web UI"></a>     
 
 5. Provide the following information:
 
@@ -212,26 +212,26 @@ Follow these steps to create an interactive Cloudbreak credential.
 
     To obtain the **Subscription Id**:
 
-     <a href="../images/azure-cred-subscription.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-subscription.png" width="650" title="Cloudbreak web UI"></a>   
+     <a href="../images/cb_azure-cred-subscription.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-cred-subscription.png" width="650" title="Cloudbreak web UI"></a>   
 
     To obtain the **Tenant ID** (actually **Directory Id**):
 
-    <a href="../images/azure-cred-directoryid.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-directoryid.png" width="650" title="Cloudbreak web UI"></a>    
+    <a href="../images/cb_azure-cred-directoryid.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-cred-directoryid.png" width="650" title="Cloudbreak web UI"></a>    
 
 6. After providing the parameters, click **Interactive Login**.
 
 6. Copy the code provided in the UI:
 
-    <a href="../images/cb-azure-cred-inter2.png" target="_blank" title="click to enlarge"><img src="../images/cb-azure-cred-inter2.png" width="650" title="Cloudbreak web UI"></a>     
+    <a href="../images/cb_cb-azure-cred-inter2.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-azure-cred-inter2.png" width="650" title="Cloudbreak web UI"></a>     
 
 7. Click **Azure login** and a new **Device login** page will open in a new browser tab:
 
-     <a href="../images/azure-device-login.png" target="_blank" title="click to enlarge"><img src="../images/azure-device-login.png" width="650" title="Azure Portal"></a>  
+     <a href="../images/cb_azure-device-login.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-device-login.png" width="650" title="Azure Portal"></a>  
 
 8. Next, paste the code in field on the  **Device login** page and click **Continue**.
 9. Confirm your account by selecting it:
 
-     <a href="../images/azure-device-login2.png" target="_blank" title="click to enlarge"><img src="../images/azure-device-login2.png" width="650" title="Azure Portal"></a>
+     <a href="../images/cb_azure-device-login2.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-device-login2.png" width="650" title="Azure Portal"></a>
 
 10. A confirmation page will appear, confirming that you have signed in to the Microsoft Azure Cross-platform Command Line Interface application on your device. You may now close this window.
 
@@ -252,13 +252,13 @@ Follow these steps to create an app based Cloudbreak credential.
 
     > Aa an alternative to the steps listed below for creating an application registration, you use a utility called `azure-cli-tools`. The utility supports app creation and role assignment. It is available at [https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools](https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools).
 
-    <a href="../images/azure-appbased01.png" target="_blank" title="click to enlarge"><img src="../images/azure-appbased01.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb_azure-appbased01.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-appbased01.png" width="650" title="Cloudbreak web UI"></a>  
 
 1. Navigate to the **Subscriptions**, choose **Access control (IAM)**. Click **Add** and then assign the "Contributor" role to your newly created application by selecting "Contributor" under **Role** and your app name under **Select**:
 
     > This step typically requires admin permissions so you may have to contact your Azure administrator.
 
-     <a href="../images/azure-appbased03.png" target="_blank" title="click to enlarge"><img src="../images/azure-appbased03.png" width="650" title="Azure Portal"></a>   
+     <a href="../images/cb_azure-appbased03.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-appbased03.png" width="650" title="Azure Portal"></a>   
 
 
 **Steps**
@@ -271,7 +271,7 @@ Follow these steps to create an app based Cloudbreak credential.
 
 4. Select **App based Login**:
 
-    <a href="../images/cb-azure-cred-app.png" target="_blank" title="click to enlarge"><img src="../images/cb-azure-cred-app.png" width="650" title="Cloudbreak web UI"></a>
+    <a href="../images/cb_cb-azure-cred-app.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-azure-cred-app.png" width="650" title="Cloudbreak web UI"></a>
 
 1. On the **Configure credential** page, provide the following parameters:
 
@@ -288,17 +288,17 @@ Follow these steps to create an app based Cloudbreak credential.
 
     To obtain the **Subscription Id** from Subscriptions:
 
-     <a href="../images/azure-cred-subscription.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-subscription.png" width="650" title="Cloudbreak web UI"></a>   
+     <a href="../images/cb_azure-cred-subscription.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-cred-subscription.png" width="650" title="Cloudbreak web UI"></a>   
 
     To obtain the **App ID** (actually **Application ID**) and an application key from Azure Active Directory:
 
-     <a href="../images/azure-cred-app11.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-app11.png" width="650" title="Cloudbreak web UI"></a>  
+     <a href="../images/cb_azure-cred-app11.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-cred-app11.png" width="650" title="Cloudbreak web UI"></a>  
 
-     <a href="../images/azure-cred-app12.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-app12.png" width="650" title="Cloudbreak web UI"></a>      
+     <a href="../images/cb_azure-cred-app12.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-cred-app12.png" width="650" title="Cloudbreak web UI"></a>      
 
     To obtain the **Tenant ID** (actually **Directory Id**) from Azure Active Directory:
 
-    <a href="../images/azure-cred-directoryid.png" target="_blank" title="click to enlarge"><img src="../images/azure-cred-directoryid.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb_azure-cred-directoryid.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-cred-directoryid.png" width="650" title="Cloudbreak web UI"></a>  
 
 
 1. Click **Create**.

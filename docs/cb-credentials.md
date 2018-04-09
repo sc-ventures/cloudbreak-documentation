@@ -33,7 +33,7 @@ You can modify an existing Cloudbreak credential by following these steps.
 **Steps**
 
 1. In the Cloudbreak UI, select **Credentials** from the navigation pane.  
-2.Click on <img src="../images/edit.png" alt="On" />  next to the credential that you want to edit.  
+2.Click on <img src="../images/cb_edit.png" alt="On" />  next to the credential that you want to edit.  
 3. When done making changes, click **Save** to save your changes.  
 
 

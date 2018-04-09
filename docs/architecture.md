@@ -20,7 +20,7 @@
 
 The Cloudbreak application is a web application which simplifies cluster provisioning in the cloud. Based on your input, Cloudbreak provisions all required cloud infrastructure and then provisions a cluster on your behalf within your cloud provider account.   
 
-<a href="../images/arch.png" target="_blank" title="click to enlarge"><img src="../images/arch.png" width="550" title="Cloudbreak architecture"></a> 
+<a href="../images/cb_arch.png" target="_blank" title="click to enlarge"><img src="../images/cb_arch.png" width="550" title="Cloudbreak architecture"></a> 
 
 Cloudbreak application is built on the foundation of cloud provider APIs and Apache Ambari:
     
@@ -43,7 +43,7 @@ After launching Cloudbreak, you must create a Cloudbreak credential for each clo
 Cloudbreak credential allows Cloudbreak to authenticate with the cloud provider and create resources on your behalf. The authentication process varies depending on the cloud provider, but is typically done via assigning a specific IAM role to Cloudbreak which allows Cloudbreak to perform certain actions within your cloud provider account. To learn more, refer to [Identity Management](security.md#identity-management).  
 
 
-<a href="../images/arch-cred.png" target="_blank" title="click to enlarge"><img src="../images/arch-cred.png" width="500" title="How Cb uses Cloudbreak Credential"></a> 
+<a href="../images/cb_arch-cred.png" target="_blank" title="click to enlarge"><img src="../images/cb_arch-cred.png" width="500" title="How Cb uses Cloudbreak Credential"></a> 
 
 **Related Links**  
 [Identity Management](security.md#identity-management)  
@@ -57,7 +57,7 @@ Ambari blueprints are specified in JSON format. After you provide the blueprint 
 
 Cloudbreak includes a few default blueprints and allows you to upload your own blueprints.
 
-<a href="../images/arch-blue.png" target="_blank" title="click to enlarge"><img src="../images/arch-blue.png" width="500" title="How Cb uses Ambari blueprints"></a> 
+<a href="../images/cb_arch-blue.png" target="_blank" title="click to enlarge"><img src="../images/cb_arch-blue.png" width="500" title="How Cb uses Ambari blueprints"></a> 
 
 **Related Links**  
 [Blueprints](security.md#identity-management)  

@@ -24,7 +24,7 @@ This error during the interactive credential creation typically means that you d
 
 After registering an Azure application you may have to ask your Azure administrator to perform the step of assigning the "Contributor" role to it:
 
-<a href="../images/azure-appbased03.png" target="_blank" title="click to enlarge"><img src="../images/azure-appbased03.png" width="650" title="Azure Portal"></a> 
+<a href="../images/cb_azure-appbased03.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-appbased03.png" width="650" title="Azure Portal"></a> 
 
 
 ### Credential Creation Errors

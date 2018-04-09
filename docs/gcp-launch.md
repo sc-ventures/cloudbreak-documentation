@@ -25,9 +25,9 @@ In order to launch clusters on GCP via Cloudbreak, you must have a Service Accou
     
 A user with an "Owner" role can assign roles to new and existing service accounts from **IAM & Admin** > **IAM**, as presented in the following screenshots: 
 
-<a href="../images/gcp-iam.png" target="_blank" title="click to enlarge"><img src="../images/gcp-iam.png" width="650" title="GCP Console"></a> 
+<a href="../images/cb_gcp-iam.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-iam.png" width="650" title="GCP Console"></a> 
 
-<a href="../images/gcp-iam2.png" target="_blank" title="click to enlarge"><img src="../images/gcp-iam2.png" width="650" title="GCP Console"></a> 
+<a href="../images/cb_gcp-iam2.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-iam2.png" width="650" title="GCP Console"></a> 
 
 For more information on creating a Service Account and generating a P12 key, refer to [GCP documentation](https://cloud.google.com/storage/docs/authentication#service_accounts). 
 
@@ -61,9 +61,9 @@ You can manage networks under **Networking** > **VPC Networks**. To edit ports, 
 
 1. Log in to Google Cloud Platform.
 
-1. Open the **Google Cloud Shell** by clicking on the  <img src="../images/gcp-icon.png" width="25" title="Icon"> icon in the top-right corner:
+1. Open the **Google Cloud Shell** by clicking on the  <img src="../images/cb_gcp-icon.png" width="25" title="Icon"> icon in the top-right corner:
 
-    <a href="../images/gcp-01.png" target="_blank" title="click to enlarge"><img src="../images/gcp-01.png" width="650" title="GCP Console"></a> 
+    <a href="../images/cb_gcp-01.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-01.png" width="650" title="GCP Console"></a> 
 
 1. Import the Cloudbreak deployer image by executing the following command: 
 
@@ -77,11 +77,11 @@ You can manage networks under **Networking** > **VPC Networks**. To edit ports, 
 
 1. Select the image and then click **Create Instance**:  
 
-    <a href="../images/gcp-02.png" target="_blank" title="click to enlarge"><img src="../images/gcp-02.png" width="650" title="GCP Console"></a>  
+    <a href="../images/cb_gcp-02.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-02.png" width="650" title="GCP Console"></a>  
 
 1. You will be redirected to **VM instances** > **Create an instance** form. Provide the following parameters for your VM:
 
-    <a href="../images/gcp-03.png" target="_blank" title="click to enlarge"><img src="../images/gcp-03.png" width="650" title="GCP Console"></a>  
+    <a href="../images/cb_gcp-03.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-03.png" width="650" title="GCP Console"></a>  
 
     | Parameter | Description |
 |---|---|
@@ -173,7 +173,7 @@ Log in to the Cloudbreak UI using the following steps.
     
 3. The login page is displayed:
 
-    <a href="../images/cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
     
 4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer):
 
@@ -182,7 +182,7 @@ Log in to the Cloudbreak UI using the following steps.
 
 5. Upon a successful login, you are redirected to the dashboard:
 
-    <a href="../images/cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
 
 ### Create Cloudbreak Credential
 
@@ -196,7 +196,7 @@ Cloudbreak works by connecting your GCP account through this credential, and the
 
 3. Under **Cloud provider**, select "Google Cloud Platform":
 
-    <a href="../images/cb-gcp-cred.png" target="_blank" title="click to enlarge"><img src="../images/cb-gcp-cred.png" width="650" title="Cloudbreak web UI"></a>  
+    <a href="../images/cb_cb-gcp-cred.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-gcp-cred.png" width="650" title="Cloudbreak web UI"></a>  
 
 3. Provide the following information:
 

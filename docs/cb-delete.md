@@ -31,7 +31,7 @@ If you want to delete the Cloudbreak instance, you can do so by deleting the EC2
 
 5. Click **Yes, Terminate** to confirm.
 
-    <a href="../images/aws-delete.png" target="_blank" title="click to enlarge"><img src="../images/aws-delete.png" width="650" title="Azure Portal"></a>  
+    <a href="../images/cb_aws-delete.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-delete.png" width="650" title="Azure Portal"></a>  
 
 
 ### Delete Cloudbreak on Azure
@@ -51,7 +51,7 @@ You can delete Cloudbreak instance from your Azure account by deleting related r
 
 3. If you deployed Cloudbreak in a new resource group, you can delete the whole resource group. Click on **...** and select **Delete**:
 
-    <a href="../images/azure-delete.png" target="_blank" title="click to enlarge"><img src="../images/azure-delete.png" width="650" title="Azure Portal"></a>  
+    <a href="../images/cb_azure-delete.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-delete.png" width="650" title="Azure Portal"></a>  
 
     Next, type the name of the resource group to delete and click **Delete**.
     
@@ -71,7 +71,7 @@ You can delete Cloudbreak instance from your Google Cloud account.
 
 3. Select the instance that you want to delete:
 
-    <a href="../images/gcp-delete.png" target="_blank" title="click to enlarge"><img src="../images/gcp-delete.png" width="650" title="Azure Portal"></a>     
+    <a href="../images/cb_gcp-delete.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-delete.png" width="650" title="Azure Portal"></a>     
 
 4. Click on the delete icon and then confirm delete. 
 

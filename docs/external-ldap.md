@@ -33,7 +33,7 @@ During cluster creation the following properties will be injected in the bluepri
 
 Their values will be the values that you provided to Cloudbreak: 
 
-<a href="../images/cb-ldap.png" target="_blank" title="click to enlarge"><img src="../images/cb-ldap.png" width="550" title="Cloudbreak web UI"></a>
+<a href="../images/cb_cb-ldap.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ldap.png" width="550" title="Cloudbreak web UI"></a>
 
 
 

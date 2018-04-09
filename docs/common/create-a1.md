@@ -11,7 +11,7 @@ Use these steps to create a cluster.
 2. Click **Create Cluster** and the *Create Cluster* wizard is displayed.  
     By default, **Basic** view is displayed. To view advanced options, click **Advanced**. To learn about advanced options, refer to [Advanced Options](#advanced-options).
 
-    <a href="../images/cb-create.png" target="_blank" title="click to enlarge"><img src="../images/cb-create.png" width="650" title="Cluster Information"></a> 
+    <a href="../images/cb_cb-create.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-create.png" width="650" title="Cluster Information"></a> 
 
 3. On the **General Configuration** page, specify the following general parameters for your cluster:
 

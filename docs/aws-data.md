@@ -18,23 +18,23 @@ In order to configure access from your cluster to Amazon S3, you must have an ex
 
 1. Navigate to the **IAM console** > **Roles** and click **Create Role**.
 
-    <a href="../images/aws-s3-role_01.png" target="_blank" title="click to enlarge"><img src="../images/aws-s3-role_01.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws-s3-role_01.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-s3-role_01.png" width="650" title="IAM Console"></a> 
     
 2. In the "Create Role" wizard, select **AWS service** role type and then select **EC2** service and **EC2** use case. 
 
-    <a href="../images/aws-s3-role_02.png" target="_blank" title="click to enlarge"><img src="../images/aws-s3-role_02.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws-s3-role_02.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-s3-role_02.png" width="650" title="IAM Console"></a> 
 
 3. When done, click **Next: Permissions** to navigate to the next page in the wizard.
     
 4. Select an existing S3 access policy or click **Create policy** to define a new policy. If you are just getting started, you can select a built-in policy called "AmazonS3FullAccess", which provides full access to S3 buckets that are part of your account:
 
-    <a href="../images/aws-s3-role_03.png" target="_blank" title="click to enlarge"><img src="../images/aws-s3-role_03.png" width="650" title="IAM Console"></a>
+    <a href="../images/cb_aws-s3-role_03.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-s3-role_03.png" width="650" title="IAM Console"></a>
     
 5. When done attaching the policy, click **Next: Review**.
     
 6. In the **Roles name** field, enter a name for the role that you are creating:  
 
-    <a href="../images/aws-s3-role_04.png" target="_blank" title="click to enlarge"><img src="../images/aws-s3-role_04.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws-s3-role_04.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-s3-role_04.png" width="650" title="IAM Console"></a> 
     
 7. Click **Create role** to finish the role creation process.
 

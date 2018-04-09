@@ -39,7 +39,7 @@ For each newly created cluster, autoscaling is disabled by default but it can be
 1. On the cluster details page, navigate to the **Autoscaling** tab.   
 3. Click the toggle button to enable autoscaling:
 
-    <a href="../images/cb-autoscaling1.png" target="_blank" title="click to enlarge"><img src="../images/cb-autoscaling1.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
+    <a href="../images/cb_cb-autoscaling1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-autoscaling1.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
       
 4. The toggle button turns green and you can see that "Autoscaling is enabled".   
 5. [Define alerts](#defining-an-alert) and then [define scaling policies](#create-a-scaling-policy). You can also [adjust the autoscaling settings](#configure-autoscaling-settings). 

@@ -49,7 +49,7 @@ You can do this in one of the two ways:
 
 Once you log in to the Cloudbreak web UI, you can manage your Flex subscriptions from the **Settings** page > **Flex Subscriptions**:
 
-<a href="../images/cb-flex-settings.png" target="_blank" title="click to enlarge"><img src="../images/cb-flex-settings.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
+<a href="../images/cb_cb-flex-settings.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-flex-settings.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
 
 You can:
  
@@ -66,7 +66,7 @@ You can:
 
 When creating a cluster, on the **General Configuration** page you can select the Flex subscription that you want to use for the cluster:
 
-<a href="../images/cb-flex-cluster.png" target="_blank" title="click to enlarge"><img src="../images/cb-flex-cluster.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
+<a href="../images/cb_cb-flex-cluster.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-flex-cluster.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
 
 
 #### Use Flex Subscription for Cloudbreak Node

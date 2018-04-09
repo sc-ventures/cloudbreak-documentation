@@ -140,7 +140,7 @@ To configure this scenario, set this setting in your Profile file:
 <pre>HTTPS_PROXYFORCLUSTERCONNECTION = false</pre>
 
 
-<a href="../images/cb-proxy1.png" target="_blank" title="click to enlarge"><img src="../images/cb-proxy1.png" width="650" title="GCP Console"></a> 
+<a href="../images/cb_cb-proxy1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-proxy1.png" width="650" title="GCP Console"></a> 
 
 ##### **Scenario 2**
 
@@ -150,6 +150,6 @@ To configure this scenario, set this setting in your Profile file:
 
 <pre>HTTPS_PROXYFORCLUSTERCONNECTION = true</pre>
 
-<a href="../images/cb-proxy2.png" target="_blank" title="click to enlarge"><img src="../images/cb-proxy2.png" width="650" title="GCP Console"></a> 
+<a href="../images/cb_cb-proxy2.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-proxy2.png" width="650" title="GCP Console"></a> 
 
 
