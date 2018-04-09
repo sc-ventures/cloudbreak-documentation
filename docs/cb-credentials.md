@@ -14,15 +14,6 @@ For steps, refer to:
 * [Create Credential on OpenStack](os-launch.md#create-cloudbreak-credential)
 
 
-### View Credential Details
-
-To view credential details, follow these steps.
-
-**Steps**
-
-1. In the Cloudbreak UI, select **Credentials** from the navigation pane.  
-2. Click on the name of a credential. 
-
 ### Modify an Existing Credential
 
 You can modify an existing Cloudbreak credential by following these steps.
@@ -48,15 +39,5 @@ If using multiple Cloudbreak credentials, you can select one credential and use 
 3. Click **Yes** to confirm. 
 
 
-### Delete a Credential 
-
-To delete a credential, follow these steps.
-
-**Steps**
-
-1. In the Cloudbreak UI, select **Credentials** from the navigation pane.  
-2. Select one or more credentials by checking their corresponding checkboxes.
-2. Click **Delete**. 
-3. Click **Yes** to confirm. 
 
 

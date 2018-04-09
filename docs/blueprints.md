@@ -150,31 +150,3 @@ Once you have your blueprint ready, perform these steps.
 
 
 
-#### View Blueprint Details 
-
-Once a blueprint has been registered in Cloudbreak, you can access its details in the Cloudbreak UI.
-
-**Steps**
-
-1. In the Cloudbreak UI, select **Blueprints** from the navigation pane and click on an entry to navigate to details. 
-
-    You can view blueprint details using the **List View** and **Raw View**:
-
-    <a href="../images/cb_cb-blueprint-details.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-blueprint-details.png" width="650" title="Cloudbreak web UI"></a> 
-
-
- 
-#### Delete Blueprint
-
-To delete a default or custom blueprint, perform these steps.
-
-**Steps**
-
-1. In the Cloudbreak UI, select **Blueprints** from the navigation pane. 
-
-2. Click on an entry to navigate to details. 
-
-3. Click **Delete**. 
-
-3. Confirm delete. 
-
