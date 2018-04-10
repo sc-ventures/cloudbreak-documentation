@@ -1,20 +1,19 @@
-## Blueprints
+## Using custom blueprints
+
+
+This option allows you to create and save your custom blueprints. 
 
 **Ambari blueprints** are your declarative definition of your HDP or HDF cluster, defining the host groups and which components to install on which host group. Ambari uses them as a base for your clusters. 
 
 You have two options concerning using blueprints with Cloudbreak:
 
-* **Use one of the pre-defined blueprints**: To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. For the list of default blueprints, refer to [Default Cluster Configurations](index.md#default-cluster-configurations).       
+* **Use one of the pre-defined blueprints**: To use one of the default blueprints, simply select them when creating a cluster. The option is available on the **General Configuration** page. First select the **Stack Version** and then select your chosen blueprint under **Cluster Type**. For the list of default blueprints, refer to [Default cluster configurations](index.md#default-cluster-configurations).       
 * **Add your custom blueprint** by uploading a JSON file or pasting the JSON text. 
 
 We recommend that you review the default blueprints to check if they meet your requirements. You can do this by selecting **Blueprints** from the navigation pane in the Cloudbreak web UI or by reading the documentation below.
  
 
-### Using Custom Blueprints 
-
-This option allows you to create and save your custom blueprints. 
-
-#### Creating a Blueprint
+#### Creating a blueprint
 
 Ambari blueprints are specified in the JSON format. A blueprint can be exported from a running Ambari cluster and can be reused in Cloudbreak after slight modifications. When a blueprint is exported, it includes  some hardcoded configurations such as domain names, memory configurations, and so on, that are not applicable to the Cloudbreak cluster. There is no automatic way to modify an exported blueprint and make it instantly usable in Cloudbreak, the modifications have to be done manually. 
 
@@ -79,22 +78,22 @@ After you provide the blueprint to Cloudbreak, the host groups in the JSON will 
 
 Here are a few [blueprint examples](https://github.com/hortonworks/cloudbreak/tree/master/core/src/main/resources/defaults/blueprints). You can also refer to the default blueprints provided in the Cloudbreak UI.
 
-**Related Links**  
-[Blueprint Examples](https://github.com/hortonworks/cloudbreak/tree/master/core/src/main/resources/defaults/blueprints) (Hortonworks)     
+**Related links**  
+[Blueprint examples](https://github.com/hortonworks/cloudbreak/tree/master/core/src/main/resources/defaults/blueprints) (Hortonworks)     
 [Ambari cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) (External)  
  
 
 [comment]: <> (TO-DO: Maybe we can find some newer examples?)
 
 
-#### Creating a Template Blueprint   
+#### Creating a template blueprint   
 
 Cloudbreak allows you to create special blueprints which include templating: the values of the variables specified in the blueprint will be dynamically generated & replaced in the cluster creation phase, picking up the parameter values that you provided in the Cloudbreak UI or CLI.
 Cloudbreak supports [mustache](https://mustache.github.io/) kind of templating with {{{variable}}} syntax. You cannot use functions in the blueprint file; only variable injection is supported.
 
-##### External Authentication Source (LDAP/AD)
+**External authentication source (LDAP/AD)**
 
-When using [External Authentication Sources](external-ldap.md), the following variables can be specified in your Blueprint for replacement:
+When using [external authentication sources](external-ldap.md), the following variables can be specified in your Blueprint for replacement:
 
 | Variable | Description | Example |
 |---|---|---|
@@ -111,9 +110,9 @@ When using [External Authentication Sources](external-ldap.md), the following va
 | ldap.groupMemberAttribute | Attribute for membershio | member |
 | ldap.domain | Your domain | example.com |
 
-##### External Database (RDBMS)
+**External database (RDBMS)**
 
-When using [External Databases](external-db.md), the following variables can be specified in your Blueprint for replacement:
+When using [external databases](external-db.md), the following variables can be specified in your Blueprint for replacement:
 
 | Variable | Description | Example |
 |---|---|---|
@@ -127,7 +126,8 @@ When using [External Databases](external-db.md), the following variables can be 
 | rds.[type].subprotocol | Parsed from jdbc url | postgres  |
 | rds.[type].databaseEngine | Capital database name | POSTGRES |
 
-#### Upload a Blueprint 
+
+#### Upload a blueprint 
 
 Once you have your blueprint ready, perform these steps.
 

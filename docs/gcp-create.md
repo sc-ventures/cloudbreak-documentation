@@ -1,4 +1,4 @@
-## Creating a Cluster on GCP 
+## Creating a cluster on GCP 
 
 {!docs/common/create-a1.md!}
 | Region | Select the GCP region in which you would like to launch your cluster. For information on available GCP regions, refer to [GCP documentation](https://cloud.google.com/about/locations/). |
@@ -14,18 +14,18 @@
 
 **Related Links**  
 [Blueprints](blueprints.md)   
-[Default Cluster Security Groups](security.md#default-cluster-security-groups)   
+[Default cluster security groups](security.md#default-cluster-security-groups)   
 [CIDR](http://www.ipaddressguide.com/cidr) (External)   
-[Cloud Locations](https://cloud.google.com/about/locations/) (External)  
-[Machine Types](https://cloud.google.com/compute/docs/machine-types) (External)     
+[Cloud locations](https://cloud.google.com/about/locations/) (External)  
+[Machine types](https://cloud.google.com/compute/docs/machine-types) (External)     
 
 
-### Advanced Options
+### Advanced options
 
 {!docs/common/create-adv-1.md!}
 
 
-#### Availability Zone
+#### Availability zone
 
  Choose one of the availability zones within the selected region. 
  
@@ -35,7 +35,7 @@
 {!docs/common/create-adv-3.md!}
 
 
-#### Use Preemptible Instances
+#### Use preemptible instances
 
 Check this option to use Google Cloud preemptive VM instances as your cluster nodes. To learn more, refer to [Google Cloud documentation](https://cloud.google.com/compute/docs/instances/preemptible).    
 
@@ -55,8 +55,8 @@ Note that:
 {!docs/common/create-adv-5.md!}
 
 {!docs/common/create-adv-6.md!}  
-[Preemptible VM Instances](https://cloud.google.com/compute/docs/instances/preemptible) (External)   
-[Storage Options](https://cloud.google.com/compute/docs/disks/) (External)  
+[Preemptible VM instances](https://cloud.google.com/compute/docs/instances/preemptible) (External)   
+[Storage options](https://cloud.google.com/compute/docs/disks/) (External)  
 
 
 

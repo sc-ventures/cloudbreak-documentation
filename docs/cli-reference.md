@@ -1,16 +1,16 @@
-## Cloudbreak CLI Reference  
+## Cloudbreak CLI reference  
 
 This section will help you get started with the Cloudbreak CLI after you have [installed and configured it](cli-install.md).
 
 
-### Command Structure
+### Command structure
 
 The CLI command can contain multiple parts. The first part is a set of global options. The next part is the command. The next part is a set of command options and arguments which could include sub-commands.
 
 <pre>cb [global options] command [command options] [arguments...]</pre>
 
 
-### Command Output
+### Command output
 
 You can control the output from the CLI using the --output argument. The possible output formats include:
 
@@ -34,7 +34,7 @@ Configure CLI:
 * [configure](#configure)  
 
 
-Cloud Provider:
+Cloud provider:
 
 * [cloud availability-zones](#cloud-availability-zones)  
 * [cloud regions](#cloud-regions)       
@@ -84,7 +84,7 @@ Database:
  
 
 
-Image Catalog
+Image catalog
 
 * [imagecatalog create](#imagecatalog-create)     
 * [imagecatalog delete](#imagecatalog-delete) 
@@ -93,7 +93,7 @@ Image Catalog
 * [imagecatalog set-default](#imagecatalog-set-default)            
    
        
-Ldap:
+LDAP:
 
 * [ldap create](#ldap-create)  
 * [ldap delete](#ldap-delete)  
@@ -136,7 +136,7 @@ Adds a new blueprint from a file or from a URL.
 **`from-url`** Creates a blueprint by downloading it from a URL location  
 **`from-file`** Creates a blueprint by reading it from a local file
 
-**Required Options**
+**Required options**
 
 **`from-url`** 
 
@@ -170,7 +170,7 @@ Adds a blueprint from a local file:
 <pre>cb blueprint create from-file --file /Users/test/Documents/blueprints/test.bp --name test2</pre>
 
 
-**Related Links**
+**Related links**
 
 [Blueprints](blueprints.md)
 
@@ -188,7 +188,7 @@ __________________________________
 
 Deletes an existing blueprint.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`** Name of the blueprint 
 
@@ -226,7 +226,7 @@ __________________________________
 
 Describes an existing blueprint.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`** Name of the blueprint 
 
@@ -269,7 +269,7 @@ __________________________________
 
 Lists available blueprints.
 
-**Required Options**
+**Required options**
 
 Nome
 
@@ -336,7 +336,7 @@ __________________________________
 
 Lists all availability zones available in the specified cloud provider region. 
 
-**Required Options**
+**Required options**
 
 **`--credential <value>`**  Name of the credential  
 **`--region <value>`**   Name of the region  
@@ -380,7 +380,7 @@ __________________________________
 
 Lists the available cloud provider regions. 
 
-**Required Options**
+**Required options**
 
 **`--credential <value>`**  Name of the credential  
    
@@ -425,7 +425,7 @@ Lists the available cloud provider volume types.
 **`azure`**   Lists the available azure volume types  
 **`gcp`**     Lists the available gcp volume types  
 
-**Required Options**
+**Required options**
 
 None
    
@@ -473,7 +473,7 @@ __________________________________
  
 Lists the available cloud provider instance types.
 
-**Required Options**
+**Required options**
 
 **`--credential <value>`**  Name of the credential  
 **`--region <value>`**   Name of the region  
@@ -520,7 +520,7 @@ __________________________________
 
 Changes Ambari password.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Cluster name  
 **`--old-password <value>`** Old Ambari password   
@@ -555,7 +555,7 @@ __________________________________
 
 Creates a new cluster based on a JSON template. 
 
-**Required Options**
+**Required options**
 
 **`--cli-input-json <value>`**  User provided file in JSON format  
 
@@ -579,7 +579,7 @@ Creates a cluster called "testcluster" based on a local JSON file called "mytemp
 <pre>cb cluster create --name testcluster --cli-input-json /Users/test/Documents/mytemplate.json</pre>
 
 
-**Related Links**  
+**Related links**  
 [Obtain Cluster JSON Template from the UI](cli-get-started.md#obtain-json-template-from-the-ui)   
 
 
@@ -597,7 +597,7 @@ __________________________________
 
 Deletes an existing cluster. 
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Cluster name
 
@@ -631,7 +631,7 @@ __________________________________
 
 Describes an existing cluster.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Cluster name
 
@@ -707,7 +707,7 @@ Generates a cluster template that you can use to reinstall the cluster if instal
 
 
 
-**Required Options**
+**Required options**
 
 **`--blueprint-name <value>`**  Name of the blueprint 
 
@@ -736,7 +736,7 @@ __________________________________
 
 Lists all clusters which are currently associated with the Cloudbreak instance.
 
-**Required Options**
+**Required options**
 
 None
 
@@ -789,7 +789,7 @@ __________________________________
 
 Repairs a cluster if cluster installation failed.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Cluster name
 
@@ -821,7 +821,7 @@ __________________________________
 
 Scales a cluster by adding or removing nodes.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Name of the cluster  
 **`--group-name <value>`**  Name of the group to scale  
@@ -852,7 +852,7 @@ __________________________________
 
 Starts a cluster which has previously been stopped.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Cluster name
 
@@ -881,7 +881,7 @@ __________________________________
 
 Stops a cluster.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Cluster name
 
@@ -911,7 +911,7 @@ __________________________________
 
 Synchronizes a cluster with the cloud provider.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Cluster name
 
@@ -942,7 +942,7 @@ __________________________________
 
 Configures the Cloudbreak server address and credentials used to communicate with this server.
 
-**Required Options**
+**Required options**
 
 **`--server <value>`**  Server address [$CB_SERVER_ADDRESS]  
 **`--username <value>`**	 User name (e-mail address) [$CB_USER_NAME]  
@@ -965,7 +965,7 @@ This example configures the server address with username but without a password:
 <pre>cb configure --server https://ec2-11-111-111-11.compute-1.amazonaws.com --username admin@hortonworks.com</pre>
 
 
-**Related Links**
+**Related links**
 
 [Configure CLI](cli-install.md#configure-the-cli)
 
@@ -989,7 +989,7 @@ Creates a new Cloudbreak credential.
 **`openstack keystone-v2`** Creates a new OpenStack credential  
 **`openstack keystone-v3`** Creates a new OpenStack credential 
 
-**Required Options**
+**Required options**
 
 **`aws role-based`** 
 
@@ -1080,7 +1080,7 @@ Creates a role-based credential on OpenStack with Keystone-v2:
 <pre>cb credential create openstack keystone-v2 --name my-credential5 --tenant-user test --tenant-password MySecurePass123 --tenant-name test --endpoint http://openstack.test.organization.com:5000/v2.0</pre>
 
 
-**Related Links**  
+**Related links**  
 
 [Create Credential on AWS](aws-launch.md#create-credential)  
 [Create Credential on Azure](azure-launch.md#create-credential)  
@@ -1099,7 +1099,7 @@ __________________________________
 
 Deletes an existing Cloudbreak credential.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Name of the credential 
 
@@ -1127,7 +1127,7 @@ __________________________________
 
 Describes an existing credential.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Name of the credential 
 
@@ -1165,7 +1165,7 @@ __________________________________
 
 Lists existing Cloudbreak credentials.
 
-**Required Options**
+**Required options**
 
 None
 
@@ -1230,7 +1230,7 @@ Modifies an existing Cloudbreak credential.
 **`openstack keystone-v2`** Modifies an OpenStack v2 credential  
 **`openstack keystone-v3`** Modifies an  OpenStack v3 credential 
 
-**Required Options**
+**Required options**
 
 **`aws role-based`** 
 
@@ -1335,7 +1335,7 @@ __________________________________
 Registers an existing external database with Cloudbreak.
  
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**   Name for the database     
 **`--db-username <value>`**  Username for the JDBC connection  
@@ -1385,7 +1385,7 @@ __________________________________
 
 Unregisters a previously registered database with Cloudbreak. It does not delete the database instance. 
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Name for the database     
 
@@ -1422,7 +1422,7 @@ __________________________________
 
 Lists all available database registrations.
 
-**Required Options**
+**Required options**
 
 None
 
@@ -1467,7 +1467,7 @@ __________________________________
 Registers a new custom image catalog based on the URL provided.  
 
 
-**Required Options**  
+**Required options**  
 
 **`--name <value>`**  Name for the image catalog  
 **`--url <value>`**   URL location of the image catalog JSON file  
@@ -1488,7 +1488,7 @@ Registers an image catalog called "mycustomcatalog" which is available at https:
 
 <pre>cb imagecatalog create --name mycustomcatalog --url https://example.com/myimagecatalog.json</pre> 
 
-**Related Links**  
+**Related links**  
 
 [Custom Images](images.md)   
 
@@ -1505,7 +1505,7 @@ __________________________________
 
 Deletes a previously registered custom image catalog. It does not delete any cloud provider resources that you created as a prerequisite for creating the Cloudbreak credential.    
 
-**Required Options**  
+**Required options**  
 
 **`--name <value>`**  Name for the image catalog   
 
@@ -1524,7 +1524,7 @@ Deletes an image catalog called "mycustomcatalog":
 
 <pre>cb imagecatalog delete --name mycustomcatalog</pre> 
 
-**Related Links**  
+**Related links**  
 
 [Custom Images](images.md)  
 
@@ -1551,7 +1551,7 @@ Lists images from the specified image catalog available for the specified cloud 
 **`openstack`**   Lists available openstack images    
 
 
-**Required Options**
+**Required options**
 
 **`--imagecatalog <value>`**  Name of the imagecatalog     
 
@@ -1586,7 +1586,7 @@ Returns date, description, Ambari version, and image ID for all AWS images from 
 ]</pre>
 
 
-**Related Links**  
+**Related links**  
 
 [Custom Images](images.md)  
 
@@ -1606,7 +1606,7 @@ __________________________________
 
 Lists default and custom image catalogs registered with Cloudbreak instance.   
 
-**Required Options**  
+**Required options**  
 
 None  
 
@@ -1638,7 +1638,7 @@ Lists existing image catalogs:
 ]</pre>
 
 
-**Related Links**  
+**Related links**  
 
 [Custom Images](images.md)  
 
@@ -1656,7 +1656,7 @@ __________________________________
 
 Sets the specified image catalog as default.  
 
-**Required Options**   
+**Required options**   
 
 **`--name <value>`**  Name for the image catalog    
 
@@ -1675,7 +1675,7 @@ Sets "mycustomcatalog" as default:
 
 <pre>imagecatalog set-default --name mycustomcatalog</pre>
 
-**Related Links**  
+**Related links**  
 
 [Custom Images](images.md)  
 
@@ -1697,7 +1697,7 @@ __________________________________
 Registers an existing LDAP with Cloudbreak.
  
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Name for the LDAP       
 **`--ldap-server <value>`**  Address of the LDAP server (e.g. ldap://10.0.0.1:384)  
@@ -1740,7 +1740,7 @@ __________________________________
 
 Deletes selected LDAP registration from Cloudbreak. It does not delete the LDAP. 
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Name for the proxy     
 
@@ -1777,7 +1777,7 @@ __________________________________
 
 Lists all available LDAPs.
 
-**Required Options**
+**Required options**
 
 None
 
@@ -1824,7 +1824,7 @@ __________________________________
 Registers an existing proxy with Cloudbreak.
  
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Name for the proxy     
 **`--proxy-host <value>`**  Hostname or IP address of the proxy  
@@ -1859,7 +1859,7 @@ __________________________________
 
 Unregisters a previously registered proxy with Cloudbreak. It does not delete the proxy. 
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Name for the proxy     
 
@@ -1896,7 +1896,7 @@ __________________________________
 
 Lists all proxies that were previously registered with Cloudbreak.
 
-**Required Options**
+**Required options**
 
 None
 
@@ -1943,7 +1943,7 @@ Adds a new recipe from a file or from a URL.
 **`from-url`**  Creates a recipe by downloading it from a URL location  
 **`from-file`**  Creates a recipe by reading it from a local file  
 
-**Required Options**
+**Required options**
 
 **`from-url`**  
 
@@ -1979,7 +1979,7 @@ Adds a new recipe called "test2" from a file:
 
 <pre>cb recipe create from-url --name "test2" --execution-type post-ambari-start --file /Users/test/Documents/test.sh</pre>
 
-**Related Links**
+**Related links**
 
 [Recipes](recipes.md)
 
@@ -1995,7 +1995,7 @@ __________________________________
 
 Deletes an existing recipe.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Name for the recipe  
 
@@ -2027,7 +2027,7 @@ __________________________________
 
 Describes an existing recipe.
 
-**Required Options**
+**Required options**
 
 **`--name <value>`**  Name for the recipe    
 
@@ -2077,7 +2077,7 @@ __________________________________
 
 Lists all available recipes.
 
-**Required Options**
+**Required options**
 
 None
 

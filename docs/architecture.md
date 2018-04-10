@@ -16,7 +16,7 @@
 | **Periscope** | This is Cloudbreak's autoscaling application, which is responsible for automatically increasing or decreasing the capacity of the cluster when your pre-defined conditions are met. |
  
 
-### Cloudbreak Application Architecture 
+### Cloudbreak application architecture 
 
 The Cloudbreak application is a web application which simplifies cluster provisioning in the cloud. Based on your input, Cloudbreak provisions all required cloud infrastructure and then provisions a cluster on your behalf within your cloud provider account.   
 
@@ -31,25 +31,25 @@ Cloudbreak application is built on the foundation of cloud provider APIs and Apa
 * Cloudbreak uses Apache Ambari and **Ambari blueprints** to provision, manage, and monitor clusters. Ambari blueprints are a declarative definition of a cluster. With a blueprint, you can specify stack, component layout, and configurations to materialize a cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard.     
   
   
-### Core Concepts  
+### Core concepts  
 
 Before using Cloudbreak, you should familiarize yourself with the following concepts.     
 
 
-#### Cloudbreak Credential
+#### Cloudbreak credential
 
 After launching Cloudbreak, you must create a Cloudbreak credential for each cloud provider on which you would like to provision clusters. Only after you have completed that step you can start creating clusters. 
 
-Cloudbreak credential allows Cloudbreak to authenticate with the cloud provider and create resources on your behalf. The authentication process varies depending on the cloud provider, but is typically done via assigning a specific IAM role to Cloudbreak which allows Cloudbreak to perform certain actions within your cloud provider account. To learn more, refer to [Identity Management](security.md#identity-management).  
+Cloudbreak credential allows Cloudbreak to authenticate with the cloud provider and create resources on your behalf. The authentication process varies depending on the cloud provider, but is typically done via assigning a specific IAM role to Cloudbreak which allows Cloudbreak to perform certain actions within your cloud provider account. To learn more, refer to [Identity management](security.md#identity-management).  
 
 
 <a href="../images/cb_arch-cred.png" target="_blank" title="click to enlarge"><img src="../images/cb_arch-cred.png" width="500" title="How Cb uses Cloudbreak Credential"></a> 
 
-**Related Links**  
-[Identity Management](security.md#identity-management)  
+**Related links**  
+[Identity management](security.md#identity-management)  
 
 
-#### Ambari Blueprints
+#### Ambari blueprints
 
 Ambari blueprints are a declarative definition of a cluster. A blueprint allows you to specify stack, component layout, and configurations to materialize a cluster instance via Ambari REST API, without having to use the Ambari cluster install wizard.  
 
@@ -59,7 +59,7 @@ Cloudbreak includes a few default blueprints and allows you to upload your own b
 
 <a href="../images/cb_arch-blue.png" target="_blank" title="click to enlarge"><img src="../images/cb_arch-blue.png" width="500" title="How Cb uses Ambari blueprints"></a> 
 
-**Related Links**  
+**Related links**  
 [Blueprints](security.md#identity-management)  
 [Apache documentation](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) (External)  
 
@@ -77,7 +77,7 @@ Available recipe execution times are:
 
 You can upload your recipes to Cloudbreak via the UI or CLI. Then, when creating a cluster, you can optionally attach one or more "recipes" and they will be executed on a specific host group at a specified time. 
 
-**Related Links**  
+**Related links**  
 [Recipes](recipes.md) 
 
    

@@ -1,12 +1,12 @@
-#### Choose Image Catalog
+#### Choose image catalog
 
-By default, **Choose Image Catalog** is set to the default image catalog that is provided with Cloudbreak. If you would like to use a different image catalog, you must first create and register it. For complete instructions, refer to [Custom Images](images.md).
+By default, **Choose Image Catalog** is set to the default image catalog that is provided with Cloudbreak. If you would like to use a different image catalog, you must first create and register it. For complete instructions, refer to [Custom images](images.md).
 
 **Related Links**     
-[Custom Images](images.md)  
+[Custom images](images.md)  
 
 
-#### Prewarmed and Base Images 
+#### Prewarmed and base images 
 
 Cloudbreak supports the following types of images for launching clusters:
 
@@ -21,13 +21,13 @@ Ambari and HDP/HDF packages installed. You can optionally select the **base imag
 * Use an Ambari and HDP/HDF versions different than what the prewarmed image includes and/or  
 * Choose a previously created custom base image
 
-**Choose Image**  
+**Choose image**  
 
-If under [Choose Image Catalog](#choose-image-catalog), you selected a custom image catalog, under **Choose Image** you can select an image from that catalog. For complete instructions, refer to [Custom Images](images.md). 
+If under [Choose image catalog](#choose-image-catalog), you selected a custom image catalog, under **Choose Image** you can select an image from that catalog. For complete instructions, refer to [Custom images](images.md). 
 
 If you are trying to customize Ambari and HDP/HDF versions, you can ignore the **Choose Image** option; in this case default base image is used.
 
-**Ambari Repository Specification**
+**Ambari repository specification**
 
 If you would like to use a custom Ambari version, provide the following information: 
 
@@ -41,7 +41,7 @@ If you would like to use a custom Ambari version, provide the following informat
 | Repo Url | Provide a URL to the Ambari version repo that you would like to use. | http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.6.1.3 |
 | Repo Gpg Key Url | Provide a URL to the repo GPG key. Each stable RPM package that is published by CentOS Project is signed with a GPG signature. By default, yum and the graphical update tools will verify these signatures and refuse to install any packages that are not signed, or have an incorrect signature. | http://public-repo-1.hortonworks.com/ambari/centos6/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins | 
 
-**HDP or HDF Repository Specification**
+**HDP or HDF repository specification**
 
 If you would like to use a custom HDP or HDF version, provide the following information: 
 
@@ -60,10 +60,10 @@ If you would like to use a custom HDP or HDF version, provide the following info
 
 
 **Related Links**      
-[Custom Images](images.md)      
+[Custom images](images.md)      
 
 
-#### Enable Lifetime Management 
+#### Enable lifetime management 
 
 Check this option if you would like your cluster to be automatically terminated after a specific amount of time (defined as "Time to Live" in minutes). 
 
@@ -72,10 +72,10 @@ Check this option if you would like your cluster to be automatically terminated 
 
 #### Tags
 
-You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. refer to [Resource Tagging](tags.md).
+You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. refer to [Resource tagging](tags.md).
 
 **Related Links**      
-[Resource Tagging](tags.md) 
+[Resource tagging](tags.md) 
    
    
 

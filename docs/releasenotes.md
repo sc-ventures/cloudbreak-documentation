@@ -1,4 +1,4 @@
-## Release Notes
+## Release notes
 
 ### 2.6.0 TP
 
@@ -6,7 +6,7 @@ Cloudbreak 2.6.0 is a technical preview release.
 
 ____________________________
 
-#### New Features
+#### New features
 ____________________________
 
 
@@ -16,14 +16,14 @@ ____________________________
 
 ____________________________
 
-#### Behavioral Changes
+#### Behavioral changes
 ____________________________
 
 
 
 ____________________________
  
-#### Image Catalog Updates
+#### Image catalog updates
 ____________________________
  
 ##### **April 3, 2018** 
@@ -47,13 +47,13 @@ Default HDF version 3.1.1.0-35
 
 ____________________________
 
-#### Fixed Issues
+#### Fixed issues
 ____________________________
 
 
 Fixed in 2.6.0 TP: 
 
-| Issue | Issue Description | Category | 
+| Issue | Issue description | Category | 
 |---|---|
 
 Fixed in 2.5.0 TP: 
@@ -63,7 +63,7 @@ Fixed in 2.5.0 TP:
 [Comment]: <> (BUG-97207 is internal? YARN?)
 [Comment]: <> (Not included in 2.5.0 TP, only 2.4.1: BUG-99635 After deleting a default credential and creating a new credential, credential is missing from the create cluster wizard.)
 
-| Issue | Issue Description | Category | 
+| Issue | Issue description | Category | 
 |---|---|
 | BUG-99168 | All clusters created on Google Cloud Platform fail. | Stability | 
 | BUG-99400 | Time-based cluster autoscaling does not work. | Stability |
@@ -91,10 +91,10 @@ Fixed in 2.5.0 TP:
 
 ____________________________
 
-#### Known Issues
+#### Known issues
 ____________________________
 
-**Known Issues: Cloudbreak**
+**Known issues: Cloudbreak**
 ____________________________
 
 
@@ -200,7 +200,7 @@ Refresh the page if you think that the history displayed may be incorrect.
 
 ____________________________
 
-**Known Issues: Ambari 2.6.1.3 and HDP 2.6.4.0**
+**Known issues: Ambari 2.6.1.3 and HDP 2.6.4.0**
 
 > The known issues described here were discovered when testing Cloudbreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak.
 
@@ -277,7 +277,7 @@ Ambari dashboard shows that nodes are not sending heartbeats.
 
 ____________________________
 
-**Known Issues: HDF 3.1.1**
+**Known issues: HDF 3.1.1**
 
 The known issues described here were discovered when testing Cloudbreak with Ambari 2.6.1.3 and HDF 3.1.1, which are used by default in Cloudbreak.
 

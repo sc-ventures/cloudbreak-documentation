@@ -1,8 +1,8 @@
 ## Troubleshooting Cloudbreak on Azure 
 
-### Cloudbreak Deployment Errors 
+### Cloudbreak deployment errors 
 
-#### Invalid Resource Reference
+#### Invalid resource reference
 
 Example error message:  
 *<span class="cfn-output3">Resource /subscriptions/.../resourceGroups//providers/Microsoft.Network/virtualNetworks/cbdeployerVnet/  
@@ -14,20 +14,20 @@ Please make sure that the referenced resource exists, and that both resources ar
 
 **Solution**: When launching Cloudbreak, under "Vnet RG Name" provide the name of the resource group in which the selected VNet is located. If using a new VNet, enter the same resource group name as in "Resource group". 
 
-### Credential Prerequisite Errors
+### Credential prerequisite errors
 
-#### You Don't Have Enough Permissions to Assign Roles 
+#### You don't have enough permissions to assign roles 
 
 This error during the interactive credential creation typically means that you do not have suitable permissions to create an interactive credential. Using an interactive credential currently requires an "Owner" role or its equivalent so if you are using a corporate account you are unlikely to have it. Try using the app-based credential. 
 
-#### Problems with IAM Permissions Assignment 
+#### Problems with IAM permissions assignment 
 
 After registering an Azure application you may have to ask your Azure administrator to perform the step of assigning the "Contributor" role to it:
 
 <a href="../images/cb_azure-appbased03.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-appbased03.png" width="650" title="Azure Portal"></a> 
 
 
-### Credential Creation Errors
+### Credential creation errors
 
 #### Role already exists
 

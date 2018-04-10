@@ -1,4 +1,4 @@
-## Register a Proxy   
+## Register a proxy   
 
 Cloudbreak allows you to save your existing proxy configuration information so that you can provide the proxy information to the clusters that you create with Cloudbreak. The steps are:       
 

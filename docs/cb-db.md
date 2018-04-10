@@ -1,9 +1,9 @@
-## Configuring External Cloudbreak Database
+## Configuring external Cloudbreak database
 
 By default, Cloudbreak uses an embedded PostgreSQL database to persist data related to Cloudbreak
 configuration, setup and so on. For a production Cloudbreak deployment, we suggest that you configure an external database. 
 
-**External Database Support Matrix**
+### External database support matrix
 
 An embedded PostgreSQL 9.6.1 database is used by Cloudbreak by default. If you would like to
 use an external database for Cloudbreak, you may use the following supported database types and versions: 
@@ -17,7 +17,7 @@ use an external database for Cloudbreak, you may use the following supported dat
 | External SQL Server | Not supported |
 
 
-### Configure External Cloudbreak Database
+### Configure external Cloudbreak database
 
 The following section describes how to use Cloudbreak with an existing external database, other than
 the embedded PostgreSQL database instance that Cloudbreak uses by default. To configure an external PostgreSQL database for Cloudbreak, perform these steps. 

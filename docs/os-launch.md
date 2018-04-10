@@ -2,11 +2,11 @@
 
 Before launching Cloudbreak on OpenStack, review and meet the prerequisites. Next, import Cloudbreak image, launch a VM, SSH to the VM, and start Cloudbreak. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential.
 
-### Meet Minimum System Requirements
+### Meet minimum system requirements
 
 Before launching Cloudbreak on your OpenStack, make sure that your OpenStack deployment fulfills the following requirements.
 
-#### Supported Linux Distributions
+#### Supported Linux distributions
 
 The following versions of the [Red Hat Distribution of OpenStack](https://www.rdoproject.org/) (RDO) are supported:
 
@@ -16,7 +16,7 @@ The following versions of the [Red Hat Distribution of OpenStack](https://www.rd
 * Mitaka
 
 
-#### Standard Modules
+#### Standard modules
 
 Cloudbreak requires that the following standard modules are installed and configured on OpenStack:
 
@@ -27,19 +27,19 @@ Cloudbreak requires that the following standard modules are installed and config
 * Cinder (Optional)
 * Heat (Optional but highly recommended, since provisioning through native API calls will be deprecated in the future)
 
-**Related Links**
-[Red Hat Distribution of OpenStack](https://www.rdoproject.org/) (External)
+**Related links**
+[Red Hat distribution of OpenStack](https://www.rdoproject.org/) (External)
 
 
-### Meet the Prerequisites
+### Meet the prerequisites
 
 Before launching Cloudbreak on OpenStack, you must meet the following prerequisites.
 
-#### SSH Key Pair
+#### SSH key pair
 
 [Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or use an existing SSH key pair to your OpenStack account. You will be required to select it when launching the VM.
 
-#### Security Group
+#### Security group
 
 In order to launch Cloudbreak, you must have an existing security group with the following ports open: 22 (for access via SSH), 80 (for access via HTTP), and 443 (for access via HTTPS).
 
@@ -49,11 +49,13 @@ For information about OpenStack security groups, refer to the [OpenStack Adminis
 [OpenStack Administrator Guide](https://docs.openstack.org/ops-guide/index.html) (External)
 
 
-#### Import Images to OpenStack
+#### Import images to OpenStack
 
-An OpenStack administrator must perform these steps to add the Cloudbreak deployer and HDP base and prewarmed images to your OpenStack deployment.
+An OpenStack administrator must perform these steps to add the Cloudbreak deployer image to your OpenStack deployment. 
 
-##### Import Cloudbreak Deployer Image
+> Importing prewarmed and base HDP and HDF images is no longer required.
+
+##### Import Cloudbreak deployer image
 
 Import Cloudbreak deployer image using the following steps.
 
@@ -79,7 +81,7 @@ export OS_TENANT_NAME=your_os_tenant_name</small></pre>
 After performing the import, you should be able to see the Cloudbreak deployer image among your other OpenStack images.
 
 
-##### Import HDP Prewarmed Image
+##### Import HDP prewarmed image
 
 These steps are no longer required, because if these images are not imported manually, Cloudbreak will import them once you attempt to create an HDP cluster. If you would like to import HDP prewarmed images manually (instead of having them imported), you can do this by using the following steps.
 
@@ -104,12 +106,12 @@ export OS_TENANT_NAME=your_os_tenant_name</small></pre>
 After performing the import, you should be able to see the Cloudbreak image among your OpenStack images.
 
 
-##### Import HDF Prewarmed Image
+##### Import HDF prewarmed image
 
 No prewarmed image is currently available for HDF. 
 
 
-##### Import HDP/HDF Base Image
+##### Import HDP/HDF base image
 
 These steps are no longer required, because if these images are not imported manually, Cloudbreak will import them once you attempt to create an HDP or HDF cluster. If you would like to import HDP/HDF base images manually (instead of having them imported), you can do this by using the following steps.
 
@@ -157,7 +159,7 @@ On Mac OS X, you can SSH to the VM by running the following from the Terminal ap
 
 On Windows, you can use [PuTTy](http://www.putty.org/).
 
-### Initialize Your Profile
+### Initialize the Profile
 
 After accessing the VM via SSH, you must initialize your Profile.
 
@@ -186,12 +188,12 @@ export PUBLIC_IP=34.212.141.253</pre>
     > You will need to provide the email and password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.
 
 
-### Perform Optional Configurations
+### Perform optional configurations
 
 > These configurations are optional.
 
 
-#### Configuring a Self-Signed Certificate
+#### Configuring a self-signed certificate
 
 If your OpenStack is secured with a self-signed certificate, you need to import that certificate into Cloudbreak, or else Cloudbreak won't be able to communicate with your OpenStack.
 
@@ -207,7 +209,7 @@ Cloudbreak will automatically pick up the certificate and import it into its tru
 
 
 
-### Launch Cloudbreak Deployer
+### Start Cloudbreak deployer
 
 Launch Cloudbreak deployer using the following steps.
 
@@ -236,7 +238,7 @@ Launch Cloudbreak deployer using the following steps.
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
 
 
-### Access Cloudbreak UI
+### Access Cloudbreak web UI
 
 Log in to the Cloudbreak UI using the following steps.
 
@@ -262,7 +264,7 @@ Log in to the Cloudbreak UI using the following steps.
     <a href="../images/cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui1.png" width="650" title="Cloudbreak web UI"></a>
 
 
-### Create Cloudbreak Credential
+### Create Cloudbreak credential
 
 Cloudbreak works by connecting your OpenStack account through this credential, and then uses it to create resources on your behalf. Before you can start provisioning cluster using Cloudbreak, you must create a Cloudbreak credential.
 

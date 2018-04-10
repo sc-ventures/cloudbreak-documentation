@@ -1,10 +1,10 @@
-## Accessing Data on Azure 
+## Accessing data on Azure 
 
 Hortonworks Data Platform (HDP) supports reading and writing both block blobs and page blobs
 from/to *Windows Azure Storage Blob (WASB)* object store, as well as reading and writing files stored in an
 *Azure Data Lake Storage (ADLS)* account. 
 
-### Accessing Data in ADLS from HDP 
+### Accessing data in ADLS from HDP 
 
 [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/en-in/services/data-lake-store/) is an enterprise-wide hyper-scale repository for big data analytic workloads.
 
@@ -12,11 +12,11 @@ from/to *Windows Azure Storage Blob (WASB)* object store, as well as reading and
 
 If you want to use ADLS to store your data, you must enable Azure subscription for Data Lake Store, and then create an Azure Data Lake Store [storage account](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal).
 
-#### Configuring Access to ADLS 
+#### Configure access to ADLS 
 
-ADLS is not supported as a default file system, but access to data in ADLS via the adl connector. To configure access to ADLS from a cluster managed via Cloudbreak use the steps described in [How to Configure Authentication with ADLS](https://community.hortonworks.com/articles/105994/how-to-configure-authentication-with-adls.html).
+ADLS is not supported as a default file system, but access to data in ADLS via the adl connector. To configure access to ADLS from a cluster managed via Cloudbreak use the steps described in [How to Configure authentication with ADLS](https://community.hortonworks.com/articles/105994/how-to-configure-authentication-with-adls.html).
 
-#### Testing Access to ADLS
+#### Test access to ADLS
 
 To tests access to ADLS, SSH to a cluster node and run a few hadoop fs shell commands against your existing ADLS account.
 
@@ -41,17 +41,17 @@ To use DistCp against ADLS, use the following syntax:
 
 For more information about configuring the ADLS connector and working with data stored in ADLS, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) documentation.
 
-**Related Links**   
+**Related links**   
 [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) (Hortonworks) 
 [How to Configure Authentication with ADLS](https://community.hortonworks.com/articles/105994/how-to-configure-authentication-with-adls.html) (Hortonworks)  
 [Azure Data Lake Store](https://azure.microsoft.com/en-in/services/data-lake-store/) (External)     
-[Create a Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account#create-a-storage-account) (External)     
+[Create a storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account#create-a-storage-account) (External)     
 [Get started with Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal) (External)  
 
 
 
 
-### Accessing Data in WASB from HDP 
+### Accessing data in WASB from HDP 
 
 Windows Azure Storage Blob (WASB) is an object store service available on Azure.
 
@@ -59,7 +59,7 @@ Windows Azure Storage Blob (WASB) is an object store service available on Azure.
 
 If you want to use Windows Azure Storage Blob to store your data, you must enable Azure subscription for Blob Storage, and then create a [storage account](https://docs.microsoft.com/en-us/azure/storage/storage-create-storage-account#create-a-storage-account).  
 
-#### Configuring Access to WASB 
+#### Configure access to WASB 
 
 In order to access data stored in your Azure blob storage account, you must configure your storage account access key in `core-site.xml`. The configuration property that you must use is `fs.azure.account.key.<account name>.blob.core.windows.net` and the value is the access key. 
 
@@ -75,7 +75,7 @@ For example the following property should be used for a storage account called "
 You can obtain your access key from the Access keys in your storage account settings.
 
 
-#### Testing Access to WASB
+#### Test access to WASB
 
 To tests access to WASB, SSH to a cluster node and run a few hadoop fs shell commands against your existing WASB account.
 
@@ -107,7 +107,7 @@ test file content</pre>
 
 For more information about configuring the WASB connector and working with data stored in WASB, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) documentation.
 
-**Related Links**   
+**Related links**   
 [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) (Hortonworks)   
-[Create a Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account#create-a-storage-account) (External)   
+[Create a storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account#create-a-storage-account) (External)   
 

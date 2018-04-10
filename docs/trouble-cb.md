@@ -10,14 +10,14 @@ The `PUBLIC_IP` property must be set in the cbd Profile file or else you won’t
 If you are migrating your instance, make sure that after the start the IP remains valid. If you need to edit the `PUBLIC_IP` property in Profile, make sure to restart Cloudbreak using `cbd restart`.
 
 
-### Cbd Cannot Get VM's Public IP 
+### Cbd cannot get VM's public IP 
 
 By default the `cbd` tool tries to get the VM's public IP to bind Cloudbreak UI to it. But if `cbd` cannot get the IP address during the initialization, you must set it manually. Check your `Profile` and if `PUBLIC_IP` is not set, add the `PUBLIC_IP` variable and set it to the public IP of the VM. For example: 
 
 <pre>export PUBLIC_IP=192.134.23.10</pre>
 
 
-### Permission or Connection Problems 
+### Permission or connection problems 
 
 [comment]: <> (Not sure what this refers to. It came from the Install on Your Own VM docs.)
 

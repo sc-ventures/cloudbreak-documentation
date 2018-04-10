@@ -1,4 +1,4 @@
-## Custom Images
+## Using custom images
 
 Default images are available for each supported cloud provider and region. The following table lists the default base images available:
 
@@ -29,19 +29,19 @@ Only <strong>base images</strong> can be created and registered as custom images
 
 
 
-### Build Custom Images
+### Build custom images
 
 Refer to [Custom Images for Cloudbreak](https://github.com/hortonworks/cloudbreak-images) for information on how to build custom images.
 
 This repository includes instructions and scripts to help you build custom images. Once you have the images, refer to the documentation below for information on how to create an image catalog and register it with Cloudbreak.
 
 
-### Prepare the Image Catalog
+### Prepare the image catalog
 
 Once you've built the custom images, prepare your custom image catalog JSON file. Once your image catalog JSON file is ready, save it in a location accessible via HTTP/HTTPS.
 
 
-#### Structure of the Image Catalog JSON File
+#### Structure of the image catalog JSON file
 
 The image catalog JSON file includes the following two high-level sections:
 
@@ -73,7 +73,7 @@ The `versions` section includes a single "cloudbreak" entry, which maps the uuid
 | versions | The Cloudbreak version(s) for which you would like to use the images. |
 
 
-#### Example Image Catalog JSON File
+#### Example image catalog JSON file
 
 Here is an example image catalog JSON file that includes two sets of custom base images:
 
@@ -179,7 +179,7 @@ You can also download it from [here](https://docs.hortonworks.com/HDPDocuments/C
 </small></pre>
 
 
-### Register Image Catalog
+### Register image catalog
 
 Now that you have created your image catalog JSON file, register it with your Cloudbreak instance. You can do this via Cloudbreak UI, CLI, or be editing the Profile file. 
 
@@ -190,7 +190,7 @@ Now that you have created your image catalog JSON file, register it with your Cl
 </p>
 </div>
 
-#### Register Image Catalog in the UI
+#### Register image catalog in the UI
 
 Use these steps to register your custom image catalog in the Cloudbreak UI.
 
@@ -203,11 +203,11 @@ Use these steps to register your custom image catalog in the Cloudbreak UI.
 
 After performing these steps, the image catalog will be available and automatically selected as the default entry in the image catalog drop-down list in the create cluster wizard.
 
-#### Register Image Catalog in the CLI
+#### Register image catalog in the CLI
 
 To register your custom image catalog using the CLI, use the `cb imagecatalog create` command. Refer to [CLI documentation](cli-reference.md#imagecatalog-create).
 
-#### Register Image Catalog in the Profile 
+#### Register image catalog in the Profile 
 
 As an alternative to using the UI or CLI, it is possible to place the catalog file to the Cloudbreak deployer`s etc directory and then set CB_IMAGE_CATALOG_URL variable in your Profile to IMAGE_CATALOG_FILE_NAME.JSON. 
 
@@ -220,11 +220,11 @@ As an alternative to using the UI or CLI, it is possible to place the catalog fi
 5. Restart Cloudbreak by using `cbd restart`.  
 
 
-### Select a Custom Image When Creating a Cluster
+### Select a custom image when creating a cluster
 
 Once you have registered your image catalog, you can use your custom image(s) when creating a cluster.
 
-#### Select a Custom Image in Cloudbreak UI
+#### Select a custom image in Cloudbreak web UI
 
 Perform these steps in the advanced **General Configuration** section of the create wizard wizard.
 
@@ -239,7 +239,7 @@ Perform these steps in the advanced **General Configuration** section of the cre
     <a href="../images/cb_cb-images.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-images.png" width="650" title="Cloudbreak UI"></a>
 
 
-#### Select a Custom Image in CLI
+#### Select a custom image in the CLI
 
 To use the custom image when creating a cluster via CLI, perform these steps.  
 
@@ -287,5 +287,5 @@ To use the custom image when creating a cluster via CLI, perform these steps.
   "imageId": "3c7598a4-ebd6-4a02-5638-882f5c7f7add"
 }</pre>
 
-**Related Links**  
-[CLI Reference](cli-reference.md)  
+**Related links**  
+[CLI reference](cli-reference.md)  

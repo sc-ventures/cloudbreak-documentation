@@ -1,5 +1,5 @@
 
-## Get Help
+## Getting Help
 
 If you need help with Cloudbreak, you have two options:
 
@@ -14,9 +14,9 @@ If you need help with Cloudbreak, you have two options:
 You can register for optional free community support at [Hortonworks Community Connection](https://community.hortonworks.com/answers/index.html) where you can browse articles and previously answered questions, and ask questions of your own. When posting questions related to Cloudbreak, make sure to use the "Cloudbreak" tag.
 
 
-### Flex Subscription
+### Flex subscription
 
-You can optionally use your existing Hortonworks [Flex subscription(s)](https://hortonworks.com/services/support/enterprise/) to cover the Cloudbreak node and clusters managed by it. 
+You can optionally use your existing Hortonworks [flex support subscription(s)](https://hortonworks.com/services/support/enterprise/) to cover the Cloudbreak node and clusters managed by it. 
 
 > You must have an existing SmartSense ID and a Flex subscription. For general information about the Hortonworks Flex Support Subscription, visit the Hortonworks Support page at [https://hortonworks.com/services/support/enterprise/](https://hortonworks.com/services/support/enterprise/).
 
@@ -45,7 +45,7 @@ You can do this in one of the two ways:
 * After you've already initiated Cloudbreak deployer. If you choose this option, you must restart Cloudbreak using `cbd restart`.
 
 
-#### Register and Manage Flex Subscriptions
+#### Register and manage flex subscriptions
 
 Once you log in to the Cloudbreak web UI, you can manage your Flex subscriptions from the **Settings** page > **Flex Subscriptions**:
 
@@ -62,19 +62,19 @@ You can:
 
 
 
-#### Use Flex Subscription for a Cluster 
+#### Use flex subscription for a cluster 
 
 When creating a cluster, on the **General Configuration** page you can select the Flex subscription that you want to use for the cluster:
 
 <a href="../images/cb_cb-flex-cluster.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-flex-cluster.png" width="650" title="Autoscaling in Cloudbreak UI"></a>  
 
 
-#### Use Flex Subscription for Cloudbreak Node
+#### Use flex subscription for Cloudbreak node
 
 To use a Flex subscription for Cloudbreak node, on the **Settings** page, in the **Flex Subscriptions** section, check the "Use for controller option" for the selected Flex ID.  
 
 
-### More Cloudbreak Resources 
+### More Cloudbreak resources 
 
 Check out the following documentation to learn more:
 

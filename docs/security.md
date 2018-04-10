@@ -1,16 +1,16 @@
-## Security Overview
+## Security overview
 
 Cloudbreak utilizes cloud provider security resources such as virtual networks, security groups, and identity and access management:
 
 1. **Network isolation** is achieved via user-configured virtual networks and subnets.  
-    Read more about [Virtual Networks](#virtual-networks).  
+    Read more about [Virtual networks](#virtual-networks).  
 2. **Network security** is achieved via out-of-the-box security group settings.  
-    Read more about [Network Security](#network-security).   
+    Read more about [Network security](#network-security).   
 3. **Controlled use of cloud resources** using IAM roles (AWS, GCP) or Active Directory (in case of Azure). 
-    Read more about [Identity Management](#identity-management).    
+    Read more about [Identity management](#identity-management).    
  
 
-### Virtual Networks
+### Virtual networks
 
 Cloud providers use virtual networks which resemble traditional networks. Depending on the options that you selected during deployment, your Cloudbreak instance and clusters are launched into new or existing cloud provider networking infrastructure (virtual networks and subnets). For more information about virtual networks, refer to the cloud-provider documentation:
   
@@ -22,13 +22,13 @@ Cloud providers use virtual networks which resemble traditional networks. Depend
 | OpenStack | [Network](https://docs.openstack.org/mitaka/networking-guide/intro-os-networking.html) |
 
 
-### Network Security 
+### Network security 
 
 Security groups are set up to control network traffic to the instances in the system.
 
 Cloudbreak uses public IP addresses when communicating with cluster nodes. On AWS, you can configure it to use private IPs instead. For instructions, refer to [Configure Communication via Private IPs on AWS](trouble-cluster.md#configure-communication-via-private-ips-on-aws).  
 
-#### Cloudbreak Instance Security Group
+#### Cloudbreak instance security group
 
 The following table lists the minimum security group port configuration required for the Cloudbreak instance:
 
@@ -38,13 +38,13 @@ The following table lists the minimum security group port configuration required
 | 80 | HTTP access to the Cloudbreak UI. This is automatically redirected to the HTTPS (443) port. |
 | 443 | HTTPS access to the Cloudbreak UI. |
 
-#### Default Cluster Security Groups 
+#### Default cluster security groups 
 
 For clusters, Cloudbreak provides the following security group settings. If you do not modify these settings, these default security rules will be created. You can modify these rules either when creating or, if you don't want to use security group, remove them. 
 
 As an alternative to creating new security groups, you can select from your existing set of security groups, which can be modified using the cloud provider tools. 
  
-**Cluster Host Group with Ambari Server**
+**Cluster host group with Ambari server**
 
 | Inbound Port | Description |
 |---|---|
@@ -63,7 +63,7 @@ By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access
 </div>
 
 
-**Cluster Host Groups without the Ambari Server**
+**Cluster host groups without the Ambari server**
 
 | Inbound Port | Description |
 |---|---|
@@ -78,7 +78,7 @@ By default, port 22 is set to 0.0.0.0/0 CIDR for inbound access on non-Ambari no
 When creating a new security group, Cloudbreak uses the following naming convention: `<clustername>-ClusterNodeSecurityGroup<hostgroupname>` 
 
 
-### Identity Management
+### Identity management
 
 To securely control access to cloud resources, cloud providers use identity management services such as IAM roles (AWS and GCP) and Active Directory (Azure). 
 
@@ -98,8 +98,8 @@ When launching Cloudbreak on AWS, you must select a way for Cloudbreak to authen
 
 {!docs/common/aws-launch-authentication-role-based-intro.md!}
 
-**Related Links**  
-[Meet the Prerequisites: Authentication](aws-launch.md#authentication)  
+**Related links**  
+[Meet the prerequisites: Authentication](aws-launch.md#authentication)  
 
 
 #### Authentication with Azure
@@ -112,16 +112,16 @@ You have two options:
 
 * App-based: The app and service principal creation and role assignment are not automated You must create an Azure Active Directory application registration and then provide its parameters to Cloudbreak, in addition to providing your Subscription ID and Directory ID. 
 
-**Related Links**  
-[Create Cloudbreak Credential](azure-launch.md#create-cloudbreak-credential)  
+**Related links**  
+[Create Cloudbreak credential](azure-launch.md#create-cloudbreak-credential)  
 
 
 #### Authentication with GCP
 
 After launching Cloudbreak on GCP, you are required to register a service account in Cloudbreak via creating a Cloudbreak credential. Cloudbreak uses this account to authenticate with the GCP identity management service.
 
-**Related Links**  
-[Meet the Prerequisites: Service Account](gcp-launch.md#service-account)  
+**Related links**  
+[Meet the prerequisites: Service account](gcp-launch.md#service-account)  
 
 
 #### Authentication with OpenStack 
@@ -129,5 +129,5 @@ After launching Cloudbreak on GCP, you are required to register a service accoun
 After launching Cloudbreak on OpenStack, you are required to create a Cloudbreak credential, which allows Cloudbreak to authenticate with keystone. 
 
 
-**Related Links**  
-[Create Cloudbreak Credential](os-launch.md#create-cloudbreak-credential)  
+**Related links**  
+[Create Cloudbreak credential](os-launch.md#create-cloudbreak-credential)  

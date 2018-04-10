@@ -63,7 +63,7 @@ Once you have installed the CLI, you need to configure the CLI to work with Clou
 </div>
 
   
-#### Add Multiple Configurations  
+#### Add multiple configurations  
 
 If you are using multiple profiles for multiple environments, you can configure them using the `cb configure` command and passing the name of your environment-specific profile file using the `--profile` parameter. After running the command, the configuration will be added as a new entry to the `config` file. For example, running the following command `cb configure --server https://192.167.65.4 --username test@hortonworks.com --profile staging` will add the "staging" entry:
 
@@ -91,7 +91,7 @@ staging:
  
 
 
-#### Configure Default Output
+#### Configure default output
 
 By default, JSON format is used in command output. For example, if you run `cb list-clusters` without specifying output type, the output will be JSON. If you would like to change default output, add it to the config file. For example:
 

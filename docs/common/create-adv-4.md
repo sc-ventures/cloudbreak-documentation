@@ -6,11 +6,11 @@ This option allows you to select previously uploaded recipes (scripts that can b
 **Related Links**      
 [Recipes](recipes.md) 
 
-#### External Sources 
+#### External sources 
 
 You can register external sources with Cloudbreak and then select them during cluster create. To register external sources with Cloudbreak, refer to:
 
-* [Register Authentication Source](external-ldap.md)    
-* [Register External Database](external-db.md)  
-* [Register Proxy](external-proxy.md)  
+* [Register authentication source](external-ldap.md)    
+* [Register external database](external-db.md)  
+* [Register proxy](external-proxy.md)  
 

@@ -1,8 +1,8 @@
-## Enabling Kerberos Security
+## Enabling Kerberos security
 
 When creating a cluster, you can optionally enable Kerberos security in that cluster and provide your Kerberos configuration details. Cloudbreak will automatically extend your blueprint configuration with the defined properties.
 	
-### Kerberos Overview 
+### Kerberos overview 
 
 Kerberos is a third party authentication mechanism, in which users and services that users wish to access Hadoop rely on a third party - the Kerberos server - to authenticate each to the other. The Kerberos server itself is known as the **Key Distribution Center**, or **KDC**. At a high level, the KDC has three parts:
 
@@ -25,7 +25,7 @@ The following table explains the Kerberos related terminology:
 | Keytab | A file that includes one or more principals and their keys.
 | Realm | The Kerberos network that includes a KDC and a number of clients. |
 
-### Enabling Kerberos 
+### Enabling Kerberos  
 
 The option to enable Kerberos is available in the advanced **Security** section of the create cluster wizard.  
 
@@ -33,10 +33,10 @@ You have the following options for enabling Kerberos in a Cloudbreak  managed cl
 
 | Option | Description | Environment |
 |---|---|---|
-| [Use Existing KDC](#use-existing-kdc) | <p>Allows you to leverage an existing MIT KDC or Active Directory for enabling Kerberos with the cluster.<p/><p>You can either provide the required parameters and Cloudbreak will generate the descriptors on your behalf, or provide the exact Ambari Kerberos descriptors to be injected into your blueprint in JSON format.</p> | Suitable for production |
-| [Use Test KDC](#use-test-kdc) | <p>Installs a new MIT KDC on the master node and configures the cluster to leverage that KDC.</p> | Suitable for evaluation and testing only, not suitable for production |
+| [Use existing KDC](#using-existing-kdc) | <p>Allows you to leverage an existing MIT KDC or Active Directory for enabling Kerberos with the cluster.<p/><p>You can either provide the required parameters and Cloudbreak will generate the descriptors on your behalf, or provide the exact Ambari Kerberos descriptors to be injected into your blueprint in JSON format.</p> | Suitable for production |
+| [Use test KDC](#use-test-kdc) | <p>Installs a new MIT KDC on the master node and configures the cluster to leverage that KDC.</p> | Suitable for evaluation and testing only, not suitable for production |
 
-#### Use Existing KDC 
+#### Using existing KDC 
 
 To use an existing KDC, in the advanced **Security** section of the create cluster wizard select **Enable Kerberos Security**. By default, **Use Existing KDC** option is selected.  
 
@@ -50,7 +50,7 @@ You must provide the following information about your MIT KDC or Active Director
 | Kerberos Admin Password  | The admin principal password in your existing MIT KDC or AD. | 
 | MIT KDC or Active Directory | Select MIT KDC or Active Directory. |
 
-**Use Basic Configuration**
+**Use basic configuration**
 
 | Parameter | Required if using... | Description |
 |---|---|---|
@@ -61,7 +61,7 @@ You must provide the following information about your MIT KDC or Active Director
 | Kerberos AD Container DN | AD | The distinguished name (DN) of the container used store service principals. Example:  "OU=hadoop,DC=example,DC=com" |
 | Use TCP Connection | Optional | By default, Kerberos uses UDP. Checkmark this box to use TCP instead. |
 
-**Use Advanced Configuration** 
+**Use advanced configuration** 
 
 Checking the **Use Custom Configuration** option allows you to provide the actual Ambari Kerberos descriptors to be injected into your blueprint (instead of Cloudbreak generating the descriptors on your behalf). This is the most powerful option which gives you full control of the Ambari Kerberos options that are available. You must provide: 
 
@@ -71,7 +71,7 @@ Checking the **Use Custom Configuration** option allows you to provide the actua
 To learn more about the Ambari Kerberos JSON descriptors, refer to [Apache cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Automated+Kerberizaton#AutomatedKerberizaton-Configurations).  
 
 
-#### Use Test KDC 
+#### Using test KDC 
 
 To use a test KDC, in the advanced **Security** section of the create cluster wizard select **Enable Kerberos Security** and then select **Use Test KDC**.
 
@@ -125,5 +125,5 @@ Example krb5-conf JSON  descriptor file:
     }</pre>  
 
 
-**Related Links**   
+**Related links**   
 [Apache cwiki](https://cwiki.apache.org/confluence/display/AMBARI/Automated+Kerberizaton#AutomatedKerberizaton-Configurations) 

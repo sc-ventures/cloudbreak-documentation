@@ -1,12 +1,12 @@
 
-## Editing Cloudbreak Profile 
+## Customizing Cloudbreak Profile file  
 
 Cloudbreak deployer configuration is based on environment variables.  
 
 During startup, Cloudbreak deployer tries to determine the underlying infrastructure and then sets required environment variables with appropriate default values. If these environment variables are not sufficient for your use case, you can set additional environment variables in your `Profile` file. 
 
 
-### Set Profile Variables
+### Set Profile variables
 
 To set environment variables relevant for Cloudbreak Deployer, add them to a file called `Profile` located in the Cloudbreak deployment directory (typically `/var/lib/cloudbreak-deployment`).
 
@@ -20,7 +20,7 @@ export MY_OTHER_VAR=another_value
 After changing a property, you must regenerate the config file and restart the application by using `cbd restart`.
 
 
-### Check Available Profile Variables
+### Check available Profile variables
 
 To see all available environment variables with their default values, use:
 
@@ -28,7 +28,7 @@ To see all available environment variables with their default values, use:
 cbd env show
 ```
 
-### Create Environment Specific Profiles
+### Create environment-specific profiles
 
 If you would like to use a different versions of Cloudbreak for prod and qa profile, you must create two environment specific configurations that can be sourced. For example:
 
@@ -47,7 +47,8 @@ To use the prod specific profile once, set:
     
 To permanently use the prod profile, set `export CBD_DEFAULT_PROFILE=prod` in your `.bash_profile`.
 
-### Secure the Profile 
+
+### Secure the Profile file 
 
 Before starting Cloudbreak for the first time, configure the Profile file as directed below. Changes are applied during startup so a restart (`cbd restart`) is required after each change.
 
@@ -97,7 +98,7 @@ cbd util add-default-user
 For more information about setting environment variables in Profile, refer to [Configure Profile Variables](#configure-profile-variables).
 
 
-### Change SMTP Parameters
+### Change SMTP parameters
 
 If you want to change SMTP parameters, add them your `Profile`.
 
@@ -131,7 +132,7 @@ For a full list of available consul config options, refer to [Consul documentati
 To pass any additional Consul configuration, define the `DOCKER_CONSUL_OPTIONS` variable in the Profile file.
 
 
-### Add Tags in Profile (AWS)
+### Add tags in Profile (AWS)
 
 In order to differentiate launched instances, you can optionally define custom tags for your AWS resources deployed by Cloudbreak. 
 

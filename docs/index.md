@@ -9,7 +9,7 @@ Cloudbreak allows you to create clusters using the Cloudbreak web UI, Cloudbreak
 <a href="./images/cb_cb-ui3.png" target="_blank" title="click to enlarge"><img src="./images/cb_cb-ui3.png" width="650" title="Cloudbreak web UI"></a>   
 
 
-### Primary Use Cases
+### Primary use cases
 
 Cloudbreak allows you to create, manage, and monitor your HDP and HDF clusters on your chosen cloud platform:
 
@@ -17,7 +17,7 @@ Cloudbreak allows you to create, manage, and monitor your HDP and HDF clusters o
 * Use automated scaling to seamlessly manage elasticity requirements as cluster workloads change.  
 * Secure your cluster by enabling Kerberos.   
 
-### Default Cluster Configurations
+### Default cluster configurations
 
 Cloudbreak includes default cluster configurations (in the form of blueprints) and supports using your own custom cluster configurations (in the form of custom blueprints).
 
@@ -25,12 +25,12 @@ The following default cluster configurations are available:
 
 {!docs/common/cluster-configs.md!}
 
-### Core Concepts   
+### Core concepts   
 
 Refer to [Architecture](architecture.md) and [Core Concepts](architecture.md#core-concepts).
 
 
-### Get Started
+### Get started
 
 To get started with Cloudbreak:
 
@@ -39,7 +39,7 @@ To get started with Cloudbreak:
 1. [Launch Cloudbreak](#launch-cloudbreak). 
 
 
-#### Select Cloud Platform 
+#### Select cloud platform 
 
 You can deploy and use Cloudbreak on the following cloud platforms:
 
@@ -49,7 +49,7 @@ You can deploy and use Cloudbreak on the following cloud platforms:
 * OpenStack
 
 
-#### Select Deployment Option
+#### Select deployment option
 
 There are two basic deployment options:
 

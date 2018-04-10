@@ -1,20 +1,20 @@
 
-## Managing Cloudbreak Credentials 
+## Managing Cloudbreak credentials 
 
 You can view and manage Cloudbreak credentials in the **Credentials** tab by clicking **Create credential** and providing required parameters. You must create at least one credential in order to be able to create a cluster. 
 
 
-### Create Cloudbreak Credential  
+### Create Cloudbreak credential  
 
 For steps, refer to:
 
-* [Create Credential on AWS](aws-launch.md#create-cloudbreak-credential)  
-* [Create Credential on Azure](azure-launch.md#create-cloudbreak-credential)  
-* [Create Credential on GCP](gcp-launch.md#create-cloudbreak-credential) 
-* [Create Credential on OpenStack](os-launch.md#create-cloudbreak-credential)
+* [Create Cloudbreak credential on AWS](aws-launch.md#create-cloudbreak-credential)  
+* [Create Cloudbreak credential on Azure](azure-launch.md#create-cloudbreak-credential)  
+* [Create Cloudbreak credential on GCP](gcp-launch.md#create-cloudbreak-credential) 
+* [Create Cloudbreak credential on OpenStack](os-launch.md#create-cloudbreak-credential)
 
 
-### Modify an Existing Credential
+### Modify an existing credential
 
 You can modify an existing Cloudbreak credential by following these steps.
 
@@ -28,7 +28,7 @@ You can modify an existing Cloudbreak credential by following these steps.
 3. When done making changes, click **Save** to save your changes.  
 
 
-### Set a Default Credential
+### Set a default credential
 
 If using multiple Cloudbreak credentials, you can select one credential and use it as default for creating clusters. This default credential will be pre-selected in the create cluster wizard.
  

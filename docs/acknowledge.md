@@ -14,7 +14,7 @@
 
 ## Acknowledgements
 
-### Copyrights and Trademarks
+### Copyrights and trademarks
 
 © 2011-2018 Hortonworks Inc. All Rights Reserved. Hortonworks and HDP are registered trademarks
 or trademarks of Hortonworks, Inc. in the United States and other jurisdictions.  All other
@@ -43,7 +43,7 @@ Documentation was built with <a href="http://www.mkdocs.org/" target="_blank">Mk
 <a href="http://sourcefoundry.org/cinder/" target="_blank">Cinder Theme</a>, licensed under
 the <a href="https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md" target="_blank">MIT license</a>.
 
-### Contact Information
+### Contact information
 
 Hortonworks, Inc.
 <br>

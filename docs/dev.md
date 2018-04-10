@@ -1,27 +1,27 @@
 
-## Developer Documentation Links 
+## Developer documentation links 
 
 The following table includes links to Cloudbreak developer documentation: 
 
 | Doc Link | Description |
 |---|---|
-| [Set Up Local Development](https://github.com/hortonworks/cloudbreak) | This documentation will help you set up your local development environment. | 
-| [Retrieve OAuth Bearer Token via Cloudbreak REST API](#retrieve-oauth-bearer-token-via-cloudbreak-rest-api) | Describes how to retrieve OAuth bearer token via Cloudbreak REST API. |
-| [SPI Reference](#cloudbreak-service-provider-interface-spi) | This is Cloudbreak SPI reference documentation. |
-| [API Reference](https://app.swaggerhub.com/apis/Cloudbreak/Cloudbreak/2.5.0-TP) | This is Cloudbreak API reference documentation. Cloudbreak is a RESTful application development platform whose goal is to help developers deploy HDP clusters in various cloud environments. Once Cloudbreak is deployed in your favorite servlet container, it exposes REST APIs, allowing you to spin up Hadoop clusters of any size with your chosen cloud provider. |
-| [Flow Diagrams](http://hortonworks.github.io/cloudbreak-docs/release-1.16.5/flow/) | This is Cloudbreak flow diagrams reference documentation. |
+| [Set up local development](https://github.com/hortonworks/cloudbreak) | This documentation will help you set up your local development environment. | 
+| [Retrieve OAuth bearer token via Cloudbreak REST API](#retrieve-oauth-bearer-token-via-cloudbreak-rest-api) | Describes how to retrieve OAuth bearer token via Cloudbreak REST API. |
+| [SPI reference](#cloudbreak-service-provider-interface-spi) | This is Cloudbreak SPI reference documentation. |
+| [API reference](https://app.swaggerhub.com/apis/Cloudbreak/Cloudbreak/2.5.0-TP) | This is Cloudbreak API reference documentation. Cloudbreak is a RESTful application development platform whose goal is to help developers deploy HDP clusters in various cloud environments. Once Cloudbreak is deployed in your favorite servlet container, it exposes REST APIs, allowing you to spin up Hadoop clusters of any size with your chosen cloud provider. |
+| [Flow diagrams](http://hortonworks.github.io/cloudbreak-docs/release-1.16.5/flow/) | This is Cloudbreak flow diagrams reference documentation. |
 
 [Comment]: <> (API link should be updated for each release. Not sure about the flow diagrams?)
 
 
-### Retrieve OAuth Bearer Token via Cloudbreak REST API
+### Retrieve OAuth bearer token via Cloudbreak REST API
 
 In order to communicate with Cloudbreak's API, you must retrieve a bearer token. For example: 
 
 <pre>TOKEN=$(curl -k -iX POST -H "accept: application/x-www-form-urlencoded" -d 'credentials={"username":"admin@example.com","password":"pwd"}' "https://192.168.99.100/identity/oauth/authorize?response_type=token&client_id=cloudbreak_shell&scope.0=openid&source=login&redirect_uri=http://cloudbreak.shell" | grep location | cut -d'=' -f 3 | cut -d'&' -f 1)</pre>
 
 
-### Cloudbreak Service Provider Interface (SPI)
+### Cloudbreak service provider interface (SPI)
 
 In addition to supporting multiple cloud platforms, Cloudbreak provides an easy way to integrate a new provider trough its [Service Provider Interface (SPI)](https://github.com/hortonworks/cloudbreak/tree/master/cloud-api), a plugin mechanism that enables seamless integration with any cloud provider. 
 
@@ -34,7 +34,7 @@ This SPI plugin mechanism has been used to integrate all currently supported pro
 
 The Cloudbreak SPI interface is event-based, scalable, and decoupled from Cloudbreak. The core of Cloudbreak uses [EventBus](http://projectreactor.io/) to communicate with the providers, but the complexity of event handling is hidden from the provider implementation.
 
-#### Supported Resource Management Methods
+#### Supported resource management methods
 
 Cloud providers support two kinds of deployment and resource management methods:
 
@@ -45,7 +45,7 @@ Cloudbreak's SPI supports both of these methods. It provides a well-defined inte
 
 [comment]: <> (TO-DO: The sentence above is confusing. Does the clause "scheduling and polling of resources to aid the integration and to avoid any boilerplate code in the module of cloud provider" refer to the helper classes? Or should this say "It provides a well-defined interface, abstract classes, helper classes, **and** scheduling and polling of resources to aid the integration and to avoid any boilerplate code in the module of cloud provider.")
 
-##### Template Based Deployments
+##### Template based deployments
 
 Providers with template-based deployments such as [AWS CloudFormation](https://aws.amazon.com/cloudformation/), [Azure ARM](https://azure.microsoft.com/en-us/documentation/articles/resource-group-overview/#) or [OpenStack Heat](https://wiki.openstack.org/wiki/Heat) have the ability to create and manage a collection of related cloud resources, provisioning and updating them in an orderly and predictable fashion. 
 
@@ -75,7 +75,7 @@ dependencies {
 
 The entry point for the provider is the  [CloudConnector](https://github.com/hortonworks/cloudbreak/blob/master/cloud-api/src/main/java/com/sequenceiq/cloudbreak/cloud/CloudConnector.java) interface and every interface that needs to be implemented is reachable trough this interface.
 
-##### Individual Resource Based Deployments
+##### Individual resource based deployments
 
 There are providers such as GCP that do not support a templating mechanism, and customizable providers such as OpenStack where the Heat Orchestration (templating) component is optional and individual resources need to be handled separately. 
 
@@ -103,7 +103,7 @@ dependencies {
 }
 ```
 
-#### Support for Modularity 
+#### Support for modularity 
 
 Cloudbreak uses **variants** to deal with highly modular providers such as OpenStack, which allows you to install different components (for volume storage, networking, and so on) and to entirely exclude certain components. For example, Nova or Neutron can be used for networking in OpenStack and some components such as Heat may not installed at all in some deployment scenarios. 
 

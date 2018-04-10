@@ -1,4 +1,4 @@
-## Moving a Cloudbreak Instance
+## Moving a Cloudbreak instance
 
 To transfer a Cloudbreak instance from one host to another, perform these tasks:
 
@@ -7,7 +7,8 @@ To transfer a Cloudbreak instance from one host to another, perform these tasks:
 3. If you are using the embedded PostgreSQL database, [populate the new Cloudbreak instance database with the dump from the original Cloudbreak instance](#populate-database-with-dump-from-original-cloudbreak-instance) on the new host.  
 4. [Modify Cloudbreak Profile](#modify-cloudbreak-profile)  
 
-### Back up Cloudbreak Database 
+
+### Back up Cloudbreak database 
 
 To create a backup of the embedded PostgreSQL database, perform these steps.
 
@@ -34,13 +35,13 @@ To create a backup of the embedded PostgreSQL database, perform these steps.
 
 
 
-### Populate Database with Dump from Original Cloudbreak Instance
+### Populate database with dump from original Cloudbreak instance
 
 Perform these steps to populate databases with information from the Cloudbreak server.
 
 **Steps** 
 
-1. Copy the saved database files from [Backup Cloudbreak Database](#backup-cloudbreak-database) to the new Cloudbreak server host.
+1. Copy the saved database files from [Back up Cloudbreak database](#back-up-cloudbreak-database) to the new Cloudbreak server host.
 
 2. Copy the dump files into the database container with the following commands. Modify the location as necessary (The example below assumes that the files are in `/tmp`):
 

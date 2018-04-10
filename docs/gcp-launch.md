@@ -2,18 +2,18 @@
 
 Before launching Cloudbreak on Google Cloud, review and meet the prerequisites. Next, import Cloudbreak image, launch a VM, SSH to the VM, and start Cloudbreak. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential. 
 
-### Meet the Prerequisites
+### Meet the prerequisites
 
 Before launching Cloudbreak on GCP, you must meet the following prerequisites.
 
-#### GCP Account 
+#### GCP account 
 
 In order to launch Cloudbreak on GCP, you must log in to your GCP account. If you don't have an account, you can create one at [https://console.cloud.google.com](https://console.cloud.google.com).
 
 Once you log in to your GCP account, you must either create a project or use an existing project. 
 
 
-#### Service Account
+#### Service account
 
 In order to launch clusters on GCP via Cloudbreak, you must have a Service Account that Cloudbreak can use to create resources. In addition, you must also have a P12 key associated with the account. The service account must have the following roles are enabled:
 
@@ -31,31 +31,31 @@ A user with an "Owner" role can assign roles to new and existing service account
 
 For more information on creating a Service Account and generating a P12 key, refer to [GCP documentation](https://cloud.google.com/storage/docs/authentication#service_accounts). 
 
-**Related Links**  
-[Service Account Credentials](https://cloud.google.com/storage/docs/authentication#service_accounts) (External)  
+**Related links**  
+[Service account credentials](https://cloud.google.com/storage/docs/authentication#service_accounts) (External)  
 
-#### SSH Key Pair 
+#### SSH key pair 
 
 [Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or use an existing SSH key pair. You will be required to provide it when launching the VM. 
 
-#### Region and Zone 
+#### Region and zone 
 
 Decide in which region and zone you would like to launch Cloudbreak. You can launch Cloudbreak and provision your clusters in all regions [supported by GCP](https://cloud.google.com/compute/docs/regions-zones/regions-zones).  
 
 Clusters created via Cloudbreak can be in the same or different region as Cloudbreak; when you launch a cluster, you select the region in which to launch it. 
 
-**Related Links**  
-[Regions and Zones](https://cloud.google.com/compute/docs/regions-zones/) (External)  
+**Related links**  
+[Regions and zones](https://cloud.google.com/compute/docs/regions-zones/) (External)  
 
 
-#### VPC Network 
+#### VPC network 
 
 When launching Cloudbreak, you will be required to select an existing network in which Cloudbreak can be placed. The following ports must be open on the security group: 22 (for access via SSH), 80 (for access via HTTP), and 443 (for access via HTTPS). You may use the *default* network as long as the aforementioned ports are open. 
 
 You can manage networks under **Networking** > **VPC Networks**. To edit ports, click on the network name and then click on **Add firewall rules**. 
 
 
-### Launch the VM  
+### Launch Cloudbreak deployer from image   
 
 **Steps**
 
@@ -112,7 +112,7 @@ On Mac OS X, you can SSH to the VM by running the following from the Terminal ap
 On Windows, you can use [PuTTy](http://www.putty.org/).
 
 
-### Launch Cloudbreak Deployer
+### Start Cloudbreak deployer
 
 After accessing the VM via SSH, launch Cloudbreak deployer using the following steps.
 
@@ -159,7 +159,7 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
      
 
-### Access Cloudbreak UI
+### Access Cloudbreak web UI
 
 Log in to the Cloudbreak UI using the following steps.
 
@@ -184,7 +184,7 @@ Log in to the Cloudbreak UI using the following steps.
 
     <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
 
-### Create Cloudbreak Credential
+### Create Cloudbreak credential
 
 Cloudbreak works by connecting your GCP account through this credential, and then uses it to create resources on your behalf. Before you can start provisioning cluster using Cloudbreak, you must create a Cloudbreak credential.
 

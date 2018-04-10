@@ -1,9 +1,9 @@
-## Accessing Your Cluster
+## Accessing your cluster
 
 The following section describes how to access the various services in the cluster.
 
 
-### Finding Cluster Information in the UI
+### Finding cluster information in the web UI
 
 Once your cluster is up and running, click on the tile representing your cluster in the Cloudbreak UI to access information related the cluster and access cluster actions. 
 
@@ -11,9 +11,9 @@ Once your cluster is up and running, click on the tile representing your cluster
 
 The information presented includes:
 
-* [Cluster Summary](#cluster-summary)  
-* [Cluster Information](#cluster-information)     
-* [Event History](#event-history)  
+* [Cluster summary](#cluster-summary)  
+* [Cluster information](#cluster-information)     
+* [Event history](#event-history)  
 
 <div class="note">
   <p class="first admonition-title">Tips</p>
@@ -27,7 +27,7 @@ The information presented includes:
 </div>
 
 
-#### Cluster Summary 
+#### Cluster summary 
 
 The summary bar includes the following information about your cluster:
 
@@ -42,7 +42,7 @@ The summary bar includes the following information about your cluster:
 | Uptime | The amount of time (HH:MM) that the cluster has been in the running state since it was started. Each time you stop and restart the cluster, the running time is reset to 0. |
 | Created | The date when the cluster was created. The date format is Mon DD, YYYY. For example: Oct 27, 2017. |
 
-#### Cluster Information 
+#### Cluster information 
 
 The following information is available on the cluster details page: 
 
@@ -57,7 +57,7 @@ The following information is available on the cluster details page:
 | Created With | The version of Cloudbreak used to create this cluster. |
 | Ambari Version | The Ambari version which this cluster is currently running. |
 | HDP/HDF Version | The HDP or HDF version which this cluster is currently running. |
-| Authentication Source | If you are using an external authentication source (LDAP/AD) for your cluster, you can see it here. Refer to [Register an Authentication Source](external-ldap.md). |
+| Authentication Source | If you are using an external authentication source (LDAP/AD) for your cluster, you can see it here. Refer to [Register an authentication source](external-ldap.md). |
 
 
 Below this, you will see additional tabs that you can click on in order to see their content:
@@ -67,7 +67,7 @@ Below this, you will see additional tabs that you can click on in order to see t
 |Hardware | This section includes information about your cluster instances: instance names, instance IDs, instance types, their status, fully qualified domain names (FQDNs), and private and public IPs. |
 | Tags | This section lists keys and values of the user-defined tags, in the same order as you added them. |
 | Recipes | This section includes recipe-related information. For each recipe, you can see the host group on which a recipe was executed, recipe name, and recipe type. Refer to [Recipes](recipes.md). |
-| External Databases | If you are using an external database for your cluster, you can see it here. Refer to [Register an External Database](external-db.md). |
+| External Databases | If you are using an external database for your cluster, you can see it here. Refer to [Register an external database](external-db.md). |
 | Repository Details | This section includes Ambari and HDP/HDF repository information, as you provided it in the "Base Images" section when creating a cluster. |
 | Image Details | This section includes information about the base image that was used for the Cloudbreak instance. |
 | Network | This section includes information about the names of the network and subnet in which the cluster is running and the links to related cloud provider console. |
@@ -76,7 +76,7 @@ Below this, you will see additional tabs that you can click on in order to see t
 
 
 
-#### Event History 
+#### Event history 
 
 The Event History section shows you events logged for the cluster, with the most recent event at the top. For example, after your cluster has been created, the following messages will be written to the log:
 
@@ -105,7 +105,7 @@ Setting up HDP image
 10/26/2017, 9:22:21 AM</pre>
 
 
-### Accessing Cluster via SSH
+### Accessing cluster via SSH
 
 If you plan to access the cluster via the command line clients, SSH into the master node instance in the cluster. 
 
@@ -119,6 +119,7 @@ For example:
 <pre>ssh -i "dominika-kp.pem" cloudbreak@p52.25.169.132</pre>
 
 On Windows, you can SSH using an SSH client such as PuTTY.
+
 
 ### Access Ambari
 
@@ -141,7 +142,7 @@ You can access Ambari web UI by clicking on the links provided in the **Cluster 
 | Chrome |	Click **Advanced** > Click **Proceed...** |
 
 
-### Cloudbreak User Accounts
+### Cloudbreak user accounts
 
 The following table describes what credentials to use to access Cloudbreak and Cloudbreak-managed clusters:
 

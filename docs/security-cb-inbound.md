@@ -1,5 +1,5 @@
 
-## Restrict Inbound Access to Clusters 
+## Restrict inbound access to clusters 
 
 We recommend that after launching Cloudbreak you set CB_DEFAULT_GATEWAY_CIDR in your Cloudbreak's Profile file.
 When you launch a cluster, and Cloudbreak proposes security groups, this CIDR will be used

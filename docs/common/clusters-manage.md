@@ -1,4 +1,4 @@
-## Managing and Monitoring Clusters  
+## Managing and monitoring clusters  
 
 You can manage monitor your clusters from the Cloudbreak UI. To do that, click on the tile representing the cluster that you want to access. The actions available for your cluster are listed in the top right corner: 
 
@@ -17,7 +17,7 @@ You can manage monitor your clusters from the Cloudbreak UI. To do that, click o
 </div>
 
 
-### Resize a Cluster
+### Resize a cluster
 
 To resize a cluster, follow these steps.
 
@@ -39,7 +39,7 @@ To resize a cluster, follow these steps.
     While nodes are being added or removed, cluster status changes to "Update In Progress". Once the operation has completed, cluster status changes back to "Running". 
 
 
-### Synchronize a Cluster 
+### Synchronize a cluster 
 
 Use the **sync** option if you:  
 
@@ -61,7 +61,7 @@ To synchronize your cluster with the cloud provider, follow these steps.
     Your cluster infrastructure is synchronized based on changes on the cloud provider. The updates are written to the "Event History". 
  
  
-### Stop a Cluster 
+### Stop a cluster 
 
 Cloudbreak supports stopping and restarting clusters. To stop and restart a cluster managed by Cloudbreak, use the options available from the Cloudbreak UI. 
 
@@ -79,7 +79,7 @@ When a cluster is in the "stopped" state, you are not charged for the VMs, but y
 
 
 
-### Restart a Cluster 
+### Restart a cluster 
 
 If your cluster is in the "Stopped" state, you can restart the cluster by follow these steps.
 
@@ -93,7 +93,7 @@ If your cluster is in the "Stopped" state, you can restart the cluster by follow
 
 
 
-### Terminate a Cluster 
+### Terminate a cluster 
 
 To terminate a cluster managed by Cloudbreak, use the option available from the Cloudbreak UI. 
 
@@ -108,7 +108,7 @@ To terminate a cluster managed by Cloudbreak, use the option available from the 
     All cluster-related resources will be deleted, unless the resources (such as networks and subnets) existed prior to cluster creation or are used by other VMs in which case they will be preserved. 
 
 
-### Force Terminate a Cluster 
+### Force terminate a cluster 
 
 Cluster deletion may fail if Cloudbreak is unable to delete one or more of the cloud resources that were part of your cluster infrastructure. In such as case, you can use the **Terminate** > **Force terminate** option to remove the cluster entry from the Cloudbreak web UI, but you must also check your cloud provider account to see if there are any resources that must be deleted manually.
 
@@ -130,7 +130,7 @@ Cluster deletion may fail if Cloudbreak is unable to delete one or more of the c
 
 
 
-### View Cluster History
+### View cluster history
 
 From the navigation menu in the Cloudbreak UI, you can access the History page that allows you to generate a report showing basic information related to the clusters that were running within the specified range of dates.
 
@@ -143,7 +143,7 @@ To generate a report, follow these steps.
 2. On the History page, select the range of dates and click **Show History** to generate a tabular report for the selected period.
 
 
-#### History Report Content 
+#### History report content 
 
 Each entry in the report represents one cluster instance group. For each entry, the report includes the following information:
 

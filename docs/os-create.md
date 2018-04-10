@@ -1,4 +1,4 @@
-## Creating a Cluster on OpenStack 
+## Creating a cluster on OpenStack 
 
 {!docs/common/create-a1.md!}
 | Region | Select the region in which you would like to launch your cluster. |
@@ -9,18 +9,18 @@
 {!docs/common/create-a4.md!}
 {!docs/common/create-a5.md!}
 
-**Related Links**  
+**Related links**  
 [Blueprints](blueprints.md)   
-[Default Cluster Security Groups](security.md#default-cluster-security-groups)  
+[Default cluster security groups](security.md#default-cluster-security-groups)  
 [CIDR](https://www.ipaddressguide.com/cidr) (External)    
     
 
-### Advanced Options
+### Advanced cluster options
 
 {!docs/common/create-adv-1.md!}
 
 
-#### Availability Zone
+#### Availability zone
 
  Choose one of the availability zones within the selected region. 
  

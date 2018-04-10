@@ -1,4 +1,4 @@
-## Using an External Database  
+## Using an external database for cluster services  
 
 Cloudbreak allows you to register an existing RDBMS instance to be used for a database for certain services. After you register the RDBMS with Cloudbreak, you can use it for multiple clusters. 
 
@@ -16,7 +16,7 @@ During cluster create, Cloudbreak checks whether the JDBC properties are present
 <a href="../images/cb_cb-rdbms-diagram.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-rdbms-diagram.png" width="550" title="Cloudbreak web UI"></a>
 
   
-### Example 1: Built-in Type Hive 
+### Example 1: Built-in type Hive 
 
 In this scenario, you start up with a standard blueprint, and Cloudbreak injects the JDBC properties into the blueprint.
 
@@ -56,7 +56,7 @@ In this scenario, you start up with a standard blueprint, and Cloudbreak injects
 
 
 
-### Example 2: Other Type 
+### Example 2: Other type 
 
 In this scenario, you start up with a special blueprint including JDBC property variables, and Cloudbreak replaces JDBC-related property variables in the blueprint. 
 
@@ -87,14 +87,15 @@ In this scenario, you start up with a special blueprint including JDBC property 
 
 3. Upon cluster create, Cloudbreak replaces JDBC-related property variables in the blueprint. 
 
-**Related Links**  
-[Mustache Template Syntax](https://mustache.github.io/)  
+**Related links**  
+[Mustache template syntax](https://mustache.github.io/)  
   
-### Creating a Template Blueprint for RDMBS  
+  
+### Creating a template blueprint for RDMBS  
 
-In order to use an external RDBMS for some component other than the built-in components, you must include JDBC property variables in your blueprint. You must use [mustache template](https://mustache.github.io/) syntax. See [Example 2: Other Type](#example-2-other-type) for an example configuration. 
+In order to use an external RDBMS for some component other than the built-in components, you must include JDBC property variables in your blueprint. You must use [mustache template](https://mustache.github.io/) syntax. See [Example 2: Other type](#example-2-other-type) for an example configuration. 
 
-**Related Links**  
+**Related links**  
 [Creating a Template Blueprint](blueprints.md#creating-a-template-blueprint)  
 [Mustache Template Syntax](https://mustache.github.io/) (External)  
 
@@ -115,9 +116,8 @@ rds.[type].databaseEngine</pre>
 
 These parameters correspond to the external database UI and CLI options. 
 
- 
 
-### Register an External Database    
+### Register an external database    
   
 You must create the external RDBMS instance and database prior to registering it with Cloudbreak. Once you have it ready, you can:
 

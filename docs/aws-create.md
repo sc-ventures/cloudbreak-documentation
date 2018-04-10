@@ -1,11 +1,11 @@
-## Creating a Cluster on AWS 
+## Creating a cluster on AWS 
 
 {!docs/common/create-a1.md!}
 | Region | Select the AWS region in which you would like to launch your cluster. For information on available AWS regions, refer to [AWS documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html). |
 {!docs/common/create-a2.md!}
 | Instance Type | Select an instance type. For information about instance types on AWS refer to [AWS documentation](https://aws.amazon.com/ec2/instance-types/). |
 {!docs/common/create-a3-1.md!}
-    > On AWS, you can configure it to use private IPs instead. For instructions, refer to [Configure Communication via Private IPs on AWS](trouble-cluster.md#configure-communication-via-private-ips-on-aws). 
+    > On AWS, you can configure it to use private IPs instead. For instructions, refer to [Configure communication via private IPs on AWS](trouble-cluster.md#configure-communication-via-private-ips-on-aws). 
 
 {!docs/common/create-a3-2.md!}
 
@@ -14,21 +14,21 @@
 {!docs/common/create-a4.md!}
 {!docs/common/create-a5.md!}
 
-**Related Links**  
+**Related links**  
 [Blueprints](blueprints.md)   
-[Default Cluster Security Groups](security.md#default-cluster-security-groups)  
-[Amazon EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/) (External)   
-[AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) (External)     
+[Default cluster security groups](security.md#default-cluster-security-groups)  
+[Amazon EC2 instance types](https://aws.amazon.com/ec2/instance-types/) (External)   
+[AWS regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) (External)     
 [CIDR](http://www.ipaddressguide.com/cidr) (External)   
 
 
 
-### Advanced Options
+### Advanced cluster options
 
 {!docs/common/create-adv-1.md!}
 
 
-#### Availability Zone
+#### Availability zone
 
 Choose one of the availability zones within the selected region. 
  
@@ -37,7 +37,7 @@ Choose one of the availability zones within the selected region.
 {!docs/common/create-adv-3.md!}
 
 
-#### Use Spot Instances
+#### Use spot instances
 
 Check this option to use EC2 spot instances as your cluster nodes. Next, enter your bid price. The price that is pre-loaded in the form is the current on-demand price for your chosen EC2 instance type.   
 
@@ -53,9 +53,9 @@ Note that:
 After creating a cluster, you can view your spot instance requests, including bid price, on the EC2 dashboard under **INSTANCES** > **Spot Requests**. For more information about spot instances, refer to [AWS documentation](https://aws.amazon.com/ec2/spot/).  
 
 
-#### File System 
+#### File system 
 
-If you would like to access S3 from your cluster, you must configure access to S3 trough an instance profile. For instructions, refer to [Configuring Access to S3](aws-data.md#configuring-access-to-s3). 
+If you would like to access S3 from your cluster, you must configure access to S3 trough an instance profile. For instructions, refer to [Configuring access to S3](aws-data.md#configuring-access-to-s3). 
 
 
 {!docs/common/create-adv-4.md!}
@@ -63,8 +63,8 @@ If you would like to access S3 from your cluster, you must configure access to S
 {!docs/common/create-adv-5.md!}
 
 {!docs/common/create-adv-6.md!}  
-[Amazon EC2 Instance Store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) (External)  
-[Amazon EC2 Spot Instances](https://aws.amazon.com/ec2/spot/) (External)   
+[Amazon EC2 instance store](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) (External)  
+[Amazon EC2 spot instances](https://aws.amazon.com/ec2/spot/) (External)   
 
 
 <div class="next">

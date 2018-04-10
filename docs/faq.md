@@ -2,7 +2,7 @@
 
 How to...
 
-### Generate SSH Key Pair 
+### Generate SSH key pair 
 
 All the instances created by Cloudbreak are configured to allow key-based SSH, so you'll need to provide an SSH public key that can be used later to SSH onto the instances in the clusters you'll create with Cloudbreak. You can use one of your existing keys or you can generate a new one.
 
@@ -28,13 +28,13 @@ After you enter (or not) a passphrase, the key pair is generated. The output sho
 Later you'll need to pass the content of the `.pub` file to Cloudbreak and use the private key file to SSH to the instances. 
 
 
-### Recover Public SSH Key 
+### Recover public SSH key 
 
 The `-y` option of `ssh-keygen` outputs the public key. For example:
 
 <pre>ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub</pre>
 
-### SSH to the Hosts 
+### SSH to the hosts 
 
 To connect to a running VM through SSH, you need to know its public IP address and have your private key available. 
 
@@ -50,7 +50,7 @@ For example:
 ssh -i ~/.ssh/your-private-key.pem cloudbreak@<public-ip>
 ```
 
-### Check Cloudbreak Version 
+### Check Cloudbreak version 
 
 To check Cloudbreak version, navigate to the Cloudbreak home directory and execute the following command:
 
@@ -59,7 +59,7 @@ cbd doctor
 ```
 
 
-### Check Available Environment Variables
+### Check available environment variables
 
 To see all available environment variables with their default values, use:
 
@@ -67,17 +67,10 @@ To see all available environment variables with their default values, use:
 cbd env show
 ```
 
-### Access Cloudbreak Logs
+### Access Cloudbreak logs
 
-Refer to [Troubleshooting](trouble-cb.md#checking-the-logs).
+Refer to [Troubleshooting](trouble-cb-logs.md).
 
 
-### Debug in Cloudbreak Shell
-
-To get more detailed command prompt output, set the DEBUG environment variable to non-zero:
-
-```
-DEBUG=1 cbd <some_command>
-```
 
 

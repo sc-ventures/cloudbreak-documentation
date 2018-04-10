@@ -1,4 +1,4 @@
-## Configuring Cloudbreak for LDAP/AD Authentication    
+## Configuring Cloudbreak for LDAP/AD authentication    
 
 By default Cloudbreak uses an internal system as the user store for authentication (enabled by using [CloudFoundry UAA](https://github.com/cloudfoundry/uaa )). If you would like to configure LDAP or Active Directory (AD) external authentication, you need to:  
 
@@ -6,7 +6,7 @@ By default Cloudbreak uses an internal system as the user store for authenticati
 2. [Configure Cloudbreak](#configuring-cloudbreak-for-ldapad) to work with that LDAP/AD setup
 
 
-### LDAP/AD Information 
+### LDAP/AD information 
 
 The following table details the properties and values that you need to know about your LDAP/AD environment on order to use the LDAP/AD with Cloudbreak: 
 
@@ -29,7 +29,7 @@ There are two parts to configuring Cloudbreak for LDAP/AD:
 * Configuring LDAP/AD user authentication for Cloudbreak  
 * Configuring LDAP/AD group authorization for Cloudbreak  
 
-#### Configure User Authentication
+#### Configure user authentication
 
 Configure LDAP/AD user authentication for Cloudbreak by using these steps. 
 
@@ -64,8 +64,7 @@ ldap:
 
 
 
-
-#### Configure Group Authorization 
+#### Configure group authorization 
 
 Once user authentication is configured, you need to configure which group(s) can access Cloudbreak. Users (once authenticated) will be granted permission to access Cloudbreak and use the capabilities of Cloudbreak based on their group member. The following describes how to create (i.e. execute-and-map) a group authorization and how to remove (i.e. delete-mapping) an authorization. 
 

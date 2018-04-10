@@ -1,4 +1,4 @@
-## Configure Outbound Internet Access and Proxy  
+## Configuring outbound internet access and proxy  
 
 Depending on your enterprise requirements, you may have limited or restricted outbound network access and/or require the use of an internet proxy. Installing and configuring Cloudbreak, as well as creating cloud resources and clusters on those resources requires outbound network access to certain destinations, and in some cases must go through a proxy.
 
@@ -6,11 +6,11 @@ This section provides information on the outbound network destinations for Cloud
 
 | Scenario | Documentation |
 |---|---|
-| My environment has limited outbound internet access | Refer to [Outbound Network Access Destinations](#outbound-network-access-destinations) for information on network rules. |
-| My environment requires use of a proxy for outbound internet access | Refer to [Using a Proxy](#using-a-proxy) for information on using a proxy with Cloudbreak. | 
+| My environment has limited outbound internet access | Refer to [Outbound network access destinations](#outbound-network-access-destinations) for information on network rules. |
+| My environment requires use of a proxy for outbound internet access | Refer to [Using a proxy](#using-a-proxy) for information on using a proxy with Cloudbreak. | 
 
 
-### Outbound Network Access Destinations
+### Outbound network access destinations
 
 To install and configure Cloudbreak, you will need the following outbound destinations available:
 
@@ -62,14 +62,16 @@ If you choose to (a) use the public hosted repositories, be sure to allow outbou
 * private-repo-1.hortonworks.com  
 * public-repo-1.hortonworks.com  
 
-### Using a Proxy 
+
+### Using a proxy 
 
 In some cases, your environment requires all internet traffic to go through an internet proxy. This section describes the following:
 
 * How to [set up Cloudbreak to use a proxy](#set-up-cloudbreak-to-use-a-proxy)  
 * How to [configure your cluster hosts to use a proxy](#set-up-clusters-to-use-a-proxy)  
 
-#### Set up Cloudbreak to Use a Proxy 
+
+#### Set up Cloudbreak to use a proxy 
 
 Use these steps if you would like to set up Cloudbreak to use your proxy. 
 
@@ -109,7 +111,7 @@ PROXY_PASSWORD=squid
 #HTTPS_PROXYFORCLUSTERCONNECTION=false</pre>
 
 
-#### Set up Clusters to Use a Proxy 
+#### Set up clusters to use a proxy 
 
 Use the following guidelines to find out what steps to perform in order to set up your clusters to use a proxy:  
 
@@ -123,7 +125,7 @@ Use the following guidelines to find out what steps to perform in order to set u
 You can define a proxy configuration as an external source in Cloudbreak web UI or CLI, and then (optionally) specify to configure that proxy configuration on the hosts that are part of the cluster during cluster create. Refer to [Register a Proxy](external-proxy.md) for more information.  
 
 
-#### Advanced Proxy Setup Scenarios 
+#### Advanced proxy setup scenarios 
 
 In some cases, Cloudbreak using the proxy might vary depending on your Cloudbreak -> cluster deployment. This section describes two scenarios:
 
@@ -131,7 +133,7 @@ In some cases, Cloudbreak using the proxy might vary depending on your Cloudbrea
 * **Scenario 2**: Cloudbreak needs to go through a proxy to access the Cloud provider APIs (and other public internet resources) and the cluster hosts.  
 
 
-##### **Scenario 1**
+**Scenario 1**
 
 In this scenario, Cloudbreak can resolve and communicate with the Ambari Server in the cluster hosts directly. For example, this can be a scenario where Cloudbreak is deployed in the same VPC/VNet as the clusters and will not go through the proxy. However, Cloudbreak will communicate to the public Cloud Provider APIs via the proxy.
 
@@ -142,7 +144,7 @@ To configure this scenario, set this setting in your Profile file:
 
 <a href="../images/cb_cb-proxy1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-proxy1.png" width="650" title="GCP Console"></a> 
 
-##### **Scenario 2**
+**Scenario 2**
 
 In this scenario, Cloudbreak will connect to the Ambari Server through the configured proxy. For example, this can be a scenario where Cloudbreak is deployed to a different VPC/VNet than the cluster and must go through a proxy. Communication to the public cloud provider APIs also is via the proxy.
 

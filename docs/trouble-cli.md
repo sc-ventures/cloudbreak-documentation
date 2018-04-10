@@ -1,6 +1,6 @@
 ## Troubleshooting Cloudbreak CLI
 
-### Special Characters in Blueprint Name Cause an Error  
+### Special characters in blueprint name cause an error  
 
 When registering a blueprint via `blueprint create` CLI command, if the name of the blueprint includes one or more of the following special characters `@#$%|:&*;` you will get an error similar to:  
 

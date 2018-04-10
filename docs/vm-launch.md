@@ -1,4 +1,4 @@
-## Installing Cloudbreak on Your Own VM
+## Installing Cloudbreak on your own VM
 
 This is an advanced deployment option. Select this option if you have custom VM requirements. Otherwise, you should use one of the pre-built images and follow these instructions:
 
@@ -7,7 +7,7 @@ This is an advanced deployment option. Select this option if you have custom VM 
 * [Launch on GCP](gcp-launch.md)  
 * [Launch on OpenStack](os-launch.md)   
 
-### System Requirements
+### System requirements
 
 To launch the Cloudbreak deployer and install the Cloudbreak application, your system must meet the following requirements:
 
@@ -26,13 +26,13 @@ To launch the Cloudbreak deployer and install the Cloudbreak application, you mu
 
 Ports 22 (SSH), 80 (HTTPS), and 443 (HTTPS) must be open.
 
-#### Root Access
+#### Root access
 
 Every command must be executed as root. In order to get root privileges execute:
 
 <pre>sudo -i</pre>
 
-#### System Updates
+#### System updates
 
 Ensure that your system is up-to-date by executing:
 
@@ -66,7 +66,7 @@ Additionally, review the following prerequisites:
 * [Prerequisites on OpenStack](os-launch.md#meet-the-prerequisites)
 
 
-### Install Cloudbreak on Your Own VM
+### Install Cloudbreak on your own VM
 
 Install Cloudbreak using the following steps.
 
@@ -122,14 +122,14 @@ cbd start</pre>
     <pre>cbd logs cloudbreak</pre>
 
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak normally takes less than a minute to start.
+å
 
 
-
-### Next Steps After Installing on Your Own VM
+### Next steps after installing on your own VM
 
 Log in to the Cloudbreak web UI and create a credential for Cloudbreak using the following platform-specific instructions:
 
-* [Access Cloudbreak UI on AWS](aws-launch.md#access-cloudbreak-ui)  
-* [Access Cloudbreak UI on Azure](azure-launch.md#access-cloudbreak-ui)  
-* [Access Cloudbreak UI on GCP](gcp-launch.md#access-cloudbreak-ui)  
-* [Access Cloudbreak UI on OpenStack](os-launch.md#access-cloudbreak-ui)  
+* [Access Cloudbreak web UI on AWS](aws-launch.md#access-cloudbreak-web-ui)  
+* [Access Cloudbreak web UI on Azure](azure-launch.md#access-cloudbreak-web-ui)  
+* [Access Cloudbreak web UI on GCP](gcp-launch.md#access-cloudbreak-web-ui)  
+* [Access Cloudbreak web UI on OpenStack](os-launch.md#access-cloudbreak-web-ui)  

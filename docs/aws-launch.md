@@ -6,11 +6,11 @@ Before launching Cloudbreak on AWS, review and meet the prerequisites. Next, lau
 
 Before launching Cloudbreak on AWS, you must meet the following prerequisites.
 
-#### AWS Account 
+#### AWS account 
 
 In order to launch Cloudbreak on AWS, you must log in to your AWS account. If you don't have an account, you can create one at [https://aws.amazon.com/](https://aws.amazon.com/).
 
-#### AWS Region
+#### AWS region
 
 Decide in which AWS region you would like to launch Cloudbreak. The following AWS regions are supported: 
 
@@ -28,10 +28,10 @@ Decide in which AWS region you would like to launch Cloudbreak. The following AW
 
 Clusters created via Cloudbreak can be in the same or different region as Cloudbreak; when you launch a cluster, you select the region in which to launch it.
 
-**Related Links**  
-[AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) (External)   
+**Related links**  
+[AWS regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) (External)   
 
-#### SSH Key Pair
+#### SSH key pair
 
 Import an existing key pair or generate a new key pair in the AWS region which you are planning to use for launching Cloudbreak and clusters. You can do this using the following steps.
 
@@ -46,8 +46,8 @@ Import an existing key pair or generate a new key pair in the AWS region which y
 
 You need this SSH key pair to SSH to the Cloudbreak instance and start Cloudbreak. 
 
-**Related Links**  
-[Creating a Key Pair Using Amazon EC2](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) (External)  
+**Related links**  
+[Creating a key pair using Amazon EC2](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) (External)  
 
 #### Authentication 
 
@@ -59,7 +59,7 @@ Before you can start using Cloudbreak for provisioning clusters, you must select
 
 * **Role-based**: This requires that you or your AWS admin create an IAM role to allow Cloudbreak to assume AWS roles (the "AssumeRole" policy).
 
-### (Option 1) Configure Key-based Authentication 
+### (Option 1) Configure key-based authentication 
 
 If you are using key-based authentication for Cloudbreak on AWS, you must be able to provide your AWS access key and secret key pair. Cloudbreak will use these keys to launch the resources. You must provide the access and secret keys later in the Cloudbreak web UI later when creating a credential. 
 
@@ -70,7 +70,7 @@ If you choose this option, all you need to do at this point is check your AWS ac
 If you choose this option, you can proceed to [Launch the VM](#launch-the-vm).
  
 
-### (Option 2) Configure Role-based Authentication
+### (Option 2) Configure role-based authentication
 
 {!docs/common/aws-launch-authentication-role-based-intro.md!}
 
@@ -300,12 +300,12 @@ Use the following "cb-policy" policy definition:
 
 Once you are done, you can proceed to [Launch the VM](#launch-the-vm).  
 
-**Related Links**  
-[Using Instance Profiles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) (External)  
-[Using an IAM Role to Grant Permissions to Applications](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) (External)   
+**Related links**  
+[Using instance profiles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) (External)  
+[Using an IAM Role to grant permissions to applications](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) (External)   
 
 
-### Launch the VM  
+### Launch Cloudbreak deployer VM from an image   
 
 Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM available as a Community AMI.
 
@@ -386,7 +386,7 @@ On Mac OS X, you can SSH to the VM by running the following from the Terminal ap
 On Windows, you can use [PuTTy](http://www.putty.org/).
 
 
-### Launch Cloudbreak Deployer 
+### Start Cloudbreak deployer 
 
 After accessing the VM via SSH, launch Cloudbreak deployer using the following steps.  
 
@@ -434,7 +434,7 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
     
 
-### Access Cloudbreak UI
+### Access Cloudbreak web UI
 
 Log in to the Cloudbreak UI using the following steps.
 
@@ -460,16 +460,16 @@ Log in to the Cloudbreak UI using the following steps.
     <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
 
 
-### Create Cloudbreak Credential
+### Create Cloudbreak credential
 
 Before you can start creating clusters, you must first create a [Cloudbreak credential](architecture.md#cloudbreak-credential). Without this credential, you will not be able to create clusters via Cloudbreak. 
 
 As part of the [prerequisites](#authentication), you had two options to allow Cloudbreak to authenticate with AWS and create resources on your behalf: key-based or role-based authentication. Depending on your choice, you must configure a key-based or role-based credential: 
 
-* [Create Key-Based Credential](#create-key-based-credential)  
-* [Create Role-Based Credential](#create-role-based-credential)
+* [Create key-based credential](#create-key-based-credential)  
+* [Create role-based credential](#create-role-based-credential)
 
-#### Create Key-Based Credential
+#### Create key-based credential
 
 To perform these steps, you must know your access and secret key. If needed, you or your AWS administrator can generate new access and secret keys from the **IAM Console** > **Users** > select a user > **Security credentials**. 
 
@@ -501,7 +501,7 @@ To perform these steps, you must know your access and secret key. If needed, you
     Congratulations! You've successfully launched Cloudbreak and create a Cloudbreak credential. Now it's time to [create a cluster](aws-create.md). 
  
 
-#### Create Role-Based Credential
+#### Create role-based credential
 
 To perform these steps, you must know the **IAM Role ARN** corresponding to the "CredentialRole" (configured as a [prerequisite](#authorization-for-cloudbreak)).  
 

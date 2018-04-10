@@ -1,4 +1,4 @@
-## Recipes
+## Creating Custom Scripts (Recipes)
 
 Although Cloudbreak lets you provision clusters in the cloud based on custom Ambari blueprints, Cloudbreak provisioning options don't consider all possible use cases. For that reason, we introduced recipes. 
 
@@ -14,7 +14,7 @@ Available recipe execution times are:
 You can upload your recipes to Cloudbreak via the UI or CLI. Then, when creating a cluster, you can optionally attach one or more "recipes" and they will be executed on a specific host group at a specified time. 
 
 
-### Writing Recipes
+### Writing recipes
 
 When using recipes, consider the following:
 
@@ -26,7 +26,7 @@ When using recipes, consider the following:
 * The scripts will be executed as root. The recipe output is written to `/var/log/recipes` on each node on which it was executed.
  
 
-#### Sample Recipe for Yum Proxy Setting
+#### Sample recipe for yum proxy setting
 
 ```
 #!/bin/bash
@@ -36,7 +36,7 @@ ENDOF
 ```
 
 
-### Add Recipes
+### Add recipes
 
 To add a recipe, perform these steps.
 
@@ -60,9 +60,4 @@ To add a recipe, perform these steps.
 5. When creating a cluster, you can select previously added recipes in the advanced **Recipes** page of the cluster wizard. 
 
 
-
-
-### Delete Recipes
-
-You can delete previously added items by selecting and item and using the **delete** option. 
 

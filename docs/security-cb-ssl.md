@@ -1,4 +1,4 @@
-## Add SSL Certificate for Cloudbreak UI 
+## Add SSL certificate for Cloudbreak web UI 
 
 By default Cloudbreak has been configured with a self-signed certificate for access via HTTPS. This is sufficient for many deployments such as trials, development, testing, or staging. However, for production deployments, a trusted certificate is preferred and can be configured in the controller. Follow these steps to configure the cloud controller to use your own trusted certificate. 
 
