@@ -13,12 +13,12 @@ To launch the Cloudbreak deployer and install the Cloudbreak application, your s
 
 * Minimum VM requirements: 16GB RAM, 40GB disk, 4 cores
 * Supported operating systems: RHEL, CentOS, and Oracle Linux 7 (64-bit)
-* Docker 1.9.1 must be installed 
+* Docker 1.9.1 must be installed
 
 > You can install Cloudbreak on Mac OS X for evaluation purposes only. Mac OS X is not supported for a production deployment of Cloudbreak.
 
 
-### Prerequisites 
+### Prerequisites
 
 To launch the Cloudbreak deployer and install the Cloudbreak application, you must first meet the following prerequisites:
 
@@ -28,7 +28,7 @@ Ports 22 (SSH), 80 (HTTPS), and 443 (HTTPS) must be open.
 
 #### Root Access
 
-Every command must be executed as root. In order to get root privileges execute: 
+Every command must be executed as root. In order to get root privileges execute:
 
 <pre>sudo -i</pre>
 
@@ -58,12 +58,12 @@ service iptables save
 
 #### More
 
-Additionally, review the following prerequisites: 
- 
+Additionally, review the following prerequisites:
+
 * [Prerequisites on AWS](aws-launch.md#meet-the-prerequisites)
 * [Prerequisites on Azure](azure-launch.md#meet-the-prerequisites)
 * [Prerequisites on GCP](gcp-launch.md#meet-the-prerequisites)
-* [Prerequisites on OpenStack](os-launch.md#meet-the-prerequisites) 
+* [Prerequisites on OpenStack](os-launch.md#meet-the-prerequisites)
 
 
 ### Install Cloudbreak on Your Own VM
@@ -75,7 +75,7 @@ Install Cloudbreak using the following steps.
 1. Install the Cloudbreak deployer and unzip the platform-specific single binary to your PATH. For example:
 
     <pre>yum -y install unzip tar
-curl -Ls curl -Ls public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer_2.5.0_$(uname)_x86_64.tgz | sudo tar -xz -C /bin cbd
+curl -Ls public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer_2.5.0_$(uname)_x86_64.tgz | sudo tar -xz -C /bin cbd
 cbd --version</pre>
 
 
@@ -93,13 +93,13 @@ export UAA_DEFAULT_USER_PW=MY-PASSWORD
 export UAA_DEFAULT_USER_EMAIL=MY-EMAIL</pre>
 
     For example:
-    
+
     <pre>export UAA_DEFAULT_SECRET=MySecret123
 export UAA_DEFAULT_USER_PW=MySecurePassword123
 export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
 
     > You will need to provide the email and password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.
-    
+
 4. Generate configurations by executing:
 
     <pre>rm *.yml
@@ -117,20 +117,19 @@ cbd start</pre>
 
     This will start the Docker containers and initialize the application. The first time you start the Cloudbreak app, the process will take longer than usual due to the download of all the necessary docker images.
 
-5. Next, check Cloudbreak application logs: 
+5. Next, check Cloudbreak application logs:
 
     <pre>cbd logs cloudbreak</pre>
-    
-    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak normally takes less than a minute to start.
-    
-    
 
-### Next Steps After Installing on Your Own VM 
+    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak normally takes less than a minute to start.
+
+
+
+### Next Steps After Installing on Your Own VM
 
 Log in to the Cloudbreak web UI and create a credential for Cloudbreak using the following platform-specific instructions:
- 
+
 * [Access Cloudbreak UI on AWS](aws-launch.md#access-cloudbreak-ui)  
 * [Access Cloudbreak UI on Azure](azure-launch.md#access-cloudbreak-ui)  
 * [Access Cloudbreak UI on GCP](gcp-launch.md#access-cloudbreak-ui)  
 * [Access Cloudbreak UI on OpenStack](os-launch.md#access-cloudbreak-ui)  
-
