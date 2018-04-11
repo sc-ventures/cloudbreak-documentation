@@ -172,7 +172,7 @@ Adds a blueprint from a local file:
 
 **Related links**
 
-[Blueprints](blueprints.md)
+[Using Custom Blueprints](blueprints.md)
 
 
 

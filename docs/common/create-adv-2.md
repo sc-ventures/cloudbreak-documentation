@@ -2,7 +2,7 @@
 
 By default, **Choose Image Catalog** is set to the default image catalog that is provided with Cloudbreak. If you would like to use a different image catalog, you must first create and register it. For complete instructions, refer to [Custom images](images.md).
 
-**Related Links**     
+**Related links**     
 [Custom images](images.md)  
 
 
@@ -57,9 +57,7 @@ If you would like to use a custom HDP or HDF version, provide the following info
 
 > If you choose to use a base image with custom Ambari and/or HDP/HDF version, Cloudbreak validates the information entered. When Cloudbreak detects that the information entered is incorrect, it displays a warning marked with the <img src="../images/cb_warning.png" width="25" title="Icon"> sign. You should review all the warnings before proceeding and make sure that the information that you entered is correct. If you choose to proceed in spite of the warnings, check "Ignore repository warnings".  
  
-
-
-**Related Links**      
+**Related links**      
 [Custom images](images.md)      
 
 
@@ -72,10 +70,10 @@ Check this option if you would like your cluster to be automatically terminated 
 
 #### Tags
 
-You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. refer to [Resource tagging](tags.md).
+You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. refer to [Tagging resources](tags.md).
 
-**Related Links**      
-[Resource tagging](tags.md) 
+**Related links**      
+[Tagging resources](tags.md) 
    
    
 

@@ -13,7 +13,7 @@
 {!docs/common/create-a5.md!}
 
 **Related Links**  
-[Blueprints](blueprints.md)   
+[Using custom blueprints](blueprints.md)   
 [Default cluster security groups](security.md#default-cluster-security-groups)   
 [CIDR](http://www.ipaddressguide.com/cidr) (External)   
 [Cloud locations](https://cloud.google.com/about/locations/) (External)  

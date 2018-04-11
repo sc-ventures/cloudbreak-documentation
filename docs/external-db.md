@@ -9,7 +9,7 @@ Cloudbreak includes the following external database options:
 | Option | Description | Blueprint Requirements | Steps | Example |
 |---|---|---|---|---|
 | **Built-in types** | Cloudbreak includes a few built-in types: Hive, Druid, Ranger, Superset, and Oozie. | Use a standard blueprint which does not include any JDBC  parameters. Cloudbreak automatically injects the JDBC property variables into the blueprint. | Simply [register the database in the UI](#register-an-external-database). After that, you can attach the database config to your clusters. | Refer to [Example 1](#example-1-built-in-type-hive) |
-| **Other types** | In addition to the built-in types, Cloudbreak allows you to specify custom types. In the UI, this corresponds to the UI option is called "Other" > "Enter the type". | You must provide a custom dynamic blueprint which includes RDBMS-specific variables. Refer to [Creating a Dynamic Blueprint](blueprints.md#creating-a-template-blueprint-for-rdmbs). | Prepare your custom blueprint first. Next, [register the database in the UI](#register-an-external-database). After that, you can attach the database config to your clusters. | Refer to [Example 2](#example-2-other-type) | 
+| **Other types** | In addition to the built-in types, Cloudbreak allows you to specify custom types. In the UI, this corresponds to the UI option is called "Other" > "Enter the type". | You must provide a custom dynamic blueprint which includes RDBMS-specific variables. Refer to [Creating a template blueprint](blueprints.md#creating-a-template-blueprint-for-rdmbs). | Prepare your custom blueprint first. Next, [register the database in the UI](#register-an-external-database). After that, you can attach the database config to your clusters. | Refer to [Example 2](#example-2-other-type) | 
 
 During cluster create, Cloudbreak checks whether the JDBC properties are present in the blueprint:
 
@@ -96,8 +96,8 @@ In this scenario, you start up with a special blueprint including JDBC property 
 In order to use an external RDBMS for some component other than the built-in components, you must include JDBC property variables in your blueprint. You must use [mustache template](https://mustache.github.io/) syntax. See [Example 2: Other type](#example-2-other-type) for an example configuration. 
 
 **Related links**  
-[Creating a Template Blueprint](blueprints.md#creating-a-template-blueprint)  
-[Mustache Template Syntax](https://mustache.github.io/) (External)  
+[Creating a template blueprint](blueprints.md#creating-a-template-blueprint)  
+[Mustache template syntax](https://mustache.github.io/) (External)  
 
 
 #### RDBMS Property Variables

@@ -2,7 +2,7 @@
 
 **Cloudbreak deployer** installs Cloudbreak components on a VM. Once these components are deployed, you can use **Cloudbreak application** or Cloudbreak CLI to create, manage, and monitor clusters. 
 
-### Cloudbreak Deployer Architecture
+### Cloudbreak deployer architecture
 
 **Cloudbreak deployer** installs Cloudbreak components on a VM. It includes the following components:
 
@@ -60,7 +60,7 @@ Cloudbreak includes a few default blueprints and allows you to upload your own b
 <a href="../images/cb_arch-blue.png" target="_blank" title="click to enlarge"><img src="../images/cb_arch-blue.png" width="500" title="How Cb uses Ambari blueprints"></a> 
 
 **Related links**  
-[Blueprints](security.md#identity-management)  
+[Using custom blueprints](security.md#identity-management)  
 [Apache documentation](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) (External)  
 
 
@@ -78,6 +78,6 @@ Available recipe execution times are:
 You can upload your recipes to Cloudbreak via the UI or CLI. Then, when creating a cluster, you can optionally attach one or more "recipes" and they will be executed on a specific host group at a specified time. 
 
 **Related links**  
-[Recipes](recipes.md) 
+[Using custom scripts (recipes)](recipes.md) 
 
    

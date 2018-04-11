@@ -15,7 +15,7 @@
 {!docs/common/create-a5.md!}
 
 **Related links**  
-[Blueprints](blueprints.md)   
+[Using custom blueprints](blueprints.md)   
 [Default cluster security groups](security.md#default-cluster-security-groups)  
 [Amazon EC2 instance types](https://aws.amazon.com/ec2/instance-types/) (External)   
 [AWS regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) (External)     

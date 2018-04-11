@@ -302,10 +302,10 @@ Once you are done, you can proceed to [Launch the VM](#launch-the-vm).
 
 **Related links**  
 [Using instance profiles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) (External)  
-[Using an IAM Role to grant permissions to applications](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) (External)   
+[Using an IAM role to grant permissions to applications](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) (External)   
 
 
-### Launch Cloudbreak deployer VM from an image   
+### Launch Cloudbreak deployer from an image   
 
 Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM available as a Community AMI.
 

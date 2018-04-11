@@ -1,4 +1,4 @@
-## Autoscaling 
+## Configuring autoscaling 
 
 Autoscaling allows you to adjust cluster capacity based on Ambari metrics and alerts, as well as schedule time-based capacity adjustment. When creating an autoscaling policy, you define:
 
@@ -26,7 +26,7 @@ Time-based alerts can be defined by providing a cron expression. For example:
 | Every day at 08:00 PM (GMT-8) | Remove 90 worker nodes |
  
 
-### Enable auto scaling 
+### Enable autoscaling 
 
 For each newly created cluster, autoscaling is disabled by default but it can be enabled once the cluster is in a running state. 
 

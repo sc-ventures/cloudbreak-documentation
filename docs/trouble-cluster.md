@@ -46,7 +46,7 @@ The general steps are:
 
 **Related links**  
 [Add recipes](recipes.md#add-recipes)  
-[Recipes](recipes.md)  
+[Using custom scripts (recipes)](recipes.md)  
 
 
 ### Quota limitations

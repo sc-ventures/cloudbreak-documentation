@@ -1,8 +1,8 @@
 Use these steps to create a cluster.
 
 <div class="note">
-<p class="first admonition-title">Troubleshooting Cluster Creation</p>
-<p class="last">If you experience problems during cluster creation, refer to <a href="../trouble-cluster/index.html">Troubleshooting Cluster Creation</a>.</p></div>
+<p class="first admonition-title">Troubleshooting cluster creation</p>
+<p class="last">If you experience problems during cluster creation, refer to <a href="../trouble-cluster/index.html">Troubleshooting cluster creation</a>.</p></div>
 
 **Steps**
 

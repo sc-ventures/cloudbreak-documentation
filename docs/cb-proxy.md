@@ -28,7 +28,7 @@ To install and configure Cloudbreak, you will need the following outbound destin
     <td>Obtain Cloudbreak dependencies.</td> 
   </tr>
   <tr>
-  <td>cloudbreak-imagecatalog.s3.amazonaws.com </td><td> The default Cloudbreak image catalog used for VMs. Refer to <a href="../images/index.html">Custom Images</a> for more information on image catalogs. </td>
+  <td>cloudbreak-imagecatalog.s3.amazonaws.com </td><td> The default Cloudbreak image catalog used for VMs. Refer to <a href="../images/index.html">Custom images</a> for more information on image catalogs. </td>
   </tr>
 </table>
 

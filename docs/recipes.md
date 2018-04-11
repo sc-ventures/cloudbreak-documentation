@@ -1,4 +1,4 @@
-## Creating Custom Scripts (Recipes)
+## Creating Custom Scripts (recipes)
 
 Although Cloudbreak lets you provision clusters in the cloud based on custom Ambari blueprints, Cloudbreak provisioning options don't consider all possible use cases. For that reason, we introduced recipes. 
 

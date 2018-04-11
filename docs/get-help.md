@@ -1,5 +1,5 @@
 
-## Getting Help
+## Getting help
 
 If you need help with Cloudbreak, you have two options:
 

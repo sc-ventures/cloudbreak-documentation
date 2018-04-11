@@ -8,7 +8,7 @@ Before launching Cloudbreak on your OpenStack, make sure that your OpenStack dep
 
 #### Supported Linux distributions
 
-The following versions of the [Red Hat Distribution of OpenStack](https://www.rdoproject.org/) (RDO) are supported:
+The following versions of the [Red Hat distribution of OpenStack](https://www.rdoproject.org/) (RDO) are supported:
 
 * Juno
 * Kilo
@@ -27,7 +27,7 @@ Cloudbreak requires that the following standard modules are installed and config
 * Cinder (Optional)
 * Heat (Optional but highly recommended, since provisioning through native API calls will be deprecated in the future)
 
-**Related links**
+**Related links**  
 [Red Hat distribution of OpenStack](https://www.rdoproject.org/) (External)
 
 
@@ -45,7 +45,7 @@ In order to launch Cloudbreak, you must have an existing security group with the
 
 For information about OpenStack security groups, refer to the [OpenStack Administrator Guide](https://docs.openstack.org/ops-guide/index.html).
 
-**Related Links**
+**Related links**  
 [OpenStack Administrator Guide](https://docs.openstack.org/ops-guide/index.html) (External)
 
 
@@ -252,7 +252,7 @@ Log in to the Cloudbreak UI using the following steps.
 
 3. The login page is displayed:
 
-    <a href="../images/cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui.png" width="650" title="Cloudbreak web UI"></a>
+    <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Cloudbreak web UI"></a>
 
 4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer):
 
@@ -261,7 +261,7 @@ Log in to the Cloudbreak UI using the following steps.
 
 5. Upon a successful login, you are redirected to the dashboard:
 
-    <a href="../images/cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb-ui1.png" width="650" title="Cloudbreak web UI"></a>
+    <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>
 
 
 ### Create Cloudbreak credential
@@ -276,7 +276,7 @@ Cloudbreak works by connecting your OpenStack account through this credential, a
 
 3. Under **Cloud provider**, select "Google Cloud Platform".
 
-    <a href="../images/cb-os-cred.png" target="_blank" title="click to enlarge"><img src="../images/cb-os-cred.png" width="650" title="Cloudbreak web UI"></a>
+    <a href="../images/cb_cb-os-cred.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-os-cred.png" width="650" title="Cloudbreak web UI"></a>
 
 3. Select the keystone version.
 

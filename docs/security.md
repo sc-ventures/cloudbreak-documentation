@@ -3,11 +3,11 @@
 Cloudbreak utilizes cloud provider security resources such as virtual networks, security groups, and identity and access management:
 
 1. **Network isolation** is achieved via user-configured virtual networks and subnets.  
-    Read more about [Virtual networks](#virtual-networks).  
+    Read more about [virtual networks](#virtual-networks).  
 2. **Network security** is achieved via out-of-the-box security group settings.  
-    Read more about [Network security](#network-security).   
+    Read more about [network security](#network-security).   
 3. **Controlled use of cloud resources** using IAM roles (AWS, GCP) or Active Directory (in case of Azure). 
-    Read more about [Identity management](#identity-management).    
+    Read more about [identity management](#identity-management).    
  
 
 ### Virtual networks
@@ -26,7 +26,7 @@ Cloud providers use virtual networks which resemble traditional networks. Depend
 
 Security groups are set up to control network traffic to the instances in the system.
 
-Cloudbreak uses public IP addresses when communicating with cluster nodes. On AWS, you can configure it to use private IPs instead. For instructions, refer to [Configure Communication via Private IPs on AWS](trouble-cluster.md#configure-communication-via-private-ips-on-aws).  
+Cloudbreak uses public IP addresses when communicating with cluster nodes. On AWS, you can configure it to use private IPs instead. For instructions, refer to [Configure communication via private IPs on AWS](trouble-cluster.md#configure-communication-via-private-ips-on-aws).  
 
 #### Cloudbreak instance security group
 
@@ -56,7 +56,7 @@ As an alternative to creating new security groups, you can select from your exis
 <p class="first admonition-title">Important</p>
 <p class="last">
 By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access on the Ambari node security group. We strongly recommend that you limit this CIDR, considering the following restrictions:
-<ul><li>Ports 22 and 9443 must be open to Cloudbreak's CIDR. You can set CB_DEFAULT_GATEWAY_CIDR in your Cloudbreak's Profile file in order to automatically open ports 22 and 9443 to your Cloudbreak IP. Refer to <a href="../security-cb/index.html#restricting-inbound-access-to-clusters">Restricting Inbound Access from Cloudbreak to Cluster</a>.</li>
+<ul><li>Ports 22 and 9443 must be open to Cloudbreak's CIDR. You can set CB_DEFAULT_GATEWAY_CIDR in your Cloudbreak's Profile file in order to automatically open ports 22 and 9443 to your Cloudbreak IP. Refer to <a href="../security-cb/index.html#restricting-inbound-access-to-clusters">Restricting inbound access from Cloudbreak to cluster</a>.</li>
 <li>Port 22 must be open to your CIDR if you would like to access the master node via SSH.</li>
 <li>Port 443 must be open to your CIDR if you would like to access Ambari web UI in a browser.</li></ul>  
 </p>

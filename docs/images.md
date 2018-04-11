@@ -31,7 +31,7 @@ Only <strong>base images</strong> can be created and registered as custom images
 
 ### Build custom images
 
-Refer to [Custom Images for Cloudbreak](https://github.com/hortonworks/cloudbreak-images) for information on how to build custom images.
+Refer to [Custom images for Cloudbreak](https://github.com/hortonworks/cloudbreak-images) for information on how to build custom images.
 
 This repository includes instructions and scripts to help you build custom images. Once you have the images, refer to the documentation below for information on how to create an image catalog and register it with Cloudbreak.
 
@@ -50,7 +50,7 @@ The image catalog JSON file includes the following two high-level sections:
 
 > After adding your image(s) to the `images` section, make sure to also update the `versions` section. 
 
-**Images Section**  
+**Images section**  
 
 The burned images are stored in the `base-images` sub-section of `images`. The `base-images` section stores one or more image "records". Every image "record" must contain the date, description, images, os, os_type, and uuid fields.
 
@@ -63,7 +63,7 @@ The burned images are stored in the `base-images` sub-section of `images`. The `
 | os_type | The type of operating system which will be used to determine the default Ambari and HDP/HDF repositories to use. Set `os_type` to "redhat6" for amazonlinux or centos6 images. Set `os_type` to "redhat7" for centos7 or rhel7 images. |
 | uuid | The `uuid` field must be a unique identifier within the file. You can generate it or select it manually. The utility `uuidgen` available from your command line is a convenient way to generate a unique ID. |
 
-**Versions Section**  
+**Versions section**  
 
 The `versions` section includes a single "cloudbreak" entry, which maps the uuids to a specific Cloudbreak version:
 
