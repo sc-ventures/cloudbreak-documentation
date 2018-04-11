@@ -65,7 +65,7 @@ In this scenario, you start up with a special blueprint including JDBC property 
     <pre>...
 "test-site": {
     "properties": {
-       "javax.jdo.option.ConnectionURL":"{{rds.test.connectionURL}}"
+       "javax.jdo.option.ConnectionURL":"{{{rds.test.connectionURL}}}"
       }
 ...</pre>
 
