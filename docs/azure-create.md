@@ -10,12 +10,14 @@
 {!docs/common/create-a5.md!}
 
 **Related links**  
+[Flex support subscription](get-help.md#flex-subscription)  
 [Using custom blueprints](blueprints.md)   
-[Default cluster security groups](security.md#default-cluster-security-groups)   
+[Default cluster security groups](security.md#default-cluster-security-groups)  
+[Troubleshooting cluster creation](trouble-cluster.md)   
 [Azure regions](https://azure.microsoft.com/en-us/regions/) (External)     
 [CIDR](http://www.ipaddressguide.com/cidr) (External)  
 [General purpose Linux VM sizes](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general) (External)  
-
+ 
 
 
 ### Advanced cluster options

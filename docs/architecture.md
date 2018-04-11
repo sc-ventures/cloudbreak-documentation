@@ -60,7 +60,7 @@ Cloudbreak includes a few default blueprints and allows you to upload your own b
 <a href="../images/cb_arch-blue.png" target="_blank" title="click to enlarge"><img src="../images/cb_arch-blue.png" width="500" title="How Cb uses Ambari blueprints"></a> 
 
 **Related links**  
-[Using custom blueprints](security.md#identity-management)  
+[Using custom blueprints](blueprints.md)  
 [Apache documentation](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) (External)  
 
 

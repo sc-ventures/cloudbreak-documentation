@@ -21,7 +21,7 @@ You can manage monitor your clusters from the Cloudbreak UI. To do that, click o
 
 To resize a cluster, follow these steps.
 
-> To configure automated cluster scaling, refer to [Autoscaling](autoscaling.md).  
+> To configure automated cluster scaling, refer to [Configure autoscaling](autoscaling.md).  
 
 **Steps**
 

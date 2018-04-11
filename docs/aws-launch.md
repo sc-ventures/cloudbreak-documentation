@@ -14,7 +14,7 @@ In order to launch Cloudbreak on AWS, you must log in to your AWS account. If yo
 
 Decide in which AWS region you would like to launch Cloudbreak. The following AWS regions are supported: 
 
-| Region Name | Region | 
+| Region name | Region | 
 |---|---|
 | EU (Ireland) | eu-west-1 |
 | EU (Frankfurt) | eu-central-1 |	
@@ -67,7 +67,7 @@ If you choose this option, all you need to do at this point is check your AWS ac
 
 <a href="../images/cb_aws-iam_security_creds.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-iam_security_creds.png" width="650" title="IAM Console"></a> 
 
-If you choose this option, you can proceed to [Launch the VM](#launch-the-vm).
+If you choose this option, you can proceed to [Launch Cloudbreak deployer from an image](#launch-cloudbreak-deployer-from-an-image).
  
 
 ### (Option 2) Configure role-based authentication
@@ -298,7 +298,7 @@ Use the following "cb-policy" policy definition:
     
 11. When done, click **Create role** to finish the role creation process. 
 
-Once you are done, you can proceed to [Launch the VM](#launch-the-vm).  
+Once you are done, you can proceed to [Launch Cloudbreak deployer from an image](#launch-cloudbreak-deployer-from-an-image).  
 
 **Related links**  
 [Using instance profiles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) (External)  
@@ -450,7 +450,7 @@ Log in to the Cloudbreak UI using the following steps.
 
     <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
 
-4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer):
+4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [starting Cloudbreak deployer](#start-cloudbreak-deployer):
 
     * The username is the `UAA_DEFAULT_USER_EMAIL`     
     * The password is the `UAA_DEFAULT_USER_PW` 
@@ -503,7 +503,7 @@ To perform these steps, you must know your access and secret key. If needed, you
 
 #### Create role-based credential
 
-To perform these steps, you must know the **IAM Role ARN** corresponding to the "CredentialRole" (configured as a [prerequisite](#authorization-for-cloudbreak)).  
+To perform these steps, you must know the **IAM Role ARN** corresponding to the "CredentialRole" (configured as a [prerequisite](#authentication)).  
 
 **Steps**
 

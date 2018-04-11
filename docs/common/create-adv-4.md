@@ -1,16 +1,17 @@
 
 #### Recipes
 
-This option allows you to select previously uploaded recipes (scripts that can be run pre or post cluster deployment) for each host group. For more information on recipes, refer to [Recipes](recipes.md). 
+This option allows you to select previously uploaded recipes (scripts that can be run pre or post cluster deployment) for each host group. For more information on recipes, refer to [Using custom scripts (recipes)](recipes.md). 
 
 **Related links**      
-[Using Custom Scripts (recipes)](recipes.md) 
+[Using custom scripts (recipes)](recipes.md) 
+
 
 #### External sources 
 
 You can register external sources with Cloudbreak and then select them during cluster create. To register external sources with Cloudbreak, refer to:
 
-* [Register authentication source](external-ldap.md)    
-* [Register external database](external-db.md)  
-* [Register proxy](external-proxy.md)  
+* [Using an external authentication source](external-ldap.md)    
+* [Using an external database](external-db.md)  
+* [Register a proxy](external-proxy.md)  
 

@@ -14,7 +14,7 @@ If you want to use ADLS to store your data, you must enable Azure subscription f
 
 #### Configure access to ADLS 
 
-ADLS is not supported as a default file system, but access to data in ADLS via the adl connector. To configure access to ADLS from a cluster managed via Cloudbreak use the steps described in [How to Configure authentication with ADLS](https://community.hortonworks.com/articles/105994/how-to-configure-authentication-with-adls.html).
+ADLS is not supported as a default file system, but access to data in ADLS via the adl connector. To configure access to ADLS from a cluster managed via Cloudbreak use the steps described in [How to configure authentication with ADLS](https://community.hortonworks.com/articles/105994/how-to-configure-authentication-with-adls.html).
 
 #### Test access to ADLS
 

@@ -14,9 +14,11 @@
 {!docs/common/create-a4.md!}
 {!docs/common/create-a5.md!}
 
-**Related links**  
+**Related links**   
+[Flex support subscription](get-help.md#flex-subscription)  
 [Using custom blueprints](blueprints.md)   
 [Default cluster security groups](security.md#default-cluster-security-groups)  
+[Troubleshooting cluster creation](trouble-cluster.md)    
 [Amazon EC2 instance types](https://aws.amazon.com/ec2/instance-types/) (External)   
 [AWS regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) (External)     
 [CIDR](http://www.ipaddressguide.com/cidr) (External)   
@@ -55,7 +57,10 @@ After creating a cluster, you can view your spot instance requests, including bi
 
 #### File system 
 
-If you would like to access S3 from your cluster, you must configure access to S3 trough an instance profile. For instructions, refer to [Configuring access to S3](aws-data.md#configuring-access-to-s3). 
+If you would like to access S3 from your cluster, you must configure access to S3 trough an instance profile. For instructions, refer to [Configure access to S3](aws-data.md#configure-access-to-s3). 
+
+**Related links**  
+[Configure access to S3](aws-data.md#configure-access-to-s3)  
 
 
 {!docs/common/create-adv-4.md!}

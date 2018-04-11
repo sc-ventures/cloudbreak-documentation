@@ -10,8 +10,10 @@
 {!docs/common/create-a5.md!}
 
 **Related links**  
+[Flex support subscription](get-help.md#flex-subscription)  
 [Using custom blueprints](blueprints.md)   
 [Default cluster security groups](security.md#default-cluster-security-groups)  
+[Troubleshooting cluster creation](trouble-cluster.md)    
 [CIDR](https://www.ipaddressguide.com/cidr) (External)    
     
 

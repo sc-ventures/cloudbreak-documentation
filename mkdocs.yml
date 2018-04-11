@@ -40,6 +40,8 @@ pages:
       - Create a cluster: os-create.md
       - Access cluster: os-clusters-access.md
       - Manage and monitor clusters: os-clusters-manage.md
+    - VM:
+      - Install Cloudbreak on your own VM: vm-launch.md 
     - Using Cloudbreak:
       - Advanced cluster options:
         - Use custom blueprints: blueprints.md
@@ -52,12 +54,11 @@ pages:
         - Register external authentication source: external-ldap.md  
         - Register proxy configuration: external-proxy.md  
       - Manage and configure Cloudbreak:  
-        - Install Cloudbreak on your own VM: vm-launch.md
         - Upgrade Cloudbreak: cb-upgrade.md 
         - Manage Cloudbreak credentials: cb-credentials.md 
         - Move Cloudbreak instance: cb-migrate.md 
         - Configure LDAP/AD authentication for Cloudbreak: cb-ldap.md  
-        - Configure SSL certificates: security-cb-ssl.md
+        - Add SSL certificate for Cloudbreak UI: security-cb-ssl.md
         - Configure outbound internet access and proxy: cb-proxy.md 
         - Restrict inbound access to clusters: security-cb-inbound.md
         - Configure access from custom domains: security-cb-customdom.md

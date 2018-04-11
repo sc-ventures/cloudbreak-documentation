@@ -95,7 +95,7 @@ export UAA_DEFAULT_USER_PW=''
 cbd util add-default-user
 </pre>
 
-For more information about setting environment variables in Profile, refer to [Configure Profile variables](#configure-profile-variables).
+For more information about setting environment variables in Profile, refer to [Set Profile variables](#set-profile-variables).
 
 
 ### Change SMTP parameters

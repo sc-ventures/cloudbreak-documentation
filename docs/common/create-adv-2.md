@@ -1,16 +1,16 @@
 #### Choose image catalog
 
-By default, **Choose Image Catalog** is set to the default image catalog that is provided with Cloudbreak. If you would like to use a different image catalog, you must first create and register it. For complete instructions, refer to [Custom images](images.md).
+By default, **Choose Image Catalog** is set to the default image catalog that is provided with Cloudbreak. If you would like to use a different image catalog, you must first create and register it. For complete instructions, refer to [Using custom images](images.md).
 
 **Related links**     
-[Custom images](images.md)  
+[Using custom images](images.md)  
 
 
 #### Prewarmed and base images 
 
 Cloudbreak supports the following types of images for launching clusters:
 
-| Image Type | Description | Default Images Provided | Support for Custom Images |
+| Image type | Description | Default images provided | Support for custom images |
 |---|---|---|---|
 | **Base Images** | Base images include default configuration and default tooling. These images include the operating system but do not include Ambari or HDP/HDF software. | Yes | Yes | 
 | **Prewarmed Images** | By default, Cloudbreak launches clusters from prewarmed images. Prewarmed images include the operating system as well as Ambari and HDP. The Ambari and HDP version used by prewarmed images cannot be customized. No prewarmed HDF images are currently provided. | Yes (HDP only) | No |
@@ -23,7 +23,7 @@ Ambari and HDP/HDF packages installed. You can optionally select the **base imag
 
 **Choose image**  
 
-If under [Choose image catalog](#choose-image-catalog), you selected a custom image catalog, under **Choose Image** you can select an image from that catalog. For complete instructions, refer to [Custom images](images.md). 
+If under [Choose image catalog](#choose-image-catalog), you selected a custom image catalog, under **Choose Image** you can select an image from that catalog. For complete instructions, refer to [Using custom images](images.md). 
 
 If you are trying to customize Ambari and HDP/HDF versions, you can ignore the **Choose Image** option; in this case default base image is used.
 
@@ -58,7 +58,7 @@ If you would like to use a custom HDP or HDF version, provide the following info
 > If you choose to use a base image with custom Ambari and/or HDP/HDF version, Cloudbreak validates the information entered. When Cloudbreak detects that the information entered is incorrect, it displays a warning marked with the <img src="../images/cb_warning.png" width="25" title="Icon"> sign. You should review all the warnings before proceeding and make sure that the information that you entered is correct. If you choose to proceed in spite of the warnings, check "Ignore repository warnings".  
  
 **Related links**      
-[Custom images](images.md)      
+[Using custom images](images.md)      
 
 
 #### Enable lifetime management 

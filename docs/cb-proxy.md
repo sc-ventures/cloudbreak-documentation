@@ -36,8 +36,8 @@ Once Cloudbreak is installed and configured, you will need the following outboun
 
 <table>
 <tr>
-    <th>Cloud Provider</th>
-    <th>Cloud Provider API Destinations</th> 
+    <th>Cloud provider</th>
+    <th>Cloud provider API destinations</th> 
   </tr>
   <tr>
   <td>Amazon Web Services</td>

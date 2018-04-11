@@ -13,8 +13,10 @@
 {!docs/common/create-a5.md!}
 
 **Related Links**  
+[Flex support subscription](get-help.md#flex-subscription)  
 [Using custom blueprints](blueprints.md)   
-[Default cluster security groups](security.md#default-cluster-security-groups)   
+[Default cluster security groups](security.md#default-cluster-security-groups)  
+[Troubleshooting cluster creation](trouble-cluster.md)      
 [CIDR](http://www.ipaddressguide.com/cidr) (External)   
 [Cloud locations](https://cloud.google.com/about/locations/) (External)  
 [Machine types](https://cloud.google.com/compute/docs/machine-types) (External)     

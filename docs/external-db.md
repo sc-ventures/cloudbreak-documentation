@@ -6,7 +6,7 @@ Cloudbreak allows you to register an existing RDBMS instance to be used for a da
 
 Cloudbreak includes the following external database options:
 
-| Option | Description | Blueprint Requirements | Steps | Example |
+| Option | Description | Blueprint requirements | Steps | Example |
 |---|---|---|---|---|
 | **Built-in types** | Cloudbreak includes a few built-in types: Hive, Druid, Ranger, Superset, and Oozie. | Use a standard blueprint which does not include any JDBC  parameters. Cloudbreak automatically injects the JDBC property variables into the blueprint. | Simply [register the database in the UI](#register-an-external-database). After that, you can attach the database config to your clusters. | Refer to [Example 1](#example-1-built-in-type-hive) |
 | **Other types** | In addition to the built-in types, Cloudbreak allows you to specify custom types. In the UI, this corresponds to the UI option is called "Other" > "Enter the type". | You must provide a custom dynamic blueprint which includes RDBMS-specific variables. Refer to [Creating a template blueprint](blueprints.md#creating-a-template-blueprint-for-rdmbs). | Prepare your custom blueprint first. Next, [register the database in the UI](#register-an-external-database). After that, you can attach the database config to your clusters. | Refer to [Example 2](#example-2-other-type) | 
@@ -24,7 +24,7 @@ In this scenario, you start up with a standard blueprint, and Cloudbreak injects
 
     <a href="../images/cb_cb-rdbms-e1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-rdbms-e1.png" width="550" title="Cloudbreak web UI"></a>
     
-    | Property Variable | Example Value |
+    | Property variable | Example value |
 |---|---|
 | rds.hive.connectionURL | jdbc:postgresql://hive.test.eu-west-1:5432/hive |
 | rds.hive.connectionDriver | org.postgresql.Driver | 
@@ -74,7 +74,7 @@ In this scenario, you start up with a special blueprint including JDBC property 
 
     <a href="../images/cb_cb-rdbms-e2.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-rdbms-e2.png" width="550" title="Cloudbreak web UI"></a>
     
-    | Property Variable | Example Value |
+    | Property variable | Example value |
 |---|---|
 | rds.hive.connectionURL | db.test.eu-west-1:5432/sometest |
 | rds.hive.connectionDriver | org.postgresql.Driver | 
@@ -100,7 +100,7 @@ In order to use an external RDBMS for some component other than the built-in com
 [Mustache template syntax](https://mustache.github.io/) (External)  
 
 
-#### RDBMS Property Variables
+#### RDBMS property variables
 
 Cloudbreak utilizes the following RDBMS related variables, where [type] can be one of [hive,druid,oozie,ranger,superset] or other specified by you (for example "beacon").
 

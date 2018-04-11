@@ -42,7 +42,7 @@ When launching Cloudbreak, you will be required to provide your public SSH key. 
 * On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
 
 
-### Launch Cloudbreak from a Template 
+### Launch Cloudbreak from a template 
 
 Launch Cloudbreak deployer using the following steps.
 
@@ -93,7 +93,7 @@ Launch Cloudbreak deployer using the following steps.
 
 6. Your deployment should be initiated.  
 
-    > If you encounter errors, refer to [Troubleshooting Azure](trouble-azure.md).   
+    > If you encounter errors, refer to [Troubleshooting Cloudbreak on Azure](trouble-azure.md).   
 
 
 **Related links**  
@@ -272,7 +272,7 @@ Follow these steps to create an app based Cloudbreak credential.
 
 1. Click **Create**.
 
-    > If you encounter errors, refer to [Troubleshooting Azure](trouble-azure.md).  
+    > If you encounter errors, refer to [Troubleshooting Cloudbreak on Azure](trouble-azure.md).  
 
      Congratulations! You have successfully launched Cloudbreak and created a Cloudbreak credential. Now you can use Cloudbreak to [create clusters](azure-create.md).
 

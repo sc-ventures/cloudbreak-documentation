@@ -4,7 +4,7 @@ Default images are available for each supported cloud provider and region. The f
 
 [Comment]: <> (For AWS and Azure, per region images are provided.)
 
-| Cloud Provider | Default Image |
+| Cloud provider | Default image |
 |---|---|
 | AWS | Amazon Linux 2017 |
 | Azure | CentOS 7 |

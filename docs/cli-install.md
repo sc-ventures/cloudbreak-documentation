@@ -53,12 +53,12 @@ Once you have installed the CLI, you need to configure the CLI to work with Clou
 
 
 <div class="note">
-    <p class="first admonition-title">Configuration Precedence</p>
+    <p class="first admonition-title">Configuration precedence</p>
     <p class="last">
     The CLI can look for configuration options from different locations. You can optionally
     pass the configuration options on each command or from environment variables. The following
-    order is used for the CLI to look for configuration options: <strong>Command Line</strong>, <strong>Environment Variables</strong>
-    and the <strong>Configuration File</strong>.
+    order is used for the CLI to look for configuration options: <strong>Command line</strong>, <strong>Environment variables</strong>
+    and the <strong>Configuration file</strong>.
     </p>
 </div>
 

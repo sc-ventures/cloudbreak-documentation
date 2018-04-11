@@ -14,7 +14,7 @@ Cloudbreak utilizes cloud provider security resources such as virtual networks, 
 
 Cloud providers use virtual networks which resemble traditional networks. Depending on the options that you selected during deployment, your Cloudbreak instance and clusters are launched into new or existing cloud provider networking infrastructure (virtual networks and subnets). For more information about virtual networks, refer to the cloud-provider documentation:
   
-| Cloud Provider | Documentation Link |
+| Cloud provider | External documentation link |
 |---|---|
 | AWS | [Amazon Virtual Private Cloud (Amazon VPC)](https://aws.amazon.com/documentation/vpc/) |
 | Azure | [Microsoft Azure Virtual Network](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) |
@@ -32,7 +32,7 @@ Cloudbreak uses public IP addresses when communicating with cluster nodes. On AW
 
 The following table lists the minimum security group port configuration required for the Cloudbreak instance:
 
-| Inbound Port | Description |
+| Inbound port | Description |
 |---|---|
 | 22 | SSH access to the Cloudbreak VM. |
 | 80 | HTTP access to the Cloudbreak UI. This is automatically redirected to the HTTPS (443) port. |
@@ -46,7 +46,7 @@ As an alternative to creating new security groups, you can select from your exis
  
 **Cluster host group with Ambari server**
 
-| Inbound Port | Description |
+| Inbound port | Description |
 |---|---|
 | 22 | SSH access to the VM instance. This port is also used by Cloudbreak to communicate with the cluster. |
 | 443 | HTTPS access to the Ambari UI. |
@@ -56,7 +56,7 @@ As an alternative to creating new security groups, you can select from your exis
 <p class="first admonition-title">Important</p>
 <p class="last">
 By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access on the Ambari node security group. We strongly recommend that you limit this CIDR, considering the following restrictions:
-<ul><li>Ports 22 and 9443 must be open to Cloudbreak's CIDR. You can set CB_DEFAULT_GATEWAY_CIDR in your Cloudbreak's Profile file in order to automatically open ports 22 and 9443 to your Cloudbreak IP. Refer to <a href="../security-cb/index.html#restricting-inbound-access-to-clusters">Restricting inbound access from Cloudbreak to cluster</a>.</li>
+<ul><li>Ports 22 and 9443 must be open to Cloudbreak's CIDR. You can set CB_DEFAULT_GATEWAY_CIDR in your Cloudbreak's Profile file in order to automatically open ports 22 and 9443 to your Cloudbreak IP. Refer to <a href="../security-cb-inbound/index.html">Restricting inbound access from Cloudbreak to cluster</a>.</li>
 <li>Port 22 must be open to your CIDR if you would like to access the master node via SSH.</li>
 <li>Port 443 must be open to your CIDR if you would like to access Ambari web UI in a browser.</li></ul>  
 </p>
@@ -65,7 +65,7 @@ By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access
 
 **Cluster host groups without the Ambari server**
 
-| Inbound Port | Description |
+| Inbound port | Description |
 |---|---|
 | 22 | SSH access to the VM instance. |
 
@@ -82,7 +82,7 @@ When creating a new security group, Cloudbreak uses the following naming convent
 
 To securely control access to cloud resources, cloud providers use identity management services such as IAM roles (AWS and GCP) and Active Directory (Azure). 
 
-| Cloud Provider | Documentation Link | 
+| Cloud provider | External documentation link | 
 |---|---|
 | AWS | [AWS Identity and Access Management (IAM)](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) |
 | Azure | [Azure Active Directory ((Azure AD))](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) | 

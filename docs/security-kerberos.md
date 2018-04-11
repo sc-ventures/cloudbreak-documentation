@@ -34,7 +34,7 @@ You have the following options for enabling Kerberos in a Cloudbreak  managed cl
 | Option | Description | Environment |
 |---|---|---|
 | [Use existing KDC](#using-existing-kdc) | <p>Allows you to leverage an existing MIT KDC or Active Directory for enabling Kerberos with the cluster.<p/><p>You can either provide the required parameters and Cloudbreak will generate the descriptors on your behalf, or provide the exact Ambari Kerberos descriptors to be injected into your blueprint in JSON format.</p> | Suitable for production |
-| [Use test KDC](#use-test-kdc) | <p>Installs a new MIT KDC on the master node and configures the cluster to leverage that KDC.</p> | Suitable for evaluation and testing only, not suitable for production |
+| [Use test KDC](#using-test-kdc) | <p>Installs a new MIT KDC on the master node and configures the cluster to leverage that KDC.</p> | Suitable for evaluation and testing only, not suitable for production |
 
 #### Using existing KDC 
 

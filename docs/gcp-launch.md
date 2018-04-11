@@ -55,7 +55,7 @@ When launching Cloudbreak, you will be required to select an existing network in
 You can manage networks under **Networking** > **VPC Networks**. To edit ports, click on the network name and then click on **Add firewall rules**. 
 
 
-### Launch Cloudbreak deployer from image   
+### Launch Cloudbreak deployer from an image   
 
 **Steps**
 
@@ -175,7 +175,7 @@ Log in to the Cloudbreak UI using the following steps.
 
     <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
     
-4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer):
+4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [launching Cloudbreak deployer from an image](#launch-cloudbreak-deployer-from-an-image):
 
     * The username is the `UAA_DEFAULT_USER_EMAIL`     
     * The password is the `UAA_DEFAULT_USER_PW` 

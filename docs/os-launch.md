@@ -254,7 +254,7 @@ Log in to the Cloudbreak UI using the following steps.
 
     <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Cloudbreak web UI"></a>
 
-4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [launching Cloudbreak deployer](#launch-cloudbreak-deployer):
+4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [starting Cloudbreak deployer](#start-cloudbreak-deployer):
 
     * The username is the `UAA_DEFAULT_USER_EMAIL`
     * The password is the `UAA_DEFAULT_USER_PW`
