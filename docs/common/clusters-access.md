@@ -151,4 +151,5 @@ The following table describes what credentials to use to access Cloudbreak and C
 | Cloudbreak | SSH to VM | Access as the "cloudbreak" user with the SSH key provided when launching Cloudbreak on the cloud provider. |
 | Cluster | SSH to VMs | Access as the "cloudbreak" user with the SSH key provided during cluster creation. |
 | Cluster | Ambari UI |Access with the credentials provided in the “Cluster User” parameter during cluster creation. |
+| Cluster | Web UIs for specific cluster services | Access with the credentials provided in the “Cluster User” parameter during cluster creation. |
 
