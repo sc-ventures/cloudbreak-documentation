@@ -34,12 +34,12 @@ Refer to [Architecture](architecture.md) and [Core concepts](architecture.md#cor
 
 To get started with Cloudbreak:
 
-1. Select the [cloud platform](#select-cloud-platform) on which you would like to launch Cloudbreak.   
-1. Select the [deployment option](#select-deployment-option) that you would like to use. 
+1. Select the [cloud platform](#select-a-cloud-platform) on which you would like to launch Cloudbreak.   
+1. Select the [deployment option](#select-a-deployment-option) that you would like to use. 
 1. [Launch Cloudbreak](#launch-cloudbreak). 
 
 
-#### Select cloud platform 
+#### Select a cloud platform 
 
 You can deploy and use Cloudbreak on the following cloud platforms:
 
@@ -49,7 +49,7 @@ You can deploy and use Cloudbreak on the following cloud platforms:
 * OpenStack
 
 
-#### Select deployment option
+#### Select a deployment option
 
 There are two basic deployment options:
 
