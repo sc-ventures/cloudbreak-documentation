@@ -53,8 +53,7 @@ pages:
         - Register external database: external-db.md  
         - Register external authentication source: external-ldap.md  
         - Register proxy configuration: external-proxy.md  
-      - Manage and configure Cloudbreak:  
-        - Upgrade Cloudbreak: cb-upgrade.md 
+      - Advanced Cloudbreak options:  
         - Manage Cloudbreak credentials: cb-credentials.md 
         - Move Cloudbreak instance: cb-migrate.md 
         - Configure LDAP/AD authentication for Cloudbreak: cb-ldap.md  
@@ -65,7 +64,6 @@ pages:
         - Configure external Cloudbreak database: cb-db.md
         - Disable providers: cb-disable-provider.md
         - Modify settings in Cloudbreak Profile: cb-profile.md 
-        - Delete Cloudbreak: cb-delete.md
       - Cloudbreak CLI: 
         - Install the CLI: cli-install.md
         - Get started with the CLI: cli-get-started.md
@@ -78,6 +76,8 @@ pages:
         - Troubleshooting Azure: trouble-azure.md
         - Troubleshooting GCP: trouble-gcp.md
         - Troubleshooting Cloudbreak CLI: trouble-cli.md
+      - Upgrade Cloudbreak: cb-upgrade.md 
+      - Delete Cloudbreak: cb-delete.md
     - More:
       - Release Notes: releasenotes.md
       - FAQs: faq.md 
