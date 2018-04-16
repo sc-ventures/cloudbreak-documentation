@@ -2,7 +2,7 @@
 
 Cloudbreak allows you to register an existing RDBMS instance to be used for a database for certain services. After you register the RDBMS with Cloudbreak, you can use it for multiple clusters. 
 
-### External database support matrix
+### Supported databases
 
 [Comment]: <> (What does Cloudberak do by default, if an external db is not used? Does it install an instance of PostgreSQL on some cluster host?)
  
@@ -19,6 +19,8 @@ If you would like to use an external database for one of the components that sup
 
 
 [Comment]: <> (I am not sure if it is correct to say that all these types are supported in case of "Other" type? Maybe "Other" should not be included as part of this list?)
+
+[Comment]: <> (Need to go back to the demo to check which part is missing here.)
 
 
 ### External database options  
@@ -137,6 +139,11 @@ You must create the external RDBMS instance and database prior to registering it
 1. Register it in Cloudbreak web UI or CLI.  
 2. Use it with one or more clusters. Once registered, the database will now show up in the list of available databases when creating a cluster under advanced **External Sources** > **Configure Databases**.  
 
+**Prerequisites**  
+
+If you are planning to use an external MySQL or Oracle database, you must download the JDBC connector's JAR file and place it in a location available to the cluster host on which Ambari is installed. The steps below require that you provide the URL to the JDBC connector's JAR file. 
+
+> If you are using your own [custom image](images.md), you may place the JDBC connector's JAR file directly on the machine as part of the image burning process. 
 
 **Steps** 
 
@@ -149,7 +156,7 @@ You must create the external RDBMS instance and database prior to registering it
     | Name | Enter the name to use when registering this database to Cloudbreak. This is **not** the database name. |
     | Type | Select the service for which you would like to use the external database. If you selected "Other", you must provide a special blueprint. |
     | JDBC Connection | Select the database **type** and enter the **JDBC connection** string (HOST:PORT/DB_NAME).  |
-    | Connector's JAR URL | (MySQL and Oracle only) Provide a URL to the JDBC connector's JAR file. The JAR file must be hosted in a location accessible to the cluster host on which Ambari is installed. At cluster creation time, Cloudbreak places the JAR file in the /opts/jdbc-drivers/ directory. You do not need to provide the "Connector's JAR URL if you are using a custom image and the JAR file was placed on the VM as part of custom image burning. |
+    | Connector's JAR URL | (MySQL and Oracle only) Provide a URL to the JDBC connector's JAR file. The JAR file must be hosted in a location accessible to the cluster host on which Ambari is installed. At cluster creation time, Cloudbreak places the JAR file in the /opts/jdbc-drivers directory. You do not need to provide the "Connector's JAR URL if you are using a custom image and the JAR file was placed on the VM as part of custom image burning. |
     | Username | Enter the JDBC connection username. |
     | Password | Enter the JDBC connection password. |
 
