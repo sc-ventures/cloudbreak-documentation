@@ -3,20 +3,22 @@
 Cloudbreak allows you to register an existing RDBMS instance to be used for a database for certain services. After you register the RDBMS with Cloudbreak, you can use it for multiple clusters. 
 
 ### External database support matrix
+
+[Comment]: <> (What does Cloudberak do by default, if an external db is not used? Does it install an instance of PostgreSQL on some cluster host?)
  
 If you would like to use an external database for one of the components that support it, you may use the following database types and versions: 
 
-|  | Postgres | MySQL | Oracle 11 | Oracle 12 |
+| Component | Supported databases |  |
 |---|---|---|---|---|
-| **Ambari**   | X | X |   |   |
-| **Druid**    | X | X |   |   |
-| **Hive**     | X | X | X | X |
-| **Oozie**    | X | X | X | X |
-| **Ranger**   | X | X | X | X |
-| **Superset** | X | X |   |   |
-| **Other**    | X | X | X | X |
+| **Ambari**   | PostgreSQL, MySQL  |   |
+| **Druid**    | PostgreSQL, MySQL  |   |
+| **Hive**     | PostgreSQL, MySQL, Oracle 11, Oracle 12 |  |
+| **Oozie**    | PostgreSQL, MySQL, Oracle 11, Oracle 12 |  |
+| **Ranger**   | PostgreSQL, MySQL, Oracle 11, Oracle 12 |  |
+| **Superset** |PostgreSQL, MySQL |   |
 
-[Comment]: <> (I copied this from Richard's idea board, but I am not sure if it is correct to say that all these types are supported in case of "Other" type? Maybe "Other" should not be included as part of this list?)
+
+[Comment]: <> (I am not sure if it is correct to say that all these types are supported in case of "Other" type? Maybe "Other" should not be included as part of this list?)
 
 
 ### External database options  
