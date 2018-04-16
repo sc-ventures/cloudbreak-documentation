@@ -2,7 +2,24 @@
 
 Cloudbreak allows you to register an existing RDBMS instance to be used for a database for certain services. After you register the RDBMS with Cloudbreak, you can use it for multiple clusters. 
 
-> Only **PostgreSQL** is supported at this time.  
+### External database support matrix
+ 
+If you would like to use an external database for one of the components that support it, you may use the following database types and versions: 
+
+|  | Postgres | MySQL | Oracle 11 | Oracle 12 |
+|---|---|---|---|---|
+| **Ambari**   | X | X |   |   |
+| **Druid**    | X | X |   |   |
+| **Hive**     | X | X | X | X |
+| **Oozie**    | X | X | X | X |
+| **Ranger**   | X | X | X | X |
+| **Superset** | X | X |   |   |
+| **Other**    | X | X | X | X |
+
+[Comment]: <> (I copied this from Richard's idea board, but I am not sure if it is correct to say that all these types are supported in case of "Other" type? Maybe "Other" should not be included as part of this list?)
+
+
+### External database options  
 
 Cloudbreak includes the following external database options:
 
@@ -16,7 +33,7 @@ During cluster create, Cloudbreak checks whether the JDBC properties are present
 <a href="../images/cb_cb-rdbms-diagram.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-rdbms-diagram.png" width="550" title="Cloudbreak web UI"></a>
 
   
-### Example 1: Built-in type Hive 
+#### Example 1: Built-in type Hive 
 
 In this scenario, you start up with a standard blueprint, and Cloudbreak injects the JDBC properties into the blueprint.
 
@@ -32,6 +49,8 @@ In this scenario, you start up with a standard blueprint, and Cloudbreak injects
 | rds.hive.connectionPassword | Hadoop123! |
 | rds.hive.subprotocol | postgres |
 | rds.hive.databaseEngine | POSTGRES |
+
+[Comment]: <> (Is the rds.hive.connectionDriver parameter deprecated?) 
 
 2. Create a cluster by using a standard blueprint (i.e. one without JDBC related variables) and by attaching the external Hive database configuration.  
 
@@ -54,9 +73,10 @@ In this scenario, you start up with a standard blueprint, and Cloudbreak injects
 }
 ...</pre> 
 
+[Comment]: <> (Is the rds.hive.connectionDriver parameter deprecated?) 
 
 
-### Example 2: Other type 
+#### Example 2: Other type 
 
 In this scenario, you start up with a special blueprint including JDBC property variables, and Cloudbreak replaces JDBC-related property variables in the blueprint. 
 
@@ -83,12 +103,16 @@ In this scenario, you start up with a special blueprint including JDBC property 
 | rds.hive.subprotocol | postgres |
 | rds.hive.databaseEngine | POSTGRES |
 
+[Comment]: <> (Is the rds.hive.connectionDriver parameter deprecated?) 
+
 2. Create a cluster by using your custom blueprint and by attaching the external database configuration.  
 
 3. Upon cluster create, Cloudbreak replaces JDBC-related property variables in the blueprint. 
 
 **Related links**  
 [Mustache template syntax](https://mustache.github.io/)  
+
+[Comment]: <> (Are these examples still correct or did some of the parameters change in this release?) 
   
   
 ### Creating a template blueprint for RDMBS  
@@ -99,22 +123,9 @@ In order to use an external RDBMS for some component other than the built-in com
 [Creating a template blueprint](blueprints.md#creating-a-template-blueprint)  
 [Mustache template syntax](https://mustache.github.io/) (External)  
 
+[Comment]: <> (Does this blueprint doc have to be updated to include "Connector's JAR URL" parameter when using MySQL or Oracle?)
 
-#### RDBMS property variables
-
-Cloudbreak utilizes the following RDBMS related variables, where [type] can be one of [hive,druid,oozie,ranger,superset] or other specified by you (for example "beacon").
-
-<pre>rds.[type].connectionURL
-rds.[type].connectionDriver
-rds.[type].connectionUserName
-rds.[type].connectionPassword
-rds.[type].databaseName
-rds.[type].host
-rds.[type].hostWithPort
-rds.[type].subprotocol
-rds.[type].databaseEngine</pre>
-
-These parameters correspond to the external database UI and CLI options. 
+[Comment]: <> (Based on the CLI, OI suspect that "rds.[type].connectionURL" may be deprecated now?)
 
 
 ### Register an external database    
@@ -135,7 +146,8 @@ You must create the external RDBMS instance and database prior to registering it
     |:---|:---|
     | Name | Enter the name to use when registering this database to Cloudbreak. This is **not** the database name. |
     | Type | Select the service for which you would like to use the external database. If you selected "Other", you must provide a special blueprint. |
-    | JDBC Connection | Select the database **type** (PostgreSQL) and enter the **JDBC connection** string (HOST:PORT/DB_NAME).  |
+    | JDBC Connection | Select the database **type** and enter the **JDBC connection** string (HOST:PORT/DB_NAME).  |
+    | Connector's JAR URL | (MySQL and Oracle only) Provide a URL to the JDBC connector's JAR file. The JAR file must be hosted in a location accessible to the cluster host on which Ambari is installed. At cluster creation time, Cloudbreak places the JAR file in the /opts/jdbc-drivers/ directory. You do not need to provide the "Connector's JAR URL if you are using a custom image and the JAR file was placed on the VM as part of custom image burning. |
     | Username | Enter the JDBC connection username. |
     | Password | Enter the JDBC connection password. |
 

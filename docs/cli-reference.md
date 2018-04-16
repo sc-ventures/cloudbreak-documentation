@@ -80,7 +80,8 @@ Database:
 
 * [database create](#database-create)  
 * [database delete](#database-delete)  
-* [database list](#database-list)
+* [database list](#database-list)  
+* [database test](#database-test)  
  
 
 
@@ -1333,6 +1334,14 @@ __________________________________
 #### database create
 
 Registers an existing external database with Cloudbreak.
+
+**Sub-commands**  
+
+**`mysql`**  Registers a MySQL database configuration  
+**`oracle11`**  Registers an Oracle 11 database configuration  
+**`oracle12`**  Registers an Oracle 12 database configuration  
+**`postgres`**  Registers a Postgres database configuration  
+
  
 
 **Required options**
@@ -1341,14 +1350,14 @@ Registers an existing external database with Cloudbreak.
 **`--db-username <value>`**  Username for the JDBC connection  
 **`--db-password <value>`**  Password for the JDBC connection  
 **`--url <value>`**  JDBC connection URL in the form of jdbc:db-type://address:port/db  
-**`--driver <value>`**   Name of the JDBC connection driver (for example: 'org.postgresql.Driver')  
-**`--database-engine <value>`**   Name of the external database engine (MYSQL, POSTGRES...)  
-**`--type <value>`**   Name if the service that will use the database (HIVE, DRUID, SUPERSET, RANGER, etc.)    
+**`--type <value>`**   Name if the service that will use the database (AMBARI, DRUID, HIVE, OOZIE, RANGER, SUPERSET, or other custom type)    
+
+If using MySQL and Oracle, the **`--connector-jar-url value <value>`** parameter is required in all cases except the following: If you are using a custom image and you already placed the JAR file on the machine, then this parameter is not required.
+
 
 **Options**
 
 **`--description <value>`**  Description for the database       
-**`--not-validated`**  If set, then the database configuration will be not validated  
 **`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
 **`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
 **`--password <value>`**  Cloudbreak password [$CB_PASSWORD]   
@@ -1356,11 +1365,12 @@ Registers an existing external database with Cloudbreak.
 **`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   
 **`--public`**   Public in account  
 
+
 **Examples**
 
-Registers an existing Postgres database called "test-database" with Cloudbreak:
+Registers an existing Postgres database called "test-postgres" with Cloudbreak:
 
-<pre>cb database create --name testdatabase --database-username testuser --database-password MySecurePassword123 --url jdbc:postgresql://test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432/testdb --driver 'org.postgresql.Driver' --database-engine POSTGRES --type HIVE</pre>
+<pre>cb database create postgres --name testpostgres  --type HIVE --url jdbc:postgresql://test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432/testdb --db-username testuser --db-password MySecurePassword123</pre>
 
 The connection URL includes three components db-type://address:port/db: 
 
@@ -1369,9 +1379,10 @@ The connection URL includes three components db-type://address:port/db:
 * Port "5432"  
 * Database name "testdb"  
 
+Registers an existing MySQL database called "testmysql" with Cloudbreak:  
 
-
-
+<pre>cb database create mysql --name testmysql --type OOZIE --url jdbc:mysql://test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432/testdb  --db-username test --db-password test --connector-jar-url http://example-page/driver-file.JAR</pre> 
+  
 
 
 
@@ -1391,7 +1402,6 @@ Unregisters a previously registered database with Cloudbreak. It does not delete
 
 **Options**
 
-**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
 **`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
 **`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
 **`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
@@ -1451,6 +1461,57 @@ Lists existing database registrations, with output presented in a table format:
 
 
 
+
+
+
+
+
+
+
+
+__________________________________
+
+#### database test
+
+Test database connection.
+
+ 
+**Sub-commands**  
+
+
+**`by-name`**    Tests a stored database configuration identified by its name  
+**`by-params`**  Tests database connection parameters   
+
+**Required options**  
+
+**`by-name`**  
+
+**`--name <value>`**  Name of the database registration   
+
+**`by-params`**  
+
+**`--db-username <value>`**  Username to use for the JDBC connection  
+**`--db-password <value>`**  Password to use for the JDBC connection  
+**`--url <value>`**  JDBC connection URL in the form of jdbc:db-type://address:port/db  
+**`--type <value>`**  Type of database (the service name that will use the database  
+
+**Options**
+
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
+
+**Examples**
+
+Tests connection to a previously registered database called "testpostgres":
+
+<pre>database test --name testpostgres</pre>
+
+Tests connection to a database based on connection parameters provided: 
+
+<pre>cb database test by-params --type HIVE --url jdbc:postgresql://test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432/testdb --db-username testuser --db-password MySecurePassword123</pre> 
 
 
 

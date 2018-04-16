@@ -9,10 +9,21 @@ ____________________________
 #### New features
 ____________________________
 
-- Support for using Management Packs 
-- External RDS phase II 
-- A new HDF Streaming blueprint and updated NiFi blueprint (includes Registry)
-- HDF: Support for creating HDF Streaming clusters 
+##### Using MySQL and Oracle External Databases 
+
+Cloudbreak 2.6.0 TP introduces support for creating external MySQL and Oracle databases, in addition to previously supported Postgres. For more information, refer to [Using an external database](external.db).   
+
+
+##### Using Management Packs 
+
+ 
+##### Creating HDF Streaming clusters 
+
+
+##### Creating HDF NiFi clusters with Registry 
+
+
+
 
 
 ____________________________
