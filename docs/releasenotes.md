@@ -9,7 +9,7 @@ ____________________________
 #### New features
 ____________________________
 
-- Support for using management packs 
+- Support for using Management Packs 
 - External RDS phase II 
 - A new HDF Streaming blueprint and updated NiFi blueprint (includes Registry)
 - HDF: Support for creating HDF Streaming clusters 
