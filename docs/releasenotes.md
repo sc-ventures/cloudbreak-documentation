@@ -9,9 +9,10 @@ ____________________________
 #### New features
 ____________________________
 
-
-
-
+- Support for using management packs 
+- External RDS phase II 
+- A new HDF Streaming blueprint and updated NiFi blueprint (includes Registry)
+- HDF: Support for creating HDF Streaming clusters 
 
 
 ____________________________
@@ -19,6 +20,10 @@ ____________________________
 #### Behavioral changes
 ____________________________
 
+##### Image Catalog Option Moved to External Sources
+
+The "Image Catalog" settings related to registering a custom image catalog and selecting a default image catalog were removed from the **Settings** navigation menu option and are now available under **External Sources > Image Catalogs**.
+  
 
 
 ____________________________
