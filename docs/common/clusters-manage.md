@@ -17,11 +17,13 @@ You can manage monitor your clusters from the Cloudbreak UI. To do that, click o
 </div>
 
 
+
 ### Resize a cluster
 
 To resize a cluster, follow these steps.
 
-> To configure automated cluster scaling, refer to [Configure autoscaling](autoscaling.md).  
+> Cluster resizing is not supported for HDF clusters.  
+> To configure automated cluster scaling, refer to [Configure autoscaling](autoscaling.md).   
 
 **Steps**
 

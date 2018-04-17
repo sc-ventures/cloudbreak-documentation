@@ -24,6 +24,8 @@ Time-based alerts can be defined by providing a cron expression. For example:
 |---|---|
 | Every day at 07:00 AM (GMT-8) | Add 90 worker nodes | 
 | Every day at 08:00 PM (GMT-8) | Remove 90 worker nodes |
+
+> Cluster resizing is not supported for HDF clusters. 
  
 
 ### Enable autoscaling 
