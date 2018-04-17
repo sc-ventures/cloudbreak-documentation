@@ -57,7 +57,7 @@ In order to use your recipe for clusters, you must register it first by using th
 | Execution Type | Select one of the following options: <ul><li>**pre-ambari-start**: The script will be executed prior to Ambari server start.</li><li>**post-ambari-start**: The script will be executed after Ambari server start but prior to cluster installation.</li><li>**post-cluster-install**: The script will be executed after cluster deployment.</li><li>**pre-termination**: The script will be executed before cluster termination.</li></ul>|
 | Script | <p>Select one of: <ul><li>**Script**: Paste the script.</li><li> **File**: Point to a file on your machine that contains the recipe.</li><li> **URL**: Specify the URL for your recipe.</li></ul> |
     
-5. When creating a cluster, you can select previously added recipes on the advanced **Cluster Extensions** page of the cluster wizard. 
+5. When creating a cluster, you can select previously added recipes on the advanced **Cluster Extensions** page of the create cluster wizard. 
 
 
 
