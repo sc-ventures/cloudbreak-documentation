@@ -10,7 +10,7 @@ ____________________________
 ____________________________
 
 
-##### Using Management Packs 
+##### Support for Using Management Packs 
 
 Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation. For more information, refer to [Using management packs](mpacks.md).  
 
@@ -20,7 +20,7 @@ Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you 
 Cloudbreak 2.6.0 TP introduces the ability to create HDF Messaging clusters, including Apache Kafka. To help you get started, Cloudbreak provides a new built-in **HDF Messaging: Apache Kafka** blueprint. 
 
 
-##### Using MySQL and Oracle External Databases 
+##### Support for Using MySQL and Oracle External Databases 
 
 Cloudbreak 2.6.0 TP introduces support for creating external MySQL and Oracle databases, in addition to previously supported Postgres. For more information, refer to [Using an external database](external-db.md).   
 
