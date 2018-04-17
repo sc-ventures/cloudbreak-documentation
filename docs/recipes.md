@@ -38,13 +38,13 @@ ENDOF
 
 ### Add recipes
 
-To add a recipe, perform these steps.
+In order to use your recipe for clusters, you must register it first by using the steps below.
 
 **Steps**
 
 1. Place your script in a network location accessible from Cloudbreak and cluster instances virtual network. 
 
-2. Select **External Sources > Recipes** from the navigation pane. 
+2. Select **External Sources > Recipes** from the navigation menu. 
 
 3. Click on **Create Recipe**. 
 
@@ -57,7 +57,7 @@ To add a recipe, perform these steps.
 | Execution Type | Select one of the following options: <ul><li>**pre-ambari-start**: The script will be executed prior to Ambari server start.</li><li>**post-ambari-start**: The script will be executed after Ambari server start but prior to cluster installation.</li><li>**post-cluster-install**: The script will be executed after cluster deployment.</li><li>**pre-termination**: The script will be executed before cluster termination.</li></ul>|
 | Script | <p>Select one of: <ul><li>**Script**: Paste the script.</li><li> **File**: Point to a file on your machine that contains the recipe.</li><li> **URL**: Specify the URL for your recipe.</li></ul> |
     
-5. When creating a cluster, you can select previously added recipes in the advanced **Recipes** page of the cluster wizard. 
+5. When creating a cluster, you can select previously added recipes on the advanced **Cluster Extensions** page of the cluster wizard. 
 
 
 
