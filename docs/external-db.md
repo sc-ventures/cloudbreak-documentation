@@ -20,7 +20,7 @@ If you would like to use an external database for one of the components that sup
 
 [Comment]: <> (I am not sure if it is correct to say that all these types are supported in case of "Other" type? Maybe "Other" should not be included as part of this list?)
 
-[Comment]: <> (Need to go back to the demo to check which part is missing here.)
+[Comment]: <> (During the demo, Richard mentioned that in addition to these, Ambari supports Oracle; however, in CLoudbreak we have a problem automating one of the steps (related to Oracle tools). This issue is pending, but as of April 16 we cannot support Oracle for Ambari.)
 
 
 ### External database options  
