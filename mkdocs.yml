@@ -46,6 +46,7 @@ pages:
       - Advanced cluster options:
         - Use custom blueprints: blueprints.md
         - Use custom scripts (recipes): recipes.md
+        - Use management packs: mpacks.md
         - Use custom images: images.md
         - Tag resources: tags.md 
         - Enable Kerberos security: security-kerberos.md

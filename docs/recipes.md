@@ -44,9 +44,9 @@ To add a recipe, perform these steps.
 
 1. Place your script in a network location accessible from Cloudbreak and cluster instances virtual network. 
 
-2. Select **Blueprints** from the navigation pane. 
+2. Select **External Sources > Recipes** from the navigation pane. 
 
-3. Click on **Create Blueprint**. 
+3. Click on **Create Recipe**. 
 
 4. Provide the following:
 
