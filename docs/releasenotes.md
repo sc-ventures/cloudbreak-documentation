@@ -221,7 +221,7 @@ ____________________________
 > The known issues described here were discovered when testing Cloudbreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak.
 
 > For general Ambari 2.6.1.5 and HDP 2.6.4.0 known issues, refer to:  
-> [Ambari 2.6.1.5 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.3/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.5.html)  
+> [Ambari 2.6.1.5 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.5/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.5.html)  
 > [HDP 2.6.4.0 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.4/bk_release-notes/content/ch_relnotes.html)  
 ____________________________
 
