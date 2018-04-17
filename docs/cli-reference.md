@@ -75,14 +75,12 @@ Cluster:
 * [cluster sync](#cluster-sync) 
 
 
-
 Database:            
 
 * [database create](#database-create)  
 * [database delete](#database-delete)  
 * [database list](#database-list)  
 * [database test](#database-test)  
- 
 
 
 Image catalog
@@ -92,13 +90,20 @@ Image catalog
 * [imagecatalog images](#imagecatalog-images)                      
 * [imagecatalog list](#imagecatalog-list)  
 * [imagecatalog set-default](#imagecatalog-set-default)            
-   
+    
        
 LDAP:
 
 * [ldap create](#ldap-create)  
 * [ldap delete](#ldap-delete)  
 * [ldap list](#ldap-list)
+
+
+Mpack
+
+* [mpack create](#mpack-create)  
+* [mpack delete](#mpack-delete)  
+* [mpack list](#mpack-list)
 
 
 Proxy:
@@ -141,12 +146,12 @@ Adds a new blueprint from a file or from a URL.
 
 **`from-url`** 
 
-**`--name <value>`** Name of the blueprint  
+**`--name <value>`** Name for the blueprint  
 **`--url <value>`** URL location of the Ambari blueprint JSON file
 
 **`from-file`** 
 
-**`--name <value>`** Name of the blueprint  
+**`--name <value>`** Name for the blueprint  
 **`--file <value>`** Location of the Ambari blueprint JSON file on the local machine
 
 
@@ -191,7 +196,7 @@ Deletes an existing blueprint.
 
 **Required options**
 
-**`--name <value>`** Name of the blueprint 
+**`--name <value>`** Blueprint name 
 
 **Options**
 
@@ -229,7 +234,7 @@ Describes an existing blueprint.
 
 **Required options**
 
-**`--name <value>`** Name of the blueprint 
+**`--name <value>`** Blueprint name 
 
 **Options**
 
@@ -824,7 +829,7 @@ Scales a cluster by adding or removing nodes.
 
 **Required options**
 
-**`--name <value>`**  Name of the cluster  
+**`--name <value>`**  Cluster name  
 **`--group-name <value>`**  Name of the group to scale  
 **`--desired-node-count <value>`**  Desired number of nodes  
 
@@ -994,18 +999,18 @@ Creates a new Cloudbreak credential.
 
 **`aws role-based`** 
 
-**`--name <value>`**  Credential name  
+**`--name <value>`**  Name for the credential   
 **`--role-arn <value>`** IAM Role ARN of the role used for Cloudbreak credential  
 
 **`aws key-based`** 
 
-**`--name <value>`**  Credential name  
+**`--name <value>`**  Name for the credential    
 **`--access-key <value>`**  AWS Access Key  
 **`--secret-key <value>`**  AWS Secret Key  
 
 **`azure app-based`** 
 
-**`--name <value>`**  Credential name  
+**`--name <value>`**  Name for the credential    
 **`--subscription-id <value>`**  Subscription ID from your Azure Subscriptions  
 **`--tenant-id <value>`**  Directory ID from your Azure Active Directory > Properties      
 **`--app-id <value>`**  Application ID of your app from your Azure Active Directory > App Registrations            
@@ -1013,14 +1018,14 @@ Creates a new Cloudbreak credential.
 
 **`gcp`** 
 
-**`--name <value>`**  Credential name   
+**`--name <value>`**  Name for the credential    
 **`--project-id <value>`**  Project ID from your GCP account                        
 **`--service-account-id <value>`**  Your GCP Service account ID from IAM & Admin > Service accounts                 
 **`--service-account-private-key-file <value>`**  P12 key from your GCP service account  
 
 **`openstack keystone-v2`**  
 
-**`--name <value>`**  Credential name  
+**`--name <value>`**  Name for the credential    
 **`--tenant-user <value>`**  OpenStack user name     
 **`--tenant-password <value>`**  OpenStack password  
 **`--tenant-name <value>`**  OpenStack tenant name      
@@ -1028,7 +1033,7 @@ Creates a new Cloudbreak credential.
 
 **`openstack keystone-v3`** 
 
-**`--name <value>`**  Credential name  
+**`--name <value>`**  Name for the credential   
 **`--tenant-user <value>`**  OpenStack user name     
 **`--tenant-password <value>`**  OpenStack password  
 **`--user-domain <value>`**  OpenStack user domain      
@@ -1102,7 +1107,7 @@ Deletes an existing Cloudbreak credential.
 
 **Required options**
 
-**`--name <value>`**  Name of the credential 
+**`--name <value>`**  Credential name 
 
 **Options**
 
@@ -1130,7 +1135,7 @@ Describes an existing credential.
 
 **Required options**
 
-**`--name <value>`**  Name of the credential 
+**`--name <value>`**  Credential name 
 
 **Options**
   
@@ -1398,7 +1403,7 @@ Unregisters a previously registered database with Cloudbreak. It does not delete
 
 **Required options**
 
-**`--name <value>`**  Name for the database     
+**`--name <value>`**  Database registration name     
 
 **Options**
 
@@ -1486,7 +1491,7 @@ Test database connection.
 
 **`by-name`**  
 
-**`--name <value>`**  Name of the database registration   
+**`--name <value>`**  Database registration name    
 
 **`by-params`**  
 
@@ -1568,7 +1573,7 @@ Deletes a previously registered custom image catalog. It does not delete any clo
 
 **Required options**  
 
-**`--name <value>`**  Name for the image catalog   
+**`--name <value>`**  Image catalog name    
 
 **Options**
 
@@ -1719,7 +1724,7 @@ Sets the specified image catalog as default.
 
 **Required options**   
 
-**`--name <value>`**  Name for the image catalog    
+**`--name <value>`**  Image catalog name     
 
 **Options**
 
@@ -1803,7 +1808,7 @@ Deletes selected LDAP registration from Cloudbreak. It does not delete the LDAP.
 
 **Required options**
 
-**`--name <value>`**  Name for the proxy     
+**`--name <value>`**  LDAP name      
 
 **Options**
 
@@ -1872,6 +1877,134 @@ Lists existing LDAPs, with output presented in a table format:
 
 
 
+__________________________________
+
+#### mpack create
+
+Registers an existing management pack with Cloudbreak.
+ 
+
+**Required options**
+
+**`--name <value>`**  Name for the mpack        
+**`--url <value>`**  URL that points to the location of the mpack tarball   
+
+**Options**
+
+**`--purge`**  Purge existing resources specified in purge-list   
+**`--purge-list <value>`**  Comma-separated list of resources to purge (stack-definitions,service-definitions,mpacks). By default (stack-definitions,mpacks) will be purged  
+**`--force`**  Force install management pack    
+**`--description <value>`**  Description for the LDAP      
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]   
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  
+**`--public`**   Public in account  
+
+**Examples**
+
+Registers a new mpack without purging:
+
+<pre>cb mpack create --name test-hdp-search --url http://public-repo-1.hortonworks.com/HDP-SOLR/hdp-solr-ambari-mp/solr-service-mpack-3.0.0.tar.gz</pre>
+
+
+
+
+
+
+
+
+
+__________________________________
+ 
+#### mpack delete
+
+Deletes selected management registration from Cloudbreak. It does not delete the management pack. 
+
+**Required options**
+
+**`--name <value>`**  Management pack name      
+
+**Options**
+
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]
+
+**Examples**
+
+<pre>cb mpack delete --name testmpack</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+__________________________________
+
+#### mpack list
+
+Lists all available management packs.
+
+**Required options**
+
+None
+
+**Options**
+
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]  
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]
+
+**Examples**
+
+Lists all currently registered management packs and provides information about each:
+
+<pre>cb mpack list
+[
+  {
+    "Name": "hdp-search-3",
+    "Description": "",
+    "URL": "http://public-repo-1.hortonworks.com/HDP-SOLR/hdp-solr-ambari-mp/solr-service-mpack-3.0.0.tar.gz",
+    "Purge": "false",
+    "PurgeList": "",
+    "Force": "false"
+  }
+]</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1922,7 +2055,7 @@ Unregisters a previously registered proxy with Cloudbreak. It does not delete th
 
 **Required options**
 
-**`--name <value>`**  Name for the proxy     
+**`--name <value>`**  Proxy registration name     
 
 **Options**
 
@@ -2058,7 +2191,7 @@ Deletes an existing recipe.
 
 **Required options**
 
-**`--name <value>`**  Name for the recipe  
+**`--name <value>`**  Recipe name  
 
 **Options**
 
@@ -2090,7 +2223,7 @@ Describes an existing recipe.
 
 **Required options**
 
-**`--name <value>`**  Name for the recipe    
+**`--name <value>`**  Recipe name     
 
 **Options**
 
