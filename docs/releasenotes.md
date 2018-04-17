@@ -26,8 +26,6 @@ TBD
 
 
 
-
-
 ____________________________
 
 #### Behavioral changes
@@ -35,8 +33,11 @@ ____________________________
 
 ##### Image Catalog Option Moved to External Sources
 
-The "Image Catalog" settings related to registering a custom image catalog and selecting a default image catalog were removed from the **Settings** navigation menu option and are now available under **External Sources > Image Catalogs**.
+The options related to registering a custom image catalog and selecting a default image catalog were removed from the **Settings** navigation menu option and are now available under **External Sources > Image Catalogs**.
   
+##### Recipes Menu Option Moved to Cluster Extensions
+
+The **Recipes** navigation menu option was moved under **Cluster Extensions**, so to find recipe-related settings, select **Cluster Extensions > Recipes** from the navigation menu. 
 
 
 ____________________________
