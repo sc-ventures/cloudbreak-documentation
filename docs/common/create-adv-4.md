@@ -17,7 +17,7 @@ This option allows you to select previously uploaded management packs. For more 
 
 #### External sources 
 
-You can register external sources with Cloudbreak and then select them during cluster create. To register external sources with Cloudbreak, refer to:
+You can register external sources with Cloudbreak, and then select and attach them during cluster create. To register external sources with Cloudbreak, refer to:
 
 * [Using an external authentication source](external-ldap.md)    
 * [Using an external database](external-db.md)  
