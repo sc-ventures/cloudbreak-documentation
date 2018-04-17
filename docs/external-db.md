@@ -162,7 +162,7 @@ If you are planning to use an external MySQL or Oracle database, you must downlo
 
 4. Click **Test Connection** to validate and test the RDS connection information.  
 5. Once your settings are validated and working, click **REGISTER** to save the configuration.  
-6. The database will now show up on the list of available databases when creating a cluster under advanced **External Sources** > **Configure Databases**. You can select it each time you would like to use it for a cluster.  
+6. The database will now show up on the list of available databases when creating a cluster under advanced **External Sources** > **Configure Databases**. You can select it and click **Attach** each time you would like to use it for a cluster.  
 
 
 

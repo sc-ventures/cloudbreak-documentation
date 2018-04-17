@@ -32,6 +32,7 @@ In order to have a management stack installed for a specific cluster, you must r
 | Remove all existing Ambari stack definitions prior to installing this Management Pack (“mpack --purge”).
 | Checking this option allows you to purge any existing stack definition and should be included only when installing a stack management pack. Do not select this when installing an add-on service management pack. |
     
-4. When creating a cluster, you can select previously registered management packs on the advanced **Cluster Extensions** page of the create cluster wizard. 
+4. When creating a cluster, on the advanced **Cluster Extensions** page of the create cluster wizard, you can select one or more previously registered management packs. After selecting, click **Attach** to use the management pack for the cluster. 
+
 
 
