@@ -1,4 +1,4 @@
-## Accessing your cluster
+## Accessing a cluster
 
 The following section describes how to access the various services in the cluster.
 
