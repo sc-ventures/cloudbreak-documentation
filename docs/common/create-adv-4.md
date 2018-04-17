@@ -9,10 +9,10 @@ This option allows you to select previously uploaded recipes (scripts that can b
 
 #### Management Packs
 
-This option allows you to select previously uploaded management packs. For more information on management packs, refer to [Using management packs](mpcks.md). 
+This option allows you to select previously uploaded management packs. For more information on management packs, refer to [Using management packs](mpacks.md). 
 
 **Related links**      
-[Using management packs](mpcks.md)  
+[Using management packs](mpacks.md)  
 
 
 #### External sources 
