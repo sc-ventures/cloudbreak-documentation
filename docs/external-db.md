@@ -3,25 +3,22 @@
 Cloudbreak allows you to register an existing RDBMS instance to be used for a database for certain services. After you register the RDBMS with Cloudbreak, you can use it for multiple clusters. 
 
 ### Supported databases
-
-[Comment]: <> (What does Cloudberak do by default, if an external db is not used? Does it install an instance of PostgreSQL on some cluster host?)
  
 If you would like to use an external database for one of the components that support it, you may use the following database types and versions: 
 
-| Component | Supported databases |  |
+| Component | Supported databases | Description |
 |---|---|---|---|---|
-| **Ambari**   | PostgreSQL, MySQL  |   |
+| **Ambari**   | PostgreSQL, MySQL  | By default, Ambari uses an embedded PostgreSQL instance.  |
 | **Druid**    | PostgreSQL, MySQL  |   |
-| **Hive**     | PostgreSQL, MySQL, Oracle 11, Oracle 12 |  |
+| **Hive**     | PostgreSQL, MySQL, Oracle 11, Oracle 12 | By default, Cloudbreak installs a PostgreSQL instance on the Hive Metastore host.  |
 | **Oozie**    | PostgreSQL, MySQL, Oracle 11, Oracle 12 |  |
 | **Ranger**   | PostgreSQL, MySQL, Oracle 11, Oracle 12 |  |
 | **Superset** |PostgreSQL, MySQL |   |
-
-
-[Comment]: <> (I am not sure if it is correct to say that all these types are supported in case of "Other" type? Maybe "Other" should not be included as part of this list?)
+| **Other** | PostgreSQL, MySQL, Oracle 11, Oracle 12 | |
 
 [Comment]: <> (During the demo, Richard mentioned that in addition to these, Ambari supports Oracle; however, in CLoudbreak we have a problem automating one of the steps (related to Oracle tools). This issue is pending, but as of April 16 we cannot support Oracle for Ambari.)
 
+[Comment]: <> (Also Attila mentioned that there were some problems with Ranger. Did anything change here that may need to be documented?)
 
 ### External database options  
 
@@ -156,7 +153,7 @@ If you are planning to use an external MySQL or Oracle database, you must downlo
     | Name | Enter the name to use when registering this database to Cloudbreak. This is **not** the database name. |
     | Type | Select the service for which you would like to use the external database. If you selected "Other", you must provide a special blueprint. |
     | JDBC Connection | Select the database **type** and enter the **JDBC connection** string (HOST:PORT/DB_NAME).  |
-    | Connector's JAR URL | (MySQL and Oracle only) Provide a URL to the JDBC connector's JAR file. The JAR file must be hosted in a location accessible to the cluster host on which Ambari is installed. At cluster creation time, Cloudbreak places the JAR file in the /opts/jdbc-drivers directory. You do not need to provide the "Connector's JAR URL if you are using a custom image and the JAR file was placed on the VM as part of custom image burning. |
+    | Connector's JAR URL | (MySQL and Oracle only) Provide a URL to the JDBC connector's JAR file. The JAR file must be hosted in a location accessible to the cluster host on which Ambari is installed. At cluster creation time, Cloudbreak places the JAR file in the /opts/jdbc-drivers directory. You do not need to provide the "Connector's JAR URL if you are using a custom image and the JAR file was either manually placed on the VM as part of custom image burning or it was placed there by using a recipe. |
     | Username | Enter the JDBC connection username. |
     | Password | Enter the JDBC connection password. |
 
