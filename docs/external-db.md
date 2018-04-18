@@ -9,11 +9,11 @@ If you would like to use an external database for one of the components that sup
 | Component | Supported databases | Description |
 |---|---|---|---|---|
 | **Ambari**   | PostgreSQL, MySQL  | By default, Ambari uses an embedded PostgreSQL instance.  |
-| **Druid**    | PostgreSQL, MySQL  |   |
+| **Druid**    | PostgreSQL, MySQL  | You must provide an external database. |
 | **Hive**     | PostgreSQL, MySQL, Oracle 11, Oracle 12 | By default, Cloudbreak installs a PostgreSQL instance on the Hive Metastore host.  |
-| **Oozie**    | PostgreSQL, MySQL, Oracle 11, Oracle 12 |  |
-| **Ranger**   | PostgreSQL, MySQL, Oracle 11, Oracle 12 |  |
-| **Superset** |PostgreSQL, MySQL |   |
+| **Oozie**    | PostgreSQL, MySQL, Oracle 11, Oracle 12 | You must provide an external database. |
+| **Ranger**   | PostgreSQL, MySQL, Oracle 11, Oracle 12 | You must provide an external database. |
+| **Superset** |PostgreSQL, MySQL | You must provide an external database. |
 | **Other** | PostgreSQL, MySQL, Oracle 11, Oracle 12 | |
 
 [Comment]: <> (During the demo, Richard mentioned that in addition to these, Ambari supports Oracle; however, in CLoudbreak we have a problem automating one of the steps (related to Oracle tools). This issue is pending, but as of April 16 we cannot support Oracle for Ambari.)
