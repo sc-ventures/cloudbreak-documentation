@@ -49,6 +49,8 @@ For information about OpenStack security groups, refer to the [OpenStack Adminis
 [OpenStack Administrator Guide](https://docs.openstack.org/ops-guide/index.html) (External)
 
 
+<!---Commenting out the regular steps--->
+<!---
 #### Import images to OpenStack
 
 An OpenStack administrator must perform these steps to add the Cloudbreak deployer image to your OpenStack deployment. 
@@ -134,7 +136,7 @@ export OS_TENANT_NAME=your_os_tenant_name</small></pre>
     <pre><small>glance image-create --name "$CB_LATEST_IMAGE_NAME" --file "$CB_LATEST_IMAGE" --disk-format qcow2 --container-format bare --progress</small></pre>
 
 After performing the import, you should be able to see the Cloudbreak image among your OpenStack images.
-
+--->
 
 ### Launch the VM
 
