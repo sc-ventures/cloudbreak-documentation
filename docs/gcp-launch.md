@@ -23,7 +23,7 @@ In order to launch clusters on GCP via Cloudbreak, you must have a Service Accou
 * Compute Engine > Compute Security Admin  
 * Storage > Storage Admin 
     
-A user with an "Owner" role can assign roles to new and existing service accounts from **IAM & Admin** > **IAM**, as presented in the following screenshots: 
+A user with an "Owner" role can assign roles to new and existing service accounts from **IAM & admin** > **Service accounts**, as presented in the following screenshots: 
 
 <a href="../images/cb_gcp-iam.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-iam.png" width="650" title="GCP Console"></a> 
 
