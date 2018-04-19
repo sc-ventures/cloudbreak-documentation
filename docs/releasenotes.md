@@ -9,20 +9,32 @@ ____________________________
 #### New features
 ____________________________
 
+##### Using MySQL and Oracle External Databases 
 
-##### Support for Using Management Packs 
-
-Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation. For more information, refer to [Using management packs](mpacks.md).  
+Cloudbreak 2.6.0 TP introduces support for creating external MySQL and Oracle databases, in addition to previously supported Postgres. For more information, refer to [Using an external database](external-db.md).   
 
  
 ##### Creating HDF Messaging Clusters 
 
-Cloudbreak 2.6.0 TP introduces the ability to create HDF Messaging clusters, including Apache Kafka. To help you get started, Cloudbreak provides a new built-in **HDF Messaging: Apache Kafka** blueprint. 
+Cloudbreak 2.6.0 TP introduces the ability to create HDF Messaging clusters, including Apache Kafka. To help you get started, Cloudbreak provides a new built-in **HDF Messaging: Apache Kafka** blueprint. For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
 
 
-##### Support for Using MySQL and Oracle External Databases 
+##### Creating Flow Management Clusters with NiFi Registry
 
-Cloudbreak 2.6.0 TP introduces support for creating external MySQL and Oracle databases, in addition to previously supported Postgres. For more information, refer to [Using an external database](external-db.md).   
+Cloudbreak 2.6.0 TP adds support for NiFi Registry and NiFi Registry was added to the default **Flow Management: Apache Nifi** blueprint. 
+
+When creating a NiFI cluster with NiFi registry, make sure to do the following:
+ 
+* Open port 61443 for NiFi Registry on Services node  
+* When creating the NiFi Registry controller service in NiFi, the internal hostname has to be used, `e.g. https://ip-1-2-3-4.us-west-2.compute.internal:61443` 
+
+For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations). To get started creating NiFi clusters, refer to the following [HCC post](https://community.hortonworks.com/articles/182221/create-a-nifi-cluster-on-aws-azure-google-or-opens.html).  
+ 
+
+##### Using Management Packs 
+
+Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation. For more information, refer to [Using management packs](mpacks.md).  
+
 
 
 ____________________________
