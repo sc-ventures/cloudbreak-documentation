@@ -21,4 +21,4 @@ Platform version: **HDP 3.0 Technical Preview**
 
 | Cluster type  | Main services | Description |  List of all services included |
 |---|---|---|---|
-| ?? | <i class="fa fa-warning" style="color: red"> ?? | ??| ?? | 
+| Data Science | <i class="fa fa-warning" style="color: red"> Spark 2,<br>Zeppelin | Useful for data science with Spark 2 and Zeppelin. | HDFS, YARN, MapReduce2, Tez, Hive, ZooKeeper, Ambari Metrics, Spark 2, Zeppelin Notebook | 
