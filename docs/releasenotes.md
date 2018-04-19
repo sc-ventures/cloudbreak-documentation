@@ -9,32 +9,43 @@ ____________________________
 #### New features
 ____________________________
 
-##### Using MySQL and Oracle External Databases 
+##### **Using MySQL and Oracle External Databases** 
 
 Cloudbreak 2.6.0 TP introduces support for creating external MySQL and Oracle databases, in addition to previously supported Postgres. For more information, refer to [Using an external database](external-db.md).   
-
+____________________________
  
-##### Creating HDF Messaging Clusters 
+##### **Creating HDF Messaging Clusters** 
 
-Cloudbreak 2.6.0 TP introduces the ability to create HDF Messaging clusters, including Apache Kafka. To help you get started, Cloudbreak provides a new built-in **HDF Messaging: Apache Kafka** blueprint. For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
+Cloudbreak 2.6.0 TP introduces the ability to create HDF Messaging clusters, including Apache Kafka. To help you get started, Cloudbreak provides a new built-in **HDF Messaging: Apache Kafka** blueprint.  
+For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
+____________________________
 
+##### **Creating Flow Management Clusters with NiFi Registry**
 
-##### Creating Flow Management Clusters with NiFi Registry
+Cloudbreak 2.6.0 TP adds support for NiFi Registry and NiFi Registry was added to the default **Flow Management: Apache NiFi** blueprint. 
 
-Cloudbreak 2.6.0 TP adds support for NiFi Registry and NiFi Registry was added to the default **Flow Management: Apache Nifi** blueprint. 
-
-When creating a NiFI cluster with NiFi registry, make sure to do the following:
+When creating a NiFI cluster, make sure to do the following:
  
-* Open port 61443 for NiFi Registry on Services node  
-* When creating the NiFi Registry controller service in NiFi, the internal hostname has to be used, `e.g. https://ip-1-2-3-4.us-west-2.compute.internal:61443` 
+* When creating a cluster, open 9091 TCP port on the NiFi host group. Without it, you will be unable to access the NiFi web UI.   
+* When creating a cluster, open port 61443 for NiFi Registry on the Services host group.    
+* When creating the NiFi Registry controller service in NiFi, the internal hostname has to be used, `e.g. https://ip-1-2-3-4.us-west-2.compute.internal:61443`   
+* Enabling kerberos is mandatory. You can either use your own kerberos or select for Cloudbreak to create a test KDC.  
+* Although Cloudbreak includes cluster scaling (including autoscaling), scaling is not supported by NiFi. Downscaling NiFi clusters is not supported - as it can result in data loss when a node is removed that has not yet processed all the data on that node. There is also a known issue related to scaling listed in the [Known Issues](#known-issues) below.  
 
-For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations). To get started creating NiFi clusters, refer to the following [HCC post](https://community.hortonworks.com/articles/182221/create-a-nifi-cluster-on-aws-azure-google-or-opens.html).  
- 
+For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
+To get started creating NiFi clusters, refer to the following [HCC post](https://community.hortonworks.com/articles/182221/create-a-nifi-cluster-on-aws-azure-google-or-opens.html).  
+____________________________
 
-##### Using Management Packs 
+##### **Using Management Packs** 
 
-Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation. For more information, refer to [Using management packs](mpacks.md).  
+Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation.  
+For more information, refer to [Using management packs](mpacks.md).  
+____________________________
 
+##### **Technical Preview of HDP 3.0** 
+
+Cloudbreak 2.6.0 TP includes one default HDP 3.0 blueprint, allowing you to try HDP 3.0.  
+For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).
 
 
 ____________________________
@@ -42,11 +53,12 @@ ____________________________
 #### Behavioral changes
 ____________________________
 
-##### Image Catalog Option Moved to External Sources
+##### **Image Catalog Option Moved to External Sources**
 
 The options related to registering a custom image catalog and selecting a default image catalog were removed from the **Settings** navigation menu option and are now available under **External Sources > Image Catalogs**.
+____________________________
   
-##### Recipes Menu Option Moved to Cluster Extensions
+##### **Recipes Menu Option Moved to Cluster Extensions**
 
 The **Recipes** navigation menu option was moved under **Cluster Extensions**, so to find recipe-related settings, select **Cluster Extensions > Recipes** from the navigation menu. 
 
@@ -66,7 +78,8 @@ Update 1:
 
 Default Ambari version 2.6.1.3  
 Default HDP version 2.6.4.5-2  
-Default HDF version 3.1.1.0-35   
+Default HDF version 3.1.1.0-35  
+____________________________ 
 
 ##### **February 23, 2018**
 

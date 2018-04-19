@@ -55,6 +55,14 @@ When launching Cloudbreak, you will be required to select an existing network in
 You can manage networks under **Networking** > **VPC Networks**. To edit ports, click on the network name and then click on **Add firewall rules**. 
 
 
+### Launch Cloudbreak deployer    
+
+{!docs/common/about-tp.md!}
+
+
+<!---Commenting out the regular steps--->
+<!---
+     
 ### Launch Cloudbreak deployer from an image   
 
 **Steps**
@@ -157,7 +165,9 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
     <pre>cbd logs cloudbreak</pre>
     
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
-     
+    
+--->
+
 
 ### Access Cloudbreak web UI
 
@@ -167,9 +177,7 @@ Log in to the Cloudbreak UI using the following steps.
 
 1. You can log into the Cloudbreak application at `https://IP_Address`. For example `https://34.212.141.253`. You can obtain the VM's IP address from **Compute Engine** > **VM Instances**, the **External IP** column.
 
-2. Confirm the security exception to proceed to the Cloudbreak web UI.
-
-    The first time you access Cloudbreak UI, Cloudbreak will automatically generate a self-signed certificate, due to which your browser will warn you about an untrusted connection and will ask you to confirm a security exception.
+{!docs/common/launch-access-ui.md!} 
     
 3. The login page is displayed:
 

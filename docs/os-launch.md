@@ -138,6 +138,11 @@ After performing the import, you should be able to see the Cloudbreak image amon
 
 ### Launch the VM
 
+{!docs/common/about-tp.md!}
+
+<!---Commenting out the regular steps--->
+<!---
+
 In your OpenStack, launch and instance providing the following parameters:
 
 * Select a VM flavor which meets the following minimum requirements: 4GB RAM, 10GB disk, 2 cores.
@@ -158,6 +163,7 @@ Now that your VM is ready, access it via SSH:
 On Mac OS X, you can SSH to the VM by running the following from the Terminal app: `ssh -i "your-private-key.pem" cloudbreak@instance_IP` where "your-private-key.pem" points to the location of your private key and "instance_IP" is the public IP address of the VM.
 
 On Windows, you can use [PuTTy](http://www.putty.org/).
+
 
 ### Initialize the Profile
 
@@ -237,6 +243,7 @@ Launch Cloudbreak deployer using the following steps.
 
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
 
+-->
 
 ### Access Cloudbreak web UI
 
@@ -248,7 +255,13 @@ Log in to the Cloudbreak UI using the following steps.
 
 2. Confirm the security exception to proceed to the Cloudbreak web UI.
 
-    The first time you access Cloudbreak UI, Cloudbreak will automatically generate a self-signed certificate, due to which your browser will warn you about an untrusted connection and will ask you to confirm a security exception.
+    The first time you access Cloudbreak UI, Cloudbreak will automatically generate a self-signed certificate, due to which your browser will warn you about an untrusted connection and will ask you to confirm a security exception. You can safely proceed to the website.
+
+    | Browser | Steps |
+|---|---|
+| Firefox | Click **Advanced** > Click **Add Exception...** > Click **Confirm Security Exception** |
+| Safari | Click **Continue** |
+| Chrome | Click **Advanced** > Click **Proceed...** |  
 
 3. The login page is displayed:
 

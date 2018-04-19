@@ -305,6 +305,14 @@ Once you are done, you can proceed to [Launch Cloudbreak deployer from an image]
 [Using an IAM role to grant permissions to applications](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) (External)   
 
 
+### Launch Cloudbreak deployer    
+
+{!docs/common/about-tp.md!}
+
+
+<!---Commenting out the regular steps--->
+<!---
+
 ### Launch Cloudbreak deployer from an image   
 
 Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM available as a Community AMI.
@@ -338,7 +346,6 @@ Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM
 | Asia Pacific (Tokyo) | ap-northeast-1	| ami-e9564195 |
 | Asia Pacific (Singapore) | ap-southeast-1 | ami-8e98c2f2 | 
 | Asia Pacific (Sydney) | ap-southeast-2 | ami-31985653 |
-
 
 7. Click **Select**.  
 
@@ -432,6 +439,8 @@ export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre>
     <pre>cbd logs cloudbreak</pre>
     
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
+      
+--->    
     
 
 ### Access Cloudbreak web UI
@@ -442,13 +451,7 @@ Log in to the Cloudbreak UI using the following steps.
 
 1. You can log into the Cloudbreak application at `https://IPv4_Public_IP>/` or `https://Public_DNS`. For example `https://34.212.141.253` or `https://ec2-34-212-141-253.us-west-2.compute.amazonaws.com`. 
 
-2. Confirm the security exception to proceed to the Cloudbreak web UI.
-
-    The first time you access Cloudbreak UI, Cloudbreak will automatically generate a self-signed certificate, due to which your browser will warn you about an untrusted connection and will ask you to confirm a security exception.
-
-3. The login page is displayed:
-
-    <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
+{!docs/common/launch-access-ui.md!}
 
 4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [starting Cloudbreak deployer](#start-cloudbreak-deployer):
 

@@ -46,6 +46,11 @@ When launching Cloudbreak, you will be required to provide your public SSH key. 
 
 Launch Cloudbreak deployer using the following steps.
 
+{!docs/common/about-tp.md!}
+
+<!---Commenting out the regular steps--->
+<!---
+
 **Steps**
 
 1. Log in to your [Azure Portal](https://portal.azure.com).
@@ -100,6 +105,7 @@ Launch Cloudbreak deployer using the following steps.
 [CIDR IP](http://www.ipaddressguide.com/cidr) (External)   
 [Filter network traffic with network security groups](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg) (External)  
 
+--->
 
 ### Access Cloudbreak web UI
 
@@ -121,17 +127,9 @@ Log in to the Cloudbreak UI using the following steps.
 
 2. Paste the link in your browser's address bar.
 
-    The first time you access Cloudbreak UI, Cloudbreak will automatically generate a self-signed certificate, due to which your browser will warn you about an untrusted connection and will ask you to confirm a security exception. You can safely proceed to the website.
+{!docs/common/launch-access-ui.md!} 
 
-    | Browser | Steps |
-|---|---|
-| Firefox | Click **Advanced** > Click **Add Exception...** > Click **Confirm Security Exception** |
-| Safari | Click **Continue** |
-| Chrome | Click **Advanced** > Click **Proceed...** |  
-
-3. Now you should be able to access Cloudbreak UI and log in with the **Admin email address** and **Admin password** that you created when launching Cloudbreak:
-
-     <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Azure Portal"></a>
+3. Now you should be able to access Cloudbreak UI and log in with the **Admin email address** and **Admin password** that you created when launching Cloudbreak. 
 
 4. Upon a successful login, you are redirected to the dashboard:
 

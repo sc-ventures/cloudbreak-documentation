@@ -8,11 +8,6 @@ Platform version: **HDP 2.6**
 | EDW - Analytics | <span><i class="fa fa-check" style="color: green"></i> Hive 2 LLAP</span>,<br>Zeppelin | Useful for EDW analytics using Hive LLAP. | HDFS, YARN, MapReduce2, Tez, Hive 2 LLAP, Druid, Pig, ZooKeeper, Ambari Metrics, Spark 2 | 
 | EDW - ETL | <i class="fa fa-check" style="color: green"></i> Hive,<br> Spark 2 | Useful for ETL data processing with Hive and Spark 2. | HDFS, YARN, MapReduce2, Tez, Hive, Pig, ZooKeeper, Ambari Metrics, Spark 2 |
 
-Platform version: **HDP 3.0 Technical Preview**
-
-| Cluster type  | Main services | Description |  List of all services included |
-|---|---|---|---|
-| ?? | <i class="fa fa-warning" style="color: red"> | ??| ?? | 
 
 Platform version: **HDF 3.1**
 
@@ -21,3 +16,9 @@ Platform version: **HDF 3.1**
 | Flow Management | <i class="fa fa-check" style="color: green"></i> NiFi | Useful for flow management with NiFi. | NiFi, NiFi Registry, ZooKeeper, Ambari Metrics |
 | Messaging | <i class="fa fa-check" style="color: green"></i> Kafka | ?? | ?? |
 
+
+Platform version: **HDP 3.0 Technical Preview**
+
+| Cluster type  | Main services | Description |  List of all services included |
+|---|---|---|---|
+| ?? | <i class="fa fa-warning" style="color: red"> ?? | ??| ?? | 
