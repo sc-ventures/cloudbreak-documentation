@@ -25,9 +25,10 @@ ____________________________
 Cloudbreak 2.6.0 TP adds support for NiFi Registry and NiFi Registry was added to the default **Flow Management: Apache NiFi** blueprint. 
 
 When creating a NiFI cluster, make sure to do the following:
- 
+
+* If using the default blueprint, place the Ambari Server on the "Services" host group.     
 * When creating a cluster, open 9091 TCP port on the NiFi host group. Without it, you will be unable to access the NiFi web UI.   
-* When creating a cluster, open port 61443 for NiFi Registry on the Services host group.    
+* When creating a cluster, open port 61443 on the Services host group. This port is used by NiFi Registry.      
 * When creating the NiFi Registry controller service in NiFi, the internal hostname has to be used, `e.g. https://ip-1-2-3-4.us-west-2.compute.internal:61443`   
 * Enabling kerberos is mandatory. You can either use your own kerberos or select for Cloudbreak to create a test KDC.  
 * Although Cloudbreak includes cluster scaling (including autoscaling), scaling is not supported by NiFi. Downscaling NiFi clusters is not supported - as it can result in data loss when a node is removed that has not yet processed all the data on that node. There is also a known issue related to scaling listed in the [Known Issues](#known-issues) below.  
