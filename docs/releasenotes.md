@@ -45,8 +45,7 @@ ____________________________
 
 ##### **Technical Preview of HDP 3.0** 
 
-Cloudbreak 2.6.0 TP includes one default HDP 3.0 blueprint, allowing you to try HDP 3.0.  
-For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).
+Cloudbreak 2.6.0 TP includes one default HDP 3.0 blueprint, allowing you to try HDP 3.0. This option cannot be used on AWS. For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).
 
 
 ____________________________
