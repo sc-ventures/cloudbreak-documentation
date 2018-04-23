@@ -21,7 +21,7 @@ Cloudbreak 2.6.0 TP introduces the ability to create HDF Messaging clusters, inc
 When creating a Messaging cluster from the default blueprint, make sure to do the following:
 
 * If using the default blueprint, place the Ambari Server on the "Services" host group.  
-* When creating a cluster, open 3000 TCP port on the Services host group.     
+* When creating a cluster, open 3000 TCP port on the Services host group for Grafana.     
 
 For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
 ____________________________
@@ -37,7 +37,7 @@ When creating a NiFI cluster from the default blueprint, make sure to do the fol
 * When creating a cluster, open port 61443 on the Services host group. This port is used by NiFi Registry.      
 * When creating the NiFi Registry controller service in NiFi, the internal hostname has to be used, `e.g. https://ip-1-2-3-4.us-west-2.compute.internal:61443`   
 * Enable Kerberos. You can either use your own kerberos or select for Cloudbreak to create a test KDC.  
-* Although Cloudbreak includes cluster scaling (including autoscaling), scaling is not supported by NiFi. Downscaling NiFi clusters is not supported - as it can result in data loss when a node is removed that has not yet processed all the data on that node. There is also a known issue related to scaling listed in the [Known Issues](#known-issues) below.  
+* Although Cloudbreak allows cluster scaling (including autoscaling), scaling is not supported by NiFi. Downscaling NiFi clusters is not supported - as it can result in data loss when a node is removed that has not yet processed all the data on that node. There is also a known issue related to scaling listed in the [Known Issues](#known-issues) below.  
 
 For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
 To get started creating NiFi clusters, refer to the following [HCC post](https://community.hortonworks.com/articles/182221/create-a-nifi-cluster-on-aws-azure-google-or-opens.html).  
