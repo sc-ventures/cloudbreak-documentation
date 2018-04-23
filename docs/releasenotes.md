@@ -14,9 +14,15 @@ ____________________________
 Cloudbreak 2.6.0 TP introduces support for creating external MySQL and Oracle databases, in addition to previously supported Postgres. For more information, refer to [Using an external database](external-db.md).   
 ____________________________
  
-##### **Creating HDF Messaging Clusters** 
+##### **Creating HDF Messaging Management Clusters** 
 
-Cloudbreak 2.6.0 TP introduces the ability to create HDF Messaging clusters, including Apache Kafka. To help you get started, Cloudbreak provides a new built-in **HDF Messaging: Apache Kafka** blueprint.  
+Cloudbreak 2.6.0 TP introduces the ability to create HDF Messaging clusters, including Apache Kafka. To help you get started, Cloudbreak provides a new built-in **HDF Messaging: Apache Kafka** blueprint. 
+
+When creating a Messaging cluster from the default blueprint, make sure to do the following:
+
+* If using the default blueprint, place the Ambari Server on the "Services" host group.  
+* When creating a cluster, open 3000 TCP port on the Services host group.     
+
 For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
 ____________________________
 
@@ -24,13 +30,13 @@ ____________________________
 
 Cloudbreak 2.6.0 TP adds support for NiFi Registry and NiFi Registry was added to the default **Flow Management: Apache NiFi** blueprint. 
 
-When creating a NiFI cluster, make sure to do the following:
+When creating a NiFI cluster from the default blueprint, make sure to do the following:
 
-* If using the default blueprint, place the Ambari Server on the "Services" host group.     
+* Place the Ambari Server on the "Services" host group.     
 * When creating a cluster, open 9091 TCP port on the NiFi host group. Without it, you will be unable to access the NiFi web UI.   
 * When creating a cluster, open port 61443 on the Services host group. This port is used by NiFi Registry.      
 * When creating the NiFi Registry controller service in NiFi, the internal hostname has to be used, `e.g. https://ip-1-2-3-4.us-west-2.compute.internal:61443`   
-* Enabling kerberos is mandatory. You can either use your own kerberos or select for Cloudbreak to create a test KDC.  
+* Enable Kerberos. You can either use your own kerberos or select for Cloudbreak to create a test KDC.  
 * Although Cloudbreak includes cluster scaling (including autoscaling), scaling is not supported by NiFi. Downscaling NiFi clusters is not supported - as it can result in data loss when a node is removed that has not yet processed all the data on that node. There is also a known issue related to scaling listed in the [Known Issues](#known-issues) below.  
 
 For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
