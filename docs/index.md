@@ -46,9 +46,11 @@ Platform version: **HDF 3.1**
 
 Platform version: **HDP 3.0 Technical Preview**
 
+> This blueprint is technical preview: It is not suitable for production.
+
 | Cluster type  | Main services | Description |  List of all services included |
 |---|---|---|---|
-| Data Science | <i class="fa fa-warning" style="color: red"></i> Spark 2,<br>Zeppelin | Useful for data science with Spark 2 and Zeppelin. | HDFS, YARN, MapReduce2, Tez, Hive, ZooKeeper, Ambari Metrics, Spark 2, Zeppelin Notebook | 
+| Data Science | Spark 2,<br>Zeppelin | Useful for data science with Spark 2 and Zeppelin. | HDFS, YARN, MapReduce2, Tez, Hive, ZooKeeper, Ambari Metrics, Spark 2, Zeppelin Notebook | 
 
 ### Core concepts   
 
