@@ -70,7 +70,18 @@ Check this option if you would like your cluster to be automatically terminated 
 
 #### Tags
 
-You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. refer to [Tagging resources](tags.md).
+You can optionally add tags, which will help you find your cluster-related resources, such as VMs, in your cloud provider account. 
+
+By default, the following tags are created:
+
+| Tag | Description |
+|---|---|
+| cb-version | Cloudbreak version |
+| Owner | Your Cloudbreak admin email. |
+| cb-account-name | ? |
+| cb-user-name | Your Cloudbreak admin email. |
+
+For more information, refer to [Tagging resources](tags.md).
 
 **Related links**      
 [Tagging resources](tags.md) 
