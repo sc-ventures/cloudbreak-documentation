@@ -64,7 +64,7 @@ pages:
         - Configure access from custom domains: security-cb-customdom.md
         - Configure external Cloudbreak database: cb-db.md
         - Disable providers: cb-disable-provider.md
-        - Configure network port numbers: cb-ports.md  
+        - Change default Cloudbreak ports: cb-ports.md  
         - Modify settings in Cloudbreak Profile: cb-profile.md 
       - Cloudbreak CLI: 
         - Install the CLI: cli-install.md
