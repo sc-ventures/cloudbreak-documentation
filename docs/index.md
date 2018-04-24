@@ -46,7 +46,7 @@ Platform version: **HDF 3.1**
 
 Platform version: **HDP 3.0 Technical Preview**
 
-> This blueprint is technical preview: It is not suitable for production.
+> This feature is technical preview: It is not suitable for production.
 
 | Cluster type  | Main services | Description |  List of all services included |
 |---|---|---|---|
