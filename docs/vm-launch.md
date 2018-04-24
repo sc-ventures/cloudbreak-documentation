@@ -72,8 +72,6 @@ Install Cloudbreak using the following steps.
 
 {!docs/common/about-tp.md!}
 
-<!---Commenting out the regular steps--->
-<!---
 
 **Steps**
 
@@ -128,7 +126,7 @@ cbd start</pre>
 
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak normally takes less than a minute to start.
 å
---->
+
 
 
 ### Next steps after installing on your own VM
