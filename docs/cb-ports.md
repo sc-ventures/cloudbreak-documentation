@@ -14,4 +14,4 @@ Cloudbreak should not be running when you change the port numbers. Edit Profile 
     <pre>export TRAEFIK_PORT_HTTP=111
 export TRAEFIK_PORT_HTTPS=222</pre>
 
-3. Start or restart Cloudbreak by using `cbd restart`. 
+3. Start or restart Cloudbreak. 
