@@ -15,3 +15,8 @@ Cloudbreak should not be running when you change the port numbers. Edit Profile 
 export TRAEFIK_PORT_HTTPS=222</pre>
 
 3. Start or restart Cloudbreak by using `cbd start` or `cbd restart`. 
+
+4. This change affects Cloudbreak CLI configuration. When [configuring the CLI](cb-install.md#configure-the-cli), you must provide these ports as part of the server URL. For example: 
+
+    <pre>cb configure --server http://cb.server.address:111 --username  test@hortonworks.com
+cb configure --server https://cb.server.address:222 --username  test@hortonworks.com</pre>
