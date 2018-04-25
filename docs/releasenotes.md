@@ -110,10 +110,6 @@ ____________________________
 #### Fixed issues
 ____________________________
 
-
-
-[Comment]: <> (BUG-99505 is still in progress. If not done, should be removed from this list.)
-[Comment]: <> (BUG-98792 is also tagged for 2.4.1 but is still open. If done, it should be added to this list.)
 [Comment]: <> (BUG-97207 is internal? YARN?)
 [Comment]: <> (Not included in 2.5.0 TP, only 2.4.1: BUG-99635 After deleting a default credential and creating a new credential, credential is missing from the create cluster wizard.)
 
@@ -224,6 +220,8 @@ When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** 
  
  Use a browser without an adblock plugin. 
  
+ [Comment]: <> (This jira item was closed.) 
+ 
 ____________________________
 
 
@@ -286,16 +284,16 @@ ____________________________
 
 
 
-##### (BUG-97080) **Ambari Fils In Some Cases When an mpack is Installed** 
+##### (BUG-97080) **Ambari Files In Some Cases When an Mpack is Installed** 
 
-If we set the following properties then cluster install may fail (in 20-30% of the cases), because of the Ambari agent cache being updated concurrently:
+If you set the following properties then cluster install may fail (in 20-30% of the cases), because of the Ambari agent cache being updated concurrently:
 
 <pre>/etc/ambari-server/conf/ambari.properties  
 agent.auto.cache.update=true*  
 */etc/ambari-agent/conf/ambari-agent.ini  
 parallel_execution=1</pre> 
 
-[Comment]: <> (Fixed in Ambari 2.7) 
+[Comment]: <> (Fixed in Ambari 2.7?) 
 
 ____________________________
 
