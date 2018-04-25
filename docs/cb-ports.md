@@ -1,7 +1,7 @@
 
 ## Change default Cloudbreak ports  
 
-By default, Cloudbreak uses ports 80 (HTTP) and 443 (HTTPS) for accessing the Cloudbreak web UI. To change these port numbers, you must edit the Profile file.
+By default, Cloudbreak uses ports 80 (HTTP) and 443 (HTTPS) to access the Cloudbreak server (for the web UI and for the CLI). To change these port numbers, you must edit the Profile file on your Cloudbreak host. 
 
 Cloudbreak should not be running when you change the port numbers. Edit Profile either before you start Cloudbreak the first time or stop Cloudbreak before editing the file.
 
