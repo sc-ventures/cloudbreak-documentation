@@ -78,7 +78,7 @@ By default, the following tags are created:
 |---|---|
 | cb-version | Cloudbreak version |
 | Owner | Your Cloudbreak admin email. |
-| cb-account-name | ? |
+| cb-account-name | Your automatically generated Cloudbreak account name stored in the identity server. |
 | cb-user-name | Your Cloudbreak admin email. |
 
 For more information, refer to [Tagging resources](tags.md).
