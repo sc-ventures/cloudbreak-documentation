@@ -9,9 +9,8 @@ The following table includes links to Cloudbreak developer documentation:
 | [Retrieve OAuth bearer token via Cloudbreak REST API](#retrieve-oauth-bearer-token-via-cloudbreak-rest-api) | Describes how to retrieve OAuth bearer token via Cloudbreak REST API. |
 | [SPI reference](#cloudbreak-service-provider-interface-spi) | This is Cloudbreak SPI reference documentation. |
 | [API reference](https://app.swaggerhub.com/apis/Cloudbreak/Cloudbreak/2.5.0-TP) | This is Cloudbreak API reference documentation. Cloudbreak is a RESTful application development platform whose goal is to help developers deploy HDP clusters in various cloud environments. Once Cloudbreak is deployed in your favorite servlet container, it exposes REST APIs, allowing you to spin up Hadoop clusters of any size with your chosen cloud provider. |
-| [Flow diagrams](http://hortonworks.github.io/cloudbreak-docs/release-1.16.5/flow/) | This is Cloudbreak flow diagrams reference documentation. |
 
-[Comment]: <> (API link should be updated for each release. Not sure about the flow diagrams?)
+[Comment]: <> (API link should be updated for each release.)
 
 
 ### Retrieve OAuth bearer token via Cloudbreak REST API
