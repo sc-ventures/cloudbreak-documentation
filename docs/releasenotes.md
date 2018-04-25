@@ -4,6 +4,8 @@
 
 Cloudbreak 2.6.0 is an internal technical preview release. 
 
+{!docs/common/about-tp.md!}
+
 ____________________________
 
 #### New features
@@ -47,6 +49,11 @@ ____________________________
 
 Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation.  
 For more information, refer to [Using management packs](mpacks.md).  
+____________________________
+
+##### **Technical Preview of Shared Services** 
+
+Cloudbreak 2.6.0 TP allows you to create a shared services instance and attach it to a cluster. The functionality offered in this release is limited and some of the steps must be performed with the CLI. For instructions, refer to [this Google doc](https://docs.google.com/document/d/1hST-nSd8BDnXQXc9ZRvpimpor_MRaY8jpZyMaNHaCRE/edit#heading=h.32ylkzt6gc1s). 
 ____________________________
 
 ##### **Technical Preview of HDP 3.0** 
