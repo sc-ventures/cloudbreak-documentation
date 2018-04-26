@@ -66,12 +66,12 @@ ____________________________
 #### Behavioral changes
 ____________________________
 
-##### **Image Catalog Option Moved to External Sources**
+##### **Image Catalog Option Was Moved to External Sources**
 
 The options related to registering a custom image catalog and selecting a default image catalog were removed from the **Settings** navigation menu option and are now available under **External Sources > Image Catalogs**.
 ____________________________
   
-##### **Recipes Menu Option Moved to Cluster Extensions**
+##### **Recipes Option Was Moved to Cluster Extension***
 
 The **Recipes** navigation menu option was moved under **Cluster Extensions**, so to find recipe-related settings, select **Cluster Extensions > Recipes** from the navigation menu. 
 
@@ -105,11 +105,13 @@ Default HDF version 3.1.1.0-35
 
 
 
+
 ____________________________
 
 #### Fixed issues
 ____________________________
 
+[Comment]: <> (All the items below were fixed in 2.5.0. When looking through items with fixed version 2.6.0, I do not see anything that was can be added to this list.)
 [Comment]: <> (BUG-97207 is internal? YARN?)
 [Comment]: <> (Not included in 2.5.0 TP, only 2.4.1: BUG-99635 After deleting a default credential and creating a new credential, credential is missing from the create cluster wizard.)
 
@@ -132,6 +134,7 @@ ____________________________
 | BUG-97390 | Cloudbreak should support longer resource ID-s on AWS. | Usability | 2.5.0 TP |
 | BUG-99512 | Azure ES_v3 instances should support premium storage. | Usability | 2.5.0 TP | 
 | BUG-97206 | Backend should return only images for enabled platforms. | Usability | 2.5.0 TP |
+
 
 
 
@@ -167,6 +170,7 @@ ____________________________
 
 
 
+
 ##### (BUG-92605) **Cluster Creation Fails with ResourceInError**
 
 Cluster creation fails with the following error: 
@@ -178,6 +182,27 @@ Cluster creation fails with the following error:
 This may mean that the volumes that you requested exceed volumes available on your cloud provider account. When creating a cluster, on the advanced **Hardware and Storage** page of the create cluster wizard, try reducing the amount of requested storage. If you need more storage, try using a different region or ask your cloud provider admin to increase the resource quota for volumes.  
 
 [Comment]: <> (This jira item was closed so it will not be fixed. Maybe add this to troubleshooting?)
+____________________________
+
+
+
+
+
+
+
+
+##### (BUG-101319) Cluster Status is Running When Some Steps Failed 
+
+Cluster status is *Running* (green) when:  
+
+* Upscale failed, or  
+* Nodes are missing after being manually removed  
+
+*Workaround:*
+
+Review *Event History* to find out the status of recent events. 
+
+[Comment]: <> (To be fixed in 2.7.0) 
 ____________________________
 
 
@@ -214,7 +239,7 @@ ____________________________
 
 ##### (BUG-97044) **Show CLI Command Copy JSON Button Does Not Work**
   
-When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** button with  Firefox, the content does not does not get copied if adblock plugin or other advertise blocker plugins are present.
+When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** button with Firefox, the content does not does not get copied if adblock plugin or other advertise blocker plugins are present.
 
  *Workaround:*  
  
@@ -233,6 +258,20 @@ ____________________________
 
 
 
+##### (BUG-93257) **Clusters Are Missing From History When an Exact Day Is Selected**   
+
+On the History page, when the start date selected is the same as end date, clusters that were running on that date are filtered out. 
+
+[Comment]: <> (To be fixed in 2.7.0) 
+____________________________
+
+
+
+
+
+
+
+
 
 
 ##### (BUG-93257) **Clusters Are Missing From History**   
@@ -242,15 +281,83 @@ After changing the dates on the History page multiple times, the results display
 *Workaround:*
 
 Refresh the page if you think that the history displayed may be incorrect.  
-
-
-
-
-
-
-
-
 ____________________________
+
+
+
+
+
+
+
+
+
+
+##### (BUG-101223) **Hardware Status is Incorrect After Stop and Start**   
+
+After stopping and starting a cluster, cluster state is incorrectly listed as "Unhealty", even though the nodes are healthy.
+
+[Comment]: <> (To be fixed in 2.7.0)
+____________________________
+
+
+
+
+
+
+
+
+
+##### (BUG-101230) **The `curl` Command for CLI Download Doesn't Work on Windows** 
+
+The `curl` command listed on the **Download CLI** page for Windows does not work on Windows. 
+
+[Comment]: <> (To be fixed in 2.7.0)
+____________________________
+
+
+
+
+
+
+
+
+
+
+##### (BUG-101225) **CLI: Manual Repair Does Not Work**   
+
+`cb cluster repair` does not work as expected.
+
+[Comment]: <> (To be fixed in 2.7.0)
+____________________________
+
+
+
+
+
+
+
+
+
+
+
+##### (BUG-101204) **CLI: InstanceProfileStrategy Create Doesn't Work**   
+
+Using the following parameter in the CLI JSON from creating an instance profile does not work asexpected: 
+<pre>"parameters": {
+    "instanceProfileStrategy": "CREATE"
+},</pre>
+
+[Comment]: <> (To be fixed in 2.7.0)
+____________________________
+
+
+
+
+
+
+
+
+
 
 **Known issues: Ambari 2.6.1.3 and HDP 2.6.4.0**
 
@@ -294,7 +401,6 @@ agent.auto.cache.update=true*
 parallel_execution=1</pre> 
 
 [Comment]: <> (Fixed in Ambari 2.7?) 
-
 ____________________________
 
 
@@ -303,7 +409,8 @@ ____________________________
 
 
 
-##### (AMBARI-14149) **Ambari Cluster Cannot Be Started After Stop**
+
+##### (AMBARI-14149) **In Ambari, Cluster Cannot Be Started After Stop**
 
 When using Ambari version 2.5.0.3, after stopping and starting a cluster, Event History shows the following error:
 
@@ -321,13 +428,16 @@ Ambari dashboard shows that nodes are not sending heartbeats.
  This issue is fixed in Ambari version 2.5.1.0 and newer.  
 
 [Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
-
-
-
-
-
-
 ____________________________
+
+
+
+
+
+
+
+
+
 
 **Known issues: HDF 3.1.1**
 
@@ -336,6 +446,8 @@ The known issues described here were discovered when testing Cloudbreak with Amb
 > For general HDF 3.1.1 known issues, refer to [HDF 3.1.1 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDF3/HDF-3.1.1/bk_release-notes/content/ch_hdf_relnotes.html)
 
 ____________________________
+
+
 
 
 

@@ -47,8 +47,8 @@ If you would like to use a custom HDP or HDF version, provide the following info
 
 | Parameter | Description | Example | 
 |---|---|--|
-| Stack | Stack name. | HDP |
-| Version | Stack version. | 2.6 |
+| Stack | This is populated by default based on the "Platform Version" parameter. | HDP |
+| Version | This is populated by default based on the "Platform Version" parameter. | 2.6 |
 | OS | Operating system. | centos7 (Azure, GCP, OpenStack) or amazonlinux (AWS) |
 | Repository Version | Enter repository version. | 2.6.4.0-91 |
 | Version Definition File | Enter the URL of the VDF file. | http://public-repo-1.hortonworks.com/HDP/centos6/2.x/updates/2.6.4.0/HDP-2.6.4.0-91.xml |
