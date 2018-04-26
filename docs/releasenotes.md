@@ -71,7 +71,7 @@ ____________________________
 The options related to registering a custom image catalog and selecting a default image catalog were removed from the **Settings** navigation menu option and are now available under **External Sources > Image Catalogs**.
 ____________________________
   
-##### **Recipes Option Was Moved to Cluster Extension***
+##### **Recipes Option Was Moved to Cluster Extension**
 
 The **Recipes** navigation menu option was moved under **Cluster Extensions**, so to find recipe-related settings, select **Cluster Extensions > Recipes** from the navigation menu. 
 
@@ -191,7 +191,7 @@ ____________________________
 
 
 
-##### (BUG-101319) Cluster Status is Running When Some Steps Failed 
+##### (BUG-101319) **Cluster Status is Running When Some Steps Failed** 
 
 Cluster status is *Running* (green) when:  
 
@@ -307,7 +307,7 @@ ____________________________
 
 
 
-##### (BUG-101230) **The `curl` Command for CLI Download Doesn't Work on Windows** 
+##### (BUG-101230) **The Command for CLI Download Doesn't Work on Windows** 
 
 The `curl` command listed on the **Download CLI** page for Windows does not work on Windows. 
 
@@ -451,7 +451,7 @@ ____________________________
 
 
 
-##### (BUG-98865) Scaling HDF Clusters Does Not Update Configurations on New Nodes
+##### (BUG-98865) **Scaling HDF Clusters Does Not Update Configurations on New Nodes**
 
 Blueprint configuration parameters are not applied when scaling an HDF cluster. 
 One example that affects all users is that after HDF cluster upscale/downscale the `nifi.web.proxy.host` blueprint parameter does not get updated to include the new nodes, and as a result the NiFi UI is not reachable from these nodes. 
