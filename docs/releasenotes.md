@@ -342,7 +342,7 @@ ____________________________
 
 ##### (BUG-101204) **CLI: InstanceProfileStrategy Create Doesn't Work**   
 
-Using the following parameter in the CLI JSON from creating an instance profile does not work asexpected: 
+Using the following parameter in the CLI JSON from creating an instance profile does not work as expected: 
 <pre>"parameters": {
     "instanceProfileStrategy": "CREATE"
 },</pre>
