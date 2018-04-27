@@ -191,25 +191,6 @@ ____________________________
 
 
 
-##### (BUG-101319) **Cluster Status is Running When Some Steps Failed** 
-
-Cluster status is *Running* (green) when:  
-
-* Upscale failed, or  
-* Nodes are missing after being manually removed  
-
-*Workaround:*
-
-Review *Event History* to find out the status of recent events. 
-
-[Comment]: <> (To be fixed in 2.7.0) 
-____________________________
-
-
-
-
-
-
 
 
 
