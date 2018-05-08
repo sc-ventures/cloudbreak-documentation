@@ -135,7 +135,7 @@ After [enabling autoscaling](#enable-autoscaling), perform these steps to config
     
     | Setting | Description	 | Default Value |
 |---|---|---|
-| Cooldown time  | After an auto scaling event occurs, the amount of time to wait before enforcing another scaling policy. | 30 minutes |
+| Cooldown time  | After an auto scaling event occurs, the amount of time to wait before enforcing another scaling policy. This means that the scaling events scheduled during cooldown time are dropped. | 30 minutes |
 | Minimum Cluster Size |	The minimum size allowed for the cluster. Auto scaling policies cannot scale the cluster below or above this size. | 2 nodes |
 | Maximum Cluster Size |	The maximum size allowed for the cluster. Auto scaling policies cannot scale the cluster below or above this size. | 100 nodes |
 
