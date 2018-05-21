@@ -1,64 +1,21 @@
 ## Release notes
 
-### 2.6.0 TP
+### 2.7.0 
 
-Cloudbreak 2.6.0 is an internal technical preview release. 
+Cloudbreak 2.7.0 is a general availability release, which is suitable for production deployments.
 
-{!docs/common/about-tp.md!}
+
 
 ____________________________
 
 #### New features
 ____________________________
 
-##### **Using MySQL and Oracle External Databases** 
+##### **Feature 1** 
 
-Cloudbreak 2.6.0 TP introduces support for creating external MySQL and Oracle databases, in addition to previously supported Postgres. For more information, refer to [Using an external database](external-db.md).   
-____________________________
- 
-##### **Creating HDF Messaging Management Clusters** 
+Feature 1
 
-Cloudbreak 2.6.0 TP introduces the ability to create HDF Messaging clusters, including Apache Kafka. To help you get started, Cloudbreak provides a new built-in **HDF Messaging: Apache Kafka** blueprint. 
 
-When creating a Messaging cluster from the default blueprint, make sure to do the following:
-
-* If using the default blueprint, place the Ambari Server on the "Services" host group.  
-* When creating a cluster, open 3000 TCP port on the Services host group for Grafana.     
-
-For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
-____________________________
-
-##### **Creating Flow Management Clusters with NiFi Registry**
-
-Cloudbreak 2.6.0 TP adds support for NiFi Registry and NiFi Registry was added to the default **Flow Management: Apache NiFi** blueprint. 
-
-When creating a NiFI cluster from the default blueprint, make sure to do the following:
-
-* Place the Ambari Server on the "Services" host group.     
-* When creating a cluster, open 9091 TCP port on the NiFi host group. Without it, you will be unable to access the NiFi web UI.   
-* When creating a cluster, open port 61443 on the Services host group. This port is used by NiFi Registry.      
-* When creating the NiFi Registry controller service in NiFi, the internal hostname has to be used, `e.g. https://ip-1-2-3-4.us-west-2.compute.internal:61443`   
-* Enable Kerberos. You can either use your own kerberos or select for Cloudbreak to create a test KDC.  
-* Although Cloudbreak allows cluster scaling (including autoscaling), scaling is not supported by NiFi. Downscaling NiFi clusters is not supported - as it can result in data loss when a node is removed that has not yet processed all the data on that node. There is also a known issue related to scaling listed in the [Known Issues](#known-issues) below.  
-
-For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
-To get started creating NiFi clusters, refer to the following [HCC post](https://community.hortonworks.com/articles/182221/create-a-nifi-cluster-on-aws-azure-google-or-opens.html).  
-____________________________
-
-##### **Using Management Packs** 
-
-Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation.  
-For more information, refer to [Using management packs](mpacks.md).  
-____________________________
-
-##### **Technical Preview of Shared Services** 
-
-Cloudbreak 2.6.0 TP allows you to create a shared services instance and attach it to a cluster. The functionality offered in this release is limited and some of the steps must be performed with the CLI. For instructions, refer to [this Google doc](https://docs.google.com/document/d/1hST-nSd8BDnXQXc9ZRvpimpor_MRaY8jpZyMaNHaCRE/edit#heading=h.32ylkzt6gc1s). 
-____________________________
-
-##### **Technical Preview of HDP 3.0** 
-
-Cloudbreak 2.6.0 TP includes one default HDP 3.0 blueprint, allowing you to try HDP 3.0. Note that this option cannot be used on AWS. For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).
 
 
 ____________________________
@@ -66,14 +23,9 @@ ____________________________
 #### Behavioral changes
 ____________________________
 
-##### **Image Catalog Option Was Moved to External Sources**
+##### **Feature 1** 
 
-The options related to registering a custom image catalog and selecting a default image catalog were removed from the **Settings** navigation menu option and are now available under **External Sources > Image Catalogs**.
-____________________________
-  
-##### **Recipes Option Was Moved to Cluster Extension**
-
-The **Recipes** navigation menu option was moved under **Cluster Extensions**, so to find recipe-related settings, select **Cluster Extensions > Recipes** from the navigation menu. 
+Feature 1
 
 
 

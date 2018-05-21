@@ -140,11 +140,6 @@ After performing the import, you should be able to see the Cloudbreak image amon
 
 ### Launch the VM
 
-{!docs/common/about-tp.md!}
-
-<!---Commenting out the regular steps--->
-<!---
-
 In your OpenStack, launch and instance providing the following parameters:
 
 * Select a VM flavor which meets the following minimum requirements: 4GB RAM, 10GB disk, 2 cores.
@@ -221,31 +216,26 @@ Cloudbreak will automatically pick up the certificate and import it into its tru
 
 Launch Cloudbreak deployer using the following steps.
 
-**Steps**
+Start the Cloudbreak application by using the following command:
 
-1. Start the Cloudbreak application by using the following command:
+<pre>cbd start</pre>
 
-    <pre>cbd start</pre>
-
-    This will start the Docker containers and initialize the application. The first time you start the Cloudbreak app, the process will take longer than usual due to the download of all the necessary docker images.
-
-    This will start the Docker containers and initialize the application. The first time you start the Cloudbreak app, this also downloads of all the necessary docker images.
+This will start the Docker containers and initialize the application. The first time you start the Cloudbreak app, this also downloads of all the necessary docker images.
 
 [Comment]: <> (Extra info which may not be needed here: The `cbd start` command includes the `cbd generate` command which applies the following steps: Creates the `docker-compose.yml` file, which describes the configuration of all the Docker containers needed for the Cloudbreak deployment. Creates the `uaa.yml` file, which holds the configuration of the identity server used to authenticate users with Cloudbreak.)
 
-    Once the `cbd start` has finished, it returns the "Uluwatu (Cloudbreak UI) url" which you can later paste in your browser and log in to Cloudbreak web UI.
+Once the `cbd start` has finished, it returns the "Uluwatu (Cloudbreak UI) url" which you can later paste in your browser and log in to Cloudbreak web UI.
 
-    To check Cloudbreak deployer version and health, use:
+To check Cloudbreak deployer version and health, use:
 
-    <pre>cbd doctor</pre>
+<pre>cbd doctor</pre>
 
-    If you would like to check Cloudbreak Application logs, use:
+If you would like to check Cloudbreak Application logs, use:
 
-    <pre>cbd logs cloudbreak</pre>
+<pre>cbd logs cloudbreak</pre>
 
-    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
+You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
 
--->
 
 ### Access Cloudbreak web UI
 

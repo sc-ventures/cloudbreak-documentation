@@ -57,13 +57,13 @@ You can manage networks under **Networking** > **VPC Networks**. To edit ports, 
 
 ### Launch Cloudbreak deployer    
 
-{!docs/common/about-tp.md!}
-
 
 <!---Commenting out the regular steps--->
 <!---
      
-### Launch Cloudbreak deployer from an image   
+### Launch Cloudbreak deployer from an image  
+
+Launch Cloudbreak deployer by using the following steps.   
 
 **Steps**
 

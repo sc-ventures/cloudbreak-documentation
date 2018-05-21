@@ -307,8 +307,6 @@ Once you are done, you can proceed to [Launch Cloudbreak deployer from an image]
 
 ### Launch Cloudbreak deployer    
 
-{!docs/common/about-tp.md!}
-
 
 <!---Commenting out the regular steps--->
 <!---

@@ -44,12 +44,7 @@ When launching Cloudbreak, you will be required to provide your public SSH key. 
 
 ### Launch Cloudbreak from a template 
 
-Launch Cloudbreak deployer using the following steps.
-
-{!docs/common/about-tp.md!}
-
-<!---Commenting out the regular steps--->
-<!---
+Launch Cloudbreak deployer by using the following steps.
 
 **Steps**
 
@@ -105,7 +100,6 @@ Launch Cloudbreak deployer using the following steps.
 [CIDR IP](http://www.ipaddressguide.com/cidr) (External)   
 [Filter network traffic with network security groups](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg) (External)  
 
---->
 
 ### Access Cloudbreak web UI
 

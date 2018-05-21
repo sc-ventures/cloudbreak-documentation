@@ -70,15 +70,13 @@ Additionally, review the following prerequisites:
 
 Install Cloudbreak using the following steps.
 
-{!docs/common/about-tp.md!}
-
 
 **Steps**
 
 1. Install the Cloudbreak deployer and unzip the platform-specific single binary to your PATH. For example:
 
     <pre>yum -y install unzip tar
-curl -Ls public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer_2.5.0_$(uname)_x86_64.tgz | sudo tar -xz -C /bin cbd
+curl -Ls public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer_2.7.0_$(uname)_x86_64.tgz | sudo tar -xz -C /bin cbd
 cbd --version</pre>
 
 
@@ -125,7 +123,7 @@ cbd start</pre>
     <pre>cbd logs cloudbreak</pre>
 
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak normally takes less than a minute to start.
-å
+
 
 
 
