@@ -1,8 +1,8 @@
 ## Release notes
 
-### 2.6.0 TP
+### 2.6.1 TP
 
-Cloudbreak 2.6.0 is an internal technical preview release. 
+Cloudbreak 2.6.1 is an internal technical preview release. 
 
 {!docs/common/about-tp.md!}
 

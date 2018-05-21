@@ -1,6 +1,6 @@
 ## Introduction
 
-Welcome to the **Cloudbreak 2.6 Technical Preview** documentation! 
+Welcome to the **Cloudbreak 2.6.1 Technical Preview** documentation! 
 
 {!docs/common/about-tp.md!}
 
