@@ -208,11 +208,7 @@ ____________________________
 #### Image Catalog Updates 
 ____________________________
 
-##### March 27, 2018 
-
-[Comment]: <> (Update the date once the update is available.)
-
-Update 1:
+##### March 27, 2018 - Update 1:
 
 Default Ambari version 2.6.1.3  
 Default HDP version 2.6.4.5-2   
