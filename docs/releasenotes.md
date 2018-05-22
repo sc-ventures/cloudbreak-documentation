@@ -22,6 +22,12 @@ Cloudbreak 2.6.0 TP allows you to create a shared services instance and attach i
 ____________________________ 
 
 
+##### **Sorting and Filtering Resource Tables**
+
+Cloudbreak introduces the ability to sort and filter tables listing resources such as clusters, recipes, and blueprints in the Cloudbreak web UI.
+____________________________ 
+
+
 [Comment]: <> (2.6 and 2.6 features)
 
 
@@ -29,7 +35,7 @@ ____________________________
 
 Cloudbreak introduces the ability to create HDF flow management cluster with Apache NiFi and NiFi Registry. To help you get started, Cloudbreak provides a new built-in **Flow Management: Apache NiFi** blueprint. 
 
-When creating a NiFI cluster from the default blueprint, make sure to do the following:
+When creating a Flow Management cluster from the default blueprint, make sure to do the following:
 
 * Place the Ambari Server on the "Services" host group.     
 * When creating a cluster, open 9091 TCP port on the NiFi host group. Without it, you will be unable to access the NiFi web UI.   
@@ -45,9 +51,9 @@ ____________________________
 
 ##### **Creating HDF Messaging Management Clusters** 
 
-Cloudbreak introduces the ability to create HDF Messaging clusters, including Apache Kafka. To help you get started, Cloudbreak provides a new built-in **HDF Messaging: Apache Kafka** blueprint. 
+Cloudbreak introduces the ability to create HDF Messaging clusters, including Apache Kafka. To help you get started, Cloudbreak provides a new built-in **HDF Messaging Management: Apache Kafka** blueprint. 
 
-When creating a Messaging cluster from the default blueprint, make sure to do the following:
+When creating a Messaging Management cluster from the default blueprint, make sure to do the following:
 
 * If using the default blueprint, place the Ambari Server on the "Services" host group.  
 * When creating a cluster, open 3000 TCP port on the Services host group for Grafana.     
