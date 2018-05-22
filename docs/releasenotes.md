@@ -11,9 +11,99 @@ ____________________________
 #### New features
 ____________________________
 
-##### **Feature 1** 
+[Comment]: <> (2.7 features)
 
-Feature 1
+
+
+
+##### **Technical Preview of Shared Services** 
+
+Cloudbreak 2.6.0 TP allows you to create a shared services instance and attach it to a cluster.
+____________________________ 
+
+
+[Comment]: <> (2.6 and 2.6 features)
+
+
+##### **Creating Flow Management Clusters**
+
+Cloudbreak introduces the ability to create HDF flow management cluster with Apache NiFi and NiFi Registry. To help you get started, Cloudbreak provides a new built-in **Flow Management: Apache NiFi** blueprint. 
+
+When creating a NiFI cluster from the default blueprint, make sure to do the following:
+
+* Place the Ambari Server on the "Services" host group.     
+* When creating a cluster, open 9091 TCP port on the NiFi host group. Without it, you will be unable to access the NiFi web UI.   
+* When creating a cluster, open port 61443 on the Services host group. This port is used by NiFi Registry.      
+* When creating the NiFi Registry controller service in NiFi, the internal hostname has to be used, `e.g. https://ip-1-2-3-4.us-west-2.compute.internal:61443`   
+* Enable Kerberos. You can either use your own kerberos or select for Cloudbreak to create a test KDC.  
+* Although Cloudbreak allows cluster scaling (including autoscaling), scaling is not supported by NiFi. Downscaling NiFi clusters is not supported - as it can result in data loss when a node is removed that has not yet processed all the data on that node. There is also a known issue related to scaling listed in the [Known Issues](#known-issues) below.  
+
+For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
+To get started creating NiFi clusters, refer to the following [HCC post](https://community.hortonworks.com/articles/182221/create-a-nifi-cluster-on-aws-azure-google-or-opens.html).  
+____________________________
+
+
+##### **Creating HDF Messaging Management Clusters** 
+
+Cloudbreak introduces the ability to create HDF Messaging clusters, including Apache Kafka. To help you get started, Cloudbreak provides a new built-in **HDF Messaging: Apache Kafka** blueprint. 
+
+When creating a Messaging cluster from the default blueprint, make sure to do the following:
+
+* If using the default blueprint, place the Ambari Server on the "Services" host group.  
+* When creating a cluster, open 3000 TCP port on the Services host group for Grafana.     
+
+For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
+____________________________
+
+
+##### **Using MySQL and Oracle External Databases** 
+
+Cloudbreak introduces support for creating external MySQL and Oracle databases, in addition to previously supported Postgres. For more information, refer to [Using an external database](external-db.md).   
+____________________________
+
+
+##### **Using External Databases for Cluster Services** 
+
+You can register an existing external RDBMS in the Cloudbreak UI or CLI so that it can be used for those cluster components which have support for it. After the RDBMS has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.  
+
+Only Postgres is supported at this time. Refer to component-specific documentation for information on which version of Postgres (if any) is supported.  
+
+For more information, refer to [Register an External Database](external-db.md).  
+____________________________ 
+
+
+##### **Using External Authentication Sources (LDAP/AD) for Clusters** 
+
+You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.
+
+For more information, refer to [Register an Authentication Source](external-ldap.md).   
+____________________________  
+
+
+##### **Configuring Cloudbreak to Use Existing LDAP/AD**
+
+You can configure Cloudbreak to use your existing LDAP/AD so that you can authenticate Cloudbreak users against an existing LDAP/AD server. For more information, refer to [Configuring Cloudbreak for LDAP/AD Authentication](cb-ldap.md). 
+____________________________
+
+
+##### **Launching Cloudbreak in Environments with Restricted Internet Access or Required Use of Proxy** 
+
+You can launch Cloudbreak in environments with limited or restricted internet access and/or required use of a proxy to obtain internet access. For more information, refer to [Configure Outbound Internet Access and Proxy](cb-proxy.md). 
+____________________________
+
+
+##### **Modifying Existing Cloudbreak Credentials** 
+
+Cloudbreak allows you to modify existing credentials by using the edit option available in Cloudbreak UI or by using the `credential modify` command in the CLI. For more information, refer to [Modify an Existing Credential](cb-credentials.md#modify-an-existing-credential).
+____________________________ 
+
+
+##### **Using Management Packs** 
+
+Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation.  
+For more information, refer to [Using management packs](mpacks.md).  
+
+
 
 
 
@@ -23,11 +113,27 @@ ____________________________
 #### Behavioral changes
 ____________________________
 
-##### **Feature 1** 
-
-Feature 1
+[Comment]: <> (2.7 features)
 
 
+[Comment]: <> (2.6 features)
+
+##### **Image Catalog Option Was Moved to External Sources**
+
+The options related to registering a custom image catalog and selecting a default image catalog were removed from the **Settings** navigation menu option and are now available under **External Sources > Image Catalogs**.
+____________________________
+  
+##### **Recipes Option Was Moved to Cluster Extension**
+
+The **Recipes** navigation menu option was moved under **Cluster Extensions**, so to find recipe-related settings, select **Cluster Extensions > Recipes** from the navigation menu. 
+____________________________
+
+[Comment]: <> (2.5 features)
+
+
+##### **Auto-import of HDP/HDF Images on OpenStack**
+
+When using Cloudbreak on OpenStack, you no longer need to import HDP and HDF images manually, because during your first attempt to create a cluster, Cloudbreak automatically imports HDP and HDF images to your OpenStack. Only Cloudbreak image must be imported manually. 
 
 
 
