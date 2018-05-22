@@ -68,7 +68,8 @@ Cluster:
 * [cluster generate-template](#cluster-generate-template)   
 * [cluster generate-reinstall-template](#cluster-generate-reinstall-template)  
 * [cluster list](#cluster-list)    
-* [cluster repair](#cluster-repair)             
+* [cluster repair](#cluster-repair)    
+* [cluster retry](#cluster-retry)         
 * [cluster scale](#cluster scale)      
 * [cluster start](#cluster-start)        
 * [cluster stop](#cluster-stop)              
@@ -812,6 +813,39 @@ Repairs a cluster if cluster installation failed.
 **Examples**
 
 <pre>cb cluster repair --name test1234</pre>
+
+
+
+
+
+
+
+
+
+
+__________________________________
+
+#### cluster retry
+
+Retries the process if cluster or stack provisioning failed.
+
+**Required options**
+
+**`--name <value>`**  Cluster name
+
+**Options**
+
+**`--wait`**  Wait for the operation to finish. No argument is required  
+**`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT] 
+**`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
+**`--username <value>`**  Cloudbreak user name (e-mail address) [$CB_USER_NAME]  
+**`--password <value>`**  Cloudbreak password [$CB_PASSWORD]    
+**`--profile <value>`**  Selects a config profile to use [$CB_PROFILE]  
+**`--auth-type <value>`**  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   
+
+**Examples**
+
+<pre>cb cluster retry --name test1234</pre>
 
 
 

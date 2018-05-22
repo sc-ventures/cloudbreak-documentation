@@ -17,22 +17,28 @@ You can manage monitor your clusters from the Cloudbreak UI. To do that, click o
 </div>
 
 
-
 ### Retry a cluster
 
-In some cases the cause of a failed stack provisioning or cluster creation can be eliminated with manual intervention. After corrections were made, the operation can be continuted where it left off.
+When a stack provisioning or cluster creation failure occurs, the "retry" option allows you to resume the process from the last failed step. 
 
-To retry a cluster, follow these steps.
+In some cases the cause of a failed stack provisioning or cluster creation can be eliminated by simply retrying the process. For example, in case of a temporary network outage, a retry should be successful. In other cases, a manual modification is required before a retry can succeed. For example, if you are using a custom image but some configuration is missing, causing the process to fail, you must log in to the machine and fix the issue; Only after that you can retry the the process.
+ 
+Only failed stack or cluster creations can be retried. A retry can be initiated any number of times on a failed creation process. 
 
-> Only failed stack or cluster creations are retryable.
+To retry provisioning a failed stack or cluster, follow these steps.  
+
+**Steps**
 
 1. Browse to the cluster details.
 
 2. Click **Actions** and select **Retry**. 
 
-3. Click **Yes** to confirm
+    Only failed stack or cluster creations can be retried, so the option is only available in these two cases.  
 
-    The operation continues from the last failed step. A retry can be initiated any number of times on a failed creation process.
+3. Click **Yes** to confirm. 
+
+    The operation continues from the last failed step. 
+    
 
 ### Resize a cluster
 
