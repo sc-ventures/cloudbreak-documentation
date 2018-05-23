@@ -173,6 +173,7 @@ ____________________________
 
 | Issue | Issue description | Category | Fix version | 
 |---|---|---|---|
+| BUG-100468 | Images from a custom image catalog are not listed in the UI after Cloudbreak version changed. | Stability | 2.7.0 |
 | BUG-99168 | All clusters created on Google Cloud Platform fail. | Stability | 2.5.0 TP |
 | BUG-99400 | Time-based cluster autoscaling does not work. | Stability | 2.5.0 TP |
 | BUG-99505 | Sync is not working for an AWS instance that was terminated a long time ago. | Stability | 2.5.0 TP |
