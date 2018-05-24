@@ -55,10 +55,65 @@ When launching Cloudbreak, you will be required to select an existing network in
 You can manage networks under **Networking** > **VPC Networks**. To edit ports, click on the network name and then click on **Add firewall rules**. 
 
 
-### Launch Cloudbreak from template     
+### Launch Cloudbreak from a template     
 
-TBD 
+Follow these steps to launch Cloudbreak on Google Cloud by using the Cloud Deployer Manager. 
 
+[Comment]: <> (https://cloud.google.com/deployment-manager/) 
+
+**Steps**
+
+1. In order to use the Cloud Deployment Manager, you must install the Google cloud SDK on your machine. The SDK contains the gcloud CLI tool, which is used to deploy Cloudbreak. 
+
+    For instructions, refer to [Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) in Google Cloud documentation.  
+
+[Comment]: <> (https://cloud.google.com/sdk/gcloud/)
+
+1. Open a text editor and paste the following into the file:  
+
+    <pre>region: us-central1
+zone: us-central1-a
+instance_type: n1-standard-4
+ssh_pub_key: ....
+os_user: cloudbreak
+user_email: admin@example.com
+user_password: cloudbreak</pre>
+
+2. Edit the file by updating the parameters: 
+
+    | Parameter | Description | Default |
+|---|---|---|
+| region | The GCP region in which you would like to launch Cloudbreak. You can launch Cloudbreak and provision your clusters in all regions [supported by GCP](https://cloud.google.com/compute/docs/regions-zones/regions-zones). | us-central-1 |
+| zone | The GCP region's zone in which you would like to launch Cloudbreak. You can launch Cloudbreak and provision your clusters in all regions [supported by GCP](https://cloud.google.com/compute/docs/regions-zones/regions-zones).| us-central1-a |
+| instance_type | Select the VM instance type. For available instance types, reefer to [Machine Types](https://cloud.google.com/compute/docs/machine-types) in GCP docuemntation. |  n1-standard-4 |
+| ssh_pub_key | Paste your SSH public key. | ... |
+| os_user | Enter the name of the user that you would like to use to SSH to the VM. |  cloudbreak |
+| user_email | Enter the email address that you would like to use to log in to Cloudbreak. | admin@cloudbreak.com |
+| user_password | Enter the password that you would like to use to log in to Cloudbreak. | cloudbreak |
+
+[Comment]: <> (VPC not available?)
+
+1. Save the file on your local machine in the yaml format. 
+
+1. Run the following command to create a new deployment:
+
+    <pre>gcloud deployment-manager deployments create cbd-deployment --config=/path/to/your/file.yaml</pre>
+    
+    For example:
+
+    <pre>gcloud deployment-manager deployments create cbd-deployment --config=vm_template_config.yaml</pre>
+    
+   
+
+To delete the previously created deployment via gcloud command line interface, use:
+    
+<pre>gcloud deployment-manager deployments delete cbd-deployment -q</pre>
+
+
+**Related Links**  
+[Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) (External)  
+[Regions and Zones](https://cloud.google.com/compute/docs/regions-zones/regions-zones) (External)    
+[Machine Types](https://cloud.google.com/compute/docs/machine-types) (External)    
 
 ### Access Cloudbreak web UI
 
