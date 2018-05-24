@@ -51,8 +51,6 @@ You need this SSH key pair to SSH to the Cloudbreak instance and start Cloudbrea
 
 #### Authentication 
 
-[comment]: <> (I cold use some help clarifying this section.)
-
 Before you can start using Cloudbreak for provisioning clusters, you must select a way for Cloudbreak to authenticate with your AWS account and create resources on your behalf. There are two ways to do this: 
 
 * **Key-based**: This is a simpler option which does not require additional configuration at this point. It requires that you provide your AWS access key and secret key pair in the Cloudbreak web UI later. All you need to do now is check your AWS account and ensure that you can access this key pair.
@@ -72,14 +70,13 @@ If you choose this option, you can proceed to [Launch Cloudbreak deployer from a
 
 ### (Option 2) Configure role-based authentication
 
+[Comment]: <> (TBD How IAM role will be selected when launching Cb from template.)
+
 {!docs/common/aws-launch-authentication-role-based-intro.md!}
 
-[comment]: <> (The notes below could be included in the table above as alternative steps, but I'm afraid that showing too many options can be confusing; especially that in order to perform these alternative steps, you must perform advanced configuration. So I am adding them as a side note.)
+> CloudbreakRole: Alternatively, instead of attaching the "CloudbreakRole" role during the VM launch, you can assign the "CloudbreakRole" to an IAM user and then add the access and secret key of that user to your 'Profile'.
 
-> Alternatively, instead of attaching the "CloudbreakRole" role during the VM launch, you can assign the "CloudbreakRole" to an IAM user and then add the access and secret key of that user to your 'Profile'.
-
-> Alternatively you can generate the "CredentialRole" role later once your Cloudbreak VM is running by SSHing to the Cloudbreak VM and running the `cbd aws generate-role` command. This command creates a role with the name "cbreak-deployer" (equivalent to the "CredentialRole"). To customize the name of the role, add `export AWS_ROLE_NAME=my-cloudbreak-role-name` (where "my-cloudbreak-role-name" is your custom role name) as a new line to your Profile. If you choose this option, you must make sure that the "CloudbreakRole" or the IAM user have a permission not only to assume a role but also to create a role.  
- 
+> CredentialRole: Alternatively you can generate the "CredentialRole" role later once your Cloudbreak VM is running by SSHing to the Cloudbreak VM and running the `cbd aws generate-role` command. This command creates a role with the name "cbreak-deployer" (equivalent to the "CredentialRole"). To customize the name of the role, add `export AWS_ROLE_NAME=my-cloudbreak-role-name` (where "my-cloudbreak-role-name" is your custom role name) as a new line to your Profile. If you choose this option, you must make sure that the "CloudbreakRole" or the IAM user have a permission not only to assume a role but also to create a role.  
 
 You can create these roles in the **IAM console**, on the **Roles** page via the **Create Role** option. Detailed steps are provided below. 
 
@@ -298,165 +295,160 @@ Use the following "cb-policy" policy definition:
     
 11. When done, click **Create role** to finish the role creation process. 
 
-Once you are done, you can proceed to [Launch Cloudbreak deployer from an image](#launch-cloudbreak-deployer-from-an-image).  
+Once you are done, you can proceed to launch Cloudbreak.  
 
 **Related links**  
 [Using instance profiles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) (External)  
 [Using an IAM role to grant permissions to applications](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) (External)   
 
 
-### Launch Cloudbreak deployer    
+### Launch Cloudbreak from template  
 
+Follow these steps to launch Cloudbreak by using an Amazon CloudFormation template:    
 
-<!---Commenting out the regular steps--->
-<!---
+**Steps** 
 
-### Launch Cloudbreak deployer from an image   
+[Comment]: <> (TBD if custom VPC can be included.)
+[Comment]: <> (TBD how roles will be selected.)
 
-Now that you've met the prerequisites, you can launch the Cloudbreak deployer VM available as a Community AMI.
+1. Click on the link to launch the CloudFormation template that will create the AWS resources, including an EC2 Instance running Cloudbreak:
 
-**Steps**
-
-1. On AWS, navigate to the EC2 Console.  
-
-2. In the top right corner, select the region in which you want to launch Cloudbreak.  
-
-    <a href="../images/cb_aws-01.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-01.png" width="650" title="EC2 Console"></a> 
-    
-3. From the left pane, select **INSTANCES** > **Instances**.  
-
-4. Click on **Launch Instance**.
-
-5. In *Step 1: Choose an Amazon Machine Image (AMI)*, select **Community AMIs** from the left pane. 
-
-    <a href="../images/cb_aws-02.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-02.png" width="650" title="EC2 Console"></a> 
-     
-6. In the search box, enter the image name. The following Cloudbreak deployer images are available:
-
-    | Region Name | Region | Community AMI |
-|---|---|---|
-| EU (Ireland) | eu-west-1 | 	ami-0b70cb1044802db4a |
-| EU (Frankfurt) | eu-central-1 |	 ami-2d7827c6 |
-| US East (N. Virginia) | us-east-1 | ami-8d8220f0 |
-| US West (N. California) | us-west-1 | ami-de5949be |
-| US West (Oregon) | us-west-2 | ami-59432721 | 
-| South America (São Paulo) | sa-east-1 | ami-955402f9 |
-| Asia Pacific (Tokyo) | ap-northeast-1	| ami-e9564195 |
-| Asia Pacific (Singapore) | ap-southeast-1 | ami-8e98c2f2 | 
-| Asia Pacific (Sydney) | ap-southeast-2 | ami-31985653 |
-
-7. Click **Select**.  
-
-    > The steps listed below only mention required parameters. You may optionally review and adjust additional parameters. 
-  
-8. In *Step2: Choose Instance Type*, choose an instance type. The minimum instance type which is suitable for Cloudbreak is **m4.xlarge**. Minimum requirements are 16GB RAM, 40GB disk, 4 cores. When done, click **Next**.
-
-    <a href="../images/cb_aws-03.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-03.png" width="650" title="EC2 Console"></a>   
-    
-9. (Perform this step only if you are using role-based authorization) In **Step 3: Configure Instance Details** > **IAM**, select the "CloudbreakRole" IAM role which you [created earlier](#authorization-for-cloudbreak).
-
-9. In *Step4: Add Storage*, attach as much storage as you need. 
-
-10. In *Step 6: Configure Security Group*, open the following ports:
  
-    * 22 (for access via SSH)  
-    * 80 (for access via HTTP)   
-    * 443 (for access via HTTPS). 
+    <table>
+ <tr>
+   <th>Region</th>
+   <th>Link</th>
+ </tr>
+ <tr>
+   <td>us-east-1 (N. Virginia)</td>
+   <td><span class="button-instruction">
+   <a href="https://us-east-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?templateURL=https://s3.amazonaws.com/cbd-quickstart/cbd-quickstart-2.7.0-dev.170.template" target="_blank">
+   <i class="fa fa-rocket" aria-hidden="true"></i> Launch the CloudFormation Template in US East</a></span></td>
+ </tr>
+  <tr>
+   <td>us-west-1 (N. California)</td>
+   <td><span class="button-instruction">
+   <a href="https://us-west-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?templateURL=https://s3.amazonaws.com/cbd-quickstart/cbd-quickstart-2.7.0-dev.170.template" target="_blank">
+   <i class="fa fa-rocket" aria-hidden="true"></i> Launch the CloudFormation Template in US West (N. California)</a></span></td>
+ </tr>
+ <tr>
+   <td>us-west-2 (Oregon)</td>
+   <td><span class="button-instruction">
+   <a href="https://us-west-2.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?templateURL=https://s3.amazonaws.com/cbd-quickstart/cbd-quickstart-2.7.0-dev.170.template" target="_blank">
+   <i class="fa fa-rocket" aria-hidden="true"></i> Launch the CloudFormation Template in US West (Oregon)</a></span></td>
+ </tr>
+ <tr>
+   <td>eu-central-1 (Frankfurt)</td>
+   <td><span class="button-instruction">
+   <a href="https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?templateURL=https://s3.amazonaws.com/cbd-quickstart/cbd-quickstart-2.7.0-dev.170.template" target="_blank">
+   <i class="fa fa-rocket" aria-hidden="true"></i> Launch the CloudFormation Template in EU Central</a></span></td>
+ </tr>
+ <tr>
+   <td>eu-west-1 (Dublin)</td>
+   <td><span class="button-instruction">
+   <a href="https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?templateURL=https://s3.amazonaws.com/cbd-quickstart/cbd-quickstart-2.7.0-dev.170.template" target="_blank">
+   <i class="fa fa-rocket" aria-hidden="true"></i> Launch the CloudFormation Template in EU West </a></span></td>
+ </tr>
+ <tr>
+   <td>sa-east-1 (São Paulo)</td>
+   <td><span class="button-instruction">
+   <a href="https://sa-east-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?templateURL=https://s3.amazonaws.com/cbd-quickstart/cbd-quickstart-2.7.0-dev.170.template" target="_blank">
+   <i class="fa fa-rocket" aria-hidden="true"></i> Launch the CloudFormation Template in South America</a></span></td>
+ </tr>
+ <tr>
+   <td>ap-northeast-1 Asia Pacific (Tokyo)</td>
+   <td><span class="button-instruction">
+   <a href="https://ap-northeast-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?templateURL=https://s3.amazonaws.com/cbd-quickstart/cbd-quickstart-2.7.0-dev.170.template" target="_blank">
+   <i class="fa fa-rocket" aria-hidden="true"></i> Launch the CloudFormation Template in Asia Pacific (Tokyo)</a></span></td>
+ </tr>
+ <tr>
+   <td>ap-southeast-1 (Singapore)</td>
+   <td><span class="button-instruction">
+   <a href="https://ap-southeast-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?templateURL=https://s3.amazonaws.com/cbd-quickstart/cbd-quickstart-2.7.0-dev.170.template" target="_blank">
+   <i class="fa fa-rocket" aria-hidden="true"></i> Launch the CloudFormation Template in Asia Pacific (Singapore)</a></span></td>
+ </tr>
+ <tr>
+   <td>ap-southeast-2 (Sydney)</td>
+   <td><span class="button-instruction">
+   <a href="LINK" target="_blank">
+   <i class="fa fa-rocket" aria-hidden="true"></i> Launch the CloudFormation Template in Asia Pacific (Sydney)</a></span></td>
+ </tr>
+</table>  
+     
+               
+1. The **Create stack** wizard is launched in the Amazon CloudFormation management console:  
 
-    <a href="../images/cb_aws-04.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-04.png" width="650" title="EC2 Console"></a> 
+1. In the top right corner, confirm the region in which you want to launch Cloudbreak:  
+
+    <a href="/images/cb_aws-01.png" target="_blank" title="click to enlarge"><img src="/images/cb_aws-01.png" width="650" title="IAM Console"></a>  
     
-    When done, click **Review and Launch**.
+    > You may change the region if needed by using the dropdown in the top right corner.
 
-12. In *Step 7: Review Instance Launch*, review the information carefully and then click **Launch**. 
+1. You do not need to change any template parameters on the **Select Template** page. Click **Next** to display the **Specify Details** page:
 
-13. When prompted select an existing key pair or create a new one. Next, acknowledge that you have access to the private key file and click **Launch Instance**. 
+    <a href="/images/cb_aws-02.png" target="_blank" title="click to enlarge"><img src="/images/cb_aws-02.png" width="650" title="IAM Console"></a> 
 
-    <a href="../images/cb_aws-05.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-05.png" width="400" title="EC2 Console"></a>  
+1. On the the **Specify Details** page, enter the **Stack name**:
+
+    | Parameter | Description |
+    |---|---|
+    | Stack name | Enter name for your stack. It must be unique in your AWS environment. |
+
+1. On the same page, enter the following in the **Parameters** section:
+
+    > All parameters are required.
+
+    **General Configuration** 
+
+    | Parameter | Description |
+    |---|---|
+    | Controller Instance Type | EC2 instance type to use for the cloud controller. |
+    | Email Address | Username for the Admin login. Must be a valid email address. |
+    | Admin Password | Password for Admin login. Must be at least 8 characters containing letters, numbers, and symbols. |
     
-14. Click on the instance ID to navigate to the **Instances** view in your EC2 console. 
+    **Security Configuration** 
+        
+    | Parameter | Description |    
+    |---|---|
+    | SSH Key Name | Name of an existing EC2 key pair to enable SSH to access the instances. Key pairs are region-specific, so only the key pairs that you created for a selected region will appear in the dropdown. See [Prerequisites](#prerequisites) for more information. |
+    | Remote Access | Allow connections to the cloud controller ports from this address range. Must be a valid <a href="http://www.ipaddressguide.com/cidr" target="_blank">CIDR IP</a>. For example: <ul><li>192.168.27.0/24 will allow access from 192.168.27.0 through 192.168.27.255.</li><li>192.168.27.10/32 will allow access from 192.168.27.10.</li><li>0.0.0.0/0 will allow access from all.</li></ul> Refer to [Network security](security.md#network-security) for more information on the inbound ports that are used with Cloudbreak. |
 
-    <a href="../images/cb_aws-06.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-06.png" width="650" title="EC2 Console"></a>  
+1. Click **Next**  to display the **Options** page.    
 
-
-### SSH to the VM  
-
-Now that your VM is ready, access it via SSH: 
-  
-* Use the private key from the key pair that you selected when launching the instance. 
-* The SSH user is called "cloudbreak".
-* You can obtain the host IP from the EC2 console > **Instances** view by selecting the instance, selecting the **Description** tab, and copying the value of the **Public DNS (IPv4) ** or **IPv4 Public IP** parameter.
-
-On Mac OS X, you can SSH to the VM by running the following from the Terminal app: `ssh -i "your-private-key.pem" cloudbreak@instance_IP` where "your-private-key.pem" points to the location of your private key and "instance_IP" is the public IP address of the VM.
-
-On Windows, you can use [PuTTy](http://www.putty.org/).
-
-
-### Start Cloudbreak deployer 
-
-After accessing the VM via SSH, launch Cloudbreak deployer using the following steps.  
-
-**Steps**  
-
-1. Navigate to the cloudbreak-deployment directory:
-
-    <pre>cd /var/lib/cloudbreak-deployment/</pre>
+1. On he **Options** page, if you expand the **Advanced** section, there is an option to **Rollback on failure**. 
+    * By
+    default, this option is set to **Yes**, which means that if there are any event failures when creating
+    the stack, all the AWS resources created so far are deleted (i.e rolled back) to avoid unnecessary charges. 
+    * If you set this option to **No**, if there are any event failures when creating
+    the stack, the
+    resources are left intact (i.e. not rolled back). Select the **No** option to aid in
+    troubleshooting. Note that in this case you are responsible for deleting the stack later.
     
-    This directory contains configuration files and the supporting binaries for Cloudbreak deployer.
-   
+[Comment]: <> (What about providing Permissions > IAM Role? Currently, it seems like CloudbreakRole is created by default. But this did not work well in HDCloud.)    
     
-2.  Initialize your profile by creating a new file called `Profile` and adding the following content:
+1. Click **Next** to display the **Review** page.
+       
+1. On the **Review** page, click the **I acknowledge...** checkbox.  
 
-    <pre>export UAA_DEFAULT_SECRET=MY-SECRET
-export UAA_DEFAULT_USER_PW=MY-PASSWORD
-export UAA_DEFAULT_USER_EMAIL=MY-EMAIL</pre>  
+1. Click **Create**.
 
-    For example: 
+    > The **Stack Name** is shown in the table with a <span class="cfn-output">CREATE_IN_PROGRESS</span> status. You can click on the **Stack Name** and see the specific events that are in progress. The create process takes about 10 minutes and once ready, you will see <span class="cfn-output2">CREATE_COMPLETE</span>. 
 
-    <pre>export UAA_DEFAULT_SECRET=MySecret123
-export UAA_DEFAULT_USER_PW=MySecurePassword123
-export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com</pre> 
-
-    > You will need to provide the email and password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.  
-    
-3. Start the Cloudbreak application by using the following command:
-
-    <pre>cbd start</pre>
-    
-    This will start the Docker containers and initialize the application. The first time you start the Cloudbreak app, this also downloads of all the necessary docker images.
-    
-[Comment]: <> (Extra info which may not be needed here: The `cbd start` command includes the `cbd generate` command which applies the following steps: Creates the `docker-compose.yml` file, which describes the configuration of all the Docker containers needed for the Cloudbreak deployment. Creates the `uaa.yml` file, which holds the configuration of the identity server used to authenticate users with Cloudbreak.)
-
-4. Once the `cbd start` has finished, it returns the "Uluwatu (Cloudbreak UI) url" which you can later paste in your browser and log in to Cloudbreak web UI. 
-
-    If you would like to check Cloudbreak deployer version and health, use: 
-    
-    <pre>cbd doctor</pre>
-    
-    If you need to check Cloudbreak application logs, use: 
-
-    <pre>cbd logs cloudbreak</pre>
-    
-    You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
-      
---->    
-    
 
 ### Access Cloudbreak web UI
 
-Log in to the Cloudbreak UI using the following steps.
+1. Once the stack creation is complete, the cloud controller is ready to use. You can obtain the URL to the cloud controller
+and the SSH access information from the **Outputs** tab:
 
-**Steps**
+    <a href="../images/cb_aws-05.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-05.png" width="650" title="CFN Console - Outputs"></a>
 
-1. You can log into the Cloudbreak application at `https://IPv4_Public_IP>/` or `https://Public_DNS`. For example `https://34.212.141.253` or `https://ec2-34-212-141-253.us-west-2.compute.amazonaws.com`. 
+    > If the Outputs tab is blank, refresh the page.
 
-{!docs/common/launch-access-ui.md!}
+1. Once the stack creation is complete, browse instance created at the **CloudURL** provided in the **Outputs** tab and log in.
 
-4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [starting Cloudbreak deployer](#start-cloudbreak-deployer):
+1. Log in to the Cloudbreak web UI using the credential that you configured.
 
-    * The username is the `UAA_DEFAULT_USER_EMAIL`     
-    * The password is the `UAA_DEFAULT_USER_PW` 
-
-5. Upon a successful login, you are redirected to the dashboard:
+1. Upon a successful login, you are redirected to the dashboard:
 
     <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
 
@@ -469,6 +461,7 @@ As part of the [prerequisites](#authentication), you had two options to allow Cl
 
 * [Create key-based credential](#create-key-based-credential)  
 * [Create role-based credential](#create-role-based-credential)
+
 
 #### Create key-based credential
 

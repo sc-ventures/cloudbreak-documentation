@@ -80,12 +80,13 @@ There are two basic deployment options:
 
 #### Launch Cloudbreak 
 
-**(Option 1)** You can launch Cloudbreak from one of the pre-built images:  
+**(Option 1)** You can launch Cloudbreak from a template:  
 
 * [Launch on AWS](aws-launch.md)  
 * [Launch on Azure](azure-launch.md)  
 * [Launch on GCP](gcp-launch.md)   
-* [Launch on OpenStack](os-launch.md)    
+
+> This option is not available for **OpenStack**; you must launch Cloudbreak manually. Refer to [Launch on OpenStack](os-launch.md).    
      
 **(Option 2)** Or you can launch Cloudbreak [on your own VM](vm-launch.md) on one of these cloud platforms. This is an advanced deployment option that you should only use if you have custom VM requirements. 
 

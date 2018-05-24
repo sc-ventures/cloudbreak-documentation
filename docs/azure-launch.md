@@ -52,7 +52,7 @@ Launch Cloudbreak deployer by using the following steps.
 
 2. Click here to get started with Cloudbreak installation using the Azure Resource Manager template:
 
-    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhortonworks%2Fazure-cbd-quickstart%2F2.5.0%2FmainTemplate.json" target="_blank"> ![deploy on azure](http://azuredeploy.net/deploybutton.png)</a>
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhortonworks%2Fazure-cbd-quickstart%2F2.7.0-dev.170%2FmainTemplate.json" target="_blank"> ![deploy on azure](http://azuredeploy.net/deploybutton.png)</a>
 
 3. The template for installing Cloudbreak will appear. On the **Basics** page, provide the following basic parameters:   
 
@@ -70,14 +70,10 @@ Launch Cloudbreak deployer by using the following steps.
 
     | Parameter | Description |
 |---|---|
-| Base Url | This is the URL to the page where the template is stored. |
-| Location | This is an internal parameter. Do not change it.|
 | Vm Size | Select virtual machine instance type to use for the Cloudbreak controller. The minimum instance type suitable for Cloudbreak is *Standard_DS3*. The minimum requirements are 16GB RAM, 40GB disk, 4 cores. |
 | Admin Username | Create an admin login that you will use to log in to the Cloudbreak UI. Must be a valid email address. By default, admin@example.com is used but you should change it to your email address. |
 | Admin User Password | Password for the admin login. Must be at least 8 characters containing letters, numbers, and symbols. |
 | Username | Enter an admin username for the virtual machine. You will use it to SSH to the VM. By default, "cloudbreak" is used. |
-| SmartSense | Select whether you want to use [SmartSense telemetry](smartsense.md). Default is "false" (not using SmartSense telemetry). |
-| SmartSense Id | (Optional) Your SmartSense ID. |
 | Remote Location |<p>Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or use one of the default tags. Default value is `Internet` which allows access from all IP addresses. Examples: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>'Internet' will allow access from all. This is not a secure option but you can use it it you are just getting started and are not planning to have the instance on for a longer period. </li><li>(Advanced) 'VirtualNetwork' will allow access from the address space of the Virtual Network.</li><li> (Advanced) 'AzureLoadBalancer' will allow access from the address space of the load balancer.</li></ul></p><p>For more information, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg).</p> |
 | Ssh Key| <p>Paste your SSH public key.</p><p>You can use `pbcopy` to quickly copy it. For example: `pbcopy < /Users/homedir/.ssh/id_rsa.pub`</p> |
 | Vnet New Or Existing | By default, Cloudbreak is launched in a new VNet called `cbdeployerVnet` and a new subnet called `cbdeployerSubnet`; if needed, you can customize the settings for the new VNet using available VNet and Subnet parameters. |
