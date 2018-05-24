@@ -302,7 +302,7 @@ Once you are done, you can proceed to launch Cloudbreak.
 [Using an IAM role to grant permissions to applications](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) (External)   
 
 
-### Launch Cloudbreak from template  
+### Launch Cloudbreak from a template  
 
 Follow these steps to launch Cloudbreak by using an Amazon CloudFormation template:    
 
