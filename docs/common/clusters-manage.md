@@ -19,7 +19,7 @@ You can manage monitor your clusters from the Cloudbreak UI. To do that, click o
 
 ### Retry a cluster
 
-When a stack provisioning or cluster creation failure occurs, the "retry" option allows you to resume the process from the last failed step. 
+When stack provisioning or cluster creation failure occurs, the "retry" option allows you to resume the process from the last failed step. 
 
 In some cases the cause of a failed stack provisioning or cluster creation can be eliminated by simply retrying the process. For example, in case of a temporary network outage, a retry should be successful. In other cases, a manual modification is required before a retry can succeed. For example, if you are using a custom image but some configuration is missing, causing the process to fail, you must log in to the machine and fix the issue; Only after that you can retry the the process.
  

@@ -56,7 +56,7 @@ Refer to [Deployment Options](deployment-options.md).
 
 ### Get started
 
-To quickly get started with Cloudbreak, use the **quickstart deployment option**, which allows you to launch Cloudbreak from a template: 
+To quickly get started with Cloudbreak, use the quickstart deployment option, which allows you to launch Cloudbreak from a template: 
 
 * [Get started on AWS](aws-launch.md)  
 * [Get started on Azure](azure-launch.md) 

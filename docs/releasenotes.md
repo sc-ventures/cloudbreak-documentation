@@ -22,9 +22,15 @@ Cloudbreak 2.6.0 TP allows you to create a shared services instance and attach i
 ____________________________ 
 
 
+##### **Retrying Failed Cluster or Stack Provisioning**
+
+When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced. For more information, refer to [Retry a cluster](aws-clusters-manage#retry-a-cluster) and [CLI](cli-reference.md) documentation. 
+____________________________ 
+
+
 ##### **Sorting and Filtering Resource Tables**
 
-Cloudbreak introduces the ability to sort and filter tables listing resources such as clusters, recipes, and blueprints in the Cloudbreak web UI.
+Cloudbreak introduces the ability to sort and filter resource tables that list resources such as clusters, cluster hardware, blueprints, recipes, and so on, in the Cloudbreak web UI.
 ____________________________ 
 
 

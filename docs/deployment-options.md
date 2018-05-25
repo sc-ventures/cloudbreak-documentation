@@ -1,8 +1,9 @@
 ## Deployment options 
 
-In general, Cloudbreak offers o quickstart option for AWS, Azure, and GCP cloud platforms, as well as an advanced deployment option (similar for all cloud platforms).  
+In general, Cloudbreak offers o quickstart option for AWS, Azure, and GCP cloud platforms, as well as an advanced deployment option (similar for all cloud platforms). 
 
-We recommend that you review the quickstart option for your chosen cloud platform to determine if it fulfills your requirements; If it doesn't, use the advanced deployment option.     
+We recommend that you review the quickstart option for your chosen cloud platform to determine if it fulfills your requirements; If it doesn't, use the advanced deployment option. 
+   
 
 ### Quickstart option for AWS 
 
@@ -19,12 +20,14 @@ The quickstart option allows you to instantiate Cloudbreak by using the CloudFor
 
 * Provisions a new VM and launches Cloudbreak on it. [Amazon EC2](https://aws.amazon.com/documentation/ec2/) is used to launch a virtual machine for Cloudbreak. Security groups are used to control the inbound and outbound traffic to and from the Cloudbreak instance. 
         
-* Provisions a new VPC and subnet, and launches the Cloudbreak VM within it. [Amazon VPC](https://aws.amazon.com/documentation/vpc/) is used to provision your own dedicated virtual network and launch resources into that network. As part of VPC infrastructure, an internet gateway and a route table are provisioned: An internet gateway is used to enable outbound access to the internet from the control plane and the clusters, and a route table is used to connect the subnet to the internet gateway. For more information on Amazon VPC architecture, see [AWS documentation](https://docs.aws.amazon.com/AmazonVPC/latest/GettingStartedGuide/ExerciseOverview.html).   
+* Provisions a new VPC and subnet, and launches the Cloudbreak VM within it. [Amazon VPC](https://aws.amazon.com/documentation/vpc/) is used to provision your own dedicated virtual network and launch resources into that network. As part of VPC infrastructure, an internet gateway and a route table are provisioned: An internet gateway is used to enable outbound access to the internet from the control plane and the clusters, and a route table is used to connect the subnet to the internet gateway. For more information on Amazon VPC architecture, refer to [Amazon VPC documentation](https://docs.aws.amazon.com/AmazonVPC/latest/GettingStartedGuide/ExerciseOverview.html).   
 
     > The quickstart option always launches Cloudbreak in a new VPC. If you would like to use an existing VPC, you must use the advanced option.  
     
 * Allows you to attach an existing IAM role (for role-based authentication). [AWS Identity & Access Management](https://aws.amazon.com/documentation/iam/) is used to control access to AWS services and resources. Cloudbreak does not create any IAM roles but allows you to use exiting IAM roles.   
-* [AWS Lambda](https://aws.amazon.com/documentation/lambda/), a utility service for running code in AWS, is used when deploying Cloudbreak into a new VPC to validate if the VPC and subnet specified exist and if the subnet belongs to that VPC.   
+* [AWS Lambda](https://aws.amazon.com/documentation/lambda/), a utility service for running code in AWS, is used when deploying Cloudbreak.  
+
+[Comment]: <> (What exactly is this Lambda service used for?) 
 
 To launch Cloudbreak on AWS by using the quickstart option, refer to [Launch Cloubreak on AWS](aws-launch.md).   
 
@@ -42,7 +45,7 @@ The quickstart option allows you to instantiate Cloudbreak by using Azure Resour
 
 On Azure, resources are organized by using resource groups. When you launch Cloudbreak, you may either select to use an existing resource group or a new resource group is created. The following Azure resources are provisioned within the selected resource group:
 
-* [Virtual network](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) (VNet) securely connects Azure resources to each other. If you chose to use an existing virtual network, the virtual network will not be added to the resource group.  
+* [Virtual network](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview) (VNet) securely connects Azure resources to each other. You may either launch Cloudbreak into an existing VPC, or a new VPC is created and added to the resource group.  
 * [Network security group](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-vnet-plan-design-arm) (NSG) defines inbound and outbound security rules, which control network traffic flow.  
 * [Virtual machine](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/overview?toc=%2Fazure%2Fvirtual-machines%2Flinux%2Ftoc.json) runs Cloudbreak.  
 * [Public IP address](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-ip-addresses-overview-arm) is assigned to your VM so that it can communicate with other Azure resources.  
