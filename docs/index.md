@@ -53,40 +53,45 @@ Refer to [Architecture](architecture.md) and [Core concepts](architecture.md#cor
 
 To get started with Cloudbreak:
 
-1. Select the [cloud platform](#select-a-cloud-platform) on which you would like to launch Cloudbreak.   
-1. Select the [deployment option](#select-a-deployment-option) that you would like to use. 
-1. [Launch Cloudbreak](#launch-cloudbreak). 
+1. Select the cloud platform on which you would like to launch Cloudbreak:
+
+    * Amazon Web Services (AWS)  
+    * Microsoft Azure  
+    * Google Cloud Platform (GCP)  
+    * OpenStack  
+   
+1. Select the deployment option. In general, Cloudbreak offers a quickstart option and an advanced deployment option.  
 
 
-#### Select a cloud platform 
-
-You can deploy and use Cloudbreak on the following cloud platforms:
-
-* Amazon Web Services (AWS)
-* Microsoft Azure
-* Google Cloud Platform (GCP)
-* OpenStack
-
-
-#### Select a deployment option
+#### Deployment options on AWS 
 
 There are two basic deployment options:
 
-| Deployment option | When to use |
-|---|---|
-| Quickstart Option: Instantiate Cloudbreak using one of the provided pre-built cloud images | <p>This is the basic deployment option and the easiest to get started with.</p><p> The cloud images include Cloudbreak deployer pre-installed on a CentOS VM.</p>  |
-| Advanced Option: Install the Cloudbreak deployer on your own VM | <p>This is an advanced deployment option.</p> <p>Select this option if you have custom VM requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).</p> |
+* [AWS quickstart option](aws-launch.md): Instantiate Cloudbreak by using the CloudFormation template. This is the basic deployment option and the easiest to get started with.   
+* [Advanced Option](vm-launch.md): Install the Cloudbreak deployer on your own VM. This is an advanced deployment option. Select this option if you have custom requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).
+
+#### Deployment options on Azure 
+
+* [Azure quickstart option](azure-launch.md): Instantiate Cloudbreak by using ???. This is the basic deployment option and the easiest to get started with. 
+* [Advanced Option](vm-launch.md): Install the Cloudbreak deployer on your own VM. This is an advanced deployment option.</p> <p>Select this option if you have custom requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).
+
+#### Deployment options on GCP  
+
+* [GCP quickstart option](gcp-launch.md): Instantiate Cloudbreak using ???. This is the basic deployment option and the easiest to get started with.   
+* [Advanced Option](vm-launch.md): Install the Cloudbreak deployer on your own VM. This is an advanced deployment option. Select this option if you have custom requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).
+
+#### Deployment options on OpenStack  
+
+You must launch Cloudbreak manually on **OpenStack**. Refer to [Launch on OpenStack](os-launch.md). This is an advanced deployment option. Select this option if you have custom VM requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).
 
 
 #### Launch Cloudbreak 
 
 **(Quickstart Option)** You can launch Cloudbreak from a template:  
 
-| Doc link | Description |
-|---|---|
-|[Launch on AWS](aws-launch.md) |  |  
-|[Launch on Azure](azure-launch.md)| |  
-|[Launch on GCP](gcp-launch.md) | |  
+* [Launch on AWS](aws-launch.md)  
+* [Launch on Azure](azure-launch.md) 
+* [Launch on GCP](gcp-launch.md)  
 
 > This option is not available for **OpenStack**; you must launch Cloudbreak manually. Refer to [Launch on OpenStack](os-launch.md).    
      
