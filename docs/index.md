@@ -1,8 +1,6 @@
 ## Introduction
 
-Welcome to the **Cloudbreak 2.6 Technical Preview** documentation! 
-
-{!docs/common/about-tp.md!}
+Welcome to the **Cloudbreak 2.7.0** documentation! 
 
 Cloudbreak simplifies the provisioning, management, and monitoring of on-demand HDP and HDF clusters in virtual and cloud environments. It leverages cloud infrastructure to create host instances, and uses Apache Ambari via Ambari blueprints to provision and manage HDP clusters. 
 
@@ -43,61 +41,32 @@ Platform version: **HDF 3.1**
 | Flow Management | <i class="fa fa-check" style="color: green"></i> NiFi | Useful for flow management with NiFi. | NiFi, NiFi Registry, ZooKeeper, Ambari Metrics |
 | Messaging Management | <i class="fa fa-check" style="color: green"></i> Kafka |  Useful for messaging management with Kafka. | Kafka, ZooKeeper, Ambari Metrics |
 
+### Architecture 
+
+Refer to [Architecture](architecture.md).
 
 ### Core concepts   
 
-Refer to [Architecture](architecture.md) and [Core concepts](architecture.md#core-concepts).
+Refer to [Core concepts](architecture.md#core-concepts). 
+
+### Deployment options
+
+Refer to [Deployment Options](deployment-options.md).  
 
 
 ### Get started
 
-To get started with Cloudbreak:
+To quickly get started with Cloudbreak, use the **quickstart deployment option**, which allows you to launch Cloudbreak from a template: 
 
-1. Select the cloud platform on which you would like to launch Cloudbreak:
-
-    * Amazon Web Services (AWS)  
-    * Microsoft Azure  
-    * Google Cloud Platform (GCP)  
-    * OpenStack  
-   
-1. Select the deployment option. In general, Cloudbreak offers a quickstart option and an advanced deployment option.  
-
-
-#### Deployment options on AWS 
-
-There are two basic deployment options:
-
-* [AWS quickstart option](aws-launch.md): Instantiate Cloudbreak by using the CloudFormation template. This is the basic deployment option and the easiest to get started with.   
-* [Advanced Option](vm-launch.md): Install the Cloudbreak deployer on your own VM. This is an advanced deployment option. Select this option if you have custom requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).
-
-#### Deployment options on Azure 
-
-* [Azure quickstart option](azure-launch.md): Instantiate Cloudbreak by using ???. This is the basic deployment option and the easiest to get started with. 
-* [Advanced Option](vm-launch.md): Install the Cloudbreak deployer on your own VM. This is an advanced deployment option.</p> <p>Select this option if you have custom requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).
-
-#### Deployment options on GCP  
-
-* [GCP quickstart option](gcp-launch.md): Instantiate Cloudbreak using ???. This is the basic deployment option and the easiest to get started with.   
-* [Advanced Option](vm-launch.md): Install the Cloudbreak deployer on your own VM. This is an advanced deployment option. Select this option if you have custom requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).
-
-#### Deployment options on OpenStack  
-
-You must launch Cloudbreak manually on **OpenStack**. Refer to [Launch on OpenStack](os-launch.md). This is an advanced deployment option. Select this option if you have custom VM requirements. The supported operating systems are RHEL, CentOS, and Oracle Linux 7 (64-bit).
-
-
-#### Launch Cloudbreak 
-
-**(Quickstart Option)** You can launch Cloudbreak from a template:  
-
-* [Launch on AWS](aws-launch.md)  
-* [Launch on Azure](azure-launch.md) 
-* [Launch on GCP](gcp-launch.md)  
+* [Get started on AWS](aws-launch.md)  
+* [Get started on Azure](azure-launch.md) 
+* [Get started on GCP](gcp-launch.md)  
 
 > This option is not available for **OpenStack**; you must launch Cloudbreak manually. Refer to [Launch on OpenStack](os-launch.md).    
-     
-**(Advanced Option)** Or you can launch Cloudbreak [on your own VM](vm-launch.md) on one of these cloud platforms. This is an advanced deployment option that you should only use if you have custom requirements. 
 
-In general, the steps include meeting the prerequisites, launching Cloudbreak on a VM, and creating the Cloudbreak credential. After performing these steps, you can create a cluster based on one of the default blueprints or upload your own blueprint and then create a cluster. 
+In general, the steps include meeting the prerequisites, launching Cloudbreak from a template, and creating the Cloudbreak credential. After performing these steps, you can create a cluster based on one of the default blueprints.
+
+For more deployment options, refer to [Deployment options](deployment-options.md).
 
 
 <div class="note">

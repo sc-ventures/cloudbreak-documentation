@@ -15,8 +15,10 @@ markdown_extensions:
 use_directory_urls: false
 pages:
     - Intro:
-      - Get started: index.md
-      - Architecture: architecture.md
+      - Get started: index.md  
+      - Architecture: architecture.md  
+      - Core concepts: concepts.md
+      - Deployment options: deployment-options.md
       - Security overview: security.md
     - AWS:
       - Launch on AWS: aws-launch.md
