@@ -1,65 +1,19 @@
 ## Launching Cloudbreak on GCP
 
-Before launching Cloudbreak on Google Cloud, review and meet the prerequisites. Next, import Cloudbreak image, launch a VM, SSH to the VM, and start Cloudbreak. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential. 
+Before launching Cloudbreak on Google Cloud:
 
-### Meet the prerequisites
+* Review and meet the [prerequisites](#prerequisites).  
+* If you haven't already, review the [deployment options](deployment-options.md).  
 
-Before launching Cloudbreak on GCP, you must meet the following prerequisites.
+The steps below describe how to launch Cloudbreak by using one of the two available deployment options (quickstart and advanced), access Cloudbreak web UI, and create a Cloudbreak credential.
 
-#### GCP account 
-
-In order to launch Cloudbreak on GCP, you must log in to your GCP account. If you don't have an account, you can create one at [https://console.cloud.google.com](https://console.cloud.google.com).
-
-Once you log in to your GCP account, you must either create a project or use an existing project. 
-
-
-#### Service account
-
-In order to launch clusters on GCP via Cloudbreak, you must have a Service Account that Cloudbreak can use to create resources. In addition, you must also have a P12 key associated with the account. The service account must have the following roles are enabled:
-
-* Compute Engine > Compute Image User   
-* Compute Engine > Compute Instance Admin (v1)  
-* Compute Engine > Compute Network Admin  
-* Compute Engine > Compute Security Admin  
-* Storage > Storage Admin 
-    
-A user with an "Owner" role can assign roles to new and existing service accounts from **IAM & admin** > **Service accounts**, as presented in the following screenshots: 
-
-<a href="../images/cb_gcp-iam.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-iam.png" width="650" title="GCP Console"></a> 
-
-<a href="../images/cb_gcp-iam2.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-iam2.png" width="650" title="GCP Console"></a> 
-
-For more information on creating a Service Account and generating a P12 key, refer to [GCP documentation](https://cloud.google.com/storage/docs/authentication#service_accounts). 
-
-**Related links**  
-[Service account credentials](https://cloud.google.com/storage/docs/authentication#service_accounts) (External)  
-
-#### SSH key pair 
-
-[Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or use an existing SSH key pair. You will be required to provide it when launching the VM. 
-
-#### Region and zone 
-
-Decide in which region and zone you would like to launch Cloudbreak. You can launch Cloudbreak and provision your clusters in all regions [supported by GCP](https://cloud.google.com/compute/docs/regions-zones/regions-zones).  
-
-Clusters created via Cloudbreak can be in the same or different region as Cloudbreak; when you launch a cluster, you select the region in which to launch it. 
-
-**Related links**  
-[Regions and zones](https://cloud.google.com/compute/docs/regions-zones/) (External)  
-
-
-#### VPC network 
-
-When launching Cloudbreak, you will be required to select an existing network in which Cloudbreak can be placed. The following ports must be open on the security group: 22 (for access via SSH), 80 (for access via HTTP), and 443 (for access via HTTPS). You may use the *default* network as long as the aforementioned ports are open. 
-
-You can manage networks under **Networking** > **VPC Networks**. To edit ports, click on the network name and then click on **Add firewall rules**. 
-
-
-### Launch Cloudbreak from a template     
+### (Quickstart) Launch Cloudbreak from a template     
 
 Follow these steps to launch Cloudbreak on Google Cloud by using the Cloud Deployer Manager. 
 
 [Comment]: <> (https://cloud.google.com/deployment-manager/) 
+
+> This is the GCP quickstart option. If you would like to install Cloudbreak on your own VM, refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
 
 **Steps**
 
@@ -114,6 +68,12 @@ To delete the previously created deployment via gcloud command line interface, u
 [Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) (External)  
 [Regions and Zones](https://cloud.google.com/compute/docs/regions-zones/regions-zones) (External)    
 [Machine Types](https://cloud.google.com/compute/docs/machine-types) (External)    
+
+
+### (Advanced) Launch Cloudbreak on your own VM
+
+Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
+
 
 ### Access Cloudbreak web UI
 

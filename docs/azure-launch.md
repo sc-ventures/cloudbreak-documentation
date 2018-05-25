@@ -1,50 +1,17 @@
 ## Launching Cloudbreak on Azure
 
-Before launching Cloudbreak on Azure, review and meet the prerequisites. Next, launch Cloudbreak using one of the two available methods. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential.
+Before launching Cloudbreak on Azure:
 
-### Meet the prerequisites
+* Review and meet the [prerequisites](#prerequisites).  
+* If you haven't already, review the [deployment options](deployment-options.md).  
 
-Before launching Cloudbreak on Azure, you must meet the following prerequisites.
+The steps below describe how to launch Cloudbreak by using one of the two available deployment options (quickstart and advanced), access Cloudbreak web UI, and create a Cloudbreak credential.
 
-#### Azure account
-
-In order to launch Cloudbreak on the Azure, log in to your existing Microsoft Azure account. If you don't have an account, you can set it up at [https://azure.microsoft.com](https://azure.microsoft.com).
-
-#### Azure region
-
-Decide in which Azure region you would like to launch Cloudbreak. You can launch Cloudbreak and provision your clusters in all regions [supported by Microsoft Azure](https://azure.microsoft.com/en-us/regions/).
-
-Clusters created via Cloudbreak can be in the same or different region as Cloudbreak; when you launch a cluster, you select the region in which to launch it.
-
-**Related links**  
-[Azure regions](https://azure.microsoft.com/en-us/regions/) (External)
-
-#### Azure roles
-
-In order to provision clusters on Azure, Cloudbreak must be able to assume a sufficient Azure role ("Owner" or "Contributor") via Cloudbreak credential:
-
-* Your account must have the "[Owner](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#owner)" role (or a role with equivalent permissions) in the subscription in order to [create a Cloudbreak credential](#create-cloudbreak-credential) using the interactive credential method.
-
-* Your account must have the "[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor)" role (or a role with equivalent permissions) in the subscription in order to [create a Cloudbreak credential](#create-cloudbreak-credential) using the app-based credential method. The role must be assigned to the app that you register in Cloudbreak.
-
-To check the roles in your subscription, log in to your Azure account and navigate to **Subscriptions**.
-
-**Related links**  
-[Built-in roles: Owner](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#owner) (External)  
-[Built-in roles: Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor) (External)
-
-
-#### SSH key pair
-
-When launching Cloudbreak, you will be required to provide your public SSH key. If needed, you can generate a new SSH key pair:
-
-* On MacOS X and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
-* On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
-
-
-### Launch Cloudbreak from a template 
+### (Quickstart) Launch Cloudbreak from a template 
 
 Launch Cloudbreak deployer by using the following steps.
+
+> This is the Azure quickstart option. If you would like to install Cloudbreak on your own VM, refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
 
 **Steps**
 
@@ -95,6 +62,11 @@ Launch Cloudbreak deployer by using the following steps.
 **Related links**  
 [CIDR IP](http://www.ipaddressguide.com/cidr) (External)   
 [Filter network traffic with network security groups](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg) (External)  
+
+
+### (Advanced) Launch Cloudbrak on your own VM
+
+Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
 
 
 ### Access Cloudbreak web UI

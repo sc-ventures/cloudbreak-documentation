@@ -127,6 +127,10 @@ ____________________________
 
 [Comment]: <> (2.7 features)
 
+##### **Removal of Prebuilt Cloudbreak Deployer Images**
+
+In earlier versions of Cloudbreak, Cloudbreak deployer images for AWS, Google Cloud, and OpenStack were provided for each release. Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates. To review current Cloudbreak deployment options, refer to [Deployment options](deployment-options.md).   
+____________________________
 
 [Comment]: <> (2.6 features)
 

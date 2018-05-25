@@ -1,6 +1,6 @@
 ## Deployment options 
 
-In general, Cloudbreak offers o quickstart option for AWS, Azure, and GCP cloud platforms, as well as an advanced deployment option (similar for all cloud platforms). 
+In general, Cloudbreak offers a quickstart option for AWS, Azure, and GCP cloud platforms, as well as an advanced deployment option (similar for all cloud platforms). 
 
 We recommend that you review the quickstart option for your chosen cloud platform to determine if it fulfills your requirements; If it doesn't, use the advanced deployment option. 
    
@@ -29,7 +29,7 @@ The quickstart option allows you to instantiate Cloudbreak by using the CloudFor
 
 [Comment]: <> (What exactly is this Lambda service used for?) 
 
-To launch Cloudbreak on AWS by using the quickstart option, refer to [Launch Cloubreak on AWS](aws-launch.md).   
+To launch Cloudbreak on AWS by using the quickstart option, refer to [Launch Cloubreak from template (AWS)](aws-launch.md).   
 
 
 ### Quickstart option for Azure  
@@ -52,7 +52,7 @@ On Azure, resources are organized by using resource groups. When you launch Clou
 * [Network interface](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface) (NIC) attached to the VM provides the interconnection between the VM and the underlying software network.  
 * [Blob storage container](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) is created to store Cloudbreak Deployer OS disk's data.  
 
-To launch Cloudbreak on Azure by using the quickstart option, refer to [Launch Cloubreak on Azure](azure-launch.md).
+To launch Cloudbreak on Azure by using the quickstart option, refer to [Launch Cloubreak from template (Azure)](azure-launch.md).
 
 ### Quickstart option for GCP   
 
@@ -63,7 +63,7 @@ There are two basic deployment options:
 
 MORE INFO - TBD 
 
-To launch Cloudbreak on GCP by using the quickstart option, refer to [Launch Cloubreak on GCP](gcp-launch.md).
+To launch Cloudbreak on GCP by using the quickstart option, refer to [Launch Cloubreak from template (GCP)](gcp-launch.md).
 
 
 ### Deployment on OpenStack  

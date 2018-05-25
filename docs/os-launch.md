@@ -1,105 +1,11 @@
 ## Launching Cloudbreak on OpenStack
 
-Before launching Cloudbreak on OpenStack, review and meet the prerequisites. Next, import Cloudbreak image, launch a VM, SSH to the VM, and start Cloudbreak. Once Cloudbreak is running, log in to the Cloudbreak UI and create a Cloudbreak credential.
-
-### Meet minimum system requirements
-
-Before launching Cloudbreak on your OpenStack, make sure that your OpenStack deployment fulfills the following requirements.
-
-#### Supported Linux distributions
-
-The following versions of the [Red Hat distribution of OpenStack](https://www.rdoproject.org/) (RDO) are supported:
-
-* Juno
-* Kilo
-* Liberty
-* Mitaka
+Before launching Cloudbreak on OpenStack, review and meet the [prerequisites](os-pre.md). 
 
 
-#### Standard modules
+### Launch Cloudbreak on your own VM
 
-Cloudbreak requires that the following standard modules are installed and configured on OpenStack:
-
-* Keystone V2 or Keystone V3
-* Neutron (Self-service and provider networking)
-* Nova (KVM or Xen hypervisor)
-* Glance
-* Cinder (Optional)
-* Heat (Optional but highly recommended, since provisioning through native API calls will be deprecated in the future)
-
-**Related links**  
-[Red Hat distribution of OpenStack](https://www.rdoproject.org/) (External)
-
-
-### Meet the prerequisites
-
-Before launching Cloudbreak on OpenStack, you must meet the following prerequisites.
-
-#### SSH key pair
-
-[Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or use an existing SSH key pair to your OpenStack account. You will be required to select it when launching the VM.
-
-#### Security group
-
-In order to launch Cloudbreak, you must have an existing security group with the following ports open: 22 (for access via SSH), 80 (for access via HTTP), and 443 (for access via HTTPS).
-
-For information about OpenStack security groups, refer to the [OpenStack Administrator Guide](https://docs.openstack.org/ops-guide/index.html).
-
-**Related links**  
-[OpenStack Administrator Guide](https://docs.openstack.org/ops-guide/index.html) (External)
-
-
-### Launch the VM
-
-In your OpenStack, launch and instance providing the following parameters:
-
-* Select a VM flavor which meets the following minimum requirements: 4GB RAM, 10GB disk, 2 cores.
-* Select the Cloudbreak deployer image that you imported earlier and launch an instance using that image.
-* Select your SSH key pair.
-* Select the security group which has the following ports open: 22 (SSH) and 443 (HTTPS).
-* Select your preconfigured network.
-
-
-### SSH to the VM
-
-Now that your VM is ready, access it via SSH:
-
-* Use a private key matching the public key that you added to your OpenStack project.
-* The SSH user is called "cloudbreak".
-* You can obtain the VM's IP address from the details of your instance.
-
-On Mac OS X, you can SSH to the VM by running the following from the Terminal app: `ssh -i "your-private-key.pem" cloudbreak@instance_IP` where "your-private-key.pem" points to the location of your private key and "instance_IP" is the public IP address of the VM.
-
-On Windows, you can use [PuTTy](http://www.putty.org/).
-
-
-### Initialize the Profile
-
-After accessing the VM via SSH, you must initialize your Profile.
-
-**Steps**
-
-1. Navigate to the cloudbreak-deployment directory:
-
-    <pre>cd /var/lib/cloudbreak-deployment/</pre>
-
-    This directory contains configuration files and the supporting binaries for Cloudbreak deployer.
-
-2.  Initialize your profile by creating a new file called `Profile` and adding the following content:
-
-    <pre>export UAA_DEFAULT_SECRET=MY-SECRET
-export UAA_DEFAULT_USER_PW=MY-PASSWORD
-export UAA_DEFAULT_USER_EMAIL=MY-EMAIL
-export PUBLIC_IP=VM-PUBLIC-IP</pre>
-
-    For example:
-
-    <pre>export UAA_DEFAULT_SECRET=MySecret123
-export UAA_DEFAULT_USER_PW=MySecurePassword123
-export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com
-export PUBLIC_IP=34.212.141.253</pre>
-
-    > You will need to provide the email and password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.
+Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
 
 
 ### Perform optional configurations
@@ -120,31 +26,6 @@ To import the certificate, place the certificate file in the `/certs/trusted/` d
 3. Copy the certificate to the `trusted` directory.
 
 Cloudbreak will automatically pick up the certificate and import it into its trust store upon start.
-
-
-### Start Cloudbreak deployer
-
-Launch Cloudbreak deployer using the following steps.
-
-Start the Cloudbreak application by using the following command:
-
-<pre>cbd start</pre>
-
-This will start the Docker containers and initialize the application. The first time you start the Cloudbreak app, this also downloads of all the necessary docker images.
-
-[Comment]: <> (Extra info which may not be needed here: The `cbd start` command includes the `cbd generate` command which applies the following steps: Creates the `docker-compose.yml` file, which describes the configuration of all the Docker containers needed for the Cloudbreak deployment. Creates the `uaa.yml` file, which holds the configuration of the identity server used to authenticate users with Cloudbreak.)
-
-Once the `cbd start` has finished, it returns the "Uluwatu (Cloudbreak UI) url" which you can later paste in your browser and log in to Cloudbreak web UI.
-
-To check Cloudbreak deployer version and health, use:
-
-<pre>cbd doctor</pre>
-
-If you would like to check Cloudbreak Application logs, use:
-
-<pre>cbd logs cloudbreak</pre>
-
-You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak takes less than a minute to start. If you try to access the Cloudbreak UI before Cloudbreak started, you will get a "Bad Gateway" error or "Cannot connect to Cloudbreak" error.
 
 
 ### Access Cloudbreak web UI
@@ -296,3 +177,8 @@ export OS_TENANT_NAME=your_os_tenant_name</small></pre>
     <pre><small>glance image-create --name "$CB_LATEST_IMAGE_NAME" --file "$CB_LATEST_IMAGE" --disk-format qcow2 --container-format bare --progress</small></pre>
 
 After performing the import, you should be able to see the Cloudbreak image among your OpenStack images.
+
+<div class="next">
+<a href="../os-create/index.html">Next: Create a Cluster</a>
+</div>
+

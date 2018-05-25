@@ -1,11 +1,12 @@
 ## Installing Cloudbreak on your own VM
 
-This is an advanced deployment option. Select this option if you have custom VM requirements. Otherwise, you should use one of the pre-built images and follow these instructions:
+This is an advanced deployment option. Select this option if you have custom requirements. Otherwise, you can launch Cloudbreak from a template:
 
 * [Launch on AWS](aws-launch.md)  
 * [Launch on Azure](azure-launch.md)  
 * [Launch on GCP](gcp-launch.md)  
 * [Launch on OpenStack](os-launch.md)   
+
 
 ### System requirements
 
@@ -78,9 +79,9 @@ systemctl start docker
 systemctl enable docker</pre>
 
 
-#### More
+#### Cloud Provider Prerequisites 
 
-Additionally, review the following prerequisites:
+Additionally, review the following cloud provider prerequisites:
 
 * [Prerequisites on AWS](aws-launch.md#meet-the-prerequisites)
 * [Prerequisites on Azure](azure-launch.md#meet-the-prerequisites)
@@ -114,16 +115,14 @@ cd cloudbreak-deployment</pre>
     <pre>export UAA_DEFAULT_SECRET=MY-SECRET
 export UAA_DEFAULT_USER_PW=MY-PASSWORD
 export UAA_DEFAULT_USER_EMAIL=MY-EMAIL
-export PUBLIC_IP=MY_VM_IP  
-</pre>
+export PUBLIC_IP=MY_VM_IP</pre>
 
     For example:
 
     <pre>export UAA_DEFAULT_SECRET=MySecret123
 export UAA_DEFAULT_USER_PW=MySecurePassword123
 export UAA_DEFAULT_USER_EMAIL=dbialek@hortonworks.com
-export PUBLIC_IP=172.26.231.100
-</pre>
+export PUBLIC_IP=172.26.231.100</pre>
 
     You will need to provide the email and password when logging in to the Cloudbreak web UI and when using the Cloudbreak CLI. The secret will be used by Cloudbreak for authentication.
     
