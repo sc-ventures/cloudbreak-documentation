@@ -1,11 +1,6 @@
-## Installing Cloudbreak on your own VM
+## (Production) Installing Cloudbreak on your own VM
 
-This is a production deployment option. Select this option if you have custom requirements. Otherwise, you can launch Cloudbreak from a template:
-
-* [Launch on AWS](aws-launch.md)  
-* [Launch on Azure](azure-launch.md)  
-* [Launch on GCP](gcp-launch.md)  
-* [Launch on OpenStack](os-launch.md)   
+This is a production deployment option. To review all deployment options, refer to [Deployment options](deployment-options.md).  
 
 
 ### System requirements
