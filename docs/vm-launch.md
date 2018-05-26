@@ -84,7 +84,7 @@ Additionally, review the following cloud provider prerequisites:
 * [Prerequisites on OpenStack](os-launch.md#meet-the-prerequisites)
 
 
-### Install Cloudbreak on your own VM
+### Install Cloudbreak on a VM
 
 Install Cloudbreak using the following steps.
 
