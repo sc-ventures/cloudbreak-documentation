@@ -146,10 +146,6 @@ cbd start</pre>
 
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak normally takes less than a minute to start.
 
-### Configure external Cloudbreak database
-
-By default, Cloudbreak uses an embedded PostgreSQL database to persist data related to Cloudbreak configuration, setup, and so on. For a production Cloudbreak deployment, we suggest that you [configure an external database](cb-db.md).
-
 
 ### Access Cloudbreak web UI
 
@@ -169,6 +165,12 @@ Log in to the Cloudbreak UI using the following steps.
 5. Upon a successful login, you are redirected to the dashboard:
 
     <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
+    
+
+### Configure external Cloudbreak database
+
+By default, Cloudbreak uses an embedded PostgreSQL database to persist data related to Cloudbreak configuration, setup, and so on. For a production Cloudbreak deployment, we suggest that you [configure an external database](cb-db.md).
+
 
 ### Next steps
 
