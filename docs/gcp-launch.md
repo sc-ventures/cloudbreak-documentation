@@ -15,8 +15,6 @@ Follow these steps to launch Cloudbreak on Google Cloud by using the Cloud Deplo
 
 [Comment]: <> (https://cloud.google.com/deployment-manager/) 
 
-> This is the GCP quickstart option. If you would like to install Cloudbreak on your own VM, refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
-
 **Steps**
 
 1. In order to use the Cloud Deployment Manager, you must install the Google Cloud SDK on your machine. The SDK contains the gcloud CLI tool, which is used to deploy Cloudbreak. 

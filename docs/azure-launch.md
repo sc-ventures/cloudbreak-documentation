@@ -13,8 +13,6 @@ The steps below describe how to launch Cloudbreak by using one of the two availa
 
 Launch Cloudbreak deployer by using the following steps.
 
-> This is the Azure quickstart option. If you would like to install Cloudbreak on your own VM, refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
-
 **Steps**
 
 1. Log in to your [Azure Portal](https://portal.azure.com).

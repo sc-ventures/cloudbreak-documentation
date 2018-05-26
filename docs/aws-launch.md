@@ -13,8 +13,6 @@ The steps below describe how to launch Cloudbreak by using one of the two availa
 
 Follow these steps to launch Cloudbreak by using an Amazon CloudFormation template.  
 
-> This is the AWS quickstart option. If you would like to install Cloudbreak on your own VM, refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
-
 **Steps** 
 
 [Comment]: <> (TBD if custom VPC can be included.)
