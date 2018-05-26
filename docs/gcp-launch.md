@@ -17,23 +17,23 @@ Follow these steps to launch Cloudbreak on Google Cloud by using the Cloud Deplo
 
 **Steps**
 
-1. In order to use the Cloud Deployment Manager, you must install the Google cloud SDK on your machine. The SDK contains the gcloud CLI tool, which is used to deploy Cloudbreak. 
+1. In order to use the Cloud Deployment Manager, you must install the Google Cloud SDK on your machine. The SDK contains the gcloud CLI tool, which is used to deploy Cloudbreak. 
 
-    For instructions, refer to [Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) in Google Cloud documentation.  
+    For instructions, refer to [Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) in the Google Cloud documentation. Make sure to perform all of the steps and validate that the `gcloud` command works on your computer. Only after validating, proceed to the next step.     
+    
+1. Log in to GitHub (https://github.com/).  
+
+1. Download the "cbd-quickstart" Hortonworks repo located at `https://github.com/hortonworks/cbd-quickstart` onto your computer. 
+
+[Comment]: <> (Should we tell people to fork this or to download it?)
+
+1. On your computer, browse to the `cbd-quickstart/gcp`.         
 
 [Comment]: <> (https://cloud.google.com/sdk/gcloud/)
 
-1. Open a text editor and paste the following into the file:  
+1. Open the vm_template_config.yaml file in a text editor. 
 
-    <pre>region: us-central1
-zone: us-central1-a
-instance_type: n1-standard-4
-ssh_pub_key: ....
-os_user: cloudbreak
-user_email: admin@example.com
-user_password: cloudbreak</pre>
-
-2. Edit the file by updating the parameters: 
+1. Edit the file by updating the parameter values: 
 
     | Parameter | Description | Default |
 |---|---|---|
@@ -47,21 +47,64 @@ user_password: cloudbreak</pre>
 
 [Comment]: <> (VPC not available?)
 
-1. Save the file on your local machine in the yaml format. 
+1. Save the changes on your local machine. 
 
 1. Run the following command to create a new deployment:
 
-    <pre>gcloud deployment-manager deployments create cbd-deployment --config=/path/to/your/file.yaml</pre>
+    <pre>gcloud deployment-manager deployments create cbd-deployment --config=/path/to/your/file/vm_template_config.yaml</pre>
     
     For example:
 
-    <pre>gcloud deployment-manager deployments create cbd-deployment --config=vm_template_config.yaml</pre>
+    <pre>gcloud deployment-manager deployments create cbd-deployment --config=/Users/youruser/Documents/cbd-quickstart/gcp/vm_template_config.yaml</pre>
     
-   
+1. Once your deployment has finished, you will see the following:
 
-To delete the previously created deployment via gcloud command line interface, use:
+    <pre>gcloud deployment-manager deployments create cbd-deployment --config=/Users/youruser/Documents/cbd-quickstart/gcp/vm_template_config.yaml
+The fingerprint of the deployment is V30aruFnbg8Bu6YYNzOyff==
+done.                                                                          
+Create operation operation-1527295679118-56d113c6bbe99-a353e786-4e851f18 completed successfully.
+NAME                            TYPE                   STATE      ERRORS  INTENT
+cbd-deployment-default-route-1  compute.v1.route       COMPLETED  []
+cbd-deployment-network          compute.v1.network     COMPLETED  []
+cbd-deployment-subnet           compute.v1.subnetwork  COMPLETED  []
+firewall-cbd-deployment         compute.v1.firewall    COMPLETED  []
+vm-cbd-deployment               compute.v1.instance    COMPLETED  []</pre>
+       
+1. In the browser, navigate to [https://console.cloud.google.com/](https://console.cloud.google.com/) and log in to your Google Cloud account. 
+
+1. From the navigation menu, select **Deployment Manager > Deployments**:
+
+    <a href="../images/cb_gcp-01.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-01.png" width="650" title="GCP"></a>   
     
-<pre>gcloud deployment-manager deployments delete cbd-deployment -q</pre>
+1. On the **Deployments** page, you should see your Cloudbreak deployment: 
+
+    <a href="../images/cb_gcp-02.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-02.png" width="650" title="GCP"></a>   
+    
+1. Click on the deployment to view details. You should see the following resources:
+
+    <a href="../images/cb_gcp-03.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-03.png" width="650" title="GCP"></a>
+             
+1. Click on the **vm-cbd-deployment** to see deployment details. Next, in the top right corner, click on **Manage Resource** to see VM instance details: 
+
+    <a href="../images/cb_gcp-04.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-04.png" width="650" title="GCP"></a>
+    
+1. On the **VM instance details** page, scroll down to find the external IP address of the VM:
+
+    <a href="../images/cb_gcp-05.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-05.png" width="650" title="GCP"></a>
+    
+1. Copy the external IP address and paste it in the browser.                   
+
+{!docs/common/launch-access-ui.md!} 
+    
+1. The login page is displayed:
+
+    <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
+    
+1. Log in to the Cloudbreak web UI using the credentials that you configured earlier.  
+
+5. Upon a successful login, you are redirected to the dashboard:
+
+    <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a> 
 
 
 **Related Links**  
@@ -73,30 +116,7 @@ To delete the previously created deployment via gcloud command line interface, u
 ### (Production) Launch Cloudbreak on your own VM
 
 Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
-
-
-### Access Cloudbreak web UI
-
-Log in to the Cloudbreak UI using the following steps.
-
-**Steps**
-
-1. You can log into the Cloudbreak application at `https://IP_Address`. For example `https://34.212.141.253`. You can obtain the VM's IP address from **Compute Engine** > **VM Instances**, the **External IP** column.
-
-{!docs/common/launch-access-ui.md!} 
-    
-3. The login page is displayed:
-
-    <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
-    
-4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [launching Cloudbreak deployer from an image](#launch-cloudbreak-deployer-from-an-image):
-
-    * The username is the `UAA_DEFAULT_USER_EMAIL`     
-    * The password is the `UAA_DEFAULT_USER_PW` 
-
-5. Upon a successful login, you are redirected to the dashboard:
-
-    <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
+ 
 
 ### Create Cloudbreak credential
 

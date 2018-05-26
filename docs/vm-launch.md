@@ -156,11 +156,30 @@ cbd start</pre>
 By default, Cloudbreak uses an embedded PostgreSQL database to persist data related to Cloudbreak configuration, setup, and so on. For a production Cloudbreak deployment, we suggest that you [configure an external database](cb-db.md).
 
 
-### Next steps after installing on your own VM
+### Access Cloudbreak web UI
 
-Log in to the Cloudbreak web UI and create a credential for Cloudbreak using the following platform-specific instructions:
+Log in to the Cloudbreak UI using the following steps.
 
-* [Access Cloudbreak web UI on AWS](aws-launch.md#access-cloudbreak-web-ui)  
-* [Access Cloudbreak web UI on Azure](azure-launch.md#access-cloudbreak-web-ui)  
-* [Access Cloudbreak web UI on GCP](gcp-launch.md#access-cloudbreak-web-ui)  
-* [Access Cloudbreak web UI on OpenStack](os-launch.md#access-cloudbreak-web-ui)  
+**Steps** 
+
+1. You can log into the Cloudbreak application at `https://IP_Address`. For example `https://34.212.141.253`. You can obtain the VM's IP address from your cloud provider console.
+
+{!docs/common/launch-access-ui.md!} 
+    
+4. Log in to the Cloudbreak web UI using the credentials that you configured in your `Profile` file:
+
+    * The username is the `UAA_DEFAULT_USER_EMAIL`     
+    * The password is the `UAA_DEFAULT_USER_PW` 
+
+5. Upon a successful login, you are redirected to the dashboard:
+
+    <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
+
+### Next steps
+
+Before you can create clusters, you must configure a Cloudbreak credential. Refer to the steps for your cloud platform:
+
+* [Create a Cloudbreak credential on AWS](aws-launch.md#create-cloudbreak-credential)  
+* [Create a Cloudbreak credential on Azure](azure-launch.md#create-cloudbreak-credential)  
+* [Create a Cloudbreak credential on GCP](gcp-launch.md#create-cloudbreak-credential)  
+* [Create a Cloudbreak credential on OpenStack](os-launch.md#create-cloudbreak-credential)  

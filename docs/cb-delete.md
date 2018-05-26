@@ -21,17 +21,15 @@ If you want to delete the Cloudbreak instance, you can do so by deleting the EC2
 
 **Steps**
 
-1. Log in to the AWS Management Console.
+1. Log in to the CloudFormation Console.
 
-2. Browse to the EC2 Management Console.
+1. Select the deployment that you want to delete.
+ 
+1. select **Actions** > **Delete Stack**.
 
-3. navigate to **Instances**.
-
-4. Select the instance that you want to delete and then select **Actions** > **Instance State** > **Terminate**.
-
-5. Click **Yes, Terminate** to confirm.
-
-    <a href="../images/cb_aws-delete.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-delete.png" width="650" title="Azure Portal"></a>  
+1. Click **Yes, Delete** to confirm.
+ 
+ All resources created as part of this stack (such as the Cloudbreak VM) will be deleted. 
 
 
 ### Delete Cloudbreak on Azure
@@ -60,20 +58,17 @@ You can delete Cloudbreak instance from your Azure account by deleting related r
 
 ### Delete Cloudbreak on GCP 
 
-You can delete Cloudbreak instance from your Google Cloud account. 
+There are two ways to delete a previously created Cloudbreak deployment from your Google Cloud account. 
 
+(Option 1) You can delete the deployment from the Google Cloud console in your browser, from the **Deployment Manager > Deployments**. 
 
-**Steps**
+(Option 2) You can delete the deployment by using the following gcloud CLI command:
 
-1. Navigate to your Google Cloud account.
+<pre>gcloud deployment-manager deployments delete deployment-name -q</pre>
 
-2. Navigate to **Compute Engine** > **VM instances**.
-
-3. Select the instance that you want to delete:
-
-    <a href="../images/cb_gcp-delete.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-delete.png" width="650" title="Azure Portal"></a>     
-
-4. Click on the delete icon and then confirm delete. 
+For example: 
+    
+<pre>gcloud deployment-manager deployments delete cbd-deployment -q</pre> 
 
 
 ### Delete Cloudbreak on OpenStack
