@@ -156,16 +156,17 @@ Follow these steps to obtain Cloudbreak VM's public IP address and log in to the
 
 **Steps**     
     
-1. Once the stack creation is complete, Cloudbreak is ready to use. You can obtain the URL to the cloud controller
-and the SSH access information from the **Outputs** tab:
+1. Once the stack creation is complete, Cloudbreak is ready to use. You can obtain the URL to Cloudbreak from the **Outputs** tab:
 
     <a href="../images/cb_aws-05.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-05.png" width="650" title="CFN Console - Outputs"></a>
 
     > If the Outputs tab is blank, refresh the page.
 
-1. Once the stack creation is complete, browse instance created at the **CloudURL** provided in the **Outputs** tab and log in.
+1. Paste the link in your browser's address bar.
 
-1. Log in to the Cloudbreak web UI using the credential that you configured.
+{!docs/common/launch-access-ui.md!} 
+
+1. Log in to the Cloudbreak web UI using the credential that you configured in the CloudFormation template.
 
 1. Upon a successful login, you are redirected to the dashboard:
 

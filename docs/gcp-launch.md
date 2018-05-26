@@ -110,10 +110,6 @@ Follow these steps to obtain Cloudbreak VM's public IP address and log in to the
 
 {!docs/common/launch-access-ui.md!} 
     
-1. The login page is displayed:
-
-    <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Cloudbreak web UI"></a>  
-    
 1. Log in to the Cloudbreak web UI using the credentials that you configured in the vm_template_config.yaml file.  
 
 5. Upon a successful login, you are redirected to the dashboard:
