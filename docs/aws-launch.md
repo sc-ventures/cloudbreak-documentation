@@ -9,7 +9,7 @@ The steps below describe how to launch Cloudbreak by using one of the two availa
 
 ### (Quickstart) Launch Cloudbreak from a template
 
-#### Launch CF template   
+#### Launch from CF template   
 
 Follow these steps to launch Cloudbreak by using an Amazon CloudFormation template.  
 
