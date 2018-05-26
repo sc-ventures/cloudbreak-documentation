@@ -72,7 +72,7 @@ export DATABASE_PASSWORD=Admin123!
 After performing these steps, your external database will be used for Cloudbreak instead of the built-in database. 
 
 <div class="note">		
-<p class="first admonition-title">Data Migration</p>  
+<p class="first admonition-title">Data migration</p>  
 <p class="last"> If you want to migrate your existing data (such as  blueprints, recipes, and so on) from the embedded database to the external one, then after completing these steps, you should also  <a href="../cb-migrate/#back-up-cloudbreak-database">create a backup</a> of your original database and then <a href="../cb-migrate#populate-database-with-dump-from-original-cloudbreak-instance">restore</a> it in the external database.   		
 </p>		
 </div>
