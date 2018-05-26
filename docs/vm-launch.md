@@ -1,6 +1,6 @@
 ## Installing Cloudbreak on your own VM
 
-This is an advanced deployment option. Select this option if you have custom requirements. Otherwise, you can launch Cloudbreak from a template:
+This is a production deployment option. Select this option if you have custom requirements. Otherwise, you can launch Cloudbreak from a template:
 
 * [Launch on AWS](aws-launch.md)  
 * [Launch on Azure](azure-launch.md)  
@@ -151,7 +151,9 @@ cbd start</pre>
 
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak normally takes less than a minute to start.
 
+### Configure external Cloudbreak database
 
+By default, Cloudbreak uses an embedded PostgreSQL database to persist data related to Cloudbreak configuration, setup, and so on. For a production Cloudbreak deployment, we suggest that you [configure an external database](cb-db.md).
 
 
 ### Next steps after installing on your own VM

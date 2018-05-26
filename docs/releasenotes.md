@@ -13,7 +13,10 @@ ____________________________
 
 [Comment]: <> (2.7 features)
 
+##### **Launching Cloudbreak from Templates**
 
+Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates on AWS and Google Cloud; On Azure, this option was previously available. To review current Cloudbreak deployment options, refer to [Deployment options](deployment-options.md).   
+____________________________
 
 
 ##### **Technical Preview of Shared Services** 

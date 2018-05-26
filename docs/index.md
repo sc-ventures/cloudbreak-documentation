@@ -23,7 +23,6 @@ Cloudbreak includes default cluster configurations (in the form of blueprints) a
 
 The following default cluster configurations are available:
 
- 
 
 Platform version: **HDP 2.6**
 
@@ -50,6 +49,8 @@ Refer to [Architecture](architecture.md).
 Refer to [Core concepts](architecture.md#core-concepts). 
 
 ### Deployment options
+
+In general, Cloudbreak offers two deployment options: a quickstart option and a production deployment option. 
 
 Refer to [Deployment Options](deployment-options.md).  
 

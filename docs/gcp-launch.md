@@ -70,7 +70,7 @@ To delete the previously created deployment via gcloud command line interface, u
 [Machine Types](https://cloud.google.com/compute/docs/machine-types) (External)    
 
 
-### (Advanced) Launch Cloudbreak on your own VM
+### (Production) Launch Cloudbreak on your own VM
 
 Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
 

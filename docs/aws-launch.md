@@ -141,7 +141,7 @@ Follow these steps to launch Cloudbreak by using an Amazon CloudFormation templa
 
     > The **Stack Name** is shown in the table with a <span class="cfn-output">CREATE_IN_PROGRESS</span> status. You can click on the **Stack Name** and see the specific events that are in progress. The create process takes about 10 minutes and once ready, you will see <span class="cfn-output2">CREATE_COMPLETE</span>. 
     
-### (Advanced) Launch Cloudbreak on your own VM
+### (Production) Launch Cloudbreak on your own VM
 
 Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
 

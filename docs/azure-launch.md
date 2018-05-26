@@ -64,7 +64,7 @@ Launch Cloudbreak deployer by using the following steps.
 [Filter network traffic with network security groups](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg) (External)  
 
 
-### (Advanced) Launch Cloudbrak on your own VM
+### (Production) Launch Cloudbrak on your own VM
 
 Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
 
