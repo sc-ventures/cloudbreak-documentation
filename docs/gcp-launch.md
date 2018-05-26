@@ -9,7 +9,7 @@ The steps below describe how to launch Cloudbreak by using one of the two availa
 
 ### (Quickstart) Launch Cloudbreak from a template   
 
-#### Launch DM template   
+#### Launch from DM template   
 
 Follow these steps to launch Cloudbreak on Google Cloud by using the Cloud Deployer Manager. 
 
