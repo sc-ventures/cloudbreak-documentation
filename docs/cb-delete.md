@@ -17,11 +17,11 @@ Upon cluster termination, Cloudbreak only terminates the resources that it creat
 
 ### Delete Cloudbreak on AWS
 
-If you want to delete the Cloudbreak instance, you can do so by deleting the EC2 instance on which it is running.
+If you want to delete Cloudbreak deployment, you can do so by deleting the stack in the CloudFormation console.
 
 **Steps**
 
-1. Log in to the CloudFormation Console.
+1. Log in to the CloudFormation console.
 
 1. Select the deployment that you want to delete.
  
@@ -73,14 +73,3 @@ For example:
 <pre>gcloud deployment-manager deployments delete cbd-deployment -q</pre> 
 
 
-### Delete Cloudbreak on OpenStack
-
-You can delete Cloudbreak instance from your OpenStack console. 
-
-**Steps**
-
-1. Navigate to your OpenStack account.
-
-2. Navigate to **Instances**.
-
-3. Select the instance to delete, click **Terminate Instances**, and confirm.

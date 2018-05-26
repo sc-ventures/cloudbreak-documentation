@@ -60,6 +60,11 @@ Launch Cloudbreak deployer by using the following steps.
 
     > If you encounter errors, refer to [Troubleshooting Cloudbreak on Azure](trouble-azure.md). 
     
+    <div class="note">
+    <p class="first admonition-title">Cleaning up after a failed deployment</p>
+    <p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-azure">Delete Cloudbreak on Azure</a></p>
+</div>
+    
     
 #### Access Cloudbreak web UI 
 

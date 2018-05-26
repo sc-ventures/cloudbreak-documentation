@@ -142,6 +142,13 @@ Follow these steps to launch Cloudbreak by using an Amazon CloudFormation templa
 1. Click **Create**.
 
     > The **Stack Name** is shown in the table with a <span class="cfn-output">CREATE_IN_PROGRESS</span> status. You can click on the **Stack Name** and see the specific events that are in progress. The create process takes about 10 minutes and once ready, you will see <span class="cfn-output2">CREATE_COMPLETE</span>. 
+    
+    <div class="note">
+    <p class="first admonition-title">Cleaning up after a failed deployment</p>
+    <p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-aws">Delete Cloudbreak on AWS</a></p>
+</div>
+
+
 
 #### Access Cloudbreak web UI 
 

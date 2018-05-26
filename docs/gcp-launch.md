@@ -72,6 +72,11 @@ cbd-deployment-subnet           compute.v1.subnetwork  COMPLETED  []
 firewall-cbd-deployment         compute.v1.firewall    COMPLETED  []
 vm-cbd-deployment               compute.v1.instance    COMPLETED  []</pre>
 
+    <div class="note">
+    <p class="first admonition-title">Cleaning up after a failed deployment</p>
+    <p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-gcp">Delete Cloudbreak on GCP</a></p>
+</div>
+
 
 #### Access Cloudbreak web UI  
 
