@@ -7,7 +7,9 @@ Before launching Cloudbreak on AWS:
 
 The steps below describe how to launch Cloudbreak by using one of the two available deployment options (quickstart and production), access Cloudbreak web UI, and create a Cloudbreak credential. 
 
-### (Quickstart) Launch Cloudbreak from a template  
+### (Quickstart) Launch Cloudbreak from a template
+
+#### Launch CF template   
 
 Follow these steps to launch Cloudbreak by using an Amazon CloudFormation template.  
 
@@ -140,7 +142,12 @@ Follow these steps to launch Cloudbreak by using an Amazon CloudFormation templa
 1. Click **Create**.
 
     > The **Stack Name** is shown in the table with a <span class="cfn-output">CREATE_IN_PROGRESS</span> status. You can click on the **Stack Name** and see the specific events that are in progress. The create process takes about 10 minutes and once ready, you will see <span class="cfn-output2">CREATE_COMPLETE</span>. 
-    
+
+#### Access Cloudbreak web UI 
+
+Follow these steps to obtain Cloudbreak VM's public IP address and log in to the Cloudbreak web UI. 
+
+**Steps**     
     
 1. Once the stack creation is complete, Cloudbreak is ready to use. You can obtain the URL to the cloud controller
 and the SSH access information from the **Outputs** tab:

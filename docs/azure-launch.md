@@ -9,6 +9,8 @@ The steps below describe how to launch Cloudbreak by using one of the two availa
 
 ### (Quickstart) Launch Cloudbreak from a template 
 
+#### Launch from ARM template 
+
 Launch Cloudbreak deployer by using the following steps.
 
 > This is the Azure quickstart option. If you would like to install Cloudbreak on your own VM, refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
@@ -56,7 +58,14 @@ Launch Cloudbreak deployer by using the following steps.
 
 6. Your deployment should be initiated.  
 
-    > If you encounter errors, refer to [Troubleshooting Cloudbreak on Azure](trouble-azure.md).   
+    > If you encounter errors, refer to [Troubleshooting Cloudbreak on Azure](trouble-azure.md). 
+    
+    
+#### Access Cloudbreak web UI 
+
+Follow these steps to obtain Cloudbreak VM's public IP address and log in to the Cloudbreak web UI. 
+
+**Steps**       
     
  1. When your deployment succeeds, you will receive a notification in the top-right corner. You can click on the link provided to navigate to the resource group created earlier.
 

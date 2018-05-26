@@ -7,7 +7,9 @@ Before launching Cloudbreak on Google Cloud:
 
 The steps below describe how to launch Cloudbreak by using one of the two available deployment options (quickstart and production), access Cloudbreak web UI, and create a Cloudbreak credential.
 
-### (Quickstart) Launch Cloudbreak from a template     
+### (Quickstart) Launch Cloudbreak from a template   
+
+#### Launch DM template   
 
 Follow these steps to launch Cloudbreak on Google Cloud by using the Cloud Deployer Manager. 
 
@@ -69,6 +71,13 @@ cbd-deployment-network          compute.v1.network     COMPLETED  []
 cbd-deployment-subnet           compute.v1.subnetwork  COMPLETED  []
 firewall-cbd-deployment         compute.v1.firewall    COMPLETED  []
 vm-cbd-deployment               compute.v1.instance    COMPLETED  []</pre>
+
+
+#### Access Cloudbreak web UI  
+
+Follow these steps to obtain Cloudbreak VM's public IP address and log in to the Cloudbreak web UI.   
+
+**Steps**
        
 1. In the browser, navigate to [https://console.cloud.google.com/](https://console.cloud.google.com/) and log in to your Google Cloud account. 
 
