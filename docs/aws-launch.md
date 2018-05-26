@@ -141,14 +141,8 @@ Follow these steps to launch Cloudbreak by using an Amazon CloudFormation templa
 
     > The **Stack Name** is shown in the table with a <span class="cfn-output">CREATE_IN_PROGRESS</span> status. You can click on the **Stack Name** and see the specific events that are in progress. The create process takes about 10 minutes and once ready, you will see <span class="cfn-output2">CREATE_COMPLETE</span>. 
     
-### (Production) Launch Cloudbreak on your own VM
-
-Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
-
-
-### Access Cloudbreak web UI
-
-1. Once the stack creation is complete, the cloud controller is ready to use. You can obtain the URL to the cloud controller
+    
+1. Once the stack creation is complete, Cloudbreak is ready to use. You can obtain the URL to the cloud controller
 and the SSH access information from the **Outputs** tab:
 
     <a href="../images/cb_aws-05.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-05.png" width="650" title="CFN Console - Outputs"></a>
@@ -162,6 +156,11 @@ and the SSH access information from the **Outputs** tab:
 1. Upon a successful login, you are redirected to the dashboard:
 
     <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
+        
+    
+### (Production) Launch Cloudbreak on your own VM
+
+Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
 
 
 ### Create Cloudbreak credential

@@ -60,7 +60,9 @@ You can delete Cloudbreak instance from your Azure account by deleting related r
 
 There are two ways to delete a previously created Cloudbreak deployment from your Google Cloud account. 
 
-(Option 1) You can delete the deployment from the Google Cloud console in your browser, from the **Deployment Manager > Deployments**. 
+(Option 1) You can delete the deployment from the Google Cloud console in your browser, from the **Deployment Manager > Deployments**:
+
+<a href="../images/cb_gcp-delete.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-delete.png" width="650" title="GCP"></a>
 
 (Option 2) You can delete the deployment by using the following gcloud CLI command:
 

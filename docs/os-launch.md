@@ -28,38 +28,6 @@ To import the certificate, place the certificate file in the `/certs/trusted/` d
 Cloudbreak will automatically pick up the certificate and import it into its trust store upon start.
 
 
-### Access Cloudbreak web UI
-
-Log in to the Cloudbreak UI using the following steps.
-
-**Steps**
-
-1. You can log into the Cloudbreak application at `https://IP_Address` where "IP_Address" if the public IP of your OpenStack VM. For example `https://34.212.141.253`.
-
-2. Confirm the security exception to proceed to the Cloudbreak web UI.
-
-    The first time you access Cloudbreak UI, Cloudbreak will automatically generate a self-signed certificate, due to which your browser will warn you about an untrusted connection and will ask you to confirm a security exception. You can safely proceed to the website.
-
-    | Browser | Steps |
-|---|---|
-| Firefox | Click **Advanced** > Click **Add Exception...** > Click **Confirm Security Exception** |
-| Safari | Click **Continue** |
-| Chrome | Click **Advanced** > Click **Proceed...** |  
-
-3. The login page is displayed:
-
-    <a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Cloudbreak web UI"></a>
-
-4. Log in to the Cloudbreak web UI using the credential that you configured in your `Profile` file when [starting Cloudbreak deployer](#start-cloudbreak-deployer):
-
-    * The username is the `UAA_DEFAULT_USER_EMAIL`
-    * The password is the `UAA_DEFAULT_USER_PW`
-
-5. Upon a successful login, you are redirected to the dashboard:
-
-    <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>
-
-
 ### Create Cloudbreak credential
 
 Cloudbreak works by connecting your OpenStack account through this credential, and then uses it to create resources on your behalf. Before you can start provisioning cluster using Cloudbreak, you must create a Cloudbreak credential.

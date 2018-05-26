@@ -57,25 +57,8 @@ Launch Cloudbreak deployer by using the following steps.
 6. Your deployment should be initiated.  
 
     > If you encounter errors, refer to [Troubleshooting Cloudbreak on Azure](trouble-azure.md).   
-
-
-**Related links**  
-[CIDR IP](http://www.ipaddressguide.com/cidr) (External)   
-[Filter network traffic with network security groups](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg) (External)  
-
-
-### (Production) Launch Cloudbrak on your own VM
-
-Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
-
-
-### Access Cloudbreak web UI
-
-Log in to the Cloudbreak UI using the following steps.
-
-**Steps**
-
-1. When your deployment succeeds, you will receive a notification in the top-right corner. You can click on the link provided to navigate to the resource group created earlier.
+    
+ 1. When your deployment succeeds, you will receive a notification in the top-right corner. You can click on the link provided to navigate to the resource group created earlier.
 
     > This only works right after deployment. At other times, you can find your resource group by selecting **Resource Groups** from the service menu and then finding your resource group by name.
 
@@ -97,7 +80,17 @@ Log in to the Cloudbreak UI using the following steps.
 
     <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
 
-The last task that you need to perform before you can use Cloudbreak is to [create a cloudbreak credential](#create-cloudbreak-credential).         
+The last task that you need to perform before you can use Cloudbreak is to [create a cloudbreak credential](#create-cloudbreak-credential).     
+
+
+**Related links**  
+[CIDR IP](http://www.ipaddressguide.com/cidr) (External)   
+[Filter network traffic with network security groups](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg) (External)  
+
+
+### (Production) Launch Cloudbrak on your own VM
+
+Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
 
 
 ### Create Cloudbreak credential
