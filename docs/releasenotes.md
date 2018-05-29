@@ -155,7 +155,7 @@ ____________________________
 When using Cloudbreak on OpenStack, you no longer need to import HDP and HDF images manually, because during your first attempt to create a cluster, Cloudbreak automatically imports HDP and HDF images to your OpenStack. Only Cloudbreak image must be imported manually.
 ____________________________
 
-##### **Install mysql connector as a recipe**
+##### **Install mysql Connector as a Recipe**
 
 Starting from Ambari version 2.6, if you have 'MYSQL_SERVER' component in your blueprint, then you have to [manually install and register](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.0/bk_ambari-administration/content/using_hive_with_mysql.html) the 'mysql-connector-java.jar'.
 
