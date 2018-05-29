@@ -23,9 +23,11 @@ Follow these steps to launch Cloudbreak on Google Cloud by using the Cloud Deplo
     
 1. Log in to GitHub (https://github.com/).  
 
-1. Download the "cbd-quickstart" Hortonworks repo located at `https://github.com/hortonworks/cbd-quickstart` onto your computer. 
+1. Download the "cbd-quickstart" Hortonworks repo located at `https://github.com/hortonworks/cbd-quickstart/tree/rc-2.7` onto your computer. 
 
-[Comment]: <> (Should we tell people to fork this or to download it?)
+[Comment]: <> (Should we tell people to fork this or to download the repo?)
+
+[Comment]: <> (Will we be creating an RC branch for each release and pointing everyone to that branch?)
 
 1. On your computer, browse to the `cbd-quickstart/gcp`.         
 
