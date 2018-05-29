@@ -1,5 +1,4 @@
-| Instance Count | Enter the number of instances of a given type. Default is 1. |
-| Ambari Server | You must select one node for Ambari Server. The "Group Size" for that host group must be set to "1". |   
+| Instance Count | Enter the number of instances of a given type. Default is 1. |  
 
 
 6. On the **Network** page, provide the following to specify the networking resources that will be used for your cluster:

@@ -28,6 +28,10 @@
 {!docs/common/create-adv-2.md!}
 | Storage Type | <p>Select the volume type. The options are:<ul><li>Locally-redundant storage</li><li>Geo-redundant storage</li><li>Premium locally-redundant storage</li></ul> For more information about these options refer to <a href="https://docs.microsoft.com/en-us/azure/storage/storage-introduction" target="_blank">Azure documentation</a>. |
 {!docs/common/create-adv-3.md!}
+| Root Volume Size | <p>Use this option to increase the root volume size. Default is 50 GB. This option is useful if your custom image requires more space than the default 50 GB.</p><p>If you set this option, an osDisk with the given rootVolumeSize will be created for the instance automatically. However, you will have to resize the osDisk partition manually by using the steps provided in the <a href="https://blogs.msdn.microsoft.com/linuxonazure/2017/04/03/how-to-resize-linux-osdisk-partition-on-azure/" target="_blank">Azure documentation</a>.</p> |
+
+**Related links**  
+[How to: Resize Linux osDisk partition on Azure](https://blogs.msdn.microsoft.com/linuxonazure/2017/04/03/how-to-resize-linux-osdisk-partition-on-azure/)  
 
 
 #### Availability sets 

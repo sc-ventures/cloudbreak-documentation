@@ -31,10 +31,6 @@ If you are trying to customize Ambari and HDP/HDF versions, you can ignore the *
 
 If you would like to use a custom Ambari version, provide the following information: 
 
-<div class="note">
-<p class="first admonition-title"> Ambari 2.6.1</p>
-<p class="last">If you would like to use Ambari <b>2.6.1</b>, use the version provided by default in the Cloudbreak web UI, or newer.</p></div>
-
 | Parameter | Description | Example |
 |---|---|---|
 | Version | Enter Ambari version. | 2.6.1.3 |
@@ -53,7 +49,7 @@ If you would like to use a custom HDP or HDF version, provide the following info
 | Repository Version | Enter repository version. | 2.6.4.0-91 |
 | Version Definition File | Enter the URL of the VDF file. | http://public-repo-1.hortonworks.com/HDP/centos6/2.x/updates/2.6.4.0/HDP-2.6.4.0-91.xml |
 | (HDF only) MPack Url | (HDF only) Provide MPack URL. | http://public-repo-1.hortonworks.com/HDF/centos7/3.x/updates/3.1.1.0/tars/hdf_ambari_mp/hdf-ambari-mpack-3.1.1.0-35.tar.gz |
-| Enable Ambari Server to download and install GPL Licensed LZO packages? | (Optional, only available if using Ambari 2.6.1.0 or newer) Use this option to enable LZO compression in your HDP/HDF cluster. LZO is a lossless data compression library that favors speed over compression ratio. Ambari does not install nor enable LZO compression libraries by default, and must be explicitly configured to do so. For more information, refer to [Enabling LZO](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.0/bk_ambari-administration/content/enabling_lzo.html).| <img src="../images/cb_toggle.png" alt="On" /> |
+| Enable Ambari Server to download and install GPL Licensed LZO packages? | (Optional, only available if using Ambari 2.6.1.0 or newer) Use this option to enable LZO compression in your HDP/HDF cluster. LZO is a lossless data compression library that favors speed over compression ratio. Ambari does not install nor enable LZO compression libraries by default, and must be explicitly configured to do so. For more information, refer to [Enabling LZO](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.0/bk_ambari-administration/content/enabling_lzo.html).| <img src="../images/cb_toggle.png" alt="On"/> |
 
 > If you choose to use a base image with custom Ambari and/or HDP/HDF version, Cloudbreak validates the information entered. When Cloudbreak detects that the information entered is incorrect, it displays a warning marked with the <img src="../images/cb_warning.png" width="25" title="Icon"> sign. You should review all the warnings before proceeding and make sure that the information that you entered is correct. If you choose to proceed in spite of the warnings, check "Ignore repository warnings".  
  
@@ -88,9 +84,11 @@ For more information, refer to [Tagging resources](tags.md).
    
    
 
-#### Storage
+#### Hardware and Storage
 
-You can optionally specify the following storage options for your cluster:
+You can optionally specify the following storage options for your cluster.     
+
+To edit this section, click on the <img src="../images/cb_edit.png"/>. When done editing, click on the <img src="../images/cb_save.png" width="25"/> to save the changes. 
 
 | Parameter | Description |
 |---|---|

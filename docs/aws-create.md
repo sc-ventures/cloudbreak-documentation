@@ -37,6 +37,7 @@ Choose one of the availability zones within the selected region.
 {!docs/common/create-adv-2.md!}
 | Storage Type | <p>Select the volume type. The options are:<ul><li>Magnetic (default)</li><li>General Purpose (SSD)</li><li>Throughput Optimized HDD</li></ul>For more information about these options refer to <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html" target="_blank">AWS documentation</a>.</p>|
 {!docs/common/create-adv-3.md!}
+| Root Volume Size | Use this option to increase the root volume size. Default is 50 GB. This option is useful if your custom image requires more space than the default 50 GB. |
 
 
 #### Use spot instances
