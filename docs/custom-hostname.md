@@ -1,81 +1,111 @@
-## Configuring Custom hostnames based on Domain Name System (DNS)
+## Using custom hostnames based on Domain Name System (DNS)
 
-It's is possible to have different hostnames for cluster members other than the ones configured by the service provider by default.
-When the cluster member machines are spun up they try to make a reverse DNS lookup (by querying of the DNS to determine the domain name associated with a specific IP address) and if it returns a valid value, then it is set as hostname.
+By default, when Cloudbreak provisions cloud provider resources, your cloud provider assigns hostnames for your cluster nodes. Optionally, instead of using these default hostnames, you can configure Cloudbreak to use custom hostnames. 
+
+When the cluster node machines are spun up, they try to make a reverse DNS lookup (by querying of the DNS to determine the domain name associated with a specific IP address); if the reverse DNS lookup returns a valid value, then that value is set as hostname.
+
+[Comment]: <> (Is this option only available on AWS?)
+
 
 ### Configure reverse DNS on AWS
 
 On AWS you have the following two options:
 
-* use [Route53](https://aws.amazon.com/route53/) as DNS provider
-* setup your own DNS server in your VPC
+* Use [Route53](https://aws.amazon.com/route53/) as DNS provider.  
+* Set up your own DNS server in your VPC  
 
-Both setups require the customer to have a VPC and attach a custom [DHCP option](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html) to it.
+Both setups require you to have an existing VPC and attach a custom [DHCP option](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html) to it.
 
-#### Using Route53
+#### Configure reverse DNS using Route53
 
+Follow these general steps to configure reverse DNS using [Route53](https://aws.amazon.com/route53/).  
 
-1. **Create or bring your own VPC**
-    1. CIDR eg. *10.1.0.0/16*
-    2. Enable DNS resolution and **DNS hostnames**
-    3. Create a subnet with CIDR eg. *10.1.1.0/28*
-    > Notice that you might want to set an Internet Gateway for the VPC and add a default route to the routing table for the IGW.
-    Also you may enable *Auto-assign Public IP* option.
+**Steps**
+
+1. **Create a new VPC or use your existing VPC**:
+
+    You can create a new VPC from the Amazon VCP console.  
+    For detailed steps, refer to [AWS documentation](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/working-with-vpcs.html#Create-VPC). 
+             
+    * CIDR block example: *10.1.0.0/16* 
+    * Enable DNS resolution and DNS hostnames: *Yes* [DB-QUESTION: I only see an option called "Enable DNS hostnames". Is that what you mean here?]
+    * Subnet's CIDR example: *10.1.1.0/28*
+    > Optionally, you may want to set up an Internet Gateway for the VPC and add a default route to the routing table for the Internet Gateway.
+    Additionally, you may want to enable the *Auto-assign Public IP* option.
     This way Cloudbreak would reach the cluster from outside of the VPC and the cluster would have internet access.
-2. **Setup DHCP options**
-    1. Create a DHCP Option Set as documented [here](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/dhcp_options_set.html).
-    2. Set the domain name to a preferred domain, eg. cloudbreak.beer
-    3. Set domain name servers to AmazonProviderDNS
+    
+2. **Create a DHCP options set**: 
 
-        <a href="../images/aws-route53-dhcp-option.png" target="_blank" title="click to enlarge"><img src="../images/aws-route53-dhcp-option.png" width="350" title="DHCP option for Route53"></a>   
-    4. Go back to your VPC view and click on *Actions -> Edit DHCP Options Set* to be able select the newly created DHCP Option Set for the VPC
+    You can find this option in the Amazon VPC console by selecting *DHCP Options Sets* from the left pane.  
+    For detailed steps, refer to [AWS documentation](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/dhcp_options_set.html).  
+    
+    1. Set the *Domain name* to a preferred domain, for example `cloudbreak.beer`.
+    2. Set the *Domain name servers* to `AmazonProviderDNS`
+    3. Optionally, set a *Name tag*  
 
-3. **Configure domain at Route53**
-    1. Go to the Route53 service page in AWS console
-    2. Create a Hosted Zone as documented [here](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zone-private-creating.html)
-        * with the Domain Name used previously with DHCP Options
-        * set the Type to *Private Hosted Zone for Amazon VPC*
-        * select the VPC ID to which you previously assigned the DHCP option
-    3. Add records
-        * Go to *Record set*
-        * Use *Create Record Set* for every available IP to have a custom name (10.1.1.4-14 if you have the subnet used above)
-            * Type: A
-            * Name: eg. *b10*
-            * Value: eg. *10.1.1.10*
+        <a href="../images/cb_aws-route53-dhcp-option.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-dhcp-option.png" width="650" title="DHCP option for Route53"></a>   
 
-                <a href="../images/aws-route53-record.png" target="_blank" title="click to enlarge"><img src="../images/aws-route53-record.png" width="350" title="Domain record for Route53"></a>
+3. **Assign the newly created DHCP options set to your VPC**:
+
+    1. From the Amazon VPC console, select *Your VPCs* from the left pane.
+    2. Select the VPC created earlier.  
+    3. Click on *Actions > Edit DHCP Options Set*.  
+    4. Select the newly created DHCP option set.  
+  
+4. **Configure your domain at Route53**:
+
+    1. Navigate to the Amazon Route53 console.  
+    2. Create a hosted zone by clicking on *Create Hosted Zone*. For detailed steps, refer to [AWS documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zone-private-creating.html). Make sure to:   
+        * Use the same domain name as used previously with the DHCP options set. 
+        * Set the *Type* to *Private Hosted Zone for Amazon VPC*.  
+        * Select the VPC ID of the VPC to which you previously assigned the DHCP option.  
+        
+    3. Add records for your hosted zone: [DB-QUESTION: I'm not sure about what you mean in these substeps]
+    
+        * Select the hosted zone and choose *Go to Record Sets*
+        * Select *Create Record Set* for every available IP to have a custom name (If you used the subnet example listed above, these will be 10.1.1.4-14 )
+            * Type: select *A*
+            * Name: for example *b10*
+            * Value: for example *10.1.1.10*
+
+            <a href="../images/cb_aws-route53-record.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-record.png" width="350" title="Domain record for Route53"></a>  
 
     4. Create another hosted zone for reverse DNS lookup.
-        * It's domain name should look like this if you used the previous subnet (as reverse DNS lookups use the special domain *in-addr.arpa*):
+        * If you used the subnet example listed above, its domain name should look like this (as reverse DNS lookups use the special domain *in-addr.arpa*):
 
             <pre>1.1.10.in-addr.arpa.</pre>
 
-        * set the Type to *Private Hosted Zone for Amazon VPC*
-        * select the VPC ID to which you previously assigned the DHCP option
+        * Set the Type to *Private Hosted Zone for Amazon VPC*
+        * Select the VPC ID to which you previously assigned the DHCP option set  
 
-    5. Add records (for every created domain)
-        * Type: PTR
-        * Name: is the IP last part eg. *10*
-        * Value: the domain name you set in the previous step eg. *b10*
+    5. Add records for every created domain:  
+        * Type: select *PTR* 
+        * Name: This determines the first part of the IP, for example *10*
+        * Value: Enter the domain name that you set in the previous step, for example, *b10*
 
-            <a href="../images/aws-route53-reverse-record.png" target="_blank" title="click to enlarge"><img src="../images/aws-route53-reverse-record.png" width="350" title="Domain PTR record for Route53"></a>
+            <a href="../images/cb_aws-route53-reverse-record.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-reverse-record.png" width="350" title="Domain PTR record for Route53"></a>
 
-4. **Create the cluster** in the VPC and you will have the same hostnames set as the domain names.
-> Notice that you don't have control the order over the IP addresses leased to the machines, so the names may not be in order.
+4. **Create the cluster in the VPC configured in the preceding steps** and you will have the same hostnames set as the domain names.
+> Since you don't have control the order over the IP addresses leased to the machines, the names may not be in order.
 
 
-#### Using custom DNS server
+#### Configure reverse DNS using custom DNS server
 
-1. **Create or bring your own VPC**
-    1. CIDR eg. *10.3.0.0/16*
-    2. Enable DNS resolution and **DNS hostnames**
-    3. Create a subnet with CIDR eg. *10.3.3.0/28*
-    > Notice that you might want to set an Internet Gateway for the VPC and add a default route to the routing table for the IGW.
-    Also you may enable *Auto-assign Public IP* option.
+Follow these general steps to configure reverse DNS using a custom DNS server.  
+
+**Steps**
+
+1. **Create a new VPC or use your existing VPC**:
+    * CIDR block example: *10.3.0.0/16* [DB-QUESTION: I only see an option  called "Enable DNS hostnames". Is that what you mean here?]
+    * Enable DNS resolution and DNS hostnames: *Yes* 
+    * Subnet's CIDR example: *10.3.3.0/28*
+    > Optionally, you may want to set up an Internet Gateway for the VPC and add a default route to the routing table for the Internet Gateway.
+    Additionally, you may want to enable the *Auto-assign Public IP* option.
     This way Cloudbreak would reach the cluster from outside of the VPC and the cluster would have internet access.
-2. **Setup DNS server** in your VPC/subnet
-    1. In the configuration ensure that you have DNS records and reverse DNS pointers for all IP address (eg. 10.3.3.4-14)
-    2. Example unbound configuration:
+    
+2. **Set up DNS server in your VPC/subnet**:
+    * In the configuration ensure that you have DNS records and reverse DNS pointers for all IP address (eg. 10.3.3.4-14)
+    * Example unbound configuration:
 
         <pre>
             [root@ip-10-3-3-9 conf.d]# cat 00-cloudbreak.cloud.conf
@@ -105,12 +135,23 @@ Both setups require the customer to have a VPC and attach a custom [DHCP option]
                 local-data-ptr: "10.3.3.14 aww11.cloudbreak.cloud."
         </pre>
 
-3. **Setup DHCP options**
-    1. Set the domain name to a preferred domain, eg. cloudbreak.cloud
-    2. Set domain name servers to the previously created DNS server
+3. **Create a DHCP options set**: 
 
-        <a href="../images/aws-custondns-dhcp-option.png" target="_blank" title="click to enlarge"><img src="../images/aws-custondns-dhcp-option.png" width="350" title="DHCP option for own DNS server"></a>   
-    3. Go back to your VPC view and click on *Actions -> Edit DHCP Options Set* to be able select the newly created DHCP Option Set for the VPC
+    You can find this option in the Amazon VPC console by selecting *DHCP Options Sets* from the left pane.  
+    For detailed steps, refer to [AWS documentation](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/dhcp_options_set.html).
+    
+    * Set the *Domain name* to your preferred domain, for example `cloudbreak.cloud`
+    * Set *Domain name servers* to the previously created DNS server
 
-4. **Create the cluster** in the VPC and you will have the same hostnames set as the domain names.
-> Notice that you don't have control the order over the IP address leased to the machines, so the names may not be in order.
+        <a href="../images/cb_aws-custondns-dhcp-option.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-custondns-dhcp-option.png" width="650" title="DHCP option for own DNS server"></a>   
+
+4. **Assign the newly created DHCP options set to your VPC**:
+
+    1. From the Amazon VPC console, select *Your VPCs* from the left pane.
+    2. Select the VPC created earlier.  
+    3. Click on *Actions > Edit DHCP Options Set*.  
+    4. Select the newly created DHCP option set.  
+
+
+5. **Create the cluster in the VPC configured in the preceding steps** and you will have the same hostnames set as the domain names.
+> Since you don't have control the order over the IP addresses leased to the machines, the names may not be in order.
