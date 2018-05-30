@@ -4,11 +4,7 @@ By default, when Cloudbreak provisions cloud provider resources, your cloud prov
 
 When the cluster node machines are provisioned, they try to make a reverse DNS lookup (by querying of the DNS to determine the domain name associated with a specific IP address); if the reverse DNS lookup returns a valid value, then that value is set as hostname. This is why reverse DNS setup is required for using custom hostnames.   
 
-[Comment]: <> (DB-QUESTION: Next time, can you please not use any examlpe options called "beer"? It's cute bu t now I have to fix all screenshots.)
-
-### Configure reverse DNS on AWS
-
-[Comment]: <> (DB-QUESTION: I am not sure if this is the best title? Configuring reverse DNS is only one of the steps)
+### Configure DNS on AWS
 
 On AWS you have the following two options:
 
@@ -17,7 +13,7 @@ On AWS you have the following two options:
 
 Both options require you to have an existing VPC and attach a custom [DHCP option](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html) to it.
 
-#### Configure reverse DNS using Route53
+#### Configure DNS using Route53
 
 Follow these general steps to configure reverse DNS using [Route53](https://aws.amazon.com/route53/).  
 
@@ -25,16 +21,15 @@ Follow these general steps to configure reverse DNS using [Route53](https://aws.
 
 1. **Create a new VPC or use your existing VPC**:
 
-    To create a new VPC, navigate to the Amazon VCP console and click on *Start VPC Wizard*.  
-             
-    * CIDR block example: *10.1.0.0/16* 
-    * Enable DNS resolution and DNS hostnames: *Yes* [DB-QUESTION: I only see an option called "Enable DNS hostnames". Is that what you mean here?]
-    * Subnet's CIDR example: *10.1.1.0/28*  
+    1. To create a new VPC, navigate to the Amazon VCP console and click on *Start VPC Wizard*.              
+        * CIDR block example: *10.1.0.0/16* 
+        * Subnet's CIDR example: *10.1.1.0/28*  
+    2. Enable DNS resolution. You can do this by selecting the VPC, selecting *Actions > Edit DNS resolution* and choosing *Yes*. 
+    3. Enable DNS hostnames. You can do this by selecting the VPC, selecting *Actions > Edit DNS hostnames* and choosing *Yes*.
     
     > Optionally, you may want to set up an Internet Gateway for the VPC and add a default route to the routing table for the Internet Gateway.
     Additionally, you may want to enable the *Auto-assign Public IP* option.
     This way Cloudbreak would reach the cluster from outside of the VPC and the cluster would have internet access.
-    For detailed steps, refer to [AWS documentation](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/working-with-vpcs.html#Create-VPC). 
     
 2. **Create a DHCP options set**: 
 
@@ -66,15 +61,20 @@ Follow these general steps to configure reverse DNS using [Route53](https://aws.
         * Set the *Type* to *Private Hosted Zone for Amazon VPC*.  
         * Select the VPC ID of the VPC to which you previously assigned the DHCP option.  
         
-    3. Add records for your hosted zone: [DB-QUESTION: I'm not sure about what you mean in these substeps]
+    3. Add records for your hosted zone:
     
         * Select the hosted zone and choose *Go to Record Sets*
-        * Click *Create Record Set* to create a record set. You must do this for every available IP, so that each IP can have a custom name (If you used the subnet example listed above, these IPs will be in the range of 10.1.1.4-14) (DB-QUESTION: So in this example I need to do this one time but enter 11 IP addresses under "Value", each in a new line? Is that correct?)
+        * Click *Create Record Set* to create a record set. You must perform this step for every available IP, so that each IP can have a custom name (If you used the subnet example listed above, these IPs will be in the range of 10.1.1.4-14):
             * Type: select *A*
             * Name: for example *b10*
             * Value: for example *10.1.1.10*
 
-            <a href="../images/cb_aws-route53-record.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-record.png" width="350" title="Domain record for Route53"></a>  
+            <a href="../images/cb_aws-route53-record.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-record.png" width="350" title="Domain record for Route53"></a> 
+            
+      4. After performing this step for each IP, you should end up with an many records as IPs. For example:  
+          <a href="../images/cb_aws-route53-records.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-records.png" width="650" title="Domain record for Route53"></a>
+          
+                 
 
 
 5. **Create another hosted zone for reverse DNS lookup.**
@@ -90,18 +90,21 @@ Follow these general steps to configure reverse DNS using [Route53](https://aws.
         * Set the Type to *Private Hosted Zone for Amazon VPC*.
         * Select the VPC ID to which you previously assigned the DHCP option set.  
 
-     3. Add records for every created domain: (DB-QUESTION: What do you mean by "every created domain"? Do you mean for every record set created in step 2? Can I do this all in one step, by entering multiple values, each in a new line?)
+     3. Add records for every created domain: 
         * Type: select *PTR* 
         * Name: This determines the first part of the IP, for example *10*
         * Value: Enter the domain name that you set in the previous step, for example, *b10*
 
             <a href="../images/cb_aws-route53-reverse-record.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-reverse-record.png" width="350" title="Domain PTR record for Route53"></a>
+            
+      4. After performing this step for each domain, you should end up with as many records as IPs. For example:  
+          <a href="../images/cb_aws-route53-reverse-records.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-reverse-records.png" width="650" title="Domain record for Route53"></a>
 
 4. **Create the cluster in the VPC configured in the earlier steps** and you will have the same hostnames set as the domain names.
 > Since you don't have control the order over the IP addresses leased to the machines, the names may not be in order.
 
 
-#### Configure reverse DNS using custom DNS server
+#### Configure DNS using custom DNS server
 
 Follow these general steps to configure reverse DNS using a custom DNS server.  
 
@@ -109,16 +112,14 @@ Follow these general steps to configure reverse DNS using a custom DNS server.
 
 1. **Create a new VPC or use your existing VPC**:
 
-    To create a new VPC, navigate to the Amazon VCP console and click on *Start VPC Wizard*. 
-    
-    * CIDR block example: *10.3.0.0/16* [DB-QUESTION: I only see an option  called "Enable DNS hostnames". Is that what you mean here?]
-    * Enable DNS resolution and DNS hostnames: *Yes* 
-    * Subnet's CIDR example: *10.3.3.0/28*
+    1. To create a new VPC, navigate to the Amazon VCP console and click on *Start VPC Wizard*.              
+        * CIDR block example: *10.1.0.0/16* 
+        * Subnet's CIDR example: *10.1.1.0/28*  
+    2. Enable DNS resolution. You can do this by selecting the VPC, selecting *Actions > Edit DNS resolution* and choosing *Yes*. 
+    3. Enable DNS hostnames. You can do this by selecting the VPC, selecting *Actions > Edit DNS hostnames* and choosing *Yes*.
     > Optionally, you may want to set up an Internet Gateway for the VPC and add a default route to the routing table for the Internet Gateway.
     Additionally, you may want to enable the *Auto-assign Public IP* option.
     This way Cloudbreak would reach the cluster from outside of the VPC and the cluster would have internet access.
-    
-    For detailed steps, refer to [AWS documentation](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/working-with-vpcs.html#Create-VPC). 
     
 2. **Set up DNS server in your VPC/subnet**:
     * In the configuration ensure that you have DNS records and reverse DNS pointers for all IP address (for example 10.3.3.4-14)
