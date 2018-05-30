@@ -33,13 +33,20 @@ ____________________________
 
 ##### **Setting Root Volume Size**
 
-When creating a cluster, you can modify the root volume size. Default is 50 GB for AWS and GCP and 30 GB for Azure. This option is useful if your custom image requires more space than the default. 
+When creating a cluster, you can modify the root volume size. This option is available on the advanced **Hardware and Storage** page of the create cluster wizard. Default is 50 GB for AWS and GCP, and 30 GB for Azure. This option is useful if your custom image requires more space than provided by default. 
 ____________________________
 
 
 ##### **Sorting and Filtering Resource Tables**
 
 Cloudbreak introduces the ability to sort and filter resource tables that list resources such as clusters, cluster hardware, blueprints, recipes, and so on, in the Cloudbreak web UI.
+____________________________
+
+
+##### **Instructions for Using Custom Hostnames** 
+
+New documentation is available for using custom hostnames based on DNS for the cluster nodes.  Refer to [Using custom hostnames based on DNS](hostnames.md). 
+
 ____________________________
 
 
