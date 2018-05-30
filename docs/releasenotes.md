@@ -208,12 +208,19 @@ ____________________________
 #### Image Catalog Updates 
 ____________________________
 
-##### June 1, 2018 
+##### June 1, 2018
+
+Update 1 for Cloudbreak 2.4.2: 
 
 Default Ambari version 2.6.2.0  
 Default HDP version 2.6.5.0-292   
 
+##### April 3, 2018 
 
+The versions with Cloudbreak 2.4.1: 
+
+Default Ambari version 2.6.1.3  
+Default HDP version 2.6.4.5-2 
 
 
 
