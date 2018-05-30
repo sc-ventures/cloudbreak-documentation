@@ -47,7 +47,7 @@ ____________________________
 
 ##### **Setting Custom Properties**
 
-TBD 
+Cloudbreak allows you to add a custom property template in your blueprints and then set custom properties on a per-cluster basis. For more information, refer to [Custom properties](properties.md).
 ____________________________
 
 
