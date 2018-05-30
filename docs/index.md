@@ -30,9 +30,7 @@ Refer to [Core concepts](architecture.md#core-concepts).
 
 ### Deployment options
 
-In general, Cloudbreak offers two deployment options: a quickstart option and a production deployment option. 
-
-Refer to [Deployment Options](deployment-options.md).  
+In general, Cloudbreak offers two deployment options: a quickstart option and a production deployment option. Refer to [Deployment Options](deployment-options.md).  
  
 
 ### Default cluster configurations
