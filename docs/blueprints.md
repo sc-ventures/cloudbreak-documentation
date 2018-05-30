@@ -88,7 +88,7 @@ Here are a few [blueprint examples](https://github.com/hortonworks/cloudbreak/tr
 
 #### Creating a template blueprint   
 
-Cloudbreak allows you to create special blueprints which include templating: the values of the variables specified in the blueprint will be dynamically generated & replaced in the cluster creation phase, picking up the parameter values that you provided in the Cloudbreak UI or CLI.
+Cloudbreak allows you to create special blueprints which include templating: the values of the variables specified in the blueprint will be dynamically generated and replaced in the cluster creation phase, picking up the parameter values that you provided in the Cloudbreak UI or CLI.
 Cloudbreak supports [mustache](https://mustache.github.io/) kind of templating with {{{variable}}} syntax. You cannot use functions in the blueprint file; only variable injection is supported.
 
 **External authentication source (LDAP/AD)**

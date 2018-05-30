@@ -20,7 +20,25 @@ Cloudbreak allows you to create, manage, and monitor your HDP and HDF clusters o
 
 * Dynamically deploy, configure, and manage clusters on public and private clouds (AWS, Azure, Google Cloud, OpenStack).   
 * Use automated scaling to seamlessly manage elasticity requirements as cluster workloads change.  
-* Secure your cluster by enabling Kerberos.   
+* Secure your cluster by enabling Kerberos.  
+
+
+### Architecture 
+
+Refer to [Architecture](architecture.md).
+
+
+### Core concepts   
+
+Refer to [Core concepts](architecture.md#core-concepts). 
+
+
+### Deployment options
+
+In general, Cloudbreak offers two deployment options: a quickstart option and a production deployment option. 
+
+Refer to [Deployment Options](deployment-options.md).  
+ 
 
 ### Default cluster configurations
 
@@ -44,20 +62,6 @@ Platform version: **HDF 3.1**
 |---|---|---|---|
 | Flow Management | <i class="fa fa-check" style="color: green"></i> NiFi | Useful for flow management with NiFi. | NiFi, NiFi Registry, ZooKeeper, Ambari Metrics |
 | Messaging Management | <i class="fa fa-check" style="color: green"></i> Kafka |  Useful for messaging management with Kafka. | Kafka, ZooKeeper, Ambari Metrics |
-
-### Architecture 
-
-Refer to [Architecture](architecture.md).
-
-### Core concepts   
-
-Refer to [Core concepts](architecture.md#core-concepts). 
-
-### Deployment options
-
-In general, Cloudbreak offers two deployment options: a quickstart option and a production deployment option. 
-
-Refer to [Deployment Options](deployment-options.md).  
 
 
 ### Get started

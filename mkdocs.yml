@@ -54,6 +54,7 @@ pages:
         - Use management packs: mpacks.md
         - Use custom images: images.md
         - Tag resources: tags.md 
+        - Set custom properties: properties.md 
         - Enable Kerberos security: security-kerberos.md
         - Configure autoscaling: autoscaling.md 
         - Register external database: external-db.md  
