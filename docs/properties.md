@@ -43,12 +43,12 @@ In the cluster creation phase, the property values in the blueprint will be repl
     1. Under **General Configuration > Cluster Type**, select the blueprint prepared in the previous step.  
     2. Under **Cluster Extensions > Custom Properties**, include a JSON file which defines the property values.
 
-        TO DO: Include a screenshot when the UI is ready 
+[Comment]: <> (TO DO: Include a screenshot when the UI is ready) 
 
-    **Example:**  
-    The following JSON entry sets the values for the properties from the previous step: 
+        **Example:**  
+        The following JSON entry sets the values for the properties from the previous step: 
 
-    <pre>{
+        <pre>{
     "fs.trash.interval": "4320",
     "hive.exec.compress.output": "true",
     "my.tmp.directory": "/hadoop/tmp"
