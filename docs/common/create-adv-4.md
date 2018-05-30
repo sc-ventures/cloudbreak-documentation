@@ -23,3 +23,10 @@ You can register external sources with Cloudbreak, and then select and attach th
 * [Using an external database](external-db.md)  
 * [Register a proxy](external-proxy.md)  
 
+
+#### Custom properties 
+
+This option allows you to set custom properties based on the template defined in your custom blueprint. For more information, refer to [Set custom properties](properties.md). 
+
+**Related links**      
+[Set custom properties](properties.md)   
