@@ -13,19 +13,22 @@ On AWS you have the following two options:
 
 Both options require you to have an existing VPC and attach a custom [DHCP option](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html) to it.
 
+The instructions provided in this section describe how to perform the steps in Amazon web consoles, but the steps can also be performed (and automated) in the AWS CLI.  
+
 #### Configure DNS using Route53
 
-Follow these general steps to configure reverse DNS using [Route53](https://aws.amazon.com/route53/).  
+Follow these general steps to configure reverse DNS using [Route53](https://aws.amazon.com/route53/). 
 
 **Steps**
 
 1. **Create a new VPC or use your existing VPC**:
 
-    1. To create a new VPC, navigate to the Amazon VCP console and click on *Start VPC Wizard*.              
+    1. You can create a new VPC from the Amazon VCP console (for example by using *Start VPC Wizard*):              
         * CIDR block example: *10.1.0.0/16* 
         * Subnet's CIDR example: *10.1.1.0/28*  
-    2. Enable DNS resolution. You can do this by selecting the VPC, selecting *Actions > Edit DNS resolution* and choosing *Yes*. 
-    3. Enable DNS hostnames. You can do this by selecting the VPC, selecting *Actions > Edit DNS hostnames* and choosing *Yes*.
+    2. Make sure to:
+        * Enable DNS resolution for the VPC. You can do this by selecting the VPC, selecting *Actions > Edit DNS resolution* and choosing *Yes*. 
+        * Enable DNS hostnames for the VPC. You can do this by selecting the VPC, selecting *Actions > Edit DNS hostnames* and choosing *Yes*.
     
     > Optionally, you may want to set up an Internet Gateway for the VPC and add a default route to the routing table for the Internet Gateway.
     Additionally, you may want to enable the *Auto-assign Public IP* option.
@@ -35,9 +38,8 @@ Follow these general steps to configure reverse DNS using [Route53](https://aws.
 
     Perform this step from the Amazon VPC console. Select *DHCP Options Sets* from the left pane and click on *Create a DHCP options set*. Make sure to:   
     
-    1. Set the *Domain name* to a preferred domain, for example `cloudbreak.beer`.
-    2. Set the *Domain name servers* to `AmazonProvidedDNS`  
-    3. Optionally, set a *Name tag*  
+    * Set the *Domain name* to a preferred domain, for example `cloudbreak.beer`
+    * Set the *Domain name servers* to `AmazonProvidedDNS`  
 
         <a href="../images/cb_aws-route53-dhcp-option.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-dhcp-option.png" width="650" title="DHCP option for Route53"></a>   
 
@@ -53,7 +55,7 @@ Follow these general steps to configure reverse DNS using [Route53](https://aws.
 4. **Configure your domain at Route53**:
 
     Perform these steps from the Amazon Route53 console.  
-    For similar steps, refer to [AWS documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zone-private-creating.html). 
+    For general steps, refer to [AWS documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zone-private-creating.html). 
      
     1. Select *Hosted zones* from the left pane.    
     2. Create a hosted zone by clicking on *Create Hosted Zone*. Make sure to:   
@@ -112,11 +114,13 @@ Follow these general steps to configure reverse DNS using a custom DNS server.
 
 1. **Create a new VPC or use your existing VPC**:
 
-    1. To create a new VPC, navigate to the Amazon VCP console and click on *Start VPC Wizard*.              
+    1. You can create a new VPC from the Amazon VCP console (for example by using *Start VPC Wizard*):              
         * CIDR block example: *10.1.0.0/16* 
         * Subnet's CIDR example: *10.1.1.0/28*  
-    2. Enable DNS resolution. You can do this by selecting the VPC, selecting *Actions > Edit DNS resolution* and choosing *Yes*. 
-    3. Enable DNS hostnames. You can do this by selecting the VPC, selecting *Actions > Edit DNS hostnames* and choosing *Yes*.
+    2. Make sure to:
+        * Enable DNS resolution for the VPC. You can do this by selecting the VPC, selecting *Actions > Edit DNS resolution* and choosing *Yes*. 
+        * Enable DNS hostnames for the VPC. You can do this by selecting the VPC, selecting *Actions > Edit DNS hostnames* and choosing *Yes*.
+        
     > Optionally, you may want to set up an Internet Gateway for the VPC and add a default route to the routing table for the Internet Gateway.
     Additionally, you may want to enable the *Auto-assign Public IP* option.
     This way Cloudbreak would reach the cluster from outside of the VPC and the cluster would have internet access.
