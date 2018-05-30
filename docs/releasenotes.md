@@ -217,7 +217,7 @@ Default HDP version 2.6.5.0-292
 
 ##### April 3, 2018 
 
-The versions with Cloudbreak 2.4.1: 
+The versions included with Cloudbreak 2.4.1: 
 
 Default Ambari version 2.6.1.3  
 Default HDP version 2.6.4.5-2 
