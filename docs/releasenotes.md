@@ -11,6 +11,8 @@ ____________________________
 #### New features
 ____________________________
 
+[Comment]: <> (There are so many new features in this release that maybe we should create multiple categories of new features?)
+
 [Comment]: <> (2.7 features)
 
 ##### **Launching Cloudbreak from Templates**
@@ -19,9 +21,33 @@ Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider t
 ____________________________
 
 
-##### **Technical Preview of Shared Services**
+##### **Protected Gateway for HDP Clusters**
 
-Cloudbreak 2.6.0 TP allows you to create a shared services instance and attach it to a cluster.
+TBD (This does not work for HDF)
+____________________________
+
+
+##### **Configuring GCP Cloud Storage**
+
+TBD 
+____________________________
+
+
+##### **Configuring ADLS and WASB Cloud Storage**
+
+TBD 
+____________________________
+
+
+##### **Configuring S3 Cloud Storage**
+
+TBD 
+____________________________
+
+
+##### **Setting Custom Properties**
+
+TBD 
 ____________________________
 
 
@@ -37,7 +63,7 @@ When creating a cluster, you can modify the root volume size. This option is ava
 ____________________________
 
 
-##### **Sorting and Filtering Resource Tables**
+##### **Sorting and Filtering Resource Tables in the UI**
 
 Cloudbreak introduces the ability to sort and filter resource tables that list resources such as clusters, cluster hardware, blueprints, recipes, and so on, in the Cloudbreak web UI.
 ____________________________
@@ -45,9 +71,8 @@ ____________________________
 
 ##### **Instructions for Using Custom Hostnames** 
 
-New documentation is available for using custom hostnames based on DNS for the cluster nodes.  Refer to [Using custom hostnames based on DNS](hostnames.md). 
-
-____________________________
+New documentation is available for using custom hostnames based on DNS for the cluster nodes. This is not a new feature, just new documentation. Refer to [Using custom hostnames based on DNS](hostnames.md). 
+____________________________ 
 
 
 [Comment]: <> (2.6 and 2.6 features)
@@ -135,6 +160,18 @@ For more information, refer to [Using management packs](mpacks.md).
 
 
 
+____________________________
+
+#### New features - TP
+____________________________
+
+
+##### **Technical Preview of Shared Services**
+
+Cloudbreak allows you to create a shared services instance and attach it to a cluster.
+
+
+
 
 ____________________________
 
@@ -146,6 +183,18 @@ ____________________________
 ##### **Removal of Prebuilt Cloudbreak Deployer Images**
 
 In earlier versions of Cloudbreak, Cloudbreak deployer images for AWS, Google Cloud, and OpenStack were provided for each release. Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates. To review current Cloudbreak deployment options, refer to [Deployment options](deployment-options.md).   
+____________________________
+
+
+##### **Redesigned Hardware and Storage UI**
+
+The UI of the **Hardware and Storage** page in the create cluster wizard and in cluster details was redesigned for better user experience. 
+____________________________
+
+
+##### **File System Cluster Page Renamed to Cloud Storage**
+
+The **File System** page of the advanced create cluster wizard was renamed to **Cloud Storage**.    
 ____________________________
 
 [Comment]: <> (2.6 features)
