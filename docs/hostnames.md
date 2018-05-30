@@ -25,7 +25,7 @@ Follow these general steps to configure reverse DNS using [Route53](https://aws.
 
 1. **Create a new VPC or use your existing VPC**:
 
-    You can create a new VPC from the Amazon VCP console by clicking on *Start VPC Wizard*.  
+    To create a new VPC, navigate to the Amazon VCP console and click on *Start VPC Wizard*.  
              
     * CIDR block example: *10.1.0.0/16* 
     * Enable DNS resolution and DNS hostnames: *Yes* [DB-QUESTION: I only see an option called "Enable DNS hostnames". Is that what you mean here?]
@@ -38,7 +38,7 @@ Follow these general steps to configure reverse DNS using [Route53](https://aws.
     
 2. **Create a DHCP options set**: 
 
-    You can find this option in the Amazon VPC console by selecting *DHCP Options Sets* from the left pane.   
+    Perform this step from the Amazon VPC console. Select *DHCP Options Sets* from the left pane and click on *Create a DHCP options set*. Make sure to:   
     
     1. Set the *Domain name* to a preferred domain, for example `cloudbreak.beer`.
     2. Set the *Domain name servers* to `AmazonProvidedDNS`  
@@ -57,7 +57,7 @@ Follow these general steps to configure reverse DNS using [Route53](https://aws.
   
 4. **Configure your domain at Route53**:
 
-    Perform these steps in the Amazon Route53 console.  
+    Perform these steps from the Amazon Route53 console.  
     For similar steps, refer to [AWS documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zone-private-creating.html). 
      
     1. Select *Hosted zones* from the left pane.    
@@ -79,7 +79,7 @@ Follow these general steps to configure reverse DNS using [Route53](https://aws.
 
 5. **Create another hosted zone for reverse DNS lookup.**
 
-    Perform these steps in the Amazon Route53 console.  
+    Perform these steps from the Amazon Route53 console.  
      
     1. Select *Hosted zones* from the left pane.    
     2. Create a hosted zone by clicking on *Create Hosted Zone*. Make sure to: 
@@ -108,12 +108,17 @@ Follow these general steps to configure reverse DNS using a custom DNS server.
 **Steps**
 
 1. **Create a new VPC or use your existing VPC**:
+
+    To create a new VPC, navigate to the Amazon VCP console and click on *Start VPC Wizard*. 
+    
     * CIDR block example: *10.3.0.0/16* [DB-QUESTION: I only see an option  called "Enable DNS hostnames". Is that what you mean here?]
     * Enable DNS resolution and DNS hostnames: *Yes* 
     * Subnet's CIDR example: *10.3.3.0/28*
     > Optionally, you may want to set up an Internet Gateway for the VPC and add a default route to the routing table for the Internet Gateway.
     Additionally, you may want to enable the *Auto-assign Public IP* option.
     This way Cloudbreak would reach the cluster from outside of the VPC and the cluster would have internet access.
+    
+    For detailed steps, refer to [AWS documentation](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/working-with-vpcs.html#Create-VPC). 
     
 2. **Set up DNS server in your VPC/subnet**:
     * In the configuration ensure that you have DNS records and reverse DNS pointers for all IP address (for example 10.3.3.4-14)
@@ -149,14 +154,15 @@ Follow these general steps to configure reverse DNS using a custom DNS server.
 
 3. **Create a DHCP options set**: 
 
-    You can find this option in the Amazon VPC console by selecting *DHCP Options Sets* from the left pane.  
-    For detailed steps, refer to [AWS documentation](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/dhcp_options_set.html).
+    Perform this step from the Amazon VPC console. Select *DHCP Options Sets* from the left pane and click on *Create a DHCP options set*. Make sure to:   
     
     * Set the *Domain name* to your preferred domain, for example `cloudbreak.cloud`
     * Set *Domain name servers* to the previously created DNS server
     * Optionally, set a *Name tag*  
 
-        <a href="../images/cb_aws-custondns-dhcp-option.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-custondns-dhcp-option.png" width="650" title="DHCP option for own DNS server"></a>   
+        <a href="../images/cb_aws-custondns-dhcp-option.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-custondns-dhcp-option.png" width="650" title="DHCP option for own DNS server"></a>  
+        
+    For detailed steps, refer to [AWS documentation](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/dhcp_options_set.html). 
 
 4. **Assign the newly created DHCP options set to your VPC**:
 
