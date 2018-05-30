@@ -1,4 +1,4 @@
-## Cloudbreak deployment options 
+## Deployment options 
 
 In general, Cloudbreak offers a quickstart option, as well as a production deployment option. 
 
