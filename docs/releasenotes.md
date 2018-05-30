@@ -31,6 +31,12 @@ When stack provisioning or cluster creation failure occurs, the new "retry" UI o
 ____________________________
 
 
+##### **Setting Root Volume Size**
+
+When creating a cluster, you can modify the root volume size. Default is 50 GB for AWS and GCP and 30 GB for Azure. This option is useful if your custom image requires more space than the default. 
+____________________________
+
+
 ##### **Sorting and Filtering Resource Tables**
 
 Cloudbreak introduces the ability to sort and filter resource tables that list resources such as clusters, cluster hardware, blueprints, recipes, and so on, in the Cloudbreak web UI.
