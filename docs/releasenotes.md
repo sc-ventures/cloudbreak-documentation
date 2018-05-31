@@ -255,7 +255,6 @@ ____________________________
 | BUG-99322 | `@#$%|:&*;` blueprint name throws 'duplicate key value violates unique constraint' error. | Stability | 2.4.2 |
 | BUG-98792 | Pre-ambari-start recipe does not wait for agent on server node. | Stability | 2.4.2 |
 | BUG-92878 | Cannot read imagecatalog from gist raw view. (because image catalog must have content-type json, but in case of gist, it's text). | Stability | 2.4.2 |
-| | | | 2.4.2 |
 | BUG-99168 | All clusters created on Google Cloud Platform fail. | Stability | 2.4.1 |
 | BUG-99400 | Time-based cluster autoscaling does not work. | Stability | 2.4.1 |
 | BUG-99505 | Sync is not working for an AWS instance that was terminated a long time ago. | Stability | 2.4.1 |
