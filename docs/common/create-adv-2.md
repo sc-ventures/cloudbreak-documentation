@@ -82,13 +82,3 @@ For more information, refer to [Tagging resources](tags.md).
 **Related links**      
 [Tagging resources](tags.md) 
    
-   
-
-#### Hardware and Storage
-
-You can optionally specify the following storage options for your cluster.     
-
-To edit this section, click on the <img src="../images/cb_edit.png"/>. When done editing, click on the <img src="../images/cb_save.png" width="25"/> to save the changes. 
-
-| Parameter | Description |
-|---|---|

@@ -4,6 +4,8 @@
 | Region | Select the Azure region in which you would like to launch your cluster. For information on available Azure regions, refer to [Azure documentation](https://azure.microsoft.com/en-us/regions/). |
 {!docs/common/create-a2.md!}
 | Instance Type | Select an instance type. For information about instance types on Azure refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general). |
+{!docs/common/create-a3-0.md!}
+| Storage Type | <p>Select the volume type. The options are:<ul><li>Locally-redundant storage</li><li>Geo-redundant storage</li><li>Premium locally-redundant storage</li></ul> For more information about these options refer to <a href="https://docs.microsoft.com/en-us/azure/storage/storage-introduction" target="_blank">Azure documentation</a>. |
 {!docs/common/create-a3-1.md!}
 {!docs/common/create-a3-2.md!}
 {!docs/common/create-a4.md!}
@@ -26,9 +28,14 @@
 
  
 {!docs/common/create-adv-2.md!}
-| Storage Type | <p>Select the volume type. The options are:<ul><li>Locally-redundant storage</li><li>Geo-redundant storage</li><li>Premium locally-redundant storage</li></ul> For more information about these options refer to <a href="https://docs.microsoft.com/en-us/azure/storage/storage-introduction" target="_blank">Azure documentation</a>. |
 {!docs/common/create-adv-3.md!}
-| Root Volume Size | <p>Use this option to increase the root volume size. Default is 30 GB. This option is useful if your custom image requires more space than the default 30 GB.</p><p>If you change the value of the root volume size, an osDisk with the given rootVolumeSize will be created for the instance automatically; However, you will have to manually resize the osDisk partition by using the steps provided in the <a href="https://blogs.msdn.microsoft.com/linuxonazure/2017/04/03/how-to-resize-linux-osdisk-partition-on-azure/" target="_blank">Azure documentation</a>.</p> |
+
+
+### Root volume size 
+
+Use this option to increase the root volume size. Default is 30 GB. This option is useful if your custom image requires more space than the default 30 GB.
+
+If you change the value of the root volume size, an osDisk with the given rootVolumeSize will be created for the instance automatically; However, you will have to manually resize the osDisk partition by using the steps provided in the [Azure documentation](https://blogs.msdn.microsoft.com/linuxonazure/2017/04/03/how-to-resize-linux-osdisk-partition-on-azure/).
 
 **Related links**  
 [How to: Resize Linux osDisk partition on Azure](https://blogs.msdn.microsoft.com/linuxonazure/2017/04/03/how-to-resize-linux-osdisk-partition-on-azure/)  

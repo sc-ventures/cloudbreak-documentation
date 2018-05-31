@@ -4,6 +4,8 @@
 | Region | Select the AWS region in which you would like to launch your cluster. For information on available AWS regions, refer to [AWS documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html). |
 {!docs/common/create-a2.md!}
 | Instance Type | Select an instance type. For information about instance types on AWS refer to [AWS documentation](https://aws.amazon.com/ec2/instance-types/). |
+{!docs/common/create-a3-0.md!}
+| Storage Type | <p>Select the volume type. The options are:<ul><li>Magnetic (default)</li><li>General Purpose (SSD)</li><li>Throughput Optimized HDD</li></ul>For more information about these options refer to <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html" target="_blank">AWS documentation</a>.</p>|
 {!docs/common/create-a3-1.md!}
     > On AWS, you can configure it to use private IPs instead. For instructions, refer to [Configure communication via private IPs on AWS](trouble-cluster.md#configure-communication-via-private-ips-on-aws). 
 
@@ -35,10 +37,12 @@
 Choose one of the availability zones within the selected region. 
  
 {!docs/common/create-adv-2.md!}
-| Storage Type | <p>Select the volume type. The options are:<ul><li>Magnetic (default)</li><li>General Purpose (SSD)</li><li>Throughput Optimized HDD</li></ul>For more information about these options refer to <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html" target="_blank">AWS documentation</a>.</p>|
 {!docs/common/create-adv-3.md!}
-| Root Volume Size | Use this option to increase the root volume size. Default is 50 GB. This option is useful if your custom image requires more space than the default 50 GB. |
 
+
+####  Root volume size 
+
+Use this option to increase the root volume size. Default is 50 GB. This option is useful if your custom image requires more space than the default 50 GB. 
 
 #### Use spot instances
 

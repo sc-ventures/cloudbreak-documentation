@@ -1,5 +1,5 @@
-| Instance Count | Enter the number of instances of a given type. Default is 1. |  
-
+| Attached Volumes Per Instance | Enter the number of volumes attached per instance. Default is 1. |
+| Volume Size | Enter the size in GBs for each volume. Default is 100. |
 
 6. On the **Network** page, provide the following to specify the networking resources that will be used for your cluster:
 

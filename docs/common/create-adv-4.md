@@ -7,7 +7,7 @@ This option allows you to select previously uploaded recipes (scripts that can b
 [Using custom scripts (recipes)](recipes.md) 
 
 
-#### Management Packs
+#### Management packs
 
 This option allows you to select previously uploaded management packs. For more information on management packs, refer to [Using management packs](mpacks.md). 
 
