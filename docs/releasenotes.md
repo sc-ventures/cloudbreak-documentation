@@ -11,7 +11,11 @@ ____________________________
 #### New Features
 ____________________________
 
+##### Image Catalog Update
 
+[Comment]: <> (This is the only change in Cb 2.4.2. Only that and fixed issues.)
+
+The image catalog has been updated to include new base and prewarmed images for HDP and Ambari. Refer to [Image Catalog Updates](#image-catalog-updates).  
 
 ##### New UI/UX
 
@@ -217,7 +221,7 @@ Default HDP version 2.6.5.0-292
 
 ##### April 3, 2018 
 
-The versions included with Cloudbreak 2.4.1: 
+The following versions are included with Cloudbreak 2.4.1: 
 
 Default Ambari version 2.6.1.3  
 Default HDP version 2.6.4.5-2 
@@ -239,6 +243,19 @@ ____________________________
 
 | Issue | Issue Description | Category | Fix Version |
 |---|---|---|---|
+| BUG-103678 | Remove instanceProfileStrategy recommendation from CLI. | Stability | 2.4.2|
+| BUG-101805 | OrchestratorBootstrapRunner keeps polling after cluster termination: If a cluster is terminated and a salt job is in progress, then the polling continues until timeout. | Stability | 2.4.2 |
+| BUG-100754 | Sync should cleanup the terminated instances' salt metadata from the cluster. | Stability | 2.4.2 |
+| BUG-100597 | Unable to create Cloudbreak autoscaling policy. | Stability | 2.4.2 |
+| BUG-100437 | Failing psql commands return code 0, so the cluster install is not failing when it should. | Stability | 2.4.2 |
+| BUG-100392 | Switch to HTTPS SmartSense gateway for all cloudbreak deployments | Stability | 2.4.2 |
+| BUG-100311 | If the cluster creation template is not correct or a blueprint has some issues then cluster creation template is not logged. |  Stability | 2.4.2 |
+| BUG-99779 | Create clusters with custom hdp and ambari versions does not work. | Stability | 2.4.2 |
+| BUG-99581 | Cloudbreak cluster UI indicates that manual recovery is needed for a healthy node. | Stability | 2.4.2 |
+| BUG-99322 | `@#$%|:&*;` blueprint name throws 'duplicate key value violates unique constraint' error. | Stability | 2.4.2 |
+| BUG-98792 | Pre-ambari-start recipe does not wait for agent on server node. | Stability | 2.4.2 |
+| BUG-92878 | Cannot read imagecatalog from gist raw view. (because image catalog must have content-type json, but in case of gist, it's text). | Stability | 2.4.2 |
+| | | | 2.4.2 |
 | BUG-99168 | All clusters created on Google Cloud Platform fail. | Stability | 2.4.1 |
 | BUG-99400 | Time-based cluster autoscaling does not work. | Stability | 2.4.1 |
 | BUG-99505 | Sync is not working for an AWS instance that was terminated a long time ago. | Stability | 2.4.1 |
