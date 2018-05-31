@@ -35,7 +35,6 @@
  
  
 {!docs/common/create-adv-2.md!}
-{!docs/common/create-adv-3.md!}
 
 
 ####  Root volume size 

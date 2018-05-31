@@ -30,8 +30,6 @@
  
 
 {!docs/common/create-adv-2.md!}
-{!docs/common/create-adv-3.md!}
-
 
 {!docs/common/create-adv-4.md!}
 

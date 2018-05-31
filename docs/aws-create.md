@@ -37,7 +37,6 @@
 Choose one of the availability zones within the selected region. 
  
 {!docs/common/create-adv-2.md!}
-{!docs/common/create-adv-3.md!}
 
 
 ####  Root volume size 
