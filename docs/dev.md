@@ -3,7 +3,7 @@
 
 The following table includes links to Cloudbreak developer documentation: 
 
-| Documentation Link | Description |
+| Documentation link | Description |
 |---|---|
 | [Set up local development](https://github.com/hortonworks/cloudbreak) | This documentation will help you set up your local development environment. | 
 | [Retrieve OAuth bearer token via Cloudbreak REST API](https://github.com/hortonworks/cloudbreak/blob/master/docs/common/retrieve_oauth_token.md) | Describes how to retrieve OAuth bearer token via Cloudbreak REST API. |
