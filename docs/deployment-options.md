@@ -2,7 +2,7 @@
 
 In general, Cloudbreak offers a quickstart option, as well as a production deployment option. 
 
-* The **quickstart option** allows you to get started with Cloudbreak quickly, but offers limited flexibility. Use this option for getting started with Cloudbreak. This option is not suitable a production.       
+* The **quickstart option** allows you to get started with Cloudbreak quickly, but offers limited flexibility. Use this option for getting started with Cloudbreak. This option is not suitable a production.        
 * The **production option** is less automated, but offers more configurability. This option is recommended when your production environments. For more information about this option, refer to [Production deployment option](#production-deployment-option). 
 
 ### Quickstart option for AWS   
@@ -15,11 +15,10 @@ The quickstart option allows you to instantiate Cloudbreak by using the CloudFor
 
 * Automatically provisions a new VM that runs Amazon Linux, installs Docker, and launches Cloudbreak. [Amazon EC2](https://aws.amazon.com/documentation/ec2/) is used to launch a virtual machine for Cloudbreak. Security groups are used to control the inbound and outbound traffic to and from the Cloudbreak instance. 
         
-* Provisions a new VPC and subnet, and launches the Cloudbreak VM within it. [Amazon VPC](https://aws.amazon.com/documentation/vpc/) is used to provision your own dedicated virtual network and launch resources into that network. As part of VPC infrastructure, an internet gateway and a route table are provisioned: An internet gateway is used to enable outbound access to the internet from the control plane and the clusters, and a route table is used to connect the subnet to the internet gateway. For more information on Amazon VPC architecture, refer to [Amazon VPC documentation](https://docs.aws.amazon.com/AmazonVPC/latest/GettingStartedGuide/ExerciseOverview.html).   
-
-    > The quickstart option always launches Cloudbreak in a new VPC. If you would like to use an existing VPC, you must use the advanced option.  
+* Provisions a new VPC and subnet, and launches the Cloudbreak VM within it and allows you to use an existing VPC and subnet. [Amazon VPC](https://aws.amazon.com/documentation/vpc/) is used to provision your own dedicated virtual network and launch resources into that network. As part of VPC infrastructure, an internet gateway and a route table are provisioned: An internet gateway is used to enable outbound access to the internet from the control plane and the clusters, and a route table is used to connect the subnet to the internet gateway. For more information on Amazon VPC architecture, refer to [Amazon VPC documentation](https://docs.aws.amazon.com/AmazonVPC/latest/GettingStartedGuide/ExerciseOverview.html).    
     
-* Allows you to attach an existing IAM role (for role-based authentication). [AWS Identity & Access Management](https://aws.amazon.com/documentation/iam/) is used to control access to AWS services and resources. Cloudbreak does not create any IAM roles but allows you to use exiting IAM roles.   
+* Allows you to attach an existing IAM role (for role-based authentication). [AWS Identity & Access Management](https://aws.amazon.com/documentation/iam/) is used to control access to AWS services and resources. Cloudbreak does not create any IAM roles but allows you to use exiting IAM roles.  
+ 
 * [AWS Lambda](https://aws.amazon.com/documentation/lambda/), a utility service for running code in AWS, is used when deploying Cloudbreak.  
 
 [Comment]: <> (What exactly is this Lambda service used for?) 
