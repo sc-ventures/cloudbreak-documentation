@@ -5,7 +5,7 @@ When creating a cluster based on an Ambari blueprint, you can set custom propert
 In order to set custom properties for a cluster you must:
 
 1. Create a blueprint that includes a template for the properties that you want to set.  
-2. When creating a cluster, you can specify the property values under Cluster Extensions > Custom Properties.    
+2. When creating a cluster, select the blueprint and then specify the property values under Cluster Extensions > Custom Properties in the advanced view of the cluster wizard..    
 
 In the cluster creation phase, the property values in the blueprint will be replaced based on the input, picking up the parameter values that you provided.
 
@@ -41,7 +41,7 @@ In the cluster creation phase, the property values in the blueprint will be repl
 2. When creating a cluster:
 
     1. Under **General Configuration > Cluster Type**, select the blueprint prepared in the previous step.  
-    2. Under **Cluster Extensions > Custom Properties**, include a JSON file which defines the property values.
+    2. In the advanced view of the cluster wizard, under **Cluster Extensions > Custom Properties**, include a JSON file which defines the property values.
 
 [Comment]: <> (TO DO: Include a screenshot when the UI is ready) 
 
