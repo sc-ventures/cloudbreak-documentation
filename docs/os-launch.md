@@ -61,12 +61,12 @@ Import Cloudbreak deployer image by using the following steps.
 
 1. Download the latest Cloudbreak deployer image to your local machine:
 
-    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer-241-2018-04-05.img</small></pre>
+    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/ab6c7c63-dd3d-438c-9f30-4a659622b7e9.img</small></pre>
 
 2. Set the following environment variables for the OpenStack image import:
 
-    <pre><small>export CBD_LATEST_IMAGE=cloudbreak-deployer-241-2018-04-05.img
-export OS_IMAGE_NAME=cloudbreak-deployer-241-2018-04-05.img
+    <pre><small>export CBD_LATEST_IMAGE=ab6c7c63-dd3d-438c-9f30-4a659622b7e9.img
+export OS_IMAGE_NAME=ab6c7c63-dd3d-438c-9f30-4a659622b7e9.img
 export OS_USERNAME=your_os_user_name
 export OS_AUTH_URL=your_authentication_url
 export OS_TENANT_NAME=your_os_tenant_name</small></pre>
@@ -105,7 +105,7 @@ export OS_TENANT_NAME=your_os_tenant_name</small></pre>
 After performing the import, you should be able to see the image among your OpenStack images.
 
 
-##### Import HDP Prewarmed Images
+##### Import HDP Prewarmed Image
 
 Import HDP prewarmed image by using the following steps.
 
@@ -113,23 +113,21 @@ Import HDP prewarmed image by using the following steps.
 
 1. Download the latest HDP images to your local machine:
 
-    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp-26-1802090220.img</small></pre>
+    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp-26-1805181129.img</small></pre>
 
 2. Set the following environment variables for the OpenStack image import:
 
-    <pre><small>export CB_LATEST_IMAGE=cb-hdp-26-1802090220.img
-export CB_LATEST_IMAGE_NAME=cb-hdp-26-1802090220.img
+    <pre><small>export CB_LATEST_IMAGE=cb-hdp-26-1805181129.img
+export CB_LATEST_IMAGE_NAME=cb-hdp-26-1805181129.img
 export OS_USERNAME=your_os_user_name
 export OS_AUTH_URL=your_authentication_url
 export OS_TENANT_NAME=your_os_tenant_name</small></pre>
 
 3. Import the new image into your OpenStack:
 
-    <pre><small>glance image-create --name "$CB_LATEST_IMAGE_NAME" --file "$CB_LATEST_IMAGE" --disk-format qcow2 --container-format bare --progress</small></pre>
-    
-4. Perform steps 1-3 for the second image cb-hdp-26-1803011524.img.    
+    <pre><small>glance image-create --name "$CB_LATEST_IMAGE_NAME" --file "$CB_LATEST_IMAGE" --disk-format qcow2 --container-format bare --progress</small></pre>    
 
-After performing the import, you should be able to see the images among your OpenStack images.
+After performing the import, you should be able to see the image among your OpenStack images.
 
 
 ### Launch the VM

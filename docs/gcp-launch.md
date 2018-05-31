@@ -67,7 +67,7 @@ Clusters created via Cloudbreak can be in the same or different region as Cloudb
 
 1. Import the Cloudbreak deployer image by executing the following command: 
 
-    <pre>gcloud compute images create cloudbreak-deployer-241-2018-04-05 --source-uri gs://sequenceiqimage/cloudbreak-deployer-241-2018-04-05.tar.gz</pre>
+    <pre>gcloud compute images create cloudbreak-deployer-242-2018-05-30 --source-uri gs://sequenceiqimage/cloudbreak-deployer-242-2018-05-30.tar.gz</pre>
 
 [comment]: <> (TO-DO: This should be generated automatically.) 
     
