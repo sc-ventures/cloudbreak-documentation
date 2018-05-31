@@ -30,7 +30,7 @@
 {!docs/common/create-adv-2.md!}
 
 
-### Root volume size 
+#### Root volume size 
 
 Use this option to increase the root volume size. Default is 30 GB. This option is useful if your custom image requires more space than the default 30 GB.
 
