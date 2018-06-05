@@ -794,7 +794,7 @@ __________________________________
 
 #### cluster repair
 
-Repairs a cluster if cluster installation failed.
+Repairs a cluster if cluster installation failed by removing, or removing and replacing failed nodes. You must specify the cluster name and the host group with the failed nodes.  
 
 **Required options**
 
