@@ -1,6 +1,6 @@
 ## Accessing data on S3  
 
-Use these steps to configure access from your cluster to Amazon S3. S3 is not supported as a default file system, but access to data in S3 is possible via the s3a connector.
+Amazon S3 is not supported as a default file system, but access to data in S3 is possible via the s3a connector. Use these steps to configure access from your cluster to Amazon S3. 
 
 ### Prerequisites
 
@@ -47,8 +47,8 @@ To configure access to S3 with an instance profile, follow these steps.
 
 **Steps**
 
-1. You or your AWS admin must create an IAM role with an S3 access policy which can be used by cluster instances to access one or more S3 buckets. Refer to [Creating an IAM role for S3 access](#creating-an-iam-role-for-s3-access).  
-2. On the **Cloud Storage** page in the advanced cluster wizard view, select **Use existing instance profile**. 
+1. You or your AWS admin must create an IAM role with an S3 access policy which can be used by cluster instances to access one or more S3 buckets. Refer to [Creating an IAM role for S3 access](#creating-an-iam-role-for-s3-access).    
+2. On the **Cloud Storage** page in the advanced cluster wizard view, select **Use existing instance profile**.  
 3. Select an existing IAM role created in step 1:
 
 During the cluster creation process, Cloudbreak assigns the IAM role and its associated permissions to the EC2 instances that are part of the cluster so that applications running on these instances can use the role to access S3.   
@@ -85,5 +85,25 @@ For more information about configuring the S3 connector for HDP and working with
 [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) (Hortonworks)
 
 
-[Comment]: <> (Performing this configuration provides the EC2 instance that your NiFi is running on with access to S3 (as specified in the IAM policy). As a next step, configure your specific processor, as described in NiFi documentation.)   
-[Comment]: <> ([Integrating Apache NiFi with AWS S3 and SQS](https://community.hortonworks.com/articles/49467/integrating-apache-nifi-with-aws-s3-and-sqs.html) (HCC))  
+### Configure S3 Storage Locations
+
+After configuring access to S3 via instance profile, you can optionally use an S3 bucket as a base storage location; this storage location is mainly for the Hive Warehouse Directory (used for storing the table data for managed tables).   
+
+**Prerequisites**: You must have an existing bucket that can be used as a storage location. 
+
+**Steps**
+
+1. When creating a cluster, on the **Cloud Storage** page in the advanced cluster wizard view, select **Use existing instance profile** and select the instance profile to use, as described in [Configure access to S3](#configure-access-to-s3).    
+2. Under **Storage Locations**, enable **Configure Storage Locations** by clicking the <img src="../images/cb_toggle.png" alt="On"/> button.   
+3. Provide your existing bucket name under **Base Storage Location**. 
+
+    > Make sure that the instance profile that you configured provides access to this bucket.
+    
+[Comment]: <> (I tried setting this to some bucket which did not exist and the location was not set. Can we check if the bucket exists? Or state in the UI that this has to be an existing location?)
+
+[Comment]: <> (Do the "/apps/hive/warehouse" directory structure get created automatically? Or do I have to create it? I tried setting this and hive.metastore.warehouse.dir was set as expected but no directories were created within my bucket. Is that expected?)
+    
+4. Under **Path for Hive Warehouse Directory property (hive.metastore.warehouse.dir)**, Cloudbreak automatically suggests a location within the bucket. For example, if the bucket that you specified is `my-test-bucket` then the suggested location will be `my-test-bucket/apps/hive/warehouse`.  You may optionally update this path.        
+
+[Comment]: <> (What is the difference between disabling by using the toggle button and choosing "Do not configure"?)
+

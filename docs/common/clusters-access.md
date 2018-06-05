@@ -78,11 +78,12 @@ Below this, you will see additional tabs that you can click on in order to see t
 | Item | Description |
 |---|---|
 |Hardware | This section includes information about your cluster instances: instance names, instance IDs, instance types, their status, fully qualified domain names (FQDNs), and private and public IPs. |
+| Cloud storage | If you configured any cloud storage options, you will see them listed here. |
 | Tags | This section lists keys and values of the user-defined tags, in the same order as you added them. |
 | Recipes | This section includes recipe-related information. For each recipe, you can see the host group on which a recipe was executed, recipe name, and recipe type. Refer to [Using custom scripts (recipes)](recipes.md). |
-| External Databases | If you are using an external database for your cluster, you can see it here. Refer to [using an external database](external-db.md). |
-| Repository Details | This section includes Ambari and HDP/HDF repository information, as you provided it in the "Base Images" section when creating a cluster. |
-| Image Details | This section includes information about the base image that was used for the Cloudbreak instance. |
+| External databases | If you are using an external database for your cluster, you can see it here. Refer to [using an external database](external-db.md). |
+| Repository details | This section includes Ambari and HDP/HDF repository information, as you provided it in the "Base Images" section when creating a cluster. |
+| Image details | This section includes information about the base image that was used for the Cloudbreak instance. |
 | Network | This section includes information about the names of the network and subnet in which the cluster is running and the links to related cloud provider console. |
 | Security | This section is only available if you have enabled Kerberos security. It provides you with the details of your Kerberos configuration.  
 | Autoscaling | This section includes configuration options related to autoscaling. Refer to [Configuring autoscaling](autoscaling.md). |
