@@ -69,6 +69,12 @@ Cloudbreak introduces support for Google Cloud's service account JSON key. Since
 ____________________________
 
 
+##### **Generating a Bundle for Support Case Troubleshooting**
+
+You can use the `cbd export-logs` command to collect Cloudbreak-related logs, configurations, and so on, for support case troubleshooting. For more information, refer to [Export logs for support case troubleshooting](trouble-export-logs).  
+____________________________
+
+
 ##### **Sorting and Filtering Resource Tables in the UI**
 
 Cloudbreak introduces the ability to sort and filter resource tables that list resources such as clusters, cluster hardware, blueprints, recipes, and so on, in the Cloudbreak web UI.
