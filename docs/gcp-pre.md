@@ -12,8 +12,6 @@ Once you log in to your GCP account, you must either create a project or use an 
 
 In order to launch clusters on GCP via Cloudbreak, you must have a service account that Cloudbreak can use to create resources. In addition, you must also have a JSON key associated with the account. 
 
-> Although earlier versions of Cloudbreak supported keys in P12 format, all new keys specified during the Cloudbreak credential creation must be in JSON format. 
-
 The service account must have the following roles are enabled:
 
 * Compute Engine > Compute Image User   
