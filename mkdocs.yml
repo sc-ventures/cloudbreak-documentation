@@ -78,6 +78,7 @@ pages:
         - Get started with the CLI: cli-get-started.md
         - CLI Reference: cli-reference.md
       - Troubleshooting: 
+        - Export logs for support case troubleshooting: trouble-export-logs.md   
         - Cloudbreak logs: trouble-cb-logs.md  
         - Troubleshooting Cloudbreak: trouble-cb.md
         - Troubleshooting cluster creation: trouble-cluster.md
