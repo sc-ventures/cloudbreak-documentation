@@ -40,6 +40,7 @@ pages:
       - Create a cluster: gcp-create.md
       - Access cluster: gcp-clusters-access.md
       - Manage and monitor clusters: gcp-clusters-manage.md
+      - Access data on GCS: gcp-data.md
     - OpenStack:
       - Prerequisites: os-pre.md
       - Launch on OpenStack: os-launch.md

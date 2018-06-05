@@ -59,12 +59,12 @@ Note that:
 After creating a cluster, you can view your spot instance requests, including bid price, on the EC2 dashboard under **INSTANCES** > **Spot Requests**. For more information about spot instances, refer to [AWS documentation](https://aws.amazon.com/ec2/spot/).  
 
 
-#### File system 
+#### Cloud storage 
 
-If you would like to access S3 from your cluster, you must configure access to S3 trough an instance profile. For instructions, refer to [Configure access to S3](aws-data.md#configure-access-to-s3). 
+If you would like to access S3 from your cluster, you must configure access as described in [Accessing data on S3](aws-data.md). 
 
 **Related links**  
-[Configure access to S3](aws-data.md#configure-access-to-s3)  
+[Accessing data on S3](aws-data.md)    
 
 
 {!docs/common/create-adv-4.md!}

@@ -1,8 +1,6 @@
 ## Accessing data on Azure 
 
-Hortonworks Data Platform (HDP) supports reading and writing both block blobs and page blobs
-from/to *Windows Azure Storage Blob (WASB)* object store, as well as reading and writing files stored in an
-*Azure Data Lake Storage (ADLS)* account. 
+Hortonworks Data Platform (HDP) supports reading and writing block blobs and page blobs from and to *Windows Azure Storage Blob (WASB)* object store, as well as reading and writing files stored in an *Azure Data Lake Storage (ADLS)* account. 
 
 ### Accessing data in ADLS from HDP 
 
@@ -55,24 +53,31 @@ For more information about configuring the ADLS connector and working with data 
 
 Windows Azure Storage Blob (WASB) is an object store service available on Azure.
 
+
 #### Prerequisites
 
-If you want to use Windows Azure Storage Blob to store your data, you must enable Azure subscription for Blob Storage, and then create a [storage account](https://docs.microsoft.com/en-us/azure/storage/storage-create-storage-account#create-a-storage-account).  
+1. If you want to use Windows Azure Storage Blob to store your data, you must enable Azure subscription for Blob Storage, and then create a [storage account](https://docs.microsoft.com/en-us/azure/storage/storage-create-storage-account#create-a-storage-account).
+
+    Here is an example of how to create a a storage account:
+    
+    <a href="../images/cb_wasb1.png" target="_blank" title="click to enlarge"><img src="../images/cb_wasb1.png" width="650" title="WASB"></a>
+
+2. This feature is supported with HDP 2.6.1 or newer.   
+
 
 #### Configure access to WASB 
 
-In order to access data stored in your Azure blob storage account, you must configure your storage account access key in `core-site.xml`. The configuration property that you must use is `fs.azure.account.key.<account name>.blob.core.windows.net` and the value is the access key. 
+In order to access data stored in your Azure blob storage account, you must obtain your access key from your storage account settings, and then provide the storage account name and its corresponding access key when creating a cluster.     
 
-For example the following property should be used for a storage account called "testaccount": 
+**Steps**
 
-```
-<property>
-  <name>fs.azure.account.key.testaccount.blob.core.windows.net</name>
-  <value>TESTACCOUNT-ACCESS-KEY</value>
-</property>
-```
+1. Obtain your storage account name and storage access key from the **Access keys** page in your storage account settings:
+ 
+    <a href="../images/cb_wasb2.png" target="_blank" title="click to enlarge"><img src="../images/cb_wasb2.png" width="650" title="WASB"></a>
+ 
+2. In Cloudbreak web UI, on the **Cloud Storage** page of the create a cluster wizard, provide the *Storage Account Name* and *Access Key* parameters obtained in the previous step.   
 
-You can obtain your access key from the Access keys in your storage account settings.
+Once your cluster is in the running state, you will be able to access the Azure blob storage account from the cluster nodes. 
 
 
 #### Test access to WASB
@@ -105,9 +110,9 @@ test file content</pre>
 
 #### Working with WASB  
 
-For more information about configuring the WASB connector and working with data stored in WASB, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) documentation.
+For more information about configuring the WASB connector and working with data stored in WASB, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.5/bk_cloud-data-access/content/about.html) documentation.
 
 **Related links**   
-[Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) (Hortonworks)   
+[Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.5/bk_cloud-data-access/content/about.html) (Hortonworks)   
 [Create a storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-create-storage-account#create-a-storage-account) (External)   
 

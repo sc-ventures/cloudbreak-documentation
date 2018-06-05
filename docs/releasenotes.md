@@ -45,6 +45,12 @@ TBD
 ____________________________
 
 
+##### **Managing Storage Locations**
+
+TBD 
+____________________________
+
+
 ##### **Setting Custom Properties**
 
 Cloudbreak allows you to add a custom property template in your blueprints and then set custom properties on a per-cluster basis. For more information, refer to [Custom properties](properties.md).
@@ -204,7 +210,7 @@ The UI of the **Hardware and Storage** page in the create cluster wizard and in 
 ____________________________
 
 
-##### **File System Cluster Page Renamed to Cloud Storage**
+##### **File System Cluster Page Was Renamed to Cloud Storage**
 
 The **File System** page of the advanced create cluster wizard was renamed to **Cloud Storage**.    
 ____________________________

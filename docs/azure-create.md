@@ -57,6 +57,14 @@ Cloudbreak allows you to configure the availability set on the advanced **Hardwa
 After the deployment is finished, you can check the layout of the VMs inside an availability set on Azure Portal. You will find the "Availability set" resources corresponding to the host groups inside the deployment's resource group.
 
 
+#### Cloud storage 
+
+If you would like to access ADLS or WASB from your cluster, you must configure access as described in [Accessing data on Azure](azure-data.md). 
+
+**Related links**  
+[Accessing data on Azure](azure-data.md)   
+
+
 {!docs/common/create-adv-4.md!} 
 
 

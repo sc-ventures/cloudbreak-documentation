@@ -57,6 +57,14 @@ Note that:
 [Comment]: <> (There is no bid specified in the UI, so I assume that we are using current bid?)
 
 
+#### Cloud storage 
+
+If you would like to access Google Cloud Storage (GCS) from your cluster, you must configure access as described in [Accessing data on GCS](gcp-data.md). 
+
+**Related links**  
+[Accessing data on GCS](gcp-data.md)     
+
+
 {!docs/common/create-adv-4.md!} 
 
 {!docs/common/create-adv-5.md!}
