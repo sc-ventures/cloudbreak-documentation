@@ -798,10 +798,12 @@ Repairs a cluster if cluster installation failed.
 
 **Required options**
 
-**`--name <value>`**  Cluster name
+**`--name <value>`**  Cluster name  
+**`--host-groups <value>`** Comma separated list of host groups where the failed nodes should be repaired  
 
 **Options**
 
+**`--remove-only`** The failed nodes will be removed (rather than "repaired" by removing and replacing)   
 **`--wait`**  Wait for the operation to finish. No argument is required  
 **`--output <value>`**  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT] 
 **`--server <value>`**  Cloudbreak server address [$CB_SERVER_ADDRESS]  
