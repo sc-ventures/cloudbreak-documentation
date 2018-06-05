@@ -1,6 +1,6 @@
 ## Accessing data on S3  
 
-Use these steps to configure access from your cluster to Amazon S3. 
+Use these steps to configure access from your cluster to Amazon S3. S3 is not supported as a default file system, but access to data in S3 is possible via the s3a connector.
 
 ### Prerequisites
 

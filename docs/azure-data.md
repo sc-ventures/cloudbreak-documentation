@@ -2,17 +2,37 @@
 
 Hortonworks Data Platform (HDP) supports reading and writing block blobs and page blobs from and to *Windows Azure Storage Blob (WASB)* object store, as well as reading and writing files stored in an *Azure Data Lake Storage (ADLS)* account. 
 
+
 ### Accessing data in ADLS from HDP 
 
-[Azure Data Lake Store (ADLS)](https://azure.microsoft.com/en-in/services/data-lake-store/) is an enterprise-wide hyper-scale repository for big data analytic workloads.
+[Azure Data Lake Store (ADLS)](https://azure.microsoft.com/en-in/services/data-lake-store/) is an enterprise-wide hyper-scale repository for big data analytic workloads. ADLS is not supported as a default file system, but access to data in ADLS is possible via the adl connector.  
+
 
 #### Prerequisites
 
 If you want to use ADLS to store your data, you must enable Azure subscription for Data Lake Store, and then create an Azure Data Lake Store [storage account](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal).
 
+
 #### Configure access to ADLS 
 
-ADLS is not supported as a default file system, but access to data in ADLS via the adl connector. To configure access to ADLS from a cluster managed via Cloudbreak use the steps described in [How to configure authentication with ADLS](https://community.hortonworks.com/articles/105994/how-to-configure-authentication-with-adls.html).
+To configure authentication with ADLS using the client credential, you must register a new application with Active Directory service and then give your application access to your ADL account. After you've performed these steps, you can provide your application's information when creating a cluster. 
+
+**Steps**
+
+1. Register an application and add it to the ADLS account, as described in *Step 1* and *Step 2* of [How to configure authentication with ADLS](https://community.hortonworks.com/articles/105994/how-to-configure-authentication-with-adls.html). 
+
+[Comment]: <> (Is this correct? Is Owner role required?)
+
+    > Do not perform the *Step 3* described in this article. Cloudbreak automates this step.  
+    
+2. In Cloudbreak web UI, on the **Cloud Storage** page of the create a cluster wizard, provide the following parameters for your registered application:    
+
+    * **ADLS Account Name**: This is the ADL account that your application was assigned to.    
+    * **Application ID**: You can find it in your application's settings. 
+    * **Key**: This is the key that you generated for your application. If you did not copy the it, you must create a new key from the Keys page in your application's settings.   
+
+Once your cluster is in the running state, you will be able to access the Azure blob storage account from the cluster nodes. 
+
 
 #### Test access to ADLS
 
@@ -35,9 +55,10 @@ To use DistCp against ADLS, use the following syntax:
     adl://<b>myaccount</b>.azuredatalakestore.net/testDir/</pre>
     
 
+
 #### Working with ADLS  
 
-For more information about configuring the ADLS connector and working with data stored in ADLS, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) documentation.
+For more information about configuring the ADLS connector and working with data stored in ADLS, refer to [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.5/bk_cloud-data-access/content/about.html) documentation.
 
 **Related links**   
 [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) (Hortonworks)  
@@ -47,11 +68,9 @@ For more information about configuring the ADLS connector and working with data 
 [Get started with Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-get-started-portal) (External)  
 
 
-
-
 ### Accessing data in WASB from HDP 
 
-Windows Azure Storage Blob (WASB) is an object store service available on Azure.
+Windows Azure Storage Blob (WASB) is an object store service available on Azure. WASB is not supported as a default file system, but access to data in WASB ia possible via the wasb connector.
 
 
 #### Prerequisites
