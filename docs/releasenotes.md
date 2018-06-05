@@ -63,6 +63,12 @@ When creating a cluster, you can modify the root volume size. This option is ava
 ____________________________
 
 
+##### **Support for JSON Key on Google Cloud**
+
+Cloudbreak introduces support for Google Cloud's service account JSON key. Since activating service accounts with P12 private keys has been deprecated in the Cloud SDK, we recommend using JSON keys. For more information, refer to [GCP Prerequisites](gcp-pre#service-account) and [Create Cloudbreak credential](gcp-launch.md#create-cloudbreak-credential). 
+____________________________
+
+
 ##### **Sorting and Filtering Resource Tables in the UI**
 
 Cloudbreak introduces the ability to sort and filter resource tables that list resources such as clusters, cluster hardware, blueprints, recipes, and so on, in the Cloudbreak web UI.

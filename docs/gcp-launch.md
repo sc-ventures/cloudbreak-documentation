@@ -146,7 +146,7 @@ Cloudbreak works by connecting your GCP account through this credential, and the
 
     | Parameter | Description |
 |---|---|
-| Key type | Select JSON or P12 (deprecated). |
+| Key type | Select JSON or P12. Since activating service accounts with P12 private keys has been deprecated in the Cloud SDK, we recommend using JSON. |
 | Name | Enter a name for your credential. |
 | Description | (Optional) Enter a description. | 
 | Project Id | (Only required for P12 key type) Enter the project ID. You can obtain it from your GCP account by clicking on the name of your project at the top of the page and copying the **ID**. |
