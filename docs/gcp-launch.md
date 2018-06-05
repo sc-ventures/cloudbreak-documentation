@@ -150,7 +150,9 @@ Cloudbreak works by connecting your GCP account through this credential, and the
 | Description | (Optional) Enter a description. | 
 | Project Id | Enter the project ID. You can obtain it from your GCP account by clicking on the name of your project at the top of the page and copying the **ID**. |
 | Service Account Email Address | "Service account ID" value for your service account created in prerequisites. You can find it on GCP at **IAM & Admin** > **Service accounts**. |
-| Service Account Private (p12) Key | Upload the P12 key that you created in the prerequisites when creating a service account. |
+| Service Account Private (JSON) Key | Upload the JSON key that you created in the prerequisites when creating a service account. |
+
+    > Although earlier versions of Cloudbreak supported keys in P12 format, all new keys specified during the Cloudbreak credential creation must be in JSON format. 
 
 4. Click **Create**.
 

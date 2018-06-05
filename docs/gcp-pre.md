@@ -10,7 +10,11 @@ Once you log in to your GCP account, you must either create a project or use an 
 
 ### Service account
 
-In order to launch clusters on GCP via Cloudbreak, you must have a Service Account that Cloudbreak can use to create resources. In addition, you must also have a P12 key associated with the account. The service account must have the following roles are enabled:
+In order to launch clusters on GCP via Cloudbreak, you must have a service account that Cloudbreak can use to create resources. In addition, you must also have a JSON key associated with the account. 
+
+> Although earlier versions of Cloudbreak supported keys in P12 format, all new keys specified during the Cloudbreak credential creation must be in JSON format. 
+
+The service account must have the following roles are enabled:
 
 * Compute Engine > Compute Image User   
 * Compute Engine > Compute Instance Admin (v1)  
@@ -24,7 +28,7 @@ A user with an "Owner" role can assign roles to new and existing service account
 
 <a href="../images/cb_gcp-iam2.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-iam2.png" width="650" title="GCP Console"></a> 
 
-For more information on creating a Service Account and generating a P12 key, refer to [GCP documentation](https://cloud.google.com/storage/docs/authentication#service_accounts). 
+For more information on creating a service account and generating a JSON key, refer to [GCP documentation](https://cloud.google.com/storage/docs/authentication#service_accounts). 
 
 **Related links**  
 [Service account credentials](https://cloud.google.com/storage/docs/authentication#service_accounts) (External)  
