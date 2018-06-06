@@ -21,7 +21,7 @@ Cloudbreak includes the `cbd export-logs` command that allows you to export Clou
 
     The command collects all Cloudbreak logs, configurations, firewall and ip tables configurations, os type and open ports. After collection, all data is automatically anonymized and compressed into a tar.gz archive. During the process temporary folders are created and then removed. After the process finished, user can find the archive at the location where they issued the command.
     
-4. Copy the bundle onto your machine, for example by using scp.   
+4. Copy the bundle onto your machine, for example by using the secure copy command (`scp`).   
 
 5. When filing a support case ticket, attach the bundle to the  ticket.
 
