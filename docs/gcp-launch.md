@@ -7,19 +7,32 @@ Before launching Cloudbreak on Google Cloud:
 
 The steps below describe how to launch Cloudbreak by using one of the two available deployment options (quickstart and production), access Cloudbreak web UI, and create a Cloudbreak credential.
 
-### (Quickstart) Launch Cloudbreak from a template   
-
-#### Launch from DM template   
+### (Quickstart) Launch Cloudbreak from a template    
 
 Follow these steps to launch Cloudbreak on Google Cloud by using the Cloud Deployer Manager. 
 
 [Comment]: <> (https://cloud.google.com/deployment-manager/) 
 
-**Steps**
+**Prerequisites**
 
 1. In order to use the Cloud Deployment Manager, you must install the Google Cloud SDK on your machine. The SDK contains the gcloud CLI tool, which is used to deploy Cloudbreak. 
 
-    For instructions, refer to [Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) in the Google Cloud documentation. Make sure to perform all of the steps and validate that the `gcloud` command works on your computer. Only after validating, proceed to the next step.     
+    For instructions, refer to [Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) in the Google Cloud documentation. Make sure to perform all of the steps and validate that the `gcloud` command works on your computer. Only after validating, proceed to the next step.  
+    
+2. Enable the **Compute Engine API** and the **Cloud Runtime Configuration API** services. 
+
+    To enable these, from services menu, select **APIs & Services**. Next, click on **ENABLE APIS AND SERVICES**, type each service name in the filter, and enable it.    
+    
+3. Create a service account that has read and write permissions to:
+    * Compute Image    
+    * Compute Instance  
+    * Compute Network  
+    * Compute Security  
+    * Cloud RuntimeConfig. 
+
+    The service account email needs to specified in the config.yaml (or in the gcloud command) as a property.     
+    
+**Steps**       
     
 1. Log in to GitHub (https://github.com/).  
 
@@ -46,6 +59,7 @@ Follow these steps to launch Cloudbreak on Google Cloud by using the Cloud Deplo
 | os_user | Enter the name of the user that you would like to use to SSH to the VM. |  cloudbreak |
 | user_email | Enter the email address that you would like to use to log in to Cloudbreak. | admin@cloudbreak.com |
 | user_password | Enter the password that you would like to use to log in to Cloudbreak. | cloudbreak |
+| service_account_email | The email for the service account created in prerequisites. | ... |
 
 [Comment]: <> (VPC not available?)
 
