@@ -814,7 +814,7 @@ Repairs a cluster if cluster installation failed by removing, or removing and re
 
 **Examples**
 
-<pre>cb cluster repair --name test1234</pre>
+<pre>cb cluster repair --name test1234 --host-groups master,worker</pre>
 
 
 
