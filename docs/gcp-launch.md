@@ -62,57 +62,31 @@ Follow these steps to launch Cloudbreak on Google Cloud by using the Cloud Deplo
 1. Once your deployment has finished, you will see the following:
 
     <pre>gcloud deployment-manager deployments create cbd-deployment --config=/Users/youruser/Documents/cbd-quickstart/gcp/vm_template_config.yaml
-The fingerprint of the deployment is V30aruFnbg8Bu6YYNzOyff==
-done.                                                                          
-Create operation operation-1527295679118-56d113c6bbe99-a353e786-4e851f18 completed successfully.
-NAME                            TYPE                   STATE      ERRORS  INTENT
-cbd-deployment-default-route-1  compute.v1.route       COMPLETED  []
-cbd-deployment-network          compute.v1.network     COMPLETED  []
-cbd-deployment-subnet           compute.v1.subnetwork  COMPLETED  []
-firewall-cbd-deployment         compute.v1.firewall    COMPLETED  []
-vm-cbd-deployment               compute.v1.instance    COMPLETED  []</pre>
+Waiting for create operation-1527749967574-56d7b021f73f1-773609ee-060d4332...done.
+Create operation operation-1527749967574-56d7b021f73f1-773609ee-060d4332 completed successfully.
+NAME                            TYPE                          STATE      ERRORS  INTENT
+cbd-deployment-default-route-1  compute.v1.route              COMPLETED  []
+cbd-deployment-network          compute.v1.network            COMPLETED  []
+cbd-deployment-startup-config   runtimeconfig.v1beta1.config  COMPLETED  []
+cbd-deployment-startup-waiter   runtimeconfig.v1beta1.waiter  COMPLETED  []
+cbd-deployment-subnet           compute.v1.subnetwork         COMPLETED  []
+cbd-deployment-vm               compute.v1.instance           COMPLETED  []
+firewall-cbd-deployment         compute.v1.firewall           COMPLETED  []
+OUTPUTS       VALUE
+deploymentIp  35.224.36.96</pre>
 
     <div class="note">
     <p class="first admonition-title">Cleaning up after a failed deployment</p>
     <p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-gcp">Delete Cloudbreak on GCP</a></p>
 </div>
 
-
-#### Access Cloudbreak web UI  
-
-Follow these steps to obtain Cloudbreak VM's public IP address and log in to the Cloudbreak web UI.   
-
-**Steps**
-       
-1. In the browser, navigate to [https://console.cloud.google.com/](https://console.cloud.google.com/) and log in to your Google Cloud account. 
-
-1. From the navigation menu, select **Deployment Manager > Deployments**:
-
-    <a href="../images/cb_gcp-01.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-01.png" width="650" title="GCP"></a>   
-    
-1. On the **Deployments** page, you should see your Cloudbreak deployment: 
-
-    <a href="../images/cb_gcp-02.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-02.png" width="650" title="GCP"></a>   
-    
-1. Click on the deployment to view details. You should see the following resources:
-
-    <a href="../images/cb_gcp-03.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-03.png" width="650" title="GCP"></a>
-             
-1. Click on the **vm-cbd-deployment** to see deployment details. Next, in the top right corner, click on **Manage Resource** to see VM instance details: 
-
-    <a href="../images/cb_gcp-04.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-04.png" width="650" title="GCP"></a>
-    
-1. On the **VM instance details** page, scroll down to find the external IP address of the VM:
-
-    <a href="../images/cb_gcp-05.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-05.png" width="650" title="GCP"></a>
-    
-1. Copy the external IP address and paste it in the browser.                   
+1. The last output should be the the deploymentIp. Copy the IP address and paste it in the browser so that you can log in to the Cloudbreak web UI.                   
 
 {!docs/common/launch-access-ui.md!} 
     
 1. Log in to the Cloudbreak web UI using the credentials that you configured in the vm_template_config.yaml file.  
 
-5. Upon a successful login, you are redirected to the dashboard:
+1. Upon a successful login, you are redirected to the dashboard:
 
     <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a> 
 
