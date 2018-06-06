@@ -1,15 +1,12 @@
 ## Launching Cloudbreak on AWS
 
-Before launching Cloudbreak on AWS:
-
-* Review and meet the [prerequisites](aws-pre.md).  
-* If you haven't already, review the [deployment options](deployment-options.md).  
-
-The steps below describe how to launch Cloudbreak, access Cloudbreak web UI, and create a Cloudbreak credential.         
+Before launching Cloudbreak on AWS, review and meet the AWS-specific [prerequisites](aws-pre.md).  
+        
     
-### Launch Cloudbreak on your own VM
+{!docs/common-general-prod/vm-req.md!}
 
-Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
+{!docs/common-general-prod/vm-launch.md!}
+
 
 
 ### Create Cloudbreak credential

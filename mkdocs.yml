@@ -45,7 +45,8 @@ pages:
       - Launch on OpenStack: os-launch.md
       - Create a cluster: os-create.md
     - Using Cloudbreak:
-      - Launch Cloudbreak (production): vm-launch.md
+      - Access cluster: clusters-access.md
+      - Manage cluster: clusters-manage.md  
       - Advanced cluster options:
         - Use custom blueprints: blueprints.md
         - Use custom scripts (recipes): recipes.md

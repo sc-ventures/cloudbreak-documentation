@@ -8,7 +8,7 @@ In order to launch Cloudbreak from the ARM template you must:
 
 * Have an existing an Azure account. If you don't have an account, you can create one at [https://azure.microsoft.com](https://azure.microsoft.com).
 
-* Have an SSH key that you can provide when launching Cloudbreak. If needed, you can generate a new SSH key pair:
+* Have an SSH key pair. If needed, you can generate a new SSH key pair:
     * On MacOS X and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
     * On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
 

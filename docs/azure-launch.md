@@ -8,9 +8,11 @@ Before launching Cloudbreak on Azure:
 The steps below describe how to launch Cloudbreak by using one of the two available deployment options (quickstart and production), access Cloudbreak web UI, and create a Cloudbreak credential.
 
 
-### Launch Cloudbreak on your own VM
 
-Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
+{!docs/common-general-prod/vm-req.md!}
+
+{!docs/common-general-prod/vm-launch.md!}
+
 
 {!docs/common-azure/azure-cred.md!}
 

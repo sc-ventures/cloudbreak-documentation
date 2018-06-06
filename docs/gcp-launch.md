@@ -8,9 +8,9 @@ Before launching Cloudbreak on Google Cloud:
 The steps below describe how to launch Cloudbreak by using one of the two available deployment options (quickstart and production), access Cloudbreak web UI, and create a Cloudbreak credential.
 
 
-### Launch Cloudbreak on your own VM
+{!docs/common-general-prod/vm-req.md!}
 
-Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
+{!docs/common-general-prod/vm-launch.md!}
  
 
 ### Create Cloudbreak credential

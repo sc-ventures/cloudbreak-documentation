@@ -45,6 +45,8 @@ You need this SSH key pair to SSH to the Cloudbreak instance and start Cloudbrea
 **Related links**  
 [Creating a key pair using Amazon EC2](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) (External)
 
+{!docs/common-general-prod/vm-pre.md!}
+
 ### Authentication
 
 Before you can start using Cloudbreak for provisioning clusters, you must select a way for Cloudbreak to authenticate with your AWS account and create resources on your behalf. There are two ways to do this:

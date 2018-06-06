@@ -35,6 +35,8 @@ For more information on creating a service account and generating a JSON key, re
 
 [Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or use an existing SSH key pair. You will be required to provide it when launching the VM. 
 
+{!docs/common-general-prod/vm-pre.md!}
+
 ### Region and zone 
 
 Decide in which region and zone you would like to launch Cloudbreak. You can launch Cloudbreak and provision your clusters in all regions [supported by GCP](https://cloud.google.com/compute/docs/regions-zones/regions-zones).  
@@ -48,3 +50,5 @@ Clusters created via Cloudbreak can be in the same or different region as Cloudb
 <div class="next">
 <a href="../gcp-launch/index.html">Next: Launch Cloudbreak</a>
 </div>
+
+

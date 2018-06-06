@@ -3,17 +3,12 @@
 Before launching Cloudbreak on OpenStack, review and meet the [prerequisites](os-pre.md). 
 
 
-### Launch Cloudbreak on your own VM
+{!docs/common-general-prod/vm-req.md!}
 
-Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
-
-
-### Perform optional configurations
-
-> These configurations are optional.
+{!docs/common-general-prod/vm-launch.md!} 
 
 
-#### Configuring a self-signed certificate
+### Configure a self-signed certificate
 
 If your OpenStack is secured with a self-signed certificate, you need to import that certificate into Cloudbreak, or else Cloudbreak won't be able to communicate with your OpenStack.
 
