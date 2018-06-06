@@ -21,6 +21,8 @@ Access to Google Cloud Storage is via a service account.
 
 2. Under **Service Account Email Address** provide the email for your GCS storage account.  
 
+Once your cluster is in the running state, you should be able to access buckets that the configured storage account has access to.  
+
 
 ### Testing access to GCS 
 
