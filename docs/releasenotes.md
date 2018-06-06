@@ -23,29 +23,17 @@ ____________________________
 
 ##### **Protected Gateway for HDP Clusters**
 
-TBD (This does not work for HDF)
+TBD (This does not work for HDF). SSHO will be TP.
 ____________________________
 
 
-##### **Configuring GCP Cloud Storage**
+##### **Configuring Access to GCP, ADLS, and WASB Cloud Storage**
 
 TBD 
 ____________________________
 
 
-##### **Configuring ADLS and WASB Cloud Storage**
-
-TBD 
-____________________________
-
-
-##### **Configuring S3 Cloud Storage**
-
-TBD 
-____________________________
-
-
-##### **Managing Storage Locations**
+##### **Configuring Storage Locations**
 
 TBD 
 ____________________________
@@ -57,7 +45,7 @@ Cloudbreak allows you to add a custom property template in your blueprints and t
 ____________________________
 
 
-##### **Retrying Failed Cluster or Stack Provisioning**
+##### **Retrying Failed Cluster or Failed Stack Provisioning**
 
 When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced. For more information, refer to [Retry a cluster](aws-clusters-manage#retry-a-cluster) and [CLI](cli-reference.md) documentation.
 ____________________________
