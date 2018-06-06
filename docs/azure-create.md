@@ -59,10 +59,11 @@ After the deployment is finished, you can check the layout of the VMs inside an 
 
 #### Cloud storage 
 
-If you would like to access ADLS or WASB from your cluster, you must configure access as described in [Accessing data on Azure](azure-data.md). 
+If you would like to access ADLS or WASB from your cluster, you must configure access as described in [Configuring access to ADLS](azure-data-adls.md) or [Configuring access to WASB](azure-data-wasb.md). 
 
 **Related links**  
-[Accessing data on Azure](azure-data.md)   
+[Configuring access to ADLS](azure-data-adls.md)  
+[Configuring access to WASB](azure-data-wasb.md)  
 
 
 {!docs/common/create-adv-4.md!} 

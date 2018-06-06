@@ -26,21 +26,22 @@ pages:
       - Create a cluster: aws-create.md
       - Access cluster: aws-clusters-access.md
       - Manage and monitor clusters: aws-clusters-manage.md
-      - Access data on S3: aws-data.md
+      - Configure access to S3: aws-data.md
     - Azure:
       - Prerequisites: azure-pre.md
       - Launch on Azure: azure-launch.md
       - Create a cluster: azure-create.md
       - Access cluster: azure-clusters-access.md
       - Manage and monitor clusters: azure-clusters-manage.md
-      - Access data on Azure: azure-data.md
+      - Configure access to ADLS: azure-data-adls.md
+      - Configure access to WASB: azure-data-wasb.md
     - GCP:
       - Prerequisites: gcp-pre.md
       - Launch on GCP: gcp-launch.md
       - Create a cluster: gcp-create.md
       - Access cluster: gcp-clusters-access.md
       - Manage and monitor clusters: gcp-clusters-manage.md
-      - Access data on GCS: gcp-data.md
+      - Configure access to GCS: gcp-data.md
     - OpenStack:
       - Prerequisites: os-pre.md
       - Launch on OpenStack: os-launch.md

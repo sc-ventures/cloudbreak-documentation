@@ -1,14 +1,8 @@
-## Accessing data on S3  
+## Configuring access to Amazon S3  
 
 Amazon S3 is not supported as a default file system, but access to data in S3 is possible via the s3a connector. Use these steps to configure access from your cluster to Amazon S3. 
 
-### Prerequisites
-
-To use S3 storage, you must have one or more S3 buckets on your AWS account. For instructions on how to create a bucket on S3, refer to [AWS documentation](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html).
-
-**Related links**  
-[Create a bucket](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) (External)    
-
+These steps assume that you are using an HDP version that supports the s3a cloud storage connector (HDP 2.6.1 or newer).  
 
 ### Creating an IAM role for S3 access 
 
@@ -85,19 +79,20 @@ For more information about configuring the S3 connector for HDP and working with
 [Cloud Data Access](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.2/bk_cloud-data-access/content/about.html) (Hortonworks)
 
 
-### Configure S3 Storage Locations
+### Configure S3 storage locations
 
 After configuring access to S3 via instance profile, you can optionally use an S3 bucket as a base storage location; this storage location is mainly for the Hive Warehouse Directory (used for storing the table data for managed tables).   
 
-**Prerequisites**: You must have an existing bucket that can be used as a storage location. 
+**Prerequisites** 
+
+* You must have an existing bucket. For instructions on how to create a bucket on S3, refer to [AWS documentation](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html).   
+* The instance profile that you configured under [Configure access to S3](#configure-access-to-s3) must allow access to the bucket.   
 
 **Steps**
 
 1. When creating a cluster, on the **Cloud Storage** page in the advanced cluster wizard view, select **Use existing instance profile** and select the instance profile to use, as described in [Configure access to S3](#configure-access-to-s3).    
 2. Under **Storage Locations**, enable **Configure Storage Locations** by clicking the <img src="../images/cb_toggle.png" alt="On"/> button.   
 3. Provide your existing bucket name under **Base Storage Location**. 
-
-    > Make sure that the instance profile that you configured provides access to this bucket.
     
 [Comment]: <> (I tried setting this to some bucket which did not exist and the location was not set. Can we check if the bucket exists? Or state in the UI that this has to be an existing location?)
 
