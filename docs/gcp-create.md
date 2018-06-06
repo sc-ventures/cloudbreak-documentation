@@ -76,7 +76,7 @@ If you would like to access Google Cloud Storage (GCS) from your cluster, you mu
 
 
 <div class="next">
-<a href="../gcp-clusters-access/index.html">Next: Access Cluster</a>
+<a href="../gcp-data/index.html">Next: Configure Access to GCS</a>
 </div>
 
 

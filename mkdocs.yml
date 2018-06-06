@@ -15,39 +15,34 @@ markdown_extensions:
 use_directory_urls: false
 pages:
     - Intro:
-      - Introduction: index.md   
+      - Introduction: index.md  
       - Architecture: architecture.md  
       - Core concepts: concepts.md
       - Deployment options: deployment-options.md
       - Security overview: security.md
-    - AWS:
+    - AWS: 
+      - Quickstart: aws-quick.md
       - Prerequisites: aws-pre.md
       - Launch on AWS: aws-launch.md
       - Create a cluster: aws-create.md
-      - Access cluster: aws-clusters-access.md
-      - Manage and monitor clusters: aws-clusters-manage.md
       - Configure access to S3: aws-data.md
     - Azure:
+      - Quickstart: azure-quick.md  
       - Prerequisites: azure-pre.md
       - Launch on Azure: azure-launch.md
       - Create a cluster: azure-create.md
-      - Access cluster: azure-clusters-access.md
-      - Manage and monitor clusters: azure-clusters-manage.md
       - Configure access to ADLS: azure-data-adls.md
       - Configure access to WASB: azure-data-wasb.md
     - GCP:
+      - Quickstart: gcp-quick.md   
       - Prerequisites: gcp-pre.md
       - Launch on GCP: gcp-launch.md
       - Create a cluster: gcp-create.md
-      - Access cluster: gcp-clusters-access.md
-      - Manage and monitor clusters: gcp-clusters-manage.md
       - Configure access to GCS: gcp-data.md
     - OpenStack:
       - Prerequisites: os-pre.md
       - Launch on OpenStack: os-launch.md
       - Create a cluster: os-create.md
-      - Access cluster: os-clusters-access.md
-      - Manage and monitor clusters: os-clusters-manage.md 
     - Using Cloudbreak:
       - Launch Cloudbreak (production): vm-launch.md
       - Advanced cluster options:

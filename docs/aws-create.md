@@ -77,5 +77,5 @@ If you would like to access S3 from your cluster, you must configure access as d
 
 
 <div class="next">
-<a href="../aws-clusters-access/index.html">Next: Access Cluster</a>
+<a href="../aws-data/index.html">Next: Configure Access to S3</a>
 </div>

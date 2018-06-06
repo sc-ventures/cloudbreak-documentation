@@ -61,9 +61,9 @@ Platform version: **HDF 3.1**
 
 To quickly get started with Cloudbreak, use the quickstart deployment option, which allows you to launch Cloudbreak from a template:
 
-* [Get started on AWS](aws-launch.md)  
-* [Get started on Azure](azure-launch.md) 
-* [Get started on GCP](gcp-launch.md)  
+* [Get started on AWS](aws-quick.md)  
+* [Get started on Azure](azure-quick.md) 
+* [Get started on GCP](gcp-quick.md)  
 
 > This option is not available for **OpenStack**; you must launch Cloudbreak manually. Refer to [Launch on OpenStack](os-launch.md).    
 

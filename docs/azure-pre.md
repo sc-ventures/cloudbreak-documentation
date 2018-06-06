@@ -23,6 +23,20 @@ When launching Cloudbreak, you will be required to provide your public SSH key. 
 * On MacOS X and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
 * On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
 
+#### Azure roles
+
+In order to provision clusters on Azure, Cloudbreak must be able to assume a sufficient Azure role ("Owner" or "Contributor") via Cloudbreak credential:
+
+* Your account must have the "[Owner](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#owner)" role (or a role with equivalent permissions) in the subscription in order to [create a Cloudbreak credential](#create-cloudbreak-credential) using the interactive credential method.
+
+* Your account must have the "[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor)" role (or a role with equivalent permissions) in the subscription in order to [create a Cloudbreak credential](#create-cloudbreak-credential) using the app-based credential method. The role must be assigned to the app that you register in Cloudbreak.
+
+To check the roles in your subscription, log in to your Azure account and navigate to **Subscriptions**.
+
+**Related links**  
+[Built-in roles: Owner](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#owner) (External)  
+[Built-in roles: Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor) (External)
+
 
 <div class="next">
 <a href="../azure-launch/index.html">Next: Launch Cloudbreak</a>

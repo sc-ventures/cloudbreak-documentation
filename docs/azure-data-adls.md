@@ -83,5 +83,5 @@ After configuring access to ADLS, you can optionally use that ADLS storage accou
 
 
 <div class="next">
-<a href="../azure-data-wasb/index.html">Next: Configure access to WASB</a>
+<a href="../azure-data-wasb/index.html">Next: Configure Access to WASB</a>
 </div>

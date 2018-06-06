@@ -17,13 +17,11 @@ The quickstart option allows you to instantiate Cloudbreak by using the CloudFor
         
 * Provisions a new VPC and subnet, and launches the Cloudbreak VM within it. [Amazon VPC](https://aws.amazon.com/documentation/vpc/) is used to provision your own dedicated virtual network and launch resources into that network. As part of VPC infrastructure, an internet gateway and a route table are provisioned: An internet gateway is used to enable outbound access to the internet from the control plane and the clusters, and a route table is used to connect the subnet to the internet gateway. For more information on Amazon VPC architecture, refer to [Amazon VPC documentation](https://docs.aws.amazon.com/AmazonVPC/latest/GettingStartedGuide/ExerciseOverview.html).    
     
-* Allows you to attach an existing IAM role (for role-based authentication). [AWS Identity & Access Management](https://aws.amazon.com/documentation/iam/) is used to control access to AWS services and resources. Cloudbreak does not create any IAM roles but allows you to use exiting IAM roles.  
+* Provisions the CloudbreakRole IAM role (for role-based authentication). [AWS Identity & Access Management](https://aws.amazon.com/documentation/iam/) is used to control access to AWS services and resources.   
  
 * [AWS Lambda](https://aws.amazon.com/documentation/lambda/), a utility service for running code in AWS, is used when deploying Cloudbreak.  
 
-[Comment]: <> (What exactly is this Lambda service used for?) 
-
-To launch Cloudbreak on AWS by using the quickstart option, refer to [Launch Cloubreak from template (AWS)](aws-launch.md).   
+To launch Cloudbreak on AWS by using the quickstart option, refer to [Launch Cloubreak from template (AWS)](aws-quick.md).   
 
 
 ### Quickstart option for Azure     
@@ -41,18 +39,13 @@ On Azure, resources are organized by using resource groups. When you launch Clou
 * [Network interface](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface) (NIC) attached to the VM provides the interconnection between the VM and the underlying software network.  
 * [Blob storage container](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) is created to store Cloudbreak Deployer OS disk's data.  
 
-To launch Cloudbreak on Azure by using the quickstart option, refer to [Launch Cloubreak from template (Azure)](azure-launch.md).
+To launch Cloudbreak on Azure by using the quickstart option, refer to [Launch Cloubreak from template (Azure)](azure-quick.md).
 
 ### Quickstart option for GCP   
 
 Based on the Cloud Deployment Manager template, GCP automatically provisions a new VM that runs CentOS 7, installs Docker, and launches Cloudbreak. 
 
-To launch Cloudbreak on GCP by using the quickstart option, refer to [Launch Cloubreak from template (GCP)](gcp-launch.md).
-
-
-### Deployment on OpenStack  
-
-You must launch Cloudbreak on OpenStack manually by installing Cloudbreak deployer on your own VM (the production option). There is no available quickstart option. Refer to [Launch on OpenStack](os-launch.md). 
+To launch Cloudbreak on GCP by using the quickstart option, refer to [Launch Cloubreak from template (GCP)](gcp-quick.md).
 
 
 ### Production deployment option  
@@ -66,6 +59,8 @@ This option:
  * Requires you to install Docker  
  * Requires you to download the cbd tarball, extract it, and configure Cloudbreak deployer  
 
-To get started, refer to [Launch Cloudbreak on your own VM](vm-launch.md).
 
+### Deployment on OpenStack  
+
+You must launch Cloudbreak on OpenStack manually by installing Cloudbreak deployer on your own VM (the production option). There is no available quickstart option.
 

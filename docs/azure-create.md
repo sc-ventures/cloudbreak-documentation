@@ -91,6 +91,6 @@ Check this option if you would like to have your virtual machine disks encrypted
 
 
 <div class="next">
-<a href="../azure-clusters-access/index.html">Next: Access Cluster</a>
+<a href="../azure-data-adls/index.html">Next: Configure Access to ADLS</a>
 </div>
 
