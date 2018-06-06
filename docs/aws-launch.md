@@ -87,13 +87,13 @@ Follow these steps to launch Cloudbreak by using an Amazon CloudFormation templa
 
 1. In the top right corner, confirm the region in which you want to launch Cloudbreak:  
 
-    <a href="/images/cb_aws-01.png" target="_blank" title="click to enlarge"><img src="/images/cb_aws-01.png" width="650" title="IAM Console"></a>  
+    <a href="../images/cb_aws-01.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-01.png" width="650" title="IAM Console"></a>  
     
     > You may change the region if needed by using the dropdown in the top right corner.
 
 1. You do not need to change any template parameters on the **Select Template** page. Click **Next** to display the **Specify Details** page:
 
-    <a href="/images/cb_aws-02.png" target="_blank" title="click to enlarge"><img src="/images/cb_aws-02.png" width="650" title="IAM Console"></a> 
+    <a href="../images/cb_aws-02.png" target="_blank" title="click to enlarge"><img src="/..images/cb_aws-02.png" width="650" title="IAM Console"></a> 
 
 1. On the the **Specify Details** page, enter the **Stack name**:
 
