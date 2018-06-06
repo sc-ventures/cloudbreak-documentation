@@ -15,8 +15,9 @@ Follow these steps to launch Cloudbreak by using an Amazon CloudFormation templa
 
 **Steps** 
 
-[Comment]: <> (TBD if custom VPC can be included.)
-[Comment]: <> (TBD how roles will be selected.)
+[Comment]: <> (TBD how roles will be created/selected. From Tamas: On AWS the deployment creates an instance profile and two IAM roles for the deployment (CloudbreakRole - for the instance profile that is attached to the instance to be able to describe the details of the parent/created CloudFormtaion stack; and LambdaExecutionRole for getting Lambda execution permission.)
+
+[Comment]: <> (If the CloudbreakRole is created automatically, then I need to update the roles doc.)
 
 1. Click on the link to launch the CloudFormation template that will create the AWS resources, including an EC2 Instance running Cloudbreak:
 
@@ -188,7 +189,9 @@ As part of the [prerequisites](#authentication), you had two options to allow Cl
 
 #### Create key-based credential
 
-To perform these steps, you must know your access and secret key. If needed, you or your AWS administrator can generate new access and secret keys from the **IAM Console** > **Users** > select a user > **Security credentials**. 
+To perform these steps, you must know your access and secret key. If needed, you or your AWS administrator can generate new access and secret keys from the **IAM Console** > **Users** > select a user > **Security credentials**:
+
+<a href="../images/cb_aws-iam_security_creds.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-iam_security_creds.png" width="650" title="IAM Console"></a>  
 
 **Steps**
 
@@ -220,7 +223,9 @@ To perform these steps, you must know your access and secret key. If needed, you
 
 #### Create role-based credential
 
-To perform these steps, you must know the **IAM Role ARN** corresponding to the "CredentialRole" (configured as a [prerequisite](#authentication)).  
+To perform these steps, you must know the **IAM Role ARN** corresponding to the "CredentialRole" (configured as a [prerequisite](#authentication)). 
+
+> In case you have not created the CredentialRole yet, follow the steps in [Create CredentialRole](aws-pre.md#create-credentialrole).  
 
 **Steps**
 
@@ -246,7 +251,7 @@ To perform these steps, you must know the **IAM Role ARN** corresponding to the 
 
 5. Your credential should now be displayed in the **Credentials** pane.
 
-    Congratulations! You have successfully launched Cloudbreak and created a Cloudbreak credential. Now you can use Cloubdreak to [create clusters](aws-create.md). 
+    Congratulations! You have successfully launched Cloudbreak and created a Cloudbreak credential. Now you can use Cloudbreak to [create clusters](aws-create.md). 
       
 
 <div class="next">
