@@ -1,9 +1,21 @@
-## (Quickstart) Launch Cloudbreak on Azure from a template 
+## Quickstart on Azure 
 
-#### Prerequisites 
+This quickstart documentation will help you get started with Cloudbreak. 
 
+### Prerequisites 
 
-#### Launch from ARM template 
+In order to launch Cloudbreak from the ARM template you must:
+
+* Have an existing an Azure account. If you don't have an account, you can create one at [https://azure.microsoft.com](https://azure.microsoft.com).
+
+* Have an SSH key that you can provide when launching Cloudbreak. If needed, you can generate a new SSH key pair:
+    * On MacOS X and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
+    * On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
+
+* In order to use Cloudbreak for creating clusters, you Azure account must have the minimal permissions described in [Azure roles](azure-pre#azure-roles).      
+    
+
+### Launch Cloudbreak on Azure from ARM template 
 
 Launch Cloudbreak deployer by using the following steps.
 
@@ -13,7 +25,7 @@ Launch Cloudbreak deployer by using the following steps.
 
 2. Click here to get started with Cloudbreak installation using the Azure Resource Manager template:
 
-    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhortonworks%2Fazure-cbd-quickstart%2F2.7.0-dev.170%2FmainTemplate.json" target="_blank"> ![deploy on azure](http://azuredeploy.net/deploybutton.png)</a>
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhortonworks%2Fazure-cbd-quickstart%2F2.7.0-rc.5%2FmainTemplate.json" target="_blank"> ![deploy on azure](http://azuredeploy.net/deploybutton.png)</a>
 
 3. The template for installing Cloudbreak will appear. On the **Basics** page, provide the following basic parameters:   
 
@@ -58,7 +70,7 @@ Launch Cloudbreak deployer by using the following steps.
 </div>
     
     
-#### Access Cloudbreak web UI 
+### Access Cloudbreak web UI 
 
 Follow these steps to obtain Cloudbreak VM's public IP address and log in to the Cloudbreak web UI. 
 
@@ -93,4 +105,14 @@ The last task that you need to perform before you can use Cloudbreak is to [crea
 [CIDR IP](http://www.ipaddressguide.com/cidr) (External)   
 [Filter network traffic with network security groups](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg) (External)  
 
+### Create Cloudbreak credential 
 
+Before you can start using Cloudbreak to create clusters, you must create a Cloudbreak credential. Cloudbreak credential allows Cloudbreak to authenticate with your Azure account and provision resources on your behalf.
+
+There are two ways for Cloudbreak to authenticate with Azure: interactive and app-based. Since the interactive approach is simpler, the steps below describe how to configure an interactive Cloudbreak credential. If you would like to review both options, refer to [Create Cloudbreak credential](azure-launch#create-cloudbreak-credential). 
+
+{!docs/common-azure/azure-cred-int.md!}
+
+### Create cluster     
+
+{!docs/common-general-quick/create-quick.md!}

@@ -1,8 +1,8 @@
-## (Quickstart) Launch Cloudbreak on AWS from a template 
+## Quickstart on AWS
 
 This quickstart documentation will help you get started with Cloudbreak. 
 
-#### Prerequisites   
+### Prerequisites   
 
 In order to launch Cloudbreak from the CloudFormation template you must:
 
@@ -13,9 +13,9 @@ In order to launch Cloudbreak from the CloudFormation template you must:
 * Your AWS account must have the minimal permissions described in [CloudbreakRole](aws-pre.md#credential-role) as well as the permission to create an IAM role.  
 
 
-#### Launch from CF template  
+### Launch Cloudbreak from CF template  
 
-Follow these steps to launch Cloudbreak from an Amazon CloudFormation template.
+Follow these steps to launch Cloudbreak from an Amazon CloudFormation template. 
 
 **Steps** 
 
@@ -147,7 +147,7 @@ Follow these steps to launch Cloudbreak from an Amazon CloudFormation template.
 
 
 
-#### Access Cloudbreak web UI 
+### Access Cloudbreak web UI 
 
 Follow these steps to obtain Cloudbreak VM's public IP address and log in to the Cloudbreak web UI. 
 
@@ -168,16 +168,19 @@ Follow these steps to obtain Cloudbreak VM's public IP address and log in to the
 1. Upon a successful login, you are redirected to the dashboard:
 
     <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
+       
         
-#### Create a Cloudbreak credential
+### Create Cloudbreak credential
 
 Before you can start using Cloudbreak to create clusters, you must create a Cloudbreak credential. Cloudbreak credential allows Cloudbreak to authenticate with your AWS account and provision resources on your behalf.
 
 There are two ways for Cloudbreak to authenticate with AWS: key-based and role-based. Since the key-based approach is faster, the steps below describe how to configure a key-based Cloudbreak credential.  
 
+If you would like to review both options, refer to [Authentication](aws-pre#authentication). 
+
 {!docs/common-aws/aws-cred-key.md!}
 
-#### Create a cluster     
+### Create cluster     
 
 {!docs/common-general-quick/create-quick.md!}
  

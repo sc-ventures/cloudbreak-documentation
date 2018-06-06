@@ -7,7 +7,7 @@ Before launching Cloudbreak on AWS:
 
 The steps below describe how to launch Cloudbreak, access Cloudbreak web UI, and create a Cloudbreak credential.         
     
-### (Production) Launch Cloudbreak on your own VM
+### Launch Cloudbreak on your own VM
 
 Refer to [Launch Cloudbreak on your own VM](vm-launch.md). 
 

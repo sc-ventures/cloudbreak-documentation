@@ -1,42 +1,95 @@
 
-## (Quickstart) Launch Cloudbreak from a template    
+## Quickstart on GCP     
 
-Follow these steps to launch Cloudbreak on Google Cloud by using the Cloud Deployer Manager. 
-
-[Comment]: <> (https://cloud.google.com/deployment-manager/) 
+This quickstart documentation will help you get started with Cloudbreak. 
 
 ### Prerequisites
 
-1. In order to use the Cloud Deployment Manager, you must install the Google Cloud SDK on your machine. The SDK contains the gcloud CLI tool, which is used to deploy Cloudbreak. 
+Prior to launching Cloudbreak, you must meet these prerequisites.
 
-    For instructions, refer to [Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) in the Google Cloud documentation. Make sure to perform all of the steps and validate that the `gcloud` command works on your computer. Only after validating, proceed to the next step.  
+#### Cloud SDK 
+
+In order to use the Cloud Deployment Manager, you must install the Google Cloud SDK on your machine. The SDK contains the gcloud CLI tool, which is used to deploy Cloudbreak. 
+
+For instructions, refer to [Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) in the Google Cloud documentation. Make sure to perform all of the steps and validate that the `gcloud` command works on your computer. Only after validating, proceed to the next step.  
+
+#### GCP APIs 
     
-2. Enable the **Compute Engine API** and the **Cloud Runtime Configuration API** services. 
+You must enable the **Compute Engine API** and the **Cloud Runtime Configuration API** services.
 
-    To enable these, from services menu, select **APIs & Services**. Next, click on **ENABLE APIS AND SERVICES**, type each service name in the filter, and enable it.    
+**Steps** 
+
+1. In GCP web console, from the services menu, select **APIs & Services**: 
+
+    <a href="../images/cb_gcp-api-01.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-api-01.png" width="650" title="Cloudbreak web UI"></a>
+
+2. Click on **Enable APIs and services**:
+
+    <a href="../images/cb_gcp-api-02.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-api-02.png" width="650" title="Cloudbreak web UI"></a>
+
+3. On this page:
+    * In the filter, type "Compute Engine API".  
+    * Click on the corresponding tile to navigate to the API details   
+
+    <a href="../images/cb_gcp-api-03.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-api-03.png" width="650" title="Cloudbreak web UI"></a>  
     
-3. Create a service account that has read and write permissions to:
-    * Compute Image    
-    * Compute Instance  
-    * Compute Network  
-    * Compute Security  
-    * Cloud RuntimeConfig. 
+3. Click on the **Enable** button. Once the API has been enabled you should see:
 
-    The service account email needs to specified in the config.yaml (or in the gcloud command) as a property.     
+    <a href="../images/cb_gcp-api-04.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-api-04.png" width="650" title="Cloudbreak web UI"></a>
+
+4. Perform the same for the "Cloud Runtime Configuration API". 
+
+    
+#### Service account        
+    
+Create a service account that has the following roles:
+
+Computer Engine roles: 
+
+* Compute Image User     
+* Compute Instance Admin 
+* Compute Network Admin  
+* Compute Security Admin 
+
+Other roles: 
+
+* Cloud RuntimeConfig Admin (You can find it under "Other")
+
+If you already have a service account and a JSON key but you need to update the permissions for the account, you can do it from **IAM & admin** > **IAM**. If you need to create a service account, follow these steps. 
+
+**Steps**
+
+1. To create a service account In GCP web console, from the services menu, select **IAM & admin** > **Service account**:
+
+    <a href="../images/cb_gcp-service-01.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-service-01.png" width="650" title="Cloudbreak web UI"></a>  
+
+2. Click on **Create service account**:
+
+    <a href="../images/cb_gcp-service-02.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-service-02.png" width="650" title="Cloudbreak web UI"></a>  
+
+4. Provide the following:
+
+    * Enter the **Service account name**.   
+    > This will determine your service account email. Make a note of this service account email. You will need to provide it when creating a Cloudbreak credential.       
+    * Under **Role**, select the roles described above.  
+    * Under **Key type**, select **JSON**.    
+
+    <a href="../images/cb_gcp-service-03.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-service-03.png" width="500" title="Cloudbreak web UI"></a>  
+
+5. Click **Create**.   
+
+6. The JSON key will be downloaded on your machine. You will need it later to create a CLoudbreak credential.  
+     
     
 ### Launch from a template        
     
-1. Log in to GitHub (https://github.com/).  
+1. Log in to GitHub at [https://github.com/](https://github.com/).  
 
 1. Download the "cbd-quickstart" Hortonworks repo located at `https://github.com/hortonworks/cbd-quickstart/tree/rc-2.7` onto your computer. 
 
 [Comment]: <> (Should we tell people to fork this or to download the repo?)
 
-[Comment]: <> (Will we be creating an RC branch for each release and pointing everyone to that branch?)
-
 1. On your computer, browse to the `cbd-quickstart/gcp`.         
-
-[Comment]: <> (https://cloud.google.com/sdk/gcloud/)
 
 1. Open the vm_template_config.yaml file in a text editor. 
 
@@ -99,7 +152,13 @@ deploymentIp  35.224.36.96</pre>
 
 **Related Links**  
 [Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) (External)  
-[Regions and Zones](https://cloud.google.com/compute/docs/regions-zones/regions-zones) (External)    
-[Machine Types](https://cloud.google.com/compute/docs/machine-types) (External)    
+   
+
+### Create Cloudbreak credential
+
+{!docs/common-gcp/gcp-cred.md!}
 
 
+### Create cluster     
+
+{!docs/common-general-quick/create-quick.md!}
