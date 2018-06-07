@@ -1,5 +1,5 @@
 
-Use these steps to create a cluster.
+Use these steps to create a cluster. This section only covers minimal steps required for creating a cluster based on the basic settings (2-node cluster with default hardware and storage options).  
 
 **Steps**
 

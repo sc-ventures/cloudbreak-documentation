@@ -12,12 +12,12 @@ In order to launch Cloudbreak from the ARM template you must:
     * On MacOS X and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
     * On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
 
-* In order to use Cloudbreak for creating clusters, you Azure account must have the minimal permissions described in [Azure roles](azure-pre#azure-roles).      
+* In order to use Cloudbreak for creating clusters, you Azure account must have the minimum permissions described in [Azure roles](azure-pre#azure-roles).      
     
 
-### Launch Cloudbreak on Azure from ARM template 
+### Launch Cloudbreak from the quickstart template 
 
-Launch Cloudbreak deployer by using the following steps.
+Launch Cloudbreak from an Azure Resource Manager (ARM) template by using the following steps. This is the quickstart deployment option. 
 
 **Steps**
 

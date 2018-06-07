@@ -259,7 +259,7 @@ ____________________________
 
 Default Ambari version 2.6.2.0  
 Default HDP version 2.6.5.0-292
-Default HDF version 3.1.1.0-35  
+Default HDF version 3.1.2.0  
 
 
 

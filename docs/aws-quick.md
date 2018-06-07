@@ -10,12 +10,12 @@ In order to launch Cloudbreak from the CloudFormation template you must:
 
 * Import an existing key pair or generate a new key pair in the AWS region which you are planning to use for launching Cloudbreak and clusters. If you don't have a key pair, use [these](aws-pre.md#ssh-key-pair) steps to create or import a key pair. 
 
-* Your AWS account must have the minimal permissions described in [CloudbreakRole](aws-pre.md#credential-role) as well as the permission to create an IAM role.  
+* Your AWS account must have the minimum permissions described in [CloudbreakRole](aws-pre.md#credential-role) as well as the permission to create an IAM role.  
 
 
-### Launch Cloudbreak from CF template  
+### Launch Cloudbreak from the quickstart template  
 
-Follow these steps to launch Cloudbreak from an Amazon CloudFormation template. 
+Launch Cloudbreak from an CloudFormation template by using the following steps. This is the quickstart deployment option. 
 
 **Steps** 
 
