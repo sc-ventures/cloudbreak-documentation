@@ -75,9 +75,9 @@ Cloudbreak introduces the ability to sort and filter resource tables that list r
 ____________________________
 
 
-##### **Instructions for Using Custom Hostnames** 
+##### **Instructions for Using Custom Hostnames on AWS** 
 
-New documentation is available for using custom hostnames based on DNS for the cluster nodes. Refer to [Using custom hostnames based on DNS](hostnames.md). 
+New documentation is available for using custom hostnames based on DNS for the cluster nodes on AWS. Refer to [Using custom hostnames based on DNS](hostnames.md). 
 ____________________________
 
 
