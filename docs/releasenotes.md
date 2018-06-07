@@ -15,7 +15,7 @@ ____________________________
 
 ##### **Launching Cloudbreak from Templates**
 
-Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates on AWS and Google Cloud; On Azure, this option was previously available. These are quickstart options, not suitable for production. To review current Cloudbreak deployment options, refer to [Deployment options](deployment-options.md). To launch Cloudbreak by using these quickstart options refer to [Quickstart on AWS](aws-quick.md), [Quickstart on Azure](azure-quick.md), and [Quickstart on GCP](gcp-quick.md).    
+Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates on AWS and Google Cloud; On Azure, this option was previously available. These are quickstart options, not suitable for production. To launch Cloudbreak by using these quickstart options refer to [Quickstart on AWS](aws-quick.md), [Quickstart on Azure](azure-quick.md), and [Quickstart on GCP](gcp-quick.md). To review current Cloudbreak deployment options (quickstart and production), refer to [Deployment options](deployment-options.md).    
 ____________________________
 
 
@@ -30,6 +30,7 @@ ____________________________
 
 When creating a cluster on Azure, you can configure access to ADLS and WASB from the *Cloud Storage* page of the advanced create cluster wizard. For more information, refer to [Access data in ADLS](azure-data-adls.md) and [Access data in WASB](azure-data-wasb.md). 
 ____________________________
+
 
 ##### **Configuring Access to GCS Cloud Storage**
 

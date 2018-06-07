@@ -98,9 +98,11 @@ cbd util add-default-user
 For more information about setting environment variables in Profile, refer to [Set Profile variables](#set-profile-variables).
 
 
-### Change SMTP parameters
+### Configure email notifications 
 
-If you want to change SMTP parameters, add them your `Profile`.
+If you want to configure email notification, configure SMTP parameters in your `Profile`. 
+
+> In order to use this configuration, your email server must use SMTP. 
 
 The default values of the SMTP parameters are:
 
@@ -128,7 +130,7 @@ export CLOUDBREAK_SMTP_STARTTLS_ENABLE=true
 export CLOUDBREAK_SMTP_TYPE=smtp  
 ```
 
-> The example assumes you are using gmail. You should use the settings appropriate for your SMTP server.
+> The example assumes that you are using gmail. You should use the settings appropriate for your SMTP server.
 
 If your SMTP server uses SMTPS, you must set the protocol in your `Profile` to smtps:
 
