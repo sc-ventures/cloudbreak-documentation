@@ -5,7 +5,7 @@ Refer to this documentation if you are using Hive with  Cloudbreak-managed clust
 
 ### Accessing Hive via JDBC
 
-Hive can be accessed via JDBC through the [gateway](gateway.md) that is automatically installed and configured in your cluster. If your cluster configuration includes Hive LLAP, then Hive LLAP is configured with the gateway; otherwise, HiveServer2 is configured. In either case, the transport mode is “http” and the gateway path to Hive is `"${CLUSTER_NAME}/${TOPOLOGY-NAME}/hive"` (for example "test-cluster/db-proxy/hive").
+Hive can be accessed via JDBC through the [gateway](gateway.md) that is automatically installed and configured in your cluster. If your cluster configuration includes Hive LLAP, then Hive LLAP is configured with the gateway; otherwise, HiveServer2 is configured. In either case, the transport mode is “http” and the gateway path to Hive is `"${CLUSTER_NAME}/${TOPOLOGY_NAME}/hive"` (for example "test-cluster/db-proxy/hive").
 
 Before you can start using Hive JDBC, you must download the SSL certificate to your truststore. After downloading the SSL certificate, the Hive JDBC endpoint is:
 
@@ -23,7 +23,7 @@ On **Linux or OSX**, you can download the self-signed SSL certificate by using t
 
     export GATEWAY_HOST=IP_OF_GATEWAY_NODE
     export GATEWAY_JKS_PASSWORD=GATEWAY_PASSWORD
-    openssl s_client -servername ${GATEWAY_HOSTNAME} -connect ${GATEWAY_ADDRESS}:443 -showcerts </dev/null | openssl x509 -outform PEM > gateway.pem
+    openssl s_client -servername ${GATEWAY_HOST} -connect ${GATEWAY_HOST}:8443 -showcerts </dev/null | openssl x509 -outform PEM > gateway.pem
     keytool -import -alias gateway-identity -file gateway.pem -keystore gateway.jks -storepass ${GATEWAY_JKS_PASSWORD}
 
 <small>Where:<br>
@@ -33,8 +33,8 @@ GATEWAY_JKS_PASSWORD - Create a password for the truststore that will hold the *
 For example:
 
     export GATEWAY_HOST=2-52-86-252-73
-    export GATEWAY_JKS_PASSWORD=Hdcjks123!
-    openssl s_client -servername ${GATEWAY_HOST} -connect ${GATEWAY_HOST}:443 -showcerts </dev/null | openssl x509 -outform PEM > gateway.pem
+    export GATEWAY_JKS_PASSWORD=Hadoop123!
+    openssl s_client -servername ${GATEWAY_HOST} -connect ${GATEWAY_HOST}:8443 -showcerts </dev/null | openssl x509 -outform PEM > gateway.pem
     keytool -import -alias gateway-identity -file gateway.pem -keystore gateway.jks -storepass ${GATEWAY_JKS_PASSWORD}
     
 After executing these commands, **gateway.pem** and **gateway.jks** files will be downloaded onto your computer to the location where you ran the commands.
@@ -83,7 +83,7 @@ Here are two examples of using tools to connect to Hive via JDBC:
     |---|---|
     | ssl | *1* |
     | transportMode | *http* |
-    | httpPath | Provide `"${CLUSTER_NAME}/${TOPOLOGY-NAME}/hive"`. For example `hive-test/db-proxy/hive` |
+    | httpPath | Provide `"${CLUSTER_NAME}/${TOPOLOGY_NAME}/hive"`. For example `hive-test/db-proxy/hive` |
     | sslTrustStore | Enter the path to the **gateway.jks** file. This file was generated when you [downloaded the SSL certificate](#download-ssl-certificate). |
     | trustStorePassword | Enter the GATEWAY_JKS_PASSWORD that you specified when you [downloaded the SSL certificate](#download-ssl-certificate). |
     
@@ -120,7 +120,7 @@ Here are two examples of using tools to connect to Hive via JDBC:
     | Transport | *HTTP* |
     | Username | Enter the cluster username created when creating your cluster |
     | Password | Enter the cluster password created when creating your cluster |
-    | HTTP Path | Provide `"${CLUSTER_NAME}/${TOPOLOGY-NAME}/hive"`. For example `hive-test/db-proxy/hive` |
+    | HTTP Path | Provide `"${CLUSTER_NAME}/${TOPOLOGY_NAME}/hive"`. For example `hive-test/db-proxy/hive` |
     
 3. Check the **Require SSL** checkbox.  
 4. Click on the text underneath the checkbox to **add a configuration file** link.  
