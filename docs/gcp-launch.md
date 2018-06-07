@@ -1,11 +1,7 @@
 ## Launching Cloudbreak on GCP
 
-Before launching Cloudbreak on Google Cloud:
-
-* Review and meet the [prerequisites](#prerequisites).  
-* If you haven't already, review the [deployment options](deployment-options.md).  
-
-The steps below describe how to launch Cloudbreak by using one of the two available deployment options (quickstart and production), access Cloudbreak web UI, and create a Cloudbreak credential.
+These steps describe how to launch Cloudbreak on GCP for production. 
+Before launching Cloudbreak on Google Cloud, review and meet the [prerequisites](#prerequisites). Next, follow the steps below.  
 
 
 {!docs/common-general-prod/vm-req.md!}

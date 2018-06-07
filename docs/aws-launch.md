@@ -1,6 +1,7 @@
 ## Launching Cloudbreak on AWS
 
-Before launching Cloudbreak on AWS, review and meet the AWS-specific [prerequisites](aws-pre.md).  
+These steps describe how to launch Cloudbreak on AWS for production. 
+Before launching Cloudbreak on AWS, review and meet the AWS-specific [prerequisites](aws-pre.md). Next, follow the steps below.  
         
     
 {!docs/common-general-prod/vm-req.md!}

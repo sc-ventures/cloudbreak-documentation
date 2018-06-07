@@ -1,12 +1,7 @@
 ## Launching Cloudbreak on Azure
 
-Before launching Cloudbreak on Azure:
-
-* Review and meet the [prerequisites](#prerequisites).  
-* If you haven't already, review the [deployment options](deployment-options.md).  
-
-The steps below describe how to launch Cloudbreak by using one of the two available deployment options (quickstart and production), access Cloudbreak web UI, and create a Cloudbreak credential.
-
+These steps describe how to launch Cloudbreak on Azure for production. 
+Before launching Cloudbreak on Azure, review and meet the [prerequisites](#prerequisites). Next, follow the steps below.  
 
 
 {!docs/common-general-prod/vm-req.md!}
