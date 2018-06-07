@@ -1,6 +1,6 @@
 ### Create Cloudbreak credential
 
-Before you can start creating clusters, you must first create a [Cloudbreak credential](architecture.md#cloudbreak-credential). Without this credential, you will not be able to create clusters via Cloudbreak. Cloudbreak works by connecting your Azure account through this credential, and then uses it to create resources on your behalf.
+Before you can start creating clusters, you must first create a [Cloudbreak credential](concepts.md#cloudbreak-credential). Without this credential, you will not be able to create clusters via Cloudbreak. Cloudbreak works by connecting your Azure account through this credential, and then uses it to create resources on your behalf.
 
 There are two methods for creating a Cloudbreak credential:
 

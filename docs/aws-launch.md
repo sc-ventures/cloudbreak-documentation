@@ -11,9 +11,9 @@ Before launching Cloudbreak on AWS, review and meet the AWS-specific [prerequisi
 
 ### Create Cloudbreak credential
 
-Before you can start creating clusters, you must first create a [Cloudbreak credential](architecture.md#cloudbreak-credential). Without this credential, you will not be able to create clusters via Cloudbreak. 
+Before you can start creating clusters, you must first create a [Cloudbreak credential](concepts.md#cloudbreak-credential). Without this credential, you will not be able to create clusters via Cloudbreak. 
 
-As part of the [prerequisites](#authentication), you had two options to allow Cloudbreak to authenticate with AWS and create resources on your behalf: key-based or role-based authentication. Depending on your choice, you must configure a key-based or role-based credential: 
+As part of the [prerequisites](aws-pre.md#authentication), you had two options to allow Cloudbreak to authenticate with AWS and create resources on your behalf: key-based or role-based authentication. Depending on your choice, you must configure a key-based or role-based credential: 
 
 * [Create key-based credential](#create-key-based-credential)  
 * [Create role-based credential](#create-role-based-credential)
@@ -26,7 +26,7 @@ As part of the [prerequisites](#authentication), you had two options to allow Cl
 
 #### Create role-based credential
 
-To perform these steps, you must know the **IAM Role ARN** corresponding to the "CredentialRole" (configured as a [prerequisite](#authentication)). 
+To perform these steps, you must know the **IAM Role ARN** corresponding to the "CredentialRole" (configured as a [aws-pre.md#prerequisite](#authentication)). 
 
 > In case you have not created the CredentialRole yet, follow the steps in [Create CredentialRole](aws-pre.md#create-credentialrole).  
 
