@@ -6,20 +6,16 @@ In general, Cloudbreak offers a quickstart option, as well as a production deplo
 * The **production option** is less automated, but offers more configurability. This option is recommended when your production environments. For more information about this option, refer to [Production deployment option](#production-deployment-option). 
 
 ### Quickstart option for AWS   
-
-[Comment]: <> (This info is based on https://docs.hortonworks.com/HDPDocuments/HDCloudAWS/HDCloudAWS-1.16.5/bk_hdcloud-aws/content/index.html) 
   
 The quickstart option allows you to instantiate Cloudbreak by using the CloudFormation template. This is the basic deployment option and the easiest to get started with. This option:
 
-* Uses [AWS CloudFormation](https://aws.amazon.com/documentation/cloudformation/) to create and manage a collection of related AWS resources. Cloudbreak is launched by using the CloudFormation template.  
-
-* Automatically provisions a new VM that runs Amazon Linux, installs Docker, and launches Cloudbreak. [Amazon EC2](https://aws.amazon.com/documentation/ec2/) is used to launch a virtual machine for Cloudbreak. Security groups are used to control the inbound and outbound traffic to and from the Cloudbreak instance. 
-        
-* Provisions a new VPC and subnet, and launches the Cloudbreak VM within it. [Amazon VPC](https://aws.amazon.com/documentation/vpc/) is used to provision your own dedicated virtual network and launch resources into that network. As part of VPC infrastructure, an internet gateway and a route table are provisioned: An internet gateway is used to enable outbound access to the internet from the control plane and the clusters, and a route table is used to connect the subnet to the internet gateway. For more information on Amazon VPC architecture, refer to [Amazon VPC documentation](https://docs.aws.amazon.com/AmazonVPC/latest/GettingStartedGuide/ExerciseOverview.html).    
-    
-* Provisions the CloudbreakRole IAM role (for role-based authentication). [AWS Identity & Access Management](https://aws.amazon.com/documentation/iam/) is used to control access to AWS services and resources.   
- 
-* [AWS Lambda](https://aws.amazon.com/documentation/lambda/), a utility service for running code in AWS, is used when deploying Cloudbreak.  
+| Resource | Description | How it is used by Cloudbreak |
+|---|---|---|
+| [AWS CloudFormation](https://aws.amazon.com/documentation/cloudformation/) | AWS CloudFormation is used to create and manage a collection of related AWS resources. | Cloudbreak is launched by using a CloudFormation template. | 
+| [Amazon EC2](https://aws.amazon.com/documentation/ec2/) |  Amazon EC2 is used to launch a virtual machine for Cloudbreak. Security groups are used to control the inbound and outbound traffic to and from the Cloudbreak instance. | Cloudbreak automatically provisions a new VM that runs Amazon Linux, installs Docker, and launches Cloudbreak. |
+| [Amazon VPC](https://aws.amazon.com/documentation/vpc/) |  [Amazon VPC](https://aws.amazon.com/documentation/vpc/) is used to provision your own dedicated virtual network and launch resources into that network. As part of VPC infrastructure, an internet gateway and a route table are provisioned: An internet gateway is used to enable outbound access to the internet from the control plane and the clusters, and a route table is used to connect the subnet to the internet gateway. | Cloudbreak provisions a new VPC and subnet, and launches the Cloudbreak VM within it. |   
+|  [AWS IAM](https://aws.amazon.com/documentation/iam/) | AWS Identity & Access Management (IAM) is used to control access to AWS services and resources. | Cloudbreak provisions the CloudbreakRole IAM role (for role-based authentication). |  
+| [AWS Lambda](https://aws.amazon.com/documentation/lambda/) | This is a utility service for running code in AWS. | Cloudbreak uses AWS Lambda is for running code when deploying Cloudbreak. |  
 
 To launch Cloudbreak on AWS by using the quickstart option, refer to [Launch Cloubreak from template (AWS)](aws-quick.md).   
 
@@ -45,6 +41,8 @@ To launch Cloudbreak on Azure by using the quickstart option, refer to [Launch C
 
 Based on the Cloud Deployment Manager template, GCP automatically provisions a new VM that runs CentOS 7, installs Docker, and launches Cloudbreak. 
 
+[Comment]: <> (Add more info)
+
 To launch Cloudbreak on GCP by using the quickstart option, refer to [Launch Cloubreak from template (GCP)](gcp-quick.md).
 
 
@@ -59,8 +57,15 @@ This option:
  * Requires you to install Docker  
  * Requires you to download the cbd tarball, extract it, and configure Cloudbreak deployer  
 
+ To get started with the production option, refer to the instructions for your cloud platform:
+ 
+ * [Launch on AWS](aws-launch.md)   
+ * [Launch on Azure](azure-launch.md)   
+ * [Launch on GCP](gcp-launch.md)  
+ * [Launch on OpenStack](os-launch.md) 
+
 
 ### Deployment on OpenStack  
 
-You must launch Cloudbreak on OpenStack manually by installing Cloudbreak deployer on your own VM (the production option). There is no available quickstart option.
+You must launch Cloudbreak on OpenStack manually by installing Cloudbreak deployer on your own VM (the production option). There is no available quickstart option. For production steps, refer to [Launch on OpenStack](os-launch.md).   
 
