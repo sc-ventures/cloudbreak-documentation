@@ -6,7 +6,8 @@
 | Instance Type | Select an instance type. For information about instance types on AWS refer to [AWS documentation](https://aws.amazon.com/ec2/instance-types/). |
 {!docs/common/create-a3-0.md!}
 | Storage Type | <p>Select the volume type. The options are:<ul><li>Magnetic (default)</li><li>General Purpose (SSD)</li><li>Throughput Optimized HDD</li></ul>For more information about these options refer to <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html" target="_blank">AWS documentation</a>.</p>|
-{!docs/common/create-a3-1.md!}
+{!docs/common/create-a3-1a.md!}
+{!docs/common/create-a3-1b.md!}
     > On AWS, you can configure it to use private IPs instead. For instructions, refer to [Configure communication via private IPs on AWS](trouble-cluster.md#configure-communication-via-private-ips-on-aws). 
 
 {!docs/common/create-a3-2.md!}

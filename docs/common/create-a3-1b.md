@@ -1,5 +1,8 @@
-| Attached Volumes Per Instance | Enter the number of volumes attached per instance. Default is 1. |
-| Volume Size | Enter the size in GBs for each volume. Default is 100. |
+6. On the **Gateway Configuration** page, you can access gateway configuration options. 
+
+    When creating a cluster, Cloudbreak installs and configures a gateway (powered by Apache Knox) to protect access to the cluster resources. By default, the gateway is enabled for Ambari; You can optionally enable it for other cluster services. 
+    
+    For more information, refer to [Gateway](???) documentation.
 
 6. On the **Network** page, provide the following to specify the networking resources that will be used for your cluster:
 

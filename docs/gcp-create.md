@@ -6,7 +6,8 @@
 | Instance Type | Select a VM instance type. For information about instance types on GCP refer to [GCP documentation](https://cloud.google.com/compute/docs/machine-types).|
 {!docs/common/create-a3-0.md!}
 | Storage Type |  <p>Select the volume type. The options are:<ul><li>Standard persistent disks (HDD)</li><li>Solid-state persistent disks (SSD)</li></ul> For more information about these options refer to <a href="https://cloud.google.com/compute/docs/disks/" target="_blank">GCP documentation</a>. |
-{!docs/common/create-a3-1.md!}
+{!docs/common/create-a3-1a.md!}
+{!docs/common/create-a3-1b.md!}
 {!docs/common/create-a3-2.md!}
 
     > Existing security groups are only available for an existing network. 

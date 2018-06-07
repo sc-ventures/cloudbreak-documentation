@@ -6,7 +6,8 @@
 | Instance Type | Select an instance type. For information about instance types on Azure refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sizes-general). |
 {!docs/common/create-a3-0.md!}
 | Storage Type | <p>Select the volume type. The options are:<ul><li>Locally-redundant storage</li><li>Geo-redundant storage</li><li>Premium locally-redundant storage</li></ul> For more information about these options refer to <a href="https://docs.microsoft.com/en-us/azure/storage/storage-introduction" target="_blank">Azure documentation</a>. |
-{!docs/common/create-a3-1.md!}
+{!docs/common/create-a3-1a.md!}
+{!docs/common/create-a3-1b.md!}
 {!docs/common/create-a3-2.md!}
 {!docs/common/create-a4.md!}
 {!docs/common/create-a5.md!}
