@@ -40,51 +40,19 @@ The following table lists the minimum security group port configuration required
 
 #### Default cluster security groups 
 
-For clusters, Cloudbreak provides the following security group settings. If you do not modify these settings, these default security rules will be created. You can modify these rules either when creating or, if you don't want to use security group, remove them. 
+The following section describes the network requirements and options. By default, when creating a cluster, a new network, subnet, and security groups will be created automatically.
 
-As an alternative to creating new security groups, you can select from your existing set of security groups, which can be modified using the cloud provider tools. 
- 
-**Cluster host group with Ambari server**
-
-| Inbound port | Description |
-|---|---|
-| 22 | SSH access to the VM instance. This port is also used by Cloudbreak to communicate with the cluster. |
-| 443 | HTTPS access to the Ambari UI. |
-| 9443 | Management port, used by Cloudbreak to communicate with the cluster node VM. |
-
-<div class="danger">
-<p class="first admonition-title">Important</p>
-<p class="last">
-By default, ports 22, 443, and 9443 are set to 0.0.0.0/0 CIDR for inbound access on the Ambari node security group. We strongly recommend that you limit this CIDR, considering the following restrictions:
-<ul><li>Ports 22 and 9443 must be open to Cloudbreak's CIDR. You can set CB_DEFAULT_GATEWAY_CIDR in your Cloudbreak's Profile file in order to automatically open ports 22 and 9443 to your Cloudbreak IP. Refer to <a href="../security-cb-inbound/index.html">Restricting inbound access from Cloudbreak to cluster</a>.</li>
-<li>Port 22 must be open to your CIDR if you would like to access the master node via SSH.</li>
-<li>Port 443 must be open to your CIDR if you would like to access Ambari web UI in a browser.</li>
-</ul>  
-</p>
+<div class="note">
+    <p class="first admonition-title">Note</p>
+    <p class="last">The default experience of creating network resources such as network, subnet and security group automatically is provided for convenience. We strongly recommend you review these options and for production cluster deployments leverage your existing network resources that you have defined and validated to meet your enterprise requirements. </p>
 </div>
 
-
-**Cluster host groups without the Ambari server**
-
-| Inbound port | Description |
-|---|---|
-| 22 | SSH access to the VM instance. |
-
-<div class="danger">
-<p class="first admonition-title">Important</p>
-<p class="last">
-By default, port 22 is set to 0.0.0.0/0 CIDR for inbound access on non-Ambari node security groups. We strongly recommend that you remove it.</p>
-</div>
-
-When creating a new security group, Cloudbreak uses the following naming convention: `<clustername>-ClusterNodeSecurityGroup<hostgroupname>` 
-
-
-<div class="danger">
-<p class="first admonition-title">Important</p>
-<p class="last">
-Depending on what services you are including, you need to open additional ports as required by these services. For example, when using the Flow Management blueprint, you must open port 9091 for NiFi (on NiFI host group) and port 61443 for NiFI Registry (on the Services host group).  
-</p>
-</div>
+| Port | Source | Target | Description |
+|---|---|---|---|
+| 9443 | Cloudbrreak | Ambari server | <ul><li>This port is used by Cloudbreak to maintain management control of the cluster.</li><li>The default security group opens 9443 from anywhere. You should limit this CIDR further to *only allow access from the Cloudbreak host*. This can be done by default by [restricting inbound access](security-cb-inbound.md) from Cloudbreak to cluster.</li><ul>|
+| 22| * | All cluster hosts | <ul><li>This is an optional port for end user SSH access to the hosts.</li><li>You should review and limit or remove this CIDR access.</li><ul>|
+| 8443 | * | Ambari server | <ul><li>This port is used to access the gateway (if configured).</li><li>You should review and limit this CIDR access.</li><li>If you do not configure the gateway, this port does not need to be opened. If you want access to any cluster resources, you must open those ports explicitly on the security groups for their respective hosts.</li><ul> |
+| 443 | * | Ambari server | <ul><li>This port is used to access Ambari directly.</li><li>If you are configuring the gateway, you should access Ambari through the gateway. You do not need to open this port.</li><li>If you do not configure the gateway, to obtain access to Ambari, you can open this port on the security group for the respective host.</li><ul> |
 
 
 ### Identity management
