@@ -48,7 +48,7 @@ pages:
       - Access cluster: clusters-access.md
       - Manage cluster: clusters-manage.md  
       - Advanced cluster options:
-        - Configure the Gateway: gateway.md 
+        - Configure the gateway: gateway.md 
         - Use custom blueprints: blueprints.md
         - Use custom scripts (recipes): recipes.md
         - Use management packs: mpacks.md

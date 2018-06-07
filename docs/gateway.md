@@ -1,3 +1,3 @@
-## Configuring the Gateway
+## Configuring the gateway
 
 TBD
