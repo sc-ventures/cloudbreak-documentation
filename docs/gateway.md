@@ -1,4 +1,4 @@
-## Configuring a gateway
+## Configuring the gateway
 
 When creating a cluster, Cloudbreak installs and configures a gateway, powered by [Apache Knox](https://knox.apache.org/), to protect access to the cluster resources:
 
@@ -35,7 +35,7 @@ The following applies:
 * The `topology-name` is the name of the gateway topology that you entered when creating the cluster. By default this is set to `db-proxy`.    
 
 
-### Configure a gateway 
+### Configure the gateway 
 
 When creating a cluster, you can configure the gateway on the **Gateway Configuration** page of the basic create cluster wizard. 
 
