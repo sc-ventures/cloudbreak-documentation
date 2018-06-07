@@ -22,7 +22,7 @@ ____________________________
 ##### **Gateway for HDP Clusters**
 
 To access HDP cluster resources, a gateway powered by Apache Knox is configured. When creating a cluster, you can optionally instruct Cloudbreak to install and configure this gateway to protect access to the cluster resources. By default, transport layer security on the gateway endpoint is via a self-signed SSL certificate on port 8443. By default, Ambari is proxied through the gateway.
-For more information, refer to [](). 
+For more information, refer to [Configuring a Gateway](gateway.md). 
 ____________________________
 
 
