@@ -84,4 +84,5 @@ After configuring access to WASB, you can optionally use that WASB storage accou
     
 4. Under **Path for Hive Warehouse Directory property (hive.metastore.warehouse.dir)**, Cloudbreak automatically suggests a location within the bucket. For example, if the directory that you specified is `my-test-container` then the suggested location will be `my-test-container@my-wasb-account.blob.core.windows.net/apps/hive/warehouse`. You may optionally update this path.  
 
-
+    Cloudbreak automatically creates this directory structure in your bucket.  
+    

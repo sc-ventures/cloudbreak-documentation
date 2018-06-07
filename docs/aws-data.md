@@ -98,7 +98,9 @@ After configuring access to S3 via instance profile, you can optionally use an S
 
 [Comment]: <> (Does the "/apps/hive/warehouse" directory structure get created automatically? Or do I have to create it? I tried setting this and hive.metastore.warehouse.dir was set as expected but no directories were created within my bucket. Is that expected?)
     
-4. Under **Path for Hive Warehouse Directory property (hive.metastore.warehouse.dir)**, Cloudbreak automatically suggests a location within the bucket. For example, if the bucket that you specified is `my-test-bucket` then the suggested location will be `my-test-bucket/apps/hive/warehouse`.  You may optionally update this path.        
+4. Under **Path for Hive Warehouse Directory property (hive.metastore.warehouse.dir)**, Cloudbreak automatically suggests a location within the bucket. For example, if the bucket that you specified is `my-test-bucket` then the suggested location will be `my-test-bucket/apps/hive/warehouse`.  You may optionally update this path.   
+
+    Cloudbreak automatically creates this directory structure in your bucket.      
 
 [Comment]: <> (What is the difference between disabling by using the toggle button and choosing "Do not configure"?)
 

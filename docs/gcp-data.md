@@ -47,3 +47,5 @@ After configuring access to GCS via service account, you can optionally use a GC
 3. Provide your existing bucket name under **Base Storage Location**.  
 4. Under **Path for Hive Warehouse Directory property (hive.metastore.warehouse.dir)**, Cloudbreak automatically suggests a location within the bucket. For example, if the bucket that you specified is `my-test-bucket` then the suggested location will be `my-test-bucket/apps/hive/warehouse`.  You may optionally update this path.        
 
+    Cloudbreak automatically creates this directory structure in your bucket.  
+    

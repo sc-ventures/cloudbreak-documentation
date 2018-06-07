@@ -80,7 +80,8 @@ After configuring access to ADLS, you can optionally use that ADLS storage accou
     
 4. Under **Path for Hive Warehouse Directory property (hive.metastore.warehouse.dir)**, Cloudbreak automatically suggests a location within the bucket. For example, if the directory that you specified is `my-test-dir` then the suggested location will be `my-test-adls-account.azuredatalakestore.net/my-test-dir/apps/hive/warehouse`. You may optionally update this path.        
 
-
+    Cloudbreak automatically creates this directory structure in your bucket.  
+    
 
 <div class="next">
 <a href="../azure-data-wasb/index.html">Next: Configure Access to WASB</a>
