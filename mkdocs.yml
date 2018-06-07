@@ -46,7 +46,8 @@ pages:
       - Create a cluster: os-create.md
     - Using Cloudbreak:
       - Access cluster: clusters-access.md
-      - Manage cluster: clusters-manage.md  
+      - Manage cluster: clusters-manage.md
+      - Using Hive: hive.md   
       - Advanced cluster options:
         - Configure the gateway: gateway.md 
         - Use custom blueprints: blueprints.md
