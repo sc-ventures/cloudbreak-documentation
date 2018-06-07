@@ -5,7 +5,6 @@
 Cloudbreak 2.7.0 is a general availability release, which is suitable for production deployments.
 
 
-
 ____________________________
 
 #### New features
@@ -17,25 +16,33 @@ ____________________________
 
 ##### **Launching Cloudbreak from Templates**
 
-Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates on AWS and Google Cloud; On Azure, this option was previously available. To review current Cloudbreak deployment options, refer to [Deployment options](deployment-options.md).   
+Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates on AWS and Google Cloud; On Azure, this option was previously available. These are quickstart options, not suitable for production. To review current Cloudbreak deployment options, refer to [Deployment options](deployment-options.md). To launch Cloudbreak by using these quickstart options refer to [Quickstart on AWS](aws-quick.md), [Quickstart on Azure](azure-quick.md), and [Quickstart on GCP](gcp-quick.md).    
 ____________________________
 
 
-##### **Protected Gateway for HDP Clusters**
+##### **Gateway for HDP Clusters**
 
-TBD (This does not work for HDF). SSHO will be TP.
+To access HDP cluster resources, a gateway powered by Apache Knox is configured. When creating a cluster, you can optionally instruct Cloudbreak to install and configure this gateway to protect access to the cluster resources. By default, transport layer security on the gateway endpoint is via a self-signed SSL certificate on port 8443. By default, Ambari is proxied through the gateway.
+For more information, refer to [](). 
 ____________________________
 
 
-##### **Configuring Access to GCP, ADLS, and WASB Cloud Storage**
+##### **Configuring Access to ADLS, and WASB Cloud Storage**
 
-TBD 
+When creating a cluster on Azure, you can configure access to ADLS and WASB from the *Cloud Storage* page of the advanced create cluster wizard. For more information, refer to [Access data in ADLS](azure-data-adls.md) and [Access data in WASB](azure-data-wasb.md). 
+____________________________
+
+##### **Configuring Access to GCS Cloud Storage**
+
+When creating a cluster on Google Cloud, you can configure access to Google Cloud Storage from the *Cloud Storage* page of the advanced create cluster wizard. Authentication with GCS is via a service account. For more information, refer to [Access data in GCS](gcp-data.md).   
+ 
 ____________________________
 
 
-##### **Configuring Storage Locations**
+##### **Configuring Cloud Storage Locations**
 
-TBD 
+After configuring access to S3, ADLS, WASB, or GCS you can optionally use that ADLS storage account as a base storage location; this storage location is mainly for the Hive Warehouse Directory (used for storing the table data for managed tables). For more information refer to Configure ADLS storage locations on [Amazon S3](aws-data.md#configure-s3-storage-locations), [ADLS](azure-data-adls.md#configure-adls-storage-locations), [WASB](azure-data-wasb.md#configure-wasb-storage-locations), [GCS](gcp-data.md#configure-gcs-storage-locations). 
+
 ____________________________
 
 
@@ -45,9 +52,9 @@ Cloudbreak allows you to add a custom property template in your blueprints and t
 ____________________________
 
 
-##### **Retrying Failed Cluster or Failed Stack Provisioning**
+##### **Retrying Failed Cluster**
 
-When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced. For more information, refer to [Retry a cluster](aws-clusters-manage#retry-a-cluster) and [CLI](cli-reference.md) documentation.
+When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced. For more information, refer to [Retry a cluster](clusters-manage#retry-a-cluster) and [CLI](cli-reference.md) documentation.
 ____________________________
 
 
@@ -71,11 +78,11 @@ ____________________________
 
 ##### **Instructions for Using Custom Hostnames** 
 
-New documentation is available for using custom hostnames based on DNS for the cluster nodes. This is not a new feature, just new documentation. Refer to [Using custom hostnames based on DNS](hostnames.md). 
-____________________________ 
+New documentation is available for using custom hostnames based on DNS for the cluster nodes. Refer to [Using custom hostnames based on DNS](hostnames.md). 
+____________________________
 
 
-[Comment]: <> (2.6 and 2.6 features)
+[Comment]: <> (2.6 and 2.5 features)
 
 
 ##### **Creating Flow Management Clusters**
@@ -157,19 +164,20 @@ Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you 
 For more information, refer to [Using management packs](mpacks.md).  
 
 
-
-
-
 ____________________________
 
-#### New features - TP
+#### New features (TP)
 ____________________________
 
 
-##### **Technical Preview of Shared Services**
+##### **Technical Preview of the Data Lake Option**
 
-Cloudbreak allows you to create a shared services instance and attach it to a cluster.
+Cloudbreak allows you to create a long-running data lake cluster and attach it to a short-running cluster. Refer to [](). 
 
+
+##### **Technical Preview of Gateway SSO**
+
+As part of Apache Knox-powered gateway introduced in Cloudbreak 2.7, you can configure the gateway as the SSO identity provider. Refer to [](). 
 
 
 
@@ -182,7 +190,7 @@ ____________________________
 
 ##### **Removal of Prebuilt Cloudbreak Deployer Images**
 
-In earlier versions of Cloudbreak, Cloudbreak deployer images for AWS, Google Cloud, and OpenStack were provided for each release. Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates. To review current Cloudbreak deployment options, refer to [Deployment options](deployment-options.md).   
+In earlier versions of Cloudbreak, Cloudbreak deployer images for AWS, Google Cloud, and OpenStack were provided for each release. Instead, Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates. To review current Cloudbreak deployment options, refer to [Deployment options](deployment-options.md).   
 ____________________________
 
 
@@ -197,6 +205,7 @@ ____________________________
 The **File System** page of the advanced create cluster wizard was renamed to **Cloud Storage**.    
 ____________________________
 
+
 [Comment]: <> (2.6 features)
 
 ##### **Image Catalog Option Was Moved to External Sources**
@@ -204,10 +213,12 @@ ____________________________
 The options related to registering a custom image catalog and selecting a default image catalog were removed from the **Settings** navigation menu option and are now available under **External Sources > Image Catalogs**.
 ____________________________
 
+
 ##### **Recipes Option Was Moved to Cluster Extension**
 
 The **Recipes** navigation menu option was moved under **Cluster Extensions**, so to find recipe-related settings, select **Cluster Extensions > Recipes** from the navigation menu.
 ____________________________
+
 
 [Comment]: <> (2.5 features)
 
@@ -217,7 +228,8 @@ ____________________________
 When using Cloudbreak on OpenStack, you no longer need to import HDP and HDF images manually, because during your first attempt to create a cluster, Cloudbreak automatically imports HDP and HDF images to your OpenStack. Only Cloudbreak image must be imported manually.
 ____________________________
 
-##### **Install mysql Connector as a Recipe**
+
+##### **Install Mysql Connector as a Recipe**
 
 Starting from Ambari version 2.6, if you have 'MYSQL_SERVER' component in your blueprint, then you have to [manually install and register](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.0/bk_ambari-administration/content/using_hive_with_mysql.html) the 'mysql-connector-java.jar'.
 
