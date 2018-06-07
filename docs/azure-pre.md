@@ -1,4 +1,4 @@
-## Meet the prerequisites on Azure 
+## Prerequisites on Azure 
 
 Before launching Cloudbreak on Azure, you must meet the following prerequisites.
 

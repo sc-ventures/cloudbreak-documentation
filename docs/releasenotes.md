@@ -4,7 +4,6 @@
 
 Cloudbreak 2.7.0 is a general availability release, which is suitable for production deployments.
 
-
 ____________________________
 
 #### New features

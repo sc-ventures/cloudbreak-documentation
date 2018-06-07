@@ -1,4 +1,4 @@
-## Meet the prerequisites on GCP 
+## Prerequisites on GCP 
 
 Before launching Cloudbreak on GCP, you must meet the following prerequisites.
 

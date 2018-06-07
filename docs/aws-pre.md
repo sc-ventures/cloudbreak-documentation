@@ -1,4 +1,4 @@
-## Meet the prerequisites on AWS
+## Prerequisites on AWS
 
 Before launching Cloudbreak on AWS, you must meet the following prerequisites.
 
