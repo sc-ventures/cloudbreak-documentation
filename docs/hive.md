@@ -1,9 +1,4 @@
-## Using Hive
-
-Refer to this documentation if you are using Hive with  Cloudbreak-managed clusters.  
-
-
-### Accessing Hive via JDBC
+## Access Hive via JDBC
 
 Hive can be accessed via JDBC through the [gateway](gateway.md) that is automatically installed and configured in your cluster. If your cluster configuration includes Hive LLAP, then Hive LLAP is configured with the gateway; otherwise, HiveServer2 is configured. In either case, the transport mode is “http” and the gateway path to Hive is `"${CLUSTER_NAME}/${TOPOLOGY_NAME}/hive"` (for example "test-cluster/db-proxy/hive").
 
@@ -13,7 +8,7 @@ Before you can start using Hive JDBC, you must download the SSL certificate to y
 	   
 
 
-#### Download SSL Certificate 
+### Download SSL Certificate 
 
 By default, the gateway has been configured with a *self-signed certificate* to protect the Hive endpoint via SSL. Therefore, in order to use Hive via JDBC or Beeline client, you *must download the SSL certificate* from the [gateway](gateway.md) and add it to your truststore.
 
@@ -45,6 +40,7 @@ Here are two examples of using tools to connect to Hive via JDBC:
 - [SQL Workbench/J](#example-sql-workbenchj)  
 - [Tableau](#example-tableau)  
 
+### Examples
 
 #### Example: SQL Workbench/J    
 

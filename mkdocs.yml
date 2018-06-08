@@ -47,7 +47,7 @@ pages:
     - Using Cloudbreak:
       - Access cluster: clusters-access.md
       - Manage cluster: clusters-manage.md
-      - Using Hive: hive.md   
+      - Access Hive via JDBC: hive.md   
       - Advanced cluster options:
         - Configure the gateway: gateway.md 
         - Use custom blueprints: blueprints.md
