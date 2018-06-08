@@ -64,7 +64,7 @@ If you choose this option, all you need to do at this point is check your AWS ac
 
 <a href="../images/cb_aws-iam_security_creds.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-iam_security_creds.png" width="650" title="IAM Console"></a>
 
-> The minimum set of permissions required by Cloudbreak are the same as for [CredentialRole](aws-pre.md#create-credentialrole). 
+The minimum set of permissions required by Cloudbreak are the same as for [CredentialRole](aws-pre.md#create-credentialrole). 
 
 If you choose this option, you can proceed to launch Cloudbreak.
 
