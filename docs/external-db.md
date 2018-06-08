@@ -44,12 +44,12 @@ In this scenario, you start up with a standard blueprint, and Cloudbreak injects
     
     | Property variable | Example value |
 |---|---|
-| rds.hive.connectionURL | jdbc:postgresql://hive.test.eu-west-1:5432/hive |
+| rds.hive.connectionString | jdbc:postgresql://ec2-54-159-202-231.compute-1.amazonaws.com:5432/hive |
 | rds.hive.connectionDriver | org.postgresql.Driver | 
-| rds.hive.connectionUserName | mydatabaseuser |
+| rds.hive.connectionUserName | myuser |
 | rds.hive.connectionPassword | Hadoop123! |
-| rds.hive.subprotocol | postgres |
-| rds.hive.databaseEngine | POSTGRES |
+| rds.hive.fancyName | PostgreSQL |
+| rds.hive.databaseType | postgres |
 
 [Comment]: <> (Is the rds.hive.connectionDriver parameter deprecated?) 
 
@@ -59,18 +59,18 @@ In this scenario, you start up with a standard blueprint, and Cloudbreak injects
 
     <pre>...
 "hive-site": {
-     "properties": {
-       "javax.jdo.option.ConnectionURL": "{{{ rds.hive.connectionURL }}}",
-       "javax.jdo.option.ConnectionDriverName": "{{{ rds.hive.connectionDriver }}}",
-       "javax.jdo.option.ConnectionUserName": "{{{ rds.hive.connectionUserName }}}",
-       "javax.jdo.option.ConnectionPassword": "{{{ rds.hive.connectionPassword }}}"
-      }
-    },
-"hive-env" : {
-     "properties" : {
-       "hive_database" : "Existing {{{ rds.hive.subprotocol }}} Database",
-       "hive_database_type" : "{{{ rds.hive.databaseEngine }}}"
-      }
+    "properties": {
+      "javax.jdo.option.ConnectionURL": "{{{ rds.hive.connectionString }}}",
+      "javax.jdo.option.ConnectionDriverName": "{{{ rds.hive.connectionDriver }}}",
+      "javax.jdo.option.ConnectionUserName": "{{{ rds.hive.connectionUserName }}}",
+      "javax.jdo.option.ConnectionPassword": "{{{ rds.hive.connectionPassword }}}"
+    }
+  },
+  "hive-env" : {
+    "properties" : {
+      "hive_database" : "Existing {{{ rds.hive.fancyName}}} Database",
+      "hive_database_type" : "{{{ rds.hive.databaseType }}}"
+    }
 }
 ...</pre> 
 
@@ -85,8 +85,8 @@ In this scenario, you start up with a special blueprint including JDBC property 
 
     <pre>...
 "test-site": {
-    "properties": {
-       "javax.jdo.option.ConnectionURL":"{{{rds.test.connectionURL}}}"
+      "properties": {
+       "javax.jdo.option.ConnectionURL":"{{rds.test.connectionString}}"
       }
 ...</pre>
 
@@ -97,14 +97,13 @@ In this scenario, you start up with a special blueprint including JDBC property 
     
     | Property variable | Example value |
 |---|---|
-| rds.hive.connectionURL | db.test.eu-west-1:5432/sometest |
+| rds.hive.connectionString| ec2-54-159-202-231.compute-1.amazonaws.com:5432/hive |
 | rds.hive.connectionDriver | org.postgresql.Driver | 
-| rds.hive.connectionUserName | mydatabaseuser |
+| rds.hive.connectionUserName | myuser |
 | rds.hive.connectionPassword | Hadoop123! |
 | rds.hive.subprotocol | postgres |
 | rds.hive.databaseEngine | POSTGRES |
 
-[Comment]: <> (Is the rds.hive.connectionDriver parameter deprecated?) 
 
 2. Create a cluster by using your custom blueprint and by attaching the external database configuration.  
 

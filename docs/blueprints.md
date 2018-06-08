@@ -122,9 +122,6 @@ When using [external databases](external-db.md), the following variables can be 
 | rds.[type].connectionDriver | The connection driver | org.postgresql.Driver |
 | rds.[type].connectionUserName | The user name to the database | admin |
 | rds.[type].connectionPassword | The password for the connection | Password1234! |  
-| rds.[type].databaseName | The name of the database  | hive |
-| rds.[type].host | The host of the database  | 10.1.1.1 |
-| rds.[type].hostWithPort | Database host + port | 10.1.1.1:1234 |
 | rds.[type].subprotocol | Parsed from jdbc url | postgres  |
 | rds.[type].databaseEngine | Capital database name | POSTGRES |
 
