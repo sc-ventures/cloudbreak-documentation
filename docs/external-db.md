@@ -1,6 +1,6 @@
 ## Using an external database for cluster services  
 
-Cloudbreak allows you to register an existing RDBMS instance to be used for a database for certain services. After you register the RDBMS with Cloudbreak, you can use it for multiple clusters. 
+Cloudbreak allows you to register an existing RDBMS instance as an [external source](concepts.md#external-sources) to be used for a database for certain services. After you register the RDBMS with Cloudbreak, you can use it for multiple clusters. 
 
 ### Supported databases
  

@@ -48,7 +48,16 @@ ____________________________
 
 ##### **Setting Custom Properties**
 
-Cloudbreak allows you to add a custom property template in your blueprints and then set custom properties on a per-cluster basis. For more information, refer to [Custom properties](properties.md).
+Cloudbreak allows you to add custom property variables in your blueprint for replacement (by using mustache template syntax), and then set custom properties on a per-cluster basis. For more information, refer to [Custom properties](properties.md).
+____________________________
+
+
+##### **Dynamic Blueprints**
+
+Cloudbreak allows you to create special "dynamic" blueprints which include templating: the values of the variables specified in the blueprint are dynamically replaced in the cluster creation phase, picking up the parameter values that you provided in the Cloudbreak UI or CLI.
+Cloudbreak supports [mustache](https://mustache.github.io/) kind of templating with {{{variable}}} syntax. Dynamic blueprints offer the ability to manage external sources (such as RDBMS and LDAP/AD) outside of your blueprint
+
+For more information, refer to [Dynamic Blueprints](concepts.md#dynamic-blueprints) and [Creating a dynamic blueprint](blueprints.md#creating-a-dynamic-blueprint). 
 ____________________________
 
 
@@ -197,6 +206,12 @@ ____________________________
 ##### **Redesigned Hardware and Storage UI**
 
 The UI of the **Hardware and Storage** page in the create cluster wizard and in cluster details was redesigned for better user experience. 
+____________________________
+
+
+##### **New Image Settings Page in Create Cluster wizard**
+
+All cluster options related to image settings, image catalog selection, and Ambari and HDP/HDF repository specification were moved to a separate **Image Settings** page in the create cluster wizard.    
 ____________________________
 
 

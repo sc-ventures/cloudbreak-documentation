@@ -10,6 +10,8 @@ When creating a cluster, Cloudbreak installs and configures a gateway, powered b
 * The cluster resources that are accessible through the gateway are determined by the settings provided on the **Gateway Configuration** page of the basic create cluster wizard.  
 * By default, the gateway is deployed and *Ambari* is proxied through the gateway.  
 * The choice of cluster services to expose and proxy through the gateway depends on your blueprint. Cloudbreak analyzes your blueprint and provides a list of services that can be exposed through the gateway. You should review this list and select the services that should be proxied through the gateway.  
+* If you do not enable the gateway, or you do not expose Ambari (or any other service) through the gateway, you must configure access to those services on the security group on your own. 
+
 
 ### Services available via gateway 
 

@@ -1,6 +1,6 @@
 ## Register a proxy   
 
-Cloudbreak allows you to save your existing proxy configuration information so that you can provide the proxy information to the clusters that you create with Cloudbreak. The steps are:       
+Cloudbreak allows you to save your existing proxy configuration information as an [external source](concepts.md#external-sources) so that you can provide the proxy information to multiple clusters that you create with Cloudbreak. The steps are:       
 
 1. Register your proxy in Cloudbreak web UI or CLI.   
 2. Once the proxy has been registered with Cloudbreak, it will show up in the list of available proxies when creating a cluster under advanced **External Sources** > **Configure Proxy**.  

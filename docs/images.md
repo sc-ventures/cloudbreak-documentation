@@ -230,9 +230,10 @@ Perform these steps in the advanced **General Configuration** section of the cre
 
 **Steps**  
 
-1. In the create cluster wizard, make sure that you are using the advanced wizard version. You need to perform the steps in the **General Configuration** section.  
+1. In the create cluster wizard, make sure that you are using the advanced wizard version. You need to perform the steps in the **Image Settings** section.  
 1. Under **Choose Image Catalog**, select your custom image catalog.  
-2. Under **Base Images** > **Choose Image**, select the provider-specific image that you would like to use.   
+2. Under **Image Type**, select "Base Image".
+2. Under **Choose Image**, select the provider-specific image that you would like to use.   
     The "os" that you specified in the image catalog will be displayed in the selection and the content of the "description" will be displayed in green.    
 3. You can leave the default entries for the Ambari and HDP repositories, or you can customize to point to specific versions of Ambari and HDP/HDF that you want to use for the cluster.  
 

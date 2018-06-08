@@ -31,6 +31,16 @@ Cloudbreak includes a few default blueprints and allows you to upload your own b
 [Apache documentation](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) (External)  
 
 
+### Dynamic blueprints
+
+Production cluster configurations typically include certain configuration parameters, such as those related to external database (for Hive, Ranger, etc) and LDAP/AD, forcing users to create 1+ versions of the same blueprint to handle different component configurations for these external systems.     
+
+Dynamic blueprints offer the ability to manage external sources (such as RDBMS and LDAP/AD) outside of your blueprint, because they merely use the blueprint as a template and Cloudbreak injects the actual configurations into your blueprint. This simplifies the reuse of cluster configurations for external sources (RDBMS and LDAP/AD) and simplifies the blueprints themselves.  
+
+Cloudbreak allows you to create special "dynamic" blueprints which include templating: the values of the variables specified in the blueprint are dynamically replaced in the cluster creation phase, picking up the parameter values that you provided in the Cloudbreak UI or CLI.
+Cloudbreak supports [mustache](https://mustache.github.io/) kind of templating with {{{variable}}} syntax.
+
+
 ### Recipes 
 
 Cloudbreak allows you to upload custom scripts, called "recipes". A recipe is a script that runs on all nodes of a selected node group at a specific time. You can use recipes for tasks such as installing additional software or performing advanced cluster configuration. For example, you can use a recipe to put a JAR file on the Hadoop classpath.
@@ -47,4 +57,19 @@ You can upload your recipes to Cloudbreak via the UI or CLI. Then, when creating
 **Related links**  
 [Using custom scripts (recipes)](recipes.md) 
 
-   
+ 
+### External sources
+ 
+Cloudbreak allows you to define external sources that are created independently of a cluster -- and therefore their lifespan is not limited by the lifespan of any cluster -- and that can be reused with multiple clusters:
+
+<a href="../images/cb_external-source.png" target="_blank" title="click to enlarge"><img src="../images/cb_external-source.png" width="650" title="How Cb uses Cloudbreak Credential"></a> 
+
+The external sources that can be registered in Cloudbreak include: 
+
+* Authentication configurations (LDAP/AD) 
+* Database configurations   
+* Image catalogs  
+* Proxy configurations   
+
+Once you register an external source, you may reuse it for multiple clusters. 
+
