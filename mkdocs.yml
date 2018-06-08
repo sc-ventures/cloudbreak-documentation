@@ -45,6 +45,7 @@ pages:
       - Launch on OpenStack: os-launch.md
       - Create a cluster: os-create.md
     - Using Cloudbreak:
+      - Set up a data lake: data-lake.md 
       - Access cluster: clusters-access.md
       - Manage cluster: clusters-manage.md
       - Access Hive via JDBC: hive.md   

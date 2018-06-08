@@ -133,19 +133,13 @@ ____________________________
 
 ##### **Using External Databases for Cluster Services**
 
-You can register an existing external RDBMS in the Cloudbreak UI or CLI so that it can be used for those cluster components which have support for it. After the RDBMS has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.  
-
-Only Postgres is supported at this time. Refer to component-specific documentation for information on which version of Postgres (if any) is supported.  
-
-For more information, refer to [Register an External Database](external-db.md).  
+You can register an existing external RDBMS in the Cloudbreak UI or CLI so that it can be used for those cluster components which have support for it. After the RDBMS has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters. For more information, refer to [Register an External Database](external-db.md).  
 ____________________________
 
 
 ##### **Using External Authentication Sources (LDAP/AD) for Clusters**
 
-You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.
-
-For more information, refer to [Register an Authentication Source](external-ldap.md).   
+You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters. For more information, refer to [Register an Authentication Source](external-ldap.md).   
 ____________________________  
 
 
