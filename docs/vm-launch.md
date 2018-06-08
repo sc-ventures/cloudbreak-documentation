@@ -127,7 +127,7 @@ cbd start</pre>
 
 ### Next Steps After Installing on Your Own VM 
 
-Log in to the Cloudbreak web UI and create a credential for Cloubdreak using the following platform-specific instructions:
+Log in to the Cloudbreak web UI and create a credential for Cloudbreak using the following platform-specific instructions:
  
 * [Access Cloudbreak UI on AWS](aws-launch.md#access-cloudbreak-ui)  
 * [Access Cloudbreak UI on Azure](azure-launch.md#access-cloudbreak-ui)  
