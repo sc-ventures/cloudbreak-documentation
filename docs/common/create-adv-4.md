@@ -30,3 +30,12 @@ This option allows you to set custom properties based on the template defined in
 
 **Related links**      
 [Set custom properties](properties.md)   
+
+
+#### Single sign-on (SSO) 
+
+This option allows you to configure the gateway to be the SSO identity provider. 
+
+> This option is technical preview. 
+
+For more information, refer to [Configuring the Gateway](gateway.md) documentation. 
