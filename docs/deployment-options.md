@@ -1,4 +1,6 @@
-## Deployment options 
+## Deployment options
+
+### Cloudbreak deployment options  
 
 In general, Cloudbreak offers a quickstart option, as well as a production deployment option:
 
@@ -7,7 +9,7 @@ In general, Cloudbreak offers a quickstart option, as well as a production deplo
 * The **quickstart option** allows you to get started with Cloudbreak quickly, but offers limited flexibility. Use this option for getting started with Cloudbreak. This option is not suitable a production.        
 * The **production option** is less automated, but offers more configurability. This option is recommended when your production environments. For more information about this option, refer to [Production deployment option](#production-deployment-option).
 
-### Deployment option cheatsheet
+#### Deployment option cheatsheet
 
 The following table summarizes the available Cloudbreak deployment options:  
 
@@ -18,7 +20,7 @@ The following operating systems are used when launching by using the quickstart 
 <a href="../images/cb_deployment-os.png" target="_blank" title="click to enlarge"><img src="../images/cb_deployment-os.png" width="650" title="Cloudbreak deployment options"></a> 
  
 
-### Quickstart option for AWS   
+#### Quickstart option for AWS   
   
 The quickstart option allows you to instantiate Cloudbreak by using the CloudFormation template. This is the basic deployment option and the easiest to get started with. 
 
@@ -37,7 +39,7 @@ This option utilizes the following AWS services and provisions the following res
 To launch Cloudbreak on AWS by using the quickstart option, refer to [Launch Cloubreak from template (AWS)](aws-quick.md).   
 
 
-### Quickstart option for Azure     
+#### Quickstart option for Azure     
 
 [Comment]: <> (This info was pulled from https://hortonworks.github.io/cloudbreak-azure-docs/index.html)
 
@@ -54,7 +56,7 @@ On Azure, resources are organized by using resource groups. When you launch Clou
 
 To launch Cloudbreak on Azure by using the quickstart option, refer to [Launch Cloubreak from template (Azure)](azure-quick.md).
 
-### Quickstart option for GCP   
+#### Quickstart option for GCP   
 
 Based on the Cloud Deployment Manager template, GCP automatically provisions a new VM that runs CentOS 7, installs Docker, and launches Cloudbreak. 
 
@@ -63,7 +65,7 @@ Based on the Cloud Deployment Manager template, GCP automatically provisions a n
 To launch Cloudbreak on GCP by using the quickstart option, refer to [Launch Cloubreak from template (GCP)](gcp-quick.md).
 
 
-### Production deployment option  
+#### Production deployment option  
   
 The option to install Cloudbreak deployer manually on your own VM is available for all cloud providers. 
 
@@ -82,7 +84,21 @@ This option:
  * [Launch on OpenStack](os-launch.md) 
 
 
-### Deployment on OpenStack  
+#### Deployment on OpenStack  
 
 You must launch Cloudbreak on OpenStack manually by installing Cloudbreak deployer on your own VM (the production option). There is no available quickstart option. For production steps, refer to [Launch on OpenStack](os-launch.md).   
+
+
+### Cluster deployment options
+
+On a basic level, Cloudbreak offers three cluster deployment options:
+
+* Basic cluster deployment with prescriptive options  
+* Advanced cluster deployment with customized options  
+* [Enterprise cluster deployment](data-lake.md ) with a data lake and attached workload clusters: 
+
+> The data lake deployment option is technical preview.    
+
+<a href="../images/cb_deployment-datalake.png" target="_blank" title="click to enlarge"><img src="../images/cb_deployment-datalake.png" width="650" title="Cluster deployment options"></a>
+
 

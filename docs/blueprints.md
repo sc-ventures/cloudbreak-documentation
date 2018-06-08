@@ -13,7 +13,7 @@ You have two options concerning using blueprints with Cloudbreak:
 We recommend that you review the default blueprints to check if they meet your requirements. You can do this by selecting **Blueprints** from the navigation pane in the Cloudbreak web UI or by reading the documentation below.
  
 
-### Creating a blueprint
+### Creating blueprints 
 
 Ambari blueprints are specified in JSON format. A blueprint can be exported from a running Ambari cluster and can be reused in Cloudbreak after slight modifications. When a blueprint is exported, it includes  some hardcoded configurations such as domain names, memory configurations, and so on, that are not applicable to the Cloudbreak cluster. There is no automatic way to modify an exported blueprint and make it instantly usable in Cloudbreak, the modifications have to be done manually. 
 
@@ -86,7 +86,7 @@ Here are a few [blueprint examples](https://github.com/hortonworks/cloudbreak/tr
 [comment]: <> (TO-DO: Maybe we can find some newer examples?)
 
 
-### Creating a dynamic blueprint   
+### Creating dynamic blueprints    
 
 Cloudbreak allows you to create [dynamic blueprints](concepts.md#dynamic-blueprints), which include templating: the values of the variables specified in the blueprint are dynamically replaced in the cluster creation phase, picking up the parameter values that you provided in the Cloudbreak UI or CLI.
 Cloudbreak supports [mustache](https://mustache.github.io/) kind of templating with {{{variable}}} syntax. 
@@ -126,7 +126,7 @@ When using [external databases](external-db.md), the following variables can be 
 | rds.[type].databaseEngine | Capital database name | POSTGRES |
 
 
-### Upload a blueprint 
+### Upload blueprints  
 
 Once you have your blueprint ready, perform these steps.
 
