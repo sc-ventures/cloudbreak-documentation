@@ -66,7 +66,7 @@ If you choose this option, all you need to do at this point is check your AWS ac
 
 > The minimum set of permissions required by Cloudbreak are the same as for [CredentialRole](aws-pre.md#create-credentialrole). 
 
-If you choose this option, you can proceed to [Launch Cloudbreak deployer from an image](#launch-cloudbreak-deployer-from-an-image).
+If you choose this option, you can proceed to launch Cloudbreak.
 
 
 ### (Option 2) Configure role-based authentication
