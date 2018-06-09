@@ -21,6 +21,8 @@ The following table explains basic data lake terminology:
 
 The following table explains the components of a data lake: 
 
+<a href="../images/cb_datalake-diag02.png" target="_blank" title="click to enlarge"><img src="../images/cb_datalake-diag02.png" width="550" title="Cloudbreak architecture"></a>
+
 | Component | Technology | Description |
 |---|---|---|
 | Schema | Apache Hive | Provides Hive schema (tables, views, and so on). If you have two or more workloads accessing the same Hive data, you need to share schema across these workloads. |
