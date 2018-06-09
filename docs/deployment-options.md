@@ -95,7 +95,7 @@ On a basic level, Cloudbreak offers three cluster deployment options:
 
 * Basic cluster deployment with prescriptive options  
 * Advanced cluster deployment with customized options  
-* [Enterprise cluster deployment](data-lake.md ) with a data lake and attached workload clusters: 
+* Enterprise cluster deployment with a [data lake](data-lake.md) and attached workload clusters:  
 
 > The data lake deployment option is technical preview.    
 
