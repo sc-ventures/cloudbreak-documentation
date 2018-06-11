@@ -22,6 +22,8 @@ The Cloudbreak application is a web application which simplifies cluster provisi
 
 <a href="../images/cb_arch.png" target="_blank" title="click to enlarge"><img src="../images/cb_arch.png" width="550" title="Cloudbreak architecture"></a> 
 
+[Comment]: <> (Source: https://docs.google.com/presentation/d/1Br69oOMZIUwQA_qLGslbZW4UxgvSmpSp7FgYuFVwJkE/edit)
+
 Cloudbreak application is built on the foundation of cloud provider APIs and Apache Ambari:
     
 * Cloudbreak uses **cloud provider APIs** to communicate with the cloud providers. 

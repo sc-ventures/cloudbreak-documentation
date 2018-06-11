@@ -35,6 +35,7 @@ Their values will be the values that you provided to Cloudbreak:
 
 <a href="../images/cb_cb-ldap.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ldap.png" width="550" title="Cloudbreak web UI"></a>
 
+[Source]: <> (Source https://docs.google.com/presentation/d/1vo3aZVMX0vx9gHZ5hALgxkGHw3l1PW-bGbxaYjk57Uo/edit#slide=id.p1)
 
 
 ### Register an authentication source 

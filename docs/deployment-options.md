@@ -6,6 +6,8 @@ In general, Cloudbreak offers a quickstart option, as well as a production deplo
 
 <a href="../images/cb_deployment-options.png" target="_blank" title="click to enlarge"><img src="../images/cb_deployment-options.png" width="650" title="Cloudbreak deployment options"></a>  
 
+[Source]: <> (Source https://docs.google.com/presentation/d/1vo3aZVMX0vx9gHZ5hALgxkGHw3l1PW-bGbxaYjk57Uo/edit#slide=id.p1)
+
 * The **quickstart option** allows you to get started with Cloudbreak quickly, but offers limited flexibility. Use this option for getting started with Cloudbreak. This option is not suitable a production.        
 * The **production option** is less automated, but offers more configurability. This option is recommended when your production environments. For more information about this option, refer to [Production deployment option](#production-deployment-option).
 
@@ -15,9 +17,13 @@ The following table summarizes the available Cloudbreak deployment options:
 
 <a href="../images/cb_deployment-cheat.png" target="_blank" title="click to enlarge"><img src="../images/cb_deployment-cheat.png" width="650" title="Cloudbreak deployment options"></a>
 
+[Source]: <> (Source https://docs.google.com/presentation/d/1vo3aZVMX0vx9gHZ5hALgxkGHw3l1PW-bGbxaYjk57Uo/edit#slide=id.p1)
+
 The following operating systems are used when launching by using the quickstart option:
 
-<a href="../images/cb_deployment-os.png" target="_blank" title="click to enlarge"><img src="../images/cb_deployment-os.png" width="650" title="Cloudbreak deployment options"></a> 
+<a href="../images/cb_deployment-os.png" target="_blank" title="click to enlarge"><img src="../images/cb_deployment-os.png" width="650" title="Cloudbreak deployment options"></a>
+
+[Source]: <> (Source https://docs.google.com/presentation/d/1vo3aZVMX0vx9gHZ5hALgxkGHw3l1PW-bGbxaYjk57Uo/edit#slide=id.p1) 
  
 
 #### Quickstart option for AWS   
@@ -25,6 +31,8 @@ The following operating systems are used when launching by using the quickstart 
 The quickstart option allows you to instantiate Cloudbreak by using the CloudFormation template. This is the basic deployment option and the easiest to get started with. 
 
 <a href="../images/cb_deployment-aws.png" target="_blank" title="click to enlarge"><img src="../images/cb_deployment-aws.png" width="650" title="Cloudbreak deployment options"></a> 
+
+[Source]: <> (Source https://docs.google.com/presentation/d/1vo3aZVMX0vx9gHZ5hALgxkGHw3l1PW-bGbxaYjk57Uo/edit#slide=id.p1)
 
 This option utilizes the following AWS services and provisions the following resources:
 

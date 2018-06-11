@@ -157,3 +157,11 @@ You can access Ambari web UI by clicking on the links provided in the **Cluster 
 | Chrome |	Click **Advanced** > Click **Proceed...** |
 
 
+### View cluster blueprints  
+
+Cloudbreak includes a useful option to view blueprints of a future cluster (from the create cluster wizard) or an existing cluster (from cluster details):
+
+* To view a cluster blueprint from the create cluster wizard, on the last page of the wizard, select **Show blueprint**.    
+
+* To view a cluster blueprint for an existing cluster, navigate to cluster details, and from the **ACTIONS** menu, select **Show blueprint**.  
+

@@ -10,6 +10,8 @@ This is illustrated in the following diagram:
 
 <a href="../images/cb_datalake-diag01.png" target="_blank" title="click to enlarge"><img src="../images/cb_datalake-diag01.png" width="550" title="Cloudbreak architecture"></a>
 
+[Source]: <> (Source https://docs.google.com/presentation/d/1vo3aZVMX0vx9gHZ5hALgxkGHw3l1PW-bGbxaYjk57Uo/edit#slide=id.p1)
+
 Once you’ve created a data lake instance, you have an option to attach it to one or more ephemeral clusters. This allows you to apply the authentication, authorization, and audit across multiple workload clusters.
 
 The following table explains basic data lake terminology: 
@@ -22,6 +24,8 @@ The following table explains basic data lake terminology:
 The following table explains the components of a data lake: 
 
 <a href="../images/cb_datalake-diag02.png" target="_blank" title="click to enlarge"><img src="../images/cb_datalake-diag02.png" width="550" title="Cloudbreak architecture"></a>
+
+[Source]: <> (Source https://docs.google.com/presentation/d/1vo3aZVMX0vx9gHZ5hALgxkGHw3l1PW-bGbxaYjk57Uo/edit#slide=id.p1)
 
 | Component | Technology | Description |
 |---|---|---|

@@ -13,6 +13,8 @@ Cloudbreak includes a few default blueprints and allows you to upload your own b
 
 <a href="../images/cb_arch-blue.png" target="_blank" title="click to enlarge"><img src="../images/cb_arch-blue.png" width="500" title="How Cb uses Ambari blueprints"></a> 
 
+[Source]: <> (Source https://docs.google.com/presentation/d/1Br69oOMZIUwQA_qLGslbZW4UxgvSmpSp7FgYuFVwJkE/edit)
+
 **Related links**  
 [Using custom blueprints](blueprints.md)  
 [Apache documentation](https://cwiki.apache.org/confluence/display/AMBARI/Blueprints) (External)  
@@ -26,6 +28,8 @@ Cloudbreak credential allows Cloudbreak to authenticate with the cloud provider 
 
 
 <a href="../images/cb_arch-cred.png" target="_blank" title="click to enlarge"><img src="../images/cb_arch-cred.png" width="500" title="How Cb uses Cloudbreak Credential"></a> 
+
+[Source]: <> (Source https://docs.google.com/presentation/d/1Br69oOMZIUwQA_qLGslbZW4UxgvSmpSp7FgYuFVwJkE/edit)
 
 **Related links**  
 [Identity management](security.md#identity-management)  
@@ -57,6 +61,8 @@ Cloudbreak supports [mustache](https://mustache.github.io/) kind of templating w
 Cloudbreak allows you to define external sources that are created independently of a cluster -- and therefore their lifespan is not limited by the lifespan of any cluster -- and that can be reused with multiple clusters:
 
 <a href="../images/cb_external-source.png" target="_blank" title="click to enlarge"><img src="../images/cb_external-source.png" width="650" title="How Cb uses Cloudbreak Credential"></a> 
+
+[Source]: <> (Source https://docs.google.com/presentation/d/1vo3aZVMX0vx9gHZ5hALgxkGHw3l1PW-bGbxaYjk57Uo/edit#slide=id.p1)
 
 The external sources that can be registered in Cloudbreak include: 
 

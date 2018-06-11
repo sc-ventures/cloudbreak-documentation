@@ -33,6 +33,8 @@ During cluster create, Cloudbreak checks whether the JDBC properties are present
 
 <a href="../images/cb_cb-rdbms-diagram.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-rdbms-diagram.png" width="550" title="Cloudbreak web UI"></a>
 
+[Source]: <> (Source https://docs.google.com/presentation/d/1vo3aZVMX0vx9gHZ5hALgxkGHw3l1PW-bGbxaYjk57Uo/edit#slide=id.p1)  
+
   
 #### Example 1: Built-in type Hive 
 
@@ -41,6 +43,8 @@ In this scenario, you start up with a standard blueprint, and Cloudbreak injects
 1. Register an existing external database of "Hive" type (built-in type):
 
     <a href="../images/cb_cb-rdbms-e1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-rdbms-e1.png" width="550" title="Cloudbreak web UI"></a>
+    
+[Source]: <> (Source https://docs.google.com/presentation/d/1vo3aZVMX0vx9gHZ5hALgxkGHw3l1PW-bGbxaYjk57Uo/edit#slide=id.p1)
     
     | Property variable | Example value |
 |---|---|
@@ -94,6 +98,8 @@ In this scenario, you start up with a special blueprint including JDBC property 
 1. Register an existing external database of some "Other" type. For example:
 
     <a href="../images/cb_cb-rdbms-e2.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-rdbms-e2.png" width="550" title="Cloudbreak web UI"></a>
+    
+[Source]: <> (Source https://docs.google.com/presentation/d/1vo3aZVMX0vx9gHZ5hALgxkGHw3l1PW-bGbxaYjk57Uo/edit#slide=id.p1)
     
     | Property variable | Example value |
 |---|---|
