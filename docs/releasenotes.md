@@ -242,8 +242,7 @@ ____________________________
 
 ##### **Install Mysql Connector as a Recipe**
 
-Starting with Ambari version 2.6, if you have 'MYSQL_SERVER' component in your blueprint, then you have to [manually install and register](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.0/bk_ambari-administration/content/using_hive_with_mysql.html) the 'mysql-connector-java.jar'.
-
+Starting with Ambari version 2.6, if you have 'MYSQL_SERVER' component in your blueprint, then you have to [manually install and register](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.0/bk_ambari-administration/content/using_hive_with_mysql.html) the 'mysql-connector-java.jar'.  
 If you would like to automate this process in Cloudbreak, you can apply the [following recipe](recipes.md#install-mysql-connector-recipe).  
 
 
@@ -252,11 +251,9 @@ ____________________________
 #### Image catalog updates
 ____________________________
 
-##### **June 12, 2018**
-
 Default Ambari version 2.6.2.0  
-Default HDP version 2.6.5.0-292
-Default HDF version 3.1.2.0  
+Default HDP version 2.6.5.0-292  
+Default HDF version 3.1.2.0   
 
 
 

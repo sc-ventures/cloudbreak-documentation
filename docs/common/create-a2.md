@@ -1,4 +1,4 @@
-| Platform Version | Choose the HDP or HDF version to use for this cluster. Blueprints available for this platform version will be populated under "Cluster Type" below. |
+| Platform Version | Choose the HDP or HDF version to use for this cluster. Blueprints available for this platform version will be populated under "Cluster Type" below. If you selected the **HDF** platform, refer to [Creating an HDF cluster](hdf.md) for HDF cluster configuration tips. |
 | Cluster Type | Choose one of the default cluster configurations, or, if you have defined your own cluster configuration via Ambari blueprint, you can choose it here. For more information on default and custom blueprints, refer to [Using custom blueprints](blueprints.md). |
 | Flex Subscription | This option will appear if you have configured your deployment for a [flex support subscription](get-help.md#flex-subscription). |
 
