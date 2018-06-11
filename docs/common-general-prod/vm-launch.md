@@ -52,10 +52,12 @@ cbd generate</pre>
 
 5. Start the Cloudbreak application by using the following commands:
 
-    <pre>cbd pull
+    <pre>cbd pull --parallel
 cbd start</pre>
 
     This will start the Docker containers and initialize the application. The first time you start the Cloudbreak app, the process will take longer than usual due to the download of all the necessary docker images.
+    
+    > If you encounter errors during `cbd start`, refer to [Toubleshooting](trouble-cb.md).  
 
 5. Next, check Cloudbreak application logs:
 
@@ -70,7 +72,7 @@ Log in to the Cloudbreak UI using the following steps.
 
 **Steps** 
 
-1. You can log into the Cloudbreak application at `https://IP_Address`. For example `https://34.212.141.253`. You can obtain the VM's IP address from your cloud provider console.
+1. You can log into the Cloudbreak application at `https://IP_Address`. For example `https://34.212.141.253`. You may use `cbd start` to obtain the login information. Alternatively, you can obtain the VM's IP address from your cloud provider console. 
 
 {!docs/common/launch-access-ui.md!} 
     

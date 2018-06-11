@@ -19,6 +19,7 @@ Every command must be executed as root. In order to get root privileges execute:
 
 <pre>sudo -i</pre>
 
+
 #### System updates
 
 Ensure that your system is up-to-date by executing:
@@ -27,7 +28,7 @@ Ensure that your system is up-to-date by executing:
 
 Reboot it if necessary.
 
-#### Iptables
+#### Install iptables
 
 Perform these steps to install and configure iptables.
 
@@ -47,12 +48,29 @@ systemctl disable firewalld && systemctl stop firewalld</pre>
 iptables --flush FORWARD && \
 service iptables save</pre>
 
-3. Disable SELINUX:
+
+#### Disable SELINUX
+
+Perform these steps to disable SELINUX.
+
+**Steps** 
+
+1. Disable SELINUX:
     
-    <pre>sed -i --follow-symlinks 's/^SELINUX=.*/SELINUX=disabled/g' /etc/sysconfig/selinux</pre>
+    <pre>setenforce 0
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' 
+/etc/selinux/config</pre>
+
+2. Ensure the SELinux is not turned on afterwards:
+
+    <pre>sestatus | grep -i mode
+Current mode:                   permissive
+Mode from config file:          permissive</pre>
+
+[Comment]: <> (Also we can use the "getenforce" command to get the mode of SELinux.)
     
     
-#### Docker 
+#### Install Docker 
 
 Perform these steps to install Docker.
 
@@ -69,10 +87,31 @@ gpgcheck=1
 gpgkey=https://yum.dockerproject.org/gpg
 EOF</pre>
 
-5. Install Docker service:
+[Comment]: <> (Annamaria mentioned in https://hortonworks.jira.com/browse/BUG-104824 that this step is not required?)
 
-    <pre>yum install -y docker-engine-1.9.1 docker-engine-selinux-1.9.1
+2. Install Docker service:
+
+    <pre>yum install -y docker-engine-1.13.1 docker-engine-selinux-1.13.1
 systemctl start docker
 systemctl enable docker</pre>
 
+3. Check the Docker Logging Driver configuration:
+
+    <pre>docker info | grep "Logging Driver"</pre>
+    
+4. If it is set to `Logging Driver: journald`, you must  set it to "json-file" instead. To do that:
+
+    1. Open the `docker` file for editing:
+    
+        <pre>vi /etc/sysconfig/docker</pre>  
+        
+    2. Edit the following part of the file so that it looks like below (showing `log-driver=json-file`):
+
+        <pre># Modify these options if you want to change the way the docker daemon runs
+OPTIONS='--selinux-enabled --log-driver=json-file --signature-verification=false'</pre>     
+
+    3. Restart Docker:
+
+        <pre>systemctl restart docker
+systemctl status docker</pre>
 
