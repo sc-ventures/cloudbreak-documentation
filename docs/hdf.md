@@ -6,7 +6,7 @@ In general, the create cluster wizard offers prescriptive default settings that 
 
 When creating a Flow Management cluster from the default blueprint, make sure to do the following:
 
-* On the **Hardware and Storage** page, select to place the **Ambari Server** on the "Services" host group. 
+* On the **Hardware and Storage** page, place the **Ambari Server** on the "Services" host group. 
 * On the **Network** page, open the required ports:        
     * Open **9091** TCP port on the NiFi host group. This port is used by **NiFi web UI**; Without it, you will be unable to access the NiFi web UI.   
     * Open **61443** TCP port on the Services host group. This port is used by **NiFi Registry**.       
@@ -63,7 +63,7 @@ When creating a HDF cluster with LDAP, on the **Security** page of the create cl
 
 When creating a Messaging Management cluster from the default blueprint, make sure to do the following:
 
-* Place the Ambari Server on the "Services" host group.  
-* When creating a cluster, open 3000 TCP port on the Services host group for Grafana.    
+* On the **Hardware and Storage** page, place the **Ambari Server** on the "Services" host group.  
+* When creating a cluster, open **3000** TCP port on the Services host group for Grafana.    
 
 
