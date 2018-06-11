@@ -68,9 +68,17 @@ To launch Cloudbreak on Azure by using the quickstart option, refer to [Launch C
 
 Based on the Cloud Deployment Manager template, GCP automatically provisions a new VM that runs CentOS 7, installs Docker, and launches Cloudbreak. 
 
-[Comment]: <> (Add more info)
+The following basic resources are provisioned on you GCP account:
 
-To launch Cloudbreak on GCP by using the quickstart option, refer to [Launch Cloubreak from template (GCP)](gcp-quick.md).
+* Network    
+* Subnetwork (subnet)    
+* Route (routing table)  
+* Firewall   
+* VM instance  
+* Config  
+* Config waiter  
+
+To launch Cloudbreak on GCP by using the quickstart option, refer to [Launch Cloudbreak from template (GCP)](gcp-quick.md).
 
 
 #### Production deployment option  

@@ -101,13 +101,15 @@ Launch Cloudbreak from an Cloud Deployment Manager template by using the followi
 
 1. Open the vm_template_config.yaml file in a text editor. 
 
-1. Edit the file by updating the parameter values: 
+1. Edit the file by updating the property values: 
+
+    > Do not edit any other parameters in the vm_template_config.yaml file. 
 
     | Parameter | Description | Default |
 |---|---|---|
 | region | The GCP region in which you would like to launch Cloudbreak. You can launch Cloudbreak and provision your clusters in all regions [supported by GCP](https://cloud.google.com/compute/docs/regions-zones/regions-zones). | us-central-1 |
 | zone | The GCP region's zone in which you would like to launch Cloudbreak. You can launch Cloudbreak and provision your clusters in all regions [supported by GCP](https://cloud.google.com/compute/docs/regions-zones/regions-zones).| us-central1-a |
-| instance_type | Select the VM instance type. For available instance types, reefer to [Machine Types](https://cloud.google.com/compute/docs/machine-types) in GCP docuemntation. |  n1-standard-4 |
+| instance_type | Select the VM instance type. For available instance types, reefer to [Machine Types](https://cloud.google.com/compute/docs/machine-types) in GCP documentation. |  n1-standard-4 |
 | ssh_pub_key | Paste your SSH public key. | ... |
 | os_user | Enter the name of the user that you would like to use to SSH to the VM. |  cloudbreak |
 | user_email | Enter the email address that you would like to use to log in to Cloudbreak. | admin@cloudbreak.com |
