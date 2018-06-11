@@ -1,9 +1,14 @@
+
 **Prerequisites**
 
-To perform these steps, you must know your access and secret key. If needed, you or your AWS administrator can generate new access and secret keys from the **IAM Console** > **Users** > select a user > **Security credentials**:
+In order to use the key-based Cloudbreak credential: 
 
-<a href="../images/cb_aws-iam_security_creds.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-iam_security_creds.png" width="650" title="IAM Console"></a>  
+* You must have an access key and secret key. For information on how to generate it, refer to [Use key-based authentication](aws-pre.md#option-1-use-key-based-authentication).  
 
+* Your AWS user must have the minimum permissions described in [CloudbreakRole](aws-pre.md#credential-role) as well as the permission to create an IAM role. 
+
+    > If you are using a corporate account and you are unable to obtain these permissions for your AWS user, you must use [role-based authentication](aws-pre.md#option-2-configure-role-based-authentication) instead of key-based authentication. If you would like to review both options, refer to [Authentication](aws-pre.md#authentication). 
+    
 **Steps**
 
 1. In the Cloudbreak web UI, select **Credentials** from the navigation pane. 

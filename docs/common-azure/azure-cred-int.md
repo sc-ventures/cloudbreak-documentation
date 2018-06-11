@@ -1,6 +1,12 @@
 
 Follow these steps to create an interactive Cloudbreak credential.
 
+**Prerequisites**
+
+Your account must have have an Owner role in order for the interactive credential creation to work.   
+
+> If your account does not have an Owner role, you must you the [app-based credential](azure-launch.md#create-app-based-credential) option instead of the interactive option. To review the requirements for both options. refer to [Prerequisites on Azure: Azure roles](azure-pre.md#azure-roles). 
+
 **Steps**
 
 1. In the Cloudbreak web UI, select **Credentials** from the navigation pane.

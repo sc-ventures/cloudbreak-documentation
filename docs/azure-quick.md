@@ -12,7 +12,7 @@ In order to launch Cloudbreak from the ARM template you must:
     * On MacOS X and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
     * On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
 
-* In order to use Cloudbreak for creating clusters, you Azure account must have the minimum permissions described in [Azure roles](azure-pre#azure-roles).      
+* In order to create a Cloudbreak credential, you Azure account must have the minimum permissions described in [Azure roles](azure-pre#azure-roles).      
     
 
 ### Launch Cloudbreak from the quickstart template 
@@ -109,7 +109,8 @@ The last task that you need to perform before you can use Cloudbreak is to [crea
 
 Before you can start using Cloudbreak to create clusters, you must create a Cloudbreak credential. Cloudbreak credential allows Cloudbreak to authenticate with your Azure account and provision resources on your behalf.
 
-There are two ways for Cloudbreak to authenticate with Azure: interactive and app-based. Since the interactive approach is simpler, the steps below describe how to configure an interactive Cloudbreak credential. If you would like to review both options, refer to [Create Cloudbreak credential](azure-launch#create-cloudbreak-credential). 
+There are two ways for Cloudbreak to authenticate with Azure: interactive and app-based. Since the interactive approach is simpler, the steps below describe how to configure an interactive Cloudbreak credential. 
+
 
 {!docs/common-azure/azure-cred-int.md!}
 

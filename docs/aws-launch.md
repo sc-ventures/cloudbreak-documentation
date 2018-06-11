@@ -22,14 +22,18 @@ As part of the [prerequisites](aws-pre.md#authentication), you had two options t
 
 #### Create key-based credential
 
+Follow these steps to create a key-based Cloudbreak credential. 
+
 {!docs/common-aws/aws-cred-key.md!} 
  
 
 #### Create role-based credential
 
-To perform these steps, you must know the **IAM Role ARN** corresponding to the "CredentialRole" (configured as a [aws-pre.md#prerequisite](#authentication)). 
+Follow these steps to create a role-based Cloudbreak credential. 
 
-> In case you have not created the CredentialRole yet, follow the steps in [Create CredentialRole](aws-pre.md#create-credentialrole).  
+**Prerequisites**
+
+To perform these steps, you must know the **IAM Role ARN** corresponding to the "CredentialRole" (configured as part of [prerequisites](aws-pre.md#prerequisites). In case you have not created the CredentialRole yet, follow the steps in [Create CredentialRole](aws-pre.md#create-credentialrole).  
 
 **Steps**
 

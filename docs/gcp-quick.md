@@ -49,7 +49,11 @@ Computer Engine roles:
 * Compute Image User     
 * Compute Instance Admin 
 * Compute Network Admin  
-* Compute Security Admin 
+* Compute Security Admin  
+
+Storage roles:
+
+* Storage > Storage Admin 
 
 Other roles: 
 
@@ -159,6 +163,12 @@ deploymentIp  35.224.36.96</pre>
    
 
 ### Create Cloudbreak credential
+
+Cloudbreak works by connecting your GCP account through this credential, and then uses it to create resources on your behalf. Before you can start provisioning cluster using Cloudbreak, you must create a [Cloudbreak credential](concepts.md#cloudbreak-credential).  
+
+**Prerequisites**
+
+As described in [Prerequisites](#service-account), in order to launch clusters on GCP via Cloudbreak, you must have a service account that Cloudbreak can use to create resources.   
 
 {!docs/common-gcp/gcp-cred.md!}
 

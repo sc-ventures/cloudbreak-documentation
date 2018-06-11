@@ -8,14 +8,12 @@ In order to launch Cloudbreak from the CloudFormation template you must:
 
 * Have an existing an AWS account. If you don't have an account, you can create one at [https://aws.amazon.com/](https://aws.amazon.com/).
 
-* Import an existing key pair or generate a new key pair in the AWS region which you are planning to use for launching Cloudbreak and clusters. If you don't have a key pair, use [these](aws-pre.md#ssh-key-pair) steps to create or import a key pair. 
-
-* Your AWS account must have the minimum permissions described in [CloudbreakRole](aws-pre.md#credential-role) as well as the permission to create an IAM role.  
+* Import an existing SSH key pair or generate a new key pair in the AWS region which you are planning to use for launching Cloudbreak and clusters. If you don't have a key pair, use [these](aws-pre.md#ssh-key-pair) steps to create or import a key pair.    
 
 
 ### Launch Cloudbreak from the quickstart template  
 
-Launch Cloudbreak from an CloudFormation template by using the following steps. This is the quickstart deployment option. 
+Launch Cloudbreak from a CloudFormation template by using the following steps. This is the quickstart deployment option. 
 
 **Steps** 
 
@@ -174,9 +172,6 @@ Follow these steps to obtain Cloudbreak VM's public IP address and log in to the
 
 Before you can start using Cloudbreak to create clusters, you must create a Cloudbreak credential. Cloudbreak credential allows Cloudbreak to authenticate with your AWS account and provision resources on your behalf.
 
-There are two ways for Cloudbreak to authenticate with AWS: key-based and role-based. Since the key-based approach is faster, the steps below describe how to configure a key-based Cloudbreak credential.  
-
-If you would like to review both options, refer to [Authentication](aws-pre#authentication). 
 
 {!docs/common-aws/aws-cred-key.md!}
 

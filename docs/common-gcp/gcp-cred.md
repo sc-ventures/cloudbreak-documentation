@@ -1,11 +1,5 @@
 
 
-Cloudbreak works by connecting your GCP account through this credential, and then uses it to create resources on your behalf. Before you can start provisioning cluster using Cloudbreak, you must create a [Cloudbreak credential](concepts.md#cloudbreak-credential).  
-
-**Prerequisites**
-
-In order to launch clusters on GCP via Cloudbreak, you must have a service account that Cloudbreak can use to create resources.  
-
 **Steps**
 
 1. In the Cloudbreak web UI, select **Credentials** from the navigation pane. 
