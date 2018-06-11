@@ -44,11 +44,7 @@ pages:
       - Prerequisites: os-pre.md
       - Launch on OpenStack: os-launch.md
       - Create a cluster: os-create.md
-    - Using Cloudbreak:
-      - Set up a data lake: data-lake.md 
-      - Access cluster: clusters-access.md
-      - Manage cluster: clusters-manage.md
-      - Access Hive via JDBC: hive.md   
+    - Using Cloudbreak: 
       - Advanced cluster options:
         - Configure the gateway: gateway.md 
         - Use custom blueprints: blueprints.md
@@ -75,6 +71,11 @@ pages:
         - Disable providers: cb-disable-provider.md
         - Change default Cloudbreak ports: cb-ports.md  
         - Modify settings in Cloudbreak Profile: cb-profile.md 
+      - Creating an HDF cluster: hdf.md  
+      - Setting up a data lake: data-lake.md 
+      - Accessing a cluster: clusters-access.md
+      - Managing clusters: clusters-manage.md
+      - Accessing Hive via JDBC: hive.md  
       - Cloudbreak CLI: 
         - Install the CLI: cli-install.md
         - Get started with the CLI: cli-get-started.md
