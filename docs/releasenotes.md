@@ -6,7 +6,9 @@ Cloudbreak 2.7.0 is a general availability release, which is suitable for produc
 
 ____________________________
 
-#### New features
+#### New features (2.7)
+
+The following features are introduced in Cloudbreak 2.7: 
 ____________________________
 
 [Comment]: <> (There are so many new features in this release that maybe we should create multiple categories of new features?)
@@ -15,13 +17,14 @@ ____________________________
 
 ##### **Launching Cloudbreak from Templates**
 
-Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates on AWS and Google Cloud; On Azure, this option was previously available. These are quickstart options, not suitable for production. To launch Cloudbreak by using these quickstart options refer to [Quickstart on AWS](aws-quick.md), [Quickstart on Azure](azure-quick.md), and [Quickstart on GCP](gcp-quick.md). To review current Cloudbreak deployment options (quickstart and production), refer to [Deployment options](deployment-options.md).    
+Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates on AWS and Google Cloud; On Azure, this option was previously available. These are quickstart options, not suitable for production.  
+To launch Cloudbreak by using these quickstart options refer to [Quickstart on AWS](aws-quick.md), [Quickstart on Azure](azure-quick.md), and [Quickstart on GCP](gcp-quick.md). To review current Cloudbreak deployment options (quickstart and production), refer to [Deployment options](deployment-options.md).    
 ____________________________
 
 
 ##### **Gateway for HDP Clusters**
 
-To access HDP cluster resources, a gateway powered by Apache Knox is configured. When creating a cluster, you can optionally instruct Cloudbreak to install and configure this gateway to protect access to the cluster resources. By default, transport layer security on the gateway endpoint is via a self-signed SSL certificate on port 8443. By default, Ambari is proxied through the gateway.
+To access HDP cluster resources, a gateway powered by Apache Knox is configured. When creating a cluster, you can optionally instruct Cloudbreak to install and configure this gateway to protect access to the cluster resources. By default, transport layer security on the gateway endpoint is via a self-signed SSL certificate on port 8443. By default, Ambari is proxied through the gateway.  
 For more information, refer to [Configuring a Gateway](gateway.md). 
 ____________________________
 
@@ -55,15 +58,15 @@ ____________________________
 ##### **Dynamic Blueprints**
 
 Cloudbreak allows you to create special "dynamic" blueprints which include templating: the values of the variables specified in the blueprint are dynamically replaced in the cluster creation phase, picking up the parameter values that you provided in the Cloudbreak UI or CLI.
-Cloudbreak supports [mustache](https://mustache.github.io/) kind of templating with {{{variable}}} syntax. Dynamic blueprints offer the ability to manage external sources (such as RDBMS and LDAP/AD) outside of your blueprint
-
-For more information, refer to [Dynamic Blueprints](concepts.md#dynamic-blueprints) and [Creating a dynamic blueprint](blueprints.md#creating-a-dynamic-blueprint). 
+Dynamic blueprints offer the ability to manage external sources (such as RDBMS and LDAP/AD) outside of your blueprint.  
+For more information, refer to [Dynamic Blueprints](concepts.md#dynamic-blueprints) and [Creating dynamic blueprints](blueprints.md#creating-dynamic-blueprints). 
 ____________________________
 
 
 ##### **Retrying Failed Cluster**
 
-When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced. For more information, refer to [Retry a cluster](clusters-manage#retry-a-cluster) and [CLI](cli-reference.md) documentation.
+When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced.  
+For more information, refer to [Retry a cluster](clusters-manage#retry-a-cluster) and [CLI](cli-reference.md) documentation.
 ____________________________
 
 
@@ -75,7 +78,22 @@ ____________________________
 
 ##### **Support for JSON Key on Google Cloud**
 
-Cloudbreak introduces support for Google Cloud's service account JSON key. Since activating service accounts with P12 private keys has been deprecated in the Cloud SDK, we recommend using JSON keys. For more information, refer to [GCP Prerequisites](gcp-pre#service-account) and [Create Cloudbreak credential](gcp-launch.md#create-cloudbreak-credential). 
+Cloudbreak introduces support for Google Cloud's service account JSON key. Since activating service accounts with P12 private keys has been deprecated in the Cloud SDK, we recommend using JSON private keys.  
+For updated instructions for creating a Cloudbreak credential, refer to [Create Cloudbreak credential](gcp-launch.md#create-cloudbreak-credential). 
+____________________________
+
+
+##### **Instructions for Using Custom Hostnames on AWS** 
+
+New documentation is available for using custom hostnames based on DNS for clusters running on AWS.  
+For instructions, refer to [Using custom hostnames based on DNS](hostnames.md). 
+____________________________
+
+
+##### **Viewing Cluster Blueprints**
+
+Cloudbreak includes a useful option to view blueprints of a future cluster (from the create cluster wizard) or an existing cluster (from cluster details).  
+For more information, refer to [View cluster blueprints](clusters-access.md#view-cluster-blueprints). 
 ____________________________
 
 
@@ -85,53 +103,24 @@ Cloudbreak introduces the ability to sort and filter resource tables that list r
 ____________________________
 
 
-##### **Instructions for Using Custom Hostnames on AWS** 
+#### New features (2.6 and 2.5)
 
-New documentation is available for using custom hostnames based on DNS for the cluster nodes on AWS. Refer to [Using custom hostnames based on DNS](hostnames.md). 
-____________________________
-
-
-##### **Viewing Cluster Blueprint**
-
-Cloudbreak includes a useful option to view blueprints of a future cluster (from the create cluster wizard) or an existing cluster (from cluster details):
-
-* To view a cluster blueprint from the create cluster wizard, on the last page of the wizard, select **Show blueprint**.    
-
-* To view a cluster blueprint for an existing cluster, navigate to cluster details, and from the **ACTIONS** menu, select **Show blueprint**. 
-____________________________
-
+The following features originally introduced in Cloudbreak 2.6 and 2.5 TP are now part of Cloudbreak 2.7 GA: 
 
 [Comment]: <> (2.6 and 2.5 features)
 
-
-##### **Creating Flow Management Clusters**
-
-Cloudbreak introduces the ability to create HDF flow management cluster with Apache NiFi and NiFi Registry. To help you get started, Cloudbreak provides a new built-in **Flow Management: Apache NiFi** blueprint.
-
-When creating a Flow Management cluster from the default blueprint, make sure to do the following:
-
-* Place the Ambari Server on the "Services" host group.     
-* When creating a cluster, open 9091 TCP port on the NiFi host group. Without it, you will be unable to access the NiFi web UI.   
-* When creating a cluster, open port 61443 on the Services host group. This port is used by NiFi Registry.      
-* When creating the NiFi Registry controller service in NiFi, the internal hostname has to be used, `e.g. https://ip-1-2-3-4.us-west-2.compute.internal:61443`   
-* Enable Kerberos. You can either use your own kerberos or select for Cloudbreak to create a test KDC.  
-* Although Cloudbreak allows cluster scaling (including autoscaling), scaling is not supported by NiFi. Downscaling NiFi clusters is not supported - as it can result in data loss when a node is removed that has not yet processed all the data on that node. There is also a known issue related to scaling listed in the [Known Issues](#known-issues) below.  
-
-For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
-To get started creating NiFi clusters, refer to the following [HCC post](https://community.hortonworks.com/articles/182221/create-a-nifi-cluster-on-aws-azure-google-or-opens.html).  
 ____________________________
 
 
-##### **Creating HDF Messaging Management Clusters**
+##### **Creating HDF Clusters**
 
-Cloudbreak introduces the ability to create HDF Messaging clusters, including Apache Kafka. To help you get started, Cloudbreak provides a new built-in **HDF Messaging Management: Apache Kafka** blueprint.
+Cloudbreak introduces the ability to create HDF flow management clusters with Apache NiFi and NiFi Registry, as well as HDF messaging clusters with Apache Kafka. To help you get started, Cloudbreak provides two new built-in blueprints:  
 
-When creating a Messaging Management cluster from the default blueprint, make sure to do the following:
+* Flow Management: Apache NiFi  
+* HDF Messaging Management: Apache Kafka   
 
-* If using the default blueprint, place the Ambari Server on the "Services" host group.  
-* When creating a cluster, open 3000 TCP port on the Services host group for Grafana.     
-
-For the list of available blueprints, refer to [Default Cluster Configurations](index.html#default-cluster-configurations).  
+For more information, refer to [Creating HDF clusters](hdf.md). 
+ 
 ____________________________
 
 
@@ -143,13 +132,15 @@ ____________________________
 
 ##### **Using External Databases for Cluster Services**
 
-You can register an existing external RDBMS in the Cloudbreak UI or CLI so that it can be used for those cluster components which have support for it. After the RDBMS has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters. For more information, refer to [Register an External Database](external-db.md).  
+You can register an existing external RDBMS in the Cloudbreak UI or CLI so that it can be used for those cluster components which have support for it. After the RDBMS has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.   
+For more information, refer to [Register an External Database](external-db.md).  
 ____________________________
 
 
 ##### **Using External Authentication Sources (LDAP/AD) for Clusters**
 
-You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters. For more information, refer to [Register an Authentication Source](external-ldap.md).   
+You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.   
+For more information, refer to [Register an Authentication Source](external-ldap.md).   
 ____________________________  
 
 
@@ -180,18 +171,19 @@ For more information, refer to [Using management packs](mpacks.md).
 ____________________________
 
 #### New features (TP)
+
+The following features are introduced in Cloudbreak 2.7 as technical preview; these features are for evaluation only and are not suitable for production: 
 ____________________________
 
 
 ##### **Technical Preview of the Data Lake Option**
 
-Cloudbreak allows you to create a long-running data lake cluster and attach it to a short-running cluster. Refer to [](). 
+Cloudbreak allows you to create a long-running data lake cluster and attach it to a short-running cluster. Refer to [Setting up a data lake](data-lake.md). 
 
 
 ##### **Technical Preview of Gateway SSO**
 
-As part of Apache Knox-powered gateway introduced in Cloudbreak 2.7, you can configure the gateway as the SSO identity provider. Refer to [](). 
-
+As part of Apache Knox-powered gateway introduced in Cloudbreak 2.7, you can configure the gateway as the SSO identity provider. Refer to [Configure single sign-on (SSO)](gateway.md#configure-single-sign-on-sso). 
 
 
 ____________________________
@@ -250,25 +242,10 @@ ____________________________
 
 ##### **Install Mysql Connector as a Recipe**
 
-Starting from Ambari version 2.6, if you have 'MYSQL_SERVER' component in your blueprint, then you have to [manually install and register](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.0/bk_ambari-administration/content/using_hive_with_mysql.html) the 'mysql-connector-java.jar'.
+Starting with Ambari version 2.6, if you have 'MYSQL_SERVER' component in your blueprint, then you have to [manually install and register](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.0/bk_ambari-administration/content/using_hive_with_mysql.html) the 'mysql-connector-java.jar'.
 
-If you would like to automate this process in Cloudbreak, you can apply the following "pre-ambari-start" recipe (after ensuring that the version of the connector is as desired):
+If you would like to automate this process in Cloudbreak, you can apply the [following recipe](recipes.md#install-mysql-connector-recipe).  
 
-<pre>
-#!/bin/bash
-
-download_mysql_jdbc_driver() {
-  wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.39.tar.gz -P /tmp
-  tar xzf /tmp/mysql-connector-java-5.1.39.tar.gz -C /tmp/
-  cp /tmp/mysql-connector-java-5.1.39/mysql-connector-java-5.1.39-bin.jar /opt/jdbc-drivers/mysql-connector-java.jar
-}
-
-main() {
-  download_mysql_jdbc_driver
-}
-
-main
-</pre>
 
 ____________________________
 
@@ -280,7 +257,6 @@ ____________________________
 Default Ambari version 2.6.2.0  
 Default HDP version 2.6.5.0-292
 Default HDF version 3.1.2.0  
-
 
 
 

@@ -60,4 +60,32 @@ In order to use your recipe for clusters, you must register it first by using th
 5. When creating a cluster, you can select previously added recipes on the advanced **Cluster Extensions** page of the create cluster wizard. 
 
 
+### Reusable rceipes 
+
+#### Install mysql connector recipe
+
+Starting from Ambari version 2.6, if you have 'MYSQL_SERVER' component in your blueprint, then you have to [manually install and register](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.0/bk_ambari-administration/content/using_hive_with_mysql.html) the 'mysql-connector-java.jar'.
+
+If you would like to automate this process in Cloudbreak:
+
+* Review the recipe content to ensure that the version of the connector provided in the recipe is as desired; if it is not adjust the version.     
+* Apply the recipe as "pre-ambari-start".  
+
+The recipe content is:
+
+<pre>
+#!/bin/bash
+
+download_mysql_jdbc_driver() {
+  wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.39.tar.gz -P /tmp
+  tar xzf /tmp/mysql-connector-java-5.1.39.tar.gz -C /tmp/
+  cp /tmp/mysql-connector-java-5.1.39/mysql-connector-java-5.1.39-bin.jar /opt/jdbc-drivers/mysql-connector-java.jar
+}
+
+main() {
+  download_mysql_jdbc_driver
+}
+
+main
+</pre>
 
