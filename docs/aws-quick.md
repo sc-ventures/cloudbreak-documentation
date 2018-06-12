@@ -140,7 +140,7 @@ Launch Cloudbreak from a CloudFormation template by using the following steps. T
     
     <div class="note">
     <p class="first admonition-title">Cleaning up after a failed deployment</p>
-    <p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-aws">Delete Cloudbreak on AWS</a></p>
+    <p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-aws">Delete Cloudbreak on AWS</a>.</p>
 </div>
 
 
@@ -175,7 +175,7 @@ Before you can start using Cloudbreak to create clusters, you must create a Clou
 
 {!docs/common-aws/aws-cred-key.md!}
 
-### Create cluster     
+### Create a cluster     
 
 {!docs/common-general-quick/create-quick.md!}
  

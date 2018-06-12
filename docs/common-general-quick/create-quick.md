@@ -14,7 +14,7 @@ Use these steps to create a cluster. This section only covers minimal steps requ
     * **Region**: Select the region in which you would like to launch your cluster. 
     * **Cluster Type**: Choose one of default cluster configurations.  
 
-4. Click **Next** 3 times to navigate to the **Security Page**. You do not need to enter anything on the **Hardware and Storage** and **Network** because by default Cloudbreak suggests the instance types, storage, and network to use (a new network and subnet is created by default).   
+4. Click **Next** three times to navigate to the **Security Page**. You do not need to enter anything on the **Hardware and Storage** and **Network** because by default Cloudbreak suggests the instance types, storage, and network to use (a new network and subnet is created by default).   
 
 5. One the **Security** page, provide the following:
 

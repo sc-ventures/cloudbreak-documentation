@@ -12,7 +12,7 @@ In order to launch Cloudbreak from the ARM template you must:
     * On MacOS X and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
     * On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
 
-* In order to create a Cloudbreak credential, you Azure account must have the minimum permissions described in [Azure roles](azure-pre#azure-roles).      
+* In order to create a Cloudbreak credential, you Azure account must have the minimum permissions described in [Azure roles](azure-pre.md#azure-roles).      
     
 
 ### Launch Cloudbreak from the quickstart template 
@@ -66,7 +66,7 @@ Launch Cloudbreak from an Azure Resource Manager (ARM) template by using the fol
     
     <div class="note">
     <p class="first admonition-title">Cleaning up after a failed deployment</p>
-    <p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-azure">Delete Cloudbreak on Azure</a></p>
+    <p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-azure">Delete Cloudbreak on Azure</a>.</p>
 </div>
     
     
@@ -98,7 +98,7 @@ Follow these steps to obtain Cloudbreak VM's public IP address and log in to the
 
     <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
 
-The last task that you need to perform before you can use Cloudbreak is to [create a cloudbreak credential](#create-cloudbreak-credential).     
+The last task that you need to perform before you can use Cloudbreak is to [create Cloudbreak credential](#create-cloudbreak-credential).     
 
 
 **Related links**  
@@ -114,6 +114,6 @@ There are two ways for Cloudbreak to authenticate with Azure: interactive and ap
 
 {!docs/common-azure/azure-cred-int.md!}
 
-### Create cluster     
+### Create a cluster     
 
 {!docs/common-general-quick/create-quick.md!}

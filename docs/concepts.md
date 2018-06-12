@@ -74,9 +74,9 @@ The external sources that can be registered in Cloudbreak include:
 Once you register an external source, you may reuse it for multiple clusters. 
 
 **Related links**  
-[Registering external database](external-db.md)   
-[Registering external authentication souce](external-ldap.md)   
-[Registering external proxy](external-proxy.md)  
+[Using an external database for cluster services](external-db.md)   
+[Using an external authentication source for clusters](external-ldap.md)   
+[Register a proxy](external-proxy.md)  
 [Using custom images](images.md)      
 
 

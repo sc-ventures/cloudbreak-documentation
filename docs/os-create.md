@@ -40,7 +40,7 @@
 
 
 <div class="next">
-<a href="../os-clusters-access/index.html">Next: Access Cluster</a>
+<a href="../clusters-access/index.html">Next: Access Cluster</a>
 </div>
 
 

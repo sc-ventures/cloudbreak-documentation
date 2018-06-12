@@ -9,7 +9,7 @@ In general, Cloudbreak offers a quickstart option, as well as a production deplo
 [Source]: <> (Source https://docs.google.com/presentation/d/1vo3aZVMX0vx9gHZ5hALgxkGHw3l1PW-bGbxaYjk57Uo/edit#slide=id.p1)
 
 * The **quickstart option** allows you to get started with Cloudbreak quickly, but offers limited flexibility. Use this option for getting started with Cloudbreak. This option is not suitable a production.        
-* The **production option** is less automated, but offers more configurability. This option is recommended when your production environments. For more information about this option, refer to [Production deployment option](#production-deployment-option).
+* The **production option** is less automated, but offers more configurability. This option is recommended when your production environments. 
 
 #### Deployment option cheatsheet
 
@@ -44,7 +44,7 @@ This option utilizes the following AWS services and provisions the following res
 |  [AWS IAM](https://aws.amazon.com/documentation/iam/) | AWS Identity & Access Management (IAM) is used to control access to AWS services and resources. | Cloudbreak provisions the CloudbreakQuickstartRole IAM role that is used during the quickstart deployment. |  
 | [AWS Lambda](https://aws.amazon.com/documentation/lambda/) | This is a utility service for running code in AWS. | Cloudbreak uses AWS Lambda is for running code when deploying Cloudbreak. |  
 
-To launch Cloudbreak on AWS by using the quickstart option, refer to [Launch Cloubreak from template (AWS)](aws-quick.md).   
+To launch Cloudbreak on AWS by using the quickstart option, refer to [Quickstart on AWS](aws-quick.md).   
 
 
 #### Quickstart option for Azure     
@@ -62,7 +62,7 @@ On Azure, resources are organized by using resource groups. When you launch Clou
 * [Network interface](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface) (NIC) attached to the VM provides the interconnection between the VM and the underlying software network.  
 * [Blob storage container](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) is created to store Cloudbreak Deployer OS disk's data.  
 
-To launch Cloudbreak on Azure by using the quickstart option, refer to [Launch Cloudbreak from template (Azure)](azure-quick.md).
+To launch Cloudbreak on Azure by using the quickstart option, refer to [Quickstart on Azure](azure-quick.md).
 
 #### Quickstart option for GCP   
 
@@ -80,7 +80,7 @@ The following basic resources are provisioned on you GCP account:
 
 The config and config waiter are scripts used for deploying Cloudbreak. The startup config script is watched by the waiter script and updated when the deployment in up and running or if it failed to start. The startup waiter script keeps the deployment "in-progress" until the startup script that's running on the created machine update the cbd-deployment-startup-config value to "success" or "failed".
 
-To launch Cloudbreak on GCP by using the quickstart option, refer to [Launch Cloudbreak from template (GCP)](gcp-quick.md).
+To launch Cloudbreak on GCP by using the quickstart option, refer to [Quickstart on GCP](gcp-quick.md).
 
 
 #### Production deployment option  

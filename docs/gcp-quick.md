@@ -146,7 +146,7 @@ deploymentIp  35.224.36.96</pre>
 
     <div class="note">
     <p class="first admonition-title">Cleaning up after a failed deployment</p>
-    <p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-gcp">Delete Cloudbreak on GCP</a></p>
+    <p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-gcp">Delete Cloudbreak on GCP</a>.</p>
 </div>
 
 1. The last output should be the the deploymentIp. Copy the IP address and paste it in the browser so that you can log in to the Cloudbreak web UI.                   
@@ -170,11 +170,11 @@ Cloudbreak works by connecting your GCP account through this credential, and the
 
 **Prerequisites**
 
-As described in [Prerequisites](#service-account), in order to launch clusters on GCP via Cloudbreak, you must have a service account that Cloudbreak can use to create resources.   
+As described in the [Service account](#service-account) section in the prerequisites, in order to launch clusters on GCP via Cloudbreak, you must have a service account that Cloudbreak can use to create resources.   
 
 {!docs/common-gcp/gcp-cred.md!}
 
 
-### Create cluster     
+### Create a cluster     
 
 {!docs/common-general-quick/create-quick.md!}

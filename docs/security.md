@@ -76,7 +76,7 @@ When launching Cloudbreak on AWS, you must select a way for Cloudbreak to authen
 {!docs/common/aws-launch-authentication-role-based-intro.md!}
 
 **Related links**  
-[Meet the prerequisites: Authentication](aws-launch.md#authentication)  
+[Authentication](aws-pre.md#authentication)  
 
 
 #### Authentication with Azure
@@ -98,7 +98,7 @@ You have two options:
 After launching Cloudbreak on GCP, you are required to register a service account in Cloudbreak via creating a Cloudbreak credential. Cloudbreak uses this account to authenticate with the GCP identity management service.
 
 **Related links**  
-[Meet the prerequisites: Service account](gcp-launch.md#service-account)  
+[Service account](gcp-pre.md#service-account)  
 
 
 #### Authentication with OpenStack 

@@ -66,7 +66,7 @@ ____________________________
 ##### **Retrying Failed Cluster**
 
 When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced.  
-For more information, refer to [Retry a cluster](clusters-manage#retry-a-cluster) and [CLI](cli-reference.md) documentation.
+For more information, refer to [Retry a cluster](clusters-manage.md#retry-a-cluster) and [CLI](cli-reference.md) documentation.
 ____________________________
 
 
