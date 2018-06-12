@@ -34,4 +34,4 @@ In order to use the key-based Cloudbreak credential:
 5. Your credential should now be displayed in the **Credentials** pane.
 
     
-    Congratulations! You've successfully launched Cloudbreak and create a Cloudbreak credential. Now it's time to [create a cluster](aws-create.md). 
+    Congratulations! You've successfully launched Cloudbreak and create a Cloudbreak credential. Now you can start creating clusters. 
