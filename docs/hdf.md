@@ -13,7 +13,7 @@ When creating a Flow Management cluster from the default blueprint, make sure to
 * You should either use your **existing LDAP** or enable **Kerberos**.      
     * If using **LDAP**, you must first [register it as an external authentication source](external-ldap.md) in the Cloudbreak web UI.   
     * If using **Kerberos**, you can either use your own Kerberos (for production) or select for Cloudbreak to create a test KDC (for evaluation only).  
-*  When creating a HDF cluster with LDAP, on the **Security** page, must must specify the **Cluster User** and **Password** that is a valid user in the LDAP.      
+*  When creating a HDF cluster with LDAP, on the **Security** page, must must specify the **Cluster User** and **Password** that is a valid user in the LDAP. This is a limitation with NiFi/NiFi Registry. Only one login provider can be configured for those components, and if an LDAP is supplied, then the login provider is set to LDAP; Consequently, this requires that the initial admin be in the given LDAP.      
 * When creating the NiFi Registry controller service in NiFi, the internal hostname must be used, `e.g. https://ip-1-2-3-4.us-west-2.compute.internal:61443`   
 * Although Cloudbreak allows cluster scaling (including autoscaling), scaling is not supported by NiFi:       
     * **Downscaling NiFi clusters is not supported** - as it can result in data loss when a node is removed that has not yet processed all the data on that node.       
