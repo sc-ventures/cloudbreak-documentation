@@ -44,7 +44,7 @@ Setting up a data lake involves the following steps:
 | [Meet the prerequisites](#prerequisites):<ul><li>Create two external databases (one for Hive metastore and one for Ranger)</li><li>Create an external authentication source for LDAP/AD</li><li>Prepare a cloud storage location (depending on your cloud provider, this should be, on Amazon S3, Azure's ADLS or WASB, or GCS) for default Hive warehouse directory and Ranger audit logs)</li></ul>|You must create these resources on your own, outside of Cloudbreak. You may use one database instance and create two databases.|
 | [Register the two databases and LDAP](#register-the-databases-and-ldap-in-the-cloudbreak-web-ui) | In the Cloudbreak web UI > External Sources |
 | [Create a data lake](#create-a-data-lake) | In the Cloudbreak web UI > Create cluster |
-| [Create clusters attached to the data lake](#create-attached-clusters) | In the Cloudbreak web UI > Create cluster |
+| [Create clusters attached to the data lake](#create-attached-hdp-clusters) | In the Cloudbreak web UI > Create cluster |
 
 ### Prerequisites
 
@@ -112,7 +112,7 @@ Create a data lake by using the create cluster wizard. Among other information, 
 As an outcome of this step, you should have a running data lake.
 
 
-### Create attached clusters
+### Create attached HDP clusters
 
 Once your data lake is running, you can start creating clusters attached to the data lake. Follow these general steps to create an cluster attached to a data lake. 
 

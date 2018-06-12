@@ -71,7 +71,7 @@ Here are two examples of using tools to connect to Hive via JDBC:
 **Step 2: Create a Connection to Hive**
 
 1. From the **Select Connection Profile** window, select the “Hortonworks Hive JDBC" from the **Driver** dropdown.  
-2. For **URL** , enter the URL to the cluster instance where gateway is instlaled, such as `jdbc:hive2://52.52.98.57:8443/` (where `52.52.98.57` is the public hostname of your gateway node).  
+2. For **URL** , enter the URL to the cluster instance where gateway is installed, such as `jdbc:hive2://52.52.98.57:8443/` (where `52.52.98.57` is the public hostname of your gateway node).  
 3. For **Username** and **Password**, enter the credentials that you created when creating your cluster.
 4. Click **Extended Properties** and add the following properties:
 

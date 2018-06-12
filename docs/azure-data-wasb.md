@@ -2,7 +2,7 @@
 
 Hortonworks Data Platform (HDP) supports reading and writing block blobs and page blobs from and to *Windows Azure Storage Blob (WASB)* object store, as well as reading and writing files stored in an *Azure Data Lake Storage (ADLS)* account.  
 
-Windows Azure Storage Blob (WASB) is an object store service available on Azure. WASB is not supported as a default file system, but access to data in WASB ia possible via the wasb connector.
+Windows Azure Storage Blob (WASB) is an object store service available on Azure. WASB is not supported as a default file system, but access to data in WASB is possible via the wasb connector.
 
 These steps assume that you are using an HDP version that supports the wasb cloud storage connector (HDP 2.6.1 or newer).  
 

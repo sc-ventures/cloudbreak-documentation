@@ -38,7 +38,7 @@ Cloudbreak supports the following types of images for launching clusters:
 
 | Image type | Description | Default images provided | Support for custom images |
 |---|---|---|---|
-| **Prewarmed Image** | By default, Cloudbreak launches clusters from prewarmed images. Prewarmed images include the operating system as well as Ambari and HDP. The Ambari and HDP version used by prewarmed images cannot be customized. No prewarmed HDF images are currently provided. | Yes (HDP only) | No |
+| **Prewarmed Image** | By default, Cloudbreak launches clusters from prewarmed images. Prewarmed images include the operating system as well as Ambari and HDP/HDF. The Ambari and HDP/HDF version used by prewarmed images cannot be customized. | Yes | No |
 | **Base Image** | Base images include default configuration and default tooling. These images include the operating system but do not include Ambari or HDP/HDF software. | Yes | Yes | 
 
 By default, Cloudbreak uses the included default **prewarmed images**, which include the operating system, as well as

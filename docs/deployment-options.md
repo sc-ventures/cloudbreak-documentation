@@ -62,7 +62,7 @@ On Azure, resources are organized by using resource groups. When you launch Clou
 * [Network interface](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface) (NIC) attached to the VM provides the interconnection between the VM and the underlying software network.  
 * [Blob storage container](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) is created to store Cloudbreak Deployer OS disk's data.  
 
-To launch Cloudbreak on Azure by using the quickstart option, refer to [Launch Cloubreak from template (Azure)](azure-quick.md).
+To launch Cloudbreak on Azure by using the quickstart option, refer to [Launch Cloudbreak from template (Azure)](azure-quick.md).
 
 #### Quickstart option for GCP   
 
@@ -100,11 +100,6 @@ This option:
  * [Launch on Azure](azure-launch.md)   
  * [Launch on GCP](gcp-launch.md)  
  * [Launch on OpenStack](os-launch.md) 
-
-
-#### Deployment on OpenStack  
-
-You must launch Cloudbreak on OpenStack manually by installing Cloudbreak deployer on your own VM (the production option). There is no available quickstart option. For production steps, refer to [Launch on OpenStack](os-launch.md).   
 
 
 ### Cluster deployment options

@@ -235,7 +235,7 @@ Perform these steps in the advanced **General Configuration** section of the cre
 2. Under **Image Type**, select "Base Image".
 2. Under **Choose Image**, select the provider-specific image that you would like to use.   
     The "os" that you specified in the image catalog will be displayed in the selection and the content of the "description" will be displayed in green.    
-3. You can leave the default entries for the Ambari and HDP repositories, or you can customize to point to specific versions of Ambari and HDP/HDF that you want to use for the cluster.  
+3. You can leave the default entries for the Ambari and HDP/HDF repositories, or you can customize to point to specific versions of Ambari and HDP/HDF that you want to use for the cluster.  
 
     <a href="../images/cb_cb-images.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-images.png" width="650" title="Cloudbreak UI"></a>
 

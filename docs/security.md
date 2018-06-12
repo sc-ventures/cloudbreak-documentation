@@ -81,7 +81,7 @@ When launching Cloudbreak on AWS, you must select a way for Cloudbreak to authen
 
 #### Authentication with Azure
 
-After launching Cloudbread on Azure, you are required to create a Cloudbreak credential, which allows Cloudbreak to authenticate with your Azure Active Directory. 
+After launching Cloudbreak on Azure, you are required to create a Cloudbreak credential, which allows Cloudbreak to authenticate with your Azure Active Directory. 
 
 You have two options:
 

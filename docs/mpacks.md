@@ -1,6 +1,6 @@
 ## Using management packs
 
-Management packs allow you to deploy a range of services to your Ambari-managed cluster. You can use a management pack to deploy a specific component or service, like HDP Search, or to deploy an entire platform, like HDF.
+Management packs allow you to deploy a range of services to your Ambari-managed cluster. You can use a management pack to deploy a specific component or service, such as HDP Search, or to deploy an entire platform, such as HDF.
 
 Cloudbreak supports using management packs, allowing you to register them in Cloudbreak web UI and CLI and then select to install them as part of cluster creation. 
 
@@ -26,7 +26,7 @@ In order to have a management stack installed for a specific cluster, you must r
 
     | Parameter | Value |
 |---|---|
-| Name | Enter a name for your managament pack. |
+| Name | Enter a name for your management pack. |
 | Description | (Optional) Enter a description.|
 | Management pack URL | Provide the URL to the location where the management pack tarball file is available. |
 | Remove all existing Ambari stack definitions prior to installing this Management Pack (“mpack --purge”).

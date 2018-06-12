@@ -22,7 +22,7 @@ To configure authentication with ADLS using the client credential, you must regi
 
     > Do not perform the *Step 3* described in this article. Cloudbreak automates this step.  
     
-2. In Cloudbreak web UI, on the advaned **Cloud Storage** page of the create a cluster wizard, select **Use existing ADLS storage**.
+2. In Cloudbreak web UI, on the advanced **Cloud Storage** page of the create a cluster wizard, select **Use existing ADLS storage**.
 
 3. Provide the following parameters for your registered application:    
 

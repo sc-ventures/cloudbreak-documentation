@@ -71,6 +71,7 @@ pages:
         - Disable providers: cb-disable-provider.md
         - Change default Cloudbreak ports: cb-ports.md  
         - Modify settings in Cloudbreak Profile: cb-profile.md 
+        - Manually import HDP and HDF images to OpenStack: os-image-import.md
       - Creating an HDF cluster: hdf.md  
       - Setting up a data lake: data-lake.md 
       - Accessing a cluster: clusters-access.md
