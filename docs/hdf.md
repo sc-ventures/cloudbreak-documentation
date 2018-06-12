@@ -2,7 +2,7 @@
 
 In general, the create cluster wizard offers prescriptive default settings that help you configure your HDF clusters properly; however, there are a few additional configuration requirements that you should be aware of. 
 
-### Creating HDF flow management clusters
+### Creating HDF Flow Management clusters
 
 When creating a Flow Management cluster from the default blueprint, make sure to do the following:
 
@@ -22,9 +22,9 @@ When creating a Flow Management cluster from the default blueprint, make sure to
     * There is a known issue related to upscaling; It is listed in the [Known Issues](#known-issues). 
     
 
-#### Troubleshooting HDF flow management cluster creation 
+#### Troubleshooting HDF Flow Management cluster creation 
 
-NiFi returns the following error when the flow management cluster is set up with an LDAP: 
+NiFi returns the following error when the Flow Management cluster is set up with an LDAP: 
 
 <pre>Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authorizer': FactoryBean threw exception on object creation; nested exception is org.apache.nifi.authorization.exception.AuthorizerCreationException: org.apache.nifi.authorization.exception.AuthorizerCreationException: Unable to locate initial admin admin to seed policies
         at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:175)
@@ -61,7 +61,7 @@ When creating a HDF cluster with LDAP, on the **Security** page of the create cl
 When creating a HDF cluster with LDAP, on the **Security** page of the create cluster wizard, specify the **Cluster User** and **Password** that is a valid user in the LDAP. 
         
 
-### Creating HDF messaging management clusters
+### Creating HDF Messaging Management clusters
 
 When creating a Messaging Management cluster from the default blueprint, make sure to do the following:
 
