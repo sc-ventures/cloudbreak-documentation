@@ -65,14 +65,14 @@ sed -i 's/SELINUX=enforcing/SELINUX=disabled/g'
 
     <pre>sestatus | grep -i mode
 Current mode:                   permissive
-Mode from config file:          permissive</pre>
+Mode from config file:          enforcing</pre>
 
-[Comment]: <> (Also we can use the "getenforce" command to get the mode of SELinux.)
-    
+> Rebooting the VM is not required, but in case you reboot, both "Current mode" and "Mode from config file" will be set to `permissive`. 
+
     
 #### Install Docker 
 
-Perform these steps to install Docker. The minimum Docker version is 1.13.1. 
+Perform these steps to install Docker. The minimum Docker version is 1.13.1. If you are using an older image that comes with an older Docker version, upgrade Docker to 1.13.1 or newer. 
 
 **Steps**    
 
