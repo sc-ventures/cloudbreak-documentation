@@ -41,7 +41,7 @@ This option utilizes the following AWS services and provisions the following res
 | [AWS CloudFormation](https://aws.amazon.com/documentation/cloudformation/) | AWS CloudFormation is used to create and manage a collection of related AWS resources. | Cloudbreak is launched by using a CloudFormation template. | 
 | [Amazon EC2](https://aws.amazon.com/documentation/ec2/) |  Amazon EC2 is used to launch a virtual machine for Cloudbreak. Security groups are used to control the inbound and outbound traffic to and from the Cloudbreak instance. | Cloudbreak automatically provisions a new VM that runs Amazon Linux, installs Docker, and launches Cloudbreak. |
 | [Amazon VPC](https://aws.amazon.com/documentation/vpc/) |  [Amazon VPC](https://aws.amazon.com/documentation/vpc/) is used to provision your own dedicated virtual network and launch resources into that network. As part of VPC infrastructure, an internet gateway and a route table are provisioned: An internet gateway is used to enable outbound access to the internet from the control plane and the clusters, and a route table is used to connect the subnet to the internet gateway. | Cloudbreak provisions a new VPC and subnet, and launches the Cloudbreak VM within it. |   
-|  [AWS IAM](https://aws.amazon.com/documentation/iam/) | AWS Identity & Access Management (IAM) is used to control access to AWS services and resources. | Cloudbreak provisions the CloudbreakRole IAM role (for role-based authentication). |  
+|  [AWS IAM](https://aws.amazon.com/documentation/iam/) | AWS Identity & Access Management (IAM) is used to control access to AWS services and resources. | Cloudbreak provisions the CloudbreakQuickstartRole IAM role that is used during the quickstart deployment. |  
 | [AWS Lambda](https://aws.amazon.com/documentation/lambda/) | This is a utility service for running code in AWS. | Cloudbreak uses AWS Lambda is for running code when deploying Cloudbreak. |  
 
 To launch Cloudbreak on AWS by using the quickstart option, refer to [Launch Cloubreak from template (AWS)](aws-quick.md).   
@@ -76,7 +76,9 @@ The following basic resources are provisioned on you GCP account:
 * Firewall   
 * VM instance  
 * Config  
-* Config waiter  
+* Config waiter   
+
+The config and config waiter are scripts used for deploying Cloudbreak. The startup config script is watched by the waiter script and updated when the deployment in up and running or if it failed to start. The startup waiter script keeps the deployment "in-progress" until the startup script that's running on the created machine update the cbd-deployment-startup-config value to "success" or "failed".
 
 To launch Cloudbreak on GCP by using the quickstart option, refer to [Launch Cloudbreak from template (GCP)](gcp-quick.md).
 
