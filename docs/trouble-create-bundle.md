@@ -1,6 +1,6 @@
-## Export logs for support case troubleshooting 
+## Create a bundle for support case troubleshooting 
 
-Cloudbreak includes the `cbd export-logs` command that allows you to export Cloudbreak logs into a bundle. When filing a support case ticket, you should attach the bundle to the support case ticket. 
+Cloudbreak includes the `cbd create-bundle` command that allows you to export Cloudbreak logs into a bundle. When filing a support case ticket, you should attach the bundle to the support case ticket. 
 
 **Steps** 
  
@@ -12,12 +12,12 @@ Cloudbreak includes the `cbd export-logs` command that allows you to export Clou
 
 3. Run the following command:  
 
-    <pre>cbd export-logs</pre>
+    <pre>cbd create-bundle</pre>
     
     This generates a file called cbd_export_timestamp.tar.gz.   
     Optionally you can customize the file name by specifying its name:  
     
-    <pre>cbd export-logs my-bundle-name</pre> 
+    <pre>cbd create-bundle my-bundle-name</pre> 
 
     The command collects all Cloudbreak logs, configurations, firewall and ip tables configurations, os type and open ports. After collection, all data is automatically anonymized and compressed into a tar.gz archive. During the process temporary folders are created and then removed. After the process finished, user can find the archive at the location where they issued the command.
     
