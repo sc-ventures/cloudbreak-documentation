@@ -65,11 +65,10 @@ To quickly get started with Cloudbreak, use the quickstart deployment option, wh
 * [Get started on Azure](azure-quick.md) 
 * [Get started on GCP](gcp-quick.md)  
 
-> This option is not available for **OpenStack**; you must launch Cloudbreak manually. Refer to [Launch on OpenStack](os-launch.md).    
+> This option is not available for **OpenStack**; you must launch Cloudbreak manually, as described in [Launch on OpenStack](os-launch.md).    
 
 In general, the steps include meeting the prerequisites, launching Cloudbreak from a template, and creating the Cloudbreak credential. After performing these steps, you can create a cluster based on one of the default blueprints.
 
-For more deployment options, refer to [Deployment options](deployment-options.md).
 
 
 <div class="note">
