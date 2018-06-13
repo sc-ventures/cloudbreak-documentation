@@ -197,7 +197,6 @@ ____________________________
 
 | Issue | Issue description | Category | Fix version |
 |---|---|---|---|
-| | | 2.7.0 |
 | BUG-101223 | After stopping and starting a cluster, cluster state is incorrectly listed as "Unhealty", even though the nodes are healthy. | 2.7.0 |
 | BUG-101230 | The `curl` command listed on the *Download CLI* page for Windows does not work on Windows and therefore it should be removed or replaced. | 2.7.0 |
 | BUG-101225 | `cb cluster repair` does not work as expected. | 2.7.0 |
