@@ -14,17 +14,17 @@ ____________________________
 Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates on AWS and Google Cloud; On Azure, this option was previously available. These are quickstart options, not suitable for production. To launch Cloudbreak by using these quickstart options refer to [Quickstart on AWS](aws-quick.md), [Quickstart on Azure](azure-quick.md), and [Quickstart on GCP](gcp-quick.md). To review current Cloudbreak deployment options (quickstart and production), refer to [Deployment options](deployment-options.md).    
 ____________________________
 
-##### **Gateway for HDP Clusters**
+##### **Protected Gateway Powered by Apache Knox**
 
 To access HDP cluster resources, a gateway powered by Apache Knox is configured. When creating a cluster, you can optionally instruct Cloudbreak to install and configure this gateway to protect access to the cluster resources. By default, transport layer security on the gateway endpoint is via a self-signed SSL certificate on port 8443. By default, Ambari is proxied through the gateway. For more information, refer to [Configuring a Gateway](gateway.md).  
 ____________________________
 
-##### **Configuring Access to ADLS, and WASB Cloud Storage**
+##### **Microsoft Azure ADLS and WASB Cloud Storage**
 
 When creating a cluster on Azure, you can configure access to ADLS and WASB from the *Cloud Storage* page of the advanced create cluster wizard. For more information, refer to [Access data in ADLS](azure-data-adls.md) and [Access data in WASB](azure-data-wasb.md).  
 ____________________________
 
-##### **Configuring Access to GCS Cloud Storage**
+##### **Google GCS Cloud Storage**
 
 When creating a cluster on Google Cloud, you can configure access to Google Cloud Storage from the *Cloud Storage* page of the advanced create cluster wizard. Authentication with GCS is via a service account. For more information, refer to [Access data in GCS](gcp-data.md).    
 ____________________________
@@ -121,7 +121,7 @@ ____________________________
 The following features are introduced in Cloudbreak 2.7 as technical preview; these features are for evaluation only and are not suitable for production.  
 ____________________________
 
-##### **Technical Preview of the Data Lake Option**
+##### **Data Lake Technical Preview**
 
 Cloudbreak allows you to create a long-running data lake cluster and attach it to a short-running cluster. To get started, refer to [Setting up a data lake](data-lake.md).  
 ____________________________
