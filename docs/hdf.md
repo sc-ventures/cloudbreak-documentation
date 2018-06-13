@@ -53,7 +53,7 @@ Caused by: org.apache.nifi.authorization.exception.AuthorizerCreationException: 
         
 **Cause**:
 
-When creating a HDF cluster with LDAP, on the **Security** page of the create cluster wizard you specified some **Cluster User** and **Password** that is not a valid user in the LDAP. 
+When creating a HDF cluster with LDAP, on the **Security** page of the create cluster wizard you specified some **Cluster User** that is not a valid user in the LDAP. 
  
 
 **Solution**:
