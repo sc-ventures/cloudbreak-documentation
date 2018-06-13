@@ -31,7 +31,7 @@ ____________________________
 
 ##### **Configuring Cloud Storage Locations**
 
-After configuring access to S3, ADLS, WASB, or GCS you can optionally use that ADLS storage account as a base storage location; this storage location is mainly for the Hive Warehouse Directory (used for storing the table data for managed tables). For more information, refer to Configure ADLS storage locations on [Amazon S3](aws-data.md#configure-s3-storage-locations), [ADLS](azure-data-adls.md#configure-adls-storage-locations), [WASB](azure-data-wasb.md#configure-wasb-storage-locations), [GCS](gcp-data.md#configure-gcs-storage-locations).  
+After configuring access to S3, ADLS, WASB, or GCS you can optionally use these as a base storage location, which is mainly for the Hive Warehouse Directory (used for storing the table data for managed tables). For more information, refer to Configure ADLS storage locations on [Amazon S3](aws-data.md#configure-s3-storage-locations), [ADLS](azure-data-adls.md#configure-adls-storage-locations), [WASB](azure-data-wasb.md#configure-wasb-storage-locations), [GCS](gcp-data.md#configure-gcs-storage-locations).  
 ____________________________
 
 ##### **Setting Custom Properties**
