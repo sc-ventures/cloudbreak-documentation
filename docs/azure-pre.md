@@ -23,7 +23,7 @@ When launching Cloudbreak, you will be required to provide your public SSH key. 
 * On MacOS X and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
 * On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
 
-{!docs/common-general-prod/vm-pre.md!}
+{!docs/common/vm-pre.md!}
 
 ### Azure roles
 

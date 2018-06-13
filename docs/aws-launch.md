@@ -4,9 +4,9 @@ These steps describe how to launch Cloudbreak on AWS for production.
 Before launching Cloudbreak on AWS, review and meet the AWS-specific [prerequisites](aws-pre.md). Next, follow the steps below.  
         
     
-{!docs/common-general-prod/vm-req.md!}
+{!docs/common/vm-req.md!}
 
-{!docs/common-general-prod/vm-launch.md!}
+{!docs/common/vm-launch.md!}
 
 
 
@@ -24,7 +24,7 @@ As part of the prerequisites, you had two options to allow Cloudbreak to authent
 
 Follow these steps to create a key-based Cloudbreak credential. 
 
-{!docs/common-aws/aws-cred-key.md!} 
+{!docs/common/aws-cred-key.md!} 
  
 
 #### Create role-based credential

@@ -4,17 +4,17 @@ These steps describe how to launch Cloudbreak on Azure for production.
 Before launching Cloudbreak on Azure, review and meet the [prerequisites](#prerequisites). Next, follow the steps below.  
 
 
-{!docs/common-general-prod/vm-req.md!}
+{!docs/common/vm-req.md!}
 
-{!docs/common-general-prod/vm-launch.md!}
+{!docs/common/vm-launch.md!}
 
 
-{!docs/common-azure/azure-cred.md!}
+{!docs/common/azure-cred.md!}
 
 
 #### Create interactive credential 
 
-{!docs/common-azure/azure-cred-int.md!}
+{!docs/common/azure-cred-int.md!}
 
 
 #### Create app-based credential

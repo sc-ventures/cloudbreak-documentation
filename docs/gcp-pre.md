@@ -35,7 +35,7 @@ For more information on creating a service account and generating a JSON key, re
 
 [Generate a new SSH key pair](faq.md#generate-ssh-key-pair) or use an existing SSH key pair. You will be required to provide it when launching the VM. 
 
-{!docs/common-general-prod/vm-pre.md!}
+{!docs/common/vm-pre.md!}
 
 ### Region and zone 
 

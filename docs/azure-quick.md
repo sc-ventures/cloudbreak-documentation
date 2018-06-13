@@ -112,8 +112,8 @@ Before you can start using Cloudbreak to create clusters, you must create a Clou
 There are two ways for Cloudbreak to authenticate with Azure: interactive and app-based. Since the interactive approach is simpler, the steps below describe how to configure an interactive Cloudbreak credential. 
 
 
-{!docs/common-azure/azure-cred-int.md!}
+{!docs/common/azure-cred-int.md!}
 
 ### Create a cluster     
 
-{!docs/common-general-quick/create-quick.md!}
+{!docs/common/create-quick.md!}

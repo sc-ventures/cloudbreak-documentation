@@ -4,9 +4,9 @@ These steps describe how to launch Cloudbreak on OpenStack. This is the only dep
 Before launching Cloudbreak on OpenStack, review and meet the [prerequisites](os-pre.md). Next, follow the steps below. 
 
 
-{!docs/common-general-prod/vm-req.md!}
+{!docs/common/vm-req.md!}
 
-{!docs/common-general-prod/vm-launch.md!} 
+{!docs/common/vm-launch.md!} 
 
 
 ### Configure a self-signed certificate

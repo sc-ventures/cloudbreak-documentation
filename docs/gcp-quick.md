@@ -172,9 +172,9 @@ Cloudbreak works by connecting your GCP account through this credential, and the
 
 As described in the [Service account](#service-account) section in the prerequisites, in order to launch clusters on GCP via Cloudbreak, you must have a service account that Cloudbreak can use to create resources.   
 
-{!docs/common-gcp/gcp-cred.md!}
+{!docs/common/gcp-cred.md!}
 
 
 ### Create a cluster     
 
-{!docs/common-general-quick/create-quick.md!}
+{!docs/common/create-quick.md!}

@@ -144,7 +144,6 @@ Launch Cloudbreak from a CloudFormation template by using the following steps. T
 </div>
 
 
-
 ### Access Cloudbreak web UI 
 
 Follow these steps to obtain Cloudbreak VM's public IP address and log in to the Cloudbreak web UI. 
@@ -173,9 +172,9 @@ Follow these steps to obtain Cloudbreak VM's public IP address and log in to the
 Before you can start using Cloudbreak to create clusters, you must create a Cloudbreak credential. Cloudbreak credential allows Cloudbreak to authenticate with your AWS account and provision resources on your behalf.
 
 
-{!docs/common-aws/aws-cred-key.md!}
+{!docs/common/aws-cred-key.md!}
 
 ### Create a cluster     
 
-{!docs/common-general-quick/create-quick.md!}
+{!docs/common/create-quick.md!}
  

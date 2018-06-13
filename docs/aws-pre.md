@@ -45,7 +45,7 @@ You need this SSH key pair to SSH to the Cloudbreak instance and start Cloudbrea
 **Related links**  
 [Creating a key pair using Amazon EC2](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) (External)
 
-{!docs/common-general-prod/vm-pre.md!}
+{!docs/common/vm-pre.md!}
 
 ### Authentication
 
@@ -73,7 +73,7 @@ If you choose this option, you can proceed to launch Cloudbreak.
 
 [Comment]: <> (TBD How IAM role will be selected when launching Cb from template.)
 
-{!docs/common-aws/aws-launch-authentication-role-based-intro.md!}
+{!docs/common/aws-launch-authentication-role-based-intro.md!}
 
 > These role and policy names are just examples. You may use different names when creating your resources.  
 

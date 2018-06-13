@@ -4,9 +4,9 @@ These steps describe how to launch Cloudbreak on GCP for production.
 Before launching Cloudbreak on Google Cloud, review and meet the [prerequisites](#prerequisites). Next, follow the steps below.  
 
 
-{!docs/common-general-prod/vm-req.md!}
+{!docs/common/vm-req.md!}
 
-{!docs/common-general-prod/vm-launch.md!}
+{!docs/common/vm-launch.md!}
  
 
 ### Create Cloudbreak credential
@@ -17,7 +17,7 @@ Cloudbreak works by connecting your GCP account through this credential, and the
 
 In order to launch clusters on GCP via Cloudbreak, you must have a service account that Cloudbreak can use to create resources. If you do not have one, refer to [Prerequisites: Service account](#service-account).  
 
-{!docs/common-gcp/gcp-cred.md!}
+{!docs/common/gcp-cred.md!}
 
 
 <div class="next">
