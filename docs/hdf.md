@@ -58,7 +58,7 @@ When creating a HDF cluster with LDAP, on the **Security** page of the create cl
 
 **Solution**:
 
-When creating a HDF cluster with LDAP, on the **Security** page of the create cluster wizard, specify the **Cluster User** and **Password** that is a valid user in the LDAP. 
+When creating a HDF cluster with LDAP, on the **Security** page of the create cluster wizard, specify a **Cluster User** that is a valid user in the LDAP. 
         
 
 ### Creating HDF Messaging Management clusters
