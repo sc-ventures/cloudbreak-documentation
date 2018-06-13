@@ -235,8 +235,6 @@ When creating a cluster, the Azure availability set feature is not available for
 
 *Workaround*:
 
-This issue will be fixed in a future release.
-
 If you would like to use the Azure availability sets feature now, you must add at least 2 instances to the host group for which you want to use them. The option Azure availability sets is available on the advanced **Hardware and Storage** page of the create cluster wizard.   
 ____________________________
 
@@ -254,6 +252,15 @@ This may mean that the volumes that you requested exceed volumes available on yo
 [Comment]: <> (This jira item was closed so it will not be fixed. Maybe add this to troubleshooting?)
 ____________________________
 
+##### (BUG-104825) **Upscaling the Compute Host Group is Not Possible on AWS**
+
+When using Ambari 2.6.2, upscaling the compute host group on AWS fails with the following error:   
+
+*New node(s) could not be added to the cluster. Reason com.sequenceiq.cloudbreak.core.ClusterException: Ambari operation failed: component: 'UPSCALE_REQUEST', requestID: '8'*
+
+The main reason for the error is that the HIVE_CLIENT cannot be installed. 
+
+____________________________
 
 ##### (BUG-93241) **Error When Scaling Multiple Host Groups**
 
