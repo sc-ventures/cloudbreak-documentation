@@ -73,7 +73,7 @@ If you choose this option, you can proceed to launch Cloudbreak.
 
 [Comment]: <> (TBD How IAM role will be selected when launching Cb from template.)
 
-{!docs/common/aws-launch-authentication-role-based-intro.md!}
+{!docs/common-aws/aws-launch-authentication-role-based-intro.md!}
 
 > These role and policy names are just examples. You may use different names when creating your resources.  
 

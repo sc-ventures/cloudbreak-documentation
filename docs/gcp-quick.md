@@ -82,7 +82,7 @@ If you already have a service account and a JSON key but you need to update the 
 
 5. Click **Create**.   
 
-6. The JSON key will be downloaded on your machine. You will need it later to create a CLoudbreak credential.  
+6. The JSON key will be downloaded on your machine. You will need it later to create a Cloudbreak credential.  
      
     
 ### Launch from the quickstart template 

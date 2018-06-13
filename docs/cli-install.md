@@ -101,6 +101,16 @@ By default, JSON format is used in command output. For example, if you run `cb l
   output: table</small></pre>
 
 
+#### Configure CLI autocomplete 
+
+The CLI includes an autocomplete option. Before you can use this option, you must download and source one of the following files:
+
+* For **bash**: bash_autocomplete  
+* For **zsh**: zsh_autocomplete  
+
+These two files are located in [https://github.com/hortonworks/cb-cli/tree/master/autocomplete/](https://github.com/hortonworks/cb-cli/tree/master/autocomplete/)  
+
+Once you've sourced the file, type the CLI commands as usual and use the **Tab** key to access the autocomplete feature.  
 
 
 <div class="next">

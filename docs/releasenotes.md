@@ -6,19 +6,13 @@ Cloudbreak 2.7.0 is a general availability release, which is suitable for produc
 
 ____________________________
 
-#### New features (2.7)
-
-The following features are introduced in Cloudbreak 2.7: 
+#### New features
 ____________________________
 
-[Comment]: <> (There are so many new features in this release that maybe we should create multiple categories of new features?)
-
-[Comment]: <> (2.7 features)
 
 ##### **Launching Cloudbreak from Templates**
 
-Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates on AWS and Google Cloud; On Azure, this option was previously available. These are quickstart options, not suitable for production.  
-To launch Cloudbreak by using these quickstart options refer to [Quickstart on AWS](aws-quick.md), [Quickstart on Azure](azure-quick.md), and [Quickstart on GCP](gcp-quick.md). To review current Cloudbreak deployment options (quickstart and production), refer to [Deployment options](deployment-options.md).    
+Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates on AWS and Google Cloud; On Azure, this option was previously available. These are quickstart options, not suitable for production. To launch Cloudbreak by using these quickstart options refer to [Quickstart on AWS](aws-quick.md), [Quickstart on Azure](azure-quick.md), and [Quickstart on GCP](gcp-quick.md). To review current Cloudbreak deployment options (quickstart and production), refer to [Deployment options](deployment-options.md).    
 ____________________________
 
 
@@ -51,64 +45,15 @@ ____________________________
 
 ##### **Setting Custom Properties**
 
-Cloudbreak allows you to add custom property variables in your blueprint for replacement (by using mustache template syntax), and then set custom properties on a per-cluster basis. For more information, refer to [Custom properties](properties.md).
+Cloudbreak allows you to add custom property variables (by using mustache template syntax) in your blueprint for replacement, and then set custom properties on a per-cluster basis. For more information, refer to [Custom properties](properties.md).
 ____________________________
 
 
-##### **Dynamic Blueprints**
+##### **Using Dynamic Blueprints**
 
 Cloudbreak allows you to create special "dynamic" blueprints which include templating: the values of the variables specified in the blueprint are dynamically replaced in the cluster creation phase, picking up the parameter values that you provided in the Cloudbreak UI or CLI.
 Dynamic blueprints offer the ability to manage external sources (such as RDBMS and LDAP/AD) outside of your blueprint.  
 For more information, refer to [Dynamic Blueprints](concepts.md#dynamic-blueprints) and [Creating dynamic blueprints](blueprints.md#creating-dynamic-blueprints). 
-____________________________
-
-
-##### **Retrying Failed Cluster**
-
-When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced.  
-For more information, refer to [Retry a cluster](clusters-manage.md#retry-a-cluster) and [CLI](cli-reference.md) documentation.
-____________________________
-
-
-##### **Setting Root Volume Size**
-
-When creating a cluster, you can modify the root volume size. This option is available on the advanced **Hardware and Storage** page of the create cluster wizard. Default is 50 GB for AWS and GCP, and 30 GB for Azure. This option is useful if your custom image requires more space than provided by default. 
-____________________________
-
-
-##### **Support for JSON Key on Google Cloud**
-
-Cloudbreak introduces support for Google Cloud's service account JSON key. Since activating service accounts with P12 private keys has been deprecated in the Cloud SDK, we recommend using JSON private keys.  
-For updated instructions for creating a Cloudbreak credential, refer to [Create Cloudbreak credential](gcp-launch.md#create-cloudbreak-credential). 
-____________________________
-
-
-##### **Instructions for Using Custom Hostnames on AWS** 
-
-New documentation is available for using custom hostnames based on DNS for clusters running on AWS.  
-For instructions, refer to [Using custom hostnames based on DNS](hostnames.md). 
-____________________________
-
-
-##### **Viewing Cluster Blueprints**
-
-Cloudbreak includes a useful option to view blueprints of a future cluster (from the create cluster wizard) or an existing cluster (from cluster details).  
-For more information, refer to [View cluster blueprints](clusters-access.md#view-cluster-blueprints). 
-____________________________
-
-
-##### **Sorting and Filtering Resource Tables in the UI**
-
-Cloudbreak introduces the ability to sort and filter resource tables that list resources such as clusters, cluster hardware, blueprints, recipes, and so on, in the Cloudbreak web UI.
-____________________________
-
-
-#### New features (2.6 and 2.5)
-
-The following features originally introduced in Cloudbreak 2.6 and 2.5 TP are now part of Cloudbreak 2.7 GA: 
-
-[Comment]: <> (2.6 and 2.5 features)
-
 ____________________________
 
 
@@ -121,12 +66,6 @@ Cloudbreak introduces the ability to create HDF flow management clusters with Ap
 
 For more information, refer to [Creating HDF clusters](hdf.md). 
  
-____________________________
-
-
-##### **Using MySQL and Oracle External Databases**
-
-Cloudbreak introduces support for creating external MySQL and Oracle databases, in addition to previously supported Postgres. For more information, refer to [Using an external database](external-db.md).   
 ____________________________
 
 
@@ -162,10 +101,53 @@ Cloudbreak allows you to modify existing credentials by using the edit option av
 ____________________________
 
 
-##### **Using Management Packs**
+##### **Instsalling Management Packs**
 
 Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation.  
 For more information, refer to [Using management packs](mpacks.md).  
+
+____________________________
+
+
+##### **Retrying Failed Cluster**
+
+When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced.  
+For more information, refer to [Retry a cluster](clusters-manage.md#retry-a-cluster) and [CLI](cli-reference.md) documentation.
+____________________________
+
+
+##### **Setting Root Volume Size**
+
+When creating a cluster, you can modify the root volume size. This option is available on the advanced **Hardware and Storage** page of the create cluster wizard. Default is 50 GB for AWS and GCP, and 30 GB for Azure. This option is useful if your custom image requires more space than provided by default. 
+____________________________
+
+
+##### **Support for JSON Key on Google Cloud**
+
+Cloudbreak introduces support for Google Cloud's service account JSON key. Since activating service accounts with P12 private keys has been deprecated in the Cloud SDK, we recommend using JSON private keys.  
+For updated instructions for creating a Cloudbreak credential, refer to [Create Cloudbreak credential](gcp-launch.md#create-cloudbreak-credential). 
+
+____________________________
+
+
+##### **Viewing Cluster Blueprints**
+
+Cloudbreak includes a useful option to view blueprints of a future cluster (from the create cluster wizard) or an existing cluster (from cluster details).  
+For more information, refer to [View cluster blueprints](clusters-access.md#view-cluster-blueprints). 
+
+____________________________
+
+##### **Cb CLI Autocomplete**
+
+Cloudbreak CLI now includes an autocomplete option. For more information, refer to [Configure CLI autocomplete](cli-install.md#configure-cli-autocomplete).  
+
+____________________________
+
+
+##### **Instructions for Using Custom Hostnames on AWS** 
+
+New documentation is available for using custom hostnames based on DNS for clusters running on AWS.  
+For instructions, refer to [Using custom hostnames based on DNS](hostnames.md). 
 
 
 ____________________________
@@ -184,6 +166,7 @@ Cloudbreak allows you to create a long-running data lake cluster and attach it t
 ##### **Technical Preview of Gateway SSO**
 
 As part of Apache Knox-powered gateway introduced in Cloudbreak 2.7, you can configure the gateway as the SSO identity provider. Refer to [Configure single sign-on (SSO)](gateway.md#configure-single-sign-on-sso). 
+
 
 
 ____________________________
@@ -214,6 +197,12 @@ ____________________________
 ##### **File System Cluster Page Was Renamed to Cloud Storage**
 
 The **File System** page of the advanced create cluster wizard was renamed to **Cloud Storage**.    
+____________________________
+
+
+##### **Sorting and Filtering Resource Tables in the UI**
+
+Cloudbreak introduces the ability to sort and filter resource tables that list resources such as clusters, cluster hardware, blueprints, recipes, and so on, in the Cloudbreak web UI.
 ____________________________
 
 
@@ -251,9 +240,11 @@ ____________________________
 #### Image catalog updates
 ____________________________
 
+Default versions provided with Cloudbreak 2.7:
+
 Default Ambari version 2.6.2.0  
 Default HDP version 2.6.5.0-292  
-Default HDF version 3.1.2.0   
+Default HDF version 3.1.1.0-35    
 
 
 
