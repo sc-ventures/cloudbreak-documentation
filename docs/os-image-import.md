@@ -12,12 +12,12 @@ These steps are no longer required, because if these images are not imported man
 
 1. Download the latest HDP image to your local machine:
 
-    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp-26-1803301748.img</small></pre>
+    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp-26-1805181129.img</small></pre>
 
 2. Set the following environment variables for the OpenStack image import:
 
-    <pre><small>export CB_LATEST_IMAGE=cb-hdp-26-1803301748.img
-export CB_LATEST_IMAGE_NAME=cb-hdp-26-1803301748.img
+    <pre><small>export CB_LATEST_IMAGE=cb-hdp-26-1805181129.img
+export CB_LATEST_IMAGE_NAME=cb-hdp-26-1805181129.img
 export OS_USERNAME=your_os_user_name
 export OS_AUTH_URL=your_authentication_url
 export OS_TENANT_NAME=your_os_tenant_name</small></pre>
@@ -37,12 +37,12 @@ These steps are no longer required, because if these images are not imported man
 
 1. Download the latest HDF image to your local machine:
 
-    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp-26-1803301748.img</small></pre>
+    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp-31-1805251001.img</small></pre>
 
 2. Set the following environment variables for the OpenStack image import:
 
-    <pre><small>export CB_LATEST_IMAGE=cb-hdp-26-1803301748.img
-export CB_LATEST_IMAGE_NAME=cb-hdp-26-1803301748.img
+    <pre><small>export CB_LATEST_IMAGE=cb-hdp-31-1805251001.img
+export CB_LATEST_IMAGE_NAME=cb-hdp-31-1805251001.img
 export OS_USERNAME=your_os_user_name
 export OS_AUTH_URL=your_authentication_url
 export OS_TENANT_NAME=your_os_tenant_name</small></pre>
@@ -62,12 +62,12 @@ These steps are no longer required, because if these images are not imported man
 
 1. Download the latest HDP image to your local machine:
 
-    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp--1803211203.img</small></pre>
+    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp--1801261636.img</small></pre>
 
 2. Set the following environment variables for the OpenStack image import:
 
-    <pre><small>export CB_LATEST_IMAGE=cb-hdp--1803211203.img
-export CB_LATEST_IMAGE_NAME=cb-hdp--1803211203.img
+    <pre><small>export CB_LATEST_IMAGE=cb-hdp--1801261636.img
+export CB_LATEST_IMAGE_NAME=cb-hdp--1801261636.img
 export OS_USERNAME=your_os_user_name
 export OS_AUTH_URL=your_authentication_url
 export OS_TENANT_NAME=your_os_tenant_name</small></pre>
