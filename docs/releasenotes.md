@@ -29,9 +29,9 @@ ____________________________
 When creating a cluster on Google Cloud, you can configure access to Google Cloud Storage from the *Cloud Storage* page of the advanced create cluster wizard. Authentication with GCS is via a service account. For more information, refer to [Access data in GCS](gcp-data.md).    
 ____________________________
 
-##### **Configuring Cloud Storage Locations**
+##### **Configuring Base Cloud Storage Locations**
 
-After configuring access to S3, ADLS, WASB, or GCS you can optionally use these as a base storage location, which is mainly for the Hive Warehouse Directory (used for storing the table data for managed tables). For more information, refer to Configure ADLS storage locations on [Amazon S3](aws-data.md#configure-s3-storage-locations), [ADLS](azure-data-adls.md#configure-adls-storage-locations), [WASB](azure-data-wasb.md#configure-wasb-storage-locations), [GCS](gcp-data.md#configure-gcs-storage-locations).  
+After configuring access to S3, ADLS, WASB, or GCS you can optionally use these as a base storage location, primarily for the Hive Warehouse Directory. For more information, refer to Configure ADLS storage locations on [Amazon S3](aws-data.md#configure-s3-storage-locations), [ADLS](azure-data-adls.md#configure-adls-storage-locations), [WASB](azure-data-wasb.md#configure-wasb-storage-locations), [GCS](gcp-data.md#configure-gcs-storage-locations).  
 ____________________________
 
 ##### **Setting Custom Properties**
