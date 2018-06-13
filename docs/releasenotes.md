@@ -46,7 +46,7 @@ Dynamic blueprints offer the ability to manage external sources (such as RDBMS a
 For more information, refer to [Dynamic Blueprints](concepts.md#dynamic-blueprints) and [Creating dynamic blueprints](blueprints.md#creating-dynamic-blueprints).   
 ____________________________
 
-##### **Creating HDF Clusters**
+##### **HDF Clusters**
 
 Cloudbreak introduces the ability to create HDF flow management clusters with Apache NiFi and NiFi Registry, as well as HDF messaging clusters with Apache Kafka. To help you get started, Cloudbreak provides two new built-in blueprints:  
 
@@ -66,7 +66,7 @@ ____________________________
 You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters. For more information, refer to [Register an Authentication Source](external-ldap.md).    
 ____________________________  
 
-##### **Configuring Cloudbreak to Use Existing LDAP/AD**
+##### **Configuring Cloudbreak to Use an Existing LDAP/AD**
 
 You can configure Cloudbreak to use your existing LDAP/AD so that you can authenticate Cloudbreak users against an existing LDAP/AD server. For more information, refer to [Configuring Cloudbreak for LDAP/AD Authentication](cb-ldap.md).  
 ____________________________
@@ -91,7 +91,7 @@ ____________________________
 When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced. For more information, refer to [Retry a cluster](clusters-manage.md#retry-a-cluster) and [CLI](cli-reference.md) documentation.  
 ____________________________
 
-##### **Root Volume Size**
+##### **Root Volume Size Configuration**
 
 When creating a cluster, you can modify the root volume size. This option is available on the advanced **Hardware and Storage** page of the create cluster wizard. Default is 50 GB for AWS and GCP, and 30 GB for Azure. This option is useful if your custom image requires more space than provided by default.   
 ____________________________
