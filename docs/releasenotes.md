@@ -16,8 +16,7 @@ ____________________________
 
 ##### **Gateway for HDP Clusters**
 
-To access HDP cluster resources, a gateway powered by Apache Knox is configured. When creating a cluster, you can optionally instruct Cloudbreak to install and configure this gateway to protect access to the cluster resources. By default, transport layer security on the gateway endpoint is via a self-signed SSL certificate on port 8443. By default, Ambari is proxied through the gateway.  
-For more information, refer to [Configuring a Gateway](gateway.md).  
+To access HDP cluster resources, a gateway powered by Apache Knox is configured. When creating a cluster, you can optionally instruct Cloudbreak to install and configure this gateway to protect access to the cluster resources. By default, transport layer security on the gateway endpoint is via a self-signed SSL certificate on port 8443. By default, Ambari is proxied through the gateway. For more information, refer to [Configuring a Gateway](gateway.md).  
 ____________________________
 
 ##### **Configuring Access to ADLS, and WASB Cloud Storage**
@@ -32,7 +31,7 @@ ____________________________
 
 ##### **Configuring Cloud Storage Locations**
 
-After configuring access to S3, ADLS, WASB, or GCS you can optionally use that ADLS storage account as a base storage location; this storage location is mainly for the Hive Warehouse Directory (used for storing the table data for managed tables). For more information refer to Configure ADLS storage locations on [Amazon S3](aws-data.md#configure-s3-storage-locations), [ADLS](azure-data-adls.md#configure-adls-storage-locations), [WASB](azure-data-wasb.md#configure-wasb-storage-locations), [GCS](gcp-data.md#configure-gcs-storage-locations).  
+After configuring access to S3, ADLS, WASB, or GCS you can optionally use that ADLS storage account as a base storage location; this storage location is mainly for the Hive Warehouse Directory (used for storing the table data for managed tables). For more information, refer to Configure ADLS storage locations on [Amazon S3](aws-data.md#configure-s3-storage-locations), [ADLS](azure-data-adls.md#configure-adls-storage-locations), [WASB](azure-data-wasb.md#configure-wasb-storage-locations), [GCS](gcp-data.md#configure-gcs-storage-locations).  
 ____________________________
 
 ##### **Setting Custom Properties**
@@ -59,14 +58,12 @@ ____________________________
 
 ##### **Using External Databases for Cluster Services**
 
-You can register an existing external RDBMS in the Cloudbreak UI or CLI so that it can be used for those cluster components which have support for it. After the RDBMS has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.   
-For more information, refer to [Register an External Database](external-db.md).  
+You can register an existing external RDBMS in the Cloudbreak UI or CLI so that it can be used for those cluster components which have support for it. After the RDBMS has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters. For more information, refer to [Register an External Database](external-db.md).  
 ____________________________
 
 ##### **Using External Authentication Sources (LDAP/AD) for Clusters**
 
-You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.   
-For more information, refer to [Register an Authentication Source](external-ldap.md).    
+You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters. For more information, refer to [Register an Authentication Source](external-ldap.md).    
 ____________________________  
 
 ##### **Configuring Cloudbreak to Use Existing LDAP/AD**
@@ -81,8 +78,7 @@ ____________________________
 
 ##### **Installing Management Packs**
 
-Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation.  
-For more information, refer to [Using management packs](mpacks.md).   
+Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation. For more information, refer to [Using management packs](mpacks.md).   
 ____________________________
 
 ##### **Modifying Existing Cloudbreak Credentials**
@@ -92,8 +88,7 @@ ____________________________
 
 ##### **Retrying Failed Cluster**
 
-When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced.  
-For more information, refer to [Retry a cluster](clusters-manage.md#retry-a-cluster) and [CLI](cli-reference.md) documentation.  
+When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced. For more information, refer to [Retry a cluster](clusters-manage.md#retry-a-cluster) and [CLI](cli-reference.md) documentation.  
 ____________________________
 
 ##### **Setting Root Volume Size**
@@ -103,17 +98,15 @@ ____________________________
 
 ##### **Support for JSON Key on Google Cloud**
 
-Cloudbreak introduces support for Google Cloud's service account JSON key. Since activating service accounts with P12 private keys has been deprecated in the Cloud SDK, we recommend using JSON private keys.  
-For updated instructions for creating a Cloudbreak credential, refer to [Create Cloudbreak credential](gcp-launch.md#create-cloudbreak-credential).   
+Cloudbreak introduces support for Google Cloud's service account JSON key. Since activating service accounts with P12 private keys has been deprecated in the Cloud SDK, we recommend using JSON private keys. For updated instructions for creating a Cloudbreak credential, refer to [Create Cloudbreak credential](gcp-launch.md#create-cloudbreak-credential).   
 ____________________________
 
 ##### **Viewing Cluster Blueprints**
 
-Cloudbreak includes a useful option to view blueprints of a future cluster (from the create cluster wizard) or an existing cluster (from cluster details).  
-For more information, refer to [View cluster blueprints](clusters-access.md#view-cluster-blueprints).   
+Cloudbreak includes a useful option to view blueprints of a future cluster (from the create cluster wizard) or an existing cluster (from cluster details). For more information, refer to [View cluster blueprints](clusters-access.md#view-cluster-blueprints).   
 ____________________________
 
-##### **Cb CLI Autocomplete**
+##### **CLI Autocomplete**
 
 Cloudbreak CLI now includes an autocomplete option. For more information, refer to [Configure CLI autocomplete](cli-install.md#configure-cli-autocomplete).   
 ____________________________
@@ -130,13 +123,13 @@ ____________________________
 
 ##### **Technical Preview of the Data Lake Option**
 
-Cloudbreak allows you to create a long-running data lake cluster and attach it to a short-running cluster. Refer to [Setting up a data lake](data-lake.md).  
+Cloudbreak allows you to create a long-running data lake cluster and attach it to a short-running cluster. To get started, refer to [Setting up a data lake](data-lake.md).  
 ____________________________
 
 
 ##### **Technical Preview of Gateway SSO**
 
-As part of Apache Knox-powered gateway introduced in Cloudbreak 2.7, you can configure the gateway as the SSO identity provider. Refer to [Configure single sign-on (SSO)](gateway.md#configure-single-sign-on-sso).  
+As part of Apache Knox-powered gateway introduced in Cloudbreak 2.7, you can configure the gateway as the SSO identity provider. For more information, refer to [Configure single sign-on (SSO)](gateway.md#configure-single-sign-on-sso).  
 ____________________________
 
 #### Behavioral changes
