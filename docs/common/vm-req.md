@@ -61,13 +61,11 @@ Perform these steps to disable SELINUX.
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' 
 /etc/selinux/config</pre>
 
-2. Ensure the SELinux is not turned on afterwards:
+2. Run the following command to ensure that SELinux is not turned on afterwards: 
 
-    <pre>sestatus | grep -i mode
-Current mode:                   permissive
-Mode from config file:          enforcing</pre>
-
-> Rebooting the VM is not required, but in case you reboot, both "Current mode" and "Mode from config file" will be set to `permissive`. 
+    <pre>getenforce</pre>
+    
+3. The command should return "Disabled".     
 
     
 #### Install Docker 
