@@ -19,27 +19,27 @@ ____________________________
 To access HDP cluster resources, a gateway powered by Apache Knox is configured. When creating a cluster, you can optionally instruct Cloudbreak to install and configure this gateway to protect access to the cluster resources. By default, transport layer security on the gateway endpoint is via a self-signed SSL certificate on port 8443. By default, Ambari is proxied through the gateway. For more information, refer to [Configuring a Gateway](gateway.md).  
 ____________________________
 
-##### **Configuring Access to Microsoft Azure ADLS and WASB Cloud Storage**
+##### **Microsoft Azure ADLS and WASB Cloud Storage**
 
 When creating a cluster on Azure, you can configure access to ADLS and WASB from the *Cloud Storage* page of the advanced create cluster wizard. For more information, refer to [Access data in ADLS](azure-data-adls.md) and [Access data in WASB](azure-data-wasb.md).  
 ____________________________
 
-##### **Configuring Access to Google GCS Cloud Storage**
+##### **Google GCS Cloud Storage**
 
 When creating a cluster on Google Cloud, you can configure access to Google Cloud Storage from the *Cloud Storage* page of the advanced create cluster wizard. Authentication with GCS is via a service account. For more information, refer to [Access data in GCS](gcp-data.md).    
 ____________________________
 
-##### **Configuring Base Cloud Storage Locations**
+##### **Base Cloud Storage Locations**
 
 After configuring access to S3, ADLS, WASB, or GCS you can optionally use these as a base storage location, primarily for the Hive Warehouse Directory. For more information, refer to Configure ADLS storage locations on [Amazon S3](aws-data.md#configure-s3-storage-locations), [ADLS](azure-data-adls.md#configure-adls-storage-locations), [WASB](azure-data-wasb.md#configure-wasb-storage-locations), [GCS](gcp-data.md#configure-gcs-storage-locations).  
 ____________________________
 
-##### **Setting Custom Properties**
+##### **Custom Properties**
 
 Cloudbreak allows you to add custom property variables (by using mustache template syntax) in your blueprint for replacement, and then set custom properties on a per-cluster basis. For more information, refer to [Custom properties](properties.md).  
 ____________________________
 
-##### **Using Dynamic Blueprints**
+##### **Dynamic Blueprints**
 
 Cloudbreak allows you to create special "dynamic" blueprints which include templating: the values of the variables specified in the blueprint are dynamically replaced in the cluster creation phase, picking up the parameter values that you provided in the Cloudbreak UI or CLI.
 Dynamic blueprints offer the ability to manage external sources (such as RDBMS and LDAP/AD) outside of your blueprint.  
@@ -56,12 +56,12 @@ Cloudbreak introduces the ability to create HDF flow management clusters with Ap
 For more information, refer to [Creating HDF clusters](hdf.md).   
 ____________________________
 
-##### **Using External Databases for Cluster Services**
+##### **External Databases for Cluster Services**
 
 You can register an existing external RDBMS in the Cloudbreak UI or CLI so that it can be used for those cluster components which have support for it. After the RDBMS has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters. For more information, refer to [Register an External Database](external-db.md).  
 ____________________________
 
-##### **Using External Authentication Sources (LDAP/AD) for Clusters**
+##### **External Authentication Sources (LDAP/AD) for Clusters**
 
 You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters. For more information, refer to [Register an Authentication Source](external-ldap.md).    
 ____________________________  
@@ -76,7 +76,7 @@ ____________________________
 You can launch Cloudbreak in environments with limited or restricted internet access and/or required use of a proxy to obtain internet access. For more information, refer to [Configure Outbound Internet Access and Proxy](cb-proxy.md).  
 ____________________________
 
-##### **Installing Management Packs**
+##### **Management Packs**
 
 Cloudbreak 2.7 introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation. For more information, refer to [Using management packs](mpacks.md).   
 ____________________________
@@ -91,12 +91,12 @@ ____________________________
 When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced. For more information, refer to [Retry a cluster](clusters-manage.md#retry-a-cluster) and [CLI](cli-reference.md) documentation.  
 ____________________________
 
-##### **Setting Root Volume Size**
+##### **Root Volume Size**
 
 When creating a cluster, you can modify the root volume size. This option is available on the advanced **Hardware and Storage** page of the create cluster wizard. Default is 50 GB for AWS and GCP, and 30 GB for Azure. This option is useful if your custom image requires more space than provided by default.   
 ____________________________
 
-##### **Support for JSON Key on Google Cloud**
+##### **JSON Key on Google Cloud**
 
 Cloudbreak introduces support for Google Cloud's service account JSON key. Since activating service accounts with P12 private keys has been deprecated in the Cloud SDK, we recommend using JSON private keys. For updated instructions for creating a Cloudbreak credential, refer to [Create Cloudbreak credential](gcp-launch.md#create-cloudbreak-credential).   
 ____________________________
@@ -145,7 +145,7 @@ ____________________________
 When using Cloudbreak on OpenStack, you no longer need to import HDP and HDF images manually, because during your first attempt to create a cluster, Cloudbreak automatically imports HDP and HDF images to your OpenStack. Only Cloudbreak image must be imported manually.
 ____________________________
 
-##### **Install Mysql Connector as a Recipe**
+##### **Installing Mysql Connector as a Recipe**
 
 Starting with Ambari version 2.6, if you have 'MYSQL_SERVER' component in your blueprint, you have to [manually install and register](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.0/bk_ambari-administration/content/using_hive_with_mysql.html) the 'mysql-connector-java.jar'. If you would like to automate this process in Cloudbreak, you can apply the [following recipe](recipes.md#install-mysql-connector-recipe).   
 ____________________________
