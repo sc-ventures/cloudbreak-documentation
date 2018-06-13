@@ -78,7 +78,7 @@ ____________________________
 
 ##### **Installing Management Packs**
 
-Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation. For more information, refer to [Using management packs](mpacks.md).   
+Cloudbreak 2.7 introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation. For more information, refer to [Using management packs](mpacks.md).   
 ____________________________
 
 ##### **Modifying Existing Cloudbreak Credentials**
