@@ -1,5 +1,7 @@
 ## Deployment options
 
+The following section describes general options for deploying Cloudbreak and Cloudbreak-managed clusters. 
+
 ### Cloudbreak deployment options  
 
 In general, Cloudbreak offers a quickstart option, as well as a production deployment option:
@@ -40,7 +42,7 @@ This option utilizes the following AWS services and provisions the following res
 |---|---|---|
 | [AWS CloudFormation](https://aws.amazon.com/documentation/cloudformation/) | AWS CloudFormation is used to create and manage a collection of related AWS resources. | Cloudbreak is launched by using a CloudFormation template. | 
 | [Amazon EC2](https://aws.amazon.com/documentation/ec2/) |  Amazon EC2 is used to launch a virtual machine for Cloudbreak. Security groups are used to control the inbound and outbound traffic to and from the Cloudbreak instance. | Cloudbreak automatically provisions a new VM that runs Amazon Linux, installs Docker, and launches Cloudbreak. |
-| [Amazon VPC](https://aws.amazon.com/documentation/vpc/) |  [Amazon VPC](https://aws.amazon.com/documentation/vpc/) is used to provision your own dedicated virtual network and launch resources into that network. As part of VPC infrastructure, an internet gateway and a route table are provisioned: An internet gateway is used to enable outbound access to the internet from the control plane and the clusters, and a route table is used to connect the subnet to the internet gateway. | Cloudbreak provisions a new VPC and subnet, and launches the Cloudbreak VM within it. |   
+| [Amazon VPC](https://aws.amazon.com/documentation/vpc/) | Amazon VPC is used to provision your own dedicated virtual network and launch resources into that network. As part of VPC infrastructure, an internet gateway and a route table are provisioned: An internet gateway is used to enable outbound access to the internet from the control plane and the clusters, and a route table is used to connect the subnet to the internet gateway. | Cloudbreak provisions a new VPC and subnet, and launches the Cloudbreak VM within it. |   
 |  [AWS IAM](https://aws.amazon.com/documentation/iam/) | AWS Identity & Access Management (IAM) is used to control access to AWS services and resources. | Cloudbreak provisions the CloudbreakQuickstartRole IAM role that is used during the quickstart deployment. |  
 | [AWS Lambda](https://aws.amazon.com/documentation/lambda/) | This is a utility service for running code in AWS. | Cloudbreak uses AWS Lambda is for running code when deploying Cloudbreak. | 
 

@@ -12,7 +12,11 @@ In order to launch Cloudbreak from the ARM template you must:
     * On MacOS X and Linux using `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
     * On Windows using [PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows)
 
-* In order to create a Cloudbreak credential, you Azure account must have the minimum permissions described in [Azure roles](azure-pre.md#azure-roles).      
+* In order to create a Cloudbreak credential, you Azure account must have the minimum permissions described in [Azure roles](azure-pre.md#azure-roles). 
+
+**Related links**  
+[Azure roles](azure-pre.md#azure-roles)
+[PuTTygen](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows) (External)      
     
 
 ### Launch Cloudbreak from the quickstart template 
@@ -47,7 +51,7 @@ Launch Cloudbreak from an Azure Resource Manager (ARM) template by using the fol
 | Admin Username | Create an admin login that you will use to log in to the Cloudbreak UI. Must be a valid email address. By default, admin@example.com is used but you should change it to your email address. |
 | Admin User Password | Password for the admin login. Must be at least 8 characters containing letters, numbers, and symbols. |
 | Username | Enter an admin username for the virtual machine. You will use it to SSH to the VM. By default, "cloudbreak" is used. |
-| Remote Location |<p>Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or use one of the default tags. Default value is `Internet` which allows access from all IP addresses. Examples: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>'Internet' will allow access from all. This is not a secure option but you can use it it you are just getting started and are not planning to have the instance on for a longer period. </li><li>(Advanced) 'VirtualNetwork' will allow access from the address space of the Virtual Network.</li><li> (Advanced) 'AzureLoadBalancer' will allow access from the address space of the load balancer.</li></ul></p><p>For more information, refer to the [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg).</p> |
+| Remote Location |<p>Enter a valid [CIDR IP](http://www.ipaddressguide.com/cidr) or use one of the default tags. Default value is `Internet` which allows access from all IP addresses. Examples: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>'Internet' will allow access from all. This is not a secure option but you can use it it you are just getting started and are not planning to have the instance on for a longer period. </li><li>(Advanced) 'VirtualNetwork' will allow access from the address space of the Virtual Network.</li><li> (Advanced) 'AzureLoadBalancer' will allow access from the address space of the load balancer.</li></ul></p><p>For more information, refer to the [Plan virtual networks](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg) in Azure documentation.</p> |
 | Ssh Key| <p>Paste your SSH public key.</p><p>You can use `pbcopy` to quickly copy it. For example: `pbcopy < /Users/homedir/.ssh/id_rsa.pub`</p> |
 | Vnet New Or Existing | By default, Cloudbreak is launched in a new VNet called `cbdeployerVnet` and a new subnet called `cbdeployerSubnet`; if needed, you can customize the settings for the new VNet using available VNet and Subnet parameters. |
 | Vnet Name | Provide the name for a new Vnet. Default is ``cbdeployerVnet`. |
@@ -68,7 +72,12 @@ Launch Cloudbreak from an Azure Resource Manager (ARM) template by using the fol
     <p class="first admonition-title">Cleaning up after a failed deployment</p>
     <p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-azure">Delete Cloudbreak on Azure</a>.</p>
 </div>
-    
+
+**Related links**  
+[Delete Cloudbreak on Azure](cb-delete.md#delete-cloudbreak-on-azure)  
+[Troubleshooting Cloudbreak on Azure](trouble-azure.md)       
+[CIDR IP](http://www.ipaddressguide.com/cidr)   
+[Plan virtual networks](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg) (External)    
     
 ### Access Cloudbreak web UI 
 
@@ -98,12 +107,12 @@ Follow these steps to obtain Cloudbreak VM's public IP address and log in to the
 
     <a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  
 
-The last task that you need to perform before you can use Cloudbreak is to [create Cloudbreak credential](#create-cloudbreak-credential).     
-
+The last task that you need to perform before you can use Cloudbreak is to create Cloudbreak credential.     
 
 **Related links**  
 [CIDR IP](http://www.ipaddressguide.com/cidr) (External)   
 [Filter network traffic with network security groups](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg) (External)  
+
 
 ### Create Cloudbreak credential 
 

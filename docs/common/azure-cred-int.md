@@ -5,7 +5,7 @@ Follow these steps to create an interactive Cloudbreak credential.
 
 Your account must have have an Owner role in order for the interactive credential creation to work.   
 
-> If your account does not have an Owner role, you must you the [app-based credential](azure-launch.md#create-app-based-credential) option instead of the interactive option. To review the requirements for both options. refer to [Azure roles](azure-pre.md#azure-roles). 
+If your account does not have an Owner role, you must you the [app-based credential](azure-launch.md#create-app-based-credential) option instead of the interactive option. To review the requirements for both options. refer to [Azure roles](azure-pre.md#azure-roles). 
 
 **Steps**
 
@@ -58,3 +58,9 @@ Your account must have have an Owner role in order for the interactive credentia
 
      Congratulations! You've successfully launched and configured Cloudbreak. Now you can use Cloudbreak to create clusters.
 
+**Related links**  
+[Create app-based credential](azure-launch.md#create-app-based-credential)   
+[Azure roles](azure-pre.md#azure-roles)  
+[Troubleshooting Azure](trouble-azure.md)  
+[Contributor](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor) (External)  
+[Custom roles in Azure](https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles) (External)  

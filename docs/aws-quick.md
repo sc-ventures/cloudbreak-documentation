@@ -8,7 +8,10 @@ In order to launch Cloudbreak from the CloudFormation template you must:
 
 * Have an existing an AWS account. If you don't have an account, you can create one at [https://aws.amazon.com/](https://aws.amazon.com/).
 
-* Import an existing SSH key pair or generate a new key pair in the AWS region which you are planning to use for launching Cloudbreak and clusters. If you don't have a key pair, use [these](aws-pre.md#ssh-key-pair) steps to create or import a key pair.    
+* Import an existing SSH key pair or generate a new key pair in the AWS region which you are planning to use for launching Cloudbreak and clusters. If you don't have a key pair, refer to [SSH key pair](aws-pre.md#ssh-key-pair) documentation to create or import a key pair.  
+
+**Related links**    
+[SSH key pair](aws-pre.md#ssh-key-pair)   
 
 
 ### Launch Cloudbreak from the quickstart template  
@@ -114,7 +117,7 @@ Launch Cloudbreak from a CloudFormation template by using the following steps. T
         
     | Parameter | Description |    
     |---|---|
-    | SSH Key Name | Name of an existing EC2 key pair to enable SSH to access the instances. Key pairs are region-specific, so only the key pairs that you created for a selected region will appear in the dropdown. See [Prerequisites](#prerequisites) for more information. |
+    | SSH Key Name | Name of an existing EC2 key pair to enable SSH to access the instances. Key pairs are region-specific, so only the key pairs that you created for a selected region will appear in the dropdown.If you don't have a key pair, refer to [SSH key pair](aws-pre.md#ssh-key-pair). |
     | Remote Access | Allow connections to the cloud controller ports from this address range. Must be a valid <a href="http://www.ipaddressguide.com/cidr" target="_blank">CIDR IP</a>. For example: <ul><li>192.168.27.0/24 will allow access from 192.168.27.0 through 192.168.27.255.</li><li>192.168.27.10/32 will allow access from 192.168.27.10.</li><li>0.0.0.0/0 will allow access from all.</li></ul> Refer to [Network security](security.md#network-security) for more information on the inbound ports that are used with Cloudbreak. |
 
 1. Click **Next**  to display the **Options** page.    
@@ -143,6 +146,11 @@ Launch Cloudbreak from a CloudFormation template by using the following steps. T
     <p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-aws">Delete Cloudbreak on AWS</a>.</p>
 </div>
 
+**Related links**  
+[Delete Cloudbreak on AWS](cb-delete.md#delete-cloudbreak-on-aws)  
+[Network security](security.md#network-security)  
+[SSH key pair](aws-pre.md#ssh-key-pair)  
+[CIDR IP](http://www.ipaddressguide.com/cidr) (External)  
 
 ### Access Cloudbreak web UI 
 

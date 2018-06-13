@@ -1,9 +1,9 @@
 ## Creating a cluster on AWS 
 
 {!docs/common/create-a1.md!}
-| Region | Select the AWS region in which you would like to launch your cluster. For information on available AWS regions, refer to [AWS documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html). |
+| Region | Select the AWS region in which you would like to launch your cluster. For information on available AWS regions, refer to [AWS regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) in AWS documentation. |
 {!docs/common/create-a2.md!}
-| Instance Type | Select an instance type. For information about instance types on AWS refer to [AWS documentation](https://aws.amazon.com/ec2/instance-types/). |
+| Instance Type | Select an instance type. For information about instance types on AWS refer to [Amazon EC2 instance types](https://aws.amazon.com/ec2/instance-types/) in AWS documentation. |
 {!docs/common/create-a3-0.md!}
 | Storage Type | <p>Select the volume type. The options are:<ul><li>Magnetic (default)</li><li>General Purpose (SSD)</li><li>Throughput Optimized HDD</li></ul>For more information about these options refer to <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html" target="_blank">AWS documentation</a>.</p>|
 {!docs/common/create-a3-1a.md!}
@@ -18,10 +18,14 @@
 {!docs/common/create-a5.md!}
 
 **Related links**   
-[Flex support subscription](get-help.md#flex-subscription)  
-[Using custom blueprints](blueprints.md)   
+[Advanced cluster options](#advanced-cluster-options)  
+[Configure communication via private IPs on AWS](trouble-cluster.md#configure-communication-via-private-ips-on-aws)  
+[Configuring the Gateway](gateway.md)   
 [Default cluster security groups](security.md#default-cluster-security-groups)  
+[Flex support subscription](get-help.md#flex-subscription)   
+[Restricting inbound access from Cloudbreak to cluster](security-cb-inbound.md)  
 [Troubleshooting cluster creation](trouble-cluster.md)    
+[Using custom blueprints](blueprints.md)  
 [Amazon EC2 instance types](https://aws.amazon.com/ec2/instance-types/) (External)   
 [AWS regions and endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html) (External)     
 [CIDR](http://www.ipaddressguide.com/cidr) (External)   

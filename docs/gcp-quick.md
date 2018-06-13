@@ -13,6 +13,10 @@ In order to use the Cloud Deployment Manager, you must install the Google Cloud 
 
 For instructions, refer to [Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) in the Google Cloud documentation. Make sure to perform all of the steps and validate that the `gcloud` command works on your computer. Only after validating, proceed to the next step.  
 
+**Related links**  
+[Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) (External)  
+  
+
 #### GCP APIs 
     
 You must enable the **Compute Engine API** and the **Cloud Runtime Configuration API** services.
@@ -161,7 +165,8 @@ deploymentIp  35.224.36.96</pre>
 
 
 **Related Links**  
-[Installing Google Cloud SDK](https://cloud.google.com/sdk/downloads) (External)  
+[Machine types](https://cloud.google.com/compute/docs/machine-types) (External)    
+[Regions and zones](https://cloud.google.com/compute/docs/regions-zones/) (External)     
    
 
 ### Create Cloudbreak credential
@@ -174,6 +179,9 @@ As described in the [Service account](#service-account) section in the prerequis
 
 {!docs/common/gcp-cred.md!}
 
+**Related links**  
+[Cloudbreak credential](concepts.md#cloudbreak-credential)  
+[Service account](#service-account) 
 
 ### Create a cluster     
 

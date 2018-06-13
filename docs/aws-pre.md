@@ -83,6 +83,10 @@ If you choose this option, you can proceed to launch Cloudbreak.
 
 You can create these roles in the **IAM console**, on the **Roles** page via the **Create Role** option. Detailed steps are provided below.
 
+**Related links**  
+[Using instance profiles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) (External)  
+[Using an IAM role to grant permissions to applications](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) (External) 
+
 
 #### Create CloudbreakRole
 
@@ -139,6 +143,9 @@ Use the following "AssumeRole" policy definition:
     <a href="../images/cb_aws_role-15.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws_role-15.png" width="650" title="IAM Console"></a>
 
 10. When done, click **Create role** to finish the role creation process.
+
+**Related links**  
+[CloudbreakRole](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/AssumeRole.json)  
 
 
 #### Create CredentialRole
@@ -301,8 +308,7 @@ Use the following "cb-policy" policy definition:
 Once you are done, you can proceed to launch Cloudbreak.  
 
 **Related links**  
-[Using instance profiles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html) (External)  
-[Using an IAM role to grant permissions to applications](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) (External)   
+[CredentialRole](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/cb-policy.json)  
 
 
 <div class="next">

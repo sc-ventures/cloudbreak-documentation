@@ -1,6 +1,4 @@
 
-
-
 ### Install Cloudbreak on a VM
 
 Install Cloudbreak using the following steps.
@@ -65,6 +63,9 @@ cbd start</pre>
 
     You should see a message like this in the log: `Started CloudbreakApplication in 36.823 seconds.` Cloudbreak normally takes less than a minute to start.
 
+**Related links**  
+[Toubleshooting](trouble-cb.md)   
+
 
 ### Access Cloudbreak web UI
 
@@ -89,3 +90,6 @@ Log in to the Cloudbreak UI using the following steps.
 ### Configure external Cloudbreak database
 
 By default, Cloudbreak uses an embedded PostgreSQL database to persist data related to Cloudbreak configuration, setup, and so on. For a production Cloudbreak deployment, you must [configure an external database](cb-db.md).
+
+**Related links**  
+[Configure an external database](cb-db.md)  

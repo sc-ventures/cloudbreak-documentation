@@ -3,12 +3,11 @@
 Cloudbreak utilizes cloud provider security resources such as virtual networks, security groups, and identity and access management:
 
 1. **Network isolation** is achieved via user-configured virtual networks and subnets.  
-    Read more about [virtual networks](#virtual-networks).  
+
 2. **Network security** is achieved via out-of-the-box security group settings.  
-    Read more about [network security](#network-security).   
+  
 3. **Controlled use of cloud resources** using IAM roles (AWS, GCP) or Active Directory (in case of Azure). 
-    Read more about [identity management](#identity-management).    
- 
+
 
 ### Virtual networks
 
@@ -27,6 +26,9 @@ Cloud providers use virtual networks which resemble traditional networks. Depend
 Security groups are set up to control network traffic to the instances in the system.
 
 Cloudbreak uses public IP addresses when communicating with cluster nodes. On AWS, you can configure it to use private IPs instead. For instructions, refer to [Configure communication via private IPs on AWS](trouble-cluster.md#configure-communication-via-private-ips-on-aws).  
+
+**Related links**  
+[Configure communication via private IPs on AWS](trouble-cluster.md#configure-communication-via-private-ips-on-aws)
 
 #### Cloudbreak instance security group
 
@@ -53,6 +55,9 @@ The following section describes the network requirements and options. By default
 | * | All cluster hosts | 22 | <ul><li>This is an optional port for end user SSH access to the hosts.</li><li>You should review and limit or remove this CIDR access.</li><ul>|
 | * | Ambari server | 8443  | <ul><li>This port is used to access the gateway (if configured).</li><li>You should review and limit this CIDR access.</li><li>If you do not configure the gateway, this port does not need to be opened. If you want access to any cluster resources, you must open those ports explicitly on the security groups for their respective hosts.</li><ul> |
 | * | Ambari server | 443  | <ul><li>This port is used to access Ambari directly.</li><li>If you are configuring the gateway, you should access Ambari through the gateway. You do not need to open this port.</li><li>If you do not configure the gateway, to obtain access to Ambari, you can open this port on the security group for the respective host.</li><ul> |
+
+**Related links**   
+[Restrict inbound access](security-cb-inbound.md)  
 
 
 ### Identity management
