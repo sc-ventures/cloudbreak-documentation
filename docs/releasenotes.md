@@ -254,11 +254,9 @@ ____________________________
 
 ##### (BUG-104825) **Upscaling the Compute Host Group is Not Possible on AWS**
 
-When using Ambari 2.6.2, upscaling the compute host group on AWS fails with the following error:   
+When using Cloudbreak with Ambari 2.6.2, upscaling the compute host group on AWS fails with the following error due to Ambari being unable to install the HIVE_CLIENT:   
 
 *New node(s) could not be added to the cluster. Reason com.sequenceiq.cloudbreak.core.ClusterException: Ambari operation failed: component: 'UPSCALE_REQUEST', requestID: '8'*
-
-The main reason for the error is that the HIVE_CLIENT cannot be installed. 
 
 ____________________________
 
