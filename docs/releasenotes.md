@@ -19,12 +19,12 @@ ____________________________
 To access HDP cluster resources, a gateway powered by Apache Knox is configured. When creating a cluster, you can optionally instruct Cloudbreak to install and configure this gateway to protect access to the cluster resources. By default, transport layer security on the gateway endpoint is via a self-signed SSL certificate on port 8443. By default, Ambari is proxied through the gateway. For more information, refer to [Configuring a Gateway](gateway.md).  
 ____________________________
 
-##### **Microsoft Azure ADLS and WASB Cloud Storage**
+##### **Configuring Access to Microsoft Azure ADLS and WASB Cloud Storage**
 
 When creating a cluster on Azure, you can configure access to ADLS and WASB from the *Cloud Storage* page of the advanced create cluster wizard. For more information, refer to [Access data in ADLS](azure-data-adls.md) and [Access data in WASB](azure-data-wasb.md).  
 ____________________________
 
-##### **Google GCS Cloud Storage**
+##### **Configuring Access to Google GCS Cloud Storage**
 
 When creating a cluster on Google Cloud, you can configure access to Google Cloud Storage from the *Cloud Storage* page of the advanced create cluster wizard. Authentication with GCS is via a service account. For more information, refer to [Access data in GCS](gcp-data.md).    
 ____________________________
@@ -86,7 +86,7 @@ ____________________________
 Cloudbreak allows you to modify existing credentials by using the edit option available in Cloudbreak UI or by using the `credential modify` command in the CLI. For more information, refer to [Modify an Existing Credential](cb-credentials.md#modify-an-existing-credential).  
 ____________________________
 
-##### **Retrying Failed Cluster**
+##### **Retrying Failed Clusters**
 
 When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced. For more information, refer to [Retry a cluster](clusters-manage.md#retry-a-cluster) and [CLI](cli-reference.md) documentation.  
 ____________________________
