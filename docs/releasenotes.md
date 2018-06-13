@@ -9,53 +9,43 @@ ____________________________
 #### New features
 ____________________________
 
-
 ##### **Launching Cloudbreak from Templates**
 
 Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates on AWS and Google Cloud; On Azure, this option was previously available. These are quickstart options, not suitable for production. To launch Cloudbreak by using these quickstart options refer to [Quickstart on AWS](aws-quick.md), [Quickstart on Azure](azure-quick.md), and [Quickstart on GCP](gcp-quick.md). To review current Cloudbreak deployment options (quickstart and production), refer to [Deployment options](deployment-options.md).    
 ____________________________
 
-
 ##### **Gateway for HDP Clusters**
 
 To access HDP cluster resources, a gateway powered by Apache Knox is configured. When creating a cluster, you can optionally instruct Cloudbreak to install and configure this gateway to protect access to the cluster resources. By default, transport layer security on the gateway endpoint is via a self-signed SSL certificate on port 8443. By default, Ambari is proxied through the gateway.  
-For more information, refer to [Configuring a Gateway](gateway.md). 
+For more information, refer to [Configuring a Gateway](gateway.md).  
 ____________________________
-
 
 ##### **Configuring Access to ADLS, and WASB Cloud Storage**
 
-When creating a cluster on Azure, you can configure access to ADLS and WASB from the *Cloud Storage* page of the advanced create cluster wizard. For more information, refer to [Access data in ADLS](azure-data-adls.md) and [Access data in WASB](azure-data-wasb.md). 
+When creating a cluster on Azure, you can configure access to ADLS and WASB from the *Cloud Storage* page of the advanced create cluster wizard. For more information, refer to [Access data in ADLS](azure-data-adls.md) and [Access data in WASB](azure-data-wasb.md).  
 ____________________________
-
 
 ##### **Configuring Access to GCS Cloud Storage**
 
-When creating a cluster on Google Cloud, you can configure access to Google Cloud Storage from the *Cloud Storage* page of the advanced create cluster wizard. Authentication with GCS is via a service account. For more information, refer to [Access data in GCS](gcp-data.md).   
- 
+When creating a cluster on Google Cloud, you can configure access to Google Cloud Storage from the *Cloud Storage* page of the advanced create cluster wizard. Authentication with GCS is via a service account. For more information, refer to [Access data in GCS](gcp-data.md).    
 ____________________________
-
 
 ##### **Configuring Cloud Storage Locations**
 
-After configuring access to S3, ADLS, WASB, or GCS you can optionally use that ADLS storage account as a base storage location; this storage location is mainly for the Hive Warehouse Directory (used for storing the table data for managed tables). For more information refer to Configure ADLS storage locations on [Amazon S3](aws-data.md#configure-s3-storage-locations), [ADLS](azure-data-adls.md#configure-adls-storage-locations), [WASB](azure-data-wasb.md#configure-wasb-storage-locations), [GCS](gcp-data.md#configure-gcs-storage-locations). 
-
+After configuring access to S3, ADLS, WASB, or GCS you can optionally use that ADLS storage account as a base storage location; this storage location is mainly for the Hive Warehouse Directory (used for storing the table data for managed tables). For more information refer to Configure ADLS storage locations on [Amazon S3](aws-data.md#configure-s3-storage-locations), [ADLS](azure-data-adls.md#configure-adls-storage-locations), [WASB](azure-data-wasb.md#configure-wasb-storage-locations), [GCS](gcp-data.md#configure-gcs-storage-locations).  
 ____________________________
-
 
 ##### **Setting Custom Properties**
 
-Cloudbreak allows you to add custom property variables (by using mustache template syntax) in your blueprint for replacement, and then set custom properties on a per-cluster basis. For more information, refer to [Custom properties](properties.md).
+Cloudbreak allows you to add custom property variables (by using mustache template syntax) in your blueprint for replacement, and then set custom properties on a per-cluster basis. For more information, refer to [Custom properties](properties.md).  
 ____________________________
-
 
 ##### **Using Dynamic Blueprints**
 
 Cloudbreak allows you to create special "dynamic" blueprints which include templating: the values of the variables specified in the blueprint are dynamically replaced in the cluster creation phase, picking up the parameter values that you provided in the Cloudbreak UI or CLI.
 Dynamic blueprints offer the ability to manage external sources (such as RDBMS and LDAP/AD) outside of your blueprint.  
-For more information, refer to [Dynamic Blueprints](concepts.md#dynamic-blueprints) and [Creating dynamic blueprints](blueprints.md#creating-dynamic-blueprints). 
+For more information, refer to [Dynamic Blueprints](concepts.md#dynamic-blueprints) and [Creating dynamic blueprints](blueprints.md#creating-dynamic-blueprints).   
 ____________________________
-
 
 ##### **Creating HDF Clusters**
 
@@ -64,10 +54,8 @@ Cloudbreak introduces the ability to create HDF flow management clusters with Ap
 * Flow Management: Apache NiFi  
 * HDF Messaging Management: Apache Kafka   
 
-For more information, refer to [Creating HDF clusters](hdf.md). 
- 
+For more information, refer to [Creating HDF clusters](hdf.md).   
 ____________________________
-
 
 ##### **Using External Databases for Cluster Services**
 
@@ -75,166 +63,128 @@ You can register an existing external RDBMS in the Cloudbreak UI or CLI so that 
 For more information, refer to [Register an External Database](external-db.md).  
 ____________________________
 
-
 ##### **Using External Authentication Sources (LDAP/AD) for Clusters**
 
 You can configure an existing LDAP/AD authentication source in the Cloudbreak UI or CLI so that it can later be associated with one or more Cloudbreak-managed clusters. After the authentication source has been registered with Cloudbreak, it will be available during the cluster create and can be reused with multiple clusters.   
-For more information, refer to [Register an Authentication Source](external-ldap.md).   
+For more information, refer to [Register an Authentication Source](external-ldap.md).    
 ____________________________  
-
 
 ##### **Configuring Cloudbreak to Use Existing LDAP/AD**
 
-You can configure Cloudbreak to use your existing LDAP/AD so that you can authenticate Cloudbreak users against an existing LDAP/AD server. For more information, refer to [Configuring Cloudbreak for LDAP/AD Authentication](cb-ldap.md).
+You can configure Cloudbreak to use your existing LDAP/AD so that you can authenticate Cloudbreak users against an existing LDAP/AD server. For more information, refer to [Configuring Cloudbreak for LDAP/AD Authentication](cb-ldap.md).  
 ____________________________
-
 
 ##### **Launching Cloudbreak in Environments with Restricted Internet Access or Required Use of Proxy**
 
-You can launch Cloudbreak in environments with limited or restricted internet access and/or required use of a proxy to obtain internet access. For more information, refer to [Configure Outbound Internet Access and Proxy](cb-proxy.md).
+You can launch Cloudbreak in environments with limited or restricted internet access and/or required use of a proxy to obtain internet access. For more information, refer to [Configure Outbound Internet Access and Proxy](cb-proxy.md).  
 ____________________________
 
+##### **Installing Management Packs**
+
+Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation.  
+For more information, refer to [Using management packs](mpacks.md).   
+____________________________
 
 ##### **Modifying Existing Cloudbreak Credentials**
 
-Cloudbreak allows you to modify existing credentials by using the edit option available in Cloudbreak UI or by using the `credential modify` command in the CLI. For more information, refer to [Modify an Existing Credential](cb-credentials.md#modify-an-existing-credential).
+Cloudbreak allows you to modify existing credentials by using the edit option available in Cloudbreak UI or by using the `credential modify` command in the CLI. For more information, refer to [Modify an Existing Credential](cb-credentials.md#modify-an-existing-credential).  
 ____________________________
-
-
-##### **Instsalling Management Packs**
-
-Cloudbreak 2.6.0 TP introduces support for using management packs, allowing you to register them in Cloudbreak web UI or CLI and then select to install them as part of cluster creation.  
-For more information, refer to [Using management packs](mpacks.md).  
-
-____________________________
-
 
 ##### **Retrying Failed Cluster**
 
 When stack provisioning or cluster creation failure occurs, the new "retry" UI option allows you to resume the process from the last failed step. A corresponding `cb cluster retry` CLI command has been introduced.  
-For more information, refer to [Retry a cluster](clusters-manage.md#retry-a-cluster) and [CLI](cli-reference.md) documentation.
+For more information, refer to [Retry a cluster](clusters-manage.md#retry-a-cluster) and [CLI](cli-reference.md) documentation.  
 ____________________________
-
 
 ##### **Setting Root Volume Size**
 
-When creating a cluster, you can modify the root volume size. This option is available on the advanced **Hardware and Storage** page of the create cluster wizard. Default is 50 GB for AWS and GCP, and 30 GB for Azure. This option is useful if your custom image requires more space than provided by default. 
+When creating a cluster, you can modify the root volume size. This option is available on the advanced **Hardware and Storage** page of the create cluster wizard. Default is 50 GB for AWS and GCP, and 30 GB for Azure. This option is useful if your custom image requires more space than provided by default.   
 ____________________________
-
 
 ##### **Support for JSON Key on Google Cloud**
 
 Cloudbreak introduces support for Google Cloud's service account JSON key. Since activating service accounts with P12 private keys has been deprecated in the Cloud SDK, we recommend using JSON private keys.  
-For updated instructions for creating a Cloudbreak credential, refer to [Create Cloudbreak credential](gcp-launch.md#create-cloudbreak-credential). 
-
+For updated instructions for creating a Cloudbreak credential, refer to [Create Cloudbreak credential](gcp-launch.md#create-cloudbreak-credential).   
 ____________________________
-
 
 ##### **Viewing Cluster Blueprints**
 
 Cloudbreak includes a useful option to view blueprints of a future cluster (from the create cluster wizard) or an existing cluster (from cluster details).  
-For more information, refer to [View cluster blueprints](clusters-access.md#view-cluster-blueprints). 
-
+For more information, refer to [View cluster blueprints](clusters-access.md#view-cluster-blueprints).   
 ____________________________
 
 ##### **Cb CLI Autocomplete**
 
-Cloudbreak CLI now includes an autocomplete option. For more information, refer to [Configure CLI autocomplete](cli-install.md#configure-cli-autocomplete).  
-
+Cloudbreak CLI now includes an autocomplete option. For more information, refer to [Configure CLI autocomplete](cli-install.md#configure-cli-autocomplete).   
 ____________________________
-
 
 ##### **Instructions for Using Custom Hostnames on AWS** 
 
-New documentation is available for using custom hostnames based on DNS for clusters running on AWS.  
-For instructions, refer to [Using custom hostnames based on DNS](hostnames.md). 
-
-
+New documentation is available for using custom hostnames based on DNS for clusters running on AWS. For instructions, refer to [Using custom hostnames based on DNS](hostnames.md).  
 ____________________________
 
 #### New features (TP)
 
-The following features are introduced in Cloudbreak 2.7 as technical preview; these features are for evaluation only and are not suitable for production: 
+The following features are introduced in Cloudbreak 2.7 as technical preview; these features are for evaluation only and are not suitable for production.  
 ____________________________
-
 
 ##### **Technical Preview of the Data Lake Option**
 
-Cloudbreak allows you to create a long-running data lake cluster and attach it to a short-running cluster. Refer to [Setting up a data lake](data-lake.md). 
+Cloudbreak allows you to create a long-running data lake cluster and attach it to a short-running cluster. Refer to [Setting up a data lake](data-lake.md).  
+____________________________
 
 
 ##### **Technical Preview of Gateway SSO**
 
-As part of Apache Knox-powered gateway introduced in Cloudbreak 2.7, you can configure the gateway as the SSO identity provider. Refer to [Configure single sign-on (SSO)](gateway.md#configure-single-sign-on-sso). 
-
-
-
+As part of Apache Knox-powered gateway introduced in Cloudbreak 2.7, you can configure the gateway as the SSO identity provider. Refer to [Configure single sign-on (SSO)](gateway.md#configure-single-sign-on-sso).  
 ____________________________
 
 #### Behavioral changes
 ____________________________
 
-[Comment]: <> (2.7 features)
-
 ##### **Removal of Prebuilt Cloudbreak Deployer Images**
 
 In earlier versions of Cloudbreak, Cloudbreak deployer images for AWS, Google Cloud, and OpenStack were provided for each release. Instead, Cloudbreak 2.7.0 introduces a new way to launch Cloudbreak from cloud provider templates. To review current Cloudbreak deployment options, refer to [Deployment options](deployment-options.md).   
-____________________________
-
-
-##### **Redesigned Hardware and Storage UI**
-
-The UI of the **Hardware and Storage** page in the create cluster wizard and in cluster details was redesigned for better user experience. 
-____________________________
-
-
-##### **New Image Settings Page in Create Cluster wizard**
-
-All cluster options related to image settings, image catalog selection, and Ambari and HDP/HDF repository specification were moved to a separate **Image Settings** page in the create cluster wizard.    
-____________________________
-
-
-##### **File System Cluster Page Was Renamed to Cloud Storage**
-
-The **File System** page of the advanced create cluster wizard was renamed to **Cloud Storage**.    
-____________________________
-
-
-##### **Sorting and Filtering Resource Tables in the UI**
-
-Cloudbreak introduces the ability to sort and filter resource tables that list resources such as clusters, cluster hardware, blueprints, recipes, and so on, in the Cloudbreak web UI.
-____________________________
-
-
-[Comment]: <> (2.6 features)
-
-##### **Image Catalog Option Was Moved to External Sources**
-
-The options related to registering a custom image catalog and selecting a default image catalog were removed from the **Settings** navigation menu option and are now available under **External Sources > Image Catalogs**.
-____________________________
-
-
-##### **Recipes Option Was Moved to Cluster Extension**
-
-The **Recipes** navigation menu option was moved under **Cluster Extensions**, so to find recipe-related settings, select **Cluster Extensions > Recipes** from the navigation menu.
-____________________________
-
-
-[Comment]: <> (2.5 features)
-
+____________________________ 
 
 ##### **Auto-import of HDP/HDF Images on OpenStack**
 
 When using Cloudbreak on OpenStack, you no longer need to import HDP and HDF images manually, because during your first attempt to create a cluster, Cloudbreak automatically imports HDP and HDF images to your OpenStack. Only Cloudbreak image must be imported manually.
 ____________________________
 
-
 ##### **Install Mysql Connector as a Recipe**
 
-Starting with Ambari version 2.6, if you have 'MYSQL_SERVER' component in your blueprint, then you have to [manually install and register](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.0/bk_ambari-administration/content/using_hive_with_mysql.html) the 'mysql-connector-java.jar'.  
-If you would like to automate this process in Cloudbreak, you can apply the [following recipe](recipes.md#install-mysql-connector-recipe).  
+Starting with Ambari version 2.6, if you have 'MYSQL_SERVER' component in your blueprint, you have to [manually install and register](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.0/bk_ambari-administration/content/using_hive_with_mysql.html) the 'mysql-connector-java.jar'. If you would like to automate this process in Cloudbreak, you can apply the [following recipe](recipes.md#install-mysql-connector-recipe).   
+____________________________
 
+##### **Sorting and Filtering Resource Tables in the UI**
 
+Cloudbreak introduces the ability to sort and filter resource tables that list resources such as clusters, cluster hardware, blueprints, recipes, and so on, in the Cloudbreak web UI.  
+____________________________
+
+##### **Redesigned Hardware and Storage UI**
+
+The UI of the **Hardware and Storage** page in the create cluster wizard and in cluster details was redesigned for better user experience.   
+____________________________
+
+##### **New Image Settings Page in Create Cluster wizard**
+
+All cluster options related to image settings, image catalog selection, and Ambari and HDP/HDF repository specification were moved to a separate **Image Settings** page in the create cluster wizard.     
+____________________________
+
+##### **File System Cluster Page Was Renamed to Cloud Storage**
+
+The **File System** page of the advanced create cluster wizard was renamed to **Cloud Storage**.     
+____________________________
+
+##### **Image Catalog Option Was Moved to External Sources**
+
+The options related to registering a custom image catalog and selecting a default image catalog were removed from the **Settings** navigation menu option and are now available under **External Sources > Image Catalogs**.  
+____________________________
+
+##### **Recipes Option Was Moved to Cluster Extension**
+
+The **Recipes** navigation menu option was moved under **Cluster Extensions**, so to find recipe-related settings, select **Cluster Extensions > Recipes** from the navigation menu.  
 ____________________________
 
 #### Image catalog updates
@@ -246,20 +196,10 @@ Default Ambari version 2.6.2.0
 Default HDP version 2.6.5.0-292  
 Default HDF version 3.1.1.0-35    
 
-
-
-
-
-
-
 ____________________________
 
 #### Fixed issues
 ____________________________
-
-[Comment]: <> (All the items below were fixed in 2.5.0. When looking through items with fixed version 2.6.0, I do not see anything that was can be added to this list.)
-[Comment]: <> (BUG-97207 is internal? YARN?)
-[Comment]: <> (Not included in 2.5.0 TP, only 2.4.1: BUG-99635 After deleting a default credential and creating a new credential, credential is missing from the create cluster wizard.)
 
 | Issue | Issue description | Category | Fix version |
 |---|---|---|---|
@@ -282,13 +222,6 @@ ____________________________
 | BUG-99512 | Azure ES_v3 instances should support premium storage. | Usability | 2.5.0 TP |
 | BUG-97206 | Backend should return only images for enabled platforms. | Usability | 2.5.0 TP |
 
-
-
-
-
-
-
-
 ____________________________
 
 #### Known issues
@@ -296,9 +229,6 @@ ____________________________
 
 **Known issues: Cloudbreak**
 ____________________________
-
-
-
 
 ##### (BUG-96788) **Azure Availability Set Option Is Not Available for Instance Count of 1**
 
@@ -310,12 +240,6 @@ This issue will be fixed in a future release.
 
 If you would like to use the Azure availability sets feature now, you must add at least 2 instances to the host group for which you want to use them. The option Azure availability sets is available on the advanced **Hardware and Storage** page of the create cluster wizard.   
 ____________________________
-
-
-
-
-
-
 
 
 ##### (BUG-92605) **Cluster Creation Fails with ResourceInError**
@@ -332,16 +256,6 @@ This may mean that the volumes that you requested exceed volumes available on yo
 ____________________________
 
 
-
-
-
-
-
-
-
-
-
-
 ##### (BUG-93241) **Error When Scaling Multiple Host Groups**
 
 Scaling of multiple host groups fails with the following error:
@@ -352,17 +266,6 @@ Scaling of multiple host groups fails with the following error:
 
 Scaling multiple host groups at once is not supported. If you would like to scale multiple host groups: scale the first host group and wait until scaling has completed, then scale the second host group, and so on.  
 ____________________________
-
-
-
-
-
-
-
-
-
-
-
 
 
 ##### (BUG-97044) **Show CLI Command Copy JSON Button Does Not Work**
@@ -378,28 +281,12 @@ When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** 
 ____________________________
 
 
-
-
-
-
-
-
-
-
 ##### (BUG-93257) **Clusters Are Missing From History When an Exact Day Is Selected**   
 
 On the History page, when the start date selected is the same as end date, clusters that were running on that date are filtered out.
 
 [Comment]: <> (To be fixed in 2.7.0)
 ____________________________
-
-
-
-
-
-
-
-
 
 
 ##### (BUG-93257) **Clusters Are Missing From History**   
@@ -412,27 +299,12 @@ Refresh the page if you think that the history displayed may be incorrect.
 ____________________________
 
 
-
-
-
-
-
-
-
-
 ##### (BUG-101223) **Hardware Status is Incorrect After Stop and Start**   
 
 After stopping and starting a cluster, cluster state is incorrectly listed as "Unhealty", even though the nodes are healthy.
 
 [Comment]: <> (To be fixed in 2.7.0)
 ____________________________
-
-
-
-
-
-
-
 
 
 ##### (BUG-101230) **The Command for CLI Download Doesn't Work on Windows**
@@ -443,29 +315,12 @@ The `curl` command listed on the **Download CLI** page for Windows does not work
 ____________________________
 
 
-
-
-
-
-
-
-
-
 ##### (BUG-101225) **CLI: Manual Repair Does Not Work**   
 
 `cb cluster repair` does not work as expected.
 
 [Comment]: <> (To be fixed in 2.7.0)
 ____________________________
-
-
-
-
-
-
-
-
-
 
 
 ##### (BUG-101204) **CLI: InstanceProfileStrategy Create Doesn't Work**   
@@ -479,14 +334,6 @@ Using the following parameter in the CLI JSON from creating an instance profile 
 ____________________________
 
 
-
-
-
-
-
-
-
-
 **Known issues: Ambari 2.6.1.3 and HDP 2.6.4.0**
 
 > The known issues described here were discovered when testing Cloudbreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak.
@@ -497,13 +344,6 @@ ____________________________
 ____________________________
 
 
-
-
-
-
-
-
-
 ##### (BUG-96707) **Druid Overload Does Not Start**
 
 Druid overload start fails with the following error when using Ambari 2.6.1.3 and HDP 2.6.4.0:
@@ -511,13 +351,6 @@ Druid overload start fails with the following error when using Ambari 2.6.1.3 an
 *ERROR [main] io.druid.cli.CliOverlord - Error when starting up.  Failing. com.google.inject.ProvisionException: Unable to provision*
 
 ____________________________
-
-
-
-
-
-
-
 
 ##### (BUG-97080) **Ambari Files In Some Cases When an Mpack is Installed**
 
@@ -530,13 +363,6 @@ parallel_execution=1</pre>
 
 [Comment]: <> (Fixed in Ambari 2.7?)
 ____________________________
-
-
-
-
-
-
-
 
 ##### (AMBARI-14149) **In Ambari, Cluster Cannot Be Started After Stop**
 
@@ -559,14 +385,6 @@ Ambari dashboard shows that nodes are not sending heartbeats.
 ____________________________
 
 
-
-
-
-
-
-
-
-
 **Known issues: HDF 3.1.1**
 
 The known issues described here were discovered when testing Cloudbreak with Ambari 2.6.1.3 and HDF 3.1.1, which are used by default in Cloudbreak.
@@ -574,9 +392,6 @@ The known issues described here were discovered when testing Cloudbreak with Amb
 > For general HDF 3.1.1 known issues, refer to [HDF 3.1.1 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDF3/HDF-3.1.1/bk_release-notes/content/ch_hdf_relnotes.html)
 
 ____________________________
-
-
-
 
 
 ##### (BUG-98865) **Scaling HDF Clusters Does Not Update Configurations on New Nodes**
