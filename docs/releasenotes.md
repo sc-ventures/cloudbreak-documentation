@@ -127,7 +127,7 @@ Cloudbreak allows you to create a long-running data lake cluster and attach it t
 ____________________________
 
 
-##### **Technical Preview of Gateway SSO**
+##### **Gateway SSO Technical Preview**
 
 As part of Apache Knox-powered gateway introduced in Cloudbreak 2.7, you can configure the gateway as the SSO identity provider. For more information, refer to [Configure single sign-on (SSO)](gateway.md#configure-single-sign-on-sso).  
 ____________________________
