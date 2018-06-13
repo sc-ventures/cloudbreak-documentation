@@ -201,12 +201,18 @@ ____________________________
 #### Fixed issues
 ____________________________
 
+
 | Issue | Issue description | Category | Fix version |
 |---|---|---|---|
+| | | 2.7.0 |
+| BUG-101223 | After stopping and starting a cluster, cluster state is incorrectly listed as "Unhealty", even though the nodes are healthy. | 2.7.0 |
+| BUG-101230 | The `curl` command listed on the *Download CLI* page for Windows does not work on Windows and therefore it should be removed or replaced. | 2.7.0 |
+| BUG-101225 | `cb cluster repair` does not work as expected. | 2.7.0 |
+| BUG-101204 | Using the `instanceProfileStrategy` parameter in the CLI JSON from creating an instance profile does not work as expected.  | 2.7.0 |
 | BUG-100468 | Images from a custom image catalog are not listed in the UI after Cloudbreak version changed. | Stability | 2.7.0 |
 | BUG-99168 | All clusters created on Google Cloud Platform fail. | Stability | 2.5.0 TP |
 | BUG-99400 | Time-based cluster autoscaling does not work. | Stability | 2.5.0 TP |
-| BUG-99505 | Sync is not working for an AWS instance that was terminated a long time ago. | Stability | 2.5.0 TP |
+| BUG-99505 | Sync does not work for an AWS instance that was terminated a long time ago. | Stability | 2.5.0 TP |
 | BUG-98277 | Network interface handling in CloudBreak should be improved. | Stability | 2.5.0 TP |
 | BUG-97395 | Networks are duplicated on networks tab of the cluster create wizard. | Stability | 2.5.0 TP |
 | BUG-97259 | "Update failed" status after downscale failed, even though cluster was not modified and its status should be "Running". | Stability | 2.5.0 TP |
@@ -285,7 +291,6 @@ ____________________________
 
 On the History page, when the start date selected is the same as end date, clusters that were running on that date are filtered out.
 
-[Comment]: <> (To be fixed in 2.7.0)
 ____________________________
 
 
@@ -296,51 +301,13 @@ After changing the dates on the History page multiple times, the results display
 *Workaround:*
 
 Refresh the page if you think that the history displayed may be incorrect.  
+
 ____________________________
 
+**Known issues: Ambari and HDP**
 
-##### (BUG-101223) **Hardware Status is Incorrect After Stop and Start**   
+The known issues described here were discovered when testing Cloudbreak with Ambari and HDP versions that are used by default in Cloudbreak. For general Ambari and HDP known issues, refer to Ambari and HDP release notes.   
 
-After stopping and starting a cluster, cluster state is incorrectly listed as "Unhealty", even though the nodes are healthy.
-
-[Comment]: <> (To be fixed in 2.7.0)
-____________________________
-
-
-##### (BUG-101230) **The Command for CLI Download Doesn't Work on Windows**
-
-The `curl` command listed on the **Download CLI** page for Windows does not work on Windows.
-
-[Comment]: <> (To be fixed in 2.7.0)
-____________________________
-
-
-##### (BUG-101225) **CLI: Manual Repair Does Not Work**   
-
-`cb cluster repair` does not work as expected.
-
-[Comment]: <> (To be fixed in 2.7.0)
-____________________________
-
-
-##### (BUG-101204) **CLI: InstanceProfileStrategy Create Doesn't Work**   
-
-Using the following parameter in the CLI JSON from creating an instance profile does not work as expected:
-<pre>"parameters": {
-    "instanceProfileStrategy": "CREATE"
-},</pre>
-
-[Comment]: <> (To be fixed in 2.7.0)
-____________________________
-
-
-**Known issues: Ambari 2.6.1.3 and HDP 2.6.4.0**
-
-> The known issues described here were discovered when testing Cloudbreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak.
-
-> For general Ambari 2.6.1.5 and HDP 2.6.4.0 known issues, refer to:  
-> [Ambari 2.6.1.5 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.5/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.5.html)  
-> [HDP 2.6.4.0 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.4/bk_release-notes/content/ch_relnotes.html)  
 ____________________________
 
 
@@ -385,11 +352,9 @@ Ambari dashboard shows that nodes are not sending heartbeats.
 ____________________________
 
 
-**Known issues: HDF 3.1.1**
+**Known issues: HDF**
 
-The known issues described here were discovered when testing Cloudbreak with Ambari 2.6.1.3 and HDF 3.1.1, which are used by default in Cloudbreak.
-
-> For general HDF 3.1.1 known issues, refer to [HDF 3.1.1 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDF3/HDF-3.1.1/bk_release-notes/content/ch_hdf_relnotes.html)
+The known issues described here were discovered when testing Cloudbreak with  the hDF version used by default in Cloudbreak. For general HDF known issues, refer to HDF release notes.  
 
 ____________________________
 
