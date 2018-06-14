@@ -6,9 +6,15 @@ These steps assume that you are using an HDP version that supports the gs cloud 
 
 ### Prerequisites
 
-Access to Google Cloud Storage is via a service account. The service account that you provide to Cloudbreak for GCS data access must have the project-wide **Owner** role:
+Access to Google Cloud Storage is via a service account. The service account that you provide to Cloudbreak for GCS data access must have the following permissions: 
 
-<a href="../images/cb_gcp-data-sa01.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-data-sa01.png" width="550" title="GCP Console"></a>  
+* The service account must have the project-wide **Owner** role:
+
+    <a href="../images/cb_gcp-data-sa01.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-data-sa01.png" width="550" title="GCP Console"></a>  
+
+* The service account must have the **Storage Object Admin** role for the bucket that you are planning to use. You can set this in the bucket's permissions settings:
+
+    <a href="../images/cb_gcp-data-sa02.png" target="_blank" title="click to enlarge"><img src="../images/cb_gcp-data-sa02.png" width="450" title="GCP Console"></a>      
 
 ### Configure access to GCS 
 
