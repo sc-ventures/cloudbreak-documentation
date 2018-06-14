@@ -197,10 +197,10 @@ ____________________________
 
 | Issue | Issue description | Category | Fix version |
 |---|---|---|---|
-| BUG-101223 | After stopping and starting a cluster, cluster state is incorrectly listed as "Unhealty", even though the nodes are healthy. | 2.7.0 |
-| BUG-101230 | The `curl` command listed on the *Download CLI* page for Windows does not work on Windows and therefore it should be removed or replaced. | 2.7.0 |
-| BUG-101225 | `cb cluster repair` does not work as expected. | 2.7.0 |
-| BUG-101204 | Using the `instanceProfileStrategy` parameter in the CLI JSON from creating an instance profile does not work as expected.  | 2.7.0 |
+| BUG-101223 | After stopping and starting a cluster, cluster state is incorrectly listed as "Unhealty", even though the nodes are healthy. | Stability | 2.7.0 |
+| BUG-101230 | The `curl` command listed on the *Download CLI* page for Windows does not work on Windows and therefore it should be removed or replaced. | Usability | 2.7.0 |
+| BUG-101225 | `cb cluster repair` does not work as expected. | Usablity | 2.7.0 |
+| BUG-101204 | Using the `instanceProfileStrategy` parameter in the CLI JSON from creating an instance profile does not work as expected.  | Usability | 2.7.0 |
 | BUG-100468 | Images from a custom image catalog are not listed in the UI after Cloudbreak version changed. | Stability | 2.7.0 |
 | BUG-99168 | All clusters created on Google Cloud Platform fail. | Stability | 2.5.0 TP |
 | BUG-99400 | Time-based cluster autoscaling does not work. | Stability | 2.5.0 TP |
