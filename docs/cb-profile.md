@@ -28,7 +28,7 @@ To see all available environment variables with their default values, use:
 cbd env show
 ```
 
-### Create environment-specific profiles
+### Create environment-specific Profile files 
 
 If you would like to use a different versions of Cloudbreak for prod and qa profile, you must create two environment specific configurations that can be sourced. For example:
 
@@ -98,76 +98,14 @@ cbd util add-default-user
 For more information about setting environment variables in Profile, refer to [Set Profile variables](#set-profile-variables).
 
 
-### Configure email notifications 
-
-If you want to configure email notification, configure SMTP parameters in your `Profile`. 
-
-> In order to use this configuration, your email server must use SMTP. 
-
-The default values of the SMTP parameters are:
-
-```
-export CLOUDBREAK_SMTP_SENDER_USERNAME=
-export CLOUDBREAK_SMTP_SENDER_PASSWORD=
-export CLOUDBREAK_SMTP_SENDER_HOST=
-export CLOUDBREAK_SMTP_SENDER_PORT=25
-export CLOUDBREAK_SMTP_SENDER_FROM=
-export CLOUDBREAK_SMTP_AUTH=true
-export CLOUDBREAK_SMTP_STARTTLS_ENABLE=true
-export CLOUDBREAK_SMTP_TYPE=smtp
-```
-
-For example: 
-
-```
-export CLOUDBREAK_SMTP_SENDER_USERNAME='myemail@gmail.com'  
-export CLOUDBREAK_SMTP_SENDER_PASSWORD='Mypassword123'  
-export CLOUDBREAK_SMTP_SENDER_HOST='smtp.gmail.com'  
-export CLOUDBREAK_SMTP_SENDER_PORT=25  
-export CLOUDBREAK_SMTP_SENDER_FROM='myemail@gmail.com'  
-export CLOUDBREAK_SMTP_AUTH=true  
-export CLOUDBREAK_SMTP_STARTTLS_ENABLE=true  
-export CLOUDBREAK_SMTP_TYPE=smtp  
-```
-
-> The example assumes that you are using gmail. You should use the settings appropriate for your SMTP server.
-
-If your SMTP server uses SMTPS, you must set the protocol in your `Profile` to smtps:
-
-```
-export CLOUDBREAK_SMTP_TYPE=smtps
-```
-
-### Configure Consul 
+### Configuring Consul 
 
 Cloudbreak uses [Consul](https://www.consul.io/) for DNS resolution. All Cloudbreak related services are registered as someservice.service.consul.
 
-Consul’s built-in DNS server is able to fallback on another DNS server. This option is called `-recursor`. Cloudbreak Deployer first tries to discover the DNS settings of the host by looking for nameserver entry in the `/etc/resolv.conf` file. If it finds one, consul will use it as a recursor. Otherwise, it will use `8.8.8.8`.
+Consul’s built-in DNS server is able to fallback on another DNS server. This option is called `-recursor`. Cloudbreak deployer first tries to discover the DNS settings of the host by looking for nameserver entry in the `/etc/resolv.conf` file. If it finds one, consul will use it as a recursor. Otherwise, it will use `8.8.8.8`.
 
 For a full list of available consul config options, refer to [Consul documentation](https://www.consul.io/docs/agent/options.html).
 
 To pass any additional Consul configuration, define the `DOCKER_CONSUL_OPTIONS` variable in the Profile file.
 
 
-### Add tags in Profile (AWS)
-
-In order to differentiate launched instances, you can optionally define custom tags for your AWS resources deployed by Cloudbreak. 
-
-* If you want just one custom tag for your CloudFormation resources, set this variable in the `Profile`:
-
-    ```export CB_AWS_DEFAULT_CF_TAG=mytagcontent```
-
-    In this example, the name of the tag will be `CloudbreakId` and the value will be `mytagcontent`.
-
-* If you prefer to customize the tag name, set this variable:
-
-    ```export CB_AWS_CUSTOM_CF_TAGS=mytagname:mytagvalue```
-
-    In this example the name of the tag will be `mytagname` and the value will be `mytagvalue`. 
-
-* You can specify a list of tags with a comma separated list: 
-
-    ```export CB_AWS_CUSTOM_CF_TAGS=tag1:value1,tag2:value2,tag3:value3```
-    
-    
-    

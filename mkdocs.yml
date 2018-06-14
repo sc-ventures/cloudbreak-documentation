@@ -70,6 +70,7 @@ pages:
         - Configure external Cloudbreak database: cb-db.md
         - Disable providers: cb-disable-provider.md
         - Change default Cloudbreak ports: cb-ports.md  
+        - Set up email notifications: cb-email.md
         - Modify settings in Cloudbreak Profile: cb-profile.md 
         - Manually import HDP and HDF images to OpenStack: os-image-import.md
       - Creating an HDF cluster: hdf.md  

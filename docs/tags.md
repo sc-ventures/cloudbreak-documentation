@@ -24,4 +24,25 @@ To learn more about tags and their restrictions, refer to the cloud provider doc
 [Labels on GCP](https://cloud.google.com/resource-manager/docs/using-labels)  
 [Tags on OpenStack](https://docs.openstack.org/mitaka/networking-guide/ops-resource-tags.html)  
 
+### Add tags in Profile (AWS)
 
+In order to differentiate launched instances, you can optionally define custom tags for your AWS resources deployed by Cloudbreak. 
+
+* If you want just one custom tag for your CloudFormation resources, set this variable in the `Profile`:
+
+    ```export CB_AWS_DEFAULT_CF_TAG=mytagcontent```
+
+    In this example, the name of the tag will be `CloudbreakId` and the value will be `mytagcontent`.
+
+* If you prefer to customize the tag name, set this variable:
+
+    ```export CB_AWS_CUSTOM_CF_TAGS=mytagname:mytagvalue```
+
+    In this example the name of the tag will be `mytagname` and the value will be `mytagvalue`. 
+
+* You can specify a list of tags with a comma separated list: 
+
+    ```export CB_AWS_CUSTOM_CF_TAGS=tag1:value1,tag2:value2,tag3:value3```
+    
+    
+    
