@@ -34,13 +34,13 @@ For example:
     
 After executing these commands, **gateway.pem** and **gateway.jks** files will be downloaded onto your computer to the location where you ran the commands.
 
+### Examples
 
 Here are two examples of using tools to connect to Hive via JDBC:
 
 - [SQL Workbench/J](#example-sql-workbenchj)  
 - [Tableau](#example-tableau)  
 
-### Examples
 
 #### Example: SQL Workbench/J    
 
