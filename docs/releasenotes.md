@@ -308,15 +308,15 @@ This may mean that the volumes that you requested exceed volumes available on yo
 [Comment]: <> (This jira item was closed so it will not be fixed. Maybe add this to troubleshooting?)
 ____________________________
 
-##### (BUG-105188) **Cluster Creation Hangs with Stack Has Flows Under Operation**
+##### (BUG-105188) **On OpenStack, Cluster Creation Hangs with Stack Has Flows Under Operation**
 
 Cluster creation hangs with message ' Stack <name> has flows under operation, request not allowed.' when an RDS for Ambari is attached to the cluster.
 
 ____________________________
 
-##### (BUG-105439) **When a Node Goes Down the Cluster Status Is Available**
+##### (BUG-105439) **When a Master Node Goes Down the Cluster Status Is Available**
 
-When a node goes down or is removed, the cluster remains in available status. 
+When the master node goes down or is removed, the cluster remains in available status. 
 ____________________________
 
 ##### (BUG-104825) **Upscaling the Compute Host Group is Not Possible on AWS**
