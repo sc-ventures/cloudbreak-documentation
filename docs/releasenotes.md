@@ -237,7 +237,6 @@ When creating a cluster, the Azure availability set feature is not available for
 If you would like to use the Azure availability sets feature now, you must add at least 2 instances to the host group for which you want to use them. The option Azure availability sets is available on the advanced **Hardware and Storage** page of the create cluster wizard.   
 ____________________________
 
-
 ##### (BUG-92605) **Cluster Creation Fails with ResourceInError**
 
 Cluster creation fails with the following error:
@@ -251,12 +250,22 @@ This may mean that the volumes that you requested exceed volumes available on yo
 [Comment]: <> (This jira item was closed so it will not be fixed. Maybe add this to troubleshooting?)
 ____________________________
 
+##### (BUG-105188) **Cluster Creation Hangs with Stack Has Flows Under Operation**
+
+Cluster creation hangs with message ' Stack <name> has flows under operation, request not allowed.' when an RDS for Ambari is attached to the cluster.
+
+____________________________
+
+##### (BUG-105439) **When a Node Goes Down the Cluster Status Is Available**
+
+When a node goes down or is removed, the cluster remains in available status. 
+____________________________
+
 ##### (BUG-104825) **Upscaling the Compute Host Group is Not Possible on AWS**
 
 When using Cloudbreak with Ambari 2.6.2, upscaling the compute host group on AWS fails with the following error due to Ambari being unable to install the HIVE_CLIENT:   
 
 *New node(s) could not be added to the cluster. Reason com.sequenceiq.cloudbreak.core.ClusterException: Ambari operation failed: component: 'UPSCALE_REQUEST', requestID: '8'*
-
 ____________________________
 
 ##### (BUG-93241) **Error When Scaling Multiple Host Groups**
@@ -270,26 +279,68 @@ Scaling of multiple host groups fails with the following error:
 Scaling multiple host groups at once is not supported. If you would like to scale multiple host groups: scale the first host group and wait until scaling has completed, then scale the second host group, and so on.  
 ____________________________
 
+##### (BUG-101226) **Scaling is Ambiguous Nodes are in Created State**
+
+In some cases, when a node is in *Created* status (which means that the node is healthy, but it hasn't joined to the cluster yet), such a node is not counted when the cluster is scaled. This can lead to additional nodes being added to the cluster when some nodes are in *Created* status.   
+____________________________
+
+##### (BUG-105312) **Wrong Notification After Deleting an Autoscaling Policy**
+
+When you delete an existing scaling policy or an existing alert, you will see the following confirmation message: "Scaling policy / Alert has been saved". This message should state: "Scaling policy / Alert has been deleted". The deletion occurs correctly, but the confirmation message is incorrect.   
+____________________________
+
+##### (BUG-105205) **Auto Repair Does Not Work with a HA Cluster**
+
+When the ambari server host was removed from a HA cluster with autorepair on ambari server hostgroup, no autorepair occurred.
+____________________________
+
+##### (BUG-105308) **Exception When a Pending Cluster is Terminated**
+
+In some cases, when a cluster is terminated while its creation process is still pending, the cluster termination fails with the following exception:  
+
+*Unable to find com.sequenceiq.cloudbreak.domain.Constraint with id 2250* 
+
+*Workaround:*
+
+Try terminating the cluster again. 
+____________________________
+
+##### (BUG-105309) **Error When Deleting a Custom Blueprint**
+
+In some cases, when a cluster is terminated while its creation process is still pending, blueprint remains attached to the cluster, causing the following error when one tries to delete the blueprint: 
+
+*There is a cluster 'perftest-d0e5q5y7lj' which uses blueprint 'multinode-hdfs-yarn-ez0plywf2c'. Please remove this cluster before deleting the blueprint*
+____________________________
+
+##### (BUG-105090) **Unable to Edit Optional Credential Parameters**
+
+When modifying an existing CLoudbreak credential, it is possible to modify mandatory parameters, but it is not possible to save changes in the optional parameters due to the *Save* button remaining disabled.
+____________________________
+
+##### (BUG-105065) **Error Message is Missing When LDAP Server Has No Port**
+
+When registering an LDAP with Cloudbreak CLI, if you do not specify the port as part of the `-ldap-server`, no error is returned even though the configuration is incorrect. For example the following parameter value is incorrect:
+
+`--ldap-server ldap://hwxad-7f9ecb4d75206b09.elb.eu-west-1.amazonaws.com`
+
+In this case, Cloudbreak will not save the configuration. 
+____________________________
 
 ##### (BUG-97044) **Show CLI Command Copy JSON Button Does Not Work**
 
-When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** button with Firefox, the content does not does not get copied if adblock plugin or other advertise blocker plugins are present.
+When using the *Show CLI Command* > *Copy the JSON* or *Copy the Command* button with Firefox, the content does not does not get copied if adblock plugin or other advertise blocker plugins are present.
 
- *Workaround:*  
+*Workaround:*  
 
- Use a browser without an adblock plugin.
+Use a browser without an adblock plugin.
 
- [Comment]: <> (This jira item was closed.)
-
+[Comment]: <> (This jira item was closed.)
 ____________________________
-
 
 ##### (BUG-93257) **Clusters Are Missing From History When an Exact Day Is Selected**   
 
 On the History page, when the start date selected is the same as end date, clusters that were running on that date are filtered out.
-
 ____________________________
-
 
 ##### (BUG-93257) **Clusters Are Missing From History**   
 
@@ -298,22 +349,18 @@ After changing the dates on the History page multiple times, the results display
 *Workaround:*
 
 Refresh the page if you think that the history displayed may be incorrect.  
-
 ____________________________
 
 **Known issues: Ambari and HDP**
 
 The known issues described here were discovered when testing Cloudbreak with Ambari and HDP versions that are used by default in Cloudbreak. For general Ambari and HDP known issues, refer to Ambari and HDP release notes.   
-
 ____________________________
-
 
 ##### (BUG-96707) **Druid Overload Does Not Start**
 
 Druid overload start fails with the following error when using Ambari 2.6.1.3 and HDP 2.6.4.0:
 
 *ERROR [main] io.druid.cli.CliOverlord - Error when starting up.  Failing. com.google.inject.ProvisionException: Unable to provision*
-
 ____________________________
 
 ##### (BUG-97080) **Ambari Files In Some Cases When an Mpack is Installed**
@@ -348,13 +395,10 @@ This issue is fixed in Ambari version 2.5.1.0 and newer.
 [Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
 ____________________________
 
-
 **Known issues: HDF**
 
 The known issues described here were discovered when testing Cloudbreak with  the hDF version used by default in Cloudbreak. For general HDF known issues, refer to HDF release notes.  
-
 ____________________________
-
 
 ##### (BUG-98865) **Scaling HDF Clusters Does Not Update Configurations on New Nodes**
 
@@ -366,37 +410,7 @@ One example that affects all users is that after HDF cluster upscale/downscale t
 Configuration parameters set in the blueprint are not applied when scaling an HDF cluster. One example that affects all NiFi users is that after HDF cluster upscale the `nifi.web.proxy.host` parameter does not get updated to include the new hosts, and as a result the NiFi UI is not reachable from these hosts.
 
 `HOST1-IP:PORT,HOST2-IP:PORT,HOST3-IP:PORT`
+____________________________
 
-
-##### (BUG-104109) **Websocket Connection fails on Ambari 2.7 Cluster** 
-
-Websocket connection fails on Ambari 2.7 cluster with the following errors: 
-
-*Uncaught RangeError: Maximum call stack size exceeded
-    at RegExp.test (<anonymous>)
-    at getPath (vendor.js:13470)
-    at get (vendor.js:13353)
-    at Class.get (vendor.js:19791)
-    at Class.subscribe (app.js:197067)
-    at Class.addHandler (app.js:197095)
-    at Class.addHandler (app.js:197096)
-    at Class.addHandler (app.js:197096)
-    at Class.addHandler (app.js:197096)
-    at Class.addHandler (app.js:197096)*
-    
-*Uncaught TypeError: Cannot read property 'handlers' of undefined
-    at Class.removeHandler (app.js:197112)
-    at Class.unsubscribeOfUpdates (app.js:21730)
-    at Class.willDestroyElement (app.js:226835)
-    at Class.newFunc [as willDestroyElement] (vendor.js:12954)
-    at Class.trigger (vendor.js:25526)
-    at Class.newFunc [as trigger] (vendor.js:12954)
-    at Class.<anonymous> (vendor.js:25031)
-    at Class.invokeRecursively (vendor.js:24941)
-    at Class.<anonymous> (vendor.js:24944)
-    at Class.forEachChildView (vendor.js:24727)*
-
-    
-[Comment]: <> (BUG 105295 needs more info)
-
-    
+[Comment]: <> (For 2.7.0: BUG-105307 is not clear so I am not adding it.)
+   
