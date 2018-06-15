@@ -341,9 +341,9 @@ Manual recovery is needed for the following failed nodes:
 
 Ambari dashboard shows that nodes are not sending heartbeats.
 
- *Workaround:*  
+*Workaround:*  
 
- This issue is fixed in Ambari version 2.5.1.0 and newer.  
+This issue is fixed in Ambari version 2.5.1.0 and newer.  
 
 [Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
 ____________________________
@@ -367,3 +367,36 @@ Configuration parameters set in the blueprint are not applied when scaling an HD
 
 `HOST1-IP:PORT,HOST2-IP:PORT,HOST3-IP:PORT`
 
+
+##### (BUG-104109) **Websocket Connection fails on Ambari 2.7 Cluster** 
+
+Websocket connection fails on Ambari 2.7 cluster with the following errors: 
+
+*Uncaught RangeError: Maximum call stack size exceeded
+    at RegExp.test (<anonymous>)
+    at getPath (vendor.js:13470)
+    at get (vendor.js:13353)
+    at Class.get (vendor.js:19791)
+    at Class.subscribe (app.js:197067)
+    at Class.addHandler (app.js:197095)
+    at Class.addHandler (app.js:197096)
+    at Class.addHandler (app.js:197096)
+    at Class.addHandler (app.js:197096)
+    at Class.addHandler (app.js:197096)*
+    
+*Uncaught TypeError: Cannot read property 'handlers' of undefined
+    at Class.removeHandler (app.js:197112)
+    at Class.unsubscribeOfUpdates (app.js:21730)
+    at Class.willDestroyElement (app.js:226835)
+    at Class.newFunc [as willDestroyElement] (vendor.js:12954)
+    at Class.trigger (vendor.js:25526)
+    at Class.newFunc [as trigger] (vendor.js:12954)
+    at Class.<anonymous> (vendor.js:25031)
+    at Class.invokeRecursively (vendor.js:24941)
+    at Class.<anonymous> (vendor.js:24944)
+    at Class.forEachChildView (vendor.js:24727)*
+
+    
+[Comment]: <> (BUG 105295 needs more info)
+
+    
