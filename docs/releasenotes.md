@@ -195,89 +195,89 @@ ____________________________
 ____________________________
 
 
-| Issue | Issue description | Category | Fix version |
+| Issue | Issue description | Category | 
 |---|---|---|---|
-| BUG-105440 | LDAPS does not work. | Stability | 2.7.0 |
-| BUG-105191 | LLAP is enabled with EDW-ETL blueprint. | Stability | 2.7.0 |
-| BUG-105061 | NullPointerException when kerberized cluster is being terminated. | Stability | 2.7.0 |
-| BUG-105057	| Cloudbreak recipe in "pre-termination" stage does not run till completion. Machine shuts down in between. | Stability | 2.7.0 |
-| BUG-104950 | cbd update causes data loss. | Stability | 2.7.0 |
-| BUG-104949 | NullPointerException during upscale. | Stability | 2.7.0 |
-| BUG-104948 | Cannot delete instance when the upscale failed. | Stability | 2.7.0 |
-| BUG-104947 | Cluster status should be updated to AVAILABLE even when there are stopped services. | Stability | 2.7.0 |
-| BUG-104931 | When it aborts scaling, Cloudbreak should return a message showing which services are stopped. | Stability | 2.7.0 |
-| BUG-104930 | Upscale needs to be limited to 100 instances per one request. | Stability | 2.7.0 |
-| BUG-104915 | Cluster termination failed when kerberos is enabled. | Stability | 2.7.0 |
-| BUG-104889 | NullPointerException during stack creation. | Stability | 2.7.0 |
-| BUG-104790 | NullPointerException when scaling up an HDF cluster to 1000 nodes on OpenStack. | Stability | 2.7.0 |
-| BUG-104789 | Some error messages in the CLI and UI are hard to understand. | Usability | 2.7.0 |
-| BUG-104787 | UI menu is not scrollable (unusable in case of small window). | Usability | 2.7.0 |
-| BUG-104786 | "Copy JSON" button text is invalid | Usability | 2.7.0 |
-| BUG-104785 | In the UI, the sync option is disabled but clickable (on a stopped cluster). | Usability | 2.7.0 |
-| BUG-104782 | Wrong region is selected after cluster creation. | Stability | 2.7.0 |
-| BUG-104779 | EDW-Analytics blueprint fails on AWS. | Stability | 2.7.0 |
-| BUG-104759 | Cannot load custom image catalog. | Usability | 2.7.0 |
-| BUG-104758 | Credential error causes invalid error message: "Failed to VM types for the cloud provider". | Usability | 2.7.0 |
-| BUG-104544 | In create stack request, improve support for deprecated gateway requests. | Stability | 2.7.0 |
-| BUG-104530 | The host groups in the validation [Services,ZooKeeper,NiFi] must match the host groups in the request [Services,NiFi] | Stability | 2.7.0 |
-| BUG-104529 | Request to acquire token failed. | Stability | 2.7.0 |
-| BUG-104480 | JPA has too many connections. | Stability | 2.7.0 |
-| BUG-104475 | Unable to acquire JDBC connection. | Stability | 2.7.0 |
-| BUG-104473 | Missing node configuration in the blueprint causes NullPointerException. | Stability | 2.7.0 |
-| BUG-104469 | Failed to get platform networks java.lang.IllegalArgumentException: No region provided. | Stability | 2.7.0 |
-| BUG-104451 | Could not verify credential [credential: 'temp-user-credential'], detailed message: Unauthorized. | Stability | 2.7.0 |
-| BUG-104450 | Failed to get platform networks com.google.api.client.googleapis.json.GoogleJsonResponseException. | Stability | 2.7.0 |
-| BUG-104445	|  Error during stack termination flow: java.lang.NullPointerException. | Stability | 2.7.0 |
-| BUG-104275 | Structured events contain passwords and sensitive data. | Security | 2.7.0 |
-| BUG-104274 | HDP cluster version is incorrect in structured events. | Stability | 2.7.0 |
-| BUG-104235 | Filter valid images by provider | Usability | 2.7.0 |
-| BUG-104124 | Registering Postgres RDS causes Null Pointer Exception. | Stability | 2.7.0 |
-| BUG-104120 | Back-and-forth navigation in the create cluster wizard confuses the UI and opens the wrong port (443 instead of 8443). | Usability | 2.7.0 |
-| BUG-103678 | Remove instanceProfileStrategy recommendation from the CLI. | Stability | 2.7.0 |
-| BUG-102890 | Periscope result returns more than one elements for cluster. | Stability | 2.7.0 |
-| BUG-102884 | Saved instance groups will be removed if credential has changed. | Usability | 2.7.0 |
-| BUG-102732 | CLI can't reinstall a cluster without the `--blueprint-name` flag. | Usability | 2.7.0 |
-| BUG-102730 | Null Pointer Exception during stack repair. | Stability | 2.7.0 |
-| BUG-102714 | Cannot update the status of cluster 'X' to STARTED, because the stack is not in AVAILABLE state. | Stability | 2.7.0 |
-| BUG-102711 | Null Pointer Exception during downscale if Ambari is not reachable. | Stability | 2.7.0 |
-| BUG-102441 | Can't create Azure cluster after wrong ssh-rsa key was submitted. | Stability | 2.7.0 |
-| BUG-102296 | Openstack4j glance V2 error. | Stability | 2.7.0 |
-| BUG-102201 | Images are shown for regions that have no available images. | Usability | 2.7.0 |
-| BUG-101988 | Match tag restrictions with cloud provider's restrictions. | Usability | 2.7.0 |
-| BUG-101746 | Duplicated error message when backend is down. | Usability | 2.7.0 |
-| BUG-101483 | Sometimes the hostnames are not good after cluster installation. | Stability | 2.7.0 |
-| BUG-101473 | Cloudbreak CLI doesn't show any error if the cloudbreak host is wrong. | Stability | 2.7.0 |
-| BUG-101236 | Time to live not calculated or displayed well. | Usability | 2.7.0 |
-| BUG-101231 | After Recipe delete: page not found. | Usability | 2.7.0 |
-| BUG-101230 | The `curl` command listed on the *Download CLI* page for Windows does not work on Windows and therefore it should be removed or replaced. | Usability | 2.7.0 |
-| BUG-101228 | History for the same start and end date filters out cluster. | Usability | 2.7.0 |
-| BUG-101225 | CLI `cb cluster repair` does not work as expected. | Usability | 2.7.0 |
-| BUG-101223 | After stopping and starting a cluster, cluster state is incorrectly listed as "Unhealty", even though the nodes are healthy. | Stability | 2.7.0 |
-| BUG-101222 | Filter by button should be removed from UI External sources > Authentication configs. | Usability | 2.7.0 |
-| BUG-101204 | Using the `instanceProfileStrategy` parameter in the CLI JSON from creating an instance profile does not work as expected.  | Usability | 2.7.0 |
-| BUG-100844 | In the Cloudbreak UI create cluster wizard the side menu is incorrect for Cluster Extensions. | Usability | 2.7.0 |
-| BUG-100684	| Zeppelin Shiro config is wrong. | Stability | 2.7.0 |
-| BUG-100549 | GCP cluster creation failed if existing subnet is defined. | Stability | 2.7.0 |
-| BUG-100468 | Images from a custom image catalog are not listed in the UI after Cloudbreak version changed. | Stability | 2.7.0 |
-| BUG-100110 | Availability zones do not refreshed in Cloudbreak to match the actual AWS availability zones. | Usability | 2.7.0 |
-| BUG-100027 | Change default instance/storage settings in AWS Paris region. | Usability | 2.7.0 |
-| BUG-99168 | All clusters created on Google Cloud Platform fail. | Stability | 2.5.0 TP |
-| BUG-99400 | Time-based cluster autoscaling does not work. | Stability | 2.5.0 TP |
-| BUG-99505 | Sync does not work for an AWS instance that was terminated a long time ago. | Stability | 2.5.0 TP |
-| BUG-98277 | Network interface handling in CloudBreak should be improved. | Stability | 2.5.0 TP |
-| BUG-97395 | Networks are duplicated on networks tab of the cluster create wizard. | Stability | 2.5.0 TP |
-| BUG-97259 | "Update failed" status after downscale failed, even though cluster was not modified and its status should be "Running". | Stability | 2.5.0 TP |
-| BUG-97207 | Changing lifecycle management on YARN causes NPE. | Stability | 2.5.0 TP |
-| BUG-99189 | ImageCatalog PUT endpoint is not secured. | Security | 2.5.0 TP |
-| BUG-97895 | LDAP password should be removed from Cloudbreak logs. | Security | 2.5.0 TP |
-| BUG-97300 | Cloudbreak should show proper error messages when the given credential is not valid anymore. | Usability | 2.5.0 TP |
-| BUG-97296| GCP credential creation should validate whether resources are available with the credential. | Usability | 2.5.0 TP |
-| BUG-97660 | Ignore repository warnings checkbox are missing after changing base image Ambari or HDP to a custom one. | Usability | 2.5.0 TP |
-| BUG-97307 | Ignore repository warnings checkbox is not selectable after change the HDP VDF URL. | Usability | 2.5.0 TP |
-| BUG-96764 | "Failed to remove instance" error when using the delete icon. | Usability | 2.5.0 TP |
-| BUG-97390 | Cloudbreak should support longer resource ID-s on AWS. | Usability | 2.5.0 TP |
-| BUG-99512 | Azure ES_v3 instances should support premium storage. | Usability | 2.5.0 TP |
-| BUG-97206 | Backend should return only images for enabled platforms. | Usability | 2.5.0 TP |
+| BUG-105440 | LDAPS does not work. | Stability | 
+| BUG-105191 | LLAP is enabled with EDW-ETL blueprint. | Stability | 
+| BUG-105061 | NullPointerException when kerberized cluster is being terminated. | Stability | 
+| BUG-105057	| Cloudbreak recipe in "pre-termination" stage does not run till completion. Machine shuts down in between. | Stability |
+| BUG-104950 | cbd update causes data loss. | Stability | 
+| BUG-104949 | NullPointerException during upscale. | Stability | 
+| BUG-104948 | Cannot delete instance when the upscale failed. | Stability | 
+| BUG-104947 | Cluster status should be updated to AVAILABLE even when there are stopped services. | Stability | 
+| BUG-104931 | When it aborts scaling, Cloudbreak should return a message showing which services are stopped. | Stability | 
+| BUG-104930 | Upscale needs to be limited to 100 instances per one request. | Stability | 
+| BUG-104915 | Cluster termination failed when kerberos is enabled. | Stability |
+| BUG-104889 | NullPointerException during stack creation. | Stability | 
+| BUG-104790 | NullPointerException when scaling up an HDF cluster to 1000 nodes on OpenStack. | Stability | 
+| BUG-104789 | Some error messages in the CLI and UI are hard to understand. | Usability | 
+| BUG-104787 | UI menu is not scrollable (unusable in case of small window). | Usability | 
+| BUG-104786 | "Copy JSON" button text is invalid | Usability | 
+| BUG-104785 | In the UI, the sync option is disabled but clickable (on a stopped cluster). | Usability | 
+| BUG-104782 | Wrong region is selected after cluster creation. | Stability | 
+| BUG-104779 | EDW-Analytics blueprint fails on AWS. | Stability | 
+| BUG-104759 | Cannot load custom image catalog. | Usability | 
+| BUG-104758 | Credential error causes invalid error message: "Failed to VM types for the cloud provider". | Usability | 
+| BUG-104544 | In create stack request, improve support for deprecated gateway requests. | Stability | 
+| BUG-104530 | The host groups in the validation [Services,ZooKeeper,NiFi] must match the host groups in the request [Services,NiFi] | Stability | 
+| BUG-104529 | Request to acquire token failed. | Stability | 
+| BUG-104480 | JPA has too many connections. | Stability | 
+| BUG-104475 | Unable to acquire JDBC connection. | Stability | 
+| BUG-104473 | Missing node configuration in the blueprint causes NullPointerException. | Stability | 
+| BUG-104469 | Failed to get platform networks java.lang.IllegalArgumentException: No region provided. | Stability | 
+| BUG-104451 | Could not verify credential [credential: 'temp-user-credential'], detailed message: Unauthorized. | Stability | 
+| BUG-104450 | Failed to get platform networks com.google.api.client.googleapis.json.GoogleJsonResponseException. | Stability | 
+| BUG-104445	|  Error during stack termination flow: java.lang.NullPointerException. | Stability | 
+| BUG-104275 | Structured events contain passwords and sensitive data. | Security | 
+| BUG-104274 | HDP cluster version is incorrect in structured events. | Stability | 
+| BUG-104235 | Filter valid images by provider | Usability |
+| BUG-104124 | Registering Postgres RDS causes Null Pointer Exception. | Stability | 
+| BUG-104120 | Back-and-forth navigation in the create cluster wizard confuses the UI and opens the wrong port (443 instead of 8443). | Usability | 
+| BUG-103678 | Remove instanceProfileStrategy recommendation from the CLI. | Stability | 
+| BUG-102890 | Periscope result returns more than one elements for cluster. | Stability | 
+| BUG-102884 | Saved instance groups will be removed if credential has changed. | Usability | 
+| BUG-102732 | CLI can't reinstall a cluster without the `--blueprint-name` flag. | Usability | 
+| BUG-102730 | Null Pointer Exception during stack repair. | Stability | 
+| BUG-102714 | Cannot update the status of cluster 'X' to STARTED, because the stack is not in AVAILABLE state. | Stability | 
+| BUG-102711 | Null Pointer Exception during downscale if Ambari is not reachable. | Stability | 
+| BUG-102441 | Can't create Azure cluster after wrong ssh-rsa key was submitted. | Stability | 
+| BUG-102296 | Openstack4j glance V2 error. | Stability | 
+| BUG-102201 | Images are shown for regions that have no available images. | Usability | 
+| BUG-101988 | Match tag restrictions with cloud provider's restrictions. | Usability | 
+| BUG-101746 | Duplicated error message when backend is down. | Usability | 
+| BUG-101483 | Sometimes the hostnames are not good after cluster installation. | Stability |
+| BUG-101473 | Cloudbreak CLI doesn't show any error if the cloudbreak host is wrong. | Stability | 
+| BUG-101236 | Time to live not calculated or displayed well. | Usability | 
+| BUG-101231 | After Recipe delete: page not found. | Usability | 
+| BUG-101230 | The `curl` command listed on the *Download CLI* page for Windows does not work on Windows and therefore it should be removed or replaced. | Usability | 
+| BUG-101228 | History for the same start and end date filters out cluster. | Usability | 
+| BUG-101225 | CLI `cb cluster repair` does not work as expected. | Usability | 
+| BUG-101223 | After stopping and starting a cluster, cluster state is incorrectly listed as "Unhealty", even though the nodes are healthy. | Stability |
+| BUG-101222 | Filter by button should be removed from UI External sources > Authentication configs. | Usability | 
+| BUG-101204 | Using the `instanceProfileStrategy` parameter in the CLI JSON from creating an instance profile does not work as expected.  | Usability | 
+| BUG-100844 | In the Cloudbreak UI create cluster wizard the side menu is incorrect for Cluster Extensions. | Usability | 
+| BUG-100684	| Zeppelin Shiro config is wrong. | Stability | 
+| BUG-100549 | GCP cluster creation failed if existing subnet is defined. | Stability | 
+| BUG-100468 | Images from a custom image catalog are not listed in the UI after Cloudbreak version changed. | Stability | 
+| BUG-100110 | Availability zones do not refreshed in Cloudbreak to match the actual AWS availability zones. | Usability |
+| BUG-100027 | Change default instance/storage settings in AWS Paris region. | Usability | 
+| BUG-99168 | All clusters created on Google Cloud Platform fail. | Stability | 
+| BUG-99400 | Time-based cluster autoscaling does not work. | Stability | 
+| BUG-99505 | Sync does not work for an AWS instance that was terminated a long time ago. | Stability | 
+| BUG-98277 | Network interface handling in CloudBreak should be improved. | Stability | 
+| BUG-97395 | Networks are duplicated on networks tab of the cluster create wizard. | Stability | 
+| BUG-97259 | "Update failed" status after downscale failed, even though cluster was not modified and its status should be "Running". | Stability | 
+| BUG-97207 | Changing lifecycle management on YARN causes NPE. | Stability | 
+| BUG-99189 | ImageCatalog PUT endpoint is not secured. | Security | 
+| BUG-97895 | LDAP password should be removed from Cloudbreak logs. | Security | 
+| BUG-97300 | Cloudbreak should show proper error messages when the given credential is not valid anymore. | Usability | 
+| BUG-97296| GCP credential creation should validate whether resources are available with the credential. | Usability | 
+| BUG-97660 | Ignore repository warnings checkbox are missing after changing base image Ambari or HDP to a custom one. | Usability | 
+| BUG-97307 | Ignore repository warnings checkbox is not selectable after change the HDP VDF URL. | Usability | 
+| BUG-96764 | "Failed to remove instance" error when using the delete icon. | Usability | 
+| BUG-97390 | Cloudbreak should support longer resource ID-s on AWS. | Usability | 
+| BUG-99512 | Azure ES_v3 instances should support premium storage. | Usability | 
+| BUG-97206 | Backend should return only images for enabled platforms. | Usability | 
 
 ____________________________
 
