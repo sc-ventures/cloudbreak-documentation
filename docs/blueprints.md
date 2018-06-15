@@ -109,7 +109,7 @@ When using [external authentication sources](external-ldap.md), the following va
 | ldap.groupSearchBase | Group search base | OU=Groups,DC=ad,DC=hdc,DC=com|
 | ldap.groupNameAttribute | Group attribute | cb |
 | ldap.groupObjectClass | Group object class | group |
-| ldap.groupMemberAttribute | Attribute for membershio | member |
+| ldap.groupMemberAttribute | Attribute for membership | member |
 | ldap.domain | Your domain | example.com |
 
 #### External database (RDBMS)

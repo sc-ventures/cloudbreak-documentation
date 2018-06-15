@@ -60,7 +60,7 @@ In order to use your recipe for clusters, you must register it first by using th
 5. When creating a cluster, you can select previously added recipes on the advanced **Cluster Extensions** page of the create cluster wizard. 
 
 
-### Reusable rceipes 
+### Reusable recipes 
 
 #### Install mysql connector recipe
 
