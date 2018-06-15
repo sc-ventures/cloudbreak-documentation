@@ -1,8 +1,8 @@
 ## Release notes
 
-### 2.7.0
+### 2.8.0 TP
 
-Cloudbreak 2.7.0 is a general availability release, which is suitable for production deployments.
+Cloudbreak 2.8.0 is a technical preview release, which is not suitable for production deployments.
 
 ____________________________
 
