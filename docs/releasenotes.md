@@ -194,9 +194,8 @@ ____________________________
 #### Fixed issues
 ____________________________
 
-
 | Issue | Issue description | Category | 
-|---|---|---|---|
+|---|---|---|
 | BUG-105440 | LDAPS does not work. | Stability | 
 | BUG-105191 | LLAP is enabled with EDW-ETL blueprint. | Stability | 
 | BUG-105061 | NullPointerException when kerberized cluster is being terminated. | Stability | 
