@@ -97,7 +97,7 @@ Launch Cloudbreak from an Cloud Deployment Manager template by using the followi
     
 1. Log in to GitHub at [https://github.com/](https://github.com/).  
 
-1. Download the "cbd-quickstart" Hortonworks repo located at `https://github.com/hortonworks/cbd-quickstart/tree/rc-2.7` onto your computer. 
+1. Download the "cbd-quickstart" Hortonworks repo located at `https://github.com/hortonworks/cbd-quickstart/tree/2.7.0/gcp` onto your computer. 
 
 [Comment]: <> (Should we tell people to fork this or to download the repo?)
 
