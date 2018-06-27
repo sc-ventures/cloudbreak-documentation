@@ -33,7 +33,7 @@ Follow these steps to create an app based Cloudbreak credential.
 
     <a href="../images/cb_azure-appbased01.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-appbased01.png" width="650" title="Cloudbreak web UI"></a>  
 
-1. Navigate to the **Subscriptions**, choose **Access control (IAM)**. Click **Add** and then assign the "Contributor" role to your newly created application by selecting "Contributor" under **Role** and your app name under **Select**:
+1. Navigate to the **Subscriptions**, choose **Access control (IAM)**. Click **Add** and then assign the "Contributor" role to your newly created application by selecting "Contributor" under **Role** and typing your app name under **Select** (You must type your app name in order to find it):
 
     > This step typically requires admin permissions so you may have to contact your Azure administrator.
 
