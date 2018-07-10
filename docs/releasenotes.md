@@ -4,18 +4,29 @@
 
 Cloudbreak 2.4.3 is a general availability release, which is suitable for production deployments. 
 
-
-
 ____________________________
 
 #### New Features
 ____________________________
 
-##### Image Catalog Update
+##### New Cloudbreak Deployment Options 
+
+Cloudbreak 2.4.3 can be deployed by using cloud provider templates or manually on your own VM. Cloudbreak images are no longer available.  To review current Cloudbreak deployment options (quickstart and production), refer to [Deployment options](deployment-options.md).  
+____________________________
+
+##### Image Catalog Update 2
+
+[Comment]: <> (This is the only change in Cb 2.4.3. Only that and fixed issues.)
+
+The image catalog has been updated to include new prewarmed images. Refer to [Image Catalog Updates](#image-catalog-updates).  
+____________________________
+
+##### Image Catalog Update 1
 
 [Comment]: <> (This is the only change in Cb 2.4.2. Only that and fixed issues.)
 
-The image catalog has been updated to include new base and prewarmed images for HDP and Ambari. Refer to [Image Catalog Updates](#image-catalog-updates).  
+The image catalog has been updated to include new prewarmed images. Refer to [Image Catalog Updates](#image-catalog-updates).  
+____________________________
 
 ##### New UI/UX
 
@@ -47,12 +58,10 @@ The following screenshot shows the create cluster wizard:
 
 ____________________________
 
-
 ##### New CLI
 
 Cloudbreak 2.4.0 introduces the new CLI tool, which replaces Cloudbreak Shell. All commands start with a singular object followed by an action, for example, `blueprint create`  and `blueprint list`. To download the CLI, select **Download CLI** from the navigation pane. Refer to [Install CLI](cli-install.md), [Get Started with the CLI](cli-get-started.md), and [CLI Reference](cli-reference.md).  
 ____________________________
-
 
 ##### Support for Kerberos
 
@@ -64,13 +73,11 @@ Creating Kerberos-enabled clusters is supported:
 Refer to [Enabling Kerberos Security](security-kerberos.md).
 ____________________________
 
-
 ##### Support for Configuring an External RDBMS for Cloudbreak
 
 Using an external RDBMS for Cloudbreak is supported and recommended for production environments.   
 For configuration instructions, refer to [Configuring External Cloudbreak Database](cb-db.md).
 ____________________________
-
 
 ##### Support for Migrating Cloudbreak Instance
 
@@ -78,19 +85,16 @@ Migrating Cloudbreak from one machine to another is supported.
 For migration instructions, refer to [Moving a Cloudbreak Instance](cb-migrate.md).
 ____________________________
 
-
 ##### Prewarmed Images 
 
 To accelerate cluster creation, CLoudbreak 2.4.0 introduces prewarmed images, which include the operating system, as well as the default version of Ambari and HDP. By default, Cloudbreak 2.4 launches clusters from these prewarmed images, instead of using base images (which were used by default in earlier versions of Cloudbreak). Default base images are still available in case you would like to use different Ambari and HDP versions than those provided with prewarmed images.  
 For more information, refer to [Prewarmed and Base Images](aws-create.md#prewarmed-and-base-images). 
 ____________________________
 
-
 ##### Providing Your Own JDK
 
 Providing your own JDK on a custom base image is supported. For instructions, refer to "Advanced topics" in the [https://github.com/hortonworks/cloudbreak-images](https://github.com/hortonworks/cloudbreak-images) repository.
 ____________________________
-
 
 ##### Generating CLI Templates 
 
@@ -98,7 +102,6 @@ After specifying the parameters for your cluster in the Cloudbreak web UI, you c
 
 Furthermore, Cloudbreak web UI includes an option in the UI which allows you to generate the  `create` command for resources such as credentials, blueprints, clusters, and recipes. For more information, refer to [Obtain CLI Command from the UI](cli-get-started.md#obtain-cli-command-from-the-ui).  
 ____________________________
-
 
 ##### New Recipe Types 
 
@@ -112,12 +115,10 @@ New types of recipes are introduced:
 Refer to updated [Recipes](recipes.md) documentation.
 ____________________________
 
-
 ##### Disabling Cloud Providers 
 
 You can hide cloud providers available in Cloudbreak by adding the `CB_ENABLEDPLATFORMS` environment variable in Profile and setting it to the provider(s) that you would like to have available. For more information, refer to [Disable Providers](cb-disable-provider.md).
 ____________________________
-
 
 ##### Support for Ambari 2.6 (2.6.1.3+)
 
@@ -132,16 +133,9 @@ If you decide to use Ambari 2.6.1, you should be aware of the following:
 [Comment]: <> (Or should these be described as behavioral changes?) 
 ____________________________
 
-
 ##### Ambari Master Key 
 
 Cloudbreak 2.4.0 allows you to specify the Ambari Master Key. The Ambari Server Master Key is used to configure Ambari to encrypt database and Kerberos credentials that are retained by Ambari as part of the Ambari setup. The option is available on the **Security** page of the create cluster wizard.
-
-
-
-
-
-
 
 ____________________________
 
@@ -153,38 +147,32 @@ ____________________________
 The functionality which enables you to create custom images was changed and improved. Refer to [Custom Images](images.md).
 ____________________________
 
-
 ##### Prewarmed Images Are Used By Default  
 
 By default, Cloudbreak 2.4.0 launches clusters from prewarmed images, instead of base images (which were used by default in earlier versions of Cloudbreak). For more information, refer to [Prewardmed and Base Images](aws-create.md#prewarmed-and-base-images). 
 ____________________________
-
 
 ##### Removal of Cloudbreak Shell
 
 Cloudbreak Shell is not available in Cloudbreak 2.x. It was replaced by the [Cloudbreak CLI](cli-install.md).
 ____________________________
 
-
 ##### Removal of Platforms
 
 The [Platforms](http://hortonworks.github.io/cloudbreak-docs/release-1.16.5/topologies/) feature was removed and is not available in Cloudbreak 2.x.
 ____________________________
-
 
 ##### Removal of Mesos
 
 Mesos cloud provider is not supported and the corresponding options were removed in Cloudbreak 2.x.
 ____________________________
 
-
 ##### Removal of Templates
 
 Earlier versions of Cloudbreak allowed you to save infrastructure, network, and security group templates. This feature was removed. Instead, you can define VMs, storage, networks, and security groups as part of the create cluster wizard.
 ____________________________
 
-
-##### cbd update Improvements 
+##### Cbd update Improvements 
 
 The following improvements were added for `cbd update`:
 
@@ -193,7 +181,7 @@ The following improvements were added for `cbd update`:
 * Cloudbreak stores `psql` command history on the data volume to help investigate support cases.    
 * There are two new files in the cbd deployment directory: .cbd_history and .cbd_output_history to help investigate support cases.   
 * The default 10 second stop timeout is increased to 60 seconds. This can be overridden by setting DOCKER_STOP_TIMEOUT (in seconds).  
-
+____________________________
 
 ##### (BUG-94801) New Default Images Including OS with Spectre and Meltdown Patches 
 
@@ -202,15 +190,17 @@ All default images used by Cloudbreak were rebuilt. Each image now includes an u
 * Cloudbreak image (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for CVE-2017-5753 (also known as "Spectre Variant 1") and "Meltdown" (also known as "Variant 3").  
 * Default HDP image for Azure, Google Cloud, and Openstack (Centos 7): Moved to Centos version 7.4.1708, which includes fixes for CVE-2017-5753 (also known as "Spectre Variant 1") and "Meltdown" (also known as "Variant 3").  
 * Default HDP image for AWS (Amazon Linux): Moved to Amazon Linux 2017.09 version, kernel version 4.9.81-35, which includes fixes for CVE-2017-5753 (also known as "Spectre Variant 1"), CVE-2017-5715 (also known as "Spectre Variant 2"), and "Meltdown" (also known as "Variant 3").  
-
-
-
-
-
 ____________________________
 
 #### Image Catalog Updates 
 ____________________________
+
+##### July 11, 2018
+
+Update 1 for Cloudbreak 2.4.3: 
+
+Default Ambari version 2.6.2.2  
+Default HDP version 2.6.5.0-292  
 
 ##### June 1, 2018
 
@@ -225,13 +215,6 @@ The following versions are included with Cloudbreak 2.4.1:
 
 Default Ambari version 2.6.1.3  
 Default HDP version 2.6.4.5-2 
-
-
-
-
-
-
-
 ____________________________
 
 #### Fixed Issues
@@ -243,6 +226,22 @@ ____________________________
 
 | Issue | Issue Description | Category | Fix Version |
 |---|---|---|---|
+| BUG-106925 | Log requests to AWS to circumvent throttling error. | Usability | 2.4.3 |
+| BUG-105288 | Display expected decommission duration on Cloudbreak. | Usability | 2.4.3 |
+| BUG-105354	| Azure resources are not deleted. | Usability | 2.4.3 |
+| BUG-104241 | Utils base url is not reachable from cloudbreak. | Usability | 2.4.3 |
+| BUG-102208 | Handle AWS throttling error on autoscale. | Stability | 2.4.3 |
+| BUG-105212 | Add ability to detect recipes that are hanging for a long time. | Usability | 2.4.3 |
+| BUG-105164 | Rename cbd export-logs command to create-bundle. | Usability | 2.4.3 |
+| BUG-104950 | Cbd update causes data loss. | Stability | 2.4.3 |
+| BUG-104949 | Groovy Null Pointer Exception during upscale. | Stability | 2.4.3 |
+| BUG-104948 | Cannot delete instance if the upscale failed. | Usability | 2.4.3 |
+| BUG-104947 | Cluster status shall be updated to AVAILABLE even there are stopped services. | Usability | 2.4.3 |
+| BUG-104931 | Cloudbreak should tell which are the stopped services when it aborts scaling. | Usability | 2.4.3 |
+| BUG-104883 | In the UI, the node number is hidden on manual scaling pop-up window in case of Firefox. | Usability | 2.4.3 |
+| BUG-103527 | Cannot start CB after docker restart. | Stability | 2.4.3 |
+| BUG-102201 | Images are shown for regions with no image available. | usability | 2.4.3 |
+| BUG-102200 | CronExpression field is blinking sometimes | Usability | 2.4.3 |
 | BUG-103678 | Remove instanceProfileStrategy recommendation from CLI. | Stability | 2.4.2|
 | BUG-101805 | OrchestratorBootstrapRunner keeps polling after cluster termination: If a cluster is terminated and a salt job is in progress, then the polling continues until timeout. | Stability | 2.4.2 |
 | BUG-100754 | Sync should cleanup the terminated instances' salt metadata from the cluster. | Stability | 2.4.2 |
@@ -273,11 +272,6 @@ ____________________________
 | BUG-97390 | Cloudbreak should support longer resource ID-s on AWS. | Usability | 2.4.1 |
 | BUG-99512 | Azure ES_v3 instances should support premium storage. | Usability |  2.4.1 |
 | BUG-97206 | Backend should return only images for enabled platforms. | Usability | 2.4.1 |
-
-
-
-
-
 ____________________________
 
 #### Known Issues
@@ -285,9 +279,6 @@ ____________________________
 
 **Known Issues: Cloudbreak**
 ____________________________
-
-
-
 
 ##### (BUG-96788) Azure Availability Set Option Is Not Available for Instance Count of 1
 
@@ -299,12 +290,6 @@ This issue will be fixed in a future release.
 
 If you would like to use the Azure availability sets feature now, you must add at least 2 instances to the host group for which you want to use them. The option Azure availability sets is available on the advanced **Hardware and Storage** page of the create cluster wizard.   
 ____________________________
-
-
-
-
-
-
 
 ##### (BUG-92605) Cluster Creation Fails with ResourceInError
 
@@ -319,27 +304,12 @@ This may mean that the volumes that you requested exceed volumes available on yo
 [Comment]: <> (This jira item was closed so it will not be fixed. Maybe add this to troubleshooting?)
 ____________________________
 
-
-
-
-
-
-
-
 ##### (BUG-91013) Incorrect Node Status After Cluster Restart 
 
 You may sporadically experience an issue where after you stop and restart a cluster, the node status displayed in the "Hardware" section is incorrect.   
 
 [comment]: <> (Not sure what the workaround is for BUG-91013?)
 ____________________________
-
-
-
-
-
-
-
-
 
 ##### (BUG-93241) Error When Scaling Multiple Host Groups 
 
@@ -352,17 +322,6 @@ Scaling of multiple host groups fails with the following error:
 Scaling multiple host groups at once is not supported. If you would like to scale multiple host groups: scale the first host group and wait until scaling has completed, then scale the second host group, and so on.  
 ____________________________
 
-
-
-
-
-
-
-
-
-
-
-
 ##### (BUG-97044) Show CLI Command Copy JSON Button Does Not Work
   
 When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** button with  Firefox, the content does not does not get copied if adblock plugin or other advertise blocker plugins are present.
@@ -372,123 +331,12 @@ When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** 
  Use a browser without an adblock plugin. 
 ____________________________
 
+**Known Issues: Ambari and HDP**
 
-
-
-
-
-
-##### (BUG-95607) Special Characters in Blueprint Name Cause an Error in CLI  
-
-When registering a blueprint via `blueprint create` CLI command, if the name of the blueprint includes one or more of the following special characters `@#$%|:&*;` you will get an error similar to:  
-
-<pre>cb blueprint create from-url --name test@# --url https://myurl.com/myblueprint.bp  
-[1] 7547
--bash: application.yml: command not found
--bash: --url: command not found
- ~  integration-test  1  time="2018-02-01T12:56:44+01:00" level="error" msg="the following parameters are missing: url\n"</pre> 
- 
- *Workaround:*  
-When specifying a bleuprint name that contains special characters, make sure to use quotes, for example "test@#".
+The known issues described here were discovered when testing Cloubdreak with the default Ambari and HDP versions used un in Cloudbreak. For general Ambari and HDP  known issues, refer to their respective release notes.     
 ____________________________
 
-
-
-
-
-
-##### (BUG-93257) Clusters Are Missing From History   
-
-After changing the dates on the History page multiple times, the results displayed may sometimes be incorrect. 
-
-*Workaround:*
-
-Refresh the page if you think that the history displayed may be incorrect.  
-____________________________
-
-
-
-
-
-
-____________________________
-
-**Known Issues: Ambari 2.6.1.3 and HDP 2.6.4.0**
-
-> The known issues described here were discovered when testing Cloubdreak with Ambari 2.6.1.3 and HDP 2.6.4.0, which are used by default in Cloudbreak 2.4.0.
-
-> For general Ambari 2.6.1.3 and HDP 2.6.4.0 known issues, refer to:  
-> [Ambari 2.6.1.5 Release Notes](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.1.5/bk_ambari-release-notes/content/ch_relnotes-ambari-2.6.1.5.html)  
-> [HDP 2.6.4.0 Release Notes](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.4/bk_release-notes/content/ch_relnotes.html)  
-____________________________
-
-
-
-
-
-
-
-
-##### (AMBARI-14149) Ambari Cluster Cannot Be Started After Stop
-
-When using Ambari version 2.5.0.3, after stopping and starting a cluster, Event History shows the following error:
-
-<pre>Ambari cluster could not be started. Reason: Failed to start Hadoop services.
-2/7/2018, 12:47:05 PM
-Starting Ambari services.
-2/7/2018, 12:47:04 PM
-Manual recovery is needed for the following failed nodes:   
-[host-10-0-0-4.openstacklocal, host-10-0-0-3.openstacklocal, host-10-0-0-5.openstacklocal</pre>
-
-Ambari dashboard shows that nodes are not sending heartbeats. 
-
- *Workaround:*  
- 
- This issue is fixed in Ambari version 2.5.1.0 and newer.  
-
-[Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
-
-
-
-
-
-
-
-
-##### (BUG-96784) Hive LLAP Start Takes More Than an Hour
-
-Hive LLAP start times out in Ambari, but eventually it starts (after 15 minutes on AWS and after one hour or so on other providers).  
-____________________________
-
-
-
-
-
-
-
-##### (BUG-96707) Druid Overload Does Not Start
-
-Druid overload start fails with the following error when using Ambari 2.6.1.3 and HDP 2.6.4.0: 
-
-*ERROR [main] io.druid.cli.CliOverlord - Error when starting up.  Failing. com.google.inject.ProvisionException: Unable to provision* 
-  
-____________________________
-
-
-
-
-
-
-
-
-##### (BUG-97080) Ambari Fils In Some Cases When an mpack is Installed 
-
-If we set the following properties then cluster install may fail (in 20-30% of the cases), because of the Ambari agent cache being updated concurrently:
-
-<pre>/etc/ambari-server/conf/ambari.properties  
-agent.auto.cache.update=true*  
-*/etc/ambari-agent/conf/ambari-agent.ini  
-parallel_execution=1</pre> 
+There are no known issues.
 ____________________________
 
 
