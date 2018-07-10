@@ -14,9 +14,15 @@ markdown_extensions:
   - markdown_include.include
 use_directory_urls: false
 pages:
-    - Get Started:
-      - Introduction: index.md
-      - Architecture: architecture.md
+    - Intro:
+      - Introduction: index.md  
+      - Architecture: architecture.md  
+      - Core Concepts: concepts.md 
+      - Deployment Options: deployment-options.md 
+    - Quickstart:
+      - Quickstart on AWS: aws-quick.md 
+      - Quickstart on Azure: azure-quick.md 
+      - Quickstart on GCP: gcp-quick.md 
     - AWS:
       - Launch on AWS: aws-launch.md
       - Create a Cluster: aws-create.md
@@ -47,7 +53,6 @@ pages:
         - Custom Images: images.md
         - Autoscaling: autoscaling.md 
       - Managing Cloudbreak:
-        - Install on Your Own VM: vm-launch.md
         - Upgrade Cloudbreak: cb-upgrade.md
         - Manage Cloudbreak Credentials: cb-credentials.md 
         - Disable Providers: cb-disable-provider.md
@@ -77,6 +82,5 @@ pages:
       - FAQs: faq.md 
       - Getting Help: get-help.md
       - SmartSense: smartsense.md
-      - Legal:
-        - Acknowledgements: acknowledge.md
+      - Legal: acknowledge.md
 
