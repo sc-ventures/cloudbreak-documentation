@@ -1,4 +1,4 @@
-## Release notes
+## Release Notes
 
 ### 2.7.1
 
@@ -6,7 +6,12 @@ Cloudbreak 2.7.1 is a general availability release, which is suitable for produc
 
 ____________________________
 
-#### New features
+#### New Features
+____________________________
+
+##### **New Prewarmed Images**
+
+Coudbreak 2.7.1 includes new prewarmed images with Ambari 2.6.2.2. For more information, refer to [Image Catalog Updates](#image-catalog-updates).  
 ____________________________
 
 ##### **Launching Cloudbreak from Templates**
@@ -116,7 +121,7 @@ ____________________________
 New documentation is available for using custom hostnames based on DNS for clusters running on AWS. For instructions, refer to [Using custom hostnames based on DNS](hostnames.md).  
 ____________________________
 
-#### New features (TP)
+#### New Features (TP)
 
 The following features are introduced in Cloudbreak 2.7 as technical preview; these features are for evaluation only and are not suitable for production.  
 ____________________________
@@ -132,7 +137,7 @@ ____________________________
 As part of Apache Knox-powered gateway introduced in Cloudbreak 2.7, you can configure the gateway as the SSO identity provider. For more information, refer to [Configure single sign-on (SSO)](gateway.md#configure-single-sign-on-sso).  
 ____________________________
 
-#### Behavioral changes
+#### Behavioral Changes
 ____________________________
 
 ##### **Removal of Prebuilt Cloudbreak Deployer Images**
@@ -180,119 +185,137 @@ ____________________________
 The **Recipes** navigation menu option was moved under **Cluster Extensions**, so to find recipe-related settings, select **Cluster Extensions > Recipes** from the navigation menu.  
 ____________________________
 
-#### Image catalog updates
+#### Image Catalog Updates
 ____________________________
 
-Default versions provided with Cloudbreak 2.7:
+Default versions provided with Cloudbreak 2.7.1:
 
-Default Ambari version 2.6.2.0  
+Default Ambari version 2.6.2.2  
 Default HDP version 2.6.5.0-292  
 Default HDF version 3.1.1.0-35    
 
 ____________________________
 
-#### Fixed issues
+#### Fixed Issues
 ____________________________
 
-| Issue | Issue description | Category | 
-|---|---|---|
-| BUG-105440 | LDAPS does not work. | Stability | 
-| BUG-105191 | LLAP is enabled with EDW-ETL blueprint. | Stability | 
-| BUG-105061 | NullPointerException when kerberized cluster is being terminated. | Stability | 
-| BUG-105057	| Cloudbreak recipe in "pre-termination" stage does not run till completion. Machine shuts down in between. | Stability |
-| BUG-104950 | cbd update causes data loss. | Stability | 
-| BUG-104949 | NullPointerException during upscale. | Stability | 
-| BUG-104948 | Cannot delete instance when the upscale failed. | Stability | 
-| BUG-104947 | Cluster status should be updated to AVAILABLE even when there are stopped services. | Stability | 
-| BUG-104931 | When it aborts scaling, Cloudbreak should return a message showing which services are stopped. | Stability | 
-| BUG-104930 | Upscale needs to be limited to 100 instances per one request. | Stability | 
-| BUG-104915 | Cluster termination failed when kerberos is enabled. | Stability |
-| BUG-104889 | NullPointerException during stack creation. | Stability | 
-| BUG-104790 | NullPointerException when scaling up an HDF cluster to 1000 nodes on OpenStack. | Stability | 
-| BUG-104789 | Some error messages in the CLI and UI are hard to understand. | Usability | 
-| BUG-104787 | UI menu is not scrollable (unusable in case of small window). | Usability | 
-| BUG-104786 | "Copy JSON" button text is invalid | Usability | 
-| BUG-104785 | In the UI, the sync option is disabled but clickable (on a stopped cluster). | Usability | 
-| BUG-104782 | Wrong region is selected after cluster creation. | Stability | 
-| BUG-104779 | EDW-Analytics blueprint fails on AWS. | Stability | 
-| BUG-104759 | Cannot load custom image catalog. | Usability | 
-| BUG-104758 | Credential error causes invalid error message: "Failed to VM types for the cloud provider". | Usability | 
-| BUG-104544 | In create stack request, improve support for deprecated gateway requests. | Stability | 
-| BUG-104530 | The host groups in the validation [Services,ZooKeeper,NiFi] must match the host groups in the request [Services,NiFi] | Stability | 
-| BUG-104529 | Request to acquire token failed. | Stability | 
-| BUG-104480 | JPA has too many connections. | Stability | 
-| BUG-104475 | Unable to acquire JDBC connection. | Stability | 
-| BUG-104473 | Missing node configuration in the blueprint causes NullPointerException. | Stability | 
-| BUG-104469 | Failed to get platform networks java.lang.IllegalArgumentException: No region provided. | Stability | 
-| BUG-104451 | Could not verify credential [credential: 'temp-user-credential'], detailed message: Unauthorized. | Stability | 
-| BUG-104450 | Failed to get platform networks com.google.api.client.googleapis.json.GoogleJsonResponseException. | Stability | 
-| BUG-104445	|  Error during stack termination flow: java.lang.NullPointerException. | Stability | 
-| BUG-104275 | Structured events contain passwords and sensitive data. | Security | 
-| BUG-104274 | HDP cluster version is incorrect in structured events. | Stability | 
-| BUG-104235 | Filter valid images by provider | Usability |
-| BUG-104124 | Registering Postgres RDS causes Null Pointer Exception. | Stability | 
-| BUG-104120 | Back-and-forth navigation in the create cluster wizard confuses the UI and opens the wrong port (443 instead of 8443). | Usability | 
-| BUG-103678 | Remove instanceProfileStrategy recommendation from the CLI. | Stability | 
-| BUG-102890 | Periscope result returns more than one elements for cluster. | Stability | 
-| BUG-102884 | Saved instance groups will be removed if credential has changed. | Usability | 
-| BUG-102732 | CLI can't reinstall a cluster without the `--blueprint-name` flag. | Usability | 
-| BUG-102730 | Null Pointer Exception during stack repair. | Stability | 
-| BUG-102714 | Cannot update the status of cluster 'X' to STARTED, because the stack is not in AVAILABLE state. | Stability | 
-| BUG-102711 | Null Pointer Exception during downscale if Ambari is not reachable. | Stability | 
-| BUG-102441 | Can't create Azure cluster after wrong ssh-rsa key was submitted. | Stability | 
-| BUG-102296 | Openstack4j glance V2 error. | Stability | 
-| BUG-102201 | Images are shown for regions that have no available images. | Usability | 
-| BUG-101988 | Match tag restrictions with cloud provider's restrictions. | Usability | 
-| BUG-101746 | Duplicated error message when backend is down. | Usability | 
-| BUG-101483 | Sometimes the hostnames are not good after cluster installation. | Stability |
-| BUG-101473 | Cloudbreak CLI doesn't show any error if the cloudbreak host is wrong. | Stability | 
-| BUG-101236 | Time to live not calculated or displayed well. | Usability | 
-| BUG-101231 | After Recipe delete: page not found. | Usability | 
-| BUG-101230 | The `curl` command listed on the *Download CLI* page for Windows does not work on Windows and therefore it should be removed or replaced. | Usability | 
-| BUG-101228 | History for the same start and end date filters out cluster. | Usability | 
-| BUG-101225 | CLI `cb cluster repair` does not work as expected. | Usability | 
-| BUG-101223 | After stopping and starting a cluster, cluster state is incorrectly listed as "Unhealty", even though the nodes are healthy. | Stability |
-| BUG-101222 | Filter by button should be removed from UI External sources > Authentication configs. | Usability | 
-| BUG-101204 | Using the `instanceProfileStrategy` parameter in the CLI JSON from creating an instance profile does not work as expected.  | Usability | 
-| BUG-100844 | In the Cloudbreak UI create cluster wizard the side menu is incorrect for Cluster Extensions. | Usability | 
-| BUG-100684	| Zeppelin Shiro config is wrong. | Stability | 
-| BUG-100549 | GCP cluster creation failed if existing subnet is defined. | Stability | 
-| BUG-100468 | Images from a custom image catalog are not listed in the UI after Cloudbreak version changed. | Stability | 
-| BUG-100110 | Availability zones do not refreshed in Cloudbreak to match the actual AWS availability zones. | Usability |
-| BUG-100027 | Change default instance/storage settings in AWS Paris region. | Usability | 
-| BUG-99168 | All clusters created on Google Cloud Platform fail. | Stability | 
-| BUG-99400 | Time-based cluster autoscaling does not work. | Stability | 
-| BUG-99505 | Sync does not work for an AWS instance that was terminated a long time ago. | Stability | 
-| BUG-98277 | Network interface handling in CloudBreak should be improved. | Stability | 
-| BUG-97395 | Networks are duplicated on networks tab of the cluster create wizard. | Stability | 
-| BUG-97259 | "Update failed" status after downscale failed, even though cluster was not modified and its status should be "Running". | Stability | 
-| BUG-97207 | Changing lifecycle management on YARN causes NPE. | Stability | 
-| BUG-99189 | ImageCatalog PUT endpoint is not secured. | Security | 
-| BUG-97895 | LDAP password should be removed from Cloudbreak logs. | Security | 
-| BUG-97300 | Cloudbreak should show proper error messages when the given credential is not valid anymore. | Usability | 
-| BUG-97296| GCP credential creation should validate whether resources are available with the credential. | Usability | 
-| BUG-97660 | Ignore repository warnings checkbox are missing after changing base image Ambari or HDP to a custom one. | Usability | 
-| BUG-97307 | Ignore repository warnings checkbox is not selectable after change the HDP VDF URL. | Usability | 
-| BUG-96764 | "Failed to remove instance" error when using the delete icon. | Usability | 
-| BUG-97390 | Cloudbreak should support longer resource ID-s on AWS. | Usability | 
-| BUG-99512 | Azure ES_v3 instances should support premium storage. | Usability | 
-| BUG-97206 | Backend should return only images for enabled platforms. | Usability | 
+| Issue | Issue description | Category | Fix Version |
+|---|---|---|---|
+| BUG-106925 | Log requests to AWS to circumvent throttling error. | Usability | 2.7.1 |
+| BUG-106665 | Exception if availability-zone is not set on AWS. | Usability | 2.7.1 |
+| RMP-11639 | Support python shebangs in recipe. | Usability | 2.7.1 |
+| BUG-105586 | Sync error when you delete an instance on provider. | Usability | 2.7.1 |
+| BUG-105901 | Improve ImageCatalogService logging. | Usability | 2.7.1 |
+| BUG-106143 | Mpack request can be duplicated during cluster creation. | Usability | 2.7.1 |
+| BUG-106229 | Custom blueprint inputs feature is not working form the web UI. | Usability | 2.7.1 |
+| BUG-106419 | In the web UI > create cluster > Time to to Live, the input text says that TTL is in minutes, but the hint text says that it is in milliseconds. | Usability | 2.7.1 |
+| BUG-106440, BUG-106346 | Unable to add RDS in the UI when a name contains hyphen. | Usability | 2.7.1 |
+| BUG-106554 | Cloudbreak credentials input should not allow browser caching of data. | Security | 2.7.1 |
+| BUG-106742 | LLAP tests can fail, because they are started with 1 worker node. | Stability | 2.7.1 |
+| BUG-106776 | On AWS, under create cluster > Storage, the maximum disk size greater than allowed by AWS. | Usability | 2.7.1 |
+| BUG-106779 | In the Cloudbreak web UI > create cluster on AWS, disk min size does not change when disk type is changed. | Usability | 2.7.1 |
+| BUG-104393 | Check conditional handlebar templates for accidental invalid templates. | Stability | 2.7.1 |
+| BUG-105288 | Display expected decommission duration on Cloudbreak. | Usability | 2.7.1 |
+| BUG-105976 | Configure network interface in salt grains runtime instead of image burning. | Stability | 2.7.1 |
+| BUG-105997 | m5 instance type on AWS should allow for ST1 storage. | Usability | 2.7.1 |
+| BUG-106158 | Wrong blueprint is generated if locations has duplicated key. | Usability | 2.7.1 |
+| BUG-106331 | Remove StructuredFlowEventFactory read only transaction. | Stability | 2.7.1 |
+| BUG-106369 | Add Atlas AD authentication configs. | Stability | 2.7.1 |
+| BUG-106480	| JSON template generated for a running attached cluster does not include "sharedService". | Usability | 2.7.1 |
+| BUG-106534, BUG-106464 | Incorrect AWS instance profile is selected for a cluster. | Usability | 2.7.1 |
+| BUG-106645 | GCP cloud storage connector requires project-id in core-site. | Stability | 2.7.1 |
+| BUG-105065 | Error message is missing when registering an LDAP server with no port via CLI. | Usability | 2.7.1 |
+| BUG-101226 | Scaling a cluster when a node is in CREATED state causes unpredictable results. | Usability | 2.7.1 |
+| BUG-105188 | On OpenStack, cluster creation hangs with "Stack has flows under operation. | Stability | 2.7.1 |
+| BUG-96788  | Azure Availability Set option is not available for instance count of 1. | Usability | 2.7.1 |
+| BUG-105440 | LDAPS does not work. | Stability | 2.7.0 |
+| BUG-105191 | LLAP is enabled with EDW-ETL blueprint. | Stability | 2.7.0 |
+| BUG-105061 | NullPointerException when kerberized cluster is being terminated. | Stability | 2.7.0 |
+| BUG-105057	| Cloudbreak recipe in "pre-termination" stage does not run till completion. Machine shuts down in between. | Stability | 2.7.0 |
+| BUG-104950 | cbd update causes data loss. | Stability | 2.7.0 | 2.7.0 |
+| BUG-104949 | NullPointerException during upscale. | Stability | 2.7.0 |
+| BUG-104948 | Cannot delete instance when the upscale failed. | Stability | 2.7.0 |
+| BUG-104947 | Cluster status should be updated to AVAILABLE even when there are stopped services. | Stability | 2.7.0 |
+| BUG-104931 | When it aborts scaling, Cloudbreak should return a message showing which services are stopped. | Stability | 2.7.0 |
+| BUG-104930 | Upscale needs to be limited to 100 instances per one request. | Stability | 2.7.0 |
+| BUG-104915 | Cluster termination failed when kerberos is enabled. | Stability | 2.7.0 |
+| BUG-104889 | NullPointerException during stack creation. | Stability | 2.7.0 |
+| BUG-104790 | NullPointerException when scaling up an HDF cluster to 1000 nodes on OpenStack. | Stability | 2.7.0 |
+| BUG-104789 | Some error messages in the CLI and UI are hard to understand. | Usability | 2.7.0 |
+| BUG-104787 | UI menu is not scrollable (unusable in case of small window). | Usability | 2.7.0 |
+| BUG-104786 | "Copy JSON" button text is invalid | Usability | 2.7.0 |
+| BUG-104785 | In the UI, the sync option is disabled but clickable (on a stopped cluster). | Usability | 2.7.0 |
+| BUG-104782 | Wrong region is selected after cluster creation. | Stability | 2.7.0 |
+| BUG-104779 | EDW-Analytics blueprint fails on AWS. | Stability | 2.7.0 |
+| BUG-104759 | Cannot load custom image catalog. | Usability | 2.7.0 |
+| BUG-104758 | Credential error causes invalid error message: "Failed to VM types for the cloud provider". | Usability | 2.7.0 |
+| BUG-104544 | In create stack request, improve support for deprecated gateway requests. | Stability | 2.7.0 |
+| BUG-104530 | The host groups in the validation [Services,ZooKeeper,NiFi] must match the host groups in the request [Services,NiFi] | Stability | 2.7.0 |
+| BUG-104529 | Request to acquire token failed. | Stability | 2.7.0 |
+| BUG-104480 | JPA has too many connections. | Stability | 2.7.0 |
+| BUG-104475 | Unable to acquire JDBC connection. | Stability | 2.7.0 |
+| BUG-104473 | Missing node configuration in the blueprint causes NullPointerException. | Stability | 2.7.0 |
+| BUG-104469 | Failed to get platform networks java.lang.IllegalArgumentException: No region provided. | Stability | 2.7.0 |
+| BUG-104451 | Could not verify credential [credential: 'temp-user-credential'], detailed message: Unauthorized. | Stability | 2.7.0 |
+| BUG-104450 | Failed to get platform networks com.google.api.client.googleapis.json.GoogleJsonResponseException. | Stability |  2.7.0 |
+| BUG-104445	|  Error during stack termination flow: java.lang.NullPointerException. | Stability | 2.7.0 |
+| BUG-104275 | Structured events contain passwords and sensitive data. | Security | 2.7.0 |
+| BUG-104274 | HDP cluster version is incorrect in structured events. | Stability | 2.7.0 |
+| BUG-104235 | Filter valid images by provider | Usability | 2.7.0 |
+| BUG-104124 | Registering Postgres RDS causes Null Pointer Exception. | Stability | 2.7.0 |
+| BUG-104120 | Back-and-forth navigation in the create cluster wizard confuses the UI and opens the wrong port (443 instead of 8443). | Usability | 2.7.0 |
+| BUG-103678 | Remove instanceProfileStrategy recommendation from the CLI. | Stability | 2.7.0 |
+| BUG-102890 | Periscope result returns more than one elements for cluster. | Stability | 2.7.0 |
+| BUG-102884 | Saved instance groups will be removed if credential has changed. | Usability | 2.7.0 |
+| BUG-102732 | CLI can't reinstall a cluster without the `--blueprint-name` flag. | Usability | 2.7.0 |
+| BUG-102730 | Null Pointer Exception during stack repair. | Stability | 2.7.0 |
+| BUG-102714 | Cannot update the status of cluster 'X' to STARTED, because the stack is not in AVAILABLE state. | Stability | 2.7.0 |
+| BUG-102711 | Null Pointer Exception during downscale if Ambari is not reachable. | Stability | 2.7.0 |
+| BUG-102441 | Can't create Azure cluster after wrong ssh-rsa key was submitted. | Stability | 2.7.0 |
+| BUG-102296 | Openstack4j glance V2 error. | Stability | 2.7.0 |
+| BUG-102201 | Images are shown for regions that have no available images. | Usability | 2.7.0 |
+| BUG-101988 | Match tag restrictions with cloud provider's restrictions. | Usability | 2.7.0 |
+| BUG-101746 | Duplicated error message when backend is down. | Usability | 2.7.0 |
+| BUG-101483 | Sometimes the hostnames are not good after cluster installation. | Stability | 2.7.0 |
+| BUG-101473 | Cloudbreak CLI doesn't show any error if the cloudbreak host is wrong. | Stability | 2.7.0 |
+| BUG-101236 | Time to live not calculated or displayed well. | Usability | 2.7.0 |
+| BUG-101231 | After Recipe delete: page not found. | Usability | 2.7.0 |
+| BUG-101230 | The `curl` command listed on the *Download CLI* page for Windows does not work on Windows and therefore it should be removed or replaced. | Usability | 2.7.0 |
+| BUG-101228 | History for the same start and end date filters out cluster. | Usability | 2.7.0 |
+| BUG-101225 | CLI `cb cluster repair` does not work as expected. | Usability | 2.7.0 | 
+| BUG-101223 | After stopping and starting a cluster, cluster state is incorrectly listed as "Unhealty", even though the nodes are healthy. | Stability | 2.7.0 |
+| BUG-101222 | Filter by button should be removed from UI External sources > Authentication configs. | Usability | 2.7.0 |
+| BUG-101204 | Using the `instanceProfileStrategy` parameter in the CLI JSON from creating an instance profile does not work as expected.  | Usability | 2.7.0 |
+| BUG-100844 | In the Cloudbreak UI create cluster wizard the side menu is incorrect for Cluster Extensions. | Usability | 2.7.0 |
+| BUG-100684	| Zeppelin Shiro config is wrong. | Stability | 2.7.0 |
+| BUG-100549 | GCP cluster creation failed if existing subnet is defined. | Stability | 2.7.0 |
+| BUG-100468 | Images from a custom image catalog are not listed in the UI after Cloudbreak version changed. | Stability | 2.7.0 |
+| BUG-100110 | Availability zones do not refreshed in Cloudbreak to match the actual AWS availability zones. | Usability | 2.7.0 |
+| BUG-100027 | Change default instance/storage settings in AWS Paris region. | Usability | 2.7.0 |
+| BUG-99168 | All clusters created on Google Cloud Platform fail. | Stability |  2.7.0 |
+| BUG-99400 | Time-based cluster autoscaling does not work. | Stability | 2.7.0 |
+| BUG-99505 | Sync does not work for an AWS instance that was terminated a long time ago. | Stability | 2.7.0 |
+| BUG-98277 | Network interface handling in CloudBreak should be improved. | Stability | 2.7.0 |
+| BUG-97395 | Networks are duplicated on networks tab of the cluster create wizard. | Stability | 2.7.0 |
+| BUG-97259 | "Update failed" status after downscale failed, even though cluster was not modified and its status should be "Running". | Stability | 2.7.0 |
+| BUG-97207 | Changing lifecycle management on YARN causes NPE. | Stability | 2.7.0 |
+| BUG-99189 | ImageCatalog PUT endpoint is not secured. | Security | 2.7.0 |
+| BUG-97895 | LDAP password should be removed from Cloudbreak logs. | Security | 2.7.0 | 
+| BUG-97300 | Cloudbreak should show proper error messages when the given credential is not valid anymore. | Usability | 2.7.0 |
+| BUG-97296| GCP credential creation should validate whether resources are available with the credential. | Usability | 2.7.0 |
+| BUG-97660 | Ignore repository warnings checkbox are missing after changing base image Ambari or HDP to a custom one. | Usability | 2.7.0 |
+| BUG-97307 | Ignore repository warnings checkbox is not selectable after change the HDP VDF URL. | Usability | 2.7.0 |
+| BUG-96764 | "Failed to remove instance" error when using the delete icon. | Usability | 2.7.0 |
+| BUG-97390 | Cloudbreak should support longer resource ID-s on AWS. | Usability | 2.7.0 |
+| BUG-99512 | Azure ES_v3 instances should support premium storage. | Usability | 2.7.0 |
+| BUG-97206 | Backend should return only images for enabled platforms. | Usability | 2.7.0 |
 
 ____________________________
 
-#### Known issues
+#### Known Issues
 ____________________________
 
 **Known issues: Cloudbreak**
-____________________________
-
-##### (BUG-96788) **Azure Availability Set Option Is Not Available for Instance Count of 1**
-
-When creating a cluster, the Azure availability set feature is not available for host groups with the instance count of 1.
-
-*Workaround*:
-
-If you would like to use the Azure availability sets feature now, you must add at least 2 instances to the host group for which you want to use them. The option Azure availability sets is available on the advanced **Hardware and Storage** page of the create cluster wizard.   
 ____________________________
 
 ##### (BUG-92605) **Cluster Creation Fails with ResourceInError**
@@ -306,50 +329,28 @@ Cluster creation fails with the following error:
 This may mean that the volumes that you requested exceed volumes available on your cloud provider account. When creating a cluster, on the advanced **Hardware and Storage** page of the create cluster wizard, try reducing the amount of requested storage. If you need more storage, try using a different region or ask your cloud provider admin to increase the resource quota for volumes.  
 
 [Comment]: <> (This jira item was closed so it will not be fixed. Maybe add this to troubleshooting?)
-____________________________
-
-##### (BUG-105188) **On OpenStack, Cluster Creation Hangs with Stack Has Flows Under Operation**
-
-Cluster creation hangs with message ' Stack <name> has flows under operation, request not allowed.' when an RDS for Ambari is attached to the cluster.
 
 ____________________________
 
-##### (BUG-105439) **When a Master Node Goes Down the Cluster Status Is Available**
+##### (BUG-105439) **When the Master Node Goes Down the Cluster Status Is Available**
 
 When the master node goes down or is removed, the cluster remains in available status. 
-____________________________
-
-##### (BUG-104825) **Upscaling the Compute Host Group is Not Possible on AWS**
-
-When using Cloudbreak with Ambari 2.6.2, upscaling the compute host group on AWS fails with the following error due to Ambari being unable to install the HIVE_CLIENT:   
-
-*New node(s) could not be added to the cluster. Reason com.sequenceiq.cloudbreak.core.ClusterException: Ambari operation failed: component: 'UPSCALE_REQUEST', requestID: '8'*
-____________________________
-
-##### (BUG-93241) **Error When Scaling Multiple Host Groups**
-
-Scaling of multiple host groups fails with the following error:
-
-*Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; nested exception is org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1*
 
 *Workaround:*
-
-Scaling multiple host groups at once is not supported. If you would like to scale multiple host groups: scale the first host group and wait until scaling has completed, then scale the second host group, and so on.  
-____________________________
-
-##### (BUG-101226) **Scaling is Ambiguous Nodes are in Created State**
-
-In some cases, when a node is in *Created* status (which means that the node is healthy, but it hasn't joined to the cluster yet), such a node is not counted when the cluster is scaled. This can lead to additional nodes being added to the cluster when some nodes are in *Created* status.   
+To obtain the actual node status, check the **Cluster History** and the **Hardware** section. If any cluster nodes are removed, they will be listed in red in under **Hardware** and there should be an event logged in the **Cluster History**. 
 ____________________________
 
 ##### (BUG-105312) **Wrong Notification After Deleting an Autoscaling Policy**
 
-When you delete an existing scaling policy or an existing alert, you will see the following confirmation message: "Scaling policy / Alert has been saved". This message should state: "Scaling policy / Alert has been deleted". The deletion occurs correctly, but the confirmation message is incorrect.   
+When you delete an existing scaling policy or an existing alert, you will see the following confirmation message: "Scaling policy / Alert has been saved". This message should state: "Scaling policy / Alert has been deleted". The deletion occurs correctly, but the confirmation message is incorrect.  
+
+*Workaround*:  
+Check the UI to ensure that the deletion took place. Deletion occurs correctly, but the confirmation message is incorrect.  
 ____________________________
 
 ##### (BUG-105205) **Auto Repair Does Not Work with a HA Cluster**
 
-When the ambari server host was removed from a HA cluster with autorepair on ambari server hostgroup, no autorepair occurred.
+When the ambari server host was removed from a HA cluster with autorepair on ambari server hostgroup, no autorepair occurred.BUG-105308
 ____________________________
 
 ##### (BUG-105308) **Exception When a Pending Cluster is Terminated**
@@ -358,9 +359,8 @@ In some cases, when a cluster is terminated while its creation process is still 
 
 *Unable to find com.sequenceiq.cloudbreak.domain.Constraint with id 2250* 
 
-*Workaround:*
-
-Try terminating the cluster again. 
+*Workaround:*  
+Try terminating the cluster again and selecting the force terminate option. 
 ____________________________
 
 ##### (BUG-105309) **Error When Deleting a Custom Blueprint**
@@ -368,84 +368,46 @@ ____________________________
 In some cases, when a cluster is terminated while its creation process is still pending, blueprint remains attached to the cluster, causing the following error when one tries to delete the blueprint: 
 
 *There is a cluster 'perftest-d0e5q5y7lj' which uses blueprint 'multinode-hdfs-yarn-ez0plywf2c'. Please remove this cluster before deleting the blueprint*
+
+*Workaround:*  
+Log in to the Cloudbreak database and try deleting the bleuprrint manually. 
+
 ____________________________
 
 ##### (BUG-105090) **Unable to Edit Optional Credential Parameters**
 
 When modifying an existing CLoudbreak credential, it is possible to modify mandatory parameters, but it is not possible to save changes in the optional parameters due to the *Save* button remaining disabled.
-____________________________
 
-##### (BUG-105065) **Error Message is Missing When LDAP Server Has No Port**
-
-When registering an LDAP with Cloudbreak CLI, if you do not specify the port as part of the `-ldap-server`, no error is returned even though the configuration is incorrect. For example the following parameter value is incorrect:
-
-`--ldap-server ldap://hwxad-7f9ecb4d75206b09.elb.eu-west-1.amazonaws.com`
-
-In this case, Cloudbreak will not save the configuration. 
+*Workaround*:  
+You have two options:
+- Use the CLI to modify the credential. This is the only option if you have running clusters that use the credential.   
+- If you do not have any running clusters, delete the credential and create a new one.  
 ____________________________
 
 ##### (BUG-97044) **Show CLI Command Copy JSON Button Does Not Work**
 
 When using the *Show CLI Command* > *Copy the JSON* or *Copy the Command* button with Firefox, the content does not does not get copied if adblock plugin or other advertise blocker plugins are present.
 
-*Workaround:*  
-
+*Workaround:*   
 Use a browser without an adblock plugin.
 
 [Comment]: <> (This jira item was closed.)
 ____________________________
 
-##### (BUG-93257) **Clusters Are Missing From History**   
+**Known issues: Ambari**
 
-After changing the dates on the History page multiple times, the results displayed may sometimes be incorrect.
-
-*Workaround:*
-
-Refresh the page if you think that the history displayed may be incorrect.  
+The known issues described here were discovered when testing Cloudbreak with Ambari versions that are used by default in Cloudbreak. For general Ambari and known issues, refer to Ambari release notes.  
 ____________________________
 
-**Known issues: Ambari and HDP**
-
-The known issues described here were discovered when testing Cloudbreak with Ambari and HDP versions that are used by default in Cloudbreak. For general Ambari and HDP known issues, refer to Ambari and HDP release notes.   
+There are no known issues related to Ambari.  
 ____________________________
 
-##### (BUG-96707) **Druid Overload Does Not Start**
+**Known issues: HDP**
 
-Druid overload start fails with the following error when using Ambari 2.6.1.3 and HDP 2.6.4.0:
-
-*ERROR [main] io.druid.cli.CliOverlord - Error when starting up.  Failing. com.google.inject.ProvisionException: Unable to provision*
+The known issues described here were discovered when testing Cloudbreak with HDP versions that are used by default in Cloudbreak. For general HDP known issues, refer to HDP release notes.  
 ____________________________
 
-##### (BUG-97080) **Ambari Files In Some Cases When an Mpack is Installed**
-
-If you set the following properties then cluster install may fail (in 20-30% of the cases), because of the Ambari agent cache being updated concurrently:
-
-<pre>/etc/ambari-server/conf/ambari.properties  
-agent.auto.cache.update=true*  
-*/etc/ambari-agent/conf/ambari-agent.ini  
-parallel_execution=1</pre>
-
-[Comment]: <> (Fixed in Ambari 2.7?)
-____________________________
-
-##### (AMBARI-14149) **In Ambari, Cluster Cannot Be Started After Stop**
-
-When using Ambari version 2.5.0.3, after stopping and starting a cluster, Event History shows the following error:
-
-<pre>Ambari cluster could not be started. Reason: Failed to start Hadoop services.
-2/7/2018, 12:47:05 PM
-Starting Ambari services.
-2/7/2018, 12:47:04 PM
-Manual recovery is needed for the following failed nodes:   
-[host-10-0-0-4.openstacklocal, host-10-0-0-3.openstacklocal, host-10-0-0-5.openstacklocal</pre>
-
-Ambari dashboard shows that nodes are not sending heartbeats.
-
-*Workaround:*  
-
-This issue is fixed in Ambari version 2.5.1.0 and newer.  
-
-[Comment]: <> (See BUG-96086, EAR-6780, AMBARI-14149)
+There are no known issues related to HDP.  
 ____________________________
 
 **Known issues: HDF**
