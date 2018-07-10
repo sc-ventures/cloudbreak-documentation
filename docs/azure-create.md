@@ -45,7 +45,7 @@ If you change the value of the root volume size, an osDisk with the given rootVo
 
 To support fault tolerance for VMs, Azure uses the concept of [availability sets](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/manage-availability). This allows two or more VMs to be mapped to multiple fault domains, each of which defines a group of virtual machines that share a common power source and a network switch. When adding VMs to an availability set, Azure automatically assigns each VM a fault domain. The SLA includes guarantees that during OS Patching in Azure or during maintenance operations, at least one VM belonging to a given fault domain will be available.
 
-In Cloudbreak, an availability set is automatically configured during cluster creation for each non-Ambari host group with "Instance Count" that is set to 2 or larger. The assignment of fault domains is automated by Azure, so there is no option for this in Cloudbreak UI. 
+In Cloudbreak, an availability set is automatically configured during cluster creation for each host group with "Instance Count" that is set to 1 or larger. The assignment of fault domains is automated by Azure, so there is no option for this in Cloudbreak UI. 
     
 Cloudbreak allows you to configure the availability set on the advanced **Hardware and Storage** page of the create cluster wizard by providing the following options for each host group:  
 
