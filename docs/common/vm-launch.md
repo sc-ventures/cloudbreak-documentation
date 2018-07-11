@@ -9,7 +9,7 @@ Install Cloudbreak using the following steps.
 1. Install the Cloudbreak deployer and unzip the platform-specific single binary to your PATH. For example:
 
     <pre>yum -y install unzip tar
-curl -Ls public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer_2.7.0_$(uname)_x86_64.tgz | sudo tar -xz -C /bin cbd
+curl -Ls public-repo-1.hortonworks.com/HDP/cloudbreak/cloudbreak-deployer_2.4.3_$(uname)_x86_64.tgz | sudo tar -xz -C /bin cbd
 cbd --version</pre>
 
 
