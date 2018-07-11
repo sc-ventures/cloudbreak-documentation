@@ -21,9 +21,12 @@ When creating a Flow Management cluster from the default blueprint, make sure to
     * **Downscaling NiFi clusters is not supported** - as it can result in data loss when a node is removed that has not yet processed all the data on that node.       
     * There is a known issue related to upscaling; It is listed in the [Known Issues](#known-issues). 
 
+
 #### Creating a custom HDF 3.1.2 blueprint with NiFi
 
 If you are creating a custom HDF 3.1.2 blueprint which includes Apache NiFi, you must add the "nifi-bootstrap-env" configuration to the "configurations" section of the blueprint, exactly as it is done in [this](https://github.com/hortonworks/cloudbreak/blob/master/core/src/main/resources/defaults/blueprints/hdf31-flow-management.bp#L19) example. 
+
+>  You can modify the value of nifi-bootstrap-env's "content" property, but the java.io.tmpdir arg is required to be populated with a directory that does not have noexec set on it, and the NiFi user must be able to write to that directory.
   
 
 #### Troubleshooting HDF Flow Management cluster creation 
