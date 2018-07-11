@@ -4,17 +4,17 @@ Cloudbreak allows you to register an existing RDBMS instance as an [external sou
 
 ### Supported databases
  
-If you would like to use an external database for one of the components that support it, you may use the following database types and versions: 
+If you would like to use an external database for one of the components that support it, you may use the database types and versions defined in the [Support Matrix](https://supportmatrix-hortonworks.com/).  
 
-| Component | Supported databases | Description |
-|---|---|---|---|---|
-| **Ambari**   | PostgreSQL, MySQL  | By default, Ambari uses an embedded PostgreSQL instance.  |
-| **Druid**    | PostgreSQL, MySQL  | You must provide an external database. |
-| **Hive**     | PostgreSQL, MySQL, Oracle 11, Oracle 12 | By default, Cloudbreak installs a PostgreSQL instance on the Hive Metastore host.  |
-| **Oozie**    | PostgreSQL, MySQL, Oracle 11, Oracle 12 | You must provide an external database. |
-| **Ranger**   | PostgreSQL, MySQL, Oracle 11, Oracle 12 | You must provide an external database. |
-| **Superset** |PostgreSQL, MySQL | You must provide an external database. |
-| **Other** | PostgreSQL, MySQL, Oracle 11, Oracle 12 | |
+| Component | Embedded DB available? | How to set up your own DB |
+|---|---|---|
+| **Ambari**   | By default, Ambari uses an embedded PostgreSQL instance.  | Refer to [​Using Existing Databases - Ambari](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.2/bk_ambari-administration/content/using_existing_databases_-_ambari.html) or to documentation for the specific version that you would like to use. |
+| **Druid**    | You must provide an external database. | Refer to [Configuring Druid and Superset Metadata Stores in MySQL](https://docs.hortonworks.com/HDPDocuments/HDF3/HDF-3.1.2/bk_installing-hdf-ppc/content/configure-druid-database-mysql.html) or to documentation for the specific version that you would like to use. |
+| **Hive**     | By default, Cloudbreak installs a PostgreSQL instance on the Hive Metastore host. | Refer to [​Using Existing Databases - Hive](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.2/bk_ambari-administration/content/using_new_and_existing_databases_-_hive.html) or to documentation for the specific version that you would like to use. |
+| **Oozie**    | You must provide an external database. | Refer to [​Using Existing Databases - Oozie](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.2.2/bk_ambari-administration/content/using_existing_databases_-_oozie.html) or to documentation for the specific version that you would like to use. |
+| **Ranger**   | You must provide an external database. | Refer to [​Using Existing Databases - Ranger](https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.6.5/bk_security/content/configuring_database_instance.html) or to documentation for the specific version that you would like to use. |
+| **Superset** | You must provide an external database. | Refer to [Configuring Druid and Superset Metadata Stores in MySQL](https://docs.hortonworks.com/HDPDocuments/HDF3/HDF-3.1.2/bk_installing-hdf-ppc/content/configure-druid-database-mysql.html) or to documentation for the specific version that you would like to use. |
+| **Other**    | Refer to the component-specific documentation. | Refer to the component-specific documentation. |
 
 [Comment]: <> (During the demo, Richard mentioned that in addition to these, Ambari supports Oracle; however, in CLoudbreak we have a problem automating one of the steps (related to Oracle tools). This issue is pending, but as of April 16 we cannot support Oracle for Ambari.)
 
