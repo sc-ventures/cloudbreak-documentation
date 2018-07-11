@@ -11,7 +11,7 @@ ____________________________
 
 ##### **New Prewarmed Images**
 
-Coudbreak 2.7.1 includes new prewarmed images with Ambari 2.6.2.2. For more information, refer to [Image Catalog Updates](#image-catalog-updates).  
+Coudbreak 2.7.1 includes new prewarmed images. For more information, refer to [Image Catalog Updates](#image-catalog-updates).  
 ____________________________
 
 ##### **Launching Cloudbreak from Templates**
@@ -192,7 +192,7 @@ Update for Cloudbreak 2.7.1:
 
 Default Ambari version 2.6.2.2  
 Default HDP version 2.6.5.0-292  
-Default HDF version 3.1.2.0  
+Default HDF version 3.1.2.0-7  
 
 Default versions provided with Cloudbreak 2.7:
 
