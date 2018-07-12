@@ -284,10 +284,8 @@ ____________________________
 
 When creating a cluster, the Azure availability set feature is not available for host groups with the instance count of 1.
 
-*Workaround*: 
-
+*Workaround*:   
 This issue will be fixed in a future release. 
-
 If you would like to use the Azure availability sets feature now, you must add at least 2 instances to the host group for which you want to use them. The option Azure availability sets is available on the advanced **Hardware and Storage** page of the create cluster wizard.   
 ____________________________
 
@@ -297,8 +295,7 @@ Cluster creation fails with the following error:
 
 *Infrastructure creation failed. Reason: Failed to create the stack for CloudContext{id=3689, name='test-exisitngnetwork', platform='StringType{value='OPENSTACK'}', owner='e0307f96-bd7d-4641-8c8f-b95f2667d9c6'} due to: Resource CREATE failed: ResourceInError: resources.ambari_volume_master_0_0: Went to status error due to "Unknown"*
 
-*Workaround*: 
-
+*Workaround*:  
 This may mean that the volumes that you requested exceed volumes available on your cloud provider account. When creating a cluster, on the advanced **Hardware and Storage** page of the create cluster wizard, try reducing the amount of requested storage. If you need more storage, try using a different region or ask your cloud provider admin to increase the resource quota for volumes.  
 
 [Comment]: <> (This jira item was closed so it will not be fixed. Maybe add this to troubleshooting?)
@@ -311,14 +308,24 @@ You may sporadically experience an issue where after you stop and restart a clus
 [comment]: <> (Not sure what the workaround is for BUG-91013?)
 ____________________________
 
+##### (BUG-99581) **Manual Recovery Needed for a Healthy Node**
+
+The *Event History* in the Cloudbreak web UI displays the following message:
+*Manual recovery is needed for the following failed nodes: [<nodeID>]*. 
+This message is displayed when Ambari agent doesn't send the heartbeat and Cloudbreak thinks that the host is unhealthy. 
+However, if all services are green and healthy in Ambari web UI, then it is likely that the status displayed by Cloudbreak is incorrect.
+
+*Workaround:*  
+If all services are green and healthy in Ambari web UI, then syncing the cluster should fix the problem.
+____________________________
+
 ##### (BUG-93241) Error When Scaling Multiple Host Groups 
 
 Scaling of multiple host groups fails with the following error: 
 
 *Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; nested exception is org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1*
 
-*Workaround:*
-
+*Workaround:*  
 Scaling multiple host groups at once is not supported. If you would like to scale multiple host groups: scale the first host group and wait until scaling has completed, then scale the second host group, and so on.  
 ____________________________
 
@@ -326,9 +333,20 @@ ____________________________
   
 When using the **Show CLI Command** > **Copy the JSON** or **Copy the Command** button with  Firefox, the content does not does not get copied if adblock plugin or other advertise blocker plugins are present.
 
- *Workaround:*  
- 
+ *Workaround:*   
  Use a browser without an adblock plugin. 
+____________________________
+
+##### (BUG-99322) Errors When Using Special Characters in Blueprint Name 
+
+When trying to create or delete a blueprint whose name includes special characters such as `@#$%|:&*;`, you may encounter the following errors, especially when using Cloudbreak CLI:  
+
+```ERROR: duplicate key value violates unique constraint \"uk_blueprint_account_name\"]"}```
+
+```ERROR: parse /v1/blueprints/user/@#$%!|(MISSING):\u0026*;: invalid URL escape "%!|(MISSING):"```
+
+*Workaround:*  
+Avoid using special characters in blueprint names.  
 ____________________________
 
 **Known Issues: Ambari and HDP**
