@@ -346,6 +346,17 @@ When the master node goes down or is removed, the cluster remains in available s
 To obtain the actual node status, check the **Cluster History** and the **Hardware** section. If any cluster nodes are removed, they will be listed in red in under **Hardware** and there should be an event logged in the **Cluster History**. 
 ____________________________
 
+##### (BUG-99581) **Manual Recovery Needed for a Healthy Node**
+
+The *Event History* in the Cloudbreak web UI displays the following message:
+*Manual recovery is needed for the following failed nodes: [<nodeID>]*. 
+This message is displayed when Ambari agent doesn't send the heartbeat and Cloudbreak thinks that the host is unhealthy. 
+However, if all services are green and healthy in Ambari web UI, then it is likely that the status displayed by Cloudbreak is incorrect.
+
+*Workaround:*  
+If all services are green and healthy in Ambari web UI, then syncing the cluster should fix the problem. 
+____________________________
+
 ##### (BUG-105312) **Wrong Notification After Deleting an Autoscaling Policy**
 
 When you delete an existing scaling policy or an existing alert, you will see the following confirmation message: "Scaling policy / Alert has been saved". This message should state: "Scaling policy / Alert has been deleted". The deletion occurs correctly, but the confirmation message is incorrect.  
@@ -377,7 +388,6 @@ In some cases, when a cluster is terminated while its creation process is still 
 
 *Workaround:*  
 Log in to the Cloudbreak database and try deleting the bleuprrint manually. 
-
 ____________________________
 
 ##### (BUG-105090) **Unable to Edit Optional Credential Parameters**
