@@ -101,7 +101,7 @@ Launch Cloudbreak from an Cloud Deployment Manager template by using the followi
 
     <pre>git clone https://github.com/hortonworks/cbd-quickstart
 cd cbd-quickstart
-git checkout 2.7.0</pre> 
+git checkout 2.7.1</pre> 
 
 [Comment]: <> (Should we tell people to fork this or to download the repo?)
 

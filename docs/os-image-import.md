@@ -8,21 +8,21 @@ The following images can be imported:
 
 | Image | Operating system | Location |
 |---|---|---|
-| Prewarmed HDP 2.6 image | centos7 | http://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp-26-1805171052.img |
+| Prewarmed HDP 2.6 image | centos7 | http://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp-26-1807091850.img |
 | Prewarmed HDF 3.1 image | centos7 | http://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp-31-1805251001.img |
-| Base image | centos7 | http://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp--1806131251.img |
+| Base image | centos7 | http://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp--1807021659.img |
 | Base image | ubuntu | http://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp--1805252042.img |
 
 **Steps**
 
 1. Download the image to your local machine. For example: 
 
-    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp-26-1805171052.img</small></pre>
+    <pre><small>curl -O https://public-repo-1.hortonworks.com/HDP/cloudbreak/cb-hdp-26-1807091850.img</small></pre>
 
 2. Set the following environment variables for the OpenStack image import:
 
-    <pre><small>export CB_LATEST_IMAGE=cb-hdp-26-1805171052.img
-export CB_LATEST_IMAGE_NAME=cb-hdp-26-1805171052.img
+    <pre><small>export CB_LATEST_IMAGE=cb-hdp-26-1807091850.img
+export CB_LATEST_IMAGE_NAME=cb-hdp-26-1807091850.img
 export OS_USERNAME=your_os_user_name
 export OS_AUTH_URL=your_authentication_url
 export OS_TENANT_NAME=your_os_tenant_name</small></pre>
