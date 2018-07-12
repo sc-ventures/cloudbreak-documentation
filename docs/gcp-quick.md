@@ -101,9 +101,26 @@ Launch Cloudbreak from an Cloud Deployment Manager template by using the followi
 
     <pre>git clone https://github.com/hortonworks/cbd-quickstart
 cd cbd-quickstart
-git checkout 2.7.0</pre> 
+git checkout 2.4.3</pre> 
 
 [Comment]: <> (Should we tell people to fork this or to download the repo?)
+
+1. You will see the following message:
+
+    <pre>$ git checkout 2.4.3
+    
+Note: checking out '2.4.3'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at f1836d9... Updated CBD versions in templates to 2.4.3</pre>
 
 1. On your computer, browse to the `cbd-quickstart/gcp`.         
 
