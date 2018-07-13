@@ -9,14 +9,18 @@ We recommend that you back up Cloudbreak databases before upgrading. Refer to [B
 1. On the VM where Cloudbreak is running, navigate to the directory where your Profile file is located:
 
     <pre>cd /var/lib/cloudbreak-deployment/</pre>
+    
+2. Restart Cloudbreak:
 
-2. Stop all of the running Cloudbreak components:
-
-    <pre>cbd kill</pre>
+    <pre>cbd restart</pre>
     
 3. Update Cloudbreak deployer:
 
     <pre>cbd update</pre>
+    
+2. Stop all of the running Cloudbreak components:
+
+    <pre>cbd kill</pre>
     
 3. Update the `docker-compose.yml` file with new Docker containers needed for the cbd:
 
