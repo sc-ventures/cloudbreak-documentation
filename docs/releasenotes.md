@@ -408,6 +408,7 @@ When using the *Show CLI Command* > *Copy the JSON* or *Copy the Command* button
 Use a browser without an adblock plugin.
 
 [Comment]: <> (This jira item was closed.)
+
 ____________________________
 
 **Known issues: Ambari**
