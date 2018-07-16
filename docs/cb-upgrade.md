@@ -10,9 +10,7 @@ We recommend that you back up Cloudbreak databases before upgrading. Refer to [B
 
     <pre>cd /var/lib/cloudbreak-deployment/</pre>
     
-2. Restart Cloudbreak:
-
-    <pre>cbd restart</pre>
+2. To ensure that the cbd is running, restart Cloudbreak by using ```cbd restart``` or if the deployment is stopped start it by using ```cbd start```
     
 3. Update Cloudbreak deployer:
 
