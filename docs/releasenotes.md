@@ -185,6 +185,11 @@ ____________________________
 The **Recipes** navigation menu option was moved under **Cluster Extensions**, so to find recipe-related settings, select **Cluster Extensions > Recipes** from the navigation menu.  
 ____________________________
 
+##### **Custom Image Changes**
+
+There was a breaking change in custom images between Cloudbreak 2.4.0 and 2.5.0, so if you have burned a custom image for Cloudbreak 2.4.x, you must burn a new image to be able to launch clusters with Cloudbreak 2.7.x.
+____________________________
+
 #### Image Catalog Updates
 ____________________________
 
