@@ -329,9 +329,9 @@ ____________________________
 **Known issues: Cloudbreak**
 ____________________________
 
-##### (BUG-107651) **Wrong Database Used When Using a Data Lake with an External DB for Ambari **
+##### (BUG-107651) **External DB Used for Ambari Data Lake is Reused for Attached Clusters**
 
-If have a data lake that uses an external database for Ambari, when you try to attach a cluster to a data lake, all the databases from that data lake (including  the Ambari database) will be copied. This causes a problem, because the Ambari database cannot be shared. 
+If you have a data lake that uses an external database for Ambari, when you create a cluster attached to a data lake, all the databases from that data lake (including the Ambari database) will be copied. This causes a problem, because the Ambari database cannot be shared. 
 
 *Workaround*:
 
