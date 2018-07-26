@@ -329,6 +329,21 @@ ____________________________
 **Known issues: Cloudbreak**
 ____________________________
 
+##### (BUG-107651) **Wrong Database Used When Using a Data Lake with an External DB for Ambari **
+
+If have a data lake that uses an external database for Ambari, when you try to attach a cluster to a data lake, all the databases from that data lake (including  the Ambari database) will be copied. This causes a problem, because the Ambari database cannot be shared. 
+
+*Workaround*:
+
+On the UI, there is no option to remove this extra Ambari database, so the only workaround is to create attached clusters by using the CLI. The steps are:
+ 
+1) Specify all parameters for an attached cluster in the UI.  
+2) Copy the CLI skeleton JSON.  
+3) Remove Ambari from the CLI skeleton JSON.  
+4) Create an attached cluster by using the `cluster create` CLI command.     
+ 
+____________________________
+
 ##### (BUG-92605) **Cluster Creation Fails with ResourceInError**
 
 Cluster creation fails with the following error:
