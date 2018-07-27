@@ -51,7 +51,7 @@ Create a service account that has the following roles:
 Computer Engine roles: 
 
 * Compute Image User     
-* Compute Instance Admin 
+* Compute Instance Admin (v1)
 * Compute Network Admin  
 * Compute Security Admin  
 
