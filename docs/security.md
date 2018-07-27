@@ -49,7 +49,7 @@ The following section describes the network requirements and options. By default
     <p class="last">The default experience of creating network resources such as network, subnet and security group automatically is provided for convenience. We strongly recommend you review these options and for production cluster deployments leverage your existing network resources that you have defined and validated to meet your enterprise requirements. </p>
 </div>
 
-| Port | Source | Target | Description |
+| Source | Target | Port | Description |
 |---|---|---|---|
 | Cloudbreak | Ambari server | 9443  | <ul><li>This port is used by Cloudbreak to maintain management control of the cluster.</li><li>The default security group opens 9443 from anywhere. You should limit this CIDR further to *only allow access from the Cloudbreak host*. This can be done by default by [restricting inbound access](security-cb-inbound.md) from Cloudbreak to cluster.</li><ul>|
 | * | All cluster hosts | 22 | <ul><li>This is an optional port for end user SSH access to the hosts.</li><li>You should review and limit or remove this CIDR access.</li><ul>|
