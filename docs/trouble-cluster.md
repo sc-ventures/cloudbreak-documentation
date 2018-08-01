@@ -48,6 +48,15 @@ The general steps are:
 [Add recipes](recipes.md#add-recipes)  
 [Using custom scripts (recipes)](recipes.md)  
 
+### Failed to retrieve the server's certificate
+
+Cloudbreak-managed cluster fails with `Infrastructure creation failed. Reason: Failed to retrieve the server's certificate.` 
+
+The most common reasons for this error are related to using your own custom image. If you are using your own custom image:
+
+- If using the CLI, you must send the `imageId` explicitly in the CLI in the cluster template request.  
+- There was a breaking change between Cloudbreak 2.4 and 2.7 versions. If you burned your image for Cloudbreak 2.4, and you would like to use Cloudbreak 2.7 or newer, you must burn a new image.  
+
 
 ### Quota limitations
 
