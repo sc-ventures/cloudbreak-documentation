@@ -36,10 +36,7 @@ Configure LDAP/AD user authentication for Cloudbreak by using these steps.
 **Steps** 
 
 1. On the Cloudbreak host, browse to `/var/lib/cloudbreak-deployment`.  
-2. Create a new file called `uaa-changes.yml`. 
-
-    > The name of this file can be customized by setting the following in Profile: `export UAA_SETTINGS_FILE=myldap.yml`
-    
+2. Create a new yml file. By default the name of this file should be `uaa-changes.yml`, but optionally it can be customized by setting the following in Profile: `export UAA_SETTINGS_FILE=<some-file-name>.yml` where `<some-file-name>` is the name that you would like to use for this yml file.  
 3. In the yml file enter the following using your [LDAP/AD information](#ldapad-information). Next, save the file and restart Cloudbreak.  
 
 <pre>spring_profiles: postgresql,ldap
