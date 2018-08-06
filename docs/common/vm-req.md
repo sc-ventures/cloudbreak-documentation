@@ -58,8 +58,7 @@ Perform these steps to disable SELINUX.
 1. Disable SELINUX:
     
     <pre>setenforce 0
-sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' 
-/etc/selinux/config</pre>
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config</pre>
 
 2. Run the following command to ensure that SELinux is not turned on afterwards: 
 

@@ -58,10 +58,11 @@ Cloudbreak allows you to register an existing LDAP/AD instance and use it for mu
 | Name |  Enter a name for your LDAP. | cb-ldap |
 | Directory Type | Choose whether your directory is **LDAP** or **Active Directory**. | LDAP |
 | LDAP Server Connection | Select **LDAP** or **LDAPS**. | LDAP |
-| Server Host | Enter the hostname for the LDAP or AD server . |`10.0.3.128`|
-| Server Port | Enter the port. | `389` |
-| LDAP Bind DN | Enter the root Distinguished Name to search in the directory for users. | `CN=Administrator,CN=Users,DC=ad,DC=hdc,DC=com`   |
-| LDAP Bind Password | Enter your root Distinguished Name password.  | `MyPassword1234!` |
+| Server Host | Enter the hostname or IP address for the LDAP or AD server. |`10.0.3.128`|
+| Server Port | Enter the LDAP server port. | `389` |
+| LDAP Domain | (Optional) Enter your LDAP domain if applicable. | `ad.mytestldap.com` |
+| LDAP Bind DN | Enter the LDAP Bind DN | `CN=Administrator,CN=Users,DC=ad,DC=hdc,DC=com`   |
+| LDAP Bind Password | Enter the LDAP Bind DN password.  | `MyPassword1234!` |
 
     **USER CONFIGURATION**
 
@@ -69,16 +70,17 @@ Cloudbreak allows you to register an existing LDAP/AD instance and use it for mu
 |---|---|---|
 | LDAP User Search Base | Enter your LDAP user search base. This defines the location in the directory from which the LDAP search begins. | `CN=Users,DC=ad,DC=hdc,DC=com`  |
 | LDAP User Name Attribute | Enter the attribute for which to conduct a search on the user base.  | `HDCaccountName` |
-| LDAP User Object Class | Enter the directory object class for users. | `person` |
+| LDAP User Dn Pattern | Enter LDAP User DN Pattern, which is used to bind an LDAP user.| `CN={0},CN=Users,DC=ad,DC=hdc,DC=com` |
+| LDAP User Object Class | Enter the directory object class filter for users. | `person` |
 
     **GROUP CONFIGURATION**
 
     | Parameter | Description | Example |
 |---|---|---|
-| LDAP Group Search Base | Enter your LDAP group search base. This defines the location in the directory from which the LDAP search begins. | `OU-scoDC=ad,DC=hdc,DC=com`  |
-| LDAP Admin Group | (Optional) Enter your LDAP admin group, if needed. |  |
+| LDAP Group Search Base | Enter your LDAP group search base. This defines the location in the directory from which the LDAP search begins. | `CN=Users,DC=ad,DC=hdc,DC=com` |
+| LDAP Admin Group | (Optional) Enter your LDAP admin group if applicable. |  |
 | LDAP Group Name Attribute | Enter the attribute for which to conduct a search on groups.  | `cn` |
-| LDAP Group Object Class | Enter the directory object class for groups. | `group`  |
+| LDAP Group Object Class | Enter the directory object class filter for groups. | `group`  |
 | LDAP Group Member Attribute | Enter the attribute on the group object class that represents members. | `member` |
 
 5. Click **Test Connection** to verify that the connection information that you entered is correct.
@@ -86,8 +88,3 @@ Cloudbreak allows you to register an existing LDAP/AD instance and use it for mu
 6. Click **REGISTER**. 
 
 7. The LDAP will now show up on the list of available authentication sources when creating a cluster under advanced **External Sources** > **Configure Authentication**. It can be reused with multiple clusters. Just select it if you would like to use it for a given cluster.     
-
-
-
-
-
