@@ -147,6 +147,28 @@ Use the following "AssumeRole" policy definition:
 **Related links**  
 [CloudbreakRole](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/AssumeRole.json)  
 
+#### Attach the CloudbreakRole to the VM
+
+After creating the "CloudbreakRole", attach it to your VM. You can do this during the VM launch process or once your VM is running.
+
+**Attach CloudbreakRole when launching the VM**
+
+The option to attach an IAM role is available from the instance launch wizard **Step 3: Configure Instance**:
+
+<a href="../images/cb_aws-attach-iam03.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-attach-iam03.png" width="650" title="IAM Console"></a>
+
+**Attach CloudbreakRole to an existing VM**
+
+Perform the following steps from the EC2 console on AWS:
+
+1. Select the EC2 instance that you are planning to use for Cloudbreak and from the **Actions** menu select **Instance Settings > Attach/Replace IAM Role**:
+
+    <a href="../images/cb_aws-attach-iam01.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-attach-iam01.png" width="650" title="IAM Console"></a>
+    
+2. Next, under **IAM role**, select the CloudbreakRole that you created earlier and click **Apply** to apply the configuration:    
+
+    I<a href="../images/cb_aws-attach-iam02.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-attach-iam02.png" width="650" title="IAM Console"></a>
+    
 
 #### Create CredentialRole
 
