@@ -16,6 +16,10 @@ If you would like to use ADLS to store your data, you must enable Azure subscrip
 
 To configure authentication with ADLS using the client credential, you must register a new application with Active Directory service and then give your application access to your ADL account. After you've performed these steps, you can provide your application's information when creating a cluster. 
 
+**Prerequisites**
+
+In one of the steps you will be required to assign the **Owner** role to your application. If you do not have sufficient permissions, the role assignment step may have to be performed by your Azure admin.
+
 **Steps**
 
 1. Register an application and add it to the ADLS account, as described in *Step 1* and *Step 2* of [How to configure authentication with ADLS](https://community.hortonworks.com/articles/105994/how-to-configure-authentication-with-adls.html). 
