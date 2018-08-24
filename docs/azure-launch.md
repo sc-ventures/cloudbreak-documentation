@@ -19,11 +19,11 @@ Before launching Cloudbreak on Azure, review and meet the [prerequisites](#prere
 
 #### Create app-based credential
 
-
-
 Follow these steps to create an app based Cloudbreak credential.
 
 [Comment]: <> (Hortonworks SE accounts do not have the permissions to perform this step. You must have the Owner role.)
+
+<a href="https://youtu.be/NYQZd2AmM6g" target="_blank" title="Click to open"><img src="../images/cb_video-placeholder.png" width="450" title="YouTube video"></a>
 
 **Prerequisites**
 

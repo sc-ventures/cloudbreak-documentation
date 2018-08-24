@@ -1,3 +1,4 @@
+<a href="https://youtu.be/SIYhzlMQf8Y" target="_blank" title="Click to open"><img src="../images/cb_video-placeholder.png" width="450" title="YouTube video"></a>  
 
 **Prerequisites**
 

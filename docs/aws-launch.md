@@ -29,7 +29,9 @@ Follow these steps to create a key-based Cloudbreak credential.
 
 #### Create role-based credential
 
-Follow these steps to create a role-based Cloudbreak credential. 
+Follow these steps to create a role-based Cloudbreak credential.
+
+<a href="https://youtu.be/XlvUahqwThI" target="_blank" title="Click to open"><img src="../images/cb_video-placeholder.png" width="450" title="YouTube video"></a> 
 
 **Prerequisites**
 
