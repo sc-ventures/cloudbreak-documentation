@@ -19,7 +19,7 @@ Before launching Cloudbreak on Azure, review and meet the [prerequisites](#prere
 
 #### Create app-based credential
 
-
+<a href="https://youtu.be/NYQZd2AmM6g" target="_blank" title="Click to open"><img src="../images/cb_video-placeholder.png" width="450" title="YouTube video"></a>
 
 Follow these steps to create an app based Cloudbreak credential.
 

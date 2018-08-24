@@ -1,6 +1,8 @@
 
 Follow these steps to create an interactive Cloudbreak credential.
 
+<a href="https://youtu.be/Q9fqmOZqnnw" target="_blank" title="Click to open"><img src="../images/cb_video-placeholder.png" width="450" title="YouTube video"></a>
+
 **Prerequisites**
 
 Your account must have have an Owner role in order for the interactive credential creation to work.   
