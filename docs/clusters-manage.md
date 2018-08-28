@@ -105,7 +105,7 @@ When a cluster is in the "stopped" state, you are not charged for the VMs, but y
 
 ### Restart a cluster 
 
-If your cluster is in the "Stopped" state, you can restart the cluster by follow these steps.
+If your cluster is in the "Stopped" state, you can restart the cluster by following these steps.
 
 **Steps**
 
