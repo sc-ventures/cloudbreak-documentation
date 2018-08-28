@@ -387,7 +387,7 @@ ____________________________
 
 ##### (BUG-105205) **Auto Repair Does Not Work with a HA Cluster**
 
-When the ambari server host was removed from a HA cluster with autorepair on ambari server hostgroup, no autorepair occurred.BUG-105308
+When the ambari server host was removed from a HA cluster with autorepair on ambari server hostgroup, no autorepair occurred.
 ____________________________
 
 ##### (BUG-105308) **Exception When a Pending Cluster is Terminated**
