@@ -407,16 +407,16 @@ In some cases, when a cluster is terminated while its creation process is still 
 *There is a cluster 'perftest-d0e5q5y7lj' which uses blueprint 'multinode-hdfs-yarn-ez0plywf2c'. Please remove this cluster before deleting the blueprint*
 
 *Workaround:*  
-Log in to the Cloudbreak database and try deleting the bleuprrint manually. 
+Log in to the Cloudbreak database and try deleting the blueprrint manually. 
 ____________________________
 
 ##### (BUG-105090) **Unable to Edit Optional Credential Parameters**
 
-When modifying an existing CLoudbreak credential, it is possible to modify mandatory parameters, but it is not possible to save changes in the optional parameters due to the *Save* button remaining disabled.
+When modifying an existing Cloudbreak credential, it is possible to modify mandatory parameters, but it is not possible to save changes in the optional parameters due to the *Save* button remaining disabled.
 
 *Workaround*:  
-You have two options:
-- Use the CLI to modify the credential. This is the only option if you have running clusters that use the credential.   
+You have two options:  
+- Use the CLI to modify the credential. This is the only option if you have running clusters that use the credential.    
 - If you do not have any running clusters, delete the credential and create a new one.  
 ____________________________
 
