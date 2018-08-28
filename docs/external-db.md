@@ -4,7 +4,7 @@ Cloudbreak allows you to register an existing RDBMS instance as an [external sou
 
 ### Supported databases
  
-If you would like to use an external database for one of the components that support it, you may use the database types and versions defined in the [Support Matrix](https://supportmatrix-hortonworks.com/).  
+If you would like to use an external database for one of the components that support it, you may use the database types and versions defined in the [Support Matrix](https://supportmatrix.hortonworks.com/).  
 
 | Component | Embedded DB available? | How to set up your own DB |
 |---|---|---|
