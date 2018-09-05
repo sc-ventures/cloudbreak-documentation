@@ -34,7 +34,7 @@ Cloudbreak works by connecting your OpenStack account through this credential, a
 
 2. Click **Create Credential**.
 
-3. Under **Cloud provider**, select "Google Cloud Platform".
+3. Under **Cloud provider**, select "OpenStack".
 
     <a href="../images/cb_cb-os-cred.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-os-cred.png" width="650" title="Cloudbreak web UI"></a>
 
