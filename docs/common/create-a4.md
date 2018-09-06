@@ -32,4 +32,4 @@ By default, port 22 is set to 0.0.0.0/0 CIDR for inbound access on non-Ambari no
 | Password | You can log in to the Ambari UI using this password. |
 | Confirm Password | Confirm the password. |
 | New SSH public key | Check this option to specify a new public key and then enter the public key. You will use the matching private key to access your cluster nodes via SSH. |
-| Existing SSH public key | Select an existing public key. You will use the matching private key to access your cluster nodes via SSH. This is a default option as long as an existing SSH public key is available.  |
+| Existing SSH public key | Select an existing public key. You will use the matching private key to access your cluster nodes via SSH. This is a default option as long as an existing SSH public key is available. This option cannot be used with Azure or Google Cloud. |
