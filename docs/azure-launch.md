@@ -19,7 +19,7 @@ Before launching Cloudbreak on Azure, review and meet the [prerequisites](#prere
 
 #### Create app-based credential
 
-Follow these steps to create an app based Cloudbreak credential.
+Follow these steps to create an app-based Cloudbreak credential.
 
 [Comment]: <> (Hortonworks SE accounts do not have the permissions to perform this step. You must have the Owner role.)
 
@@ -29,13 +29,15 @@ Follow these steps to create an app based Cloudbreak credential.
 
 1. On Azure Portal, navigate to the **Active Directory** > **App Registrations** and register a new application. For more information, refer to [Create an Azure AD application](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 
-    > Aa an alternative to the steps listed below for creating an application registration, you use a utility called `azure-cli-tools`. The utility supports app creation and role assignment. It is available at [https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools](https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools).
+    > Aa an alternative to the steps listed below for creating an application registration, you can use the utility called `azure-cli-tools`. The utility supports app creation and role assignment. It is available at [https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools](https://github.com/sequenceiq/azure-cli-tools/blob/master/cli_tools).
 
     <a href="../images/cb_azure-appbased01.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-appbased01.png" width="650" title="Cloudbreak web UI"></a>  
 
 1. Navigate to the **Subscriptions**, choose **Access control (IAM)**. Click **Add** and then assign the "Contributor" role to your newly created application by selecting "Contributor" under **Role** and typing your app name under **Select** (You must type your app name in order to find it):
 
     > This step typically requires admin permissions so you may have to contact your Azure administrator.
+    
+    > If you are unable to use the "Contributor" role, you can create a custom role by using the following [role definition](https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/azure-minimal-role.json), which includes the minimum permissions required for creating clusters with Cloudbreak.
 
      <a href="../images/cb_azure-appbased03.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-appbased03.png" width="650" title="Azure Portal"></a>   
 
