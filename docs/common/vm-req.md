@@ -75,7 +75,15 @@ Perform these steps to install Docker. The minimum Docker version is 1.13.1. If 
 
 1. Install Docker service:
 
+    **CentOS 7**  
     <pre>yum install -y docker
+systemctl start docker
+systemctl enable docker</pre>
+
+    **RHEL 7**
+    <pre>yum install yum-utils
+yum-config-manager --enable rhui-REGION-rhel-server-extras
+yum install -y docker
 systemctl start docker
 systemctl enable docker</pre>
 
