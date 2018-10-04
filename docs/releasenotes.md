@@ -210,8 +210,25 @@ ____________________________
 #### Fixed Issues
 ____________________________
 
+[Comment]: <> (Check BUG-109889, BUG-107423, BUG-112054, BUG-111528, BUG-112047, BUG-109353)
+
 | Issue | Issue description | Category | Fix Version |
 |---|---|---|---|
+| BUG-107651 | HA data lake attached cluster should not connect to the same Ambari database. | Stability | 2.7.2 |
+| BUG-109037 | AD password is not escaped in Knox SSO config. | Stability | 2.7.2 |
+| BUG-110657 | Remove num_llap_nodes configuration from LLAP blueprint. | Usability | 2.7.2 |
+| BUG-110442 | Execute-ldap-mapping creates an external mapping to all accounts. | Usability | 2.7.2 |
+| BUG-110336 | Swagger response AmbariRepoDetails has extra mandatory field. | Usability | 2.7.2 |
+| BUG-110302 | Delete prometheus, consul, service registrator from top.sls. | Usability | 2.7.2 |
+| BUG-109943 | Credential tests occasionally fail, because GCP responds with 404. | Stability | 2.7.2 |
+| BUG-109822, BUG-109627 | Error deploying custom blueprint with Knox Proxy and SSO enabled. | Stability | 2.7.2 |
+| BUG-109226 | Pre-Ambari recipes corrupt cluster creation on Ubuntu images. | Stability | 2.7.2 |
+| BUG-108767 | Default post cluster install recipes do not run. | Stability | 2.7.2 |
+| BUG-108692 | Blueprint shown in the web UI does not contain yarn-env section. | Usability | 2.7.2 |
+| BUG-110505 | Blueprint file upload fails 2nd time if using the same filename. | Usability | 2.7.2 |
+| BUG-108064 | Recipe error shown in the UI even when something other than a recipe failed. | Usability | 2.7.2 |
+| BUG-107643 | HDP repo parameters in the UI are confusing. | Usability | 2.7.2 |
+| BUG-106868 | No base image is available for custom HDF version > 3.1. | Usability | 2.7.2 |
 | BUG-106925 | Log requests to AWS to circumvent throttling error. | Usability | 2.7.1 |
 | BUG-106665 | Exception if availability-zone is not set on AWS. | Usability | 2.7.1 |
 | RMP-11639 | Support python shebangs in recipe. | Usability | 2.7.1 |
