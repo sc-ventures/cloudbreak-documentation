@@ -29,7 +29,7 @@ Launch Cloudbreak from an Azure Resource Manager (ARM) template by using the fol
 
 2. Click here to get started with Cloudbreak installation using the Azure Resource Manager template:
 
-    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhortonworks%2Fcbd-quickstart%2F2.7.1%2Fazure%2FmainTemplate.json">![deploy on azure](http://azuredeploy.net/deploybutton.png)</a>
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhortonworks%2Fcbd-quickstart%2F2.7.2%2Fazure%2FmainTemplate.json">![deploy on azure](http://azuredeploy.net/deploybutton.png)</a>
 
 3. The template for installing Cloudbreak will appear. On the **Basics** page, provide the following basic parameters:   
 

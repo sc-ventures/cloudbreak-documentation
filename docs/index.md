@@ -1,6 +1,6 @@
 ## Introduction
 
-Welcome to the **Cloudbreak 2.7.1** documentation! 
+Welcome to the **Cloudbreak 2.7.2** documentation! 
 
 Cloudbreak simplifies the provisioning, management, and monitoring of on-demand HDP and HDF clusters in virtual and cloud environments. It leverages cloud infrastructure to create host instances, and uses Apache Ambari via Ambari blueprints to provision and manage Hortonworks clusters. 
 

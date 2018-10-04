@@ -1,8 +1,8 @@
 ## Release Notes
 
-### 2.7.1
+### 2.7.2
 
-Cloudbreak 2.7.1 is a general availability release, which is suitable for production deployments.
+Cloudbreak 2.7.2 is a general availability release, which is suitable for production deployments.
 
 ____________________________
 
