@@ -329,20 +329,6 @@ ____________________________
 **Known issues: Cloudbreak**
 ____________________________
 
-##### (BUG-107651) **External DB Used for Ambari Data Lake is Reused for Attached Clusters**
-
-If you have a data lake that uses an external database for Ambari, when you create a cluster attached to a data lake, all the databases from that data lake (including the Ambari database) will be copied. This causes a problem, because the Ambari database cannot be shared. 
-
-*Workaround*:
-
-On the UI, there is no option to remove this extra Ambari database, so the only workaround is to create attached clusters by using the CLI. The steps are:
- 
-1) Specify all parameters for an attached cluster in the UI.  
-2) Copy the CLI skeleton JSON.  
-3) Remove Ambari from the CLI skeleton JSON.  
-4) Create an attached cluster by using the `cluster create` CLI command.     
- 
-____________________________
 
 ##### (BUG-92605) **Cluster Creation Fails with ResourceInError**
 
@@ -355,7 +341,6 @@ Cluster creation fails with the following error:
 This may mean that the volumes that you requested exceed volumes available on your cloud provider account. When creating a cluster, on the advanced **Hardware and Storage** page of the create cluster wizard, try reducing the amount of requested storage. If you need more storage, try using a different region or ask your cloud provider admin to increase the resource quota for volumes.  
 
 [Comment]: <> (This jira item was closed so it will not be fixed. Maybe add this to troubleshooting?)
-
 ____________________________
 
 ##### (BUG-105439) **When the Master Node Goes Down the Cluster Status Is Available**
