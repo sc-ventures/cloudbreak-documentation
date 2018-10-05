@@ -210,12 +210,13 @@ ____________________________
 #### Fixed Issues
 ____________________________
 
-[Comment]: <> (Check BUG-109889, BUG-107423, BUG-112054, BUG-111528, BUG-112047, BUG-109353)
+[Comment]: <> (Check BUG-109889, BUG-107423, BUG-111528, BUG-112047, BUG-109353)
 
 | Issue | Issue description | Category | Fix Version |
 |---|---|---|---|
 | BUG-107651 | HA data lake attached cluster should not connect to the same Ambari database. | Stability | 2.7.2 |
 | BUG-109037 | AD password is not escaped in Knox SSO config. | Stability | 2.7.2 |
+| BUG-112054 | Cloudbreak JDBC connection string should allow get parameters. | 2.7.2 |
 | BUG-110657 | Remove num_llap_nodes configuration from LLAP blueprint. | Usability | 2.7.2 |
 | BUG-110442 | Execute-ldap-mapping creates an external mapping to all accounts. | Usability | 2.7.2 |
 | BUG-110336 | Swagger response AmbariRepoDetails has extra mandatory field. | Usability | 2.7.2 |
