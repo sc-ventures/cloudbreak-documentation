@@ -210,7 +210,7 @@ ____________________________
 #### Fixed Issues
 ____________________________
 
-[Comment]: <> (Check BUG-109889, BUG-107423, BUG-111528, BUG-112047, BUG-109353)
+[Comment]: <> (Check BUG-109889, BUG-107423, BUG-112047, BUG-109353. Also BUG-111528 may be a known issue)
 
 | Issue | Issue description | Category | Fix Version |
 |---|---|---|---|
