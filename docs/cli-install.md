@@ -108,7 +108,7 @@ The CLI includes an autocomplete option. Before you can use this option, you mus
 * For **bash**: bash_autocomplete  
 * For **zsh**: zsh_autocomplete  
 
-These two files are located in [https://github.com/hortonworks/cb-cli/tree/master/autocomplete/](https://github.com/hortonworks/cb-cli/tree/master/autocomplete/)  
+These two files are located in [https://github.com/hortonworks/cb-cli/tree/rc-2.7/autocomplete](https://github.com/hortonworks/cb-cli/tree/rc-2.7/autocomplete)  
 
 Once you've sourced the file, type the CLI commands as usual and use the **Tab** key to access the autocomplete feature.  
 
