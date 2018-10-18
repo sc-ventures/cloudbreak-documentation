@@ -20,8 +20,8 @@ Cloudbreak requires that the following standard modules are installed and config
 * Neutron (Self-service and provider networking)
 * Nova (KVM or Xen hypervisor)
 * Glance
+* Heat
 * Cinder (Optional)
-* Heat (Optional but highly recommended, since provisioning through native API calls will be deprecated in the future)
 
 **Related links**  
 [Red Hat distribution of OpenStack](https://www.rdoproject.org/) (External)
