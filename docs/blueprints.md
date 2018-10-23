@@ -50,13 +50,16 @@ For correct blueprint layout and other information about Ambari blueprints, refe
 <div class="note">
     <p class="first admonition-title">Creating Blueprints for Ambari 2.6.1+</p>
     <p class="last">
-Ambari 2.6.1 or newer does not install the mysqlconnector; therefore, when creating a blueprint for Ambari 2.6.1 or newer <b>you should not include the MYSQL_SERVER component</b> for Hive Metastore in your blueprint. Instead, you have two options:
+Ambari 2.6.1 or newer cannot install the mysqlconnector, as the connector is released under version 2 of the GNU General Public License. For more information on MySQL licensing, refer to <a href="https://downloads.mysql.com/docs/licenses/connector-j-5.1-gpl-en.pdf">Licensing Information User Manual MySQL Connector/J 5.1</a>. </p>
+<p>Therefore, when creating a blueprint for Ambari 2.6.1 or newer <b>you should not include the MYSQL_SERVER component</b> for Hive Metastore in your blueprint. Instead, you have two options:
 <ul>
 <li>Configure an external RDBMS instance for Hive Metastore and include the JDBC connection information in your blueprint. If you choose to use an external database that is not PostgreSQL (such as Oracle, mysql) you must also set up Ambari with the appropriate connector; to do this, create a pre-ambari-start recipe and pass it when creating a cluster.</li>
 <li>If a remote Hive RDBMS is not provided, Cloudbreak installs a Postgres instance and configures it for Hive Metastore during the cluster launch.</li>
-</ul>
-For information on how to configure an external database and pass your external database connection parameters, refer to <a href="https://cwiki.apache.org/confluence/display/AMBARI/Blueprints">Ambari blueprint</a> documentation.
-</p>
+</ul> </p>
+
+<p>For information on how to configure an external database and pass your external database connection parameters, refer to <a href="https://cwiki.apache.org/confluence/display/AMBARI/Blueprints">Ambari blueprint</a> documentation.</p>
+
+<p>If you still include MYSQL_SERVER in your blueprint, then depending on your chosen operating system, MariaDB or MySQL Server will be installed.</p>
 </div>
 
 Cloudbreak requires you to define an additional element in the blueprint called "blueprint_name". This should be a unique name within Cloudbreak list of blueprints. For example:
