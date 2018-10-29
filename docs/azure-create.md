@@ -59,9 +59,6 @@ This option is available if you are creating a cluster in an existing network an
 {!docs/common/create-adv-5.md!}
 
 
-#### Enable Azure Disk Encryption 
-
-Check this option if you would like to have your virtual machine disks encrypted using the Azure Disk Encryption capability provided by Azure. For more information, refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/security/azure-security-disk-encryption).  
 
 {!docs/common/create-adv-6.md!}  
 [Introduction to Microsoft Azure Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction) (External)  
