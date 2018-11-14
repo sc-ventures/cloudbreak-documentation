@@ -13,6 +13,16 @@
     > Existing security groups are only available for an existing network. 
     
 {!docs/common/create-a4.md!}
+
+#### Don't create public IP
+
+This option is available if you are creating a cluster in an existing network and subnet. Select this option if you don't want to use public IPs for the network. 
+
+
+#### Don't create new firewall rules
+
+This option is available if you are creating a cluster in an existing network and subnet. Select this option if you don't want to create new firewall rules for the network. 
+
 {!docs/common/create-a5.md!}
 
 **Related Links**  
