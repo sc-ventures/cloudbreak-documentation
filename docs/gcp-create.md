@@ -68,6 +68,15 @@ If you would like to access Google Cloud Storage (GCS) from your cluster, you mu
 
 {!docs/common/create-adv-4.md!} 
 
+#### Don't create public IP
+
+This option is available if you are creating a cluster in an existing network and subnet. Select this option if you don't want to use public IPs for the network. 
+
+
+#### Don't create new firewall rules
+
+This option is available if you are creating a cluster in an existing network and subnet. Select this option if you don't want to create new firewall rules for the network. 
+
 {!docs/common/create-adv-5.md!}
 
 {!docs/common/create-adv-6.md!}  
