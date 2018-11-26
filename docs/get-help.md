@@ -80,8 +80,8 @@ Check out the following documentation to learn more:
 
 <table>
 <tr><th width="25%"> Resource </th><th width="75%">Description</th><tr>
-<tr><td><a href="http://docs.hortonworks.com/index.html" target="_blank">Hortonworks documentation </a></td>
-<td><p>During cluster create process, Cloudbreak automatically installs Ambari and sets up a cluster for you. After this deployment is complete, refer to the <a href="http://docs.hortonworks.com/HDPDocuments/Ambari/Ambari-2.4.1.0/index.html" target="_blank">Ambari documentation</a> and <a href="http://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.5.0/index.html" target="_blank">HDP documentation</a> for help.</p></td>
+<tr><td><a href="https://docs.hortonworks.com/index.html" target="_blank">Hortonworks documentation </a></td>
+<td><p>During cluster create process, Cloudbreak automatically installs Ambari and sets up a cluster for you. After this deployment is complete, refer to the <a href="https://docs.hortonworks.com/HDPDocuments/Ambari/Ambari-2.4.1.0/index.html" target="_blank">Ambari documentation</a> and <a href="https://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.5.0/index.html" target="_blank">HDP documentation</a> for help.</p></td>
 </tr>
 <tr><td>
 <a href="http://hortonworks.com/tutorials/" target="_blank">Hortonworks tutorials</a>
