@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="canonical" href="http://hortonworks.github.io/cloudbreak-documentation/cb-db/index.html"> 
+    <link rel="shortcut icon" href="../images/favicon.png">
+
+    <title>Configure external Cloudbreak database - Cloudbreak</title>
+
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+
+
+    <link href="../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-22950817-24', 'auto');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../index.html">Cloudbreak</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Intro <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../index.html">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../architecture/index.html">Architecture</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../concepts/index.html">Core concepts</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../deployment-options/index.html">Deployment options</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../security/index.html">Security overview</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quickstart <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../aws-quick/index.html">Quickstart on AWS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-quick/index.html">Quickstart on Azure</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-quick/index.html">Quickstart on GCP</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">AWS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../aws-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-launch/index.html">Launch on AWS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-data/index.html">Configure access to S3</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Azure <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../azure-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-launch/index.html">Launch on Azure</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-data-adls/index.html">Configure access to ADLS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-data-wasb/index.html">Configure access to WASB</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">GCP <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../gcp-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-launch/index.html">Launch on GCP</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-data/index.html">Configure access to GCS</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">OpenStack <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../os-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../os-launch/index.html">Launch on OpenStack</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../os-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Using Cloudbreak <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Advanced cluster options</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../gateway/index.html">Configure the gateway</a>
+</li>
+
+        
+            
+<li >
+    <a href="../blueprints/index.html">Use custom blueprints</a>
+</li>
+
+        
+            
+<li >
+    <a href="../recipes/index.html">Use custom scripts (recipes)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../mpacks/index.html">Use management packs</a>
+</li>
+
+        
+            
+<li >
+    <a href="../images/index.html">Use custom images</a>
+</li>
+
+        
+            
+<li >
+    <a href="../tags/index.html">Tag resources</a>
+</li>
+
+        
+            
+<li >
+    <a href="../properties/index.html">Set custom properties</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-kerberos/index.html">Enable Kerberos security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../autoscaling/index.html">Configure autoscaling</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-db/index.html">Register external database</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-ldap/index.html">Register external authentication source</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-proxy/index.html">Register proxy configuration</a>
+</li>
+
+        
+            
+<li >
+    <a href="../hostnames/index.html">Use custom hostnames based on DNS</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Advanced Cloudbreak options</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../cb-credentials/index.html">Manage Cloudbreak credentials</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-migrate/index.html">Move Cloudbreak instance</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-ldap/index.html">Configure LDAP/AD authentication for Cloudbreak</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-ssl/index.html">Add SSL certificate for Cloudbreak UI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-proxy/index.html">Configure outbound internet access and proxy</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-inbound/index.html">Restrict inbound access to clusters</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-customdom/index.html">Configure access from custom domains</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="index.html">Configure external Cloudbreak database</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-disable-provider/index.html">Disable providers</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-ports/index.html">Change default Cloudbreak ports</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-email/index.html">Set up email notifications</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-profile/index.html">Modify settings in Cloudbreak Profile</a>
+</li>
+
+        
+            
+<li >
+    <a href="../os-image-import/index.html">Manually import HDP and HDF images to OpenStack</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../hdf/index.html">Creating an HDF cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../data-lake/index.html">Setting up a data lake</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../clusters-access/index.html">Accessing a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../clusters-manage/index.html">Managing clusters</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../hive/index.html">Accessing Hive via JDBC</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Cloudbreak CLI</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../cli-install/index.html">Install the CLI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cli-get-started/index.html">Get started with the CLI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cli-reference/index.html">CLI Reference</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Troubleshooting</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../trouble-cb-logs/index.html">Cloudbreak logs</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cb/index.html">Troubleshooting Cloudbreak</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cluster/index.html">Troubleshooting cluster creation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-aws/index.html">Troubleshooting AWS</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-azure/index.html">Troubleshooting Azure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-gcp/index.html">Troubleshooting GCP</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cli/index.html">Troubleshooting Cloudbreak CLI</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../cb-upgrade/index.html">Upgrade Cloudbreak</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cb-delete/index.html">Delete Cloudbreak</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../releasenotes/index.html">Release Notes</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../faq/index.html">FAQs</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../dev/index.html">Developer documentation links</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../get-help/index.html">Getting help</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../smartsense/index.html">SmartSense telemetry</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Legal</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../acknowledge/index.html">Acknowledgements</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li >
+                        <a rel="next" href="../security-cb-customdom/index.html">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../cb-disable-provider/index.html">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/hortonworks/cloudbreak-documentation">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#configuring-external-cloudbreak-database">Configuring external Cloudbreak database</a></li>
+        
+            <li class="second-level"><a href="#supported-databases">Supported databases</a></li>
+            
+        
+            <li class="second-level"><a href="#configure-external-cloudbreak-database">Configure external Cloudbreak database</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h2 id="configuring-external-cloudbreak-database">Configuring external Cloudbreak database</h2>
+<p>By default, Cloudbreak uses an embedded PostgreSQL database to persist data related to Cloudbreak configuration, setup, and so on. For a production Cloudbreak deployment, you must configure an external database. </p>
+<h3 id="supported-databases">Supported databases</h3>
+<p>An embedded PostgreSQL 9.6.1 database is used by Cloudbreak by default. If you would like to
+use an external database for Cloudbreak, you may use the following supported database types and versions: </p>
+<table>
+<thead>
+<tr>
+<th>Database type</th>
+<th>Supported version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>External PostgreSQL</td>
+<td>9.6.1 or above</td>
+</tr>
+<tr>
+<td>External MySQL</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>External MariaDB</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>External Oracle</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>External SQL Server</td>
+<td>Not supported</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configure-external-cloudbreak-database">Configure external Cloudbreak database</h3>
+<p>The following section describes how to use Cloudbreak with an existing external database, other than
+the embedded PostgreSQL database instance that Cloudbreak uses by default. To configure an external PostgreSQL database for Cloudbreak, perform these steps. </p>
+<p><strong>Steps</strong></p>
+<ol>
+<li>
+<p>On your Cloudbreak host machine, set the following environment variables according to the settings of your external database: </p>
+<p><pre><small>export DATABASE_HOST=my.database.host
+export DATABASE_PORT=5432
+export DATABASE_USERNAME=admin
+export DATABASE_PASSWORD=Admin123!
+</small></pre></p>
+</li>
+<li>
+<p>On your external database, create three databases: <code>cbdb, uaadb, periscopedb</code>. You can create these databases using the <code>createdb</code> utility with the following commands:</p>
+<p><pre><small>createdb -h $DATABASE_HOST -p $DATABASE_PORT -U $DATABASE_USERNAME cbdb
+createdb -h $DATABASE_HOST -p $DATABASE_PORT -U $DATABASE_USERNAME uaadb
+createdb -h $DATABASE_HOST -p $DATABASE_PORT -U $DATABASE_USERNAME periscopedb</small></pre></p>
+<p>For more information refer to the <a href="https://www.postgresql.org/docs/9.6/static/app-createdb.html">PostgreSQL documentation</a>. <br />
+Alternatively, you can log in to the management interface of your external database and execute <a href="https://www.postgresql.org/docs/9.6/static/sql-createdatabase.html">create database</a> commands directly. </p>
+</li>
+<li>
+<p>Set the following variables in your Cloudbreak Profile file. Modify the database parameters according to your external database.</p>
+<p><pre><small>export DATABASE_HOST=my.database.host
+export DATABASE_PORT=5432
+export DATABASE_USERNAME=admin
+export DATABASE_PASSWORD=Admin123!</p>
+<p>export CB_DB_PORT_5432_TCP_ADDR=$DATABASE_HOST
+export CB_DB_PORT_5432_TCP_PORT=$DATABASE_PORT
+export CB_DB_ENV_USER=$DATABASE_USERNAME
+export CB_DB_ENV_PASS=$DATABASE_PASSWORD
+export CB_DB_ENV_DB=cbdb</p>
+<p>export PERISCOPE_DB_TCP_ADDR=$DATABASE_HOST
+export PERISCOPE_DB_TCP_PORT=$DATABASE_PORT
+export PERISCOPE_DB_USER=$DATABASE_USERNAME
+export PERISCOPE_DB_PASS=$DATABASE_PASSWORD
+export PERISCOPE_DB_NAME=periscopedb
+export PERISCOPE_DB_SCHEMA_NAME=public</p>
+<p>export IDENTITY_DB_URL=$DATABASE_HOST:$DATABASE_PORT
+export IDENTITY_DB_USER=$DATABASE_USERNAME
+export IDENTITY_DB_PASS=$DATABASE_PASSWORD
+export IDENTITY_DB_NAME=uaadb</small></pre></p>
+</li>
+<li>
+<p>Restart Cloudbreak application by using the <code>cbd restart</code> command. </p>
+</li>
+</ol>
+<p>After performing these steps, your external database will be used for Cloudbreak instead of the built-in database. </p>
+<div class="note">      
+<p class="first admonition-title">Data migration</p>  
+<p class="last"> If you want to migrate your existing data (such as  blueprints, recipes, and so on) from the embedded database to the external one, then after completing these steps, you should also  <a href="../cb-migrate/#back-up-cloudbreak-database">create a backup</a> of your original database and then <a href="../cb-migrate#populate-database-with-dump-from-original-cloudbreak-instance">restore</a> it in the external database.         
+</p>        
+</div></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>© 2011-2018 <a href="http://www.hortonworks.com" target="_blank">Hortonworks Inc</a>. All Rights Reserved. | <a href="http://hortonworks.com/privacy-policy/" target="_blank">Privacy Policy</a><br></small>
+        
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '..';
+    </script>
+    <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+    <script src="../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

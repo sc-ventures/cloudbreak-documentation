@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="canonical" href="http://hortonworks.github.io/cloudbreak-documentation/azure-quick/index.html"> 
+    <link rel="shortcut icon" href="../images/favicon.png">
+
+    <title>Quickstart on Azure - Cloudbreak</title>
+
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+
+
+    <link href="../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-22950817-24', 'auto');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../index.html">Cloudbreak</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Intro <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../index.html">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../architecture/index.html">Architecture</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../concepts/index.html">Core concepts</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../deployment-options/index.html">Deployment options</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../security/index.html">Security overview</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quickstart <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../aws-quick/index.html">Quickstart on AWS</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="index.html">Quickstart on Azure</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-quick/index.html">Quickstart on GCP</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">AWS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../aws-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-launch/index.html">Launch on AWS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-data/index.html">Configure access to S3</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Azure <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../azure-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-launch/index.html">Launch on Azure</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-data-adls/index.html">Configure access to ADLS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-data-wasb/index.html">Configure access to WASB</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">GCP <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../gcp-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-launch/index.html">Launch on GCP</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-data/index.html">Configure access to GCS</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">OpenStack <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../os-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../os-launch/index.html">Launch on OpenStack</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../os-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Using Cloudbreak <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Advanced cluster options</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../gateway/index.html">Configure the gateway</a>
+</li>
+
+        
+            
+<li >
+    <a href="../blueprints/index.html">Use custom blueprints</a>
+</li>
+
+        
+            
+<li >
+    <a href="../recipes/index.html">Use custom scripts (recipes)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../mpacks/index.html">Use management packs</a>
+</li>
+
+        
+            
+<li >
+    <a href="../images/index.html">Use custom images</a>
+</li>
+
+        
+            
+<li >
+    <a href="../tags/index.html">Tag resources</a>
+</li>
+
+        
+            
+<li >
+    <a href="../properties/index.html">Set custom properties</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-kerberos/index.html">Enable Kerberos security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../autoscaling/index.html">Configure autoscaling</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-db/index.html">Register external database</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-ldap/index.html">Register external authentication source</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-proxy/index.html">Register proxy configuration</a>
+</li>
+
+        
+            
+<li >
+    <a href="../hostnames/index.html">Use custom hostnames based on DNS</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Advanced Cloudbreak options</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../cb-credentials/index.html">Manage Cloudbreak credentials</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-migrate/index.html">Move Cloudbreak instance</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-ldap/index.html">Configure LDAP/AD authentication for Cloudbreak</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-ssl/index.html">Add SSL certificate for Cloudbreak UI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-proxy/index.html">Configure outbound internet access and proxy</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-inbound/index.html">Restrict inbound access to clusters</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-customdom/index.html">Configure access from custom domains</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-db/index.html">Configure external Cloudbreak database</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-disable-provider/index.html">Disable providers</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-ports/index.html">Change default Cloudbreak ports</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-email/index.html">Set up email notifications</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-profile/index.html">Modify settings in Cloudbreak Profile</a>
+</li>
+
+        
+            
+<li >
+    <a href="../os-image-import/index.html">Manually import HDP and HDF images to OpenStack</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../hdf/index.html">Creating an HDF cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../data-lake/index.html">Setting up a data lake</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../clusters-access/index.html">Accessing a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../clusters-manage/index.html">Managing clusters</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../hive/index.html">Accessing Hive via JDBC</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Cloudbreak CLI</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../cli-install/index.html">Install the CLI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cli-get-started/index.html">Get started with the CLI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cli-reference/index.html">CLI Reference</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Troubleshooting</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../trouble-cb-logs/index.html">Cloudbreak logs</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cb/index.html">Troubleshooting Cloudbreak</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cluster/index.html">Troubleshooting cluster creation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-aws/index.html">Troubleshooting AWS</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-azure/index.html">Troubleshooting Azure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-gcp/index.html">Troubleshooting GCP</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cli/index.html">Troubleshooting Cloudbreak CLI</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../cb-upgrade/index.html">Upgrade Cloudbreak</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cb-delete/index.html">Delete Cloudbreak</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../releasenotes/index.html">Release Notes</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../faq/index.html">FAQs</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../dev/index.html">Developer documentation links</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../get-help/index.html">Getting help</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../smartsense/index.html">SmartSense telemetry</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Legal</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../acknowledge/index.html">Acknowledgements</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li >
+                        <a rel="next" href="../aws-quick/index.html">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../gcp-quick/index.html">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/hortonworks/cloudbreak-documentation">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#quickstart-on-azure">Quickstart on Azure</a></li>
+        
+            <li class="second-level"><a href="#prerequisites">Prerequisites</a></li>
+            
+        
+            <li class="second-level"><a href="#launch-cloudbreak-from-the-quickstart-template">Launch Cloudbreak from the quickstart template</a></li>
+            
+        
+            <li class="second-level"><a href="#access-cloudbreak-web-ui">Access Cloudbreak web UI</a></li>
+            
+        
+            <li class="second-level"><a href="#create-cloudbreak-credential">Create Cloudbreak credential</a></li>
+            
+        
+            <li class="second-level"><a href="#create-a-cluster">Create a cluster</a></li>
+            
+        
+            <li class="second-level"><a href="#next-steps">Next steps</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h2 id="quickstart-on-azure">Quickstart on Azure</h2>
+<p>This quickstart documentation will help you get started with Cloudbreak. </p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>In order to launch Cloudbreak from the ARM template you must:</p>
+<ul>
+<li>
+<p>Have an existing an Azure account. If you don't have an account, you can create one at <a href="https://azure.microsoft.com">https://azure.microsoft.com</a>.</p>
+</li>
+<li>
+<p>Have an SSH key pair. If needed, you can generate a new SSH key pair:</p>
+<ul>
+<li>On MacOS X and Linux using <code>ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code>  </li>
+<li>On Windows using <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows">PuTTygen</a></li>
+</ul>
+</li>
+<li>
+<p>In order to create a Cloudbreak credential, you Azure account must have the minimum permissions described in <a href="../azure-pre/index.html#azure-roles">Azure roles</a>. </p>
+</li>
+</ul>
+<p><strong>Related links</strong><br />
+<a href="../azure-pre/index.html#azure-roles">Azure roles</a>
+<a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows">PuTTygen</a> (External)      </p>
+<h3 id="launch-cloudbreak-from-the-quickstart-template">Launch Cloudbreak from the quickstart template</h3>
+<p>Launch Cloudbreak from an Azure Resource Manager (ARM) template by using the following steps. This is the quickstart deployment option. </p>
+<p><strong>Steps</strong></p>
+<ol>
+<li>
+<p>Log in to your <a href="https://portal.azure.com">Azure Portal</a>.</p>
+</li>
+<li>
+<p>Click here to get started with Cloudbreak installation using the Azure Resource Manager template:</p>
+<p><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhortonworks%2Fcbd-quickstart%2F2.7.0%2Fazure%2FmainTemplate.json"><img alt="deploy on azure" src="http://azuredeploy.net/deploybutton.png" /></a></p>
+</li>
+<li>
+<p>The template for installing Cloudbreak will appear. On the <strong>Basics</strong> page, provide the following basic parameters:   </p>
+<blockquote>
+<p>All parameters except "SmartSense Id" are required.</p>
+</blockquote>
+<p><strong>BASICS</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subscription</td>
+<td>Select which existing subscription you want to use.</td>
+</tr>
+<tr>
+<td>Resource group</td>
+<td>Select an existing resource group or create a new one by selecting <strong>Create new</strong> and entering a name for your new resource group. Cloudbreak resources will later be accessible in that chosen resource group.</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Select an Azure region in which you want to deploy Cloudbreak.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SETTINGS</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vm Size</td>
+<td>Select virtual machine instance type to use for the Cloudbreak controller. The minimum instance type suitable for Cloudbreak is <em>Standard_DS3</em>. The minimum requirements are 16GB RAM, 40GB disk, 4 cores.</td>
+</tr>
+<tr>
+<td>Admin Username</td>
+<td>Create an admin login that you will use to log in to the Cloudbreak UI. Must be a valid email address. By default, admin@example.com is used but you should change it to your email address.</td>
+</tr>
+<tr>
+<td>Admin User Password</td>
+<td>Password for the admin login. Must be at least 8 characters containing letters, numbers, and symbols.</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>Enter an admin username for the virtual machine. You will use it to SSH to the VM. By default, "cloudbreak" is used.</td>
+</tr>
+<tr>
+<td>Remote Location</td>
+<td><p>Enter a valid <a href="http://www.ipaddressguide.com/cidr">CIDR IP</a> or use one of the default tags. Default value is <code>Internet</code> which allows access from all IP addresses. Examples: </p><p><ul><li>10.0.0.0/24 will allow access from 10.0.0.0 through 10.0.0.255</li><li>'Internet' will allow access from all. This is not a secure option but you can use it it you are just getting started and are not planning to have the instance on for a longer period. </li><li>(Advanced) 'VirtualNetwork' will allow access from the address space of the Virtual Network.</li><li> (Advanced) 'AzureLoadBalancer' will allow access from the address space of the load balancer.</li></ul></p><p>For more information, refer to the <a href="https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg">Plan virtual networks</a> in Azure documentation.</p></td>
+</tr>
+<tr>
+<td>Ssh Key</td>
+<td><p>Paste your SSH public key.</p><p>You can use <code>pbcopy</code> to quickly copy it. For example: <code>pbcopy &lt; /Users/homedir/.ssh/id_rsa.pub</code></p></td>
+</tr>
+<tr>
+<td>Vnet New Or Existing</td>
+<td>By default, Cloudbreak is launched in a new VNet called <code>cbdeployerVnet</code> and a new subnet called <code>cbdeployerSubnet</code>; if needed, you can customize the settings for the new VNet using available VNet and Subnet parameters.</td>
+</tr>
+<tr>
+<td>Vnet Name</td>
+<td>Provide the name for a new Vnet. Default is <code>`cbdeployerVnet</code>.</td>
+</tr>
+<tr>
+<td>Vnet Subnet Name</td>
+<td>Provide a name for a new subnet. Default is <code>cbdeployerSubnet</code>.</td>
+</tr>
+<tr>
+<td>Vnet Address Prefix</td>
+<td>Provide a CIDR for the virtual network. Default is <code>10.0.0.0/16</code>.</td>
+</tr>
+<tr>
+<td>Vnet Subnet Address Prefix</td>
+<td>Provide a CIDR for the subnet. Default is <code>10.0.0.0/24</code>.</td>
+</tr>
+<tr>
+<td>Vnet RG Name</td>
+<td>The name of the resource group in which the Vnet is located. If creating a new Vnet, enter the same resource group name as provided in the <code>Resource group</code> field in the <strong>BASICS</strong> section.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Review terms of use and check "I agree to the terms and conditions stated above".</p>
+</li>
+<li>
+<p>Click <strong>Purchase</strong>.</p>
+</li>
+<li>
+<p>Your deployment should be initiated.  </p>
+<blockquote>
+<p>If you encounter errors, refer to <a href="../trouble-azure/index.html">Troubleshooting Cloudbreak on Azure</a>. </p>
+</blockquote>
+<p><div class="note">
+<p class="first admonition-title">Cleaning up after a failed deployment</p>
+<p class="last">For steps on how to delete Cloudbreak after a failed deployment, refer to <a href="../cb-delete/index.html#delete-cloudbreak-on-azure">Delete Cloudbreak on Azure</a>.</p>
+</div></p>
+</li>
+</ol>
+<p><strong>Related links</strong><br />
+<a href="../cb-delete/index.html#delete-cloudbreak-on-azure">Delete Cloudbreak on Azure</a><br />
+<a href="../trouble-azure/index.html">Troubleshooting Cloudbreak on Azure</a>     <br />
+<a href="http://www.ipaddressguide.com/cidr">CIDR IP</a> <br />
+<a href="https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg">Plan virtual networks</a> (External)    </p>
+<h3 id="access-cloudbreak-web-ui">Access Cloudbreak web UI</h3>
+<p>Follow these steps to obtain Cloudbreak VM's public IP address and log in to the Cloudbreak web UI. </p>
+<p><strong>Steps</strong>       </p>
+<ol>
+<li>
+<p>When your deployment succeeds, you will receive a notification in the top-right corner. You can click on the link provided to navigate to the resource group created earlier.</p>
+<blockquote>
+<p>This only works right after deployment. At other times, you can find your resource group by selecting <strong>Resource Groups</strong> from the service menu and then finding your resource group by name.</p>
+</blockquote>
+</li>
+<li>
+<p>Once you've navigated to your resource group, click on <strong>Deployments</strong> and then click on <strong>Microsoft.Template</strong>:</p>
+<p><a href="../images/cb_azure-resource-find.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-resource-find.png" width="650" title="Azure Portal"></a></p>
+</li>
+<li>
+<p>From <strong>Outputs</strong>, you can copy the link by clicking on the copy icon:</p>
+<p><a href="../images/cb_azure-outputs.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-outputs.png" width="650" title="Azure Portal"></a>   </p>
+</li>
+<li>
+<p>Paste the link in your browser's address bar.</p>
+</li>
+<li>
+<p>Confirm the security exception to proceed to the Cloudbreak web UI.</p>
+<p>The first time you access Cloudbreak UI, Cloudbreak will automatically generate a self-signed certificate, due to which your browser will warn you about an untrusted connection and will ask you to confirm a security exception.</p>
+<table>
+<thead>
+<tr>
+<th>Browser</th>
+<th>Steps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Firefox</td>
+<td>Click <strong>Advanced</strong> &gt; Click <strong>Add Exception...</strong> &gt; Click <strong>Confirm Security Exception</strong></td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>Click <strong>Continue</strong></td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>Click <strong>Advanced</strong> &gt; Click <strong>Proceed...</strong></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>The login page is displayed:</p>
+<p><a href="../images/cb_cb-ui.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui.png" width="650" title="Cloudbreak web UI"></a>  </p>
+</li>
+<li>
+<p>Now you should be able to access Cloudbreak UI and log in with the <strong>Admin email address</strong> and <strong>Admin password</strong> that you created when launching Cloudbreak. </p>
+</li>
+<li>
+<p>Upon a successful login, you are redirected to the dashboard:</p>
+<p><a href="../images/cb_cb-ui1.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-ui1.png" width="650" title="Cloudbreak web UI"></a>  </p>
+</li>
+</ol>
+<p>The last task that you need to perform before you can use Cloudbreak is to create Cloudbreak credential.     </p>
+<p><strong>Related links</strong><br />
+<a href="http://www.ipaddressguide.com/cidr">CIDR IP</a> (External) <br />
+<a href="https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg">Filter network traffic with network security groups</a> (External)  </p>
+<h3 id="create-cloudbreak-credential">Create Cloudbreak credential</h3>
+<p>Before you can start using Cloudbreak to create clusters, you must create a Cloudbreak credential. Cloudbreak credential allows Cloudbreak to authenticate with your Azure account and provision resources on your behalf.</p>
+<p>There are two ways for Cloudbreak to authenticate with Azure: interactive and app-based. Since the interactive approach is simpler, the steps below describe how to configure an interactive Cloudbreak credential. </p>
+<p>Follow these steps to create an interactive Cloudbreak credential.</p>
+<p><strong>Prerequisites</strong></p>
+<p>Your account must have have an Owner role in order for the interactive credential creation to work.   </p>
+<p>If your account does not have an Owner role, you must you the <a href="../azure-launch/index.html#create-app-based-credential">app-based credential</a> option instead of the interactive option. To review the requirements for both options. refer to <a href="../azure-pre/index.html#azure-roles">Azure roles</a>. </p>
+<p><strong>Steps</strong></p>
+<ol>
+<li>
+<p>In the Cloudbreak web UI, select <strong>Credentials</strong> from the navigation pane.</p>
+</li>
+<li>
+<p>Click <strong>Create Credential</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Cloud provider</strong>, select "Microsoft Azure".</p>
+</li>
+<li>
+<p>Select <strong>Interactive Login</strong>:</p>
+<p><a href="../images/cb_cb-azure-cred-inter.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-azure-cred-inter.png" width="650" title="Cloudbreak web UI"></a>     </p>
+</li>
+<li>
+<p>Provide the following information:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Enter a name for your credential.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>(Optional) Enter a description.</td>
+</tr>
+<tr>
+<td>Subscription Id</td>
+<td>Copy and paste the Subscription ID from your <strong>Subscriptions</strong>.</td>
+</tr>
+<tr>
+<td>Tenant Id</td>
+<td>Copy and paste your Directory ID from your <strong>Active Directory</strong> &gt; <strong>Properties</strong>.</td>
+</tr>
+<tr>
+<td>Azure role type</td>
+<td><p>You have the following options:<ul><li>"Use existing Contributor role" (default): If you select this option, Cloudbreak will use the "<a href="https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor">Contributor</a>" role to create resources. This requires no further input.</li><li>"Reuse existing custom role": If you select this option and enter the name of an existing role, Cloudbreak will use this role to create resources.</li><li>"Let Cloudbreak create a custom role": If you select this option and enter a name for the new role, the role will be created. When choosing role name, make sure that there is no existing role with the name chosen. For information on creating custom roles, refer to <a href="https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles">Azure</a> documentation. </li></ul></p><p>If using a custom role, make sure that it includes the necessary Action set for Cloudbreak to be able to manage clusters: <code>Microsoft.Compute/*</code>, <code>Microsoft.Network/*</code>, <code>Microsoft.Storage/*</code>, <code>Microsoft.Resources/*</code>.</p></td>
+</tr>
+</tbody>
+</table>
+<p>To obtain the <strong>Subscription Id</strong>:</p>
+<p><a href="../images/cb_azure-cred-subscription.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-cred-subscription.png" width="650" title="Cloudbreak web UI"></a>   </p>
+<p>To obtain the <strong>Tenant ID</strong> (actually <strong>Directory Id</strong>):</p>
+<p><a href="../images/cb_azure-cred-directoryid.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-cred-directoryid.png" width="650" title="Cloudbreak web UI"></a>    </p>
+</li>
+<li>
+<p>After providing the parameters, click <strong>Interactive Login</strong>.</p>
+</li>
+<li>
+<p>Copy the code provided in the UI:</p>
+<p><a href="../images/cb_cb-azure-cred-inter2.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-azure-cred-inter2.png" width="650" title="Cloudbreak web UI"></a>     </p>
+</li>
+<li>
+<p>Click <strong>Azure login</strong> and a new <strong>Device login</strong> page will open in a new browser tab:</p>
+<p><a href="../images/cb_azure-device-login.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-device-login.png" width="650" title="Azure Portal"></a>  </p>
+</li>
+<li>
+<p>Next, paste the code in field on the  <strong>Device login</strong> page and click <strong>Continue</strong>.</p>
+</li>
+<li>
+<p>Confirm your account by selecting it:</p>
+<p><a href="../images/cb_azure-device-login2.png" target="_blank" title="click to enlarge"><img src="../images/cb_azure-device-login2.png" width="650" title="Azure Portal"></a></p>
+</li>
+<li>
+<p>A confirmation page will appear, confirming that you have signed in to the Microsoft Azure Cross-platform Command Line Interface application on your device. You may now close this window.</p>
+<blockquote>
+<p>If you encounter errors, refer to <a href="../trouble-azure/index.html">Troubleshooting Azure</a>.</p>
+</blockquote>
+<p>Congratulations! You've successfully launched and configured Cloudbreak. Now you can use Cloudbreak to create clusters.</p>
+</li>
+</ol>
+<p><strong>Related links</strong><br />
+<a href="../azure-launch/index.html#create-app-based-credential">Create app-based credential</a> <br />
+<a href="../azure-pre/index.html#azure-roles">Azure roles</a><br />
+<a href="../trouble-azure/index.html">Troubleshooting Azure</a><br />
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles#contributor">Contributor</a> (External)<br />
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles">Custom roles in Azure</a> (External)  </p>
+<h3 id="create-a-cluster">Create a cluster</h3>
+<p>Use these steps to create a cluster. This section only covers minimal steps required for creating a cluster based on the basic settings (2-node cluster with default hardware and storage options).  </p>
+<p><strong>Steps</strong></p>
+<ol>
+<li>
+<p>Click the <strong>Create Cluster</strong> button and the <em>Create Cluster</em> wizard is displayed.<br />
+    By default, <strong>Basic</strong> view is displayed.</p>
+<p><a href="../images/cb_quick-create01.png" target="_blank" title="click to enlarge"><img src="../images/cb_quick-create01.png" width="650" title="Cloudbreak web UI"></a>  </p>
+</li>
+<li>
+<p>On the <strong>General Configuration</strong> page:</p>
+<ul>
+<li><strong>Cluster Name</strong>: Enter a name for your cluster. The name must be between 5 and 40 characters, must start with a letter, and must only include lowercase letters, numbers, and hyphens.</li>
+<li><strong>Region</strong>: Select the region in which you would like to launch your cluster. </li>
+<li><strong>Cluster Type</strong>: Choose one of default cluster configurations.  </li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Next</strong> three times to navigate to the <strong>Security Page</strong>. You do not need to enter anything on the <strong>Hardware and Storage</strong> and <strong>Network</strong> because by default Cloudbreak suggests the instance types, storage, and network to use (a new network and subnet is created by default).   </p>
+</li>
+<li>
+<p>One the <strong>Security</strong> page, provide the following:</p>
+<ul>
+<li><strong>Cluster User</strong>: This will be the user that you should use to log in to Ambari and other cluster UIs. By default, this is <code>admin</code>.   </li>
+<li><strong>Cluster Password</strong>: Password for the cluster user.  </li>
+<li><strong>SSH public key</strong>: Select the existing public SSH key or paste your key. The key will be placed on the cluster VMs so that you can use the matching private key to access the VMs via SSH. </li>
+</ul>
+<p><a href="../images/cb_quick-create02.png" target="_blank" title="click to enlarge"><img src="../images/cb_quick-create02.png" width="650" title="Cloudbreak web UI"></a>  </p>
+</li>
+<li>
+<p>Click on <strong>Create Cluster</strong> to create a cluster.</p>
+</li>
+<li>
+<p>You will be redirected to the Cloudbreak dashboard, and a new tile representing your cluster will appear at the top of the page.</p>
+</li>
+</ol>
+<h3 id="next-steps">Next steps</h3>
+<p>To learn how to access your cluster, refer to <a href="../clusters-access/index.html">Accessing a cluster</a>.</p>
+<p>To learn how to use Cloudbreak to manage your cluster, refer to  <a href="../clusters-manage/index.html">Managing and monitoring clusters</a>.</p></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>© 2011-2018 <a href="http://www.hortonworks.com" target="_blank">Hortonworks Inc</a>. All Rights Reserved. | <a href="http://hortonworks.com/privacy-policy/" target="_blank">Privacy Policy</a><br></small>
+        
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '..';
+    </script>
+    <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+    <script src="../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

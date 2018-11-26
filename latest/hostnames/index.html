@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="canonical" href="http://hortonworks.github.io/cloudbreak-documentation/hostnames/index.html"> 
+    <link rel="shortcut icon" href="../images/favicon.png">
+
+    <title>Use custom hostnames based on DNS - Cloudbreak</title>
+
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+
+
+    <link href="../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-22950817-24', 'auto');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../index.html">Cloudbreak</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Intro <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../index.html">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../architecture/index.html">Architecture</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../concepts/index.html">Core concepts</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../deployment-options/index.html">Deployment options</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../security/index.html">Security overview</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quickstart <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../aws-quick/index.html">Quickstart on AWS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-quick/index.html">Quickstart on Azure</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-quick/index.html">Quickstart on GCP</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">AWS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../aws-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-launch/index.html">Launch on AWS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-data/index.html">Configure access to S3</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Azure <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../azure-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-launch/index.html">Launch on Azure</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-data-adls/index.html">Configure access to ADLS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-data-wasb/index.html">Configure access to WASB</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">GCP <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../gcp-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-launch/index.html">Launch on GCP</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-data/index.html">Configure access to GCS</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">OpenStack <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../os-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../os-launch/index.html">Launch on OpenStack</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../os-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Using Cloudbreak <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Advanced cluster options</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../gateway/index.html">Configure the gateway</a>
+</li>
+
+        
+            
+<li >
+    <a href="../blueprints/index.html">Use custom blueprints</a>
+</li>
+
+        
+            
+<li >
+    <a href="../recipes/index.html">Use custom scripts (recipes)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../mpacks/index.html">Use management packs</a>
+</li>
+
+        
+            
+<li >
+    <a href="../images/index.html">Use custom images</a>
+</li>
+
+        
+            
+<li >
+    <a href="../tags/index.html">Tag resources</a>
+</li>
+
+        
+            
+<li >
+    <a href="../properties/index.html">Set custom properties</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-kerberos/index.html">Enable Kerberos security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../autoscaling/index.html">Configure autoscaling</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-db/index.html">Register external database</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-ldap/index.html">Register external authentication source</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-proxy/index.html">Register proxy configuration</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="index.html">Use custom hostnames based on DNS</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Advanced Cloudbreak options</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../cb-credentials/index.html">Manage Cloudbreak credentials</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-migrate/index.html">Move Cloudbreak instance</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-ldap/index.html">Configure LDAP/AD authentication for Cloudbreak</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-ssl/index.html">Add SSL certificate for Cloudbreak UI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-proxy/index.html">Configure outbound internet access and proxy</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-inbound/index.html">Restrict inbound access to clusters</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-customdom/index.html">Configure access from custom domains</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-db/index.html">Configure external Cloudbreak database</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-disable-provider/index.html">Disable providers</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-ports/index.html">Change default Cloudbreak ports</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-email/index.html">Set up email notifications</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-profile/index.html">Modify settings in Cloudbreak Profile</a>
+</li>
+
+        
+            
+<li >
+    <a href="../os-image-import/index.html">Manually import HDP and HDF images to OpenStack</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../hdf/index.html">Creating an HDF cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../data-lake/index.html">Setting up a data lake</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../clusters-access/index.html">Accessing a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../clusters-manage/index.html">Managing clusters</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../hive/index.html">Accessing Hive via JDBC</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Cloudbreak CLI</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../cli-install/index.html">Install the CLI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cli-get-started/index.html">Get started with the CLI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cli-reference/index.html">CLI Reference</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Troubleshooting</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../trouble-cb-logs/index.html">Cloudbreak logs</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cb/index.html">Troubleshooting Cloudbreak</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cluster/index.html">Troubleshooting cluster creation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-aws/index.html">Troubleshooting AWS</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-azure/index.html">Troubleshooting Azure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-gcp/index.html">Troubleshooting GCP</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cli/index.html">Troubleshooting Cloudbreak CLI</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../cb-upgrade/index.html">Upgrade Cloudbreak</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cb-delete/index.html">Delete Cloudbreak</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../releasenotes/index.html">Release Notes</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../faq/index.html">FAQs</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../dev/index.html">Developer documentation links</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../get-help/index.html">Getting help</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../smartsense/index.html">SmartSense telemetry</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Legal</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../acknowledge/index.html">Acknowledgements</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li >
+                        <a rel="next" href="../external-proxy/index.html">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../cb-credentials/index.html">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/hortonworks/cloudbreak-documentation">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#using-custom-hostnames-based-on-dns">Using custom hostnames based on DNS</a></li>
+        
+            <li class="second-level"><a href="#configure-dns-on-aws">Configure DNS on AWS</a></li>
+            
+                <li class="third-level"><a href="#configure-dns-using-route53">Configure DNS using Route53</a></li>
+            
+                <li class="third-level"><a href="#configure-dns-using-custom-dns-server">Configure DNS using custom DNS server</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h2 id="using-custom-hostnames-based-on-dns">Using custom hostnames based on DNS</h2>
+<p>By default, when Cloudbreak provisions cloud provider resources, your cloud provider assigns hostnames for your cluster nodes. Optionally, instead of using default hostnames, you can configure Cloudbreak to use custom hostnames based on DNS. To do that, follow the steps for configuring reverse Domain Name System (DNS) described below. </p>
+<p>When the cluster node machines are provisioned, they try to make a reverse DNS lookup (by querying of the DNS to determine the domain name associated with a specific IP address); if the reverse DNS lookup returns a valid value, then that value is set as hostname. This is why reverse DNS setup is required for using custom hostnames.   </p>
+<h3 id="configure-dns-on-aws">Configure DNS on AWS</h3>
+<p>On AWS you have the following two options:</p>
+<ul>
+<li>Use <a href="https://aws.amazon.com/route53/">Route53</a> as DNS provider.  </li>
+<li>Set up your own DNS server in your VPC  </li>
+</ul>
+<p>Both options require you to have an existing VPC and attach a custom <a href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html">DHCP option</a> to it.</p>
+<p>The instructions provided in this section describe how to perform the steps in Amazon web consoles, but the steps can also be performed (and automated) in the AWS CLI.  </p>
+<h4 id="configure-dns-using-route53">Configure DNS using Route53</h4>
+<p>Follow these general steps to configure reverse DNS using <a href="https://aws.amazon.com/route53/">Route53</a>. </p>
+<p><strong>Steps</strong></p>
+<ol>
+<li>
+<p><strong>Create a new VPC or use your existing VPC</strong>:</p>
+<ol>
+<li>You can create a new VPC from the Amazon VCP console (for example by using <em>Start VPC Wizard</em>):              <ul>
+<li>CIDR block example: <em>10.1.0.0/16</em> </li>
+<li>Subnet's CIDR example: <em>10.1.1.0/28</em>  </li>
+</ul>
+</li>
+<li>Make sure to:<ul>
+<li>Enable DNS resolution for the VPC. You can do this by selecting the VPC, selecting <em>Actions &gt; Edit DNS resolution</em> and choosing <em>Yes</em>. </li>
+<li>Enable DNS hostnames for the VPC. You can do this by selecting the VPC, selecting <em>Actions &gt; Edit DNS hostnames</em> and choosing <em>Yes</em>.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>Optionally, you may want to set up an Internet Gateway for the VPC and add a default route to the routing table for the Internet Gateway.
+Additionally, you may want to enable the <em>Auto-assign Public IP</em> option.
+This way Cloudbreak would reach the cluster from outside of the VPC and the cluster would have internet access.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Create a DHCP options set</strong>: </p>
+<p>Perform this step from the Amazon VPC console. Select <em>DHCP Options Sets</em> from the left pane and click on <em>Create a DHCP options set</em>. Make sure to:   </p>
+<ul>
+<li>Set the <em>Domain name</em> to a preferred domain, for example <code>cloudbreak.beer</code></li>
+<li>
+<p>Set the <em>Domain name servers</em> to <code>AmazonProvidedDNS</code>  </p>
+<p><a href="../images/cb_aws-route53-dhcp-option.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-dhcp-option.png" width="650" title="DHCP option for Route53"></a>   </p>
+</li>
+</ul>
+<p>For detailed steps, refer to <a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/dhcp_options_set.html">AWS documentation</a>. </p>
+</li>
+<li>
+<p><strong>Assign the newly created DHCP options set to your VPC</strong>:</p>
+<ol>
+<li>From the Amazon VPC console, select <em>Your VPCs</em> from the left pane.</li>
+<li>Select the VPC created earlier.  </li>
+<li>Click on <em>Actions &gt; Edit DHCP Options Set</em>.  </li>
+<li>Select the newly created DHCP option set.  </li>
+</ol>
+</li>
+<li>
+<p><strong>Configure your domain at Route53</strong>:</p>
+<p>Perform these steps from the Amazon Route53 console.<br />
+For general steps, refer to <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zone-private-creating.html">AWS documentation</a>. </p>
+<ol>
+<li>Select <em>Hosted zones</em> from the left pane.    </li>
+<li>
+<p>Create a hosted zone by clicking on <em>Create Hosted Zone</em>. Make sure to:   </p>
+<ul>
+<li>Use the same domain name as used previously with the DHCP options set (In the example this was <code>cloudbreak.beer</code>). </li>
+<li>Set the <em>Type</em> to <em>Private Hosted Zone for Amazon VPC</em>.  </li>
+<li>Select the VPC ID of the VPC to which you previously assigned the DHCP option.  </li>
+</ul>
+</li>
+<li>
+<p>Add records for your hosted zone:</p>
+<ul>
+<li>Select the hosted zone and choose <em>Go to Record Sets</em></li>
+<li>
+<p>Click <em>Create Record Set</em> to create a record set. You must perform this step for every available IP, so that each IP can have a custom name (If you used the subnet example listed above, these IPs will be in the range of 10.1.1.4-14):</p>
+<ul>
+<li>Type: select <em>A</em></li>
+<li>Name: for example <em>b10</em></li>
+<li>Value: for example <em>10.1.1.10</em></li>
+</ul>
+<p><a href="../images/cb_aws-route53-record.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-record.png" width="350" title="Domain record for Route53"></a> </p>
+</li>
+</ul>
+</li>
+<li>
+<p>After performing this step for each IP, you should end up with an many records as IPs. For example:<br />
+      <a href="../images/cb_aws-route53-records.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-records.png" width="650" title="Domain record for Route53"></a></p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Create another hosted zone for reverse DNS lookup.</strong></p>
+<p>Perform these steps from the Amazon Route53 console.  </p>
+<ol>
+<li>Select <em>Hosted zones</em> from the left pane.    </li>
+<li>
+<p>Create a hosted zone by clicking on <em>Create Hosted Zone</em>. Make sure to: </p>
+<ul>
+<li>
+<p>For example, if you used the subnet example listed above, its <code>Domain name</code> should look like this (as reverse DNS lookups use the special domain <em>in-addr.arpa</em>):</p>
+<p><pre>1.1.10.in-addr.arpa.</pre></p>
+</li>
+<li>
+<p>Set the Type to <em>Private Hosted Zone for Amazon VPC</em>.</p>
+</li>
+<li>Select the VPC ID to which you previously assigned the DHCP option set.  </li>
+</ul>
+</li>
+<li>
+<p>Add records for every created domain: </p>
+<ul>
+<li>Type: select <em>PTR</em> </li>
+<li>Name: This determines the first part of the IP, for example <em>10</em></li>
+<li>
+<p>Value: Enter the domain name that you set in the previous step, for example, <em>b10</em></p>
+<p><a href="../images/cb_aws-route53-reverse-record.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-reverse-record.png" width="350" title="Domain PTR record for Route53"></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>After performing this step for each domain, you should end up with as many records as IPs. For example:<br />
+      <a href="../images/cb_aws-route53-reverse-records.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-route53-reverse-records.png" width="650" title="Domain record for Route53"></a></p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Create the cluster in the VPC configured in the earlier steps</strong> and you will have the same hostnames set as the domain names.</p>
+<blockquote>
+<p>Since you don't have control the order over the IP addresses leased to the machines, the names may not be in order.</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="configure-dns-using-custom-dns-server">Configure DNS using custom DNS server</h4>
+<p>Follow these general steps to configure reverse DNS using a custom DNS server.  </p>
+<p><strong>Steps</strong></p>
+<ol>
+<li>
+<p><strong>Create a new VPC or use your existing VPC</strong>:</p>
+<ol>
+<li>You can create a new VPC from the Amazon VCP console (for example by using <em>Start VPC Wizard</em>):              <ul>
+<li>CIDR block example: <em>10.1.0.0/16</em> </li>
+<li>Subnet's CIDR example: <em>10.1.1.0/28</em>  </li>
+</ul>
+</li>
+<li>Make sure to:<ul>
+<li>Enable DNS resolution for the VPC. You can do this by selecting the VPC, selecting <em>Actions &gt; Edit DNS resolution</em> and choosing <em>Yes</em>. </li>
+<li>Enable DNS hostnames for the VPC. You can do this by selecting the VPC, selecting <em>Actions &gt; Edit DNS hostnames</em> and choosing <em>Yes</em>.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>Optionally, you may want to set up an Internet Gateway for the VPC and add a default route to the routing table for the Internet Gateway.
+Additionally, you may want to enable the <em>Auto-assign Public IP</em> option.
+This way Cloudbreak would reach the cluster from outside of the VPC and the cluster would have internet access.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Set up DNS server in your VPC/subnet</strong>:</p>
+<ul>
+<li>In the configuration ensure that you have DNS records and reverse DNS pointers for all IP address (for example 10.3.3.4-14)</li>
+<li>
+<p>Example unbound configuration:</p>
+<p><pre>
+    [root@ip-10-3-3-9 conf.d]# cat 00-cloudbreak.cloud.conf
+    server:
+        local-zone: "cloudbreak.cloud." static
+        local-data: "aww1.cloudbreak.cloud. IN A 10.3.3.4"
+        local-data-ptr: "10.3.3.4 aww1.cloudbreak.cloud."
+        local-data: "aww2.cloudbreak.cloud. IN A 10.3.3.5"
+        local-data-ptr: "10.3.3.5 aww2.cloudbreak.cloud."
+        local-data: "aww3.cloudbreak.cloud. IN A 10.3.3.6"
+        local-data-ptr: "10.3.3.6 aww3.cloudbreak.cloud."
+        local-data: "aww4.cloudbreak.cloud. IN A 10.3.3.7"
+        local-data-ptr: "10.3.3.7 aww4.cloudbreak.cloud."
+        local-data: "aww5.cloudbreak.cloud. IN A 10.3.3.8"
+        local-data-ptr: "10.3.3.8 aww5.cloudbreak.cloud."
+        local-data: "aww6.cloudbreak.cloud. IN A 10.3.3.9"
+        local-data-ptr: "10.3.3.9 aww6.cloudbreak.cloud."
+        local-data: "aww7.cloudbreak.cloud. IN A 10.3.3.10"
+        local-data-ptr: "10.3.3.10 aww7.cloudbreak.cloud."
+        local-data: "aww8.cloudbreak.cloud. IN A 10.3.3.11"
+        local-data-ptr: "10.3.3.11 aww8.cloudbreak.cloud."
+        local-data: "aww9.cloudbreak.cloud. IN A 10.3.3.12"
+        local-data-ptr: "10.3.3.12 aww9.cloudbreak.cloud."
+        local-data: "aww10.cloudbreak.cloud. IN A 10.3.3.13"
+        local-data-ptr: "10.3.3.13 aww10.cloudbreak.cloud."
+        local-data: "aww11.cloudbreak.cloud. IN A 10.3.3.14"
+        local-data-ptr: "10.3.3.14 aww11.cloudbreak.cloud."
+</pre></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Create a DHCP options set</strong>: </p>
+<p>Perform this step from the Amazon VPC console. Select <em>DHCP Options Sets</em> from the left pane and click on <em>Create a DHCP options set</em>. Make sure to:   </p>
+<ul>
+<li>Set the <em>Domain name</em> to your preferred domain, for example <code>cloudbreak.cloud</code></li>
+<li>Set <em>Domain name servers</em> to the previously created DNS server</li>
+<li>
+<p>Optionally, set a <em>Name tag</em>  </p>
+<p><a href="../images/cb_aws-custondns-dhcp-option.png" target="_blank" title="click to enlarge"><img src="../images/cb_aws-custondns-dhcp-option.png" width="650" title="DHCP option for own DNS server"></a>  </p>
+</li>
+</ul>
+<p>For detailed steps, refer to <a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/dhcp_options_set.html">AWS documentation</a>. </p>
+</li>
+<li>
+<p><strong>Assign the newly created DHCP options set to your VPC</strong>:</p>
+<ol>
+<li>From the Amazon VPC console, select <em>Your VPCs</em> from the left pane.</li>
+<li>Select the VPC created earlier.  </li>
+<li>Click on <em>Actions &gt; Edit DHCP Options Set</em>.  </li>
+<li>Select the newly created DHCP option set.  </li>
+</ol>
+</li>
+<li>
+<p><strong>Create the cluster in the VPC configured in the preceding steps</strong> and you will have the same hostnames set as the domain names.</p>
+<blockquote>
+<p>Since you don't have control the order over the IP addresses leased to the machines, the names may not be in order.</p>
+</blockquote>
+</li>
+</ol></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>© 2011-2018 <a href="http://www.hortonworks.com" target="_blank">Hortonworks Inc</a>. All Rights Reserved. | <a href="http://hortonworks.com/privacy-policy/" target="_blank">Privacy Policy</a><br></small>
+        
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '..';
+    </script>
+    <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+    <script src="../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

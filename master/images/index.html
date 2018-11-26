@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="canonical" href="http://hortonworks.github.io/cloudbreak-documentation/images/index.html"> 
+    <link rel="shortcut icon" href="../images/favicon.png">
+
+    <title>Use custom images - Cloudbreak</title>
+
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+
+
+    <link href="../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-22950817-24', 'auto');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../index.html">Cloudbreak</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Intro <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../index.html">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../architecture/index.html">Architecture</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../concepts/index.html">Core concepts</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../deployment-options/index.html">Deployment options</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../security/index.html">Security overview</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quickstart <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../aws-quick/index.html">Quickstart on AWS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-quick/index.html">Quickstart on Azure</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-quick/index.html">Quickstart on GCP</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">AWS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../aws-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-launch/index.html">Launch on AWS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-data/index.html">Configure access to S3</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Azure <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../azure-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-launch/index.html">Launch on Azure</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-data-adls/index.html">Configure access to ADLS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-data-wasb/index.html">Configure access to WASB</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">GCP <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../gcp-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-launch/index.html">Launch on GCP</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-data/index.html">Configure access to GCS</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">OpenStack <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../os-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../os-launch/index.html">Launch on OpenStack</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../os-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Using Cloudbreak <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Advanced cluster options</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../gateway/index.html">Configure the gateway</a>
+</li>
+
+        
+            
+<li >
+    <a href="../blueprints/index.html">Use custom blueprints</a>
+</li>
+
+        
+            
+<li >
+    <a href="../recipes/index.html">Use custom scripts (recipes)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../mpacks/index.html">Use management packs</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="index.html">Use custom images</a>
+</li>
+
+        
+            
+<li >
+    <a href="../tags/index.html">Tag resources</a>
+</li>
+
+        
+            
+<li >
+    <a href="../properties/index.html">Set custom properties</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-kerberos/index.html">Enable Kerberos security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../autoscaling/index.html">Configure autoscaling</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-db/index.html">Register external database</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-ldap/index.html">Register external authentication source</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-proxy/index.html">Register proxy configuration</a>
+</li>
+
+        
+            
+<li >
+    <a href="../hostnames/index.html">Use custom hostnames based on DNS</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Advanced Cloudbreak options</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../cb-credentials/index.html">Manage Cloudbreak credentials</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-migrate/index.html">Move Cloudbreak instance</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-ldap/index.html">Configure LDAP/AD authentication for Cloudbreak</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-ssl/index.html">Add SSL certificate for Cloudbreak UI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-proxy/index.html">Configure outbound internet access and proxy</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-inbound/index.html">Restrict inbound access to clusters</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-customdom/index.html">Configure access from custom domains</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-db/index.html">Configure external Cloudbreak database</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-disable-provider/index.html">Disable providers</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-ports/index.html">Change default Cloudbreak ports</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-email/index.html">Set up email notifications</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-profile/index.html">Modify settings in Cloudbreak Profile</a>
+</li>
+
+        
+            
+<li >
+    <a href="../os-image-import/index.html">Manually import HDP and HDF images to OpenStack</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../hdf/index.html">Creating an HDF cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../data-lake/index.html">Setting up a data lake</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../clusters-access/index.html">Accessing a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../clusters-manage/index.html">Managing clusters</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../hive/index.html">Accessing Hive via JDBC</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Cloudbreak CLI</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../cli-install/index.html">Install the CLI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cli-get-started/index.html">Get started with the CLI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cli-reference/index.html">CLI Reference</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Troubleshooting</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../trouble-cb-logs/index.html">Cloudbreak logs</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cb/index.html">Troubleshooting Cloudbreak</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cluster/index.html">Troubleshooting cluster creation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-aws/index.html">Troubleshooting AWS</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-azure/index.html">Troubleshooting Azure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-gcp/index.html">Troubleshooting GCP</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cli/index.html">Troubleshooting Cloudbreak CLI</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../cb-upgrade/index.html">Upgrade Cloudbreak</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cb-delete/index.html">Delete Cloudbreak</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../releasenotes/index.html">Release Notes</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../faq/index.html">FAQs</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../dev/index.html">Developer documentation links</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../get-help/index.html">Getting help</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../smartsense/index.html">SmartSense telemetry</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Legal</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../acknowledge/index.html">Acknowledgements</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li >
+                        <a rel="next" href="../mpacks/index.html">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../tags/index.html">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/hortonworks/cloudbreak-documentation">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#using-custom-images">Using custom images</a></li>
+        
+            <li class="second-level"><a href="#build-custom-images">Build custom images</a></li>
+            
+        
+            <li class="second-level"><a href="#prepare-the-image-catalog">Prepare the image catalog</a></li>
+            
+                <li class="third-level"><a href="#structure-of-the-image-catalog-json-file">Structure of the image catalog JSON file</a></li>
+            
+                <li class="third-level"><a href="#example-image-catalog-json-file">Example image catalog JSON file</a></li>
+            
+        
+            <li class="second-level"><a href="#register-image-catalog">Register image catalog</a></li>
+            
+                <li class="third-level"><a href="#register-image-catalog-in-the-ui">Register image catalog in the UI</a></li>
+            
+                <li class="third-level"><a href="#register-image-catalog-in-the-cli">Register image catalog in the CLI</a></li>
+            
+                <li class="third-level"><a href="#register-image-catalog-in-the-profile">Register image catalog in the Profile</a></li>
+            
+        
+            <li class="second-level"><a href="#select-a-custom-image-when-creating-a-cluster">Select a custom image when creating a cluster</a></li>
+            
+                <li class="third-level"><a href="#select-a-custom-image-in-cloudbreak-web-ui">Select a custom image in Cloudbreak web UI</a></li>
+            
+                <li class="third-level"><a href="#select-a-custom-image-in-the-cli">Select a custom image in the CLI</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h2 id="using-custom-images">Using custom images</h2>
+<p>Default images are available for each supported cloud provider and region. The following table lists the default base images available:</p>
+<table>
+<thead>
+<tr>
+<th>Cloud provider</th>
+<th>Default image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS</td>
+<td>Amazon Linux 2017</td>
+</tr>
+<tr>
+<td>Azure</td>
+<td>CentOS 7</td>
+</tr>
+<tr>
+<td>GCP</td>
+<td>CentOS 7</td>
+</tr>
+<tr>
+<td>OpenStack</td>
+<td>CentOS 7</td>
+</tr>
+</tbody>
+</table>
+<p>Since these default images may not fit the requirements of some users (for example when user requirements include custom OS hardening, custom libraries, custom tooling, and so on) Cloudbreak allows you to use your own <strong>custom base images</strong>.</p>
+<p>In order to use your own custom base images you must:</p>
+<ol>
+<li>Build your custom images  </li>
+<li>Prepare the custom image catalog JSON file and save it in a location accessible to the Cloudbreak VM  </li>
+<li>Register your custom image catalog with Cloudbreak    </li>
+<li>Select a custom image when creating a cluster  </li>
+</ol>
+<div class="danger">
+    <p class="first admonition-title">Important</p>
+    <p class="last">
+Only <strong>base images</strong> can be created and registered as custom images. Do not create or register <strong>prewarmed images</strong> as custom images.
+</p>
+</div>
+
+<h3 id="build-custom-images">Build custom images</h3>
+<p>Refer to <a href="https://github.com/hortonworks/cloudbreak-images">Custom images for Cloudbreak</a> for information on how to build custom images.</p>
+<p>This repository includes instructions and scripts to help you build custom images. Once you have the images, refer to the documentation below for information on how to create an image catalog and register it with Cloudbreak.</p>
+<h3 id="prepare-the-image-catalog">Prepare the image catalog</h3>
+<p>Once you've built the custom images, prepare your custom image catalog JSON file. Once your image catalog JSON file is ready, save it in a location accessible via HTTP/HTTPS.</p>
+<h4 id="structure-of-the-image-catalog-json-file">Structure of the image catalog JSON file</h4>
+<p>The image catalog JSON file includes the following two high-level sections:</p>
+<ul>
+<li><code>images</code>: Contains information about the created images. The burned images are stored in the <code>base-images</code> section.  </li>
+<li><code>versions</code>: Contains the <code>cloudbreak</code> entry, which includes mapping between Cloudbreak versions and the image identifiers of burned images available for these Cloudbreak versions.</li>
+</ul>
+<blockquote>
+<p>After adding your image(s) to the <code>images</code> section, make sure to also update the <code>versions</code> section. </p>
+</blockquote>
+<p><strong>Images section</strong>  </p>
+<p>The burned images are stored in the <code>base-images</code> sub-section of <code>images</code>. The <code>base-images</code> section stores one or more image "records". Every image "record" must contain the date, description, images, os, os_type, and uuid fields.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>date</td>
+<td>Date for your image catalog entry.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Description for your image catalog entry.</td>
+</tr>
+<tr>
+<td>images</td>
+<td>The image sets by cloud provider. An image set must store the virtual machine image IDs by the related region of the provider (AWS, Azure) or contain one default image for all regions (GCP, OpenStack). The virtual machine image IDs come from the result of the image burning process and must be an existing identifier of a virtual machine image on the related provider side. For the providers which use global rather than per-region images, the region should be replaced with <strong><code>default</code></strong>.</td>
+</tr>
+<tr>
+<td>os</td>
+<td>The operating system used in the image.</td>
+</tr>
+<tr>
+<td>os_type</td>
+<td>The type of operating system which will be used to determine the default Ambari and HDP/HDF repositories to use. Set <code>os_type</code> to "redhat6" for amazonlinux or centos6 images. Set <code>os_type</code> to "redhat7" for centos7 or rhel7 images.</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>The <code>uuid</code> field must be a unique identifier within the file. You can generate it or select it manually. The utility <code>uuidgen</code> available from your command line is a convenient way to generate a unique ID.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Versions section</strong>  </p>
+<p>The <code>versions</code> section includes a single "cloudbreak" entry, which maps the uuids to a specific Cloudbreak version:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>images</td>
+<td>Image <code>uuid</code>, same as the one that you specified in the <code>base-images</code> section.</td>
+</tr>
+<tr>
+<td>versions</td>
+<td>The Cloudbreak version(s) for which you would like to use the images.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-image-catalog-json-file">Example image catalog JSON file</h4>
+<p>Here is an example image catalog JSON file that includes two sets of custom base images:</p>
+<ul>
+<li>A custom base image for AWS:<ul>
+<li>That is using Amazon Linux operating system</li>
+<li>That will use the Redhat 6 repos as default Ambari and HDP repositories during cluster create     </li>
+<li>Has a unique ID of "44b140a4-bd0b-457d-b174-e988bee3ca47"</li>
+<li>Is available for Cloudbreak 2.4.0    </li>
+</ul>
+</li>
+<li>A custom base image for Azure, Google, and OpenStack:<ul>
+<li>That is using CentOS 7 operating system</li>
+<li>That will use the Redhat 7 repos as default Ambari and HDP repositories during cluster create   </li>
+<li>Has a unique ID of "f6e778fc-7f17-4535-9021-515351df3692"</li>
+<li>Is available to Cloudbreak 2.4.0      </li>
+</ul>
+</li>
+</ul>
+<p>You can also download it from <a href="https://docs.hortonworks.com/HDPDocuments/Cloudbreak/Cb-doc-resources/custom-image-catalog.json">here</a>.</p>
+<pre><small>
+{
+  "images": {
+    "base-images": [
+      {
+        "date": "2017-10-13",
+        "description": "Cloudbreak official base image",
+        "images": {
+          "aws": {
+            "ap-northeast-1": "ami-78e9311e",
+            "ap-northeast-2": "ami-84b613ea",
+            "ap-southeast-1": "ami-75226716",
+            "ap-southeast-2": "ami-92ce23f0",
+            "eu-central-1": "ami-d95be5b6",
+            "eu-west-1": "ami-46429e3f",
+            "sa-east-1": "ami-86d5abea",
+            "us-east-1": "ami-51a2742b",
+            "us-west-1": "ami-21ccfe41",
+            "us-west-2": "ami-2a1cdc52"
+          }
+        },
+        "os": "amazonlinux",
+        "os_type": "redhat6",
+        "uuid": "44b140a4-bd0b-457d-b174-e988bee3ca47"
+      },
+      {
+        "date": "2017-10-13",
+        "description": "Cloudbreak official base image",
+        "images": {
+          "azure": {
+            "Australia East": "https://hwxaustraliaeast.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "Australia South East": "https://hwxaustralisoutheast.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "Brazil South": "https://sequenceiqbrazilsouth2.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "Canada Central": "https://sequenceiqcanadacentral.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "Canada East": "https://sequenceiqcanadaeast.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "Central India": "https://hwxcentralindia.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "Central US": "https://sequenceiqcentralus2.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "East Asia": "https://sequenceiqeastasia2.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "East US": "https://sequenceiqeastus12.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "East US 2": "https://sequenceiqeastus22.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "Japan East": "https://sequenceiqjapaneast2.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "Japan West": "https://sequenceiqjapanwest2.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "Korea Central": "https://hwxkoreacentral.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "Korea South": "https://hwxkoreasouth.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "North Central US": "https://sequenceiqorthcentralus2.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "North Europe": "https://sequenceiqnortheurope2.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "South Central US": "https://sequenceiqouthcentralus2.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "South India": "https://hwxsouthindia.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "Southeast Asia": "https://sequenceiqsoutheastasia2.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "UK South": "https://hwxsouthuk.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "UK West": "https://hwxwestuk.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "West Central US": "https://hwxwestcentralus.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "West Europe": "https://sequenceiqwesteurope2.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "West India": "https://hwxwestindia.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "West US": "https://sequenceiqwestus2.blob.core.windows.net/images/hdc-hdp--1710161226.vhd",
+            "West US 2": "https://hwxwestus2.blob.core.windows.net/images/hdc-hdp--1710161226.vhd"
+          },
+          "gcp": {
+            "default": "sequenceiqimage/hdc-hdp--1710161226.tar.gz"
+          },
+          "openstack": {
+            "default": "hdc-hdp--1710161226"
+          }
+        },
+        "os": "centos7",
+        "os_type": "redhat7",
+        "uuid": "f6e778fc-7f17-4535-9021-515351df3691"
+      }
+    ]
+},
+  "versions": {
+    "cloudbreak": [
+      {
+        "images": [
+          "44b140a4-bd0b-457d-b174-e988bee3ca47",
+          "f6e778fc-7f17-4535-9021-515351df3692"
+        ],
+        "versions": [
+          "2.4.0"
+        ]
+      }
+    ]
+  }
+}
+</small></pre>
+
+<h3 id="register-image-catalog">Register image catalog</h3>
+<p>Now that you have created your image catalog JSON file, register it with your Cloudbreak instance. You can do this via Cloudbreak UI, CLI, or be editing the Profile file. </p>
+<div class="note">
+  <p class="first admonition-title">Important</p>
+  <p class="last">
+  The content type of your image catalog file should be <i>"application/json"</i> for Cloudbreak to be able to process it.
+</p>
+</div>
+
+<h4 id="register-image-catalog-in-the-ui">Register image catalog in the UI</h4>
+<p>Use these steps to register your custom image catalog in the Cloudbreak UI.</p>
+<p><strong>Steps</strong></p>
+<ol>
+<li>In the Cloudbreak UI, select <strong>External Sources</strong> &gt; <strong>Image Catalogs</strong> from the navigation menu.  </li>
+<li>Click <strong>Create Image Catalog</strong>.  </li>
+<li>Enter name for your image catalog and the URL to the location where it is stored.  </li>
+<li>Click <strong>Create</strong>.</li>
+</ol>
+<p>After performing these steps, the image catalog will be available and automatically selected as the default entry in the image catalog drop-down list in the create cluster wizard.</p>
+<h4 id="register-image-catalog-in-the-cli">Register image catalog in the CLI</h4>
+<p>To register your custom image catalog using the CLI, use the <code>cb imagecatalog create</code> command. Refer to <a href="../cli-reference/index.html#imagecatalog-create">CLI documentation</a>.</p>
+<h4 id="register-image-catalog-in-the-profile">Register image catalog in the Profile</h4>
+<p>As an alternative to using the UI or CLI, it is possible to place the catalog file to the Cloudbreak deployer`s etc directory and then set CB_IMAGE_CATALOG_URL variable in your Profile to IMAGE_CATALOG_FILE_NAME.JSON. </p>
+<p><strong>Steps</strong></p>
+<ol>
+<li>On the Cloudbreak machine, switch to the root user by using <code>sudo su</code>  </li>
+<li>Save the image catalog file on your Cloudbreak machine in the /var/lib/cloudbreak-deployment/etc directory.  </li>
+<li>Edit the Profile file located in /var/lib/cloudbreak-deployment by adding export CB_IMAGE_CATALOG_URL to the file and set it to the name of your JSON file which declares your custom images. For example: <code>export CB_IMAGE_CATALOG_URL=custom-image-catalog.json</code>    </li>
+<li>Save the Profile file.  </li>
+<li>Restart Cloudbreak by using <code>cbd restart</code>.  </li>
+</ol>
+<h3 id="select-a-custom-image-when-creating-a-cluster">Select a custom image when creating a cluster</h3>
+<p>Once you have registered your image catalog, you can use your custom image(s) when creating a cluster.</p>
+<h4 id="select-a-custom-image-in-cloudbreak-web-ui">Select a custom image in Cloudbreak web UI</h4>
+<p>Perform these steps in the advanced <strong>General Configuration</strong> section of the create wizard wizard.</p>
+<p><strong>Steps</strong>  </p>
+<ol>
+<li>In the create cluster wizard, make sure that you are using the advanced wizard version. You need to perform the steps in the <strong>Image Settings</strong> section.  </li>
+<li>Under <strong>Choose Image Catalog</strong>, select your custom image catalog.  </li>
+<li>Under <strong>Image Type</strong>, select "Base Image".</li>
+<li>Under <strong>Choose Image</strong>, select the provider-specific image that you would like to use. <br />
+    The "os" that you specified in the image catalog will be displayed in the selection and the content of the "description" will be displayed in green.    </li>
+<li>
+<p>You can leave the default entries for the Ambari and HDP/HDF repositories, or you can customize to point to specific versions of Ambari and HDP/HDF that you want to use for the cluster.  </p>
+<p><a href="../images/cb_cb-images.png" target="_blank" title="click to enlarge"><img src="../images/cb_cb-images.png" width="650" title="Cloudbreak UI"></a></p>
+</li>
+</ol>
+<h4 id="select-a-custom-image-in-the-cli">Select a custom image in the CLI</h4>
+<p>To use the custom image when creating a cluster via CLI, perform these steps.  </p>
+<p><strong>Steps</strong>  </p>
+<ol>
+<li>
+<p>Obtain the image ID. For example:</p>
+<p><pre>cb imagecatalog images aws --imagecatalog custom-catalog
+[
+  {
+"Date": "2017-10-13",
+"Description": "Cloudbreak official base image",
+"Version": "2.5.1.0",
+"ImageID": "44b140a4-bd0b-457d-b174-e988bee3ca47"
+  },
+  {
+"Date": "2017-11-16",
+"Description": "Official Cloudbreak image",
+"Version": "2.5.1.0",
+"ImageID": "3c7598a4-ebd6-4a02-5638-882f5c7f7add"
+  }
+]</pre></p>
+</li>
+<li>
+<p>When preparing a CLI JSON template for your cluster, set the "ImageCatalog" parameter to the image catalog that you would like to use, and set the "ImageId" parameter to the uuid of the image from that catalog that you would like to use. For example:</p>
+<p><pre>...
+  "name": "aszegedi-cli-ci",
+  "network": {
+"subnetCIDR": "10.0.0.0/16"
+  },
+  "orchestrator": {
+"type": "SALT"
+  },
+  "parameters": {
+"instanceProfileStrategy": "CREATE"
+  },
+  "region": "eu-west-1",
+  "stackAuthentication": {
+"publicKeyId": "seq-master"
+  },
+  "userDefinedTags": {
+"owner": "aszegedi"
+  },
+  "imageCatalog": "custom-catalog",
+  "imageId": "3c7598a4-ebd6-4a02-5638-882f5c7f7add"
+}</pre></p>
+</li>
+</ol>
+<p><strong>Related links</strong><br />
+<a href="../cli-reference/index.html">CLI reference</a>  </p></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>© 2011-2018 <a href="http://www.hortonworks.com" target="_blank">Hortonworks Inc</a>. All Rights Reserved. | <a href="http://hortonworks.com/privacy-policy/" target="_blank">Privacy Policy</a><br></small>
+        
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '..';
+    </script>
+    <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+    <script src="../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

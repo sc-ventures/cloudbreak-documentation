@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="canonical" href="http://hortonworks.github.io/cloudbreak-documentation/cli-reference/index.html"> 
+    <link rel="shortcut icon" href="../images/favicon.png">
+
+    <title>CLI Reference - Cloudbreak</title>
+
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.018/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+
+
+    <link href="../css/extra.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-22950817-24', 'auto');
+    ga('send', 'pageview');
+    </script>
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../index.html">Cloudbreak</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Intro <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../index.html">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../architecture/index.html">Architecture</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../concepts/index.html">Core concepts</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../deployment-options/index.html">Deployment options</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../security/index.html">Security overview</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quickstart <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../aws-quick/index.html">Quickstart on AWS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-quick/index.html">Quickstart on Azure</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-quick/index.html">Quickstart on GCP</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">AWS <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../aws-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-launch/index.html">Launch on AWS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../aws-data/index.html">Configure access to S3</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Azure <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../azure-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-launch/index.html">Launch on Azure</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-data-adls/index.html">Configure access to ADLS</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../azure-data-wasb/index.html">Configure access to WASB</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">GCP <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../gcp-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-launch/index.html">Launch on GCP</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../gcp-data/index.html">Configure access to GCS</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">OpenStack <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../os-pre/index.html">Prerequisites</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../os-launch/index.html">Launch on OpenStack</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../os-create/index.html">Create a cluster</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Using Cloudbreak <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Advanced cluster options</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../gateway/index.html">Configure the gateway</a>
+</li>
+
+        
+            
+<li >
+    <a href="../blueprints/index.html">Use custom blueprints</a>
+</li>
+
+        
+            
+<li >
+    <a href="../recipes/index.html">Use custom scripts (recipes)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../mpacks/index.html">Use management packs</a>
+</li>
+
+        
+            
+<li >
+    <a href="../images/index.html">Use custom images</a>
+</li>
+
+        
+            
+<li >
+    <a href="../tags/index.html">Tag resources</a>
+</li>
+
+        
+            
+<li >
+    <a href="../properties/index.html">Set custom properties</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-kerberos/index.html">Enable Kerberos security</a>
+</li>
+
+        
+            
+<li >
+    <a href="../autoscaling/index.html">Configure autoscaling</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-db/index.html">Register external database</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-ldap/index.html">Register external authentication source</a>
+</li>
+
+        
+            
+<li >
+    <a href="../external-proxy/index.html">Register proxy configuration</a>
+</li>
+
+        
+            
+<li >
+    <a href="../hostnames/index.html">Use custom hostnames based on DNS</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Advanced Cloudbreak options</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../cb-credentials/index.html">Manage Cloudbreak credentials</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-migrate/index.html">Move Cloudbreak instance</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-ldap/index.html">Configure LDAP/AD authentication for Cloudbreak</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-ssl/index.html">Add SSL certificate for Cloudbreak UI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-proxy/index.html">Configure outbound internet access and proxy</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-inbound/index.html">Restrict inbound access to clusters</a>
+</li>
+
+        
+            
+<li >
+    <a href="../security-cb-customdom/index.html">Configure access from custom domains</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-db/index.html">Configure external Cloudbreak database</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-disable-provider/index.html">Disable providers</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-ports/index.html">Change default Cloudbreak ports</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-email/index.html">Set up email notifications</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cb-profile/index.html">Modify settings in Cloudbreak Profile</a>
+</li>
+
+        
+            
+<li >
+    <a href="../os-image-import/index.html">Manually import HDP and HDF images to OpenStack</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../hdf/index.html">Creating an HDF cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../data-lake/index.html">Setting up a data lake</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../clusters-access/index.html">Accessing a cluster</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../clusters-manage/index.html">Managing clusters</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../hive/index.html">Accessing Hive via JDBC</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Cloudbreak CLI</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../cli-install/index.html">Install the CLI</a>
+</li>
+
+        
+            
+<li >
+    <a href="../cli-get-started/index.html">Get started with the CLI</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="index.html">CLI Reference</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Troubleshooting</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../trouble-cb-logs/index.html">Cloudbreak logs</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cb/index.html">Troubleshooting Cloudbreak</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cluster/index.html">Troubleshooting cluster creation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-aws/index.html">Troubleshooting AWS</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-azure/index.html">Troubleshooting Azure</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-gcp/index.html">Troubleshooting GCP</a>
+</li>
+
+        
+            
+<li >
+    <a href="../trouble-cli/index.html">Troubleshooting Cloudbreak CLI</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../cb-upgrade/index.html">Upgrade Cloudbreak</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cb-delete/index.html">Delete Cloudbreak</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../releasenotes/index.html">Release Notes</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../faq/index.html">FAQs</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../dev/index.html">Developer documentation links</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../get-help/index.html">Getting help</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../smartsense/index.html">SmartSense telemetry</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Legal</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../acknowledge/index.html">Acknowledgements</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li >
+                        <a rel="next" href="../cli-get-started/index.html">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../trouble-cb-logs/index.html">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/hortonworks/cloudbreak-documentation">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#cloudbreak-cli-reference">Cloudbreak CLI reference</a></li>
+        
+            <li class="second-level"><a href="#command-structure">Command structure</a></li>
+            
+        
+            <li class="second-level"><a href="#command-output">Command output</a></li>
+            
+        
+            <li class="second-level"><a href="#commands">Commands</a></li>
+            
+                <li class="third-level"><a href="#blueprint-create">blueprint create</a></li>
+            
+                <li class="third-level"><a href="#blueprint-delete">blueprint delete</a></li>
+            
+                <li class="third-level"><a href="#blueprint-describe">blueprint describe</a></li>
+            
+                <li class="third-level"><a href="#blueprint-list">blueprint list</a></li>
+            
+                <li class="third-level"><a href="#cloud-availability-zones">cloud availability-zones</a></li>
+            
+                <li class="third-level"><a href="#cloud-regions">cloud regions</a></li>
+            
+                <li class="third-level"><a href="#cloud-volumes">cloud volumes</a></li>
+            
+                <li class="third-level"><a href="#cloud-instances">cloud instances</a></li>
+            
+                <li class="third-level"><a href="#cluster-change-ambari-password">cluster change-ambari-password</a></li>
+            
+                <li class="third-level"><a href="#cluster-create">cluster create</a></li>
+            
+                <li class="third-level"><a href="#cluster-delete">cluster delete</a></li>
+            
+                <li class="third-level"><a href="#cluster-describe">cluster describe</a></li>
+            
+                <li class="third-level"><a href="#cluster-generate-template">cluster generate-template</a></li>
+            
+                <li class="third-level"><a href="#cluster-generate-reinstall-template">cluster generate-reinstall-template</a></li>
+            
+                <li class="third-level"><a href="#cluster-list">cluster list</a></li>
+            
+                <li class="third-level"><a href="#cluster-repair">cluster repair</a></li>
+            
+                <li class="third-level"><a href="#cluster-retry">cluster retry</a></li>
+            
+                <li class="third-level"><a href="#cluster-scale">cluster scale</a></li>
+            
+                <li class="third-level"><a href="#cluster-start">cluster start</a></li>
+            
+                <li class="third-level"><a href="#cluster-stop">cluster stop</a></li>
+            
+                <li class="third-level"><a href="#cluster-sync">cluster sync</a></li>
+            
+                <li class="third-level"><a href="#configure">configure</a></li>
+            
+                <li class="third-level"><a href="#credential-create">credential create</a></li>
+            
+                <li class="third-level"><a href="#credential-delete">credential delete</a></li>
+            
+                <li class="third-level"><a href="#credential-describe">credential describe</a></li>
+            
+                <li class="third-level"><a href="#credential-list">credential list</a></li>
+            
+                <li class="third-level"><a href="#credential-modify">credential modify</a></li>
+            
+                <li class="third-level"><a href="#database-create">database create</a></li>
+            
+                <li class="third-level"><a href="#database-delete">database delete</a></li>
+            
+                <li class="third-level"><a href="#database-list">database list</a></li>
+            
+                <li class="third-level"><a href="#database-test">database test</a></li>
+            
+                <li class="third-level"><a href="#imagecatalog-create">imagecatalog create</a></li>
+            
+                <li class="third-level"><a href="#imagecatalog-delete">imagecatalog delete</a></li>
+            
+                <li class="third-level"><a href="#imagecatalog-images">imagecatalog images</a></li>
+            
+                <li class="third-level"><a href="#imagecatalog-list">imagecatalog list</a></li>
+            
+                <li class="third-level"><a href="#imagecatalog-set-default">imagecatalog set-default</a></li>
+            
+                <li class="third-level"><a href="#ldap-create">ldap create</a></li>
+            
+                <li class="third-level"><a href="#ldap-delete">ldap delete</a></li>
+            
+                <li class="third-level"><a href="#ldap-list">ldap list</a></li>
+            
+                <li class="third-level"><a href="#mpack-create">mpack create</a></li>
+            
+                <li class="third-level"><a href="#mpack-delete">mpack delete</a></li>
+            
+                <li class="third-level"><a href="#mpack-list">mpack list</a></li>
+            
+                <li class="third-level"><a href="#proxy-create">proxy create</a></li>
+            
+                <li class="third-level"><a href="#proxy-delete">proxy delete</a></li>
+            
+                <li class="third-level"><a href="#proxy-list">proxy list</a></li>
+            
+                <li class="third-level"><a href="#recipe-create">recipe create</a></li>
+            
+                <li class="third-level"><a href="#recipe-delete">recipe delete</a></li>
+            
+                <li class="third-level"><a href="#recipe-describe">recipe describe</a></li>
+            
+                <li class="third-level"><a href="#recipe-list">recipe list</a></li>
+            
+        
+            <li class="second-level"><a href="#debugging">Debugging</a></li>
+            
+        
+            <li class="second-level"><a href="#checking-cli-version">Checking CLI Version</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h2 id="cloudbreak-cli-reference">Cloudbreak CLI reference</h2>
+<p>This section will help you get started with the Cloudbreak CLI after you have <a href="../cli-install/index.html">installed and configured it</a>.</p>
+<h3 id="command-structure">Command structure</h3>
+<p>The CLI command can contain multiple parts. The first part is a set of global options. The next part is the command. The next part is a set of command options and arguments which could include sub-commands.</p>
+<pre>cb [global options] command [command options] [arguments...]</pre>
+
+<h3 id="command-output">Command output</h3>
+<p>You can control the output from the CLI using the --output argument. The possible output formats include:</p>
+<ul>
+<li>JSON (<code>json</code>)</li>
+<li>YAML (<code>yaml</code>)</li>
+<li>Formatted table (<code>table</code>)</li>
+</ul>
+<p>For example:</p>
+<pre>cb cluster list --output json</pre>
+
+<pre>cb clusters list --output yaml</pre>
+
+<pre>cb cluster list --output table</pre>
+
+<h3 id="commands">Commands</h3>
+<p>Configure CLI:  </p>
+<ul>
+<li><a href="#configure">configure</a>  </li>
+</ul>
+<p>Cloud provider:</p>
+<ul>
+<li><a href="#cloud-availability-zones">cloud availability-zones</a>  </li>
+<li><a href="#cloud-regions">cloud regions</a>       </li>
+<li><a href="#cloud-volumes">cloud volumes</a>   </li>
+<li><a href="#cloud-instances">cloud instances</a>   </li>
+</ul>
+<p>Credential:  </p>
+<ul>
+<li><a href="#credential-create">credential create</a>   </li>
+<li><a href="#credential-delete">credential delete</a>        </li>
+<li><a href="#credential-describe">credential describe</a>        </li>
+<li><a href="#credential-list">credential list</a>         </li>
+<li><a href="#credential-modify">credential modify</a>   </li>
+</ul>
+<p>Blueprint:   </p>
+<ul>
+<li><a href="#blueprint-create">blueprint create</a>  </li>
+<li><a href="#blueprint-delete">blueprint delete</a>           </li>
+<li><a href="#blueprint-describe">blueprint describe</a>         </li>
+<li><a href="#blueprint-list">blueprint list</a>           </li>
+</ul>
+<p>Cluster: </p>
+<ul>
+<li><a href="#cluster-change-ambari-password">cluster change-ambari-password</a>   </li>
+<li><a href="#cluster-create">cluster create</a> </li>
+<li><a href="#cluster-delete">cluster delete</a>              </li>
+<li><a href="#cluster-describe">cluster describe</a>    </li>
+<li><a href="#cluster-generate-template">cluster generate-template</a>   </li>
+<li><a href="#cluster-generate-reinstall-template">cluster generate-reinstall-template</a>  </li>
+<li><a href="#cluster-list">cluster list</a>    </li>
+<li><a href="#cluster-repair">cluster repair</a>    </li>
+<li><a href="#cluster-retry">cluster retry</a>         </li>
+<li><a href="#cluster scale">cluster scale</a>      </li>
+<li><a href="#cluster-start">cluster start</a>        </li>
+<li><a href="#cluster-stop">cluster stop</a>              </li>
+<li><a href="#cluster-sync">cluster sync</a> </li>
+</ul>
+<p>Database:            </p>
+<ul>
+<li><a href="#database-create">database create</a>  </li>
+<li><a href="#database-delete">database delete</a>  </li>
+<li><a href="#database-list">database list</a>  </li>
+<li><a href="#database-test">database test</a>  </li>
+</ul>
+<p>Image catalog</p>
+<ul>
+<li><a href="#imagecatalog-create">imagecatalog create</a>     </li>
+<li><a href="#imagecatalog-delete">imagecatalog delete</a> </li>
+<li><a href="#imagecatalog-images">imagecatalog images</a>                      </li>
+<li><a href="#imagecatalog-list">imagecatalog list</a>  </li>
+<li><a href="#imagecatalog-set-default">imagecatalog set-default</a>            </li>
+</ul>
+<p>LDAP:</p>
+<ul>
+<li><a href="#ldap-create">ldap create</a>  </li>
+<li><a href="#ldap-delete">ldap delete</a>  </li>
+<li><a href="#ldap-list">ldap list</a></li>
+</ul>
+<p>Mpack</p>
+<ul>
+<li><a href="#mpack-create">mpack create</a>  </li>
+<li><a href="#mpack-delete">mpack delete</a>  </li>
+<li><a href="#mpack-list">mpack list</a></li>
+</ul>
+<p>Proxy:</p>
+<ul>
+<li><a href="#proxy-create">proxy create</a>  </li>
+<li><a href="#proxy-delete">proxy delete</a>  </li>
+<li><a href="#proxy-list">proxy list</a></li>
+</ul>
+<p>Recipe:  </p>
+<ul>
+<li><a href="#recipe-create">recipe create</a>     </li>
+<li><a href="#recipe-delete">recipe delete</a>            </li>
+<li><a href="#recipe-describe">recipe describe</a>            </li>
+<li><a href="#recipe-list">recipe list</a>              </li>
+</ul>
+<hr />
+<h4 id="blueprint-create">blueprint create</h4>
+<p>Adds a new blueprint from a file or from a URL.</p>
+<p><strong>Sub-commands</strong></p>
+<p><strong><code>from-url</code></strong> Creates a blueprint by downloading it from a URL location<br />
+<strong><code>from-file</code></strong> Creates a blueprint by reading it from a local file</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>from-url</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong> Name for the blueprint<br />
+<strong><code>--url &lt;value&gt;</code></strong> URL location of the Ambari blueprint JSON file</p>
+<p><strong><code>from-file</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong> Name for the blueprint<br />
+<strong><code>--file &lt;value&gt;</code></strong> Location of the Ambari blueprint JSON file on the local machine</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--description &lt;value&gt;</code></strong>  Description of the resource<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong> Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]<br />
+<strong><code>--public</code></strong>   Public in account  </p>
+<p><strong>Examples</strong></p>
+<p>Adds a blueprint from a URL:</p>
+<pre>cb blueprint create from-url --url https://someurl.com/test.bp --name test1</pre>
+
+<p>Adds a blueprint from a local file:</p>
+<pre>cb blueprint create from-file --file /Users/test/Documents/blueprints/test.bp --name test2</pre>
+
+<p><strong>Related links</strong></p>
+<p><a href="../blueprints/index.html">Using Custom Blueprints</a></p>
+<hr />
+<h4 id="blueprint-delete">blueprint delete</h4>
+<p>Deletes an existing blueprint.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong> Blueprint name </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong> Selects a config profile to use [$CB_PROFILE] <br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<pre>cb blueprint delete --name "testbp"</pre>
+
+<hr />
+<h4 id="blueprint-describe">blueprint describe</h4>
+<p>Describes an existing blueprint.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong> Blueprint name </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong> Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<pre>cb blueprint describe --name "Data Science: Apache Spark 2.1, Apache Zeppelin 0.7.0"
+{
+  "Name": "Data Science: Apache Spark 2.1, Apache Zeppelin 0.7.0",
+  "Description": "Data Science: Apache Spark 2.1, Apache Zeppelin 0.7.0",
+  "HDPVersion": "2.6",
+  "HostgroupCount": "3",
+  "Tags": "DEFAULT"
+}</pre>
+
+<hr />
+<h4 id="blueprint-list">blueprint list</h4>
+<p>Lists available blueprints.</p>
+<p><strong>Required options</strong></p>
+<p>Nome</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong> Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT] <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong> Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<pre>cb blueprint list
+[
+  {
+    "Name": "EDW-Analytics: Apache Hive 2 LLAP, Apache Zeppelin",
+    "Description": "Useful for EDW analytics using Hive LLAP",
+    "HDPVersion": "2.6",
+    "HostgroupCount": "3",
+    "Tags": "DEFAULT"
+  },
+  {
+    "Name": "Data Science: Apache Spark 2, Apache Zeppelin",
+    "Description": "Useful for data science with Spark and Zeppelin",
+    "HDPVersion": "2.6",
+    "HostgroupCount": "3",
+    "Tags": "DEFAULT"
+  },
+  {
+    "Name": "EDW-ETL: Apache Hive, Apache Spark 2",
+    "Description": "Useful for ETL data processing with Hive and Spark",
+    "HDPVersion": "2.6",
+    "HostgroupCount": "3",
+    "Tags": "DEFAULT"
+  },
+  {
+    "Name": "Flow Management: Apache NiFi",
+    "Description": "Useful for data-flow management with Apache NiFi",
+    "HDPVersion": "3.1",
+    "HostgroupCount": "2",
+    "Tags": "DEFAULT"
+  },
+  {
+    "Name": "my-hdf-test",
+    "Description": "",
+    "HDPVersion": "3.1",
+    "HostgroupCount": "3",
+    "Tags": "USER_MANAGED"
+ }
+]</pre>
+
+<hr />
+<h4 id="cloud-availability-zones">cloud availability-zones</h4>
+<p>Lists all availability zones available in the specified cloud provider region. </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--credential &lt;value&gt;</code></strong>  Name of the credential<br />
+<strong><code>--region &lt;value&gt;</code></strong>   Name of the region  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD] <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE] <br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   </p>
+<p><strong>Examples</strong></p>
+<p>Lists availability zones in the us-west-2 (Oregon) region on the AWS account identified by the credential called "aws-cred":</p>
+<pre>cb cloud availability-zones --credential aws-cred --region us-west-2
+[
+  {
+    "Name": "us-west-2a"
+  },
+  {
+    "Name": "us-west-2b"
+  },
+  {
+    "Name": "us-west-2c"
+  }
+]</pre>
+
+<hr />
+<h4 id="cloud-regions">cloud regions</h4>
+<p>Lists the available cloud provider regions. </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--credential &lt;value&gt;</code></strong>  Name of the credential  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT] <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE] <br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   </p>
+<p><strong>Examples</strong></p>
+<p>Lists regions available on the AWS account identified by the credential called "aws-cred":</p>
+<pre>cb cloud regions --credential aws-cred
+[
+  {
+    "Name": "ap-northeast-1",
+    "Description": "Asia Pacific (Tokyo)"
+  },
+  {
+    "Name": "ap-northeast-2",
+    "Description": "Asia Pacific (Seoul)"
+  },
+  ...</pre>
+
+<hr />
+<h4 id="cloud-volumes">cloud volumes</h4>
+<p>Lists the available cloud provider volume types. </p>
+<p><strong>Sub-commands</strong></p>
+<p><strong><code>aws</code></strong>     Lists the available aws volume types<br />
+<strong><code>azure</code></strong>   Lists the available azure volume types<br />
+<strong><code>gcp</code></strong>     Lists the available gcp volume types  </p>
+<p><strong>Required options</strong></p>
+<p>None</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE] <br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   </p>
+<p><strong>Examples</strong></p>
+<p>Lists volumes available on AWS:</p>
+<pre>cb cloud volumes aws
+[
+  {
+    "Name": "ephemeral",
+    "Description": "Ephemeral"
+  },
+  {
+    "Name": "gp2",
+    "Description": "General Purpose (SSD)"
+  },
+  {
+    "Name": "st1",
+    "Description": "Throughput Optimized HDD"
+  },
+  {
+    "Name": "standard",
+    "Description": "Magnetic"
+  }
+]</pre>
+
+<hr />
+<h4 id="cloud-instances">cloud instances</h4>
+<p>Lists the available cloud provider instance types.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--credential &lt;value&gt;</code></strong>  Name of the credential<br />
+<strong><code>--region &lt;value&gt;</code></strong>   Name of the region  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--availability-zone &lt;value&gt;</code></strong>  Name of the availability zone <br />
+<strong><code>--output &lt;value&gt;</code></strong>      Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>     Selects a config profile to use [$CB_PROFILE] <br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]    </p>
+<p><strong>Examples</strong></p>
+<p>Lists instance types available in the us-west-2 (Oregon) region on the AWS account identified by the credential called "aws-cred":</p>
+<pre>cb cloud instances --credential aws-cred --region us-west-2
+
+  {
+    "Name": "c3.2xlarge",
+    "Cpu": "8",
+    "Memory": "15.0",
+    "AvailabilityZone": "us-west-2b"
+  },
+  {
+    "Name": "c3.4xlarge",
+    "Cpu": "16",
+    "Memory": "30.0",
+    "AvailabilityZone": "us-west-2b"
+  },
+  ...</pre>
+
+<hr />
+<h4 id="cluster-change-ambari-password">cluster change-ambari-password</h4>
+<p>Changes Ambari password.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Cluster name<br />
+<strong><code>--old-password &lt;value&gt;</code></strong> Old Ambari password <br />
+<strong><code>--new-password &lt;value&gt;</code></strong>  New Ambari password  <br />
+<strong><code>--ambari-user &lt;value&gt;</code></strong>  Ambari user   </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]    </p>
+<p><strong>Examples</strong></p>
+<p>Changes password for Ambari user called "admin" for a cluster called "test1234":</p>
+<pre>cb cluster change-ambari-password --name test1234 --old-password 123456 --new-password Ambari123456 --ambari-user admin</pre>
+
+<hr />
+<h4 id="cluster-create">cluster create</h4>
+<p>Creates a new cluster based on a JSON template. </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--cli-input-json &lt;value&gt;</code></strong>  User provided file in JSON format  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the cluster<br />
+<strong><code>--description &lt;value&gt;</code></strong>  Description of resource <br />
+<strong><code>--input-json-param-password &lt;value&gt;</code></strong>  Password for the cluster and Ambari <br />
+<strong><code>--wait</code></strong>  Wait for the operation to finish. No argument is required <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD] <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]   <br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  <br />
+<strong><code>--public</code></strong>   Public in account  </p>
+<p><strong>Examples</strong></p>
+<p>Creates a cluster called "testcluster" based on a local JSON file called "mytemplate.json" located in the /Users/test/Documents directory:   </p>
+<pre>cb cluster create --name testcluster --cli-input-json /Users/test/Documents/mytemplate.json</pre>
+
+<p><strong>Related links</strong><br />
+<a href="../cli-get-started/index.html#obtain-json-template-from-the-ui">Obtain Cluster JSON Template from the UI</a>   </p>
+<hr />
+<h4 id="cluster-delete">cluster delete</h4>
+<p>Deletes an existing cluster. </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Cluster name</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--force</code></strong>  Force the operation<br />
+<strong><code>--wait</code></strong>  Wait for the operation to finish. No argument is required<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE] <br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   </p>
+<p><strong>Examples</strong></p>
+<pre>cb cluster delete --name test1234</pre>
+
+<hr />
+<h4 id="cluster-describe">cluster describe</h4>
+<p>Describes an existing cluster.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Cluster name</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT] <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   </p>
+<p><strong>Examples</strong></p>
+<p>Returns a JSON file describing an existing cluster called "test1234":</p>
+<pre>./cb cluster describe --name test1234</pre>
+
+<p>The command returns JSON output which due to space limitation was not captured in the example.</p>
+<hr />
+<h4 id="cluster-generate-template">cluster generate-template</h4>
+<p>Generates a provider-specific cluster template in JSON format.</p>
+<p><strong>Sub-commands</strong></p>
+<p><strong><code>aws new-network</code></strong> Generates an AWS cluster JSON template with new network<br />
+<strong><code>aws existing-network</code></strong> Generates an AWS cluster JSON template with existing network<br />
+<strong><code>aws existing-subnet</code></strong> Generates an AWS cluster JSON template with existing network and subnet  </p>
+<p><strong><code>azure new-network</code></strong> Generates an Azure cluster JSON template with new network<br />
+<strong><code>azure existing-subnet</code></strong> Generates an Azure cluster JSON template with existing network and subnet  </p>
+<p><strong><code>gcp new-network</code></strong> Generates an GCP cluster JSON template with new network<br />
+<strong><code>gcp existing-network</code></strong> Generates an GCP cluster JSON template with existing network <br />
+<strong><code>gcp existing-subnet</code></strong> Generates an GCP cluster JSON template with existing network and subnet<br />
+<strong><code>gcp legacy-network</code></strong> Generates an GCP cluster JSON template with legacy network without subnets    </p>
+<p><strong><code>openstack new-network</code></strong> Generates an OS cluster JSON template with new network <br />
+<strong><code>openstack existing-network</code></strong> Generates an OS cluster JSON template with existing network <br />
+<strong><code>openstack existing-subnet</code></strong> Generates an OS cluster JSON template with existing network and subnet   </p>
+<p><strong>Examples</strong></p>
+<pre>cb cluster generate-template aws new-network</pre>
+
+<p><strong>Related Commands</strong></p>
+<p><strong>Related Links</strong><br />
+<a href="../cli-get-started/index.html#obtain-json-template-from-the-ui">Obtain Cluster JSON Template from the UI</a>   </p>
+<hr />
+<h4 id="cluster-generate-reinstall-template">cluster generate-reinstall-template</h4>
+<p>Generates a cluster template that you can use to reinstall the cluster if installation went fail. </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--blueprint-name &lt;value&gt;</code></strong>  Name of the blueprint </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   </p>
+<p><strong>Examples</strong></p>
+<pre>cb cluster generate-reinstall-template --blueprint-name "EDW-ETL: Apache Hive 1.2.1, Apache Spark 2.1"</pre>
+
+<hr />
+<h4 id="cluster-list">cluster list</h4>
+<p>Lists all clusters which are currently associated with the Cloudbreak instance.</p>
+<p><strong>Required options</strong></p>
+<p>None</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<p>Lists available clusters: </p>
+<pre>cb cluster list
+[
+  {
+    "Name": "test1234",
+    "Description": "",
+    "CloudPlatform": "AZURE",
+    "StackStatus": "UPDATE_IN_PROGRESS",
+    "ClusterStatus": "REQUESTED"
+  }
+]</pre>
+
+<p>Lists available clusters, with output in a table format:</p>
+<pre>cb cluster list --output table
++----------+-------------+---------------+--------------------+---------------+
+|   NAME   | DESCRIPTION | CLOUDPLATFORM |    STACKSTATUS     | CLUSTERSTATUS |
++----------+-------------+---------------+--------------------+---------------+
+| test1234 |             | AZURE         | UPDATE_IN_PROGRESS | REQUESTED     |
++----------+-------------+---------------+--------------------+---------------+</pre>
+
+<hr />
+<h4 id="cluster-repair">cluster repair</h4>
+<p>Repairs a cluster if cluster installation failed by removing, or removing and replacing failed nodes. You must specify the cluster name and the host group with the failed nodes.  </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Cluster name<br />
+<strong><code>--host-groups &lt;value&gt;</code></strong> Comma separated list of host groups where the failed nodes should be repaired  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--remove-only</code></strong> The failed nodes will be removed (rather than "repaired" by removing and replacing) <br />
+<strong><code>--wait</code></strong>  Wait for the operation to finish. No argument is required<br />
+<strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT] 
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   </p>
+<p><strong>Examples</strong></p>
+<pre>cb cluster repair --name test1234 --host-groups master,worker</pre>
+
+<hr />
+<h4 id="cluster-retry">cluster retry</h4>
+<p>Retries the process if cluster or stack provisioning failed.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Cluster name</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--wait</code></strong>  Wait for the operation to finish. No argument is required<br />
+<strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT] 
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   </p>
+<p><strong>Examples</strong></p>
+<pre>cb cluster retry --name test1234</pre>
+
+<hr />
+<h4 id="cluster-scale">cluster scale</h4>
+<p>Scales a cluster by adding or removing nodes.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Cluster name<br />
+<strong><code>--group-name &lt;value&gt;</code></strong>  Name of the group to scale<br />
+<strong><code>--desired-node-count &lt;value&gt;</code></strong>  Desired number of nodes  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--wait</code></strong>  Wait for the operation to finish. No argument is required <br />
+<strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   </p>
+<p><strong>Examples</strong></p>
+<pre>cb cluster scale --name test1234 --group-name worker --desired node-count 3</pre>
+
+<hr />
+<h4 id="cluster-start">cluster start</h4>
+<p>Starts a cluster which has previously been stopped.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Cluster name</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--wait</code></strong>  Wait for the operation to finish. No argument is required<br />
+<strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]   </p>
+<p><strong>Examples</strong></p>
+<pre>cb cluster start --name test1234</pre>
+
+<hr />
+<h4 id="cluster-stop">cluster stop</h4>
+<p>Stops a cluster.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Cluster name</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--wait</code></strong>  Wait for the operation to finish. No argument is required<br />
+<strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<pre>cb cluster stop --name test1234</pre>
+
+<hr />
+<h4 id="cluster-sync">cluster sync</h4>
+<p>Synchronizes a cluster with the cloud provider.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Cluster name</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<pre>cb cluster sync --name test1234</pre>
+
+<hr />
+<h4 id="configure">configure</h4>
+<p>Configures the Cloudbreak server address and credentials used to communicate with this server.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--server &lt;value&gt;</code></strong>  Server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>     User name (e-mail address) [$CB_USER_NAME]  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--password &lt;value&gt;</code></strong>  Password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Select a config profile to use [$CB_PROFILE] <br />
+<strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<p>This example configures the server address with username and password:</p>
+<pre>cb configure --server https://ec2-11-111-111-11.compute-1.amazonaws.com --username admin@hortonworks.com --password MySecurePassword123</pre>
+
+<p>This example configures the server address with username but without a password:</p>
+<pre>cb configure --server https://ec2-11-111-111-11.compute-1.amazonaws.com --username admin@hortonworks.com</pre>
+
+<p><strong>Related links</strong></p>
+<p><a href="../cli-install/index.html#configure-the-cli">Configure CLI</a></p>
+<hr />
+<h4 id="credential-create">credential create</h4>
+<p>Creates a new Cloudbreak credential.</p>
+<p><strong>Sub-commands</strong></p>
+<p><strong><code>aws role-based</code></strong>  Creates a new AWS credential<br />
+<strong><code>aws key-based</code></strong>  Creates a new AWS credential<br />
+<strong><code>azure app-based</code></strong> Creates a new app-based Azure credential<br />
+<strong><code>gcp</code></strong> Creates a new gcp credential<br />
+<strong><code>openstack keystone-v2</code></strong> Creates a new OpenStack credential<br />
+<strong><code>openstack keystone-v3</code></strong> Creates a new OpenStack credential </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>aws role-based</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the credential <br />
+<strong><code>--role-arn &lt;value&gt;</code></strong> IAM Role ARN of the role used for Cloudbreak credential  </p>
+<p><strong><code>aws key-based</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the credential  <br />
+<strong><code>--access-key &lt;value&gt;</code></strong>  AWS Access Key<br />
+<strong><code>--secret-key &lt;value&gt;</code></strong>  AWS Secret Key  </p>
+<p><strong><code>azure app-based</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the credential  <br />
+<strong><code>--subscription-id &lt;value&gt;</code></strong>  Subscription ID from your Azure Subscriptions<br />
+<strong><code>--tenant-id &lt;value&gt;</code></strong>  Directory ID from your Azure Active Directory &gt; Properties    <br />
+<strong><code>--app-id &lt;value&gt;</code></strong>  Application ID of your app from your Azure Active Directory &gt; App Registrations          <br />
+<strong><code>--app-password &lt;value&gt;</code></strong>  Your application key from app registration's Settings &gt; Keys  </p>
+<p><strong><code>gcp</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the credential  <br />
+<strong><code>--project-id &lt;value&gt;</code></strong>  Project ID from your GCP account                      <br />
+<strong><code>--service-account-id &lt;value&gt;</code></strong>  Your GCP Service account ID from IAM &amp; Admin &gt; Service accounts               <br />
+<strong><code>--service-account-private-key-file &lt;value&gt;</code></strong>  P12 key from your GCP service account  </p>
+<p><strong><code>openstack keystone-v2</code></strong>  </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the credential  <br />
+<strong><code>--tenant-user &lt;value&gt;</code></strong>  OpenStack user name   <br />
+<strong><code>--tenant-password &lt;value&gt;</code></strong>  OpenStack password<br />
+<strong><code>--tenant-name &lt;value&gt;</code></strong>  OpenStack tenant name    <br />
+<strong><code>--endpoint &lt;value&gt;</code></strong>   OpenStack endpoint   </p>
+<p><strong><code>openstack keystone-v3</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the credential <br />
+<strong><code>--tenant-user &lt;value&gt;</code></strong>  OpenStack user name   <br />
+<strong><code>--tenant-password &lt;value&gt;</code></strong>  OpenStack password<br />
+<strong><code>--user-domain &lt;value&gt;</code></strong>  OpenStack user domain    <br />
+<strong><code>--endpoint &lt;value&gt;</code></strong>   OpenStack endpoint  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--description &lt;value&gt;</code></strong>  Description of the resource<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong> Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]<br />
+<strong><code>--public</code></strong>   Public in account  </p>
+<p>Additionally, the following option is available for OpenStack Keystone2 and Keystone3:</p>
+<p><strong><code>--facing &lt;value&gt;</code></strong> API facing. One of: public, admin, internal</p>
+<p>Additionally, the following options are available for OpenStack Keystone3:</p>
+<p><strong><code>--project-domain-name &lt;value&gt;</code></strong>  OpenStack project domain name  <br />
+<strong><code>--project-name &lt;value&gt;</code></strong>  OpenStack project name         <br />
+<strong><code>--domain-name &lt;value&gt;</code></strong>  OpenStack domain name  <br />
+<strong><code>--keystone-scope &lt;value&gt;</code></strong> OpenStack keystone scope. One of: default, domain, project   </p>
+<p><strong>Examples</strong></p>
+<p>Creates a role-based credential on AWS:</p>
+<pre>cb credential create aws role-based --name my-credential1 --role-arn arn:aws:iam::517127065441:role/CredentialRole</pre>
+
+<p>Creates a key-based credential on AWS:</p>
+<pre>cb credential create aws key-based --name my-credential2 --access-key ABDVIRDFV3K4HLJ45SKA --secret-key D89L5pOPM+426Rtj3curKzJEJL3lYoNcP8GvguBV</pre>
+
+<p>Creates an app-based credential on Azure:</p>
+<pre>cb credential create azure app-based --name my-credential3 --subscription-id b8e7379e-568g-55d3-na82-45b8d421e998 --tenant-id  c79n5399-3231-65ba-8dgg-2g4e2a40085e --app-id 6d147d89-48d2-5de2-eef8-b89775bbfcg1 --app-password 4a8hBgfI52s/C8R5Sea2YHGnBFrD3fRONfdG8w7F2Ua=</pre>
+
+<p>Creates a credential on Google Cloud:</p>
+<pre>cb credential create gcp --name my-credential4 --project-id test-proj --service-account-id test@test-proj.iam.gserviceaccount.com --service-account-private-key-file /Users/test/3fff57a6f68e.p12</pre>
+
+<p>Creates a role-based credential on OpenStack with Keystone-v2:</p>
+<pre>cb credential create openstack keystone-v2 --name my-credential5 --tenant-user test --tenant-password MySecurePass123 --tenant-name test --endpoint http://openstack.test.organization.com:5000/v2.0</pre>
+
+<p><strong>Related links</strong>  </p>
+<p><a href="../aws-launch/index.html#create-credential">Create Credential on AWS</a><br />
+<a href="../azure-launch/index.html#create-credential">Create Credential on Azure</a><br />
+<a href="../gcp-launch/index.html#create-credential">Create Credential on GCP</a><br />
+<a href="../os-launch/index.html#create-credential">Create Credential on OpenStack</a>  </p>
+<hr />
+<h4 id="credential-delete">credential delete</h4>
+<p>Deletes an existing Cloudbreak credential.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Credential name </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong> Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<pre>cb credential delete --name test-cred</pre>
+
+<hr />
+<h4 id="credential-describe">credential describe</h4>
+<p>Describes an existing credential.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Credential name </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong> Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<pre>cb credential describe --name testcred
+{
+  "Name": "testcred",
+  "Description": "",
+  "CloudPlatform": "AZURE"
+}</pre>
+
+<hr />
+<h4 id="credential-list">credential list</h4>
+<p>Lists existing Cloudbreak credentials.</p>
+<p><strong>Required options</strong></p>
+<p>None</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong> Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<p>Lists credentials:</p>
+<pre>cb credential list 
+[
+  {
+    "Name": "testcred",
+    "Description": "",
+    "CloudPlatform": "AZURE"
+  }
+]
+</pre>
+
+<p>Lists credentials, with output formatted in a table format:</p>
+<pre>cb credential list --output table
++---------+-------------+---------------+
+|  NAME   | DESCRIPTION | CLOUDPLATFORM |
++---------+-------------+---------------+
+| armcred |             | AZURE         |
++---------+-------------+---------------+</pre>
+
+<hr />
+<h4 id="credential-modify">credential modify</h4>
+<p>Modifies an existing Cloudbreak credential. </p>
+<blockquote>
+<p>The <code>--name</code> parameter is used to identify the credential that is being modified, and therefore its value cannot be modified.    </p>
+</blockquote>
+<p><strong>Sub-commands</strong></p>
+<p><strong><code>aws role-based</code></strong>  Modifies an AWS role-based credential<br />
+<strong><code>aws key-based</code></strong>  Modifies an AWS key-based credential<br />
+<strong><code>azure app-based</code></strong> Modifies an app-based Azure credential<br />
+<strong><code>gcp</code></strong> Modifies a Google Cloud credential<br />
+<strong><code>openstack keystone-v2</code></strong> Modifies an OpenStack v2 credential<br />
+<strong><code>openstack keystone-v3</code></strong> Modifies an  OpenStack v3 credential </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>aws role-based</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Credential name<br />
+<strong><code>--role-arn &lt;value&gt;</code></strong> IAM Role ARN of the role used for Cloudbreak credential  </p>
+<p><strong><code>aws key-based</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Credential name<br />
+<strong><code>--access-key &lt;value&gt;</code></strong>  AWS Access Key<br />
+<strong><code>--secret-key &lt;value&gt;</code></strong>  AWS Secret Key  </p>
+<p><strong><code>azure app-based</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Credential name<br />
+<strong><code>--subscription-id &lt;value&gt;</code></strong>  Subscription ID from your Azure Subscriptions<br />
+<strong><code>--tenant-id &lt;value&gt;</code></strong>  Directory ID from your Azure Active Directory &gt; Properties    <br />
+<strong><code>--app-id &lt;value&gt;</code></strong>  Application ID of your app from your Azure Active Directory &gt; App Registrations          <br />
+<strong><code>--app-password &lt;value&gt;</code></strong>  Your application key from app registration's Settings &gt; Keys  </p>
+<p><strong><code>gcp</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Credential name <br />
+<strong><code>--project-id &lt;value&gt;</code></strong>  Project ID from your GCP account                      <br />
+<strong><code>--service-account-id &lt;value&gt;</code></strong>  Your GCP Service account ID from IAM &amp; Admin &gt; Service accounts               <br />
+<strong><code>--service-account-private-key-file &lt;value&gt;</code></strong>  P12 key from your GCP service account  </p>
+<p><strong><code>openstack keystone-v2</code></strong>  </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Credential name<br />
+<strong><code>--tenant-user &lt;value&gt;</code></strong>  OpenStack user name   <br />
+<strong><code>--tenant-password &lt;value&gt;</code></strong>  OpenStack password<br />
+<strong><code>--tenant-name &lt;value&gt;</code></strong>  OpenStack tenant name    <br />
+<strong><code>--endpoint &lt;value&gt;</code></strong>   OpenStack endpoint   </p>
+<p><strong><code>openstack keystone-v3</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Credential name<br />
+<strong><code>--tenant-user &lt;value&gt;</code></strong>  OpenStack user name   <br />
+<strong><code>--tenant-password &lt;value&gt;</code></strong>  OpenStack password<br />
+<strong><code>--user-domain &lt;value&gt;</code></strong>  OpenStack user domain    <br />
+<strong><code>--endpoint &lt;value&gt;</code></strong>   OpenStack endpoint  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--description &lt;value&gt;</code></strong>  Description of the resource<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong> Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]    </p>
+<p>Additionally, the following option is available for OpenStack Keystone2 and Keystone3:</p>
+<p><strong><code>--facing &lt;value&gt;</code></strong> API facing. One of: public, admin, internal</p>
+<p>Additionally, the following options are available for OpenStack Keystone3:</p>
+<p><strong><code>--project-domain-name &lt;value&gt;</code></strong>  OpenStack project domain name  <br />
+<strong><code>--project-name &lt;value&gt;</code></strong>  OpenStack project name         <br />
+<strong><code>--domain-name &lt;value&gt;</code></strong>  OpenStack domain name  <br />
+<strong><code>--keystone-scope &lt;value&gt;</code></strong> OpenStack keystone scope. One of: default, domain, project  </p>
+<p><strong>Examples</strong></p>
+<p>Modifies a role-based AWS credential:</p>
+<pre>cb credential modify aws role-based --name my-credential1 --role-arn arn:aws:iam::517127065441:role/CredentialRole</pre>
+
+<p>Modifies a key-based AWS credential:</p>
+<pre>cb credential modify aws key-based --name my-credential2 --access-key ABDVIRDFV3K4HLJ45SKA --secret-key D89L5pOPM+426Rtj3curKzJEJL3lYoNcP8GvguBV</pre>
+
+<p>Modifies an app-based Azure credential:</p>
+<pre>cb credential modify azure app-based --name my-credential3 --subscription-id b8e7379e-568g-55d3-na82-45b8d421e998 --tenant-id  c79n5399-3231-65ba-8dgg-2g4e2a40085e --app-id 6d147d89-48d2-5de2-eef8-b89775bbfcg1 --app-password 4a8hBgfI52s/C8R5Sea2YHGnBFrD3fRONfdG8w7F2Ua=</pre>
+
+<p>Modifies a Google Cloud credential:</p>
+<pre>cb credential modify gcp --name my-credential4 --project-id test-proj --service-account-id test@test-proj.iam.gserviceaccount.com --service-account-private-key-file /Users/test/3fff57a6f68e.p12</pre>
+
+<p>Modifies a role-based OpenStack credential which uses Keystone-v2:</p>
+<pre>cb credential modify openstack keystone-v2 --name my-credential5 --tenant-user test --tenant-password MySecurePass123 --tenant-name test --endpoint http://openstack.test.organization.com:5000/v2.0</pre>
+
+<hr />
+<h4 id="database-create">database create</h4>
+<p>Registers an existing external database with Cloudbreak.</p>
+<p><strong>Sub-commands</strong>  </p>
+<p><strong><code>mysql</code></strong>  Registers a MySQL database configuration<br />
+<strong><code>oracle11</code></strong>  Registers an Oracle 11 database configuration<br />
+<strong><code>oracle12</code></strong>  Registers an Oracle 12 database configuration<br />
+<strong><code>postgres</code></strong>  Registers a Postgres database configuration  </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>   Name for the database   <br />
+<strong><code>--db-username &lt;value&gt;</code></strong>  Username for the JDBC connection<br />
+<strong><code>--db-password &lt;value&gt;</code></strong>  Password for the JDBC connection<br />
+<strong><code>--url &lt;value&gt;</code></strong>  JDBC connection URL in the form of jdbc:db-type://address:port/db<br />
+<strong><code>--type &lt;value&gt;</code></strong>   Name if the service that will use the database (AMBARI, DRUID, HIVE, OOZIE, RANGER, SUPERSET, or other custom type)    </p>
+<p>If using MySQL and Oracle, the <strong><code>--connector-jar-url value &lt;value&gt;</code></strong> parameter is required in all cases except the following: If you are using a custom image and you already placed the JAR file on the machine, then this parameter is not required.</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--description &lt;value&gt;</code></strong>  Description for the database     <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD] <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE] <br />
+<strong><code>--public</code></strong>   Public in account  </p>
+<p><strong>Examples</strong></p>
+<p>Registers an existing Postgres database called "test-postgres" with Cloudbreak:</p>
+<pre>cb database create postgres --name testpostgres  --type HIVE --url jdbc:postgresql://test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432/testdb --db-username testuser --db-password MySecurePassword123</pre>
+
+<p>The connection URL includes three components db-type://address:port/db: </p>
+<ul>
+<li>Database type "jdbc:postgresql"  </li>
+<li>Endpoint "test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432"  </li>
+<li>Port "5432"  </li>
+<li>Database name "testdb"  </li>
+</ul>
+<p>Registers an existing MySQL database called "testmysql" with Cloudbreak:  </p>
+<pre>cb database create mysql --name testmysql --type OOZIE --url jdbc:mysql://test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432/testdb  --db-username test --db-password test --connector-jar-url http://example-page/driver-file.JAR</pre>
+
+<hr />
+<h4 id="database-delete">database delete</h4>
+<p>Unregisters a previously registered database with Cloudbreak. It does not delete the database instance. </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Database registration name     </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]</p>
+<p><strong>Examples</strong></p>
+<pre>cb database delete --name testdatabase</pre>
+
+<hr />
+<h4 id="database-list">database list</h4>
+<p>Lists all available database registrations.</p>
+<p><strong>Required options</strong></p>
+<p>None</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]</p>
+<p><strong>Examples</strong></p>
+<p>Lists existing database registrations:</p>
+<pre>cb database list</pre>
+
+<p>Lists existing database registrations, with output presented in a table format:</p>
+<pre>cb database list --output table</pre>
+
+<hr />
+<h4 id="database-test">database test</h4>
+<p>Test database connection.</p>
+<p><strong>Sub-commands</strong>  </p>
+<p><strong><code>by-name</code></strong>    Tests a stored database configuration identified by its name<br />
+<strong><code>by-params</code></strong>  Tests database connection parameters   </p>
+<p><strong>Required options</strong>  </p>
+<p><strong><code>by-name</code></strong>  </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Database registration name    </p>
+<p><strong><code>by-params</code></strong>  </p>
+<p><strong><code>--db-username &lt;value&gt;</code></strong>  Username to use for the JDBC connection<br />
+<strong><code>--db-password &lt;value&gt;</code></strong>  Password to use for the JDBC connection<br />
+<strong><code>--url &lt;value&gt;</code></strong>  JDBC connection URL in the form of jdbc:db-type://address:port/db<br />
+<strong><code>--type &lt;value&gt;</code></strong>  Type of database (the service name that will use the database  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<p>Tests connection to a previously registered database called "testpostgres":</p>
+<pre>database test --name testpostgres</pre>
+
+<p>Tests connection to a database based on connection parameters provided: </p>
+<pre>cb database test by-params --type HIVE --url jdbc:postgresql://test-db.cic6nusrpqec.us-west-2.rds.amazonaws.com:5432/testdb --db-username testuser --db-password MySecurePassword123</pre>
+
+<hr />
+<h4 id="imagecatalog-create">imagecatalog create</h4>
+<p>Registers a new custom image catalog based on the URL provided.  </p>
+<p><strong>Required options</strong>  </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the image catalog<br />
+<strong><code>--url &lt;value&gt;</code></strong>   URL location of the image catalog JSON file  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--description &lt;value&gt;</code></strong>  Description for the recipe <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]<br />
+<strong><code>--public</code></strong>   Public in account  </p>
+<p><strong>Examples</strong></p>
+<p>Registers an image catalog called "mycustomcatalog" which is available at https://example.com/myimagecatalog.json: </p>
+<pre>cb imagecatalog create --name mycustomcatalog --url https://example.com/myimagecatalog.json</pre>
+
+<p><strong>Related links</strong>  </p>
+<p><a href="../images/index.html">Custom Images</a>   </p>
+<hr />
+<h4 id="imagecatalog-delete">imagecatalog delete</h4>
+<p>Deletes a previously registered custom image catalog. It does not delete any cloud provider resources that you created as a prerequisite for creating the Cloudbreak credential.    </p>
+<p><strong>Required options</strong>  </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Image catalog name    </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<p>Deletes an image catalog called "mycustomcatalog":</p>
+<pre>cb imagecatalog delete --name mycustomcatalog</pre>
+
+<p><strong>Related links</strong>  </p>
+<p><a href="../images/index.html">Custom Images</a>  </p>
+<hr />
+<h4 id="imagecatalog-images">imagecatalog images</h4>
+<p>Lists images from the specified image catalog available for the specified cloud provider.   </p>
+<p><strong>Sub-commands</strong>  </p>
+<p><strong><code>aws</code></strong>         Lists available aws images   <br />
+<strong><code>azure</code></strong>       Lists available azure images   <br />
+<strong><code>gcp</code></strong>         Lists available gcp images  <br />
+<strong><code>openstack</code></strong>   Lists available openstack images    </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--imagecatalog &lt;value&gt;</code></strong>  Name of the imagecatalog     </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]  <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]   <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE] <br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong>  </p>
+<p>Returns date, description, Ambari version, and image ID for all AWS images from an image catalog called "myimagecatalog":</p>
+<pre>./cb imagecatalog images aws --imagecatalog cloudbreak-default
+[
+  {
+    "Date": "2017-10-13",
+    "Description": "Cloudbreak official base image",
+    "Version": "2.6.0.0",
+    "ImageID": "44b140a4-bd0b-457d-b174-e988bee3ca47"
+  },
+  {
+    "Date": "2017-11-16",
+    "Description": "Official Cloudbreak image",
+    "Version": "2.6.0.0",
+    "ImageID": "3c7598a4-ebd6-4a02-5638-882f5c7f7add"
+  }
+]</pre>
+
+<p><strong>Related links</strong>  </p>
+<p><a href="../images/index.html">Custom Images</a>  </p>
+<hr />
+<h4 id="imagecatalog-list">imagecatalog list</h4>
+<p>Lists default and custom image catalogs registered with Cloudbreak instance.   </p>
+<p><strong>Required options</strong>  </p>
+<p>None  </p>
+<p><strong>Options</strong>  </p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT] <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<p>Lists existing image catalogs:  </p>
+<pre>cb  imagecatalog list 
+[
+  {
+    "Name": "mycustomcatalog",
+    "Default": false,
+    "URL": "https://example.com/imagecatalog.json"
+  },
+  {
+    "Name": "cloudbreak-default",
+    "Default": true,
+    "URL": "https://s3-eu-west-1.amazonaws.com/cloudbreak-info/v2-dev-cb-image-catalog.json"
+  }
+]</pre>
+
+<p><strong>Related links</strong>  </p>
+<p><a href="../images/index.html">Custom Images</a>  </p>
+<hr />
+<h4 id="imagecatalog-set-default">imagecatalog set-default</h4>
+<p>Sets the specified image catalog as default.  </p>
+<p><strong>Required options</strong>   </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Image catalog name     </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]  <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<p>Sets "mycustomcatalog" as default:  </p>
+<pre>imagecatalog set-default --name mycustomcatalog</pre>
+
+<p><strong>Related links</strong>  </p>
+<p><a href="../images/index.html">Custom Images</a>  </p>
+<hr />
+<h4 id="ldap-create">ldap create</h4>
+<p>Registers an existing LDAP with Cloudbreak.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the LDAP     <br />
+<strong><code>--ldap-server &lt;value&gt;</code></strong>  Address of the LDAP server (e.g. ldap://10.0.0.1:384)<br />
+<strong><code>--ldap-domain &lt;value&gt;</code></strong>   LDAP domain (e.g. ad.cb.com)<br />
+<strong><code>--ldap-bind-dn &lt;value&gt;</code></strong>  LDAP bind DN (e.g. CN=Administrator,CN=Users,DC=ad,DC=cb,DC=com)<br />
+<strong><code>--ldap-bind-password &lt;value&gt;</code></strong>  LDAP bind password<br />
+<strong><code>--ldap-directory-type &lt;value&gt;</code></strong>   LDAP directory type (LDAP or ACTIVE_DIRECTORY) <br />
+<strong><code>--ldap-user-search-base &lt;value&gt;</code></strong>   LDAP user search base (e.g. CN=Users,DC=ad,DC=cb,DC=com)<br />
+<strong><code>--ldap-user-name-attribute &lt;value&gt;</code></strong>   LDAP user name attribute<br />
+<strong><code>--ldap-user-object-class &lt;value&gt;</code></strong>   LDAP user object class<br />
+<strong><code>--ldap-group-member-attribute &lt;value&gt;</code></strong> LDAP group member attribute<br />
+<strong><code>--ldap-group-name-attribute &lt;value&gt;</code></strong>  LDAP group name attribute<br />
+<strong><code>--ldap-group-object-class &lt;value&gt;</code></strong>  LDAP group object class<br />
+<strong><code>--ldap-group-search-base &lt;value&gt;</code></strong>   LDAP group search base (e.g. OU=scopes,DC=ad,DC=cb,DC=com)  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--ldap-admin-group &lt;value&gt;</code></strong>  LDAP group of administrators<br />
+<strong><code>--description &lt;value&gt;</code></strong>  Description for the LDAP    <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD] <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]<br />
+<strong><code>--public</code></strong>   Public in account  </p>
+<hr />
+<h4 id="ldap-delete">ldap delete</h4>
+<p>Deletes selected LDAP registration from Cloudbreak. It does not delete the LDAP. </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  LDAP name      </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]</p>
+<p><strong>Examples</strong></p>
+<pre>cb ldap delete --name testldap</pre>
+
+<hr />
+<h4 id="ldap-list">ldap list</h4>
+<p>Lists all available LDAPs.</p>
+<p><strong>Required options</strong></p>
+<p>None</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]</p>
+<p><strong>Examples</strong></p>
+<p>Lists existing LDAPs:</p>
+<pre>cb ldap list</pre>
+
+<p>Lists existing LDAPs, with output presented in a table format:</p>
+<pre>cb ldap list --output table</pre>
+
+<hr />
+<h4 id="mpack-create">mpack create</h4>
+<p>Registers an existing management pack with Cloudbreak.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the mpack      <br />
+<strong><code>--url &lt;value&gt;</code></strong>  URL that points to the location of the mpack tarball   </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--purge</code></strong>  Purge existing resources specified in purge-list <br />
+<strong><code>--purge-list &lt;value&gt;</code></strong>  Comma-separated list of resources to purge (stack-definitions,service-definitions,mpacks). By default (stack-definitions,mpacks) will be purged<br />
+<strong><code>--force</code></strong>  Force install management pack  <br />
+<strong><code>--description &lt;value&gt;</code></strong>  Description for the LDAP    <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD] <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]<br />
+<strong><code>--public</code></strong>   Public in account  </p>
+<p><strong>Examples</strong></p>
+<p>Registers a new mpack without purging:</p>
+<pre>cb mpack create --name test-hdp-search --url http://public-repo-1.hortonworks.com/HDP-SOLR/hdp-solr-ambari-mp/solr-service-mpack-3.0.0.tar.gz</pre>
+
+<hr />
+<h4 id="mpack-delete">mpack delete</h4>
+<p>Deletes selected management registration from Cloudbreak. It does not delete the management pack. </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Management pack name      </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]</p>
+<p><strong>Examples</strong></p>
+<pre>cb mpack delete --name testmpack</pre>
+
+<hr />
+<h4 id="mpack-list">mpack list</h4>
+<p>Lists all available management packs.</p>
+<p><strong>Required options</strong></p>
+<p>None</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]</p>
+<p><strong>Examples</strong></p>
+<p>Lists all currently registered management packs and provides information about each:</p>
+<pre>cb mpack list
+[
+  {
+    "Name": "hdp-search-3",
+    "Description": "",
+    "URL": "http://public-repo-1.hortonworks.com/HDP-SOLR/hdp-solr-ambari-mp/solr-service-mpack-3.0.0.tar.gz",
+    "Purge": "false",
+    "PurgeList": "",
+    "Force": "false"
+  }
+]</pre>
+
+<hr />
+<h4 id="proxy-create">proxy create</h4>
+<p>Registers an existing proxy with Cloudbreak.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the proxy   <br />
+<strong><code>--proxy-host &lt;value&gt;</code></strong>  Hostname or IP address of the proxy<br />
+<strong><code>--proxy-port &lt;value&gt;</code></strong>  Port of the proxy  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--proxy-protocol &lt;value&gt;</code></strong>  Protocol for the proxy (http or https) (default: "http")<br />
+<strong><code>--proxy-user &lt;value&gt;</code></strong>   User for the proxy if basic auth is required<br />
+<strong><code>--proxy-password &lt;value&gt;</code></strong>  Password for the proxy if basic auth is required<br />
+<strong><code>--description &lt;value&gt;</code></strong>  Description for the proxy    <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD] <br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]<br />
+<strong><code>--public</code></strong>   Public in account  </p>
+<hr />
+<h4 id="proxy-delete">proxy delete</h4>
+<p>Unregisters a previously registered proxy with Cloudbreak. It does not delete the proxy. </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Proxy registration name     </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]</p>
+<p><strong>Examples</strong></p>
+<pre>cb proxy delete --name testproxy</pre>
+
+<hr />
+<h4 id="proxy-list">proxy list</h4>
+<p>Lists all proxies that were previously registered with Cloudbreak.</p>
+<p><strong>Required options</strong></p>
+<p>None</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]</p>
+<p><strong>Examples</strong></p>
+<p>Lists existing proxy registrations:</p>
+<pre>cb proxy list</pre>
+
+<p>Lists existing proxy registrations, with output presented in a table format:</p>
+<pre>cb proxy list --output table</pre>
+
+<hr />
+<h4 id="recipe-create">recipe create</h4>
+<p>Adds a new recipe from a file or from a URL.</p>
+<p><strong>Sub-commands</strong></p>
+<p><strong><code>from-url</code></strong>  Creates a recipe by downloading it from a URL location<br />
+<strong><code>from-file</code></strong>  Creates a recipe by reading it from a local file  </p>
+<p><strong>Required options</strong></p>
+<p><strong><code>from-url</code></strong>  </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the recipe <br />
+<strong><code>--execution-type &lt;value&gt;</code></strong>  Type of execution [pre-ambari-start, pre-termination, post-ambari-start, post-cluster-install]  <br />
+<strong><code>--url &lt;value&gt;</code></strong>  URL location of the Ambari blueprint JSON file  </p>
+<p><strong><code>from-file</code></strong> </p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Name for the recipe<br />
+<strong><code>--execution-type &lt;value&gt;</code></strong>  Type of execution [pre-ambari-start, pre-termination, post-ambari-start, post-cluster-install] <br />
+<strong><code>--file &lt;value&gt;</code></strong>  Location of the Ambari blueprint JSON file  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--description &lt;value&gt;</code></strong>  Description for the recipe <br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]<br />
+<strong><code>--public</code></strong>   Public in account  </p>
+<p><strong>Examples</strong></p>
+<p>Adds a new recipe called "test1" from a URL:</p>
+<pre>cb recipe create from-url --name "test1" --execution-type post-ambari-start --url http://some-site.com/test.sh</pre>
+
+<p>Adds a new recipe called "test2" from a file:</p>
+<pre>cb recipe create from-url --name "test2" --execution-type post-ambari-start --file /Users/test/Documents/test.sh</pre>
+
+<p><strong>Related links</strong></p>
+<p><a href="../recipes/index.html">Recipes</a></p>
+<hr />
+<h4 id="recipe-delete">recipe delete</h4>
+<p>Deletes an existing recipe.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Recipe name  </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE] <br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<pre>cb recipe delete --name test</pre>
+
+<hr />
+<h4 id="recipe-describe">recipe describe</h4>
+<p>Describes an existing recipe.</p>
+<p><strong>Required options</strong></p>
+<p><strong><code>--name &lt;value&gt;</code></strong>  Recipe name     </p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<p>Describes a recipe called "test":</p>
+<pre>cb recipe describe --name test
+{
+  "Name": "test",
+  "Description": "",
+  "ExecutionType": "POST"
+}</pre>
+
+<p>Describes a recipe called "test", with output presented in a table format:</p>
+<pre>cb describe-recipe --name test --output table
++------+-------------+----------------+
+| NAME | DESCRIPTION | EXECUTION TYPE |
++------+-------------+----------------+
+| test |             | POST           |
++------+-------------+----------------+</pre>
+
+<hr />
+<h4 id="recipe-list">recipe list</h4>
+<p>Lists all available recipes.</p>
+<p><strong>Required options</strong></p>
+<p>None</p>
+<p><strong>Options</strong></p>
+<p><strong><code>--output &lt;value&gt;</code></strong>  Supported formats: json, yaml, table (default: "json") [$CB_OUT_FORMAT]<br />
+<strong><code>--server &lt;value&gt;</code></strong>  Cloudbreak server address [$CB_SERVER_ADDRESS]<br />
+<strong><code>--username &lt;value&gt;</code></strong>  Cloudbreak user name (e-mail address) [$CB_USER_NAME]<br />
+<strong><code>--password &lt;value&gt;</code></strong>  Cloudbreak password [$CB_PASSWORD]<br />
+<strong><code>--profile &lt;value&gt;</code></strong>  Selects a config profile to use [$CB_PROFILE]<br />
+<strong><code>--auth-type &lt;value&gt;</code></strong>  Authentication method to use. Values: oauth2, basic [$CB_AUTH_TYPE]  </p>
+<p><strong>Examples</strong></p>
+<p>Lists existing recipes:</p>
+<pre>cb recipe list
+[
+  {
+    "Name": "test",
+    "Description": "",
+    "ExecutionType": "POST"
+  }
+]</pre>
+
+<p>Lists existing recipes, with output presented in a table format:</p>
+<pre>cb recipe list --output table
++------+-------------+-------------------+
+| NAME | DESCRIPTION | EXECUTION TYPE    |
++------+-------------+-------------------+
+| test |             | POST-AMBARI-START |
++------+-------------+-------------------+
+</pre>
+
+<hr />
+<h3 id="debugging">Debugging</h3>
+<p>To use debugging mode, pass the <code>--debug</code> option. </p>
+<h3 id="checking-cli-version">Checking CLI Version</h3>
+<p>To check CLI version, use <code>cb --version</code>.</p></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+        <small>© 2011-2018 <a href="http://www.hortonworks.com" target="_blank">Hortonworks Inc</a>. All Rights Reserved. | <a href="http://hortonworks.com/privacy-policy/" target="_blank">Privacy Policy</a><br></small>
+        
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+    </footer>
+
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '..';
+    </script>
+    <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+    <script src="../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
