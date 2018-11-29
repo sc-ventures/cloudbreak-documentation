@@ -90,6 +90,7 @@ pages:
         - Troubleshooting Azure: trouble-azure.md
         - Troubleshooting GCP: trouble-gcp.md
         - Troubleshooting Cloudbreak CLI: trouble-cli.md
+        - Create a troubleshooting bundle: trouble-create-bundle.md  
       - Upgrade Cloudbreak: cb-upgrade.md 
       - Delete Cloudbreak: cb-delete.md
     - More:
