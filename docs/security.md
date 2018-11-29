@@ -46,18 +46,45 @@ The following section describes the network requirements and options. By default
 
 <div class="note">
     <p class="first admonition-title">Note</p>
-    <p class="last">The default experience of creating network resources such as network, subnet and security group automatically is provided for convenience. We strongly recommend you review these options and for production cluster deployments leverage your existing network resources that you have defined and validated to meet your enterprise requirements. </p>
+    <p class="last">By default, when creating a cluster, a new network, subnet, and security groups are created automatically. The default experience of creating network resources such as network, subnet and security group automatically is provided for convenience. We strongly recommend that you review these options and for production cluster deployments leverage your existing network resources that you have defined and validated to meet your enterprise requirements.</p>
 </div>
 
-| Source | Target | Port | Description |
-|---|---|---|---|
-| Cloudbreak | Ambari server | 9443  | <ul><li>This port is used by Cloudbreak to maintain management control of the cluster.</li><li>The default security group opens 9443 from anywhere. You should limit this CIDR further to *only allow access from the Cloudbreak host*. This can be done by default by [restricting inbound access](security-cb-inbound.md) from Cloudbreak to cluster.</li><ul>|
-| * | All cluster hosts | 22 | <ul><li>This is an optional port for end user SSH access to the hosts.</li><li>You should review and limit or remove this CIDR access.</li><ul>|
-| * | Ambari server | 8443  | <ul><li>This port is used to access the gateway (if configured).</li><li>You should review and limit this CIDR access.</li><li>If you do not configure the gateway, this port does not need to be opened. If you want access to any cluster resources, you must open those ports explicitly on the security groups for their respective hosts.</li><ul> |
-| * | Ambari server | 443  | <ul><li>This port is used to access Ambari directly.</li><li>If you are configuring the gateway, you should access Ambari through the gateway. You do not need to open this port.</li><li>If you do not configure the gateway, to obtain access to Ambari, you can open this port on the security group for the respective host.</li><ul> |
+<div class="note">
+    <p class="first admonition-title">Note</p>
+    <p class="last">Depending on the cluster components that you are planning to use, you may need to open additional ports required by these components.</p>
+</div>
+
+**External ports**
+
+| Source | Target | Protocol | Port | Description |
+|---|---|---|---|---|
+| Cloudbreak | Ambari server | TCP | 9443  | <ul><li>This port is used by Cloudbreak to maintain management control of the cluster.</li><li>The default security group opens 9443 from anywhere. You should limit this CIDR further to *only allow access from the Cloudbreak host*. This can be done by default by [restricting inbound access](security-cb-inbound.md) from Cloudbreak to cluster.</li><ul>|
+| * | All cluster hosts | TCP | 22 | <ul><li>This is an optional port for end user SSH access to the hosts.</li><li>You should review and limit or remove this CIDR access.</li><ul>|
+| * | Ambari server | TCP | 8443 | <ul><li>This port is used to access the gateway (if configured).</li><li>You should review and limit this CIDR access.</li><li>If you do not configure the gateway, this port does not need to be opened. If you want access to any cluster resources, you must open those ports explicitly on the security groups for their respective hosts.</li><ul> |
+| * | Ambari server | TCP | 443 | <ul><li>This port is used to access Ambari directly.</li><li>If you are configuring the gateway, you should access Ambari through the gateway. You do not need to open this port.</li><li>If you do not configure the gateway, to obtain access to Ambari, you can open this port on the security group for the respective host.</li><ul> |
+
+**Internal ports**
+
+In addition to the ports described above, Cloudbreak uses certain ports for internal communication within the subnet. By default, Cloudbreak opens ports 0-65535 to the subnet's internal CIDR (such as 10.0.0.0/16). Use the following table to limit this CIDR:
+
+| Source | Target | Protocol |  Port | Description |
+|---|---|---|---|---|
+| Salt-bootstrap | Gateway instance (Ambari server instance) | TCP | 7070 | Salt-bootstrap service launches and configures Saltstack. |
+| Salt-master | All hosts in the cluster | TCP | 4505,4506 | Salt-minions connect to the Salt-master(s). |
+| Consul server | All hosts in the cluster | TCP,UDP | 	8300,8301 | Consul agents connect to the Consul server. |
+| Consul agent (all hosts in the cluster) | All hosts in the cluster | TCP,UDP | 8300,8301 | Consul agents connect to other Consul agents (Gossip protocol). | 
+| Prometheus node exporter | Gateway instance (Ambari server instance) | TCP |	9100 | Prometheus server scrapes metrics from the node exporters. |
+| Ambari server | All hosts in the cluster | Refer to [Ambari documentation](https://docs.hortonworks.com/HDPDocuments/Ambari-2.7.1.0/administering-ambari/content/amb_default_network_port_numbers_ambari.html). | Refer to  [Ambari documentation](https://docs.hortonworks.com/HDPDocuments/Ambari-2.7.1.0/administering-ambari/content/amb_default_network_port_numbers_ambari.html). | Ambari agents connect to the Ambari server. |
+
+When creating data lakes and their attached clusters,, you must also open the following internal port:
+
+| Source | Target | Protocol | Port | Description |
+|---|---|---|---|---|
+| Data lake cluster | Clusters attached to the data lake | TCP | 6080 | Used for communication between the data lake and attached clusters. |
 
 **Related links**   
 [Restrict inbound access](security-cb-inbound.md)  
+[Default network port numbers for Ambari](https://docs.hortonworks.com/HDPDocuments/Ambari-2.7.1.0/administering-ambari/content/amb_default_network_port_numbers_ambari.html) (Ambari)    
 
 
 ### Identity management
