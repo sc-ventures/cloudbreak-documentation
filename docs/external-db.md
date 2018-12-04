@@ -162,7 +162,13 @@ If you are planning to use an external MySQL or Oracle database, you must downlo
     | Username | Enter the JDBC connection username. |
     | Password | Enter the JDBC connection password. |
 
-4. Click **Test Connection** to validate and test the RDS connection information.  
+4. Click **Test Connection** to validate and test the RDS connection information. 
+
+    <div class="note">
+    <p class="first admonition-title">Note</p>
+    <p class="last">The <b>Test Connection</b> option:<ul><li>Does not work when an external authentication source uses LDAPS with a self-signed certificate.</li><li>Might not work if Cloudbreak instance cannot reach the LDAP server instance.</li></ul>In these cases, ignore the error and proceed with cluster installation.</p>
+</div> 
+
 5. Once your settings are validated and working, click **REGISTER** to save the configuration.  
 6. The database will now show up on the list of available databases when creating a cluster under advanced **External Sources** > **Configure Databases**. You can select it and click **Attach** each time you would like to use it for a cluster.  
 
