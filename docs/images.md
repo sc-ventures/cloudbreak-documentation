@@ -18,7 +18,8 @@ In order to use your own custom base images you must:
 1. Build your custom images  
 2. Prepare the custom image catalog JSON file and save it in a location accessible to the Cloudbreak VM  
 3. Register your custom image catalog with Cloudbreak    
-4. Select a custom image when creating a cluster  
+4. If using a different operating system than that included on default images, set the CB_ENABLED_LINUX_TYPES variable in Profile.  
+5. Select a custom image when creating a cluster  
 
 <div class="danger">
     <p class="first admonition-title">Important</p>
@@ -218,6 +219,25 @@ As an alternative to using the UI or CLI, it is possible to place the catalog fi
 3. Edit the Profile file located in /var/lib/cloudbreak-deployment by adding export CB_IMAGE_CATALOG_URL to the file and set it to the name of your JSON file which declares your custom images. For example: `export CB_IMAGE_CATALOG_URL=custom-image-catalog.json`    
 4. Save the Profile file.  
 5. Restart Cloudbreak by using `cbd restart`.  
+
+
+### Set CB_ENABLED_LINUX_TYPES
+
+If using a different operating system than that included on the default images, you must set the CB_ENABLED_LINUX_TYPES variable in Profile. 
+
+> If you are using CentOS 6, CentOS 7, Amazon Linux, or Amazon Linux 2, you don't need to perform this step. If your custom images include any other operating system, you must perform this step.
+
+**Steps**
+
+
+1. On the  machine, switch to the root user by using `sudo su`  
+2. Edit the Profile file located in `/var/lib/cloudbreak-deployment` by adding `export CB_ENABLED_LINUX_TYPES` and set it to include all operating systems that you would like to use on your custom images. For example:
+    <pre>CB_ENABLED_LINUX_TYPES=redhat6,redhat7,centos6,centos7,amazonlinux</pre>
+    Possible values are: centos6, centos7, redhat6, redhat7, debian9, ubuntu16, ubuntu18, sles12, amazonlinux, amazonlinux2.
+    
+3. Save the Profile file.  
+4. Restart  by using:
+    <pre>cbd restart</pre>
 
 
 ### Select a custom image when creating a cluster
