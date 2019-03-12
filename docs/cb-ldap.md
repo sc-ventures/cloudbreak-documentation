@@ -63,7 +63,16 @@ ldap:
 
 #### Configure group authorization 
 
-Once user authentication is configured, you need to configure which group(s) can access Cloudbreak. Users (once authenticated) will be granted permission to access Cloudbreak and use the capabilities of Cloudbreak based on their group member. The following describes how to create (i.e. execute-and-map) a group authorization and how to remove (i.e. delete-mapping) an authorization. 
+Once user authentication is configured, you should configure which group(s) can access Cloudbreak. 
+
+Users (once authenticated) will be granted permission to access Cloudbreak and use the capabilities of Cloudbreak based on their group member. The following describes how to create (i.e. execute-and-map) a group authorization and how to remove (i.e. delete-mapping) an authorization. You should select one set of instructions that is appropriate for your use case: 
+
+* If using the default embedded PostgreSQL database for Cloudbreak, perform the steps under "Embedded database".  
+* If using an external database instance for Cloudbreak databases, perform the steps under "External database".  
+
+**Embedded database**
+
+Use these steps if you are using the default embedded PostgreSQL database for Cloudbreak.
 
 To create a group authorization, execute the following (for example: to add “Analysts” group):
  
@@ -72,3 +81,26 @@ To create a group authorization, execute the following (for example: to add “A
 To remove a group authorization, execute the following (for example: to remove “Analysts” group):
 
 <pre>cbd util delete-ldap-mapping cn=Analysts,ou=Groups,dc=hortonworks,dc=local</pre>
+
+**External database**
+
+Use these steps if you are using an external database instance for Cloudbreak databases.
+
+To create a group authorization:
+
+1. Connect to the external database instance.  
+2. Select the uaadb database.  
+3. Compose a valid INSERT statement by replacing `[$REPLACE-WITH-REAL-DATA]` with a correct group identifier:
+    <pre>INSERT INTO external_group_mapping (group_id, external_group, added, origin)
+SELECT id, 'CN=[$REPLACE-WITH-REAL-DATA],OU=[$REPLACE-WITH-REAL-DATA], DC=[$REPLACE-WITH-REAL-DATA],DC=[$REPLACE-WITH-REAL-DATA],DC=com', current_timestamp, 'ldap' from groups where displayname like 'cloudbreak%' or displayname like 'periscope%' or displayname='sequenceiq.cloudbreak.user';</pre>  
+4. Execute the INSERT statement.  
+
+To remove a group authorization:
+
+1. Connect to the external database instance.  
+2. Select the uaadb database.  
+3. Compose a valid DELETE statement by replacing `[$REPLACE-WITH-REAL-DATA]` with a correct group identifier:
+    <pre>DELETE FROM external_group_mapping external_group = 'CN=[$REPLACE-WITH-REAL-DATA],OU=[$REPLACE-WITH-REAL-DATA], DC=[$REPLACE-WITH-REAL-DATA],DC=[$REPLACE-WITH-REAL-DATA],DC=com';</pre>
+4. Execute the DELETE statement.  
+
+
